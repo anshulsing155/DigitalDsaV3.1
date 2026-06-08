@@ -18,7 +18,7 @@
 </script>
 
 <div
-  class="relative grid items-start gap-[2rem] md:gap-[3rem] lg:grid-cols-2 lg:gap-0 py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-borderColor"
+  class="relative grid items-start gap-[2rem] md:gap-[3rem] lg:grid-cols-2 lg:gap-0 py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-[var(--form-border)] text-black dark:text-white"
 >
   <!-- Left div (Image) -->
   <div
@@ -48,13 +48,13 @@
   >
     {#if contents.cardHeading}
       <h3
-        class="md:text-start font-ThirdHead text-sectionHeading"
+        class="md:text-start typography-h2 text-black dark:text-white"
       >
         {@html contents.cardHeading}
       </h3>
     {/if}
 
-    <div class="flex flex-col gap-4 font-SubPara text-subPara">
+    <div class="flex flex-col gap-4 typography-body-md text-[var(--form-text-secondary)]">
       <slot />
     </div>
   </div>

@@ -51,7 +51,7 @@
   >
     {#if cardHeading}
       <h3
-        class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont"
+        class="md:text-start typography-h2-md text-black dark:text-white"
       >
         {@html cardHeading}
       </h3>

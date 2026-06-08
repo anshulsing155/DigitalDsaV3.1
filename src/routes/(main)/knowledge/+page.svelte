@@ -155,7 +155,7 @@
 />
 
 {#if isLoading}
-  <div class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+  <div class="fixed inset-0 bg-[var(--landing-bg)] z-50 flex items-center justify-center">
     <Loader />
   </div>
 {/if}
@@ -172,7 +172,7 @@
       <!-- Category sidebar -->
       <div class="py-[0.5rem] lg:py-[4rem] pl-[1rem] lg:pl-[2rem] sticky top-0">
         <h3
-          class="hidden sm:block font-FourthHead text-miniSubHead border-b border-btnBg pb-2 sm:pb-4"
+          class="hidden sm:block typography-body-lg !font-semibold text-black dark:text-white border-b border-btnBg pb-2 sm:pb-4"
         >
           Categories
         </h3>
@@ -180,13 +180,13 @@
         <!-- Desktop search -->
         <div class="sm:block hidden mt-4 relative overflow-hidden">
           <input
-            class="w-full pl-2 pr-12 h-10 font-Paragraph text-minParaFont md:text-subParaFont rounded-sm border border-gray-300 focus:ring-btnBg"
+            class="w-full pl-2 pr-12 h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-black dark:text-white focus:ring-btnBg"
             type="text"
             placeholder="Search blog titles..."
             bind:value={searchQuery}
           />
           <button
-            class="absolute top-1/2 right-0 transform -translate-y-1/2 font-Paragraph text-subParaFont p-3 bg-black text-white"
+            class="absolute top-1/2 right-0 transform -translate-y-1/2 typography-button p-3 bg-black text-white"
             onclick={resetFilters}
           >
             <i class="fa-solid fa-trash"></i>
@@ -218,7 +218,7 @@
                 {/if}
 
                 <span
-                  class="md:ml-2 font-Paragraph text-minParaFont md:text-subParaFont"
+                  class="md:ml-2 typography-body-sm text-[var(--landing-text-secondary)]"
                 >
                   {category} ({countBlogs(category)})
                 </span>
@@ -234,11 +234,11 @@
         <div
           class="flex flex-row gap-2 md:gap-4 items-center py-0 sm:py-4 justify-end"
         >
-          <span class="font-Paragraph text-minParaFont md:text-subParaFont"
+          <span class="typography-body-sm text-[var(--landing-text-secondary)]"
             >Show blogs:</span
           >
           <select
-            class="cursor-pointer border rounded-md text-black outline-none focus:ring-2 ring-btnBg font-Paragraph text-minParaFont md:text-subParaFont px-2"
+            class="cursor-pointer border border-[var(--landing-border)] rounded-md bg-[var(--landing-bg-card)] text-black dark:text-white outline-none focus:ring-2 ring-btnBg typography-body-sm px-2"
             bind:value={itemsPerPage}
             onchange={() => (currentPage = 1)}
           >
@@ -268,13 +268,13 @@
           <!-- Mobile search -->
           <div class="block sm:hidden my-4 relative overflow-hidden w-full">
             <input
-              class="w-full pl-2 pr-12 h-8 sm:h-10 font-Paragraph text-minParaFont md:text-subParaFont rounded-sm border border-gray-300 focus:ring-btnBg"
+              class="w-full pl-2 pr-12 h-8 sm:h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-black dark:text-white focus:ring-btnBg"
               type="text"
               placeholder="Search blog titles..."
               bind:value={searchQuery}
             />
             <button
-              class="absolute top-1/2 right-0 transform -translate-y-1/2 font-Paragraph text-subParaFont p-3 bg-black text-white"
+              class="absolute top-1/2 right-0 transform -translate-y-1/2 typography-button p-3 bg-black text-white"
               onclick={resetFilters}
             >
               <i class="fa-solid fa-trash"></i>
@@ -293,7 +293,7 @@
               <div class="relative z-30">
                 {#if !handleImageLoad}
                   <div
-                    class="w-full h-[15rem] sm:max-h-[10rem] max-h-[7rem] bg-gray-200 animate-pulse"
+                    class="w-full h-[15rem] sm:max-h-[10rem] max-h-[7rem] bg-[var(--landing-bg-card)] animate-pulse"
                   ></div>
                 {:else}
                   <img
@@ -308,14 +308,14 @@
                   {blog.categoryType}
                 </span>
               </div>
-              <div class="flex flex-col gap-1 sm:gap-2 p-2">
+              <div class="flex flex-col gap-1 sm:gap-2 p-2 text-black dark:text-white">
                 <h3
-                  class="font-FourthHead text-miniSubHead line-clamp-1 sm:line-clamp-2 text-black"
+                  class="typography-body-lg !font-semibold text-black dark:text-white line-clamp-1 sm:line-clamp-2"
                 >
                   {blog.title}
                 </h3>
                 <p
-                  class="font-Paragraph text-minParaFont md:text-subParaFont line-clamp-3 sm:line-clamp-4 text-black"
+                  class="typography-body-md text-[var(--landing-text-secondary)] line-clamp-3 sm:line-clamp-4"
                 >
                   {#if blog.issue}<span class="text-dangerColor"
                       >[{blog.issue}]</span
@@ -325,7 +325,7 @@
                 <span
                   class="{blog.path
                     ? 'text-linkColor'
-                    : 'text-dangerColor'} font-Paragraph text-minParaFont md:text-subParaFont underline group-hover:no-underline group-hover:opacity-90"
+                    : 'text-dangerColor'} typography-body-sm underline group-hover:no-underline group-hover:opacity-90"
                 >
                   Know more
                 </span>
@@ -335,7 +335,7 @@
         </div>
 
         {#if paginatedBlogs.length === 0}
-          <div class="text-center text-gray-500 text-lg mt-10">
+          <div class="text-center text-[var(--form-text-secondary)] text-lg mt-10">
             No blogs found matching your search 🔍
           </div>
         {/if}
@@ -437,10 +437,10 @@
       thinkKnow={{
         heading: `Things you should know`,
         paraGraph: [
-          `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-          `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-          `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-          `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+          `<span class="font-semibold text-black dark:text-white">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+          `<span class="font-semibold text-black dark:text-white">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+          `<span class="font-semibold text-black dark:text-white">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+          `<span class="font-semibold text-black dark:text-white">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
         ],
       }}
       disc="list-decimal"
@@ -450,13 +450,13 @@
   <!-- Mobile category sidebar -->
   <div class="sm:hidden block w-full">
     <div
-      class="fixed top-0 left-0 w-full h-full z-50 bg-white transition-transform duration-300 ease-in-out {mobileCategoryBar
+      class="fixed top-0 left-0 w-full h-full z-50 bg-[var(--landing-bg)] text-black dark:text-white transition-transform duration-300 ease-in-out {mobileCategoryBar
         ? 'translate-x-0'
         : '-translate-x-full'}"
     >
       <!-- Close button -->
       <div
-        class="sticky top-0 font-FourthHead text-miniSubHead bg-btnBg text-end"
+        class="sticky top-0 typography-body-sm bg-btnBg text-end"
       >
         <button
           type="button"
@@ -467,7 +467,7 @@
         </button>
       </div>
 
-      <ul class="flex flex-col gap-4 p-4">
+      <ul class="flex flex-col gap-4 p-4 text-black dark:text-white">
         {#each blogCategory as category}
           <li class="flex items-center gap-4 select-none">
             <label class="flex gap-2 cursor-pointer">
@@ -489,7 +489,7 @@
               {/if}
 
               <span
-                class="md:ml-2 font-Paragraph text-minParaFont md:text-subParaFont"
+                class="md:ml-2 typography-body-sm text-[var(--landing-text-secondary)]"
               >
                 {category} ({countBlogs(category)})
               </span>

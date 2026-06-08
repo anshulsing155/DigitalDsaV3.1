@@ -71,7 +71,7 @@
   let currentYear = new Date().getFullYear();
 </script>
 
-<section class="relative z-20 w-full border-t border-dividerColor bg-white">
+<section class="relative z-20 w-full border-t border-dividerColor bg-[var(--landing-bg)]">
   <div class="relative">
     <div
       class="relative mx-auto flex w-full flex-col gap-4 lg:w-11/12 xl:w-10/12 2xl:w-[89.5%]"
@@ -82,13 +82,13 @@
         {#each footerList as section}
           {#each Object.entries(section) as [title, items]}
             <div>
-              <h3 class="mb-4 font-FourthHead text-subParaFont lg:text-paraFont">{title}</h3>
+              <h3 class="mb-4 font-FourthHead text-subParaFont lg:text-paraFont text-black dark:text-white">{title}</h3>
               <ul>
                 {#each items as item}
-                  <a
+                    <a
                     href={item.link}
                     target={item.link.includes("http") ? "_blank" : "_self"}
-                    class="text-black mb-2 font-Paragraph text-minParaFont md:text-subParaFont underline-offset-4 hover:underline flex gap-2 items-center"
+                    class="text-black dark:text-white mb-2 font-Paragraph text-minParaFont md:text-subParaFont underline-offset-4 hover:underline flex gap-2 items-center"
                     >{#if item.icon}
                       <img
                         src={item.icon}
@@ -107,7 +107,7 @@
       <div class="h-[1px] w-full bg-dividerColor"></div>
 
       <div
-        class="flex flex-col gap-2 py-4 text-center justify-center items-center px-[1rem] font-SubPara text-minParaFont lg:px-[4rem]"
+        class="flex flex-col gap-2 py-4 text-center justify-center items-center px-[1rem] font-SubPara text-minParaFont lg:px-[4rem] text-[var(--form-text-secondary)]"
       >
         <p>
           Digital DSA is a platform fully owned and operated by E YANTRIK, a

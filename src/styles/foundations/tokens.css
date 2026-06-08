@@ -144,4 +144,176 @@
 
 	--danger-text: #dc2626;
 	--danger-text-muted: #b91c1c;
+
+	/* Legacy variables for styling migration bridge */
+	--color-darkColor: var(--ddsa-secondary-900);
+	--color-grayColor: var(--ddsa-gray-100);
+	--color-btnBg: var(--ddsa-primary-600);
+	--color-underlineBg: var(--ddsa-accent-400);
+	--color-dividerColor: var(--ddsa-gray-200);
+	--color-borderColor: var(--ddsa-gray-200);
+	--color-linkColor: var(--ddsa-primary-700);
+	--color-mainBg: var(--ddsa-white);
+	--color-iconColor: var(--ddsa-gray-500);
+	--color-dangerColor: var(--ddsa-error-dark);
+	--color-secYello: var(--ddsa-accent-300);
 }
+
+/* --- Tailwind CSS v4 Styling Migration Bridge Utilities --- */
+@utility font-FirstHead {
+	font-family: var(--font-primary);
+	font-weight: 900;
+}
+@utility font-SecHead {
+	font-family: var(--font-primary);
+	font-weight: 800;
+}
+@utility font-ThirdHead {
+	font-family: var(--font-primary);
+	font-weight: 700;
+}
+@utility font-FourthHead {
+	font-family: var(--font-primary);
+	font-weight: 600;
+}
+@utility font-FifthHead {
+	font-family: var(--font-primary);
+	font-weight: 500;
+}
+@utility font-Paragraph {
+	font-family: var(--font-primary);
+	font-weight: 400;
+}
+@utility font-SubPara {
+	font-family: var(--font-primary);
+	font-weight: 300;
+}
+
+@utility bg-darkColor {
+	background-color: var(--ddsa-secondary-900);
+}
+@utility text-darkColor {
+	color: var(--ddsa-secondary-900);
+}
+@utility text-darkColor-contrast {
+	color: var(--ddsa-white);
+}
+@utility bg-grayColor {
+	background-color: var(--ddsa-gray-100);
+}
+@utility text-grayColor {
+	color: var(--ddsa-gray-100);
+}
+
+
+@utility text-headFont {
+	font-size: 2.5rem;
+	line-height: 3rem;
+	letter-spacing: 0.02em;
+}
+@utility text-mobHeadFont {
+	font-size: 2.2rem;
+	line-height: 3rem;
+	letter-spacing: 0.02em;
+}
+@utility text-subHeadFont {
+	font-size: 2rem;
+	line-height: 2.5rem;
+	letter-spacing: 0.02em;
+}
+@utility text-minHeadFont {
+	font-size: 1.75rem;
+	line-height: 2.4rem;
+	letter-spacing: 0.02em;
+}
+@utility text-miniHeadFont {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	letter-spacing: 0.02em;
+}
+@utility text-mobSubHead {
+	font-size: 1.4rem;
+	line-height: 1.75rem;
+	letter-spacing: 0.02em;
+}
+@utility text-minSubHead {
+	font-size: 1.2rem;
+	line-height: 1.75rem;
+	letter-spacing: 0.02em;
+}
+@utility text-miniSubHead {
+	font-size: 1.1rem;
+	line-height: 1.75rem;
+	letter-spacing: 0.02em;
+}
+@utility text-paraFont {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+@utility text-subParaFont {
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+	letter-spacing: 0.02em;
+}
+@utility text-subPara {
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+	letter-spacing: 0.02em;
+}
+@utility text-minParaFont {
+	font-size: 0.85rem;
+	line-height: 1.2rem;
+	letter-spacing: 0.02em;
+}
+@utility text-miniParaFont {
+	font-size: 0.75rem;
+	line-height: 1.1rem;
+	letter-spacing: 0.02em;
+}
+@utility text-leastMiniFont {
+	font-size: 0.72rem;
+	line-height: 1rem;
+	letter-spacing: 0.02em;
+}
+@utility text-newLeastMiniFont {
+	font-size: 0.62rem;
+	line-height: 0.8rem;
+	letter-spacing: 0.02em;
+}
+@utility text-navFont {
+	font-size: 1rem;
+	line-height: 0.625rem;
+}
+
+
+/* Ensure accordion dropdowns have correct contrast colors in light/dark themes */
+.dropdown.bg-darkColor,
+.dropdown.bg-darkColor summary,
+.dropdown.bg-darkColor h2,
+.dropdown.bg-darkColor span,
+.dropdown.bg-darkColor i {
+	color: var(--ddsa-white) !important;
+}
+
+/* Enforce theme compatibility inside details/dropdown contents in dark mode */
+.dark details.dropdown .bg-white.text-black,
+.dark .dropdown .bg-white.text-black,
+.dark details.dropdown .bg-white .text-black,
+.dark .dropdown .bg-white .text-black {
+	background-color: var(--landing-bg-card) !important;
+	color: var(--landing-text) !important;
+}
+.dark details.dropdown .bg-white.text-black *,
+.dark .dropdown .bg-white.text-black *,
+.dark details.dropdown .bg-white .text-black *,
+.dark .dropdown .bg-white .text-black * {
+	color: inherit;
+}
+/* Ensure standard buttons, lists and specific highlights retain their colors */
+.dark details.dropdown .bg-white a,
+.dark .dropdown .bg-white a {
+	color: var(--dash-accent-link, #3b82f6) !important;
+}
+
+
+

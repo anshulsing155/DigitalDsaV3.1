@@ -459,7 +459,7 @@
       />
       <div
         id="securedUnsecured"
-        class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+        class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
       >
         <div class=" ">
           <h2
@@ -542,7 +542,7 @@
 
     <div slot="secondary" class="px[1rem] py-[2rem] lg:px-[0rem]">
       <h2
-        class="font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+        class="typography-h3 text-black dark:text-white"
       >
         We're here to help
       </h2>

@@ -71,21 +71,21 @@ window.removeEventListener("resize", updateSize); // Cleanup
       <div class="mx-1 lg:mx-0 h-auto relative">
         <div
           id="sideCard"
-          class="relative bg-white px-[.5rem] py-[3rem] lg:p-[3rem] 2xl:p-[4rem] w-full lg:w-[50%] h-auto"
+          class="relative border border-[var(--landing-glass-border)] bg-[var(--landing-bg-card)] text-black dark:text-white px-[.5rem] py-[3rem] lg:p-[3rem] 2xl:p-[4rem] w-full lg:w-[50%] h-auto"
         >
           <div class="flex flex-col gap-4 sm:gap-[2rem]">
             <h1
-              class="font-ThirdHead text-miniHeadFont sm:text-mobHeadFont lg:text-headFont"
+              class="typography-h1 text-black dark:text-white"
             >
               {@html pageData.heroHeading}
             </h1>
             {#if pageData.subHeading}
-              <p class="font-ThirdHead text-miniSubHead">
+              <p class="typography-body-lg !font-semibold text-black dark:text-white">
                 {@html pageData.subHeading}
               </p>
             {/if}
             {#if pageData.heroParagraph}
-              <p class="font-Paragraph text-minParaFont">
+              <p class="typography-body-md text-[var(--landing-text-secondary)]">
                 {@html pageData.heroParagraph}
               </p>
             {/if}
@@ -173,16 +173,16 @@ window.removeEventListener("resize", updateSize); // Cleanup
           <div
             class="{subList
               ? 'lg:flex grid'
-              : 'hidden'} grid-cols-2 md:grid-cols-3 lg:justify-between place-items-center gap-[3rem] border border-borderColor bg-white p-[3rem] lg:gap-4"
+              : 'hidden'} grid-cols-2 md:grid-cols-3 lg:justify-between place-items-center gap-[3rem] border border-[var(--landing-border)] bg-[var(--landing-bg-card)] p-[3rem] lg:gap-4"
           >
             {#each subList as item, index}
               <a
                 href={item.url}
-                class="flex flex-col items-center justify-center border-dividerColor px-2 text-black"
+                class="flex flex-col items-center justify-center border-dividerColor px-2 text-black dark:text-white"
               >
                 <img src={item.icon} alt={item.altName} class="h-8" />
 
-                <p class="mt-2 text-center font-Paragraph text-subParaFont">
+                <p class="mt-2 text-center typography-body-sm text-[var(--landing-text-secondary)]">
                   {item.name}
                 </p>
               </a>
@@ -191,7 +191,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
         {/if}
       </div>
     </div>
-    <div class="relative flex flex-col bg-white border-t z-20 mx-1 lg:mx-0">
+    <div class="relative flex flex-col bg-[var(--landing-bg-card)] border-t border-[var(--landing-border)] text-black dark:text-white z-20 mx-1 lg:mx-0">
       <slot />
     </div>
     <div class="lg:p-[4rem]">

@@ -335,7 +335,7 @@
       <div
         data-section="measured"
         id="measured"
-        class="border-y border-borderColor"
+        class="border-y border-[var(--form-border)]"
       >
         <ThingsYouShould thinkKnow={measured} disc="list-disc">
           <p slot="list" class="font-minParaFont text-[.8rem]">
@@ -346,7 +346,7 @@
       <div
         id="assessment"
         data-section="assessment"
-        class="flex flex-col border-b border-borderColor pt-[4rem] pb-[8rem]"
+        class="flex flex-col border-b border-[var(--form-border)] pt-[4rem] pb-[8rem]"
       >
         <TwoColumn
           cardImage={cardImg1}
@@ -409,7 +409,7 @@
           </summary>
 
           {#if index == 0}
-            <div id="Financial Services Guides" class="bg-white text-black">
+            <div id="Financial Services Guides" class="bg-[var(--landing-bg)] text-black dark:text-white">
               <ThingsYouShould thinkKnow={wellBeing} disc="list-decimal" />
               <div class="grid md:grid-cols-2 gap-[2rem] px-[0.5rem] pb-[3rem]">
                 <div
@@ -463,11 +463,11 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="measured" class="bg-white text-black">
+            <div id="measured" class="bg-[var(--landing-bg)] text-black dark:text-white">
               <ThingsYouShould thinkKnow={measured} disc="list-disc" />
             </div>
           {:else if index == 2}
-            <div id="assessment" class="px-[0.5rem] bg-white text-black">
+            <div id="assessment" class="px-[0.5rem] bg-[var(--landing-bg)] text-black dark:text-white">
               <TwoColumn
                 cardImage={cardImg1}
                 cardAltName={cardAlt1}
@@ -506,7 +506,7 @@
               </TwoColumn>
             </div>
           {:else if index == 3}
-            <div id="resources" class="px-[0.5rem] bg-white text-black">
+            <div id="resources" class="px-[0.5rem] bg-[var(--landing-bg)] text-black dark:text-white">
               <WhyChoose facilities={resources} />
             </div>
           {/if}

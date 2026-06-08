@@ -51,7 +51,7 @@ window.removeEventListener("scroll", handleScroll); // Cleanup listener
   id="navbar"
   class={`${
     isFixed ? "fixedNavbar  shadow-xl " : " "
-  }  bg-white mx-auto text-center font-FourthHead text-subParaFont lg:px-[.5rem] xl:px-[2rem]  border-b border-borderColor transition-all duration-300 `}
+  }  bg-[var(--landing-bg)] mx-auto text-center font-FourthHead text-subParaFont lg:px-[.5rem] xl:px-[2rem]  border-b border-[var(--form-border)] transition-all duration-300 `}
 >
   <!-- flex justify-between items-center w-full -->
   {#if navList.items && navList.items.length > 0}
@@ -62,7 +62,7 @@ window.removeEventListener("scroll", handleScroll); // Cleanup listener
             <a
               href={`#${nav.targetId}`}
               onclick={(e) => { e.preventDefault(); (() => scrollToSection(nav.targetId))(e); }}
-              class="mx-4 py-8 font-FourthHead text-subParaFontfont-FourthHead text-subParaFont text-black flex items-center gap-2"
+              class="mx-4 py-8 font-FourthHead text-subParaFontfont-FourthHead text-subParaFont text-black dark:text-white flex items-center gap-2"
               >{@html nav.name}</a
             >
             {#if activeSection === nav.targetId}
@@ -104,7 +104,7 @@ window.removeEventListener("scroll", handleScroll); // Cleanup listener
 <div
     class={`${
       isFixed
-        ? "py-8 bg-white mx-auto text-center font-FourthHead text-subParaFont lg:px-[.5rem] xl:px-[2rem]  border-b border-borderColor "
+        ? "py-8 bg-[var(--landing-bg)] mx-auto text-center font-FourthHead text-subParaFont lg:px-[.5rem] xl:px-[2rem]  border-b border-[var(--form-border)] "
         : " "
     } `}
   >

@@ -16,37 +16,37 @@
 </script>
 
 <div
-  class="grid lg:grid-cols-12 gap-[2rem] lg:gap-[4rem]  py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] lg:border-b lg:border-borderColor"
+  class="grid lg:grid-cols-12 gap-[2rem] lg:gap-[4rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] lg:border-b lg:border-[var(--form-border)] text-black dark:text-white"
 >
   <!-- Left Column (Heading & Description) -->
   <div class="lg:col-span-4 flex flex-col gap-4">
     {#if contents.heading}
       <p
-        class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+        class="typography-h2 text-black dark:text-white"
       >
         {@html contents.heading}
       </p>
     {/if}
 
     {#if contents.para}
-      <p class="font-para text-subParaFont">
+      <p class="typography-body-md text-[var(--form-text-secondary)]">
         {@html contents.para}
       </p>
     {/if}
   </div>
 
   <!-- Right Column (Accordions - Multiple Q&A) -->
-  {#if contents.accordions.length > 0}
+  {#if contents.accordions && contents.accordions.length > 0}
     <div class="lg:col-span-8 flex flex-col gap-[1.5rem]">
       {#each contents.accordions as accordion, index}
         <details
-          class="border-b border-borderColor py-[1rem]"
+          class="border-b border-[var(--form-border)] py-[1rem]"
           open={index === 0}
         >
           <summary
             class="flex items-center justify-between gap-4 cursor-pointer"
           >
-            <h2 class="text-subParaFont font-ThirdHead">
+            <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
               {accordion.question}
             </h2>
             <div class="icon-container">
@@ -55,7 +55,7 @@
               ></i>
             </div>
           </summary>
-          <div class="grid gap-4 pt-[1rem] font-Paragraph text-subParaFont">
+          <div class="grid gap-4 pt-[1rem] typography-body-md text-[var(--form-text-secondary)]">
             <p>{@html accordion.answer}</p>
           </div>
         </details>

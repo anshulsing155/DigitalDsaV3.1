@@ -7,7 +7,6 @@
 		imgAltName?: string;
 		img?: string;
 		imageClass?: string;
-		// btnClassStyle?: string;
 		onClick?: () => void;
 		btnAnimation?: boolean;
 	};
@@ -20,10 +19,15 @@
 		imgAltName = '',
 		img = '',
 		imageClass = '',
-		// btnClassStyle = 'py-3',
 		onClick = () => {},
 		btnAnimation = false
 	}: Props = $props();
+
+	// Resolve conflicts dynamically: detect overrides in incoming classes
+	const hasRoundedOverride = $derived(btnClass.includes('rounded-') || btnClass.includes('rounded'));
+	const hasPaddingOverride = $derived(
+		btnClass.includes('px-') || btnClass.includes('py-') || btnClass.includes('p-')
+	);
 </script>
 
 {#if link}
@@ -31,9 +35,9 @@
 		<button
 			type="button"
 			onclick={onClick}
-			class={`typography-button typography-button w-full cursor-pointer rounded-full
-				px-8 py-3 transition-all
-				duration-300 hover:opacity-90 md:w-auto
+			class={`typography-button w-full cursor-pointer transition-all duration-300 hover:opacity-90 md:w-auto
+				${hasRoundedOverride ? '' : 'rounded-full'}
+				${hasPaddingOverride ? '' : 'px-8 py-3'}
 				${btnClass}
 				${btnAnimation ? 'animate-scaleLoop' : ''}`}
 		>
@@ -52,9 +56,9 @@
 	<button
 		type="button"
 		onclick={onClick}
-		class={`typography-button typography-button w-full cursor-pointer rounded-full
-			px-8 py-3 transition-all
-			duration-300 hover:opacity-90 md:w-auto
+		class={`typography-button w-full cursor-pointer transition-all duration-300 hover:opacity-90 md:w-auto
+			${hasRoundedOverride ? '' : 'rounded-full'}
+			${hasPaddingOverride ? '' : 'px-8 py-3'}
 			${btnClass}
 			${btnAnimation ? 'animate-scaleLoop' : ''}`}
 	>

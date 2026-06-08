@@ -11,7 +11,7 @@
 </script>
 
 <section
-  class="border-b border-borderColor py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+  class="border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] text-black dark:text-white"
 >
   <div
     class="grid lg:grid-cols-12 gap-[2rem] lg:gap-[4rem] px-[0.5rem] lg:px-[4rem] items-start"
@@ -19,13 +19,13 @@
     <!-- left-heading  -->
     <div class="lg:col-span-4 flex flex-col gap-4">
       {#if contents.heading}
-        <p class="font-ThirdHead text-sectionHeading">
+        <p class="typography-h2 text-black dark:text-white">
           {@html contents.heading}
         </p>
       {/if}
 
       {#if contents.para}
-        <p class="font-Paragraph text-subPara">
+        <p class="typography-body-md text-[var(--form-text-secondary)]">
           {@html contents.para}
         </p>
       {/if}
@@ -33,12 +33,12 @@
 
     <div class="lg:col-span-8 flex flex-col gap-[3rem]">
       {#if contents.secHeading}
-        <h2 class="font-FourthHead text-cardHeading">
+        <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
           {@html contents.secHeading}
         </h2>
       {/if}
       {#if contents.secPara}
-        <p class="font-SubPara text-subPara">
+        <p class="typography-body-md text-[var(--form-text-secondary)]">
           {@html contents.secPara}
         </p>
       {/if}
@@ -60,7 +60,7 @@
       {#if contents.links}
         <div class="flex flex-col gap-2">
           {#each contents.links as link}
-            <ul class="grid list-disc pl-5 marker:text-black">
+            <ul class="grid list-disc pl-5 marker:text-black dark:marker:text-white">
               <li>
                 <Anchor link={link.secUrl} linkName={link.secLinkName} />
               </li>
@@ -73,7 +73,7 @@
         <div class="space-y-[2rem]">
           {#if contents.listTopPara}
             <div class="">
-              <p class="text-para font-FourthHead">
+              <p class="typography-body-lg !font-semibold text-black dark:text-white">
                 {@html contents.listTopPara}
               </p>
             </div>
@@ -81,15 +81,15 @@
 
           <ul class="space-y-6 list-disc ml-[1rem]">
             {#each contents.list as listItem}
-              <li class="text-paraFont">
+              <li class="typography-body-md text-[var(--form-text-secondary)]">
                 <div class="flex flex-col gap-2">
                   {#if listItem.heading}
-                    <span class="font-FourthHead text-subParaFont">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white">
                       {@html listItem.heading}
                     </span>
                   {/if}
                   {#if listItem.desc}
-                    <p class="font-para text-subParaFont">
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
                       {@html listItem.desc}
                     </p>
                   {/if}
@@ -98,7 +98,7 @@
             {/each}
           </ul>
           {#if contents.listSecPara}
-            <p class="font-para text-subParaFont">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               {@html contents.listSecPara}
             </p>
           {/if}

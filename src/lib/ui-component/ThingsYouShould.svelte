@@ -32,14 +32,10 @@
 	}: Props = $props();
 </script>
 
-<div
-	class="grid grid-cols-12 gap-8 py-12 lg:py-20 px-4 lg:px-0"
->
+<div class="grid grid-cols-12 gap-8 py-12 px-4 lg:py-20 lg:px-0">
 	{#if thinkKnow.heading}
 		<div class="col-span-12 lg:col-span-4">
-			<h2
-				class="typography-h2"
-			>
+			<h2 class="typography-h2">
 				{@html thinkKnow.heading}
 			</h2>
 		</div>
@@ -50,9 +46,7 @@
 	>
 		<div class="grid gap-6">
 			{#if thinkKnow.subHeading}
-				<h3
-					class="text-xl font-semibold text-[#1F1F1F]"
-				>
+				<h3 class="text-xl font-semibold text-black dark:text-white">
 					{@html thinkKnow.subHeading}
 				</h3>
 			{/if}
@@ -64,7 +58,7 @@
 			{/if}
 
 			{#if isBorder}
-				<div class="border-t border-gray-200"></div>
+				<div class="border-t border-[var(--form-border)]"></div>
 			{/if}
 
 			{#if thinkKnow.paraGraph}
@@ -78,9 +72,7 @@
 			{/if}
 
 			{#if thinkKnow.bottomHeading}
-				<h3
-					class="text-2xl font-semibold text-[#1F1F1F]"
-				>
+				<h3 class="text-2xl font-semibold text-black dark:text-white">
 					{thinkKnow.bottomHeading}
 				</h3>
 			{/if}
@@ -117,9 +109,9 @@
 			{#if thinkKnow.linkName}
 				<a
 					href={thinkKnow.url}
-					class:text-[#d4aa00]={thinkKnow.url !== ''}
+					class:text-ddsa-primary={thinkKnow.url !== ''}
 					class:text-gray-400={thinkKnow.url === ''}
-					class="underline underline-offset-4 hover:no-underline font-medium"
+					class="font-medium underline underline-offset-4 hover:no-underline"
 				>
 					{thinkKnow.linkName}
 				</a>

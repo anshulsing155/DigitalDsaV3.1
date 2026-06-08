@@ -14,12 +14,12 @@
 
 <section
   class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[{paddingX}rem] w-full {contents.borderBottom
-    ? 'lg:border-b'
-    : 'border-b-0'} border-borderColor"
+    ? 'border-b border-[var(--form-border)]'
+    : ''}"
 >
   <div class="flex flex-col gap-[3rem] w-full">
     <h2
-      class="font-ThirdHead text-mobSubHead md:text-miniHeadFont"
+      class="typography-h2-md text-black dark:text-white"
     >
       {@html contents.heading}
     </h2>
@@ -31,7 +31,7 @@
         {#each contents.cards as card, index}
           <div
             class={index < contents.cards.length - 1
-              ? "border-b md:border-b-0 pb-[4rem] md:pb-0 md:border-r"
+              ? "border-b border-[var(--form-border)] md:border-b-0 pb-[4rem] md:pb-0 md:border-r"
               : ""}
           >
             <BlackCard cardData={card} />

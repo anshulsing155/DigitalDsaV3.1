@@ -41,7 +41,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
 	});
 </script>
 
-<section class="w-full">
+<section class="w-full bg-[var(--landing-bg)] text-black dark:text-white">
   <div id="pageDesign" class="relative mx-auto h-full">
     <div class="relative mx-auto pt-[15rem] sm:pt-[23rem] lg:pt-0 w-full">
       <!-- breadcrumb  -->
@@ -71,38 +71,38 @@ window.removeEventListener("resize", updateSize); // Cleanup
       <div class="mx-2 lg:mx-0">
         <div
           id="sideCard"
-          class="relative bg-white px-6 py-[3rem] lg:p-[3rem] 2xl:p-[4rem] w-full lg:w-[50%]"
+          class="relative border border-[var(--landing-glass-border)] bg-[var(--landing-bg)] text-black dark:text-white px-6 py-[3rem] lg:p-[3rem] 2xl:p-[4rem] w-full lg:w-[50%]"
         >
           <div class="flex flex-col gap-4 sm:gap-[2rem]">
-            <h1 class="font-ThirdHead text-title">
+            <h1 class="typography-h1 text-black dark:text-white">
               {@html pageData.heading}
             </h1>
 
             {#if pageData.subHeading}
-              <p class="font-ThirdHead text-miniSubHead">
+              <p class="typography-body-lg text-black dark:text-white">
                 {@html pageData.subHeading}
               </p>
             {/if}
 
             {#if pageData.para}
-              <p class={`font-SubPara text-subPara ${pageData.paraStyle}`}>
+              <p class={`typography-body-lg text-black dark:text-white ${pageData.paraStyle || ''}`}>
                 {@html pageData.para}
               </p>
             {/if}
 
             {#if pageData.heroList && pageData.heroList.length > 0}
-              <ul class="flex flex-col gap-4">
+              <ul class="flex flex-col gap-4 text-black dark:text-white">
                 {#each pageData.heroList as item}
-                  <li class="grid gap-4 font-Paragraph text-subParaFont">
+                  <li class="grid gap-4 font-Paragraph text-subParaFont text-black dark:text-white">
                     {#if typeof item.text === "object"}
                       {#if item.text.subText}
                         <span>{@html item.text.subText}</span>
                       {/if}
 
-                      <ul class="grid list-disc gap-2">
+                      <ul class="grid list-disc gap-2 text-black dark:text-white">
                         {#each item.text.points as subItem}
                           {#if subItem.tick}
-                            <li class="flex gap-2 items-center">
+                            <li class="flex gap-2 items-center text-black dark:text-white">
                               <div>
                                 <img
                                   src="/icons/circle-check.svg"
@@ -110,10 +110,10 @@ window.removeEventListener("resize", updateSize); // Cleanup
                                   class="h-4"
                                 />
                               </div>
-                              <p class="text-start">{@html subItem.list}</p>
+                              <p class="text-start text-black dark:text-white">{@html subItem.list}</p>
                             </li>
                           {:else}
-                            <li>{subItem.list}</li>
+                            <li class="text-black dark:text-white">{subItem.list}</li>
                           {/if}
                         {/each}
                       </ul>
@@ -136,21 +136,21 @@ window.removeEventListener("resize", updateSize); // Cleanup
                       <button
                         type="button"
                         onclick={btn.onClick}
-                        class="w-full rounded-full border px-[2rem] py-3 md:w-auto text-black {btn.animation
+                        class="w-full rounded-full border px-[2rem] py-3 md:w-auto {btn.animation
                           ? 'animate-scaleLoop'
                           : ''}"
-                        style={`background-color: ${btn.btnColor}; border-color: #4F4C4D;`}
+                        style={`background-color: ${btn.btnColor || 'transparent'}; border-color: #4F4C4D;${btn.btnColor ? ' color: #0f172a !important;' : ' color: inherit;'}`}
                       >
                         {btn.btnName}
                       </button>
                     {:else}
-                      <a href={btn.btnLink} class="text-black">
+                      <a href={btn.btnLink} class="w-full md:w-auto">
                         <button
                           type="button"
                           class="w-full rounded-full border px-[2rem] py-3 md:w-auto {btn.animation
                             ? 'animate-scaleLoop'
                             : ''}"
-                          style={`background-color: ${btn.btnColor}; border-color: #4F4C4D;`}
+                          style={`background-color: ${btn.btnColor || 'transparent'}; border-color: #4F4C4D;${btn.btnColor ? ' color: #0f172a !important;' : ' color: inherit;'}`}
                         >
                           {btn.btnName}
                         </button>
@@ -200,7 +200,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
         </div>
       </div>
     </div>
-    <div class="relative flex flex-col bg-white border-t z-10 mx-2 lg:mx-0">
+    <div class="relative flex flex-col bg-[var(--landing-bg)] text-black dark:text-white border-t border-[var(--form-border)] z-10 mx-2 lg:mx-0">
       <slot />
     </div>
     <!-- px-[2rem] -->

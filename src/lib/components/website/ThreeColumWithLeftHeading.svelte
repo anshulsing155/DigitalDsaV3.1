@@ -15,19 +15,19 @@
 </script>
 
 <section
-  class="lg:border-b border-borderColor py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+  class="lg:border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 >
   <div class="grid grid-cols-3 gap-[2rem] px-[0.5rem] lg:px-[{paddingX}rem]">
     <!-- left-heading  -->
     <div class="col-span-3 lg:col-span-1 flex flex-col gap-4">
       {#if contents.heading}
-        <p class="font-ThirdHead text-sectionHeading">
+        <p class="typography-h2-md text-black dark:text-white">
           {@html contents.heading}
         </p>
       {/if}
 
       {#if contents.para}
-        <p class="font-Paragraph text-subPara">
+        <p class="typography-body-md text-[var(--form-text-secondary)]">
           {@html contents.para}
         </p>
       {/if}
@@ -37,17 +37,17 @@
       <div class="col-span-3 grid grid-cols-2 gap-[4rem] lg:col-span-2">
         {#each contents.cardData as card}
           <div
-            class={`col-span-2 grid gap-[4rem] md:col-span-1 pb-[2rem] md:pb-0 border-b md:border-b-0 border-borderColor `}
+            class={`col-span-2 grid gap-[4rem] pb-[2rem] md:pb-0 border-b md:border-b-0 border-[var(--form-border)]`}
           >
             <!-- card-heading and para  -->
             <div class="flex flex-col gap-4">
               {#if card.title}
-                <p class="font-FourthHead text-cardHeading">
+                <p class="typography-body-lg !font-semibold text-black dark:text-white">
                   {@html card.title}
                 </p>
               {/if}
               {#if card.para}
-                <p class="font-SubPara text-subPara">
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   {@html card.para}
                 </p>
               {/if}

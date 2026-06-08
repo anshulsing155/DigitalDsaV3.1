@@ -95,21 +95,21 @@
 
 <section class="py-16 " aria-labelledby="bank-comparison">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 id="bank-comparison" class="text-4xl sm:text-5xl font-extrabold text-center text-gray-900 mb-6 tracking-tight">
+    <h2 id="bank-comparison" class="text-4xl sm:text-5xl font-extrabold text-center text-black dark:text-white mb-6 tracking-tight">
       Compare Banks for Business Loans
     </h2>
-    <p class="text-lg sm:text-xl text-center text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
+    <p class="text-lg sm:text-xl text-center text-[var(--form-text-secondary)] max-w-4xl mx-auto mb-12 leading-relaxed">
       Explore varying eligibility criteria and features from top banks to find the best loan option for your business.
     </p>
 
     {#if visible}
       <div class="overflow-x-auto" in:fade={{ duration: 400 }}>
-        <table class="min-w-full bg-white rounded-xl shadow-lg overflow-hidden">
-          <thead class="bg-gray-800 text-white">
+        <table class="min-w-full bg-[var(--landing-bg-card)] rounded-xl shadow-lg overflow-hidden">
+          <thead class="bg-darkColor text-white">
             <tr>
               {#each ['name', 'minTurnover', 'minBusinessAge', 'maxLoanAmount', 'interestRate', 'processingFee', 'uniqueFeature'] as key}
                 <th
-                  class="py-4 px-6 text-left text-sm font-semibold cursor-pointer hover:bg-gray-700 transition-colors"
+                  class="py-4 px-6 text-left text-sm font-semibold cursor-pointer hover:bg-spanColor transition-colors"
                   onclick={() => sortTable(key as keyof Bank)}
                   role="columnheader"
                   aria-sort={sortKey === key as keyof Bank ? (sortDirection === 'asc' ? 'ascending' : 'descending') : 'none'}
@@ -131,7 +131,7 @@
           <tbody class="divide-y divide-gray-200">
             {#each sortedBanks as bank, i}
               <tr
-                class="{i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-yellow-50 transition-colors duration-200"
+                class="{i % 2 === 0 ? 'bg-[var(--landing-bg-card)]' : 'bg-[var(--landing-bg)]'} hover:bg-[var(--form-border)] transition-colors duration-200"
                 role="row"
               >
                 <td class="py-4 px-6">
@@ -145,12 +145,12 @@
                     <!-- <span class="font-medium text-gray-900">{bank.name}</span> -->
                   </div>
                 </td>
-                <td class="py-4 px-6 text-gray-700">{bank.minTurnover}</td>
-                <td class="py-4 px-6 text-gray-700">{bank.minBusinessAge}</td>
-                <td class="py-4 px-6 text-gray-700">{bank.maxLoanAmount}</td>
-                <td class="py-4 px-6 text-gray-700">{bank.interestRate}</td>
-                <td class="py-4 px-6 text-gray-700">{bank.processingFee}</td>
-                <td class="py-4 px-6 text-gray-700">{bank.uniqueFeature}</td>
+                <td class="py-4 px-6 text-[var(--form-text-secondary)]">{bank.minTurnover}</td>
+                <td class="py-4 px-6 text-[var(--form-text-secondary)]">{bank.minBusinessAge}</td>
+                <td class="py-4 px-6 text-[var(--form-text-secondary)]">{bank.maxLoanAmount}</td>
+                <td class="py-4 px-6 text-[var(--form-text-secondary)]">{bank.interestRate}</td>
+                <td class="py-4 px-6 text-[var(--form-text-secondary)]">{bank.processingFee}</td>
+                <td class="py-4 px-6 text-[var(--form-text-secondary)]">{bank.uniqueFeature}</td>
               </tr>
             {/each}
           </tbody>
@@ -158,7 +158,7 @@
       </div>
 
       <div class="mt-8 text-center">
-        <p class="text-sm text-gray-500 italic">
+        <p class="text-sm text-[var(--form-text-secondary)] italic">
           Note: Information is indicative and may vary based on individual profiles and bank policies. Always verify with the bank.
         </p>
       </div>

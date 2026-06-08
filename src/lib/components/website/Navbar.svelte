@@ -232,7 +232,7 @@
 </script>
 
 <section
-  class="relative z-50 mx-auto w-full bg-white border-b border-borderColor"
+  class="relative z-50 mx-auto w-full bg-[var(--landing-bg)] border-b border-[var(--form-border)]"
 >
   <div class="mx-auto flex items-center justify-between">
     <div class="flex items-center gap-[4rem]">
@@ -245,10 +245,17 @@
             goto("/");
             active = "/";}}
         >
+          <!-- Light mode logo -->
           <img
             src="/logo/logoBlack.svg"
             alt="digital-dsa-logo"
-            class=" h-[2rem] lg:h-[3rem]"
+            class="h-[2rem] lg:h-[3rem] block dark:hidden"
+          />
+          <!-- Dark mode logo -->
+          <img
+            src="/logo/logoWhite.svg"
+            alt="digital-dsa-logo"
+            class="h-[2rem] lg:h-[3rem] hidden dark:block"
           />
           <div class="block">
             <p class="text-center font-FifthHead text-xs sm:text-subParaFont">
@@ -266,7 +273,7 @@
           <li class="text-center">
             <a
               href={nav.link}
-              class="group relative font-FourthHead text-subParaFont lg:py-10 text-black"
+              class="group relative font-FourthHead text-subParaFont lg:py-10 text-black dark:text-white hover:text-black dark:hover:text-white"
             >
               {nav.list}
               {#if nav.hasOwnProperty("star")}
@@ -368,13 +375,13 @@
         <!-- Dropdown Menu -->
         {#if profileIsOpen}
           <div
-            class="absolute py-2 w-[11.35rem] text-gray-700 hover:bg-gray-100 font-Paragraph text-minParaFont border shadow-lg bg-white"
+            class="absolute py-2 w-[11.35rem] text-[var(--form-text-secondary)] hover:bg-[var(--landing-bg-card)] font-Paragraph text-minParaFont border border-[var(--form-border)] shadow-lg bg-[var(--landing-bg)]"
           >
             <ul>
               {#each profileDropDown as item}
                 {@const IconComponent = item.icon}
                 <li
-                  class="w-full flex gap-2 items-center px-2 py-2 hover:bg-btnBg hover:text-black"
+                  class="w-full flex gap-2 items-center px-2 py-2 hover:bg-btnBg hover:text-black text-black dark:text-white"
                 >
                   <div class="flex items-start justify-start">
                     {#if typeof item.icon === "string"}
@@ -417,7 +424,7 @@
   <!-- Search Bar (Hidden/Visible based on toggleSearch) -->
   {#if searchOpen}
     <div
-      class="fixed top-0 w-full h-[3.2rem] md:h-[6.2rem] bg-white"
+      class="fixed top-0 w-full h-[3.2rem] md:h-[6.2rem] bg-[var(--landing-bg)]"
       bind:this={searchInput}
       out:fade={{ duration: 200 }}
     >

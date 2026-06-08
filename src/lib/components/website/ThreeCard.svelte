@@ -22,25 +22,25 @@
 ;
 </script>
 
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4 text-black dark:text-white">
   <!-- {#if title}
     <h2
-      class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+      class="md:text-start typography-h2 text-black dark:text-white"
     >
       {title}
     </h2>
   {/if} -->
   <!-- {#each cardData as card} -->
   <div class="flex flex-col gap-4 py-[1.5rem] lg:py-[3rem]">
-    <h2 class="font-ThirdHead text-minSubHead">{cardData.heading}</h2>
+    <h2 class="typography-body-lg !font-semibold text-black dark:text-white">{cardData.heading}</h2>
     {#if cardData.para}
-      <p class="font-Paragraph text-minParaFont">{@html cardData.para}</p>
+      <p class="typography-body-md text-[var(--form-text-secondary)]">{@html cardData.para}</p>
     {/if}
     {#if cardData.secPara}
-      <p class="font-Paragraph text-minParaFont">{@html cardData.secPara}</p>
+      <p class="typography-body-md text-[var(--form-text-secondary)]">{@html cardData.secPara}</p>
     {/if}
     {#if cardData.list}
-      <ul class="font-Paragraph text-subParaFont list-disc ml-5 space-y-2">
+      <ul class="typography-body-md text-[var(--form-text-secondary)] list-disc ml-5 space-y-2">
         {#each cardData.list as item}
           <li>{@html item}</li>
         {/each}

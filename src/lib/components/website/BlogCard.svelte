@@ -73,8 +73,8 @@
       : ''}"
   >
     <div class="flex flex-col gap-4">
-      <h3 class="font-FourthHead text-miniSubHead">{title}</h3>
-      <p class="font-SubPara text-minParaFont md:text-subParaFont">{paragraph}</p>
+      <h3 class="typography-body-lg !font-semibold text-black dark:text-white">{title}</h3>
+      <p class="typography-body-md text-[var(--form-text-secondary)]">{paragraph}</p>
     </div>
     <!-- font-Paragraph text-minParaFont md:text-subParaFont -->
     {#if linkName}
@@ -98,9 +98,9 @@
         <button
           type="button"
           class="w-full rounded-full border px-[3rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 md:w-auto"
-          style={`background-color: ${btnColor}; border-color: ${btnBorder};`}
+          style={`background-color: ${btnColor || 'transparent'}; border-color: ${btnBorder};${btnColor ? ' color: #0f172a !important;' : ' color: inherit;'}`}
         >
-          <a href={link} class="text-black">{btnName}</a>
+          <a href={link} class="block w-full" style={btnColor ? 'color: #0f172a !important;' : 'color: inherit;'}>{btnName}</a>
         </button>
       </div>
     {/if}

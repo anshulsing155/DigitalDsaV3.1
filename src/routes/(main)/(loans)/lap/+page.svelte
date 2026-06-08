@@ -206,7 +206,7 @@
   <NewPageLayout {pageData}  >
     <Sublist {subList} />
     <div class="px-[0.5rem] lg:px-[4rem]">
-      <div class="border-b border-borderColor">
+      <div class="border-b border-[var(--form-border)]">
         <WhyChoose {facilities} />
       </div>
 
@@ -228,7 +228,7 @@
       </div>
 
       <Ways {ways} />
-      <div class="border-b border-borderColor">
+      <div class="border-b border-[var(--form-border)]">
         <NewHome {steps} />
       </div>
 
@@ -240,7 +240,7 @@
           btnColor: "#ffcc00",
         }}
       />
-      <div class="border-b border-borderColor">
+      <div class="border-b border-[var(--form-border)]">
         <TwoColumn
           cardImage={cardImg1}
           cardAltName={cardAlt1}
@@ -268,7 +268,7 @@
         </TwoColumn>
       </div>
 
-      <div class="border-b border-borderColor">
+      <div class="border-b border-[var(--form-border)]">
         <TwoColumn
           cardImage={cardImg2}
           cardAltName={cardAlt2}

@@ -94,12 +94,12 @@ console.error("Failed to copy:", err);
 <section class="xl:contianer mx-auto w-full bg-mainBg">
   <NewPageLayout {pageData} onClick={handleModal}>
     <div class="">
-      <div class="px-[1rem] pt-[1rem] lg:p-[4rem] border-b">
+      <div class="px-[1rem] pt-[1rem] lg:p-[4rem] border-b border-[var(--form-border)] text-black dark:text-white">
         <div
           class="flex md:flex-row flex-col gap-[2rem] md:gap-[4rem] justify-between mx-auto"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-black dark:text-white"
           >
             Refer to your friend & get ₹5000
           </h2>
@@ -119,7 +119,7 @@ console.error("Failed to copy:", err);
               <button
                 type="button"
                 onclick={copyToClipboard}
-                class="bg-gray-200 text-black px-3 py-2 flex items-center justify-center"
+                class="bg-[var(--landing-bg-card)] border border-[var(--form-border)] text-black dark:text-white px-3 py-2 flex items-center justify-center hover:bg-[var(--landing-bg)] transition-colors"
                 disabled={!referralLink}
               >
                 {#if copied}
@@ -169,11 +169,11 @@ console.error("Failed to copy:", err);
         />
       </div>
 
-      <div class="border-y border-borderColor px-[0.5rem] pt-[1rem] lg:p-[4rem]">
+      <div class="border-y border-[var(--form-border)] px-[0.5rem] pt-[1rem] lg:p-[4rem] text-black dark:text-white">
         <Payments supportHeading="Key Benefits">
           <div class="grid md:grid-cols-2 gap-[2rem]">
             <div class="col-span-1 grid gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
                 What are the key benefits for you?
               </h2>
               <ul class="grid gap-4 list-disc pl-4">
@@ -193,7 +193,7 @@ console.error("Failed to copy:", err);
               </ul>
             </div>
             <div class="col-span-1 grid gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
                 What are the key benefits for your Referee?
               </h2>
               <ul class="grid gap-4 list-disc pl-4">
@@ -214,7 +214,7 @@ console.error("Failed to copy:", err);
           </div>
         </Payments>
       </div>
-      <div class="px-[0.5rem] pt-[1rem] lg:p-[4rem] border-b border-borderColor">
+      <div class="px-[0.5rem] pt-[1rem] lg:p-[4rem] border-b border-[var(--form-border)] text-black dark:text-white">
         <Payments
           supportHeading="The Digital DSA Advantage"
           colSpan={3}
@@ -222,44 +222,44 @@ console.error("Failed to copy:", err);
         >
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
             <div class="col-span-1 flex flex-col gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">Expertise</h2>
-              <ul class="list-disc pl-4 grid gap-4">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">Expertise</h2>
+              <ul class="list-disc pl-4 grid gap-4 text-[var(--landing-text-secondary)]">
                 <li>
-                  <span class="font-FourthHead">Simplified Property Buying</span
+                  <span class="font-semibold text-black dark:text-white">Simplified Property Buying</span
                   >: We guide customers seamlessly through finding, purchasing,
                   and managing their home or investment property.
                 </li>
                 <li>
-                  <span class="font-FourthHead">Tailored Insights</span>:
+                  <span class="font-semibold text-black dark:text-white">Tailored Insights</span>:
                   Receive complimentary, customized property reports aligned to
                   specific market preferences.
                 </li>
                 <li>
-                  <span class="font-FourthHead">Smart Tools</span>: Leverage the
+                  <span class="font-semibold text-black dark:text-white">Smart Tools</span>: Leverage the
                   Home Hub and user-friendly calculators to explore market
                   trends and make well-informed purchasing decisions.
                 </li>
               </ul>
             </div>
             <div class="col-span-1 flex flex-col gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">Convenience</h2>
-              <ul class="list-disc pl-4 grid gap-4">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">Convenience</h2>
+              <ul class="list-disc pl-4 grid gap-4 text-[var(--landing-text-secondary)]">
                 <li>
-                  <span class="font-FourthHead">Flexible Support</span>: Get
+                  <span class="font-semibold text-black dark:text-white">Flexible Support</span>: Get
                   your questions answered in person, via video conferencing,
                   phone calls, or at a location that fits your schedule.
                 </li>
                 <li>
-                  <span class="font-FourthHead">24/7 Loan Management</span>:
+                  <span class="font-semibold text-black dark:text-white">24/7 Loan Management</span>:
                   Manage loans anytime through our websupport services.
                 </li>
               </ul>
             </div>
             <div class="col-span-1 flex flex-col gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">Value</h2>
-              <ul class="list-disc pl-4 grid gap-4">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">Value</h2>
+              <ul class="list-disc pl-4 grid gap-4 text-[var(--landing-text-secondary)]">
                 <li>
-                  <span class="font-FourthHead">Tailored Loan Choices</span>:
+                  <span class="font-semibold text-black dark:text-white">Tailored Loan Choices</span>:
                   Compare a wide range of products and rates to find solutions
                   that best suit your financial needs.
                 </li>
@@ -334,10 +334,10 @@ console.error("Failed to copy:", err);
         thinkKnow={{
           heading: `Things you should know`,
           subPara: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+            `<span class="font-semibold text-black dark:text-white">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold text-black dark:text-white">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold text-black dark:text-white">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+            `<span class="font-semibold text-black dark:text-white">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

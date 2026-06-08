@@ -67,49 +67,42 @@ link: "/message24",
     heading: "Things you should know",
     subPara: [
 `
-<p class="font-FourthHead">1. Who Can Refer? (Hint: That’s YOU!)</p>
-<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4">
+<p class="typography-body-lg !font-semibold text-black dark:text-white">1. Who Can Refer? (Hint: That’s YOU!)</p>
+<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4 text-[var(--landing-text-secondary)]">
 <li>Anyone with a DigitalDSA account – whether you're a loan agent, financial consultant, or just someone who loves helping others (and making extra cash while at it).</li>
 <li>No need to be a finance wizard; just share your referral link and let us do the magic.</li>
 </ul>
 
-
-
-<p class="font-FourthHead">2. What Counts as a “Successful Referral”?</p>
-<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4">
+<p class="typography-body-lg !font-semibold text-black dark:text-white">2. What Counts as a “Successful Referral”?</p>
+<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4 text-[var(--landing-text-secondary)]">
 <li>Your friend (or customer) must <strong>apply for a loan</strong> through your unique referral link.</li>
 <li>The loan must be <strong>sanctioned and disbursed</strong> – no ghost applications, no “just checking” clicks.</li>
 <li>Once that sweet, sweet loan amount lands in their account, your reward is locked in.</li>
 </ul>
 
-
-
-<p class="font-FourthHead">3. How Do You Get Paid? (The Juicy Part!)</p>
-<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4">
+<p class="typography-body-lg !font-semibold text-black dark:text-white">3. How Do You Get Paid? (The Juicy Part!)</p>
+<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4 text-[var(--landing-text-secondary)]">
 <li>You’ll receive your reward <strong>after the lender confirms the loan disbursement</strong> (typically within 30–60 days).</li>
 <li>Payments will be <strong>directly transferred</strong> to your bank or UPI wallet – no complicated redemptions or shady points system.</li>
 <li>The more referrals, the fatter your payout – <strong>no limits!</strong></li>
 </ul>
 
-
-
-<p class="font-FourthHead">4. Things That Won’t Fly (No Funny Business!)</p>
-<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4">
+<p class="typography-body-lg !font-semibold text-black dark:text-white">4. Things That Won’t Fly (No Funny Business!)</p>
+<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4 text-[var(--landing-text-secondary)]">
 <li><strong>No fake referrals</strong> – we check! Misusing the program (spam referrals, self-referrals, or shady practices) will get you banned.</li>
 <li><strong>No cold-calling random strangers.</strong> Your referrals should be people genuinely looking for a loan. (Uncles, colleagues, besties – all fair game! 🙌)</li>
 <li><strong>No shortcuts.</strong> Only referrals made through your unique link will count.</li>
 </ul>
 
-
-<p class="font-FourthHead">5. Why Should You Care? (Because Money!)</p>
-<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4">
+<p class="typography-body-lg !font-semibold text-black dark:text-white">5. Why Should You Care? (Because Money!)</p>
+<ul class="list-none list-inside space-y-2 mb-[2rem] mt-4 text-[var(--landing-text-secondary)]">
 <li>You’re <strong>helping people</strong> find the best loan options – and getting rewarded for it. Win-win!</li>
 <li>No need to <strong>sell</strong> anything – just share your link and let us handle the rest.</li>
 <li><strong>Unlimited earning potential</strong> – bring in 10 referrals? 50? 100? You get paid for <strong>every single</strong> successful one.</li>
 </ul>
 
     <div class="my-[3rem] text-center">
-<a href="/refer-&-earn" class="font-Paragraph text-minParaFont md:text-subParaFont w-full rounded-full border px-[2rem] py-3 md:w-auto border-[#4F4C4D] bg-btnBg text-black hover:bg-opacity-80">Start Referring & Earning Now!</a>
+<a href="/refer-&-earn" class="typography-button inline-block rounded-full border px-[2rem] py-3 border-[#4F4C4D] bg-btnBg text-black hover:bg-opacity-80">Start Referring & Earning Now!</a>
     </div>`,
     ],
   };
@@ -126,11 +119,11 @@ link: "/message24",
 <div>
   <PageDesign {pageData}>
     <div class="px-[0.5rem] lg:px-[4rem]">
-      <div class="py-[4rem] border-y border-borderColor">
+      <div class="py-[4rem] border-y border-[var(--landing-border)]">
         <Payments supportHeading="Key Benefits">
           <div class="grid md:grid-cols-2 gap-[2rem]">
-            <div class="col-span-1 grid gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">
+            <div class="col-span-1 grid gap-4 text-black dark:text-white">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
                 What are the key benefits for you?
               </h2>
               <ul class="grid gap-4 list-disc pl-4">
@@ -149,8 +142,8 @@ link: "/message24",
                 </li>
               </ul>
             </div>
-            <div class="col-span-1 grid gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">
+            <div class="col-span-1 grid gap-4 text-black dark:text-white">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
                 What are the key benefits for your Referee?
               </h2>
               <ul class="grid gap-4 list-disc pl-4">
@@ -171,52 +164,52 @@ link: "/message24",
           </div>
         </Payments>
       </div>
-      <div class="py-[4rem] border-y border-borderColor">
+      <div class="py-[4rem] border-y border-[var(--landing-border)]">
         <Payments
           supportHeading="The Digital DSA Advantage"
           colSpan={3}
           colSpanText={3}
         >
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem] text-black dark:text-white">
             <div class="col-span-1 flex flex-col gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">Expertise</h2>
-              <ul class="list-disc pl-4 grid gap-4">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">Expertise</h2>
+              <ul class="list-disc pl-4 grid gap-4 text-[var(--landing-text-secondary)]">
                 <li>
-                  <span class="font-FourthHead">Simplified Property Buying</span
+                  <span class="font-semibold text-black dark:text-white">Simplified Property Buying</span
                   >: We guide customers seamlessly through finding, purchasing,
                   and managing their home or investment property.
                 </li>
                 <li>
-                  <span class="font-FourthHead">Tailored Insights</span>:
+                  <span class="font-semibold text-black dark:text-white">Tailored Insights</span>:
                   Receive complimentary, customized property reports aligned to
                   specific market preferences.
                 </li>
                 <li>
-                  <span class="font-FourthHead">Smart Tools</span>: Leverage the
+                  <span class="font-semibold text-black dark:text-white">Smart Tools</span>: Leverage the
                   Home Hub and user-friendly calculators to explore market
                   trends and make well-informed purchasing decisions.
                 </li>
               </ul>
             </div>
             <div class="col-span-1 flex flex-col gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">Convenience</h2>
-              <ul class="list-disc pl-4 grid gap-4">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">Convenience</h2>
+              <ul class="list-disc pl-4 grid gap-4 text-[var(--landing-text-secondary)]">
                 <li>
-                  <span class="font-FourthHead">Flexible Support</span>: Get
+                  <span class="font-semibold text-black dark:text-white">Flexible Support</span>: Get
                   your questions answered in person, via video conferencing,
                   phone calls, or at a location that fits your schedule.
                 </li>
                 <li>
-                  <span class="font-FourthHead">24/7 Loan Management</span>:
+                  <span class="font-semibold text-black dark:text-white">24/7 Loan Management</span>:
                   Manage loans anytime through our websupport services.
                 </li>
               </ul>
             </div>
             <div class="col-span-1 flex flex-col gap-4">
-              <h2 class="font-ThirdHead text-minSubHead">Value</h2>
-              <ul class="list-disc pl-4 grid gap-4">
+              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">Value</h2>
+              <ul class="list-disc pl-4 grid gap-4 text-[var(--landing-text-secondary)]">
                 <li>
-                  <span class="font-FourthHead">Tailored Loan Choices</span>:
+                  <span class="font-semibold text-black dark:text-white">Tailored Loan Choices</span>:
                   Compare a wide range of products and rates to find solutions
                   that best suit your financial needs.
                 </li>

@@ -15,9 +15,9 @@
 
 </script>
 
-<div class="flex flex-col py-[4rem] px-[0.5rem] lg:px-0 w-full  ">
+<div class="flex flex-col py-[4rem] px-[0.5rem] lg:px-0 w-full text-black dark:text-white">
   <h2
-    class="font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+    class="typography-h2 text-black dark:text-white"
   >
     {heading}
   </h2>
@@ -25,7 +25,7 @@
     class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{gridCol} gap-2 md:gap-5 divide-x-0 divide-y-{divideY} sm:divide-x-{divideX} sm:divide-y-0"
   >
     {#each help as item}
-      <a href={item.link} class="text-black">
+      <a href={item.link} class="text-black dark:text-white">
         <div
           class="relative flex items-start justify-start gap-2 md:gap-5 py-[1.5rem] lg:py-[3rem]"
         >
@@ -37,15 +37,15 @@
           <div class="flex flex-col gap-4">
             {#if item.Heading}
               {#if item.link}
-                <h2 class="font-ThirdHead text-minSubHead">
+                <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
                   {@html item.Heading}
                 </h2>
               {:else}
-                <h2 class="font-ThirdHead text-minSubHead">{item.Heading}</h2>
+                <h2 class="typography-body-lg !font-semibold text-black dark:text-white">{item.Heading}</h2>
               {/if}
             {/if}
             {#if item.paragraph}
-              <p class="font-Paragraph text-minParaFont">{item.paragraph}</p>
+              <p class="typography-body-md text-[var(--form-text-secondary)]">{item.paragraph}</p>
             {/if}
           </div>
         </div>

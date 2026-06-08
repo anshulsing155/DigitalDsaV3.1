@@ -244,19 +244,18 @@
       />
     </div>
 
-    <section id="factors" class="py-20 px-10 bg-white section">
+    <section id="factors" class="py-20 px-10 bg-[var(--landing-bg)] section">
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4 text-gray-900">
+          <h2 class="text-3xl font-bold mb-4 text-black dark:text-white">
             Key Factors in Business Loan Calculations
           </h2>
-          <p class="text-md text-gray-600">
+          <p class="text-md text-[var(--form-text-secondary)]">
             Indian banks use multiple criteria to evaluate your business loan
             eligibility. Understanding these factors can help you optimize your
             application and secure higher loan amounts.
           </p>
         </div>
-       
 
         {#if visible}
           <div
@@ -274,9 +273,9 @@
                 }}
                 out:fade={{ duration: 300 }}
               >
-                <div class="mb-4 text-primary">
+                <div class="mb-4">
                   <div
-                    class="w-12 h-12 mx-auto bg-primary-light/10 rounded-full flex items-center justify-center"
+                    class="w-12 h-12 mx-auto bg-[var(--landing-bg-card)] rounded-full flex items-center justify-center"
                     role="img"
                     aria-label="{factor.title} icon"
                   >
@@ -284,15 +283,15 @@
                   </div>
                 </div>
 
-                <h3 class="text-xl font-semibold mb-2 text-gray-900">
+                <h3 class="text-xl font-semibold mb-2 text-black dark:text-white">
                   {factor.title}
                 </h3>
-                <p class="text-gray-600 mb-4">{factor.description}</p>
+                <p class="text-[var(--form-text-secondary)] mb-4">{factor.description}</p>
 
                 <div class="mt-auto">
-                  <div class="bg-gray-100 p-3 rounded-lg">
-                    <p class="text-sm font-medium text-gray-700">
-                      <span class="text-primary-dark">Important:</span>
+                  <div class="bg-[var(--landing-bg-card)] p-3 rounded-lg">
+                    <p class="text-sm font-medium text-black dark:text-white">
+                      <span class="text-btnBg font-semibold">Important:</span>
                       {factor.importance}
                     </p>
                   </div>
@@ -302,11 +301,11 @@
           </div>
         {/if}
 
-        <div class="mt-12 p-6 bg-gray-100 rounded-lg">
+        <div class="mt-12 p-6 bg-[var(--landing-bg-card)] rounded-lg">
           <div class="flex flex-col md:flex-row items-center">
-            <div class="text-primary mr-4">
+            <div class="mr-4">
               <div
-                class="w-12 h-12 bg-primary-light/10 rounded-full flex items-center justify-center"
+                class="w-12 h-12 bg-[var(--landing-bg)] rounded-full flex items-center justify-center"
                 role="img"
                 aria-label="Information icon"
               >
@@ -314,10 +313,10 @@
               </div>
             </div>
             <div>
-              <h4 class="text-lg font-semibold mb-2">
+              <h4 class="text-lg font-semibold mb-2 text-black dark:text-white">
                 Which factor matters most?
               </h4>
-              <p class="text-gray-600">
+              <p class="text-[var(--form-text-secondary)]">
                 Banks typically consider the <strong>highest value</strong> among
                 these factors to determine your maximum loan eligibility. However,
                 all factors are evaluated to assess your overall financial health.
@@ -499,7 +498,7 @@
 
 <style>
   .card {
-    background: white;
+    background: var(--landing-bg-card);
     border-radius: 0.5rem;
     box-shadow:
       0 4px 6px -1px rgba(0, 0, 0, 0.1),

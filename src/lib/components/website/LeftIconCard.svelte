@@ -28,10 +28,10 @@
 
   <div class="flex flex-col gap-4">
     {#if cardData.heading}
-      <h2 class="font-FourthHead text-cardHeading">{@html cardData.heading}</h2>
+      <h2 class="typography-body-lg !font-semibold text-black dark:text-white">{@html cardData.heading}</h2>
     {/if}
     {#if cardData.para}
-      <p class="font-SubPara text-subPara">{@html cardData.para}</p>
+      <p class="typography-body-md text-[var(--form-text-secondary)]">{@html cardData.para}</p>
     {/if}
     {#if cardData.linkName}
       <Anchor link={cardData.url} linkName={cardData.linkName} />

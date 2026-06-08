@@ -223,36 +223,36 @@
       <!-- your savings -->
       <div data-section="first" id="first" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-black dark:text-white"
           >
             {yourSavings.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             {@html yourSavings.para}
           </p>
         </div>
         <!-- planning -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-black dark:text-white"
             >
               {planning.heading}
             </h2>
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               {@html planning.para}
             </p>
           </div>
           <ul class="space-y-6">
             {#each planning.listItems as list}
               <li class="space-y-2">
-                <h3 class="font-FourthHead text-paraFont">{list.heading}</h3>
-                <p class="font-Paragraph text-minParaFont">{list.desc}</p>
+                <h3 class="typography-body-lg !font-semibold text-black dark:text-white">{list.heading}</h3>
+                <p class="typography-body-md text-[var(--form-text-secondary)]">{list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -465,25 +465,25 @@
       <!-- take loan -->
       <div data-section="loan" id="loan" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-black dark:text-white"
             >
               {loan.heading}
             </h2>
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               {@html loan.para}
             </p>
           </div>
           <ul class="space-y-6">
             {#each loan.listItems as list}
               <li class="space-y-2">
-                <h3 class="font-FourthHead text-paraFont">
+                <h3 class="typography-body-lg !font-semibold text-black dark:text-white">
                   {@html list.heading}
                 </h3>
-                <p class="font-Paragraph text-minParaFont">{@html list.desc}</p>
+                <p class="typography-body-md text-[var(--form-text-secondary)]">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -511,29 +511,29 @@
             </div>
           </summary>
           {#if index == 0}
-            <div id="first" class="bg-white text-black">
+            <div id="first" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-black dark:text-white"
                 >
                   {yourSavings.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   {@html yourSavings.para}
                 </p>
               </div>
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-black dark:text-white"
                   >
                     {planning.heading}
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
                     {@html planning.para}
                   </p>
                 </div>
@@ -550,7 +550,7 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="smart" class="bg-white text-black">
+            <div id="smart" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <AboveTitleWithTopIconCard
                 contents={{
                   heading: `Smart savings calculators – Plan your future with confidence`,
@@ -594,7 +594,7 @@
               />
             </div>
           {:else if index == 2}
-            <div id="pay" class="bg-white text-black">
+            <div id="pay" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <AboveTitleWithoutIconCard
                 contents={{
                   heading: `Using Saved Investments for Your Down Payment`,
@@ -618,7 +618,7 @@
               />
             </div>
           {:else if index == 3}
-            <div id="invest" class="bg-white text-black">
+            <div id="invest" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <AboveTitleWithTopIconCard
                 contents={{
                   heading: `Smart Investment Options to Fund Your Down Payment`,
@@ -752,17 +752,17 @@
               />
             </div>
           {:else if index == 4}
-            <div id="loan" class="bg-white text-black">
+            <div id="loan" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-black dark:text-white"
                   >
                     {loan.heading}
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
                     {@html loan.para}
                   </p>
                 </div>

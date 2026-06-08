@@ -17,21 +17,21 @@
 </script>
 
 <div
-  class="grid px-[0.5rem] lg:px-0 gap-4 py-[2rem] lg:pt-[4rem] lg:pb-[8rem] grid-cols-12"
+  class="grid px-[0.5rem] lg:px-0 gap-4 py-[2rem] lg:pt-[4rem] lg:pb-[8rem] grid-cols-12 text-black dark:text-white"
 >
   {#if thinkKnow.heading}
     <div class="col-span-12 lg:col-span-4">
-      <h2 class="font-ThirdHead text-sectionHeading">
+      <h2 class="typography-h2 text-black dark:text-white">
         {@html thinkKnow.heading}
       </h2>
     </div>
   {/if}
 
   <ul
-    class="{disc} grid gap-5 overflow-hidden font-SubPara text-subPara col-span-12 lg:col-span-8 md:col-span-{colSpan}"
+    class="{disc} grid gap-5 overflow-hidden typography-body-md text-[var(--form-text-secondary)] col-span-12 lg:col-span-8 md:col-span-{colSpan}"
   >
     {#if thinkKnow.subHeading}
-      <h3 class="font-FifthHead text-subPara">
+      <h3 class="typography-body-md text-[var(--form-text-secondary)]">
         {@html thinkKnow.subHeading}
       </h3>
     {/if}
@@ -43,7 +43,7 @@
     {/if}
 
     {#if isBorder}
-      <div class="border-[1px] border-borderColor"></div>
+      <div class="border-[1px] border-[var(--form-border)]"></div>
     {/if}
     {#if thinkKnow.paraGraph}
       <ul class="grid gap-3 {disc}">
@@ -54,7 +54,7 @@
     {/if}
 
     {#if thinkKnow.bottomHeading}
-      <h3 class="font-ThirdHead text-miniSubHead">
+      <h3 class="typography-body-lg !font-semibold text-black dark:text-white">
         {thinkKnow.bottomHeading}
       </h3>
     {/if}

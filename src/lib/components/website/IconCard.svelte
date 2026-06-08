@@ -19,7 +19,7 @@
 </script>
 
   
-<div class="flex gap-6 items-start  py-[4rem]">
+<div class="flex gap-6 items-start py-[4rem] text-black dark:text-white">
   {#if cardData.icon}
     <img
       src={cardData.icon}
@@ -30,8 +30,8 @@
  
 
   <div class="flex flex-col gap-4">
-    <h2 class="font-ThirdHead text-minSubHead">{cardData.heading}</h2>
-    <p class="font-Paragraph text-minParaFont">{@html cardData.para}</p>
+    <h2 class="typography-body-lg !font-semibold text-black dark:text-white">{cardData.heading}</h2>
+    <p class="typography-body-md text-[var(--form-text-secondary)]">{@html cardData.para}</p>
     {#if cardData.link}
       <a href={cardData.link} class="text-linkColor underline font-Paragraph text-subParaFont">
         {cardData.btnName}

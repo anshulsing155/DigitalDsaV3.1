@@ -11,17 +11,17 @@
 
 </script>
 
-<section class="grid py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] gap-[2rem]">
+<section class="grid py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] gap-[2rem] text-black dark:text-white">
   <div class="space-y-5">
     {#if facilities.heading}
-      <p
-        class="font-ThirdHead text-mobSubHead md:col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+      <h2
+        class="typography-h2 text-black dark:text-white md:col-span-2"
       >
         {@html facilities.heading}
-      </p>
+      </h2>
     {/if}
     {#if facilities.subHeading}
-      <p class="font-Paragraph text-minParaFont">
+      <p class="typography-body-md text-[var(--form-text-secondary)]">
         {@html facilities.subHeading}
       </p>
     {/if}
@@ -37,10 +37,10 @@
           </div>
         {/if}
         {#if facility.title}
-          <p class="font-ThirdHead">{facility.title}</p>
+          <p class="typography-body-lg !font-semibold text-black dark:text-white">{facility.title}</p>
         {/if}
         {#if facility.desc}
-          <p class="font-Paragraph text-minParaFont">{@html facility.desc}</p>
+          <p class="typography-body-md text-[var(--form-text-secondary)]">{@html facility.desc}</p>
         {/if}
 
         {#if facility.linkText}
@@ -66,7 +66,7 @@
                   >
                 </li>
               {:else}
-                <li class="font-Paragraph text-minParaFont">
+                <li class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html item.points}
                 </li>
               {/if}
@@ -79,7 +79,7 @@
             <ul class=" space-y-4">
               <li class="flex items-start gap-2">
                 <svg
-                  class="w-5 h-5 text-black flex-shrink-0"
+                  class="w-5 h-5 text-black flex-shrink-0 dark:text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -107,7 +107,7 @@
         {/if}
       </div>
       {#if index < facilities.items.length - 1}
-        <div class="w-full h-[1px] bg-gray-200 md:hidden"></div>
+        <div class="w-full h-[1px] bg-[var(--form-border)] md:hidden"></div>
       {/if}
     {/each}
   </div>

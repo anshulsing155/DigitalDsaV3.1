@@ -9,7 +9,7 @@
 	const {
 		linkName = '',
 		link = '',
-		linkColor = '#1175BC',
+		linkColor = 'var(--dash-accent-link, var(--ddsa-primary-700))',
 		onClick = () => {}
 	}: Props = $props();
 </script>

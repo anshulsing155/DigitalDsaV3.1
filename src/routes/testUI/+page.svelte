@@ -304,7 +304,7 @@
 		<div class="block lg:hidden">
 			{#each ['Getting ready', 'Start buying journey', "What's next?", 'Tools & calculators'] as list, index}
 				<details
-					class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index <
+					class="dropdown bg-darkColor col-span-3 text-darkColor-contrast {index <
 					list.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''} "
@@ -317,7 +317,7 @@
 							<h2 class="">{list}</h2>
 							<div class="icon-container">
 								<ChevronDown
-									class="h-5 w-5 text-black transition-transform duration-300 dark:text-white"
+									class="h-5 w-5 text-darkColor-contrast transition-transform duration-300"
 								/>
 							</div>
 						</div>

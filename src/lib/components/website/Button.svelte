@@ -28,14 +28,14 @@
 </script>
 
 {#if link}
-  <a class="text-black" href={`${link}`}>
+  <a class="w-full md:w-auto" href={`${link}`}>
     <button
       type="button"
       onclick={onClick}
-      class="w-full rounded-full border px-[2rem] {btnClassStyle} font-Paragraph text-subPara hover:opacity-90 md:w-[auto] {btnAnimation
+      class="w-full rounded-full border px-[2rem] {btnClassStyle} typography-button hover:opacity-90 md:w-[auto] {btnAnimation
         ? 'animate-scaleLoop'
         : ''}"
-      style={`background-color: ${btnColor}; border-color: ${btnBorder};`}
+      style={`background-color: ${btnColor || 'transparent'}; border-color: ${btnBorder};${btnColor ? ' color: #0f172a !important;' : ' color: inherit;'}`}
     >
       {btnName}
       {#if icon}
@@ -49,10 +49,10 @@
   <button
     type="button"
     onclick={onClick}
-    class="w-full rounded-full border px-[2rem] {btnClassStyle} font-Paragraph text-minParaFont md:text-subParaFont hover:opacity-90 md:w-auto {btnAnimation
+    class="w-full rounded-full border px-[2rem] {btnClassStyle} typography-button hover:opacity-90 md:w-auto {btnAnimation
       ? 'animate-scaleLoop'
       : ''}"
-    style={`background-color: ${btnColor}; border-color: ${btnBorder};`}
+    style={`background-color: ${btnColor || 'transparent'}; border-color: ${btnBorder};${btnColor ? ' color: #0f172a !important;' : ' color: inherit;'}`}
   >
     {btnName}
     {#if icon}

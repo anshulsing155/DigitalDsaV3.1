@@ -9,18 +9,18 @@
 </script>
 
 <section
-  class="flex flex-col items-center justify-center gap-[2rem] border-y border-borderColor py-[4rem]"
+  class="flex flex-col items-center justify-center gap-[2rem] border-y border-[var(--form-border)] py-[4rem]"
 >
   {#if ways.heading}
-    <p
-      class="text-center font-ThirdHead text-minSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+    <h2
+      class="text-center typography-h2 text-black dark:text-white md:text-start"
     >
       {ways.heading}
-    </p>
+    </h2>
   {/if}
   <div class="flex flex-col md:flex-row gap-[2rem] item-center justify-center">
     {#if ways.para}
-      <p class="font-Paragraph text-subParaFont my-auto md:w-8/12 text-center">
+      <p class="typography-body-lg text-[var(--form-text-secondary)] my-auto md:w-8/12 text-center">
         {ways.para}
       </p>
     {/if}

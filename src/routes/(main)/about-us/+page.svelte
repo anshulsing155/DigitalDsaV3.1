@@ -142,7 +142,7 @@
           {#if index == 0}
             <div
               id="began"
-              class="flex flex-col gap-[2.5rem] border-b border-borderColor py-[3rem] bg-white text-black px-[0.5rem]"
+              class="flex flex-col gap-[2.5rem] border-b border-[var(--form-border)] py-[3rem] bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]"
             >
               <p
                 class="mt-[1rem] font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
@@ -188,7 +188,7 @@
               </div>
             </div>
           {:else if index == 1}
-            <div class="pt-[2rem] bg-white text-black px-[0.5rem]" id="team">
+            <div class="pt-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]" id="team">
               <h2 class="font-ThirdHead text-mobSubHead text-center">
                 Meet Our Leaders
               </h2>
@@ -288,7 +288,7 @@
           {:else if index == 2}
             <div
               id="sustainability"
-              class="pt-[2rem] flex flex-col gap-[2.5rem] bg-white text-black px-[1rem]"
+              class="pt-[2rem] flex flex-col gap-[2.5rem] bg-[var(--landing-bg)] text-black dark:text-white px-[1rem]"
             >
               <h3
                 class="font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
@@ -391,7 +391,7 @@
         <div
           data-section="where"
           id="where"
-          class="flex flex-col gap-[2.5rem] border-b border-borderColor py-[3rem]"
+          class="flex flex-col gap-[2.5rem] border-b border-[var(--form-border)] py-[3rem] text-black dark:text-white"
         >
           <p
             class="mt-[1rem] font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
@@ -498,7 +498,7 @@
         <div
           data-section="sustain"
           id="sustain"
-          class="grid gap-[2.5rem] py-[2rem] border-y border-borderColor"
+          class="grid gap-[2.5rem] py-[2rem] border-y border-[var(--form-border)] text-black dark:text-white"
         >
           <h3
             class="font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"

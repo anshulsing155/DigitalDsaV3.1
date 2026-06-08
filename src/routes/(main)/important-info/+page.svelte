@@ -174,7 +174,7 @@
         id="Productcategories"
         class="grid gap-[2rem] py-[4rem] pb-[8rem] lg:grid-cols-3 "
       >
-        <p class="text-nowrap font-ThirdHead text-minHeadFont">
+        <p class="text-nowrap typography-h2 text-black dark:text-white">
           Product Categories
         </p>
         <div class="col-span-2">
@@ -204,23 +204,23 @@
           {#if index == 0}
             <div
               id="Financial Services Guides"
-              class="bg-white text-black px-[0.5rem]"
+              class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]"
             >
               <Guides guide={serviceGuide} />
             </div>
           {:else if index == 1}
             <div
               id="Product Disclosure Statements"
-              class="bg-white text-black px-[0.5rem]"
+              class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]"
             >
               <Guides guide={disclosure} />
             </div>
           {:else if index == 2}
             <div
               id="Product categories"
-              class="grid gap-[2rem] px-[0.5rem] py-[2rem] lg:grid-cols-3 lg:px-0 bg-white text-black"
+              class="grid gap-[2rem] px-[0.5rem] py-[2rem] lg:grid-cols-3 lg:px-0 bg-[var(--landing-bg)] text-black dark:text-white"
             >
-              <p class="font-ThirdHead text-minHeadFont">Product Categories</p>
+              <p class="typography-h2 text-black dark:text-white">Product Categories</p>
               <div class="col-span-2">
                 <Support {contents} gridCol={2} />
               </div>
