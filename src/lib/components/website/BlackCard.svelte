@@ -1,6 +1,5 @@
 <script>
-	let {
-		cardData = {
+  export let cardData = {
     heading: "",
     para: "",
     icon: "",
@@ -11,28 +10,26 @@
     btnName: "",
     btnColor: "",
     btnBorder: "",
-    color:""
-  }
-	} = $props();
-
-
-
+    color: ""
+  };
 </script>
 
 <a href={cardData.url}>
   <div
-    class="h-[15rem] lg:h-[30rem] lg:max-h-[30rem] flex flex-col justify-center items-center gap-4 {cardData.color ? 'bg-darkColor/50' : 'bg-darkColor'} group"
+    class="h-[15rem] lg:h-[30rem] lg:max-h-[30rem] flex flex-col justify-center items-center gap-6 group transition-all duration-300 {cardData.color ? 'bg-[#222222]/80' : 'bg-[#222222]'}"
   >
     {#if cardData.icon}
       <img
         src={cardData.icon}
-        alt={cardData.iconAltName || "icon"}
-        class="h-10 transition-transform duration-300 group-hover:scale-125"
+        alt={cardData.iconAltName || 'icon'}
+        class="h-12 transition-transform duration-300 group-hover:scale-125"
       />
     {/if}
-    <h2 class="text-center font-Paragraph text-subParaFont text-btnBg">
+
+    <h2
+      class="text-center typography-h3 text-primary text-wrap "
+    >
       {@html cardData.heading}
     </h2>
   </div>
 </a>
-<!-- font-ThirdHead text-minSubHead -->

@@ -1,61 +1,71 @@
-<script>
-	let {
+<script lang="ts">
+	import Tooltip from './Tooltip.svelte';
+
+	type Props = {
+		contents?: {
+			cardImage?: string;
+			cardAltName?: string;
+			cardHeading?: string;
+			sourceName?: string;
+			originalSource?: string;
+			reverse?: boolean;
+		};
+	};
+
+	const {
 		contents = {
-    cardImage: "",
-    cardAltName: "",    
-    cardHeading: "",
-    sourceName:"",
-    originalSource:"",
-    reverse: false,
-    // imageHeight: 4,
-  }
-	} = $props();
-
-
-  import Tooltip from "./Tooltip.svelte";
-
-;
+			cardImage: '',
+			cardAltName: '',
+			cardHeading: '',
+			sourceName: '',
+			originalSource: '',
+			reverse: false
+		}
+	}: Props = $props();
 </script>
 
 <div
-  class="relative grid items-start gap-[2rem] md:gap-[3rem] lg:grid-cols-2 lg:gap-0 py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-borderColor"
+	class="relative grid items-start gap-8 border-b border-[var(--form-border)] px-2 py-16 md:gap-12 lg:grid-cols-2 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32 space-x-20"
 >
-  <!-- Left div (Image) -->
-  <div
-    class="top-0 w-full transform lg:relative"
-    class:lg:order-last={contents.reverse}
-    class:lg:translate-x-[8rem]={contents.reverse}
-    class:lg:-translate-x-[8rem]={!contents.reverse}
-  >
-    <div class="relative">
-      <div class="absolute top-0 right-0 bg-opacity-50 text-white text-center">
-        <Tooltip
-          linkName={`image source: <span class="underline">${contents.sourceName}</span>`}
-          hoverLink={contents.originalSource}
-        />
-      </div>
-      <img
-        src={contents.cardImage}
-        alt={contents.cardAltName}
-        class="aspect-[5/3] w-full object-cover object-top h-[15rem] lg:h-full"
-      />
-    </div>
-  </div>
-  <!-- Right div (Content) -->
-  <div
-    class="flex flex-col gap-[2.5rem] justify-self-start"
-    class:lg:order-first={contents.reverse}
-  >
-    {#if contents.cardHeading}
-      <h3
-        class="md:text-start font-ThirdHead text-sectionHeading"
-      >
-        {@html contents.cardHeading}
-      </h3>
-    {/if}
+	<!-- Image -->
+	<div
+		class="top-0 w-full transform lg:relative"
+		class:lg\:order-last={contents.reverse}
+		class:lg\:translate-x-\[8rem\]={contents.reverse}
+		class:lg\:-translate-x-\[8rem\]={!contents.reverse}
+	>
+		<div class="relative">
+			<div
+				class="absolute top-0 right-0 bg-opacity-50 text-center text-white"
+			>
+				<Tooltip
+					linkName={`image source: <span class="underline">${contents.sourceName}</span>`}
+					hoverLink={contents.originalSource}
+				/>
+			</div>
 
-    <div class="flex flex-col gap-4 font-SubPara text-subPara">
-      <slot />
-    </div>
-  </div>
+			<img
+				src={contents.cardImage}
+				alt={contents.cardAltName}
+				class="aspect-[5/3] h-60 w-full object-cover object-top lg:h-full"
+			/>
+		</div>
+	</div>
+
+	<!-- Content -->
+	<div
+		class="flex flex-col justify-self-start gap-10"
+		class:lg\:order-first={contents.reverse}
+	>
+		{#if contents.cardHeading}
+			<h3
+				class="typography-h2-md text-black dark:text-white">
+				{@html contents.cardHeading}
+			</h3>
+		{/if}
+
+		<div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-4">
+			<slot />
+		</div>
+	</div>
 </div>

@@ -1,22 +1,24 @@
-<script>
-	let {
-		linkName = "",
-		link = "",
-		linkColor = "#1175BC",
+<script lang="ts">
+	type Props = {
+		linkName?: string;
+		link?: string;
+		linkColor?: string;
+		onClick?: (event: MouseEvent) => void;
+	};
+
+	const {
+		linkName = '',
+		link = '',
+		linkColor = '#1175BC',
 		onClick = () => {}
-	} = $props();
-
-
-
-
-
-;
+	}: Props = $props();
 </script>
 
 <a
-  href={link}
-  onclick={onClick}
-  class="underline underline-offset-4 text-{linkColor} hover:no-underline font-Paragraph text-subPara cursor-pointer"
+	href={link}
+	onclick={onClick}
+	style={`color:${linkColor}`}
+	class="underline underline-offset-4 hover:no-underline cursor-pointer typography-input"
 >
-  {@html linkName}
+	{@html linkName}
 </a>

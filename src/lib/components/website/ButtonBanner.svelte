@@ -1,65 +1,53 @@
-<script>
-	let {
-		contents = {}
-	} = $props();
+<script lang="ts">
+	import Button from './Button.svelte';
 
+	type Props = {
+		contents?: any;
+	};
 
-  import Button from "./Button.svelte";
-
-;
+	const { contents = {} }: Props = $props();
 </script>
 
-<section
-  class="py-[3rem] w-full border-b border-borderColor px-[1.5rem]  lg:px-[4rem]"
->
-  {#if !contents.para}
-    <div
-      class="flex flex-col lg:flex-row justify-center items-center gap-[2rem] md:gap-[4rem] w-full lg:w-auto"
-    >
-      <h2
-        class="font-ThirdHead text-minSubHead md:text-mobSubHead text-center"
-      >
-        {@html contents.heading}
-      </h2>
-      <div class="w-full md:w-auto px-[2rem]">
-        <Button
-          btnName={contents.btnName}
-          link={contents.btnLink}
-          btnColor={contents.btnColor}
-          btnBorder={contents.btnBorder}
-          onClick={contents.btnClick}
-        />
-      </div>
-    </div>
-  {:else if contents.para}
-    <div
-      class="flex flex-col justify-center items-center gap-[2rem] md:gap-[4rem] w-full lg:w-auto"
-    >
-      <h2
-        class="font-ThirdHead text-minSubHead md:text-mobSubHead text-center"
-      >
-        {@html contents.heading}
-      </h2>
-      <div class="grid lg:grid-cols-12 gap-[3rem]">
-        <div class="lg:col-span-8">
-          <p
-            class="font-SubPara text-subPara text-center lg:w-8/12 lg:justify-self-end"
-          >
-            {@html contents.para}
-          </p>
-        </div>
-        <div
-          class="w-full md:w-auto lg:justify-self-start justify-self-center lg:col-span-4"
-        >
-          <Button
-            btnName={contents.btnName}
-            link={contents.btnLink}
-            btnColor={contents.btnColor}
-            btnBorder={contents.btnBorder}
-            onClick={contents.btnClick}
-          />
-        </div>
-      </div>
-    </div>
-  {/if}
+<section class="w-full border-b border-[var(--form-border)] px-6 py-12 lg:px-16">
+	{#if !contents.para}
+		<div
+			class="flex w-full flex-col items-center justify-center gap-8 md:gap-16 lg:w-auto lg:flex-row"
+		>
+			<h2 class="typography-h2-md text-black dark:text-white">
+				{@html contents.heading}
+			</h2>
+
+			<div class="w-full flex justify-center md:w-auto lg:col-span-4 lg:justify-self-start">
+				<Button
+					btnName={contents.btnName}
+					link={contents.btnLink}
+					btnClass={contents.btnClass}
+					onClick={contents.btnClick}
+				/>
+			</div>
+		</div>
+	{:else}
+		<div class="flex w-full flex-col items-center justify-center gap-8 md:gap-16 lg:w-auto">
+			<h2 class="typography-h2-md text-black dark:text-white">
+				{@html contents.heading}
+			</h2>
+
+			<div class="grid gap-12 lg:grid-cols-12">
+				<div class="lg:col-span-8">
+					<p class="typography-body-md text-[var(--form-text-secondary)]">
+						{@html contents.para}
+					</p>
+				</div>
+
+				<div class="w-full justify-self-center md:w-auto lg:col-span-4 lg:justify-self-start">
+					<Button
+						btnName={contents.btnName}
+						link={contents.btnLink}
+						btnClass={contents.btnClass}
+						onClick={contents.btnClick}
+					/>
+				</div>
+			</div>
+		</div>
+	{/if}
 </section>

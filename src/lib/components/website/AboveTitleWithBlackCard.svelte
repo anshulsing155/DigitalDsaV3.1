@@ -1,43 +1,37 @@
-<script>
-	let {
-		contents = {},
-		paddingX = 4,
-		mobPaddingX = 1
-	} = $props();
+<script lang="ts">
+	import BlackCard from './BlackCard.svelte';
 
+	type Props = {
+		contents?: any;
+		paddingX?: number;
+		mobPaddingX?: number;
+	};
 
-  import BlackCard from "./BlackCard.svelte";
-;
-
-
+	const { contents = {}, paddingX = 4, mobPaddingX = 1 }: Props = $props();
 </script>
 
 <section
-  class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[{paddingX}rem] w-full {contents.borderBottom
-    ? 'lg:border-b'
-    : 'border-b-0'} border-borderColor"
+	class={`w-full px-[1rem] py-[1rem] lg:px-16 lg:py-0 lg:pt-16 lg:pb-32 ${
+		contents.borderBottom ? 'border-b border-[var(--form-border)]' : ''
+	}`}
 >
-  <div class="flex flex-col gap-[3rem] w-full">
-    <h2
-      class="font-ThirdHead text-mobSubHead md:text-miniHeadFont"
-    >
-      {@html contents.heading}
-    </h2>
+	<div class="flex w-full flex-col gap-12">
+		<h2 class="typography-h2-md text-black dark:text-white">
+			{@html contents.heading}
+		</h2>
 
-    {#if contents.cards}
-      <div
-        class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-{contents.xlGridCol} gap-[2rem]"
-      >
-        {#each contents.cards as card, index}
-          <div
-            class={index < contents.cards.length - 1
-              ? "border-b md:border-b-0 pb-[4rem] md:pb-0 md:border-r"
-              : ""}
-          >
-            <BlackCard cardData={card} />
-          </div>
-        {/each}
-      </div>
-    {/if}
-  </div>
+		{#if contents.cards}
+			<div class="grid gap-8 {contents.xlGridCol === 4 ? 'xl:grid-cols-4' : 'lg:grid-cols-3'}">
+				{#each contents.cards as card, index}
+					<div
+						class={index < contents.cards.length - 1
+							? 'border-b border-[var(--form-border)] pb-16 md:border-b-0'
+							: ''}
+					>
+						<BlackCard cardData={card} />
+					</div>
+				{/each}
+			</div>
+		{/if}
+	</div>
 </section>
