@@ -1,64 +1,71 @@
-<script>
-	let {
-		btnColor = "",
-		btnBorder = "#4F4C4D",
-		btnName = "",
-		link = "",
-		icon = "",
-		imgAltName = "",
-		img = "",
-		imageClass = "",
-		btnClassStyle = "py-3",
+<script lang="ts">
+	type Props = {
+		btnClass?: string;
+		btnName?: string;
+		link?: string;
+		icon?: string;
+		imgAltName?: string;
+		img?: string;
+		imageClass?: string;
+		// btnClassStyle?: string;
+		onClick?: () => void;
+		btnAnimation?: boolean;
+	};
+
+	const {
+		btnClass = '',
+		btnName = '',
+		link = '',
+		icon = '',
+		imgAltName = '',
+		img = '',
+		imageClass = '',
+		// btnClassStyle = 'py-3',
 		onClick = () => {},
 		btnAnimation = false
-	} = $props();
-
-
-
-
-
-
-
-
-
-
-
-
-
+	}: Props = $props();
 </script>
 
 {#if link}
-  <a class="w-full md:w-auto" href={`${link}`}>
-    <button
-      type="button"
-      onclick={onClick}
-      class="w-full rounded-full border px-[2rem] {btnClassStyle} typography-button hover:opacity-90 md:w-[auto] {btnAnimation
-        ? 'animate-scaleLoop'
-        : ''}"
-      style={`background-color: ${btnColor || 'transparent'}; border-color: ${btnBorder};${btnColor ? ' color: #0f172a !important;' : ' color: inherit;'}`}
-    >
-      {btnName}
-      {#if icon}
-        <span><i class={icon}></i></span>
-      {:else if img}
-        <span><img src={img} alt={imgAltName} class="h-2 {imageClass}" /></span>
-      {/if}
-    </button>
-  </a>
+	<a href={link} class="inline-block">
+		<button
+			type="button"
+			onclick={onClick}
+			class={`typography-button typography-button w-full cursor-pointer rounded-full
+				px-8 py-3 transition-all
+				duration-300 hover:opacity-90 md:w-auto
+				${btnClass}
+				${btnAnimation ? 'animate-scaleLoop' : ''}`}
+		>
+			<span class="flex items-center justify-center gap-2">
+				{btnName}
+
+				{#if icon}
+					<i class={icon}></i>
+				{:else if img}
+					<img src={img} alt={imgAltName} class={`h-2 ${imageClass}`} />
+				{/if}
+			</span>
+		</button>
+	</a>
 {:else}
-  <button
-    type="button"
-    onclick={onClick}
-    class="w-full rounded-full border px-[2rem] {btnClassStyle} typography-button hover:opacity-90 md:w-auto {btnAnimation
-      ? 'animate-scaleLoop'
-      : ''}"
-    style={`background-color: ${btnColor || 'transparent'}; border-color: ${btnBorder};${btnColor ? ' color: #0f172a !important;' : ' color: inherit;'}`}
-  >
-    {btnName}
-    {#if icon}
-      <span><i class={icon}></i></span>
-    {:else if img}
-      <span><img src={img} alt={imgAltName} class="h-2 {imageClass}" /></span>
-    {/if}
-  </button>
+	<button
+		type="button"
+		onclick={onClick}
+		class={`typography-button typography-button w-full cursor-pointer rounded-full
+			px-8 py-3 transition-all
+			duration-300 hover:opacity-90 md:w-auto
+			${btnClass}
+			${btnAnimation ? 'animate-scaleLoop' : ''}`}
+	>
+		<span class="flex items-center justify-center gap-2">
+			{btnName}
+
+			{#if icon}
+				<i class={icon}></i>
+			{:else if img}
+				<img src={img} alt={imgAltName} class={`h-2 ${imageClass}`} />
+			{/if}
+		</span>
+	</button>
 {/if}

@@ -1,144 +1,151 @@
-<script>
-	let {
-		navList = {},
-		activeSection = ""
-	} = $props();
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import Button from './Button.svelte';
 
+	type NavItem = {
+		name: string;
+		targetId: string;
+	};
 
-  import { onMount } from "svelte";
-  import Button from "./Button.svelte";
+	type ActionBtn = {
+		btnName: string;
+		btnLink?: string;
+		btnClick?: () => void;
+		btnClass?: string;
+	};
 
-;
-// Currently active section
+	type NavList = {
+		items?: NavItem[];
+		actionBtns?: ActionBtn[];
+	};
 
-  let isFixed = false; // Tracks if the navbar is fixed
-  let originalOffsetTop = 0; // Stores the navbar's original position
+	type Props = {
+		navList?: NavList;
+		activeSection?: string;
+	};
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY; // Get the current scroll position
-    if (scrollPosition >= originalOffsetTop) {
-isFixed = true; // Fix the navbar when it touches the top
-    } else {
-isFixed = false; // Restore the navbar to its original position
-    }
-  };
-  function scrollToSection(id) {
-    const target = document.getElementById(id);
-    if (target) {
-const yOffset = -80; // Offset of 80px from the top
-const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
-window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  }
-  onMount(() => {
-    const navbar = document.getElementById("navbar");
-    // console.log(navbar, "navbar");
-    if (navbar) {
-const navbarRect = navbar.getBoundingClientRect(); // Get the bounding rectangle of the navbar
-originalOffsetTop = navbarRect.top + window.scrollY; // Calculate the actual position relative to the document
-window.addEventListener("scroll", handleScroll);
+	const { navList = {}, activeSection = '' }: Props = $props();
 
-return () => {
-window.removeEventListener("scroll", handleScroll); // Cleanup listener
-};
-    }
-  });
+	let isFixed = $state(false);
+	let originalOffsetTop = 0;
+
+	function handleScroll() {
+		isFixed = window.scrollY >= originalOffsetTop;
+	}
+
+	function scrollToSection(id: string) {
+		const target = document.getElementById(id);
+
+		if (!target) return;
+
+		const yOffset = -80;
+
+		const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+
+		window.scrollTo({
+			top: y,
+			behavior: 'smooth'
+		});
+	}
+
+	onMount(() => {
+		const navbar = document.getElementById('navbar');
+
+		if (!navbar) return;
+
+		const navbarRect = navbar.getBoundingClientRect();
+
+		originalOffsetTop = navbarRect.top + window.scrollY;
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
-
 <div>
-<nav
-  id="navbar"
-  class={`${
-    isFixed ? "fixedNavbar  shadow-xl " : " "
-  }  bg-[var(--landing-bg)] mx-auto text-center font-FourthHead text-subParaFont lg:px-[.5rem] xl:px-[2rem]  border-b border-[var(--form-border)] transition-all duration-300 `}
->
-  <!-- flex justify-between items-center w-full -->
-  {#if navList.items && navList.items.length > 0}
-    <div class="flex justify-between w-full mx-auto">
-      <div class="flex">
-        {#each navList.items as nav}
-          <div class="flex flex-col">
-            <a
-              href={`#${nav.targetId}`}
-              onclick={(e) => { e.preventDefault(); (() => scrollToSection(nav.targetId))(e); }}
-              class="mx-4 py-8 font-FourthHead text-subParaFontfont-FourthHead text-subParaFont text-black dark:text-white flex items-center gap-2"
-              >{@html nav.name}</a
-            >
-            {#if activeSection === nav.targetId}
-              <div
-                class={`${
-                  activeSection === nav.targetId
-                    ? "h-1 w-full bg-btnBg section"
-                    : ""
-                } `}
-              ></div>
-            {/if}
-          </div>
-        {/each}
-      </div>
+	<nav
+		id="navbar"
+		class="mx-auto border-b border-[var(--form-border)] bg-[var(--landing-bg)] text-center transition-all duration-300"
+		class:fixedNavbar={isFixed}
+		class:shadow-xl={isFixed}
+	>
+		{#if navList.items?.length}
+			<div class="mx-auto flex w-full justify-between">
+				<div class="flex">
+					{#each navList.items as nav}
+						<div class="flex flex-col">
+							<a
+								href={`#${nav.targetId}`}
+								onclick={(e) => {
+									e.preventDefault();
+									scrollToSection(nav.targetId);
+								}}
+								class="typography-label mx-4 flex items-center gap-2 py-6 text-[var(--form-text-secondary)] transition-colors hover:text-primary {activeSection ===
+								nav.targetId
+									? 'text-primary'
+									: 'text-black dark:text-white'}"
+							>
+								{@html nav.name}
+							</a>
 
-      {#if navList.actionBtns}
-        <div
-          class="gap-[2rem] items-center
-        {navList.items.length > 6 ? 'hidden  xl:flex' : 'flex lg:flex'}"
-        >
-          {#each navList.actionBtns as btn}
-            <Button
-              btnName={btn.btnName}
-              link={btn.btnLink}
-              onClick={btn.btnClick}
-              btnColor={btn.btnColor}
-            />
-          {/each}
-        </div>
-      {/if}
-    </div>
-  {/if}
-  
-</nav>
+							{#if activeSection === nav.targetId}
+								<div class="bg-ddsa-gradient-primary h-1 w-full"></div>
+							{/if}
+						</div>
+					{/each}
+				</div>
 
+				{#if navList.actionBtns?.length}
+					<div class="flex items-center gap-4 pr-4" class:hidden={navList.items.length > 6}>
+						{#each navList.actionBtns as btn}
+							<Button
+								btnName={btn.btnName}
+								link={btn.btnLink}
+								onClick={btn.btnClick}
+								btnClass={btn.btnClass}
+							/>
+						{/each}
+					</div>
+				{/if}
+			</div>
+		{/if}
+	</nav>
 
-
-
-<div
-    class={`${
-      isFixed
-        ? "py-8 bg-[var(--landing-bg)] mx-auto text-center font-FourthHead text-subParaFont lg:px-[.5rem] xl:px-[2rem]  border-b border-[var(--form-border)] "
-        : " "
-    } `}
-  >
-</div>
+	<div class:bg-white={isFixed} class:border-b={isFixed} class:py-8={isFixed}></div>
 </div>
 
 <style>
-  .fixedNavbar {
-    position: fixed;
-    top: 0;
-    z-index: 20;
-    width: 95%;
-  }
+	.fixedNavbar {
+		position: fixed;
+		top: 0;
+		z-index: 50;
+		width: 95%;
+	}
 
-  @media (min-width: 1401px) {
-    .fixedNavbar  {
-      width: 1360px;
-    }
-  }
-   
-  @media (min-width: 2560px) and (max-width: 3860px) {
-    .fixedNavbar {
-      width: 2000px;
-    }
-  }
-  @media (min-width: 3861px) {
-    .fixedNavbar {
-      width: 3000px;
-    }
-  }
+	@media (min-width: 1401px) {
+		.fixedNavbar {
+			width: 1360px;
+		}
+	}
 
-  @media (min-width: 1024px) and (max-width: 1400px) {
-    .fixedNavbar {
-      width: 95%; /* Shrinks to 90% of its original size */
-    }
-  }
+	@media (min-width: 2560px) and (max-width: 3860px) {
+		.fixedNavbar {
+			width: 2000px;
+		}
+	}
+
+	@media (min-width: 3861px) {
+		.fixedNavbar {
+			width: 3000px;
+		}
+	}
+
+	@media (min-width: 1024px) and (max-width: 1400px) {
+		.fixedNavbar {
+			width: 95%;
+		}
+	}
 </style>
