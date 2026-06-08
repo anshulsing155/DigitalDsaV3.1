@@ -1,0 +1,92 @@
+{
+  "_comment": "FM-1 pre-migration snapshot lock for HL-TOPUP.",
+  "_source": "src/lib/testing/scenarios/formPathScenarios.ts :: HL_TOPUP.payload (rewritten 2026-04-22)",
+  "_capturedAt": "2026-04-22T00:00:00.000Z",
+  "_shift_notes_S77e_step4": "Classification (i) FIXTURE-WAS-WRONG — same orphan pattern as HL-BT-ONLY plus: (1) topUpAmount/topUpTenure schema keys used (not requiredTopupAmount/topupTerm); (2) obligation id set deterministically ('obl-hl-topup-1') since cleanObligationEntries generates a UUID if none provided; (3) obligation shape includes cleanObligationEntries defaults (totalLimit/remainingLimit/utilizedAmount 0 strings) that the old hand-written scenario omitted; (4) obligationType derived as 'term_loan' from loanType 'Home Loan' (not in CREDIT_LINE_TYPES set).",
+  "payload": {
+    "loanTransaction": {
+      "loanName": "Home Loan",
+      "loanType": "Top-up Only",
+      "numberOfApplicants": 1,
+      "propertyIdentified": true,
+      "propertyComplianceStatus": "fully_compliant",
+      "propertyRegistered": false,
+      "loanAmount": 800000,
+      "tenureYears": 10,
+      "propertyState": "West Bengal",
+      "propertyCity": "Kolkata",
+      "constructionStatus": "Flat",
+      "propertyStage": "Ready To Move",
+      "carpetArea": 950,
+      "carpetAreaUnit": "Feet",
+      "carpetAreaRaw": 950,
+      "propertyAreaType": "PLANNED_AUTHORITY",
+      "ocCcAvailable": "BOTH",
+      "propertyUsageIntent": "SELF_USE",
+      "residenceSameAsProperty": true,
+      "currentBank": "ICICI Bank",
+      "principalOutstanding": 2500000,
+      "currentInterestRate": 8.75,
+      "remainingTenure": 144,
+      "currentEMI": 28000,
+      "sixMonthsAfterRegistry": false,
+      "interestRateType": "FLOATING",
+      "emiBounceHistory": "0",
+      "sanctionAmount": 800000,
+      "topUpAmount": 800000,
+      "topUpTenure": 10,
+      "assessmentStatus": "fresh",
+      "documentationReadiness": [
+        "SALE_DEED",
+        "OC",
+        "CC",
+        "EC"
+      ],
+      "nocFromPreviousLender": "Yes"
+    },
+    "allApplicantDetails": [
+      {
+        "applicantType": "Individual",
+        "title": "Mr.",
+        "fullName": "Soumya Banerjee",
+        "age": 42,
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "employmentType": "Salaried(Private)",
+        "creditScore": 740,
+        "hasExistingObligations": true,
+        "roleInApplication": "Primary",
+        "residenceType": "Owned",
+        "salariedProfile": {
+          "worksForReputedOrg": true,
+          "companyHas100PlusEmployees": true,
+          "employerIsProprietorship": false,
+          "employerSharesFinancials": false,
+          "isPermanentEmployee": true,
+          "twoYearsWithSameEmployer": true,
+          "threeYearsTotalExperience": true,
+          "hasProvidentFund": true,
+          "salaryInBankAccount": true,
+          "receivesBonus": true,
+          "receivesSalarySlip": true,
+          "hasHigherEducation": true
+        },
+        "grossIncome": 90000,
+        "netIncome": 70000,
+        "obligations": [
+          {
+            "id": "obl-hl-topup-1",
+            "obligationType": "term_loan",
+            "loanType": "Home Loan",
+            "bankName": "ICICI Bank",
+            "selectedToClose": "Keep running",
+            "emi": "28000",
+            "tenure": "240",
+            "interestRate": "8.75",
+            "remainingTenure": "144"
+          }
+        ]
+      }
+    ]
+  }
+}

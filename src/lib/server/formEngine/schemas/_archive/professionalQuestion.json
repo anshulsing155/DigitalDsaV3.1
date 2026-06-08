@@ -1,0 +1,617 @@
+{
+	"professionalApplicant": [
+		{
+			"id": "q_yourProfession",
+			"key": "professionType",
+			"type": "radio",
+			"required": true,
+			"question": "Please select the applicant’s profession.",
+			"description": "Lenders may require relevant professional certificates or academic qualifications for verification.",
+			"options": [
+				{
+					"label": "Lawyer",
+					"value": "Lawyer",
+					"icon": "Gavel"
+				},
+				{
+					"label": "Chartered Accountant (CA)",
+					"value": "Chartered Accountant(CA)",
+					"icon": "PieChart"
+				},
+				{
+					"label": "Company Secretary (CS)",
+					"value": "Company Secretary(CS)",
+					"icon": "FileCheck"
+				},
+				{
+					"label": "Cost & Management Accountant (CMA)",
+					"value": "CMA",
+					"icon": "Calculator"
+				},
+				{
+					"label": "MBBS Doctor",
+					"value": "MBBS Doctor",
+					"icon": "Stethoscope"
+				},
+				{
+					"label": "Dentist (BDS / MDS)",
+					"value": "Dentist",
+					"icon": "Stethoscope"
+				},
+				{
+					"label": "Physiotherapist",
+					"value": "Physiotherapist",
+					"icon": "HeartPulse"
+				},
+				{
+					"label": "Architect",
+					"value": "Architect",
+					"icon": "Construction"
+				},
+				{
+					"label": "Engineer (Licensed / Chartered)",
+					"value": "Engineer",
+					"icon": "Wrench"
+				},
+				{
+					"label": "Other Licensed Professional",
+					"value": "Other Licensed Professional",
+					"icon": "Award"
+				}
+			],
+			"showWhen": {
+				"and": [
+					{
+						"!=": ["fullNameOfApplicant", ""]
+					},
+					{
+						"!=": ["gender", ""]
+					},
+					{
+						"!=": ["age", ""]
+					}
+				]
+			}
+		},
+		{
+			"id": "q_isLawyerBarCouncil",
+			"key": "isLawyerBarCouncil",
+			"type": "radio",
+			"required": true,
+			"question": "Is a chamber allotted to the applicant by the Bar Association?",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "Yes",
+					"icon": "ThumbsUp"
+				},
+				{
+					"label": "No",
+					"value": "No",
+					"icon": "ThumbsDown"
+				}
+			],
+			"validation": {
+				"condition_1": [
+					{
+						"case": {
+							"==": ["isLawyerBarCouncil", "No"]
+						},
+						"then": "Currently, profiles of lawyers without a registered chamber are not eligible for processing. Support will be enabled once partner banks accept such profiles. Meanwhile, the applicant may consider NBFCs or local financial service providers. We apologize for the inconvenience caused."
+					}
+				],
+				"condition_2": [
+					{
+						"case": {
+							"==": ["isLawyerBarCouncil", "Yes"]
+						},
+						"then": "We currently assist advocates practicing in the High Courts or Supreme Court who have been allotted chambers by their respective Bar Associations. If applicant meet these criteria and have the necessary documents for verification, we would be glad to support you."
+					}
+				]
+			},
+			"showWhen": {
+				"==": ["professionType", "Lawyer"]
+			}
+		},
+		{
+			"id": "q_businessActivityDetails",
+			"key": "businessActivityDetails",
+			"type": "multiple-select",
+			"question": "Provide details of the applicant’s employment or occupation.",
+			"required": true,
+			"options": [
+				{
+					"label": "Has valid GST registration",
+					"value": "gst_registered",
+					"showWhen": {
+						"==": ["employmentType", "Self-employed(Professional)"]
+					}
+				},
+				{
+					"label": "Has active current account",
+					"value": "has_current_account",
+					"showWhen": {
+						"==": ["employmentType", "Self-employed(Professional)"]
+					}
+				},
+				{
+					"label": "Files ITR regularly (min 2 years)",
+					"value": "itr_filed_regularly",
+					"showWhen": {
+						"==": ["employmentType", "Self-employed(Professional)"]
+					}
+				},
+				{
+					"label": "Has been profitable for the last 3 years",
+					"value": "profit_last_3_years",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["businessActivityDetails.itr_filed_regularly", true]
+							},
+							{
+								"==": ["businessActivityDetails.business_3plus_years", true]
+							},
+							{
+								"==": ["employmentType", "Self-employed(Professional)"]
+							}
+						]
+					}
+				},
+				{
+					"label": "Has been profitable since inception",
+					"value": "profit_since_starting",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["businessActivityDetails.itr_filed_regularly", true]
+							},
+							{
+								"==": ["businessActivityDetails.business_3plus_years", false]
+							},
+							{
+								"==": ["employmentType", "Self-employed(Professional)"]
+							}
+						]
+					}
+				},
+				{
+					"label": "More than 40% of income is in cash",
+					"value": "major_cash_sales",
+					"showWhen": {
+						"==": ["employmentType", "Self-employed(Professional)"]
+					}
+				},
+				{
+					"label": "Most income from 1–2 key clients",
+					"value": "very_few_clients",
+					"showWhen": {
+						"==": ["employmentType", "Self-employed(Professional)"]
+					}
+				},
+				{
+					"label": "Taken CC/OD or loan in last 12 months",
+					"value": "has_cc_od",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["businessActivityDetailsVisible.has_current_account", true]
+							},
+							{
+								"==": ["employmentType", "Self-employed(Professional)"]
+							}
+						]
+					}
+				},
+				{
+					"label": "Has additional income sources",
+					"value": "has_other_income_source",
+					"showWhen": {
+						"==": ["employmentType", "Self-employed(Professional)"]
+					}
+				},
+				{
+					"label": "Has valid professional registration / license",
+					"value": "has_professional_license",
+					"showWhen": {
+						"==": ["employmentType", "Self-employed(Professional)"]
+					}
+				},
+				{
+					"label": "Operates from chamber / clinic / office",
+					"value": "has_commercial_premises",
+					"showWhen": {
+						"==": ["employmentType", "Self-employed(Professional)"]
+					}
+				},
+				{
+					"label": "Clinic / chamber is owned",
+					"value": "owns_premises",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["businessActivityDetails.has_commercial_premises", true]
+							},
+							{
+								"==": ["employmentType", "Self-employed(Professional)"]
+							}
+						]
+					}
+				},
+				{
+					"label": "Has 2+ years experience before practice",
+					"value": "two_years_experience_before_practice",
+					"showWhen": {
+						"and": [
+							{
+								">=": ["selectedAge", 25]
+							},
+							{
+								"==": ["businessActivityDetails.business_3plus_years", false]
+							},
+							{
+								"==": ["employmentType", "Self-employed(Professional)"]
+							}
+						]
+					}
+				},
+				{
+					"label": "Enrolled with Bar Council / ICAI / MCI / COA",
+					"value": "bar_council_registered",
+					"showWhen": {
+						"==": ["employmentType", "Self-employed(Professional)"]
+					}
+				}
+			],
+			"showWhen": {
+				"or": [
+					{
+						"and": [
+							{
+								"==": ["professionType", "Lawyer"]
+							},
+							{
+								"!=": ["isLawyerBarCouncil", ""]
+							}
+						]
+					},
+					{
+						"!=": ["professionType", "Lawyer"]
+					}
+				]
+			}
+		},
+		{
+			"id": "q_GSTRegistrationYear",
+			"question": "When was the GST registration completed?",
+			"key": "GSTRegistrationYear",
+			"type": "month-year",
+			"required": true,
+			"showWhen": {
+				"and": [
+					{
+						"==": ["businessActivityDetailsValidate", true]
+					},
+					{
+						"==": ["businessActivityDetails.gst_registered", true]
+					}
+				]
+			}
+		},
+		{
+			"id": "q_financialsTable",
+			"question": "Provide the applicant’s financial details (profit, depreciation, and gross receipts).",
+			"key": "financialsTable",
+			"type": "table",
+			"required": true,
+			"uiMeta": {
+				"rows": [
+					{
+						"label": "Net Profit ",
+						"field": "netProfitArray"
+					},
+					{
+						"label": "Depreciation + Interest",
+						"field": "depreciationArray"
+					},
+					{
+						"label": " Gross receipts",
+						"field": "grossReceipts"
+					}
+				]
+			},
+			"showWhen": {
+				"and": [
+					{
+						"==": ["businessActivityDetailsValidate", true]
+					},
+					{
+						"==": ["businessActivityDetails.itr_filed_regularly", true]
+					}
+				]
+			}
+		},
+		{
+			"id": "q_averageBankBalance",
+			"question": "Enter your average balance in current account (12 months)",
+			"key": "averageBankBalance",
+			"type": "number",
+			"icon": "IndianRupee",
+			"showNumberInWords": true,
+			"required": true,
+			"showWhen": {
+				"and": [
+					{
+						"==": ["businessActivityDetailsVisible.has_current_account", true]
+					},
+					{
+						"==": ["businessActivityDetailsVisible.has_cc_od", false]
+					},
+					{
+						"==": ["businessActivityDetailsValidate", true]
+					}
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "averageBankBalance"
+								},
+								20000
+							]
+						},
+						"averageBankBalanceError": "Average Balance should be greater than or equal to 20,000"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "averageBankBalance"
+								},
+								9999999999
+							]
+						},
+						"averageBankBalanceError": "Enter a valid amount"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_cashAmount",
+			"question": "Enter your average monthly cash collections (last FY)",
+			"key": "cashAmount",
+			"type": "number",
+			"icon": "IndianRupee",
+			"showNumberInWords": true,
+			"required": true,
+			"showWhen": {
+				"or": [
+					{
+						"and": [
+							{
+								"==": ["businessActivityDetailsVisible.major_cash_sales", true]
+							},
+							{
+								"==": ["businessActivityDetailsValidate", true]
+							}
+						]
+					},
+					{
+						"and": [
+							{
+								"==": ["businessActivityDetailsVisible.has_current_account", false]
+							},
+							{
+								"==": ["businessActivityDetailsVisible.itr_filed_regularly", false]
+							},
+							{
+								"==": ["businessActivityDetailsVisible.gst_registered", false]
+							},
+							{
+								"==": ["businessActivityDetailsValidate", true]
+							}
+						]
+					},
+					{
+						"and": [
+							{
+								"==": ["businessActivityDetailsVisible.has_current_account", false]
+							},
+							{
+								"==": ["businessActivityDetailsVisible.has_cc_od", false]
+							},
+							{
+								"==": ["businessActivityDetailsVisible.itr_filed_regularly", false]
+							},
+							{
+								"==": ["businessActivityDetailsVisible.gst_registered", false]
+							},
+							{
+								"==": ["businessActivityDetailsValidate", true]
+							}
+						]
+					},
+					{
+						"and": [
+							{
+								"==": ["businessActivityDetailsVisible.has_current_account", true]
+							},
+							{
+								"==": ["businessActivityDetailsVisible.has_cc_od", true]
+							},
+							{
+								"==": ["businessActivityDetailsVisible.itr_filed_regularly", false]
+							},
+							{
+								"==": ["businessActivityDetailsVisible.gst_registered", false]
+							},
+							{
+								"==": ["businessActivityDetailsValidate", true]
+							}
+						]
+					}
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "cashAmount"
+								},
+								20000
+							]
+						},
+						"cashAmountError": "Cash Sale must be at least 20000"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "cashAmount"
+								},
+								99999999999
+							]
+						},
+						"cashAmountError": "Enter a valid amount"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_creditScore",
+			"question": "What is applicant's credit score?",
+			"key": "creditScore",
+			"description": "<div class='info-title'><span class='info-icon gold'>⭐</span> Understanding Credit Score (CIBIL)</div><div class='info-box highlight'>Your <strong>Credit Score</strong> is a 3-digit number (300-900) that represents your creditworthiness based on your credit history.</div><div class='stats-row'><div class='stat'><span class='stat-value' style='color: #dc2626;'>300-549</span><span class='stat-label'>Poor</span></div><div class='stat'><span class='stat-value' style='color: #f59e0b;'>550-649</span><span class='stat-label'>Fair</span></div><div class='stat'><span class='stat-value' style='color: #10b981;'>650-749</span><span class='stat-label'>Good</span></div><div class='stat'><span class='stat-value' style='color: #059669;'>750-900</span><span class='stat-label'>Excellent</span></div></div><div class='info-box tip'><span class='bold'>How to check your score?</span><br/>Visit <em>cibil.com</em> or use apps like Paytm, PhonePe, or your bank's app to get a free credit report.</div><div class='info-box note'><span class='bold'>Note:</span> A score of 750+ increases your chances of loan approval and better interest rates.</div>",
+			"type": "number",
+			"icon": "Sparkles",
+			"showNumberInWords": false,
+			"maxLength": 3,
+			"max": 900,
+			"required": true,
+			"showWhen": {
+				"==": ["businessActivityDetailsValidate", true]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "creditScore"
+								},
+								300
+							]
+						},
+						"creditScoreError": "Credit Score must be at least 300"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "creditScore"
+								},
+								900
+							]
+						},
+						"creditScoreError": "Credit Score must be at most 900"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_whyPrimaryLowCredit",
+			"key": "whyPrimaryLowCredit",
+			"required": true,
+			"type": "multiple-select",
+			"question": "What factors have contributed to this CIBIL score?",
+			"description": "Please share honestly. Any incorrect or inconsistent information can lead to delays or rejection of the loan application.",
+			"showWhen": {
+				"and": [
+					{
+						">=": ["creditScore", 300]
+					},
+					{
+						"<=": ["creditScore", 699]
+					},
+					{
+						"==": ["businessActivityDetailsValidate", true]
+					}
+				]
+			},
+			"options": [
+				{
+					"label": "Delayed EMI payments in the past 12 months",
+					"value": "delayedEMI"
+				},
+				{
+					"label": "High utilization of available credit card limit",
+					"value": "highCreditUtilization"
+				},
+				{
+					"label": "Limited or no credit history",
+					"value": "noCreditHistory"
+				},
+				{
+					"label": "Only minimum due payments made on credit cards",
+					"value": "minimumDueOnly"
+				},
+				{
+					"label": "Multiple recent loan or credit card enquiries",
+					"value": "multipleEnquiries"
+				},
+				{
+					"label": "Defaulted in one or more previous loans as co-applicant / guarantor",
+					"value": "coApplicantDefault"
+				},
+				{
+					"label": "Loan default or settlement in the past",
+					"value": "loanDefault"
+				},
+				{
+					"label": "Only unsecured loans such as credit cards or personal loans in profile",
+					"value": "onlyUnsecuredLoans"
+				}
+			]
+		},
+		{
+			"id": "q_Obligation",
+			"key": "ObligationsRunning",
+			"required": true,
+			"type": "radio",
+			"question": "Does this applicant have any running loans as borrower or co-applicant?",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "Yes",
+					"icon": "ThumbsUp"
+				},
+				{
+					"label": "No",
+					"value": "No",
+					"icon": "ThumbsDown"
+				}
+			],
+			"showWhen": {
+				"and": [
+					{
+						">=": ["creditScore", 300]
+					},
+					{
+						"==": ["whyPrimaryLowCreditValidate", true]
+					},
+					{
+						"==": ["businessActivityDetailsValidate", true]
+					},
+					{
+						"!=": ["loanName", "Professional Loan"]
+					}
+				]
+			}
+		}
+	]
+}

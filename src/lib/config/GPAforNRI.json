@@ -1,0 +1,266 @@
+{
+	"formId": "loanForm_v2",
+	"title": "Loan Application",
+	"pages": [
+		{
+			"id": "loanStructurePage",
+			"title": {
+				"switch": [
+					{
+						"case": {
+							"==": [
+								{
+									"var": "loanType"
+								},
+								"New Loan"
+							]
+						},
+						"then": "Applicant(s) Details"
+					},
+					{
+						"case": {
+							"!=": [
+								{
+									"var": "loanType"
+								},
+								"New Loan"
+							]
+						},
+						"then": "Applicant(s) Details <br/> of Existing Loan"
+					}
+				]
+			},
+			"bindsTo_template": "GPAallApplicantDetails",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": [
+				{
+					"id": "q1_fullName",
+					"bindsTo_template": "GPAfullName",
+					"contextKey": "fullName",
+					"type": "text",
+					"uiType": "text",
+					"textClass": "mt-[1rem] md:mt-[2rem]",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "Enter the full name",
+						"showTitleDropdown": true
+					},
+					"required": true,
+					"question": "What's the full name of the applicant ?",
+					"description": "<div class='info-title'><span class='info-icon blue'>👤</span> Full Name Requirement</div><div class='info-box highlight'>Your name must <span class='bold'>exactly match</span> as it appears on your official documents.</div><ul class='info-list'><li>PAN Card</li><li>Passport</li><li>Aadhaar Card</li><li>Driving License</li></ul><div class='info-box tip'><span class='bold'>Tip:</span> Use the exact spelling and format from your documents to avoid verification delays.</div>"
+				},
+				{
+					"id": "q_age",
+					"bindsTo_template": "gpaAge",
+					"contextKey": "age",
+					"type": "select",
+					"valueType": "number",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select employment type",
+						"icon": "calendar-1"
+					},
+					"required": true,
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"!=": [
+										{
+											"var": "tellUsApplying"
+										},
+										"Company (Non-individual entity)"
+									]
+								},
+								"then": "What is your current age? (select completed years only)"
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "tellUsApplying"
+										},
+										"Company (Non-individual entity)"
+									]
+								},
+								"then": "What is your current age?"
+							}
+						]
+					},
+					"description": "<div class='info-title'><span class='info-icon gold'>📅</span> Age Verification</div><div class='info-box highlight'>Your age is a <span class='bold'>key factor</span> in determining loan eligibility and maximum tenure.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>Minimum Age</span><span class='diagram-value'>21 years</span></div><div class='diagram-row'><span class='diagram-label'>Maximum Age at Maturity</span><span class='diagram-value'>65-70 years</span></div></div><div class='info-box note'><span class='bold'>Note:</span> Enter only completed years. Younger applicants may qualify for longer loan tenures.</div>",
+					"options": [
+						{
+							"label": "19",
+							"value": "19"
+						},
+						{
+							"label": "20",
+							"value": "20"
+						}
+					]
+				},
+				{
+					"id": "q_GPAcreditScore",
+					"bindsTo_template": "GPAcreditScore",
+					"contextKey": "GPAcreditScore",
+					"type": "text",
+					"uiType": "number",
+					"textClass": "mt-8 md:mt-12",
+					"uiGroup": "number_fields",
+					"uiMeta": {
+						"placeholder": "Select credit score",
+						"icon": "gauge"
+					},
+					"required": true,
+					"question": "What's the Credit Score?",
+					"description": "<div class='info-title'><span class='info-icon gold'>📊</span> Credit Score Importance</div><div class='info-box highlight'>Your credit score is a <span class='bold'>crucial factor</span> that lenders use to assess your creditworthiness.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>🔴 Poor</span><span class='diagram-value'>300-549</span></div><div class='diagram-row'><span class='diagram-label'>🟡 Fair</span><span class='diagram-value'>550-649</span></div><div class='diagram-row'><span class='diagram-label'>🟢 Good</span><span class='diagram-value'>650-749</span></div><div class='diagram-row'><span class='diagram-label'>⭐ Excellent</span><span class='diagram-value'>750-900</span></div></div><div class='info-box tip'><span class='bold'>Benefit:</span> Higher scores unlock better interest rates and faster approvals!</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"or": [
+										{
+											"<": [
+												{
+													"var": "GPAcreditScore"
+												},
+												300
+											]
+										},
+										{
+											">": [
+												{
+													"var": "GPAcreditScore"
+												},
+												900
+											]
+										}
+									]
+								},
+								"then": "Credit score should be between 300 and 900"
+							}
+						]
+					}
+				},
+				{
+					"id": "q_GPAwhyPrimaryLowCredit",
+					"bindsTo_template": "GPAwhyPrimaryLowCredit",
+					"contextKey": "GPAwhyPrimaryLowCredit",
+					"type": "multiple-select",
+					"multipleSelectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select the reason why you have low credit score"
+					},
+					"required": true,
+					"question": "What are the possible reasons behind your low CIBIL score?",
+					"description": "<div class='info-title'><span class='info-icon red'>⚠️</span> Low Credit Score Factors</div><div class='info-box warning'>Please select <span class='bold'>all applicable reasons</span> that may be impacting your credit score.</div><ul class='info-list'><li>Being honest helps us find the best solutions for you</li><li>Multiple factors can contribute to a lower score</li><li>Understanding the cause helps in getting better loan options</li></ul><div class='info-box tip'><span class='bold'>Remember:</span> Transparency improves your chances of approval with suitable lenders.</div>",
+					"options": [
+						{
+							"label": "Delayed EMI",
+							"value": "Delayed EMI"
+						},
+						{
+							"label": "High credit card utilization",
+							"value": "High credit card utilization"
+						},
+						{
+							"label": "No credit history",
+							"value": "No credit history"
+						},
+						{
+							"label": "Frequent use of full credit limit",
+							"value": "Frequent use of full credit limit"
+						},
+						{
+							"label": "Delayed credit card payments",
+							"value": "Delayed credit card payments"
+						},
+						{
+							"label": "Multiple recent loan enquiries",
+							"value": "Multiple recent loan enquiries"
+						},
+						{
+							"label": "Co-applicant default",
+							"value": "Co-applicant default"
+						},
+						{
+							"label": "Loan default",
+							"value": "Loan default"
+						},
+						{
+							"label": "Only unsecured loans in profile",
+							"value": "Only unsecured loans in profile"
+						},
+						{
+							"label": "Minimum due payments only on credit card",
+							"value": "Minimum due payments only on credit card"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"<=": [
+									{
+										"var": "GPADetails.0.GPAcreditScore"
+									},
+									780
+								]
+							},
+							{
+								">=": [
+									{
+										"var": "GPADetails.0.GPAcreditScore"
+									},
+									300
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_GPACIBILScore",
+					"bindsTo_template": "GPACIBILScore",
+					"contextKey": "GPACIBILScore",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "In last 6 months there is any Delayed EMI or credit card payment?",
+					"description": "<div class='info-title'><span class='info-icon blue'>💳</span> Recent Payment History</div><div class='info-box highlight'>Lenders review your <span class='bold'>last 6 months</span> of payment behavior closely.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>EMI Payments</span><span class='diagram-value'>On-time?</span></div><div class='diagram-row'><span class='diagram-label'>Credit Card Bills</span><span class='diagram-value'>On-time?</span></div></div><div class='info-box warning'><span class='bold'>Impact:</span> Recent delays may affect your loan approval or interest rate.</div><div class='info-box tip'><span class='bold'>Tip:</span> Answer honestly - many lenders still consider applications with explained delays.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						">": [
+							{
+								"var": "GPAcreditScore"
+							},
+							780
+						]
+					}
+				}
+			]
+		}
+	]
+}

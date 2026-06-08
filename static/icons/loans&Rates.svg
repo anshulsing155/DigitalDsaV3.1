@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Manage64</title>
+    <g id="Manage64" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Manage">
+            <rect id="Bounding-box" x="0" y="0" width="64" height="64"></rect>
+            <g id="Pictogram" transform="translate(11.369154, 17.120679)" stroke="#1E1E1E">
+                <line x1="1.75050837" y1="3.43864383" x2="39.3864383" y2="3.43864383" id="Path-11" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="1.75050837" y1="15.3169482" x2="39.3864383" y2="15.3169482" id="Path-11" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="1.75050837" y1="26.538812" x2="39.3864383" y2="26.538812" id="Path-11" stroke-linecap="round" stroke-linejoin="round"></line>
+                <circle id="Oval" fill="#FFFFFF" cx="36.8864383" cy="3.50101674" r="3.50101674"></circle>
+                <circle id="Oval" fill="#FFFFFF" cx="4.25050837" cy="15.3793211" r="3.50101674"></circle>
+                <circle id="Oval" fill="#ffcc00" cx="20.5684734" cy="26.2576256" r="3.50101674"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

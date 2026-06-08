@@ -1,0 +1,65 @@
+{
+  "_comment": "FM-1 pre-migration snapshot lock for PROF-FRESH-YES-OBLIG.",
+  "_source": "src/lib/testing/journeys/professionalLoan.ts :: PROF_FRESH_YES_OBLIG_JOURNEY",
+  "_capturedAt": "2026-04-22T00:00:00.000Z",
+  "_shift_notes_S77e_step4": "FIXTURE-WAS-WRONG — dropped urgencyLevel:'STANDARD' and existingBankRelationship:'YES'. Professional Loan schema's getAllPages() does not include professionalProfilePage (the builder file defines it but the composer never surfaces it); professional qualification/council/vintage/practiceType/registrationStatus fields live only on applicantProfilePage (custom component). The journey therefore omits those steps — they don't affect the Self-employed(Professional) applicant payload which reads professionType directly off the raw applicant. Obligation id pinned to 'obl-prof-fresh-1'; remainingLimit:'0' / utilizedAmount:'0' added by cleanObligationEntries().",
+  "payload": {
+    "loanTransaction": {
+      "loanName": "Professional Loan",
+      "loanType": "New Loan",
+      "numberOfApplicants": 1,
+      "loanAmount": 1500000,
+      "tenureYears": 5,
+      "assessmentStatus": "fresh"
+    },
+    "allApplicantDetails": [
+      {
+        "applicantType": "Individual",
+        "title": "Mr.",
+        "fullName": "Nitin Kulkarni",
+        "age": 34,
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "employmentType": "Self-employed(Professional)",
+        "creditScore": 760,
+        "hasExistingObligations": true,
+        "roleInApplication": "Primary",
+        "residenceType": "Rented",
+        "professionType": "Chartered Accountant(CA)",
+        "businessProfile": {
+          "gstRegistered": true,
+          "hasCurrentAccount": true,
+          "usesSavingsAccount": false,
+          "filesITRRegularly": true,
+          "profitableLast3Years": true,
+          "profitableSinceStart": true,
+          "majorCashSales": false,
+          "fewKeyClients": false,
+          "hasCCOD": false,
+          "hasOtherIncome": false,
+          "hasProfessionalLicense": true,
+          "hasCommercialPremises": true,
+          "ownsPremises": false,
+          "threeYearsInBusiness": true,
+          "enrolledWithProfessionalBody": true,
+          "priorExperience": true,
+          "seasonalBusiness": false
+        },
+        "averageBankBalance": 400000,
+        "obligations": [
+          {
+            "id": "obl-prof-fresh-1",
+            "obligationType": "term_loan",
+            "loanType": "Personal Loan",
+            "bankName": "ICICI Bank",
+            "selectedToClose": "Keep running",
+            "emi": "10000",
+            "tenure": "36",
+            "interestRate": "11.0",
+            "remainingTenure": "12"
+          }
+        ]
+      }
+    ]
+  }
+}

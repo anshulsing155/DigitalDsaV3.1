@@ -1,0 +1,314 @@
+{
+	"_description": "Pan-India development authority mapping: state → city → authorities. Primary authority listed first. Used by optionResolver for authority auto-suggestion and validation.",
+	"Andhra Pradesh": {
+		"Guntur": ["GUDA (Guntur Urban Development Authority)"],
+		"Nellore": ["NUDA (Nellore Urban Development Authority)"],
+		"Visakhapatnam": [
+			"VUDA (Visakhapatnam Urban Development Authority)",
+			"VMRDA (Visakhapatnam Metropolitan Region Development Authority)"
+		]
+	},
+	"Bihar": {
+		"Patna": ["PRDA (Patna Regional Development Authority)", "BDA (Bihar Development Authority)"]
+	},
+	"Chandigarh": {
+		"Chandigarh": [
+			"CDA (Chandigarh Housing Board)",
+			"GMADA (Greater Mohali Area Development Authority)"
+		]
+	},
+	"Chhattisgarh": {
+		"Raipur": ["RDA (Raipur Development Authority)"]
+	},
+	"Delhi": {
+		"Central Delhi": [
+			"DDA (Delhi Development Authority)",
+			"NBCC (National Buildings Construction Corporation)",
+			"DSIIDC (Delhi State Industrial and Infrastructure Development Corporation)"
+		],
+		"East Delhi": [
+			"DDA (Delhi Development Authority)",
+			"NBCC (National Buildings Construction Corporation)",
+			"DSIIDC (Delhi State Industrial and Infrastructure Development Corporation)"
+		],
+		"New Delhi": [
+			"DDA (Delhi Development Authority)",
+			"NBCC (National Buildings Construction Corporation)",
+			"DSIIDC (Delhi State Industrial and Infrastructure Development Corporation)"
+		],
+		"North Delhi": [
+			"DDA (Delhi Development Authority)",
+			"NBCC (National Buildings Construction Corporation)",
+			"DSIIDC (Delhi State Industrial and Infrastructure Development Corporation)"
+		],
+		"North West Delhi": [
+			"DDA (Delhi Development Authority)",
+			"NBCC (National Buildings Construction Corporation)",
+			"DSIIDC (Delhi State Industrial and Infrastructure Development Corporation)"
+		],
+		"South Delhi": [
+			"DDA (Delhi Development Authority)",
+			"NBCC (National Buildings Construction Corporation)",
+			"DSIIDC (Delhi State Industrial and Infrastructure Development Corporation)"
+		],
+		"South West Delhi": [
+			"DDA (Delhi Development Authority)",
+			"NBCC (National Buildings Construction Corporation)",
+			"DSIIDC (Delhi State Industrial and Infrastructure Development Corporation)"
+		],
+		"West Delhi": [
+			"DDA (Delhi Development Authority)",
+			"NBCC (National Buildings Construction Corporation)",
+			"DSIIDC (Delhi State Industrial and Infrastructure Development Corporation)"
+		]
+	},
+	"Goa": {
+		"North Goa": [
+			"GSIDC (Goa State Infrastructure Development Corporation)",
+			"TCP (Town and Country Planning)"
+		],
+		"South Goa": ["GSIDC (Goa State Infrastructure Development Corporation)"]
+	},
+	"Gujarat": {
+		"Ahmedabad": ["AUDA (Ahmedabad Urban Development Authority)"],
+		"Gandhi Nagar": [
+			"GNDA (Gandhinagar Development Authority)",
+			"GIDC (Gujarat Industrial Development Corporation)"
+		],
+		"Junagadh": ["JUDA (Junagadh Urban Development Authority)"],
+		"Rajkot": ["RUDA (Rajkot Urban Development Authority)"],
+		"Surat": ["SUDA (Surat Urban Development Authority)", "SMC (Surat Municipal Corporation)"],
+		"Vadodara": ["VUDA (Vadodara Urban Development Authority)"]
+	},
+	"Haryana": {
+		"Ambala": ["HUDA (Haryana Urban Development Authority)"],
+		"Faridabad": [
+			"HUDA (Haryana Urban Development Authority)",
+			"NHPC (Neharpar Housing Development Corporation)"
+		],
+		"Gurgaon": [
+			"HUDA (Haryana Urban Development Authority)",
+			"DTCP (Department of Town and Country Planning)",
+			"GMDA (Gurugram Metropolitan Development Authority)"
+		],
+		"Panipat": ["HUDA (Haryana Urban Development Authority)"],
+		"Sonipat": ["HUDA (Haryana Urban Development Authority)"]
+	},
+	"Himachal Pradesh": {
+		"Shimla": [
+			"SDA (Shimla Development Authority)",
+			"HIMUDA (Himachal Pradesh Housing and Urban Development Authority)"
+		]
+	},
+	"Jammu And kashmir": {
+		"Srinagar": ["SDA (Srinagar Development Authority)"]
+	},
+	"Jharkhand": {
+		"Bokaro": ["BSL (Bokaro Steel Limited Township)"],
+		"Dhanbad": ["DDA (Dhanbad Development Authority)"],
+		"Ranchi": ["RRDA (Ranchi Regional Development Authority)"]
+	},
+	"Karnataka": {
+		"Bangalore": [
+			"BDA (Bangalore Development Authority)",
+			"BMRDA (Bangalore Metropolitan Region Development Authority)",
+			"KIADB (Karnataka Industrial Areas Development Board)"
+		],
+		"Bengaluru": [
+			"BDA (Bangalore Development Authority)",
+			"BMRDA (Bangalore Metropolitan Region Development Authority)",
+			"KIADB (Karnataka Industrial Areas Development Board)"
+		],
+		"Bangalore Rural": [
+			"BMRDA (Bangalore Metropolitan Region Development Authority)",
+			"KIADB (Karnataka Industrial Areas Development Board)"
+		],
+		"Belgaum": ["BUDA (Belgaum Urban Development Authority)"],
+		"Dharward": ["HKRDB (Hubli-Dharwad Regional Development Board)"],
+		"Mysore": ["MUDA (Mysore Urban Development Authority)"]
+	},
+	"Kerala": {
+		"Ernakulam": [
+			"GCDA (Greater Cochin Development Authority)",
+			"KINFRA (Kerala Industrial Infrastructure Development Corporation)"
+		],
+		"Kochi": [
+			"GCDA (Greater Cochin Development Authority)",
+			"KINFRA (Kerala Industrial Infrastructure Development Corporation)"
+		],
+		"Kozhikode": ["KUDA (Kozhikode Urban Development Authority)"],
+		"Thiruvananthapuram": ["TRIDA (Thiruvananthapuram Development Authority)"],
+		"Thrissur": ["TUDA (Thrissur Urban Development Authority)"]
+	},
+	"Madhya Pradesh": {
+		"Bhopal": ["BDA (Bhopal Development Authority)"],
+		"Gwalior": ["GDA (Gwalior Development Authority)"],
+		"Indore": ["IDA (Indore Development Authority)"],
+		"Jabalpur": ["JDA (Jabalpur Development Authority)"],
+		"Ujjain": ["UDA (Ujjain Development Authority)"]
+	},
+	"Maharashtra": {
+		"Aurangabad": [
+			"CIDCO (City and Industrial Development Corporation)",
+			"AMC (Aurangabad Municipal Corporation)"
+		],
+		"Mumbai": [
+			"MHADA (Maharashtra Housing and Area Development Authority)",
+			"MMRDA (Mumbai Metropolitan Region Development Authority)",
+			"CIDCO (City and Industrial Development Corporation)",
+			"SRA (Slum Rehabilitation Authority)",
+			"BPT (Mumbai Port Trust)"
+		],
+		"Mumbai Suburban": [
+			"MHADA (Maharashtra Housing and Area Development Authority)",
+			"MMRDA (Mumbai Metropolitan Region Development Authority)",
+			"CIDCO (City and Industrial Development Corporation)",
+			"SRA (Slum Rehabilitation Authority)"
+		],
+		"Thane": [
+			"MHADA (Maharashtra Housing and Area Development Authority)",
+			"MMRDA (Mumbai Metropolitan Region Development Authority)",
+			"CIDCO (City and Industrial Development Corporation)",
+			"TMC (Thane Municipal Corporation)"
+		],
+		"Navi Mumbai": [
+			"CIDCO (City and Industrial Development Corporation)",
+			"MMRDA (Mumbai Metropolitan Region Development Authority)",
+			"NMMC (Navi Mumbai Municipal Corporation)"
+		],
+		"Raigad": [
+			"CIDCO (City and Industrial Development Corporation)",
+			"MMRDA (Mumbai Metropolitan Region Development Authority)"
+		],
+		"Palghar": [
+			"MMRDA (Mumbai Metropolitan Region Development Authority)",
+			"MHADA (Maharashtra Housing and Area Development Authority)"
+		],
+		"Nagpur": [
+			"NIT (Nagpur Improvement Trust)",
+			"MHADA (Maharashtra Housing and Area Development Authority)"
+		],
+		"Nashik": [
+			"CIDCO (City and Industrial Development Corporation)",
+			"NMC (Nashik Municipal Corporation)"
+		],
+		"Pune": [
+			"PMRDA (Pune Metropolitan Region Development Authority)",
+			"PMC (Pune Municipal Corporation)",
+			"PCNTDA (Pimpri-Chinchwad New Town Development Authority)"
+		],
+		"Pimpri-Chinchwad": [
+			"PCMC (Pimpri-Chinchwad Municipal Corporation)",
+			"PCNTDA (Pimpri-Chinchwad New Town Development Authority)",
+			"PMRDA (Pune Metropolitan Region Development Authority)"
+		],
+		"Solapur": ["MHADA (Maharashtra Housing and Area Development Authority)"]
+	},
+	"Orissa": {
+		"Cuttack": ["CDA (Cuttack Development Authority)"],
+		"Puri": ["PDA (Puri Development Authority)"]
+	},
+	"Punjab": {
+		"Amritsar": ["ADA (Amritsar Development Authority)"],
+		"Jalandhar": ["JDA (Jalandhar Development Authority)"],
+		"Kapurthala": ["PDA (Punjab Development Authority)"],
+		"Ludhiana": ["GLADA (Greater Ludhiana Area Development Authority)"],
+		"Patiala": ["PUDA (Punjab Urban Development Authority)"]
+	},
+	"Rajasthan": {
+		"Ajmer": ["ADA (Ajmer Development Authority)"],
+		"Bikaner": ["BDA (Bikaner Development Authority)"],
+		"Jaipur": ["JDA (Jaipur Development Authority)"],
+		"Jaisalmer": ["JsDA (Jaisalmer Development Authority)"],
+		"Jodhpur": ["JoDA (Jodhpur Development Authority)"],
+		"Udaipur": ["UDA (Udaipur Development Authority)", "UIT (Urban Improvement Trust)"]
+	},
+	"Tamil Nadu": {
+		"Chennai": [
+			"CMDA (Chennai Metropolitan Development Authority)",
+			"TNHB (Tamil Nadu Housing Board)",
+			"GCC (Greater Chennai Corporation)"
+		],
+		"Kancheepuram": [
+			"CMDA (Chennai Metropolitan Development Authority)",
+			"TNHB (Tamil Nadu Housing Board)"
+		],
+		"Tiruvallur": [
+			"CMDA (Chennai Metropolitan Development Authority)",
+			"TNHB (Tamil Nadu Housing Board)"
+		],
+		"Chengalpattu": [
+			"CMDA (Chennai Metropolitan Development Authority)",
+			"TNHB (Tamil Nadu Housing Board)"
+		],
+		"Coimbatore": ["CMDA (Coimbatore Development Authority)", "LPA (Local Planning Authority)"],
+		"Erode": ["LPA (Local Planning Authority)"],
+		"Madurai": ["MMDA (Madurai Metropolitan Development Authority)"],
+		"Tiruchirappalli": ["LPA (Local Planning Authority)"],
+		"Vellore": ["LPA (Local Planning Authority)"]
+	},
+	"Telangana": {
+		"Hyderabad": [
+			"HMDA (Hyderabad Metropolitan Development Authority)",
+			"GHMC (Greater Hyderabad Municipal Corporation)",
+			"TSIIC (Telangana State Industrial Infrastructure Corporation)"
+		],
+		"Rangareddy": [
+			"HMDA (Hyderabad Metropolitan Development Authority)",
+			"GHMC (Greater Hyderabad Municipal Corporation)"
+		],
+		"Medchal Malkajgiri": [
+			"HMDA (Hyderabad Metropolitan Development Authority)",
+			"GHMC (Greater Hyderabad Municipal Corporation)"
+		],
+		"Secunderabad": [
+			"HMDA (Hyderabad Metropolitan Development Authority)",
+			"GHMC (Greater Hyderabad Municipal Corporation)",
+			"SCB (Secunderabad Cantonment Board)"
+		],
+		"Warangal": ["WUDA (Warangal Urban Development Authority)"]
+	},
+	"Uttar Pradesh": {
+		"Agra": ["ADA (Agra Development Authority)"],
+		"Allahabad": ["PDA (Prayagraj Development Authority)"],
+		"Bareilly": ["BDA (Bareilly Development Authority)"],
+		"Gautam Buddha Nagar": [
+			"GNIDA (Greater Noida Industrial Development Authority)",
+			"NIDA (Noida Industrial Development Authority)",
+			"YEIDA (Yamuna Expressway Industrial Development Authority)"
+		],
+		"Ghaziabad": ["GDA (Ghaziabad Development Authority)"],
+		"Gorakhpur": ["GDA (Gorakhpur Development Authority)"],
+		"Jhansi": ["JDA (Jhansi Development Authority)"],
+		"Kanpur Nagar": ["KDA (Kanpur Development Authority)"],
+		"Lucknow": ["LDA (Lucknow Development Authority)"],
+		"Meerut": ["MDA (Meerut Development Authority)"],
+		"Moradabad": ["MDA (Moradabad Development Authority)"],
+		"Varanasi": ["VDA (Varanasi Development Authority)"]
+	},
+	"Uttarakhand": {
+		"Dehradun": ["MDDA (Mussoorie Dehradun Development Authority)"],
+		"Haridwar": ["HDA (Haridwar Development Authority)"]
+	},
+	"West Bengal": {
+		"Darjeeling": ["DMA (Darjeeling Municipality)"],
+		"Howrah": [
+			"HIDCO (Housing Infrastructure Development Corporation)",
+			"KMDA (Kolkata Metropolitan Development Authority)",
+			"HMC (Howrah Municipal Corporation)"
+		],
+		"Kolkata": [
+			"KMDA (Kolkata Metropolitan Development Authority)",
+			"HIDCO (Housing Infrastructure Development Corporation)",
+			"KMC (Kolkata Municipal Corporation)"
+		],
+		"North 24 Parganas": [
+			"KMDA (Kolkata Metropolitan Development Authority)",
+			"HIDCO (Housing Infrastructure Development Corporation)"
+		],
+		"South 24 Parganas": [
+			"KMDA (Kolkata Metropolitan Development Authority)",
+			"HIDCO (Housing Infrastructure Development Corporation)"
+		]
+	}
+}

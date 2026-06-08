@@ -1,0 +1,11 @@
+<svg width="32" height="41" viewBox="0 0 32 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="securityShield">
+<path id="Vector 2" d="M16 39.912L0.5 30.3441V17.2959H31.5V30.3441L16 39.912Z" fill="white" stroke="black"/>
+<g id="Pictogram">
+<path id="Rectangle" fill-rule="evenodd" clip-rule="evenodd" d="M0.5 0.5H16V17.2901H0.5V0.5Z" fill="white" stroke="#1E1E1E"/>
+<path id="Line-3-Copy" d="M16 17.29V39.5123" stroke="#1E1E1E"/>
+<path id="Rectangle_2" fill-rule="evenodd" clip-rule="evenodd" d="M16 0.5H31.5V17.2901H16V0.5Z" fill="white" stroke="#1E1E1E"/>
+</g>
+<path id="Vector 3" d="M16 17.29H0.5V30.1295L16 39.5123V17.29Z" fill="#ffcc00" stroke="black"/>
+</g>
+</svg>

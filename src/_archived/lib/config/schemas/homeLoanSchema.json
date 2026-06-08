@@ -1,0 +1,6207 @@
+{
+	"formId": "homeLoanSchema",
+	"title": "Home Loan Application",
+	"pages": [
+		{
+			"id": "selection_homeLoan",
+			"title": "A few check points !",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": [
+				{
+					"id": "q1_isDefaulter",
+					"bindsTo_template": "isDefaulter",
+					"contextKey": "isDefaulter",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"icon": "shield-alert"
+					},
+					"required": true,
+					"question": "Has any applicant for this loan ever been involved in a loan default or settlement?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"icon": "ThumbsDown"
+						}
+					],
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "isDefaulter"
+										},
+										"Yes"
+									]
+								},
+								"then": "Due to a prior loan default/settlement, lender availability may be limited. If no offers appear, you may explore our DSA pool, where a few DSAs may assist subject to additional fees or risk mitigation, such as collateral."
+							}
+						]
+					}
+				},
+				{
+					"id": "q11_madeGuarantor",
+					"bindsTo_template": "madeGuarantor",
+					"contextKey": "madeGuarantor",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"modalWidth": "md:w-[25rem]",
+					"question": "Has any applicant been a guarantor on a loan that was unpaid or settled?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "madeGuarantor"
+										},
+										"Yes"
+									]
+								},
+								"then": "A prior loan default or settlement where you acted as a guarantor may also affect lender eligibility. If no offers appear, you may explore our DSA pool, where a few DSAs may assist subject to additional fees or risk mitigation, such as collateral."
+							}
+						]
+					},
+					"showWhen": {
+						"!=": [
+							{
+								"var": "isDefaulter"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q1_approvedByAuthority",
+					"bindsTo_template": "approvedByAuthority",
+					"contextKey": "approvedByAuthority",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Are you planning to purchase the property in government authorized area?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🏛️</span> Government Authorized Area</div><div class='info-box highlight'>Most lenders require that your property is located in an area approved by the government authority.</div><div class='info-box note'><span class='bold'>Approved By:</span><ul class='info-list'><li>City Development Authority (e.g., DDA, BDA, HUDA)</li><li>Municipal Corporation</li><li>Town Planning Department</li></ul></div><div class='info-box tip'><span class='bold'>💡 Why it matters:</span> Properties in authorized areas have clear titles, proper documentation, and are easier to finance.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"approvedByAuthority": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"approvedByAuthority": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "approvedByAuthority"
+										},
+										"No"
+									]
+								},
+								"then": "As your property is not approved by Authority, only NBFC banks can approve your loan. You'll have to search which NBFC working in your location."
+							}
+						]
+					},
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "propertyIdentified"
+									},
+									"No"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "isDefaulter"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "madeGuarantor"
+									},
+									""
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q2_asPerMap",
+					"bindsTo_template": "asPerMap",
+					"contextKey": "asPerMap",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Did you know banks reject properties not built as per the approved government plan/map?",
+					"description": "<div class='info-title'><span class='info-icon red'>🏗️</span> Approved Plan Compliance</div><div class='info-box warning'><span class='bold'>⚠️ Critical Information:</span> Banks strictly verify that properties are constructed according to the government-approved building plan.</div><div class='info-box note'>Properties with deviations from the approved map/plan face these challenges:<ul class='info-list'><li>Most banks will reject the loan application</li><li>Only select NBFCs may consider such properties</li><li>Higher interest rates may apply</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Before finalizing a property, always verify that the construction matches the sanctioned plan from the authority.</div>",
+					"options": [
+						{
+							"label": "Yes, I'm aware",
+							"value": "Yes",
+							"flagKey": {
+								"asPerMap": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "This is new information",
+							"value": "No",
+							"flagKey": {
+								"asPerMap": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "asPerMap"
+										},
+										"No"
+									]
+								},
+								"then": "If your property is not as per the map, we can show you available offers, but you'll need to find which bank or NBFC can approve your loan."
+							}
+						]
+					},
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "approvedByAuthority"
+									},
+									"Yes"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "propertyIdentified"
+									},
+									"No"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "isDefaulter"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "madeGuarantor"
+									},
+									""
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_priorApplication",
+					"bindsTo_template": "priorApplication",
+					"contextKey": "priorApplication",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Has the applicant applied for this loan with any other DSA or lender?",
+					"options": [
+						{
+							"value": "No",
+							"label": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						},
+						{
+							"value": "Yes - DSA",
+							"label": "Yes, through another DSA",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"value": "Yes - Direct",
+							"label": "Yes, applied directly to a bank",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"value": "Yes - Both",
+							"label": "Yes, both DSA and direct",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "madeGuarantor"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q_priorApplicationLender",
+					"bindsTo_template": "priorApplicationLender",
+					"contextKey": "priorApplicationLender",
+					"type": "text",
+					"uiType": "text",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "Enter lender name(s)",
+						"icon": "landmark"
+					},
+					"required": true,
+					"question": "Which lender(s) was the application submitted to?",
+					"showWhen": {
+						"!==": [
+							{
+								"var": "priorApplication"
+							},
+							"No"
+						]
+					}
+				},
+				{
+					"id": "q_priorApplicationStatus",
+					"bindsTo_template": "priorApplicationStatus",
+					"contextKey": "priorApplicationStatus",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "What was the outcome?",
+					"options": [
+						{
+							"value": "Pending",
+							"label": "Still pending",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Clock"
+						},
+						{
+							"value": "Rejected",
+							"label": "Rejected",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"value": "Withdrawn",
+							"label": "Withdrawn by applicant",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ArrowLeftRight"
+						},
+						{
+							"value": "Sanctioned",
+							"label": "Sanctioned but not disbursed",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						}
+					],
+					"showWhen": {
+						"!==": [
+							{
+								"var": "priorApplication"
+							},
+							"No"
+						]
+					}
+				},
+				{
+					"id": "q_priorApplicationRejectionReason",
+					"bindsTo_template": "priorApplicationRejectionReason",
+					"contextKey": "priorApplicationRejectionReason",
+					"type": "text",
+					"uiType": "text",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "Enter reason if known",
+						"icon": "info"
+					},
+					"required": false,
+					"question": "Reason for rejection (if known)",
+					"showWhen": {
+						"==": [
+							{
+								"var": "priorApplicationStatus"
+							},
+							"Rejected"
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "property_location_homeLoan",
+			"title": "Property Location",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": [
+				{
+					"id": "q1_propertyIdentified",
+					"bindsTo_template": "propertyIdentified",
+					"contextKey": "propertyIdentified",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "If the property has been identified?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"propertyIdentified": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"propertyIdentified": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "loanType"
+							},
+							"New Loan"
+						]
+					}
+				},
+				{
+					"id": "q2_propertyStateName",
+					"bindsTo_template": "propertyStateName",
+					"contextKey": "propertyStateName",
+					"type": "select",
+					"uiGroup": "select_fields",
+					"selectClass": "mt-8 md:mt-12",
+					"uiMeta": {
+						"placeholder": "Select a State",
+						"icon": "map"
+					},
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"or": [
+										{
+											"==": [
+												{
+													"var": "propertyIdentified"
+												},
+												"Yes"
+											]
+										},
+										{
+											"in": [
+												{
+													"var": "loanType"
+												},
+												["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+											]
+										}
+									]
+								},
+								"then": "Where this property is located ?"
+							},
+							{
+								"case": {
+									"or": [
+										{
+											"==": [
+												{
+													"var": "propertyIdentified"
+												},
+												"No"
+											]
+										},
+										{
+											"and": [
+												{
+													"==": [
+														{
+															"var": "loanName"
+														},
+														"Home Loan"
+													]
+												},
+												{
+													"in": [
+														{
+															"var": "loanType"
+														},
+														["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+													]
+												}
+											]
+										}
+									]
+								},
+								"then": "What is the intended location of the property purchase?"
+							}
+						]
+					},
+					"subLabel": "State",
+					"required": true,
+					"showWhen": {
+						"or": [
+							{
+								"!=": [
+									{
+										"var": "loanType"
+									},
+									"New Loan"
+								]
+							},
+							{
+								"and": [
+									{
+										"!=": [
+											{
+												"var": "propertyIdentified"
+											},
+											""
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "loanType"
+											},
+											"New Loan"
+										]
+									}
+								]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"Case": {
+									"==": [
+										{
+											"var": "propertyStateName"
+										},
+										""
+									]
+								},
+								"then": "State is required"
+							}
+						]
+					}
+				},
+				{
+					"id": "q3_propertyCityName",
+					"bindsTo_template": "propertyCityName",
+					"contextKey": "propertyCityName",
+					"type": "derivedSelect",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select a City",
+						"icon": "map-pin"
+					},
+					"subLabel": "City",
+					"required": true,
+					"showWhen": {
+						"or": [
+							{
+								"in": [
+									{
+										"var": "propertyIdentified"
+									},
+									["Yes", "No"]
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "loanType"
+									},
+									"New Loan"
+								]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "propertyCityName"
+										},
+										""
+									]
+								},
+								"then": "City is required"
+							}
+						]
+					}
+				},
+				{
+					"id": "q4_residenceOptionSame",
+					"bindsTo_template": "residenceOptionSame",
+					"contextKey": "residenceOptionSame",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"or": [
+										{
+											"==": [
+												{
+													"var": "propertyIdentified"
+												},
+												"Yes"
+											]
+										},
+										{
+											"in": [
+												{
+													"var": "loanType"
+												},
+												["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+											]
+										}
+									]
+								},
+								"then": "Applicant(s) residing in the same city?"
+							},
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "loanType"
+												},
+												"New Loan"
+											]
+										},
+										{
+											"==": [
+												{
+													"var": "propertyIdentified"
+												},
+												"No"
+											]
+										}
+									]
+								},
+								"then": "Applicant(s) reside in the same city where property purchase is planned?"
+							},
+							{
+								"default": "Applicant(s) residing in the same city?"
+							}
+						]
+					},
+					"descriptionHeader": "For an NRI applicant, this question should be addressed from the perspective of the GPA (Power of Attorney).",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"residenceOptionSame": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"residenceOptionSame": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "propertyCityName"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q5_residenceStateName",
+					"bindsTo_template": "residenceStateName",
+					"contextKey": "residenceStateName",
+					"type": "select",
+					"uiGroup": "select_fields",
+					"selectClass": "mt-8 md:mt-12",
+					"uiMeta": {
+						"placeholder": "Select a State",
+						"icon": "map"
+					},
+					"description": "<div class='info-title'><span class='info-icon blue'>📍</span> Loan Processing Location</div><div class='info-box highlight'>Select the city of your current residence for faster and easier loan processing.</div><div class='info-box note'><span class='bold'>Verification Required:</span> Your Aadhaar address must match this location for bank verification purposes.</div><div class='info-box tip'><span class='bold'>Alternative Documents:</span> If Aadhaar doesn't match, you can also use Passport, Voter ID, or Driving License.</div>",
+					"question": "Preferred location for loan processing?",
+					"subLabel": "State",
+					"required": true,
+					"showWhen": {
+						"==": [
+							{
+								"var": "residenceOptionSame"
+							},
+							"No"
+						]
+					}
+				},
+				{
+					"id": "q6_residenceCityName",
+					"bindsTo_template": "residenceCityName",
+					"contextKey": "residenceCityName",
+					"type": "derivedSelect",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select a City",
+						"icon": "map-pin"
+					},
+					"subLabel": "City",
+					"required": true,
+					"showWhen": {
+						"==": [
+							{
+								"var": "residenceOptionSame"
+							},
+							"No"
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "propertyCityName"
+										},
+										{
+											"var": "residenceCityName"
+										}
+									]
+								},
+								"then": "Kindly select a different city or update your earlier answer"
+							}
+						]
+					}
+				},
+				{
+					"id": "q_isRegistryDone",
+					"bindsTo_template": "isRegistryDone",
+					"contextKey": "isRegistryDone",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "If the registry has been done in the name of property owner(s)?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"isRegistryDone": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"isRegistryDone": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"or": [
+							{
+								"and": [
+									{
+										"!=": [
+											{
+												"var": "loanType"
+											},
+											"New Loan"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "residenceOptionSame"
+											},
+											"Yes"
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"!=": [
+											{
+												"var": "loanType"
+											},
+											"New Loan"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "residenceOptionSame"
+											},
+											"No"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "residenceCityName"
+											},
+											""
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_registryNotDoneAck",
+					"bindsTo_template": "registryNotDoneAck",
+					"contextKey": "registryNotDoneAck",
+					"type": "checkbox",
+					"labelClass": "text-black dark:text-white",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "I understand, please proceed.",
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer With Top-up", "Top-up Only"]
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isRegistryDone"
+									},
+									"No"
+								]
+							}
+						]
+					},
+					"checkboxClass": "mt-0"
+				},
+				{
+					"id": "q_bt_registryPendingReason",
+					"bindsTo_template": "bt_registryPendingReason",
+					"contextKey": "bt_registryPendingReason",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid grid-cols-1 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "What is the reason the registry has not been done?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📋</span> Registry Status</div><div class='info-box highlight'>Understanding why the registry hasn't been done helps us identify the right lenders and processing approach for your case.</div><div class='info-box note'><span class='bold'>How this affects your application:</span><ul class='info-list'><li>Some banks can still process BT without registry, especially for under-construction or builder-assigned properties</li><li>The approach and eligible lenders differ significantly based on the reason</li></ul></div>",
+					"options": [
+						{
+							"label": "Property is still under construction",
+							"value": "UNDER_CONSTRUCTION",
+							"helperText": "Builder has not yet completed the project or your unit",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Construction"
+						},
+						{
+							"label": "Construction complete, but registry not yet opened / pending",
+							"value": "REGISTRY_PENDING",
+							"helperText": "OC/CC may or may not be issued, registry office process pending",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Transfer of allotment / assignment (investor resale before registry)",
+							"value": "ALLOTMENT_TRANSFER",
+							"helperText": "Original allottee transferring rights through builder to a new buyer",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ArrowLeftRight"
+						},
+						{
+							"label": "Legal or administrative hold on registry",
+							"value": "LEGAL_HOLD",
+							"helperText": "Court stay, revenue dispute, panchayat conversion pending, etc.",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Gavel"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isRegistryDone"
+									},
+									"No"
+								]
+							},
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "loanType"
+											},
+											"Balance Transfer Only"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "registryNotDoneAck"
+											},
+											true
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_isPossessionOfferedByAuthority",
+					"bindsTo_template": "isPossessionOfferedByAuthority",
+					"contextKey": "isPossessionOfferedByAuthority",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "If the possession has been permitted by the authority?",
+					"description": "<div class='info-title'><span class='info-icon green'>📋</span> Authority Possession Status</div><div class='info-box highlight'>This refers to when the builder receives official approval from the government authority.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>📄 Completion Certificate (CC)</span><span class='diagram-value'>Construction completed as per approved plan</span></div><div class='diagram-row'><span class='diagram-label'>🏠 Occupancy Certificate (OC)</span><span class='diagram-value'>Property is safe and ready for occupancy</span></div></div><div class='info-box warning'><span class='bold'>⚠️ Important:</span> Do not confuse this with possession offered directly by the builder. We are asking about official government certification only.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"isPossessionOfferedByAuthority": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"isPossessionOfferedByAuthority": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isRegistryDone"
+									},
+									"No"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_isAnyDemandFromTheBuilder",
+					"bindsTo_template": "isAnyDemandFromTheBuilder",
+					"contextKey": "isAnyDemandFromTheBuilder",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is there any outstanding demand from the builder that remains to be disbursed in the future?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"isAnyDemandFromTheBuilder": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"isAnyDemandFromTheBuilder": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isPossessionOfferedByAuthority"
+									},
+									"No"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isRegistryDone"
+									},
+									"No"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_bt_outstandingDemandAmount",
+					"bindsTo_template": "bt_outstandingDemandAmount",
+					"contextKey": "bt_outstandingDemandAmount",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter demanded amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What is the total outstanding demand amount from the builder?",
+					"description": "<div class='info-title'><span class='info-icon blue'>💰</span> Outstanding Builder Demand</div><div class='info-box highlight'>Enter the total amount that the builder has demanded and remains to be disbursed.</div><div class='info-box tip'><span class='bold'>💡 Note:</span> If the outstanding amount is less than ₹12,000, it is generally considered insignificant. In such cases, you may want to reconsider selecting \"Yes\" for builder demand.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<=": [
+										{
+											"var": "bt_outstandingDemandAmount"
+										},
+										12000
+									]
+								},
+								"then": "For amounts under ₹12,000, this is generally considered insignificant."
+							}
+						]
+					},
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isRegistryDone"
+									},
+									"No"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isPossessionOfferedByAuthority"
+									},
+									"No"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isAnyDemandFromTheBuilder"
+									},
+									"Yes"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_bt_demandDueSchedule",
+					"bindsTo_template": "bt_demandDueSchedule",
+					"contextKey": "bt_demandDueSchedule",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid grid-cols-1 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "When is this demand amount due to be paid?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📅</span> Payment Schedule</div><div class='info-box highlight'>Select the timeline for when the builder's outstanding demand needs to be cleared. This helps lenders plan the disbursement schedule.</div>",
+					"options": [
+						{
+							"label": "Immediately / Already overdue",
+							"value": "Immediately",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertCircle"
+						},
+						{
+							"label": "Within 3 months",
+							"value": "Within 3 months",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Calendar"
+						},
+						{
+							"label": "Within 6 months",
+							"value": "Within 6 months",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Calendar"
+						},
+						{
+							"label": "Within 12 months",
+							"value": "Within 12 months",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Calendar"
+						},
+						{
+							"label": "More than 12 months / As per construction milestones",
+							"value": "More than 12 months",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Calendar"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isRegistryDone"
+									},
+									"No"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isPossessionOfferedByAuthority"
+									},
+									"No"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isAnyDemandFromTheBuilder"
+									},
+									"Yes"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_sixMonthsPassedAfterRegistry",
+					"bindsTo_template": "sixMonthsPassedAfterRegistry",
+					"contextKey": "sixMonthsPassedAfterRegistry",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "If the 6 month's tenure has been passed from the registry date?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"sixMonthsPassedAfterRegistry": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"sixMonthsPassedAfterRegistry": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isRegistryDone"
+									},
+									"Yes"
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "propertyTechnical_homeLoan",
+			"title": "Property Technical Details",
+			"description": "Technical specifications and construction details of the property",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"showWhen": {
+				"or": [
+					{
+						"==": [
+							{
+								"var": "propertyIdentified"
+							},
+							"Yes"
+						]
+					},
+					{
+						"in": [
+							{
+								"var": "loanType"
+							},
+							["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+						]
+					}
+				]
+			},
+			"questions": [
+				{
+					"id": "q1_propertyType",
+					"bindsTo_template": "propertyType",
+					"contextKey": "propertyType",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Please indicate the type of ownership for the property?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📜</span> Property Ownership Type</div><div class='info-box highlight'>Lenders carefully evaluate property ownership to ensure legal compliance and clear title transfer.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>🏠 Freehold</span><span class='diagram-value'>Full ownership rights, easier to finance</span></div><div class='diagram-row'><span class='diagram-label'>📋 Leasehold</span><span class='diagram-value'>Limited period ownership, conversion may be needed</span></div><div class='diagram-row'><span class='diagram-label'>⚖️ Power of Attorney</span><span class='diagram-value'>Complex, limited lender acceptance</span></div></div><div class='info-box tip'><span class='bold'>💡 Best Practice:</span> Freehold properties have the smoothest loan approval process.</div>",
+					"options": [
+						{
+							"label": "Lease Hold",
+							"value": "Lease Hold",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileKey"
+						},
+						{
+							"label": "Free Hold",
+							"value": "Free Hold",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						}
+					],
+					"showWhen": {
+						"or": [
+							{
+								"==": [
+									{
+										"var": "propertyIdentified"
+									},
+									"Yes"
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q2_purchaseType",
+					"bindsTo_template": "purchaseType",
+					"contextKey": "purchaseType",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Please specify the nature of property purchase?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🤝</span> Nature of Property Purchase</div><div class='info-box highlight'>The loan process varies significantly based on who you are buying the property from.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>🏢 Builder/Authority</span><span class='diagram-value'>Direct purchase, staged disbursement</span></div><div class='diagram-row'><span class='diagram-label'>👤 Individual (Resale)</span><span class='diagram-value'>One-time disbursement, title verification needed</span></div></div><div class='info-box note'><span class='bold'>📋 Key Differences:</span><ul class='info-list'><li>Documentation requirements vary</li><li>Fund disbursement method differs</li><li>Title verification process changes</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Ensure all property documents are ready before applying for the loan.</div>",
+					"options": [
+						{
+							"label": "Direct from Authority / Builder",
+							"value": "Direct Sale",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CircleDollarSign"
+						},
+						{
+							"label": "In Resale",
+							"value": "Resale",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ArrowLeftRight"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "propertyIdentified"
+											},
+											"Yes"
+										]
+									},
+									{
+										"in": [
+											{
+												"var": "loanType"
+											},
+											["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+										]
+									}
+								]
+							},
+							{
+								"!": {
+									"and": [
+										{
+											"in": [
+												{
+													"var": "loanType"
+												},
+												["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+											]
+										},
+										{
+											"==": [
+												{
+													"var": "isRegistryDone"
+												},
+												"Yes"
+											]
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"id": "q3_constructionType",
+					"bindsTo_template": "constructionType",
+					"contextKey": "constructionType",
+					"type": "select",
+					"uiGroup": "select_fields",
+					"selectClass": "mt-8 md:mt-12",
+					"uiMeta": {
+						"placeholder": "Choose Construction Type",
+						"icon": "construction"
+					},
+					"required": true,
+					"question": "What type of construction is it?",
+					"options": [
+						{
+							"label": "House/Villa",
+							"value": "House"
+						},
+						{
+							"label": "Flat",
+							"value": "Flat"
+						},
+						{
+							"label": "Floor",
+							"value": "Floor"
+						}
+					],
+					"showWhen": {
+						"or": [
+							{
+								"==": [
+									{
+										"var": "propertyIdentified"
+									},
+									"Yes"
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_PropertyStage",
+					"bindsTo_template": "PropertyStage",
+					"contextKey": "PropertyStage",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Please specify the construction stage of the property?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏗️</span> Construction Stage</div><div class='info-box highlight'>Loan processing differs based on whether the property is under construction or ready to move in.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>🚧 Under Construction</span><span class='diagram-value'>Staged disbursement (CLP/TLP)</span></div><div class='diagram-row'><span class='diagram-label'>✅ Ready to Move</span><span class='diagram-value'>Full amount disbursed at once</span></div></div><div class='info-box note'><span class='bold'>📊 Disbursement Plans:</span><ul class='info-list'><li><span class='highlight-text'>CLP</span> - Construction Linked Plan: Funds released as construction progresses</li><li><span class='highlight-text'>TLP</span> - Time Linked Plan: Funds released at fixed time intervals</li></ul></div><div class='info-box tip'><span class='bold'>💡 Note:</span> For under-construction properties, you start paying EMI only on the disbursed amount.</div>",
+					"options": [
+						{
+							"label": "Under Construction",
+							"value": "Under Construction",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Construction"
+						},
+						{
+							"label": "Ready To Move",
+							"value": "Ready To Move",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Home"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "propertyIdentified"
+											},
+											"Yes"
+										]
+									},
+									{
+										"in": [
+											{
+												"var": "loanType"
+											},
+											["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+										]
+									}
+								]
+							},
+							{
+								"!": {
+									"and": [
+										{
+											"in": [
+												{
+													"var": "loanType"
+												},
+												["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+											]
+										},
+										{
+											"==": [
+												{
+													"var": "isRegistryDone"
+												},
+												"Yes"
+											]
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"id": "q_propertyAge",
+					"bindsTo_template": "propertyAge",
+					"contextKey": "propertyAge",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select Property Age",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "How old is this property?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏠</span> Property Age</div><div class='info-box highlight'>The age of the property affects loan eligibility, maximum tenure, and valuation.</div><div class='info-box note'><span class='bold'>Why this matters:</span><ul class='info-list'><li>Older properties may have lower loan-to-value ratios</li><li>Banks assess <strong>residual life</strong> — typically 60–75 years for RCC buildings</li><li>Properties over 25–30 years may face reduced tenure or rejection</li><li>For <strong>Flat/Floor</strong>: age of the building matters</li><li>For <strong>House/Villa</strong>: age of the main structure matters</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Check your property registration deed or builder's completion certificate for the exact year of construction.</div>",
+					"options": [
+						{
+							"label": "New (0–5 years)",
+							"value": "0-5"
+						},
+						{
+							"label": "6–10 years",
+							"value": "6-10"
+						},
+						{
+							"label": "11–15 years",
+							"value": "11-15"
+						},
+						{
+							"label": "16–20 years",
+							"value": "16-20"
+						},
+						{
+							"label": "21–25 years",
+							"value": "21-25"
+						},
+						{
+							"label": "26–30 years",
+							"value": "26-30"
+						},
+						{
+							"label": "Over 30 years",
+							"value": "30+"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									""
+								]
+							},
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "PropertyStage"
+											},
+											"Ready To Move"
+										]
+									},
+									{
+										"and": [
+											{
+												"in": [
+													{
+														"var": "loanType"
+													},
+													["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+												]
+											},
+											{
+												"==": [
+													{
+														"var": "isRegistryDone"
+													},
+													"Yes"
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_propertyAreaType",
+					"bindsTo_template": "propertyAreaType",
+					"contextKey": "propertyAreaType",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select Area Type",
+						"icon": "map-pin"
+					},
+					"required": true,
+					"question": "Which type of area is this property located in?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📍</span> Property Area Type</div><div class='info-box highlight'>The surrounding area helps determine which lenders can finance the property.</div><div class='info-box note'><span class='bold'>💡 Tip:</span> Choose the option that best matches how the area looks and is commonly described.</div>",
+					"options": [
+						{
+							"label": "Planned / Development Authority Area",
+							"value": "PLANNED_AUTHORITY",
+							"helperText": "approved layout, township, large housing society"
+						},
+						{
+							"label": "Converted Land / Approved Residential Use",
+							"value": "CONVERTED_RESIDENTIAL",
+							"helperText": "earlier agricultural or village land, now residential"
+						},
+						{
+							"label": "Old Municipal Area / Traditional Mohalla",
+							"value": "OLD_MUNICIPAL",
+							"helperText": "inside city limits, older houses, narrow streets"
+						},
+						{
+							"label": "Local Colony / Village / Panchayat Area",
+							"value": "LOCAL_COLONY",
+							"helperText": "non-planned or organic development"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"helperText": "I'm not certain about the area classification"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									""
+								]
+							},
+							{
+								"or": [
+									{
+										"and": [
+											{
+												"!=": [
+													{
+														"var": "propertyAge"
+													},
+													""
+												]
+											},
+											{
+												"or": [
+													{
+														"==": [
+															{
+																"var": "PropertyStage"
+															},
+															"Ready To Move"
+														]
+													},
+													{
+														"and": [
+															{
+																"in": [
+																	{
+																		"var": "loanType"
+																	},
+																	[
+																		"Balance Transfer With Top-up",
+																		"Balance Transfer Only",
+																		"Top-up Only"
+																	]
+																]
+															},
+															{
+																"==": [
+																	{
+																		"var": "isRegistryDone"
+																	},
+																	"Yes"
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "PropertyStage"
+											},
+											"Under Construction"
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_carpetArea",
+					"bindsTo_template": "carpetArea",
+					"contextKey": "carpetArea",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter carpet area in sq ft",
+						"icon": "ruler",
+						"showNumberInWords": false
+					},
+					"required": true,
+					"question": "What is the carpet area of the property? (in sq ft)",
+					"description": "<div class='info-title'><span class='info-icon blue'>📐</span> Carpet Area</div><div class='info-box highlight'>Carpet area is the actual usable floor area within the walls — this is the primary metric banks use for property valuation.</div><div class='info-box note'><span class='bold'>How to find this:</span><ul class='info-list'><li>Check your <strong>sale deed</strong> or <strong>agreement</strong> for recorded carpet area</li><li>For RERA-registered properties, carpet area is mentioned on the RERA portal</li><li>Your builder's allotment letter will have this detail</li></ul></div><div class='info-box tip'><span class='bold'>💡 Note:</span> Don't confuse with built-up area (includes walls) or super built-up area (includes common areas). Banks value based on carpet area.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "carpetArea"
+										},
+										100
+									]
+								},
+								"then": "Carpet area seems too low. Please enter the area in square feet."
+							},
+							{
+								"case": {
+									">": [
+										{
+											"var": "carpetArea"
+										},
+										50000
+									]
+								},
+								"then": "Please enter a valid carpet area in square feet."
+							}
+						]
+					},
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "propertyAreaType"
+									},
+									""
+								]
+							},
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "PropertyStage"
+											},
+											"Ready To Move"
+										]
+									},
+									{
+										"and": [
+											{
+												"in": [
+													{
+														"var": "loanType"
+													},
+													["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+												]
+											},
+											{
+												"==": [
+													{
+														"var": "isRegistryDone"
+													},
+													"Yes"
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_ocCcAvailable",
+					"bindsTo_template": "ocCcAvailable",
+					"contextKey": "ocCcAvailable",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Has the building received its Occupancy Certificate (OC) / Completion Certificate (CC)?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📋</span> OC / CC Status</div><div class='info-box highlight'>The <strong>Occupancy Certificate (OC)</strong> confirms the building is safe for occupancy. The <strong>Completion Certificate (CC)</strong> confirms construction was completed as per the sanctioned plan.</div><div class='info-box note'><span class='bold'>Why this is important:</span><ul class='info-list'><li>Most banks require OC/CC for balance transfer and top-up processing</li><li>Without OC, lenders may consider the property as legally incomplete</li><li>Older buildings in municipal areas may have CC but not OC — that's common and usually acceptable</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Check with your housing society secretary or builder's office. For older municipal properties, the local municipal corporation can provide this.</div>",
+					"options": [
+						{
+							"label": "Yes, both OC and CC",
+							"value": "BOTH",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ClipboardList"
+						},
+						{
+							"label": "Only CC available",
+							"value": "CC_ONLY",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Neither available",
+							"value": "NONE",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "constructionType"
+									},
+									["Flat", "Floor"]
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "occupancyStatus"
+									},
+									""
+								]
+							},
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "PropertyStage"
+											},
+											"Ready To Move"
+										]
+									},
+									{
+										"and": [
+											{
+												"in": [
+													{
+														"var": "loanType"
+													},
+													["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+												]
+											},
+											{
+												"==": [
+													{
+														"var": "isRegistryDone"
+													},
+													"Yes"
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_municipalApproval",
+					"bindsTo_template": "municipalApproval",
+					"contextKey": "municipalApproval",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Was the house built with a sanctioned building plan from the local authority?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏛️</span> Building Plan Approval</div><div class='info-box highlight'>For independent houses and villas, lenders check whether the construction was done as per a plan sanctioned by the Municipal Corporation, Nagar Nigam, Gram Panchayat, or Development Authority.</div><div class='info-box note'><span class='bold'>Why this matters:</span><ul class='info-list'><li>Sanctioned plan confirms the construction is legal and authorised</li><li>Unauthorised constructions may face lower LTV or rejection</li><li>Deviation from sanctioned plan may reduce property valuation</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> The sanctioned plan / building permission document is usually with your property papers. If the house was built by a previous owner, check with the local municipal body.</div>",
+					"options": [
+						{
+							"label": "Yes, with approved plan",
+							"value": "APPROVED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ClipboardList"
+						},
+						{
+							"label": "Partially approved / Deviations exist",
+							"value": "PARTIAL",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "No approved plan",
+							"value": "NO_PLAN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "constructionType"
+									},
+									"House"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "occupancyStatus"
+									},
+									""
+								]
+							},
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "PropertyStage"
+											},
+											"Ready To Move"
+										]
+									},
+									{
+										"and": [
+											{
+												"in": [
+													{
+														"var": "loanType"
+													},
+													["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+												]
+											},
+											{
+												"==": [
+													{
+														"var": "isRegistryDone"
+													},
+													"Yes"
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_layoutMatchesPlan",
+					"bindsTo_template": "layoutMatchesPlan",
+					"contextKey": "layoutMatchesPlan",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Does the layout match the approved plan?",
+					"description": "<div class='info-box highlight'>Confirms as-built construction matches the approved architectural plan.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					]
+				},
+				{
+					"id": "q_buildingPlanApproved",
+					"bindsTo_template": "buildingPlanApproved",
+					"contextKey": "buildingPlanApproved",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is the building plan approved by the local municipal authority?",
+					"description": "<div class='info-box highlight'>Verifies local municipal authority has approved the construction plan.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "tellUs_homeLoan",
+			"title": "Applicant Details",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": []
+		},
+		{
+			"id": "incomeProfilesPage",
+			"title": "Income Profiles",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"showWhen": {
+				"==": [
+					{
+						"var": "__applicantCount"
+					},
+					1
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "incomeDetailsPage",
+			"title": "Income Details",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"showWhen": {
+				"and": [
+					{
+						"==": [
+							{
+								"var": "__applicantCount"
+							},
+							1
+						]
+					},
+					{
+						"!": [
+							{
+								"var": "__hasOnlyNoCurrentIncome"
+							}
+						]
+					}
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "creditScorePage",
+			"title": "Credit Score",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"showWhen": {
+				"==": [
+					{
+						"var": "__applicantCount"
+					},
+					1
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "obligationsPage",
+			"title": "Existing Loans",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"showWhen": {
+				"and": [
+					{
+						"==": [
+							{
+								"var": "__applicantCount"
+							},
+							1
+						]
+					},
+					{
+						"==": [
+							{
+								"var": "ObligationsRunning"
+							},
+							"Yes"
+						]
+					}
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "propertyLegal_homeLoan",
+			"title": "Property Legal & Seller Details",
+			"description": "Legal verification, seller information, and document status",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"showWhen": {
+				"or": [
+					{
+						"==": [
+							{
+								"var": "propertyIdentified"
+							},
+							"Yes"
+						]
+					},
+					{
+						"in": [
+							{
+								"var": "loanType"
+							},
+							["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+						]
+					}
+				]
+			},
+			"questions": [
+				{
+					"id": "q_occupancyStatus",
+					"bindsTo_template": "occupancyStatus",
+					"contextKey": "occupancyStatus",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-3 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "What is the current occupancy status of this property?",
+					"description": "<div class='info-title'><span class='info-icon green'>🏡</span> Occupancy Status</div><div class='info-box highlight'>Lenders offer slightly lower interest rates for self-occupied properties compared to rented or vacant ones.</div><div class='info-box note'><span class='bold'>Why this matters:</span><ul class='info-list'><li><strong>Self-occupied</strong> — Better rates, standard processing</li><li><strong>Rented out</strong> — Rental income can boost eligibility but some lenders cap it</li><li><strong>Vacant</strong> — May attract queries on purpose of holding</li></ul></div>",
+					"options": [
+						{
+							"label": "Self-Occupied",
+							"value": "SELF_OCCUPIED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Home"
+						},
+						{
+							"label": "Rented Out",
+							"value": "RENTED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "IndianRupee"
+						},
+						{
+							"label": "Vacant",
+							"value": "VACANT",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Building"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "carpetArea"
+									},
+									""
+								]
+							},
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "PropertyStage"
+											},
+											"Ready To Move"
+										]
+									},
+									{
+										"and": [
+											{
+												"in": [
+													{
+														"var": "loanType"
+													},
+													["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+												]
+											},
+											{
+												"==": [
+													{
+														"var": "isRegistryDone"
+													},
+													"Yes"
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_ifPropertyRegistered",
+					"bindsTo_template": "ifPropertyRegistered",
+					"contextKey": "ifPropertyRegistered",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Please specify if the selected property is registered in the name of seller(s)?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📝</span> Property Registration</div><div class='info-box highlight'>A registered property has legal ownership recorded with the Sub-Registrar office.</div><div class='info-box note'><span class='bold'>Why this matters:</span><ul class='info-list'><li>Registration confirms legal ownership transfer</li><li>Unregistered properties may have limited lender options</li></ul></div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "propertyIdentified"
+											},
+											"Yes"
+										]
+									},
+									{
+										"in": [
+											{
+												"var": "loanType"
+											},
+											["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+										]
+									}
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Resale"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propertyAreaType"
+									},
+									""
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_isPossessionOfferedByAuthority",
+					"bindsTo_template": "isPossessionOfferedByAuthority",
+					"contextKey": "isPossessionOfferedByAuthority",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "If the possession has been permitted by the authority?",
+					"description": "<div class='info-title'><span class='info-icon green'>📋</span> Authority Possession Status</div><div class='info-box highlight'>This refers to when the builder receives official approval from the government authority.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>📄 Completion Certificate (CC)</span><span class='diagram-value'>Construction completed as per approved plan</span></div><div class='diagram-row'><span class='diagram-label'>🏠 Occupancy Certificate (OC)</span><span class='diagram-value'>Property is safe and ready for occupancy</span></div></div><div class='info-box warning'><span class='bold'>⚠️ Important:</span> Do not confuse this with possession offered directly by the builder. We are asking about official government certification only.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"isPossessionOfferedByAuthority": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"isPossessionOfferedByAuthority": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "loanType"
+									},
+									"New Loan"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Direct Sale"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "PropertyStage"
+									},
+									"Ready To Move"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_lastRegistryDuration",
+					"bindsTo_template": "lastRegistryDuration",
+					"contextKey": "lastRegistryDuration",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": " When the registry took place?",
+					"options": [
+						{
+							"label": "Within 6 months",
+							"value": "underSixMonths",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Calendar"
+						},
+						{
+							"label": "Within a year",
+							"value": "underOneYear",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Calendar"
+						},
+						{
+							"label": "Within 2 years",
+							"value": "moreThanTwoYears",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Calendar"
+						},
+						{
+							"label": "Before 2 years",
+							"value": "underTwoYears",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Calendar"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "propertyIdentified"
+											},
+											"Yes"
+										]
+									},
+									{
+										"in": [
+											{
+												"var": "loanType"
+											},
+											["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+										]
+									}
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Resale"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "ifPropertyRegistered"
+									},
+									"Yes"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_isAnyBuilderDemand",
+					"bindsTo_template": "isAnyBuilderDemand",
+					"contextKey": "isAnyBuilderDemand",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "If any demand from the builder is due?",
+					"description": "<div class='info-title'><span class='info-icon gold'>💰</span> Builder Payment Demands</div><div class='info-box highlight'>Check if there are any outstanding or upcoming payment demands from the builder according to the payment schedule.</div><div class='info-box warning'><span class='bold'>⚠️ Before Transfer/Endorsement:</span> The seller must clear all outstanding demands to obtain a <span class='highlight-text'>No Dues Certificate</span> from the builder.</div><div class='info-box note'><span class='bold'>📋 Lender Process:</span><ul class='info-list'><li>Upcoming demands will only be disbursed after lender receives property papers</li><li>Outstanding amounts must be settled before property transfer</li><li>Ensure payment schedule alignment with loan disbursement</li></ul></div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "propertyIdentified"
+											},
+											"Yes"
+										]
+									},
+									{
+										"in": [
+											{
+												"var": "loanType"
+											},
+											["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+										]
+									}
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Resale"
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "PropertyStage"
+									},
+									["Under Construction", "Ready To Move"]
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "ifPropertyRegistered"
+									},
+									"No"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_outstandingAmount",
+					"bindsTo_template": "outstandingAmount",
+					"contextKey": "outstandingAmount",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter demanded amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What is the total amount outstanding according to the payment plan?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📊</span> Outstanding Payment Amount</div><div class='info-box highlight'>Enter the total amount that remains to be paid according to the builder's payment schedule.</div><div class='stats-row'><div class='stat-item'><div class='stat-value'>₹12,000</div><div class='stat-label'>Minimum threshold</div></div><div class='stat-item'><div class='stat-value'>Payment Plan</div><div class='stat-label'>Check your agreement</div></div></div><div class='info-box tip'><span class='bold'>💡 Note:</span> If the outstanding amount is less than ₹12,000, it is considered insignificant. In such cases, please select \"No builder demand\" instead.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<=": [
+										{
+											"var": "outstandingAmount"
+										},
+										12000
+									]
+								},
+								"then": "For amounts under ₹12,000, choose \"No builder demand.\""
+							}
+						]
+					},
+					"showWhen": {
+						"and": [
+							{
+								"or": [
+									{
+										"==": [
+											{
+												"var": "propertyIdentified"
+											},
+											"Yes"
+										]
+									},
+									{
+										"in": [
+											{
+												"var": "loanType"
+											},
+											["Balance Transfer With Top-up", "Balance Transfer Only", "Top-up Only"]
+										]
+									}
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Resale"
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "PropertyStage"
+									},
+									["Under Construction", "Ready To Move"]
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isAnyBuilderDemand"
+									},
+									"Yes"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "ifPropertyRegistered"
+									},
+									"No"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_purchasedFrom",
+					"bindsTo_template": "purchasedFrom",
+					"contextKey": "purchasedFrom",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "From where the property is being purchased?",
+					"options": [
+						{
+							"label": "Builder",
+							"value": "Builder",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Building2"
+						},
+						{
+							"label": "Authority",
+							"value": "Authority",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Landmark"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "purchaseType"
+							},
+							"Direct Sale"
+						]
+					}
+				},
+				{
+					"id": "q_RERARegisterBuilder",
+					"bindsTo_template": "RERARegisterBuilder",
+					"contextKey": "RERARegisterBuilder",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is the project registered with the RERA?",
+					"description": "<div class='info-title'><span class='info-icon green'>✅</span> RERA Registration</div><div class='info-box highlight'>RERA (Real Estate Regulatory Authority) is a government body that protects home buyers and promotes transparency in real estate.</div><div class='info-box note'><span class='bold'>📋 Benefits of RERA Registered Projects:</span><ul class='info-list'><li>Builder must deliver project on time or pay compensation</li><li>Clear disclosure of project details and approvals</li><li>Buyer funds are protected in an escrow account</li><li>Easy dispute resolution mechanism</li></ul></div><div class='info-box tip'><span class='bold'>💡 How to verify:</span> Search for the project on your state's RERA website using the project name or RERA number.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Direct Sale"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchasedFrom"
+									},
+									"Builder"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_builderType",
+					"bindsTo_template": "builderType",
+					"contextKey": "builderType",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Please confirm the builder type",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏢</span> Builder Type Classification</div><div class='info-box highlight'>The type of builder affects loan approval, interest rates, and processing time.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>⭐ Renowned Builder</span><span class='diagram-value'>Faster approval, better rates</span></div><div class='diagram-row'><span class='diagram-label'>🏠 Small/Local Builder</span><span class='diagram-value'>Additional verification may be required</span></div></div><div class='info-box note'><span class='bold'>📋 Renowned Builders Include:</span><ul class='info-list'><li>Nationally recognized developers</li><li>Builders pre-approved by major banks</li><li>Companies with strong track record</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Projects from renowned builders often have pre-approved loan tie-ups with banks for faster processing.</div>",
+					"options": [
+						{
+							"label": "Renowned Builder",
+							"value": "renowned_builder",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Building2"
+						},
+						{
+							"label": "Small / Local builder",
+							"value": "small_local_builder",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Store"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Direct Sale"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchasedFrom"
+									},
+									"Builder"
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "PropertyStage"
+												},
+												"Under Construction"
+											]
+										},
+										{
+											"or": [
+												{
+													"==": [
+														{
+															"var": "builderType"
+														},
+														"small_local_builder"
+													]
+												},
+												{
+													"==": [
+														{
+															"var": "RERARegisterBuilder"
+														},
+														"No"
+													]
+												}
+											]
+										},
+										{
+											"in": [
+												{
+													"var": "constructionType"
+												},
+												["Flat", "Floor"]
+											]
+										}
+									]
+								},
+								"then": "If the property is under construction with a small or local builder, banks or NBFCs may approve the loan but usually disburse it only at registry. Such transactions are often treated as resale-type. Confirm with the bank about disbursement details and schedule before applying, as our portal can’t verify this for all regions."
+							},
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "PropertyStage"
+												},
+												"Under Construction"
+											]
+										},
+										{
+											"or": [
+												{
+													"==": [
+														{
+															"var": "builderType"
+														},
+														"small_local_builder"
+													]
+												},
+												{
+													"==": [
+														{
+															"var": "RERARegisterBuilder"
+														},
+														"No"
+													]
+												}
+											]
+										},
+										{
+											"==": [
+												{
+													"var": "constructionType"
+												},
+												"House"
+											]
+										}
+									]
+								},
+								"then": "For under-construction houses, some lenders may release funds for the plot at registry and disburse the remaining amount after completion. These cases can also be treated as resale-type. Confirm with your bank, builder, or DSA about disbursement details and loan eligibility before applying."
+							}
+						]
+					}
+				},
+				{
+					"id": "q_nameOfBuilder",
+					"bindsTo_template": "nameOfBuilder",
+					"contextKey": "nameOfBuilder",
+					"type": "text",
+					"uiType": "text",
+					"uiGroup": "text_fields",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiMeta": {
+						"placeholder": "Enter the full name",
+						"icon": "user"
+					},
+					"required": true,
+					"question": "Enter the name of builder.",
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "purchasedFrom"
+									},
+									"Builder"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Direct Sale"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_nameOfAuthority",
+					"bindsTo_template": "nameOfAuthority",
+					"contextKey": "nameOfAuthority",
+					"type": "text",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "full name of Authority",
+						"icon": "user-round"
+					},
+					"required": true,
+					"question": "Enter the name of Authority.",
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "purchasedFrom"
+									},
+									"Authority"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Direct Sale"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_isPropertyOnLoan",
+					"bindsTo_template": "isPropertyOnLoan",
+					"contextKey": "isPropertyOnLoan",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Please specify if the property is on loan?",
+					"description": "<div class='info-title'><span class='info-icon red'>🏦</span> Existing Loan on Property</div><div class='info-box warning'><span class='bold'>⚠️ Important:</span> If the seller has an existing loan on the property, it can significantly affect your purchase process and loan options.</div><div class='info-box note'><span class='bold'>📋 Possible Scenarios:</span><ul class='info-list'><li>You may need to take loan from the seller's existing bank</li><li>Seller may need to transfer the balance to your bank</li><li>Property papers will be held by the seller's bank until cleared</li></ul></div><div class='info-box tip'><span class='bold'>💡 Recommendation:</span> Verify the exact outstanding amount and get a foreclosure letter from the seller's bank before proceeding.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "purchaseType"
+							},
+							"Resale"
+						]
+					}
+				},
+				{
+					"id": "q_lendersName",
+					"bindsTo_template": "lendersName",
+					"contextKey": "approvedBankForSelectedByUser",
+					"type": "multiple-select",
+					"multipleSelectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select your bank"
+					},
+					"required": true,
+					"question": "Please select all the lenders, from where project is approved.",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏦</span> Project Approved Lenders</div><div class='info-box highlight'>Select the banks or financial institutions from which your project has received pre-approval.</div><div class='info-box note'><span class='bold'>📋 Why This Matters:</span><ul class='info-list'><li>Pre-approved projects have faster loan processing</li><li>Bank has already verified project documents</li><li>Better negotiation on interest rates</li></ul></div><div class='info-box warning'><span class='bold'>⚠️ Note:</span> If your approved banks are not listed here, we apologize - we currently don't have enough data for those lenders to provide accurate loan calculations. We are continuously adding more lenders to our platform.</div>",
+					"descriptionHeader": {
+						"switch": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "purchaseType"
+										},
+										"Resale"
+									]
+								},
+								"then": "Select only those lenders that currently allow endorsement cases (builder transfer), as some may have restrictions or temporary holds. It’s best to confirm this with your DSA or builder before applying."
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "purchaseType"
+										},
+										"Direct Sale"
+									]
+								},
+								"then": "Choose only lenders currently funding the project, as some may pause loans due to authority or bank issues. Confirm with your DSA, broker, or builder."
+							}
+						]
+					},
+					"options": "bankNameJSON",
+					"showWhen": {
+						"or": [
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Direct Sale"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "purchasedFrom"
+											},
+											"Builder"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "RERARegisterBuilder"
+											},
+											""
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "builderType"
+											},
+											""
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "nameOfBuilder"
+											},
+											[""]
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Resale"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "ifPropertyRegistered"
+											},
+											"No"
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_sellerLoanBankName",
+					"bindsTo_template": "sellerLoanBankName",
+					"contextKey": "selectSingleBank",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select your bank",
+						"icon": "landmark"
+					},
+					"required": true,
+					"question": "Select the lender from where seller's loan is running.",
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Resale"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isPropertyOnLoan"
+									},
+									"Yes"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_foreclosureAmount",
+					"bindsTo_template": "foreclosureAmount",
+					"contextKey": "foreclosureAmount",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "number_fields",
+					"uiMeta": {
+						"placeholder": "Enter the foreclosure amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What is the foreclosure Amount?",
+					"description": "<div class='info-title'><span class='info-icon gold'>💰</span> Foreclosure Amount</div><div class='info-box highlight'>This is the total amount required to fully close the seller's existing loan on the property.</div><div class='info-box note'><span class='bold'>📋 This Amount Includes:</span><ul class='info-list'><li>Outstanding principal balance</li><li>Accrued interest till date</li><li>Any applicable foreclosure charges</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Get an official foreclosure letter from the seller's bank to know the exact amount. This letter is usually valid for 15-30 days.</div>",
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Resale"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "sellerLoanBankName"
+									},
+									""
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isPropertyOnLoan"
+									},
+									"Yes"
+								]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "foreclosureAmount"
+										},
+										200000
+									]
+								},
+								"then": "Foreclosure amount must be greater than 2 Lakh."
+							}
+						]
+					}
+				},
+				{
+					"id": "q_isSellerNRI",
+					"bindsTo_template": "isSellerNRI",
+					"contextKey": "isSellerNRI",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "If seller / any of the seller's is NRI?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "isSellerNRI"
+										},
+										"Yes"
+									]
+								},
+								"then": "<span class=\"font-bold text-primaryText\">Important Notice on TDS for NRI Seller (Resale Property)</span> <p>In case of a resale property transaction where the seller is a <span class=\"font-bold\"> Non-Resident Indian (NRI), Tax Deducted at Source (TDS)</span> is mandatorily applicable under <span class=\"font-bold\">Section 195 of the Income Tax Act, 1961.</span> <br> The <span class=\"font-bold\">buyer is required to deduct TDS</span> on the <span class=\"font-bold\">sale consideration</span> at the rates prescribed by the Income Tax Department and deposit the same with the Government of India before making payment to the seller. <br> The applicable TDS rate may vary based on factors such as <span class=\"font-bold\">capital gains (short-term or long-term), applicable surcharge</span>, and <span class=\"font-bold\">health & education cess.</span> <br> Any shortfall or non-compliance with TDS provisions may attract <span class=\"font-bold\">interest, penalty, or legal consequences</span> as per the Income Tax Act. </p>"
+							}
+						]
+					},
+					"showWhen": {
+						"or": [
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Resale"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isPropertyOnLoan"
+											},
+											"Yes"
+										]
+									},
+									{
+										"in": [
+											{
+												"var": "foreclosureAmount"
+											},
+											[""]
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Resale"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "isPropertyOnLoan"
+											},
+											""
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_ownershipChainComplete",
+					"bindsTo_template": "ownershipChainComplete",
+					"contextKey": "ownershipChainComplete",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is the ownership chain complete?",
+					"description": "<div class='info-box highlight'>Verifies continuous ownership history without gaps in title transfer.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					]
+				},
+				{
+					"id": "q_originalDocumentsAvailable",
+					"bindsTo_template": "originalDocumentsAvailable",
+					"contextKey": "originalDocumentsAvailable",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Are the original property documents (sale deed) available?",
+					"description": "<div class='info-box highlight'>Ensures original ownership documents are physically available for verification.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					]
+				},
+				{
+					"id": "q_noLegalDispute",
+					"bindsTo_template": "noLegalDispute",
+					"contextKey": "noLegalDispute",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is the property free from legal disputes?",
+					"description": "<div class='info-box highlight'>Confirms no pending court cases, litigation, or legal claims on the property.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					]
+				},
+				{
+					"id": "q_encumbranceCertificateVerified",
+					"bindsTo_template": "encumbranceCertificateVerified",
+					"contextKey": "encumbranceCertificateVerified",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Has the encumbrance certificate been verified?",
+					"description": "<div class='info-box highlight'>Proves no outstanding loans, mortgages, or unpaid dues exist on the property.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					]
+				},
+				{
+					"id": "q_nocFromPreviousLender",
+					"bindsTo_template": "nocFromPreviousLender",
+					"contextKey": "nocFromPreviousLender",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Has the NOC from the previous lender been received?",
+					"description": "<div class='info-box highlight'>Required if property has existing loan - confirms previous lender will clear the lien.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						},
+						{
+							"label": "Not applicable",
+							"value": "N/A",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "propertyFinancial_homeLoan",
+			"title": "Property Financial Details",
+			"description": "Loan amount, tenure, and financial specifics for the property",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"showWhen": {
+				"and": [
+					{
+						"==": [
+							{
+								"var": "loanType"
+							},
+							"New Loan"
+						]
+					},
+					{
+						"==": [
+							{
+								"var": "propertyIdentified"
+							},
+							"Yes"
+						]
+					}
+				]
+			},
+			"questions": [
+				{
+					"id": "q_mortgageYear",
+					"bindsTo_template": "mortgageYear",
+					"contextKey": "mortgageYear",
+					"type": "select",
+					"selectClass": "mt-[1rem] md:mt-[2rem]",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select loan tenure in years",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "How long would you like your loan term to be?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📅</span> Loan Term (Tenure)</div><div class='info-box highlight'>The loan term is the total duration over which you will repay your home loan, typically ranging from 12 to 35 years.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>📉 Longer Term (25-35 years)</span><span class='diagram-value'>Lower EMI, Higher total interest</span></div><div class='diagram-row'><span class='diagram-label'>📈 Shorter Term (12-20 years)</span><span class='diagram-value'>Higher EMI, Lower total interest</span></div></div><div class='stats-row'><div class='stat-item'><div class='stat-value'>12-35</div><div class='stat-label'>Years range</div></div><div class='stat-item'><div class='stat-value'>Flexible</div><div class='stat-label'>Can prepay anytime</div></div></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> You can always prepay or foreclose your loan later without penalty (for floating rate loans). Choose a term that keeps your EMI comfortable.</div>",
+					"options": [
+						{
+							"label": "5",
+							"value": "5"
+						},
+						{
+							"label": "6",
+							"value": "6"
+						},
+						{
+							"label": "7",
+							"value": "7"
+						},
+						{
+							"label": "8",
+							"value": "8"
+						},
+						{
+							"label": "9",
+							"value": "9"
+						},
+						{
+							"label": "10",
+							"value": "10"
+						},
+						{
+							"label": "11",
+							"value": "11"
+						},
+						{
+							"label": "12",
+							"value": "12"
+						},
+						{
+							"label": "13",
+							"value": "13"
+						},
+						{
+							"label": "14",
+							"value": "14"
+						},
+						{
+							"label": "15",
+							"value": "15"
+						},
+						{
+							"label": "16",
+							"value": "16"
+						},
+						{
+							"label": "17",
+							"value": "17"
+						},
+						{
+							"label": "18",
+							"value": "18"
+						},
+						{
+							"label": "19",
+							"value": "19"
+						},
+						{
+							"label": "20",
+							"value": "20"
+						},
+						{
+							"label": "21",
+							"value": "21"
+						},
+						{
+							"label": "22",
+							"value": "22"
+						},
+						{
+							"label": "23",
+							"value": "23"
+						},
+						{
+							"label": "24",
+							"value": "24"
+						},
+						{
+							"label": "25",
+							"value": "25"
+						},
+						{
+							"label": "26",
+							"value": "26"
+						},
+						{
+							"label": "27",
+							"value": "27"
+						},
+						{
+							"label": "28",
+							"value": "28"
+						},
+						{
+							"label": "29",
+							"value": "29"
+						},
+						{
+							"label": "30",
+							"value": "30"
+						},
+						{
+							"label": "31",
+							"value": "31"
+						},
+						{
+							"label": "32",
+							"value": "32"
+						},
+						{
+							"label": "33",
+							"value": "33"
+						},
+						{
+							"label": "34",
+							"value": "34"
+						},
+						{
+							"label": "35",
+							"value": "35"
+						},
+						{
+							"label": "36",
+							"value": "36"
+						},
+						{
+							"label": "37",
+							"value": "37"
+						},
+						{
+							"label": "38",
+							"value": "38"
+						},
+						{
+							"label": "39",
+							"value": "39"
+						},
+						{
+							"label": "40",
+							"value": "40"
+						}
+					]
+				},
+				{
+					"id": "q_dealValue",
+					"bindsTo_template": "dealValue",
+					"contextKey": "propCost",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter deal value",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What is the assessed market value of the property or the agreed-upon deal value with the seller?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🏠</span> Property Market Value</div><div class='info-box highlight'>Enter the assessed market value of the property or the agreed deal value with the seller.</div><div class='info-box note'><span class='bold'>📋 Important to Know:</span><ul class='info-list'><li>Lenders will conduct their own independent property valuation</li><li>Bank's assessed value may differ from your deal value</li><li>Loan amount is typically based on the lower of the two values</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> For accurate loan calculations, enter the realistic market value. Banks typically lend 75-90% of the property's assessed value (LTV ratio).</div>",
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "mortgageYear"
+									},
+									""
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Resale"
+								]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "dealValue"
+										},
+										2500000
+									]
+								},
+								"then": "We are providing services for the minimum loan amount of 25 Lakhs. Hence the deal Value should be more than 25 Lakhs."
+							}
+						]
+					}
+				},
+				{
+					"id": "q_propertyCost",
+					"bindsTo_template": "propertyCost",
+					"contextKey": "propCost",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter property value",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "About how much will the property you're buying, cost?",
+					"description": "<div class='info-title'><span class='info-icon blue'>💰</span> Property Cost</div><div class='info-box highlight'>Enter the total cost of the property you are planning to purchase.</div><div class='info-box note'><span class='bold'>📋 Include in Property Cost:</span><ul class='info-list'><li>Base price of the property</li><li>GST (if applicable for under-construction)</li><li>Development charges</li><li>Parking charges (if separate)</li></ul></div><div class='info-box tip'><span class='bold'>💡 Why Accuracy Matters:</span> Providing accurate numbers helps us match you with the most suitable loan offers and calculate realistic EMIs.</div>",
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "mortgageYear"
+									},
+									""
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Direct Sale"
+								]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "propertyCost"
+										},
+										2500000
+									]
+								},
+								"then": "We are providing services for the minimum loan amount of 25 Lakhs. Hence the deal Value should be more than 25 Lakhs."
+							},
+							{
+								"case": {
+									">": [
+										{
+											"var": "propertyCost"
+										},
+										999999999999999
+									]
+								},
+								"then": "Enter a valid amount"
+							}
+						]
+					}
+				},
+				{
+					"id": "q_downPayment",
+					"bindsTo_template": "downPayment",
+					"contextKey": "deposit",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter downpayment amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "How much amount you have for the downpayment ?",
+					"showWhen": {
+						"or": [
+							{
+								"!=": [
+									{
+										"var": "dealValue"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propertyCost"
+									},
+									""
+								]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									">": [
+										{
+											"var": "downPayment"
+										},
+										{
+											"*": [
+												0.9,
+												{
+													"var": "propertyCost"
+												}
+											]
+										}
+									]
+								},
+								"then": "Your downpayment should not be greater than 90% of your property value."
+							}
+						]
+					}
+				},
+				{
+					"id": "q_isDifferATSAndPropertyValue",
+					"bindsTo_template": "isDifferATSAndPropertyValue",
+					"contextKey": "differentATSandPV",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "If there is any difference between the \"Property Value\" and the \"Agreement to Sell value\" for the purpose of \"registry\"?",
+					"description": "<div class='info-title'><span class='info-icon red'>⚖️</span> Property Value vs Agreement Value</div><div class='info-box warning'><span class='bold'>⚠️ Important Disclosure:</span> In many areas of India, properties are registered at a lower value than the actual deal to reduce stamp duty costs.</div><div class='info-box note'><span class='bold'>📋 Understanding the Difference:</span><ul class='info-list'><li><span class='highlight-text'>Actual Value</span> - The real price you're paying for the property</li><li><span class='highlight-text'>Agreement Value</span> - Amount declared in the Sale Deed for registration</li></ul></div><div class='info-box warning'><span class='bold'>⚠️ Our Advisory:</span> We strongly recommend ensuring all transactions comply with legal requirements. Under-reporting can lead to legal complications, difficulties in future sale, and loan processing issues.</div><div class='info-box tip'><span class='bold'>💡 Note:</span> Be transparent with your lender about the actual transaction value for smooth processing.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"isDifferATSAndPropertyValue": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"isDifferATSAndPropertyValue": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "downPayment"
+									},
+									""
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Direct Sale"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_isATSReady",
+					"bindsTo_template": "isATSReady",
+					"contextKey": "ATSReady",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is your Agreement to Sell (ATS) ready ?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"isATSReady": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"isATSReady": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"or": [
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Direct Sale"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isDifferATSAndPropertyValue"
+											},
+											"Yes"
+										]
+									}
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "loanType"
+									},
+									"Balance Transfer Only"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "purchaseType"
+									},
+									"Resale"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_ourSuggestionOrBySelf",
+					"bindsTo_template": "ourSuggestionOrBySelf",
+					"contextKey": "ATSvalue",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Would you like to know our suggestion for ATS value (Registry Value) or you will decide by yourself?",
+					"options": [
+						{
+							"label": "Suggestion Required",
+							"value": "Suggestion Required",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Lightbulb"
+						},
+						{
+							"label": "By Myself",
+							"value": "By Myself",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "User"
+						}
+					],
+					"showWhen": {
+						"or": [
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Direct Sale"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isDifferATSAndPropertyValue"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isDifferATSAndPropertyValue"
+											},
+											"Yes"
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Resale"
+										]
+									}
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "isATSReady"
+									},
+									"No"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_propertyValueAsPerATS",
+					"bindsTo_template": "propertyValueAsPerATS",
+					"contextKey": "agreementSellValue",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Property Value as per ATS",
+						"icon": "indian-rupee",
+						"readonly": true,
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"or": [
+										{
+											"==": [
+												{
+													"var": "isATSReady"
+												},
+												"Yes"
+											]
+										},
+										{
+											"and": [
+												{
+													"==": [
+														{
+															"var": "isATSReady"
+														},
+														"No"
+													]
+												},
+												{
+													"==": [
+														{
+															"var": "ourSuggestionOrBySelf"
+														},
+														"By Myself"
+													]
+												}
+											]
+										}
+									]
+								},
+								"then": "Property Value as per 'Agreement to Sell' (i.e. ATS document)?"
+							},
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "isATSReady"
+												},
+												"No"
+											]
+										},
+										{
+											"==": [
+												{
+													"var": "ourSuggestionOrBySelf"
+												},
+												"Suggestion Required"
+											]
+										}
+									]
+								},
+								"then": "The optimum <span class=\"underline underline-offset-4 decoration-primary\">Property Value</span>  for the 'Agreement to Sell' document is shown below."
+							}
+						]
+					},
+					"description": {
+						"switch": [
+							{
+								"case": {
+									"or": [
+										{
+											"==": [
+												{
+													"var": "isATSReady"
+												},
+												"Yes"
+											]
+										},
+										{
+											"and": [
+												{
+													"==": [
+														{
+															"var": "isATSReady"
+														},
+														"No"
+													]
+												},
+												{
+													"==": [
+														{
+															"var": "ourSuggestionOrBySelf"
+														},
+														"By Myself"
+													]
+												}
+											]
+										}
+									]
+								},
+								"then": "This will be considered as the registry amount on which stamp duty will be calculated."
+							},
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "isATSReady"
+												},
+												"No"
+											]
+										},
+										{
+											"==": [
+												{
+													"var": "ourSuggestionOrBySelf"
+												},
+												"Suggestion Required"
+											]
+										}
+									]
+								},
+								"then": "Our AI recommends this value to secure the maximum possible loan amount while minimizing registry amount on which stamp duty will be calculated."
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "purchaseType"
+												},
+												"Direct Sale"
+											]
+										},
+										{
+											">": [
+												{
+													"var": "propertyValueAsPerATS"
+												},
+												{
+													"var": "propertyCost"
+												}
+											]
+										}
+									]
+								},
+								"then": "Property value as per 'Agreement to Sell' should not be more than the actual property cost"
+							},
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "purchaseType"
+												},
+												"Resale"
+											]
+										},
+										{
+											">": [
+												{
+													"var": "propertyValueAsPerATS"
+												},
+												{
+													"var": "dealValue"
+												}
+											]
+										}
+									]
+								},
+								"then": "Property value as per 'Agreement to Sell' should not be more than the deal value"
+							}
+						]
+					},
+					"showWhen": {
+						"or": [
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isDifferATSAndPropertyValue"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "ourSuggestionOrBySelf"
+											},
+											""
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isDifferATSAndPropertyValue"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"Yes"
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isDifferATSAndPropertyValue"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "ourSuggestionOrBySelf"
+											},
+											""
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Resale"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "ourSuggestionOrBySelf"
+											},
+											""
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Resale"
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "asPerMap"
+											},
+											"No"
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "ourSuggestionOrBySelf"
+											},
+											""
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "asPerMap"
+											},
+											"No"
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_downpaymentByOwn",
+					"bindsTo_template": "downpaymentByOwn",
+					"contextKey": "depositAsPerATS",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Downpayment amount of ATS",
+						"icon": "indian-rupee",
+						"readonly": true,
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"or": [
+										{
+											"==": [
+												{
+													"var": "isATSReady"
+												},
+												"Yes"
+											]
+										},
+										{
+											"and": [
+												{
+													"==": [
+														{
+															"var": "isATSReady"
+														},
+														"No"
+													]
+												},
+												{
+													"==": [
+														{
+															"var": "ourSuggestionOrBySelf"
+														},
+														"By Myself"
+													]
+												}
+											]
+										}
+									]
+								},
+								"then": "Down Payment (own contribution amount) as per 'Agreement to Sell' document?"
+							},
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "isATSReady"
+												},
+												"No"
+											]
+										},
+										{
+											"==": [
+												{
+													"var": "ourSuggestionOrBySelf"
+												},
+												"Suggestion Required"
+											]
+										}
+									]
+								},
+								"then": "The optimum <span class=\"underline underline-offset-4 decoration-primary\">Down Payment</span> for the 'Agreement to Sell' document is shown below."
+							}
+						]
+					},
+					"description": {
+						"switch": [
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "isATSReady"
+												},
+												"No"
+											]
+										},
+										{
+											"==": [
+												{
+													"var": "ourSuggestionOrBySelf"
+												},
+												"Suggestion Required"
+											]
+										}
+									]
+								},
+								"then": "Our AI recommends this value according to RBI's LTV ratio regulations and the suggested property value."
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									">": [
+										{
+											"var": "downpaymentByOwn"
+										},
+										{
+											"var": "downPayment"
+										}
+									]
+								},
+								"then": "This amount can not be more than the available deposit amount. Kindly change the value."
+							}
+						]
+					},
+					"showWhen": {
+						"or": [
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isDifferATSAndPropertyValue"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "ourSuggestionOrBySelf"
+											},
+											""
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isDifferATSAndPropertyValue"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"Yes"
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isDifferATSAndPropertyValue"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "ourSuggestionOrBySelf"
+											},
+											""
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Resale"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "ourSuggestionOrBySelf"
+											},
+											""
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "purchaseType"
+											},
+											"Resale"
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"Yes"
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "asPerMap"
+											},
+											"No"
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "isATSReady"
+											},
+											"No"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "ourSuggestionOrBySelf"
+											},
+											""
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "asPerMap"
+											},
+											"No"
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "finalVerification_homeLoan",
+			"title": "Final Verification",
+			"description": "Confirm these final details before submission",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": [
+				{
+					"id": "q_auctionedProperty",
+					"bindsTo_template": "auctionedProperty",
+					"contextKey": "auctionedProperty",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Was this property purchased in an authorized auction?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					]
+				},
+				{
+					"id": "q_understandsAsIsBasis",
+					"bindsTo_template": "understandsAsIsBasis",
+					"contextKey": "understandsAsIsBasis",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is the buyer aware of the 'as-is-where-is' condition?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "auctionedProperty"
+							},
+							"Yes"
+						]
+					}
+				},
+				{
+					"id": "q_loanForAuctionPayment",
+					"bindsTo_template": "loanForAuctionPayment",
+					"contextKey": "loanForAuctionPayment",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is the loan required for auction payment or renovation?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "auctionedProperty"
+							},
+							"Yes"
+						]
+					}
+				}
+			],
+			"showWhen": {
+				"and": [
+					{
+						"==": [
+							{
+								"var": "loanType"
+							},
+							"New Loan"
+						]
+					},
+					{
+						"==": [
+							{
+								"var": "propertyIdentified"
+							},
+							"Yes"
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "existingLoanInfo_homeLoan",
+			"title": "Existing Details",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": [
+				{
+					"id": "q_sanctionAmount",
+					"bindsTo_template": "sanctionAmount",
+					"contextKey": "sanctionAmount",
+					"type": "text",
+					"uiType": "number",
+					"valueType": "number",
+					"textFieldClass": "mt-[1rem] md:mt-[2rem]",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter the amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What was the \"sanction\" amount, when you have taken the loan from your existing bank?",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "sanctionAmount"
+										},
+										1000000
+									]
+								},
+								"then": "Amount can not be less than 10 lakh"
+							},
+							{
+								"case": {
+									">": [
+										{
+											"var": "sanctionAmount"
+										},
+										9999999999
+									]
+								},
+								"then": "Enter a valid amount"
+							}
+						]
+					},
+					"showWhen": {
+						"in": [
+							{
+								"var": "loanType"
+							},
+							["Top-up Only", "Balance Transfer Only", "Balance Transfer With Top-up"]
+						]
+					}
+				},
+				{
+					"id": "q_loanAccountNumber",
+					"bindsTo_template": "loanAccountNumber",
+					"contextKey": "loanAccountNumber",
+					"type": "text",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter your loan account number",
+						"icon": "hash"
+					},
+					"required": true,
+					"question": "What is your existing home loan account number?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🔢</span> Loan Account Number</div><div class='info-box highlight'>This is the unique account number assigned by your current lender for your home loan. You can find it on your loan statement, EMI receipt, or your bank's app/portal.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> This is different from your bank account number. It's specifically the home loan account number.</div>",
+					"showWhen": {
+						"!=": [
+							{
+								"var": "sanctionAmount"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q_loanDisbursementDate",
+					"bindsTo_template": "loanDisbursementDate",
+					"contextKey": "loanDisbursementDate",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select approximate year",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "When was the home loan originally disbursed?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📅</span> Loan Disbursement Year</div><div class='info-box highlight'>Select the year when your home loan was first disbursed (not the sanction date).</div><div class='info-box warning'><span class='bold'>⚠️ Important:</span> Most banks require at least <strong>12 EMIs</strong> to have been paid before they accept a balance transfer application.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Check your original loan sanction letter or first EMI receipt for the disbursement date.</div>",
+					"options": [
+						{
+							"label": "2025 (Less than 1 year ago)",
+							"value": "2025"
+						},
+						{
+							"label": "2024 (1–2 years ago)",
+							"value": "2024"
+						},
+						{
+							"label": "2023 (2–3 years ago)",
+							"value": "2023"
+						},
+						{
+							"label": "2022 (3–4 years ago)",
+							"value": "2022"
+						},
+						{
+							"label": "2021 (4–5 years ago)",
+							"value": "2021"
+						},
+						{
+							"label": "2020 (5–6 years ago)",
+							"value": "2020"
+						},
+						{
+							"label": "2019 (6–7 years ago)",
+							"value": "2019"
+						},
+						{
+							"label": "2018 or earlier",
+							"value": "2018_OR_EARLIER"
+						}
+					],
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "loanDisbursementDate"
+										},
+										"2025"
+									]
+								},
+								"loanDisbursementDateError": "Your loan was disbursed less than 1 year ago. Most banks require at least 12 EMIs to be paid before accepting a balance transfer. You may want to check eligibility with specific lenders."
+							}
+						]
+					},
+					"showWhen": {
+						"!=": [
+							{
+								"var": "loanAccountNumber"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q_interestRateType",
+					"bindsTo_template": "interestRateType",
+					"contextKey": "interestRateType",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-3 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "What type of interest rate is your current home loan on?",
+					"description": "<div class='info-title'><span class='info-icon gold'>📊</span> Interest Rate Type</div><div class='info-box highlight'>Knowing your current rate type is important because it affects <strong>foreclosure charges</strong> when you transfer.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>📉 Floating Rate</span><span class='diagram-value'>Zero foreclosure charges (RBI rule)</span></div><div class='diagram-row'><span class='diagram-label'>📌 Fixed Rate</span><span class='diagram-value'>May attract 2–4% foreclosure penalty</span></div></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Most home loans disbursed after 2010 are on floating rate. Check your loan agreement if unsure.</div>",
+					"options": [
+						{
+							"label": "Floating Rate",
+							"value": "FLOATING",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "TrendingUp"
+						},
+						{
+							"label": "Fixed Rate",
+							"value": "FIXED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Lock"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "loanDisbursementDate"
+									},
+									""
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									["Balance Transfer Only", "Balance Transfer With Top-up"]
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_emiBounceHistory",
+					"bindsTo_template": "emiBounceHistory",
+					"contextKey": "emiBounceHistory",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "How many EMI bounces have occurred in the last 12 months?",
+					"description": "<div class='info-title'><span class='info-icon orange'>⚠️</span> EMI Repayment Track Record</div><div class='info-box highlight'>Banks carefully review your EMI repayment history before approving a balance transfer. A clean track record significantly improves chances.</div><div class='info-box note'><span class='bold'>Typical Bank Requirements:</span><ul class='info-list'><li><strong>0 bounces</strong> — Ideal, best rates and fastest processing</li><li><strong>1 bounce</strong> — Usually acceptable with explanation</li><li><strong>2+ bounces</strong> — Many banks may decline; limited options available</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> A bounce means the EMI auto-debit failed due to insufficient funds. Even if you paid manually later, it counts as a bounce.</div>",
+					"options": [
+						{
+							"label": "No bounces (clean track)",
+							"value": "0",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "1 bounce",
+							"value": "1",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertCircle"
+						},
+						{
+							"label": "2 bounces",
+							"value": "2",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "3 or more bounces",
+							"value": "3+",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						}
+					],
+					"showWhen": {
+						"or": [
+							{
+								"and": [
+									{
+										"in": [
+											{
+												"var": "loanType"
+											},
+											["Balance Transfer Only", "Balance Transfer With Top-up"]
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "interestRateType"
+											},
+											""
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "loanType"
+											},
+											"Top-up Only"
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "loanDisbursementDate"
+											},
+											""
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_principalOutstanding",
+					"bindsTo_template": "principalOutstanding",
+					"contextKey": "principalOutstanding",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter current outstanding amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What is the outstanding principal of the current home loan, as on today?",
+					"description": "<div class='info-title'><span class='info-icon blue'>💳</span> Outstanding Principal</div><div class='info-box highlight'>The outstanding principal is the remaining portion of your original loan amount that you still owe to the lender.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>✅ Outstanding Principal</span><span class='diagram-value'>Remaining original loan amount</span></div><div class='diagram-row'><span class='diagram-label'>❌ Not the same as</span><span class='diagram-value'>Total of remaining EMIs</span></div></div><div class='info-box note'><span class='bold'>📋 Where to Find This:</span><ul class='info-list'><li>Check your \"Schedule of Repayment\" document</li><li>Log into your bank's net banking or app</li><li>Request a loan statement from your lender</li><li>Call your bank's customer service</li></ul></div><div class='info-box tip'><span class='bold'>💡 Remember:</span> Each EMI you pay reduces this principal amount. The outstanding principal is always less than the total of remaining EMIs because EMIs include interest.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "principalOutstanding"
+										},
+										500000
+									]
+								},
+								"then": "Please enter a minimum principal outstanding amount of 5 lakh."
+							},
+							{
+								"case": {
+									">": [
+										{
+											"var": "principalOutstanding"
+										},
+										9999999999
+									]
+								},
+								"then": "Enter a valid amount"
+							},
+							{
+								"case": {
+									"and": [
+										{
+											"in": [
+												{
+													"var": "loanType"
+												},
+												["Top-up Only", "Balance Transfer Only", "Balance Transfer With Top-up"]
+											]
+										},
+										{
+											">": [
+												{
+													"var": "principalOutstanding"
+												},
+												{
+													"var": "sanctionAmount"
+												}
+											]
+										}
+									]
+								},
+								"then": "Outstanding amount can not be greater than sanction amount"
+							}
+						]
+					},
+					"showWhen": {
+						"!=": [
+							{
+								"var": "emiBounceHistory"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q_existingInterestRate",
+					"bindsTo_template": "existingInterestRate",
+					"contextKey": "existingInterestRate",
+					"type": "text",
+					"uiType": "number",
+					"fieldType": "percentage",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter current interest rate",
+						"icon": "percent",
+						"showNumberInWords": false
+					},
+					"required": true,
+					"question": "What's the current interest rate with existing Lender?",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"or": [
+										{
+											"<": [
+												{
+													"var": "existingInterestRate"
+												},
+												1
+											]
+										},
+										{
+											">": [
+												{
+													"var": "existingInterestRate"
+												},
+												40
+											]
+										}
+									]
+								},
+								"then": "You can enter up to a minumum of 1% and maximum of 40% as the interest rate. Any figure beyond this may be unreasonable to our AI."
+							}
+						]
+					},
+					"showWhen": {
+						"!=": [
+							{
+								"var": "principalOutstanding"
+							},
+							null
+						]
+					}
+				},
+				{
+					"id": "q_remainingTenure",
+					"bindsTo_template": "remainingTenure",
+					"contextKey": "orignalRemaningTenure",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter current remaining tenure",
+						"icon": "calendar",
+						"showNumberInWords": false
+					},
+					"required": true,
+					"question": "What's the remaining tenure to close the loan at existing Lender?(in Months)",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"or": [
+										{
+											"<": [
+												{
+													"var": "remainingTenure"
+												},
+												12
+											]
+										},
+										{
+											">": [
+												{
+													"var": "remainingTenure"
+												},
+												420
+											]
+										}
+									]
+								},
+								"then": "You can enter up to a minimum of 12 month and maximum of 420 months (35 years) as remaining tenures. Any figure beyond this seems unreasonable."
+							}
+						]
+					},
+					"showWhen": {
+						"!=": [
+							{
+								"var": "existingInterestRate"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q_selectSingleBank",
+					"bindsTo_template": "selectSingleBank",
+					"contextKey": "selectSingleBank",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select your bank",
+						"icon": "landmark"
+					},
+					"required": true,
+					"question": "Please select the lender with whom your current Home Loan is active?",
+					"showWhen": {
+						"!=": [
+							{
+								"var": "remainingTenure"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q_includedCurrentEMIsAmount",
+					"bindsTo_template": "includedCurrentEMIsAmount",
+					"contextKey": "includedCurrentEMIsAmount",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter current remaining emi",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"limit": "emiLimit",
+					"limitCheckerText": "EMI should be around ₹",
+					"question": "What's the EMI of currently running Home Loan?",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									">": [
+										{
+											"var": "includedCurrentEMIsAmount"
+										},
+										999999999999
+									]
+								},
+								"then": "Please enter a valid EMI amount."
+							}
+						]
+					},
+					"showWhen": {
+						"!=": [
+							{
+								"var": "selectSingleBank"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q_insurenceDetailsOptions",
+					"bindsTo_template": "insurenceDetailsOptions",
+					"contextKey": "insurenceDetailsOptions",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Have you taken any home loan insurance?",
+					"description": "<div class='info-title'><span class='info-icon green'>🛡️</span> Home Loan Insurance</div><div class='info-box highlight'>Banks often require insurance coverage when sanctioning a home loan to protect both you and the lender.</div><div class='info-box note'><span class='bold'>📋 Common Insurance Types:</span><ul class='info-list'><li><span class='highlight-text'>Life Insurance</span> - Covers loan in case of borrower's demise</li><li><span class='highlight-text'>Property Insurance</span> - Protects against property damage</li></ul></div><div class='info-box warning'><span class='bold'>⚠️ Important for Balance Transfer:</span><ul class='info-list'><li>Existing insurance policies may get terminated on transfer</li><li>Insurance loan amount does NOT transfer with your home loan</li><li>You may need to pay off the insurance loan separately</li><li>New bank may require fresh insurance coverage</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Check your current insurance premium balance before initiating a balance transfer.</div>",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"flagKey": {
+								"insurenceDetailsOptions": true
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"flagKey": {
+								"insurenceDetailsOptions": false
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "includedCurrentEMIsAmount"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q_outstandingInsuranceAmount",
+					"bindsTo_template": "insurenceLoanAmount",
+					"contextKey": "insurenceLoanAmount",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter your outstanding insurance amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What's the outstanding insurance amount?",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									">": [
+										{
+											"var": "insurenceLoanAmount"
+										},
+										999999999999
+									]
+								},
+								"then": "Please enter a valid insurance loan amount."
+							}
+						]
+					},
+					"showWhen": {
+						"==": [
+							{
+								"var": "insurenceDetailsOptions"
+							},
+							"Yes"
+						]
+					}
+				}
+			],
+			"showWhen": {
+				"!=": [
+					{
+						"var": "loanType"
+					},
+					"New Loan"
+				]
+			}
+		},
+		{
+			"id": "loanRequirements_homeLoan",
+			"title": "Your Loan Requirements",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": [
+				{
+					"id": "q_currentPropertyValue",
+					"bindsTo_template": "currentPropertyValue",
+					"contextKey": "propCost",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-[1rem] md:mt-[2rem]",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter current property amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What would you estimate the current value of your property?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🏠</span> Current Property Value</div><div class='info-box highlight'>Enter your best estimate of your property's current market value.</div><div class='info-box note'><span class='bold'>📋 Factors Affecting Property Value:</span><ul class='info-list'><li>Location and neighborhood development</li><li>Property age and condition</li><li>Recent sales in the area</li><li>Current market trends</li></ul></div><div class='info-box tip'><span class='bold'>💡 Note:</span> Lenders will conduct their own independent valuation to determine the maximum lending amount. Your estimate helps us provide preliminary calculations.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "currentPropertyValue"
+										},
+										2500000
+									]
+								},
+								"then": "We are providing services for the minimum loan amount of 25 Lakhs. Hence the deal Value should be more than 25 Lakhs."
+							},
+							{
+								"case": {
+									">": [
+										{
+											"var": "currentPropertyValue"
+										},
+										999999999999999
+									]
+								},
+								"then": "Enter a valid amount"
+							}
+						]
+					}
+				},
+				{
+					"id": "q_newTenure",
+					"bindsTo_template": "newTenure",
+					"contextKey": "mortgageYear",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select your term",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "What loan term would you prefer with the new lender?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📅</span> Balance Transfer Loan Term</div><div class='info-box highlight'>Choose your preferred loan tenure with the new lender. You can select between 12 years and the bank's maximum allowed tenure.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>📉 Longer Tenure</span><span class='diagram-value'>Lower EMI, More total interest</span></div><div class='diagram-row'><span class='diagram-label'>📈 Shorter Tenure</span><span class='diagram-value'>Higher EMI, Less total interest</span></div></div><div class='info-box tip'><span class='bold'>💡 Balance Transfer Tip:</span> Consider choosing a term that gives you a lower EMI than your current loan - that's one of the main benefits of balance transfer!</div><div class='info-box note'><span class='bold'>📋 Note:</span> You can always prepay or change tenure later based on your financial situation.</div>",
+					"options": [],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "loanType"
+							},
+							"Top-up Only"
+						]
+					}
+				},
+				{
+					"id": "q_showResultOfBtWithTopUp",
+					"bindsTo_template": "showResultOfBtWithTopUp",
+					"contextKey": "showResultOfBtWithTopUp",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Do you want any Top-up loan with balance transfer?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"showResultOfBtWithTopUp": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"showResultOfBtWithTopUp": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "loanType"
+							},
+							"Balance Transfer With Top-up"
+						]
+					}
+				},
+				{
+					"id": "q_topTenure",
+					"bindsTo_template": "topUpTenure",
+					"contextKey": "topUpTenure",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select your term",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "How long would you like your Top-up loan term to be?",
+					"description": "<div class='info-title'><span class='info-icon green'>📅</span> Top-up Loan Term</div><div class='info-box highlight'>Select the duration for your top-up loan repayment, ranging from 1 to 15 years.</div><div class='stats-row'><div class='stat-item'><div class='stat-value'>1-15</div><div class='stat-label'>Years range</div></div><div class='stat-item'><div class='stat-value'>Flexible</div><div class='stat-label'>Prepay anytime</div></div></div><div class='info-box note'><span class='bold'>📋 Top-up Term Guidelines:</span><ul class='info-list'><li>Term cannot exceed remaining tenure of original home loan</li><li>Shorter term means higher EMI but lower total interest</li><li>Consider your monthly budget while choosing</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Top-up loan interest rates are usually lower than personal loans, making it a cost-effective borrowing option.</div>",
+					"options": [],
+					"showWhen": {
+						"or": [
+							{ "==": [{ "var": "loanType" }, "Top-up Only"] },
+							{
+								"and": [
+									{ "==": [{ "var": "loanType" }, "Balance Transfer With Top-up"] },
+									{ "==": [{ "var": "showResultOfBtWithTopUp" }, "Yes"] }
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_topUpAmount",
+					"bindsTo_template": "topUpAmount",
+					"contextKey": "topUpAmount",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter required top-up amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"limit": "sanctionLimit",
+					"limitCheckerText": "Based on LTV and property value, you can enter up to ₹",
+					"question": "Please specify the required Top-up amount ?",
+					"description": "<div class='info-title'><span class='info-icon gold'>💰</span> Top-up Amount</div><div class='info-box highlight'>Enter the additional amount you wish to borrow on top of your existing home loan.</div><div class='info-box note'><span class='bold'>📊 Top-up Calculation Factors:</span><ul class='info-list'><li><span class='highlight-text'>LTV (Loan-to-Value)</span> - Maximum lending percentage of property value</li><li><span class='highlight-text'>Property Value</span> - Current market value of your property</li><li><span class='highlight-text'>Existing Loan</span> - Outstanding balance of current home loan</li></ul></div><div class='info-box tip'><span class='bold'>💡 Formula:</span> Maximum Top-up = (Property Value x LTV%) - Outstanding Loan Amount</div><div class='info-box warning'><span class='bold'>⚠️ Note:</span> Actual top-up amount may vary based on each lender's terms, your income eligibility, and credit score.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "topUpAmount"
+										},
+										500000
+									]
+								},
+								"then": "Lenders do not accept loan applications below 5 lakh. You should try for personal loan / Business loan for such low amount."
+							},
+							{
+								"case": {
+									">": [
+										{
+											"var": "topUpAmount"
+										},
+										999999999999
+									]
+								},
+								"then": "Enter a valid amount"
+							}
+						]
+					},
+					"showWhen": {
+						"and": [
+							{
+								"or": [
+									{ "==": [{ "var": "loanType" }, "Top-up Only"] },
+									{
+										"and": [
+											{ "==": [{ "var": "loanType" }, "Balance Transfer With Top-up"] },
+											{ "==": [{ "var": "showResultOfBtWithTopUp" }, "Yes"] }
+										]
+									}
+								]
+							},
+							{
+								"or": [
+									{
+										"!=": [
+											{
+												"var": "topUpTenure"
+											},
+											""
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "newTenure"
+											},
+											""
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_topUpPurpose",
+					"bindsTo_template": "topUpPurpose",
+					"contextKey": "topUpPurpose",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select purpose of top-up",
+						"icon": "target"
+					},
+					"required": true,
+					"question": "What is the purpose of the top-up loan?",
+					"description": "<div class='info-title'><span class='info-icon green'>🎯</span> Top-up Loan Purpose</div><div class='info-box highlight'>Lenders need to know the end use of top-up funds. Some purposes may attract different interest rates.</div><div class='info-box note'><span class='bold'>Common uses:</span><ul class='info-list'><li><strong>Home Renovation/Extension</strong> — Same rate as home loan, tax benefits under Sec 24(b)</li><li><strong>Furnishing</strong> — Usually at home loan rate</li><li><strong>Business/Personal</strong> — May attract slightly higher rate</li><li><strong>Debt Consolidation</strong> — Smart way to replace high-interest loans</li></ul></div>",
+					"options": [
+						{
+							"label": "Home Renovation / Repair",
+							"value": "RENOVATION"
+						},
+						{
+							"label": "Home Extension / Additional Construction",
+							"value": "EXTENSION"
+						},
+						{
+							"label": "Home Furnishing / Interior",
+							"value": "FURNISHING"
+						},
+						{
+							"label": "Medical Expenses",
+							"value": "MEDICAL"
+						},
+						{
+							"label": "Education",
+							"value": "EDUCATION"
+						},
+						{
+							"label": "Business / Working Capital",
+							"value": "BUSINESS"
+						},
+						{
+							"label": "Debt Consolidation",
+							"value": "DEBT_CONSOLIDATION"
+						},
+						{
+							"label": "Wedding / Family Event",
+							"value": "WEDDING"
+						},
+						{
+							"label": "Personal / Other",
+							"value": "PERSONAL"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"or": [
+									{ "==": [{ "var": "loanType" }, "Top-up Only"] },
+									{
+										"and": [
+											{ "==": [{ "var": "loanType" }, "Balance Transfer With Top-up"] },
+											{ "==": [{ "var": "showResultOfBtWithTopUp" }, "Yes"] }
+										]
+									}
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "topUpAmount"
+									},
+									""
+								]
+							}
+						]
+					}
+				}
+			],
+			"showWhen": {
+				"!=": [
+					{
+						"var": "loanType"
+					},
+					"New Loan"
+				]
+			}
+		},
+		{
+			"id": "sanctionProfile_homeLoan",
+			"title": "Your sanction",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": [
+				{
+					"id": "q_sanctionTenure",
+					"bindsTo_template": "sanctionTenure",
+					"contextKey": "mortgageYear",
+					"type": "select",
+					"selectClass": "mt-[1rem] mt-[2rem]",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select your term",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "How long would you like your home loan term to be?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📅</span> Home Loan Term</div><div class='info-box highlight'>Choose the total duration for repaying your home loan. Select a term that balances comfortable EMIs with total interest cost.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>📉 Longer Term</span><span class='diagram-value'>Lower EMI, Higher total interest</span></div><div class='diagram-row'><span class='diagram-label'>📈 Shorter Term</span><span class='diagram-value'>Higher EMI, Lower total interest</span></div></div><div class='stats-row'><div class='stat-item'><div class='stat-value'>5-35</div><div class='stat-label'>Years range</div></div><div class='stat-item'><div class='stat-value'>No Penalty</div><div class='stat-label'>On prepayment*</div></div></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> You can always prepay your loan or increase EMI later to reduce tenure. Choose what keeps your monthly budget comfortable today.</div>",
+					"options": [
+						{
+							"label": "5",
+							"value": "5"
+						},
+						{
+							"label": "6",
+							"value": "6"
+						},
+						{
+							"label": "7",
+							"value": "7"
+						},
+						{
+							"label": "8",
+							"value": "8"
+						},
+						{
+							"label": "9",
+							"value": "9"
+						},
+						{
+							"label": "10",
+							"value": "10"
+						},
+						{
+							"label": "11",
+							"value": "11"
+						},
+						{
+							"label": "12",
+							"value": "12"
+						},
+						{
+							"label": "13",
+							"value": "13"
+						},
+						{
+							"label": "14",
+							"value": "14"
+						},
+						{
+							"label": "15",
+							"value": "15"
+						},
+						{
+							"label": "16",
+							"value": "16"
+						},
+						{
+							"label": "17",
+							"value": "17"
+						},
+						{
+							"label": "18",
+							"value": "18"
+						},
+						{
+							"label": "19",
+							"value": "19"
+						},
+						{
+							"label": "20",
+							"value": "20"
+						},
+						{
+							"label": "21",
+							"value": "21"
+						},
+						{
+							"label": "22",
+							"value": "22"
+						},
+						{
+							"label": "23",
+							"value": "23"
+						},
+						{
+							"label": "24",
+							"value": "24"
+						},
+						{
+							"label": "25",
+							"value": "25"
+						}
+					]
+				},
+				{
+					"id": "q_sanctionType",
+					"bindsTo_template": "sanctionType",
+					"contextKey": "sanctionType",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "How would you like us to suggest you maximum sanctioned amount?",
+					"options": [
+						{
+							"label": "Based On Eligibility",
+							"value": "Based On Eligibility",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Gauge"
+						},
+						{
+							"label": "Based on Downpayment",
+							"value": "Based on Downpayment",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "IndianRupee"
+						}
+					]
+				},
+				{
+					"id": "q_deposit",
+					"bindsTo_template": "deposit",
+					"contextKey": "deposit",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter current property amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "How much downpayment you can make?",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									">": [
+										{
+											"var": "deposit"
+										},
+										999999999999
+									]
+								},
+								"then": "Enter a valid amount"
+							}
+						]
+					},
+					"showWhen": {
+						"==": [
+							{
+								"var": "sanctionType"
+							},
+							"Based on Downpayment"
+						]
+					}
+				},
+				{
+					"id": "q_wantPersonalLoanSuggestion",
+					"bindsTo_template": "withPersonalLoan",
+					"contextKey": "withPersonalLoan",
+					"type": "radio",
+					"radioClass": "py-[2rem] bg-primary px-4 rounded-md",
+					"labelClass": "text-white",
+					"selectedClass": "bg-white text-primary ring-2 ring-grayTwo shadow-sm",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3 text-white",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "<div class='bg-primary text-white'>If we find the case where your eligibility is high but the downpayment falls short, we can recommend a personal loan amount towards the required downpayment. This approach ensures that the property becomes attainable while maximizing the utilization of the sanctioned loan amount from each lender.</div><br/>Would you like to have suggestions with personal loan which can bridge the gap of required downpayment?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle",
+								"color": "white"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "sanctionType"
+									},
+									"Based on Downpayment"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "deposit"
+									},
+									""
+								]
+							}
+						]
+					}
+				}
+			],
+			"showWhen": {
+				"and": [
+					{
+						"==": [
+							{
+								"var": "loanName"
+							},
+							"Home Loan"
+						]
+					},
+					{
+						"==": [
+							{
+								"var": "loanType"
+							},
+							"New Loan"
+						]
+					},
+					{
+						"==": [
+							{
+								"var": "propertyIdentified"
+							},
+							"No"
+						]
+					}
+				]
+			}
+		}
+	]
+}

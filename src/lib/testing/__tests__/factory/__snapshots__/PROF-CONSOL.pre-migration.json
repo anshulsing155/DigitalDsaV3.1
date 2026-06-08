@@ -1,0 +1,66 @@
+{
+  "_comment": "FM-1 pre-migration snapshot lock for PROF-CONSOL (Lawyer).",
+  "_source": "src/lib/testing/journeys/professionalLoan.ts :: PROF_CONSOL_JOURNEY",
+  "_capturedAt": "2026-04-22T00:00:00.000Z",
+  "_shift_notes_S77e_step4": "FIXTURE-WAS-WRONG — hand-written had hasBarCouncilChamber:true at applicant root, which DOES get produced by the Self-employed(Professional) branch when rawApplicant.isLawyerBarCouncil==='Yes'. Corrected by setting isLawyerBarCouncil:'Yes' on the journey applicant. Same urgency/existingBankRelationship corrections as siblings.",
+  "payload": {
+    "loanTransaction": {
+      "loanName": "Professional Loan",
+      "loanType": "Debt Consolidation with Extra Funds",
+      "numberOfApplicants": 1,
+      "loanAmount": 2000000,
+      "tenureYears": 5,
+      "assessmentStatus": "fresh"
+    },
+    "allApplicantDetails": [
+      {
+        "applicantType": "Individual",
+        "title": "Mr.",
+        "fullName": "Advocate Rajendra Singh",
+        "age": 42,
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "employmentType": "Self-employed(Professional)",
+        "creditScore": 730,
+        "hasExistingObligations": true,
+        "roleInApplication": "Primary",
+        "residenceType": "Owned",
+        "professionType": "Lawyer",
+        "hasBarCouncilChamber": true,
+        "businessProfile": {
+          "gstRegistered": true,
+          "hasCurrentAccount": true,
+          "usesSavingsAccount": false,
+          "filesITRRegularly": true,
+          "profitableLast3Years": true,
+          "profitableSinceStart": true,
+          "majorCashSales": false,
+          "fewKeyClients": false,
+          "hasCCOD": false,
+          "hasOtherIncome": false,
+          "hasProfessionalLicense": true,
+          "hasCommercialPremises": true,
+          "ownsPremises": false,
+          "threeYearsInBusiness": true,
+          "enrolledWithProfessionalBody": true,
+          "priorExperience": true,
+          "seasonalBusiness": false
+        },
+        "averageBankBalance": 350000,
+        "obligations": [
+          {
+            "id": "obl-prof-consol-1",
+            "obligationType": "term_loan",
+            "loanType": "Personal Loan",
+            "bankName": "Axis Bank",
+            "selectedToClose": "Keep running",
+            "emi": "15000",
+            "tenure": "48",
+            "interestRate": "12.0",
+            "remainingTenure": "24"
+          }
+        ]
+      }
+    ]
+  }
+}

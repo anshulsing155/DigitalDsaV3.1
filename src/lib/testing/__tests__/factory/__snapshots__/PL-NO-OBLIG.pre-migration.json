@@ -1,0 +1,52 @@
+{
+  "_comment": "FM-1 pre-migration snapshot lock for PL-NO-OBLIG.",
+  "_source": "src/lib/testing/journeys/personalLoan.ts :: PL_NO_OBLIG_JOURNEY",
+  "_capturedAt": "2026-04-22T00:00:00.000Z",
+  "_shift_notes_S77e_step4": "Classification (i) FIXTURE-WAS-WRONG — dropped urgencyLevel:'STANDARD' and existingBankRelationship:'YES'. ObligationsRunning='No' + no guarantor-only obligations → no obligations array on the applicant payload. Self-employed(Professional) Doctor populates professionType + businessProfile; grossIncome/netIncome not set by that branch.",
+  "payload": {
+    "loanTransaction": {
+      "loanName": "Personal Loan",
+      "loanType": "New Loan",
+      "numberOfApplicants": 1,
+      "loanAmount": 1000000,
+      "tenureYears": 5,
+      "assessmentStatus": "fresh"
+    },
+    "allApplicantDetails": [
+      {
+        "applicantType": "Individual",
+        "title": "Dr.",
+        "fullName": "Anand Kumar",
+        "age": 38,
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "employmentType": "Self-employed(Professional)",
+        "creditScore": 780,
+        "hasExistingObligations": false,
+        "roleInApplication": "Primary",
+        "residenceType": "Owned",
+        "professionType": "MBBS Doctor",
+        "businessProfile": {
+          "gstRegistered": true,
+          "hasCurrentAccount": true,
+          "usesSavingsAccount": false,
+          "filesITRRegularly": true,
+          "profitableLast3Years": true,
+          "profitableSinceStart": true,
+          "majorCashSales": false,
+          "fewKeyClients": false,
+          "hasCCOD": false,
+          "hasOtherIncome": false,
+          "hasProfessionalLicense": true,
+          "hasCommercialPremises": true,
+          "ownsPremises": true,
+          "threeYearsInBusiness": true,
+          "enrolledWithProfessionalBody": false,
+          "priorExperience": true,
+          "seasonalBusiness": false
+        },
+        "averageBankBalance": 600000
+      }
+    ]
+  }
+}

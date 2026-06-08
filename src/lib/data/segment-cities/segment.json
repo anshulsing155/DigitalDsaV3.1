@@ -1,0 +1,235 @@
+[
+	{
+		"city": "Delhi",
+		"segments": [
+			"Central Delhi",
+			"South Delhi",
+			"West Delhi",
+			"North Delhi",
+			"East Delhi",
+			"Noida & Greater Noida West",
+			"Gurugram Urban Belt"
+		]
+	},
+	{
+		"city": "Mumbai",
+		"segments": ["South Mumbai", "Western Suburbs", "Eastern Suburbs", "Thane Belt", "Navi Mumbai"]
+	},
+	{
+		"city": "Bengaluru",
+		"segments": [
+			"Central Bengaluru",
+			"East Tech Belt",
+			"South IT & Residential Belt",
+			"North Growth Belt",
+			"West Residential Core"
+		]
+	},
+	{
+		"city": "Hyderabad",
+		"segments": [
+			"West IT Corridor",
+			"Premium Central Zone",
+			"North Residential Urban",
+			"East Expansion Belt",
+			"South Heritage Core"
+		]
+	},
+	{
+		"city": "Chennai",
+		"segments": [
+			"Central Core",
+			"South Urban Belt",
+			"OMR IT Corridor",
+			"West Residential Belt",
+			"North Industrial Belt"
+		]
+	},
+	{
+		"city": "Pune",
+		"segments": [
+			"Central City",
+			"East IT Belt",
+			"West IT/Tech Corridor",
+			"North-West Urban Live Belt",
+			"South Residential Belt"
+		]
+	},
+	{
+		"city": "Kolkata",
+		"segments": [
+			"Central Kolkata",
+			"South Kolkata Urban Belt",
+			"Salt Lake & New Town",
+			"Howrah Belt",
+			"Rajarhat Expansion Belt"
+		]
+	},
+	{
+		"city": "Ahmedabad",
+		"segments": [
+			"SG Highway Growth Corridor",
+			"West Urban Premium",
+			"Central Old City",
+			"South Ahmedabad",
+			"Eastern Industrial Belt"
+		]
+	},
+	{
+		"city": "Lucknow",
+		"segments": [
+			"Gomti Nagar Belt",
+			"Shaheed Path Corridor",
+			"Old Lucknow Core",
+			"North Residential Belt",
+			"South Housing Belt"
+		]
+	},
+	{
+		"city": "Jaipur",
+		"segments": [
+			"Mansarovar Belt",
+			"Vaishali Nagar Belt",
+			"Jagatpura & Tonk Road Belt",
+			"C-Scheme & Central City",
+			"Ajmer Road Growth Corridor"
+		]
+	},
+	{
+		"city": "Chandigarh Tricity",
+		"segments": [
+			"Chandigarh City Core",
+			"Mohali Urban",
+			"Zirakpur Belt",
+			"Panchkula Urban",
+			"Airport Road Growth Zone"
+		]
+	},
+	{
+		"city": "Indore",
+		"segments": [
+			"Vijay Nagar & AB Road Belt",
+			"Nipania & MR-10 Growth Zone",
+			"Rau & Super Corridor Belt",
+			"City Center & Old Residential Core"
+		]
+	},
+	{
+		"city": "Surat",
+		"segments": [
+			"Vesu & Althan Belt",
+			"Adajan & Pal Belt",
+			"Citylight & Athwalines Core",
+			"Piplod & Dumas Road Belt",
+			"Varachha & Katargam Residential Belt"
+		]
+	},
+	{
+		"city": "Vadodara",
+		"segments": [
+			"Alkapuri & Race Course Belt",
+			"Gotri & Vasna Road Corridor",
+			"Manjalpur & Makarpura Belt",
+			"Padra Road & Atladara Growth Zone"
+		]
+	},
+	{
+		"city": "Nagpur",
+		"segments": [
+			"Manish Nagar & Wardha Road Belt",
+			"Civil Lines Premium Zone",
+			"Dharampeth & Ramdaspeth Belt",
+			"Hingna Road & MIHAN Growth Corridor"
+		]
+	},
+	{
+		"city": "Coimbatore",
+		"segments": [
+			"RS Puram & Saibaba Colony Core",
+			"Avinashi Road Corridor",
+			"Saravanampatti IT Belt",
+			"Peelamedu & Kalapatti Residential Zone"
+		]
+	},
+	{
+		"city": "Kochi",
+		"segments": [
+			"Edappally Belt",
+			"Kakkanad IT & Infopark Zone",
+			"Vyttila & Kadavanthra Urban Belt",
+			"Thrippunithura Expansion Belt"
+		]
+	},
+	{
+		"city": "Visakhapatnam",
+		"segments": [
+			"MVP Colony & Maddilapalem Belt",
+			"Gajuwaka & NAD Junction Zone",
+			"Rushikonda & Beach Road Growth Belt",
+			"Dwaraka Nagar Central Belt"
+		]
+	},
+	{
+		"city": "Bhubaneswar",
+		"segments": [
+			"Khandagiri & Jagamara Belt",
+			"Patia & KIIT Tech/Residential Belt",
+			"Rasulgarh & Mancheswar Mix Zone",
+			"Old Town & Central Core"
+		]
+	},
+	{
+		"city": "Patna",
+		"segments": [
+			"Kankarbagh Belt",
+			"Boring Road & SK Puri Core",
+			"Bailey Road & Danapur Expansion Belt",
+			"Patliputra & Rajeev Nagar Zone"
+		]
+	},
+	{
+		"city": "Raipur",
+		"segments": [
+			"Telibandha & Shankar Nagar Belt",
+			"VIP Road & Naya Raipur Growth Corridor",
+			"Devendra Nagar & Pandri Urban Belt",
+			"Old City Core"
+		]
+	},
+	{
+		"city": "Ranchi",
+		"segments": [
+			"Morabadi & Kanke Road Belt",
+			"Harmu & Doranda Belt",
+			"Lalpur & Circular Road Core",
+			"Ashok Nagar & Bariatu Residential Belt"
+		]
+	},
+	{
+		"city": "Kanpur",
+		"segments": [
+			"Swaroop Nagar / Arya Nagar Belt",
+			"Kakadeo & Kalyanpur Educational Belt",
+			"Govind Nagar & Barra Residential Zone",
+			"Civil Lines & Mall Road Core"
+		]
+	},
+	{
+		"city": "Bhopal",
+		"segments": [
+			"Arera Colony & Gulmohar Belt",
+			"Kolar Road Growth Belt",
+			"Hoshangabad Road Corridor",
+			"Old Bhopal & TT Nagar Core"
+		]
+	},
+	{
+		"city": "Nashik",
+		"segments": [
+			"Gangapur Road Premium Belt",
+			"College Road & Canada Corner Zone",
+			"Indira Nagar & Pathardi Growth Belt",
+			"Panchavati & Main City Core"
+		]
+	}
+]

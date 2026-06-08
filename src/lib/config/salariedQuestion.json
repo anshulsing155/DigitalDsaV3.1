@@ -1,0 +1,715 @@
+{
+	"salariedQuestions": [
+		{
+			"id": "q_salariedActivityDetails",
+			"key": "salariedActivityDetails",
+			"required": true,
+			"type": "multiple-select",
+			"question": "Provide details of the applicant’s employment or occupation.",
+			"descriptionHeader": "Accurate employment details are required for lender credit assessment.",
+			"options": [
+				{
+					"label": "Works for listed company / MNC / reputed firm",
+					"value": "works_for_reputed_org",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Private)"]
+					}
+				},
+				{
+					"label": "Company has more than 100 employees",
+					"value": "company_100plus_employees",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Private)"]
+							},
+							{
+								"==": ["salariedActivityDetails.works_for_reputed_org", false]
+							}
+						]
+					}
+				},
+				{
+					"label": "Employer is Proprietorship or Partnership firm",
+					"value": "employer_is_proprietorship_or_partnership",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Private)"]
+							},
+							{
+								"==": ["salariedActivityDetails.works_for_reputed_org", false]
+							},
+							{
+								"==": ["salariedActivityDetails.company_100plus_employees", false]
+							}
+						]
+					}
+				},
+				{
+					"label": "Employer ready to share financials with bank",
+					"value": "employer_shares_financials",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Private)"]
+							},
+							{
+								"==": ["salariedActivityDetails.employer_is_proprietorship_or_partnership", true]
+							}
+						]
+					}
+				},
+				{
+					"label": "Holds permanent position (not contractual/probation)",
+					"value": "holds_permanent_position",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Private)"]
+					}
+				},
+				{
+					"label": "Employed with same company for more than 2 years",
+					"value": "employed_2plus_years",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Private)"]
+					}
+				},
+				{
+					"label": "Total work experience is more than 3 years",
+					"value": "total_experience_3plus_years",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Private)"]
+					}
+				},
+				{
+					"label": "PF gets deducted from salary",
+					"value": "provides_staff_benefits",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Private)"]
+					}
+				},
+				{
+					"label": "Salary is credited regularly to a bank account",
+					"value": "salary_credited_regularly",
+					"invalidateOn": false,
+					"errorMessage": "Since your salary does not get credited to your bank account, we are unable to offer a Personal Loan. You may proceed with a Loan Against Property (LAP).",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Private)"]
+							},
+							{
+								"==": ["salariedActivityDetails.works_for_reputed_org", false]
+							}
+						]
+					}
+				},
+				{
+					"label": "Receives performance bonus/incentive",
+					"value": "receives_bonus",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Private)"]
+					}
+				},
+				{
+					"label": "Receives Form 16 regularly",
+					"value": "receives_salary_slip_form16",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Private)"]
+					}
+				},
+				{
+					"label": "Has completed graduation or a higher degree",
+					"value": "has_professional_qualification",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Private)"]
+					}
+				},
+				{
+					"label": "Works in central PSU / govt department",
+					"value": "govt_central_employee",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				},
+				{
+					"label": "Works in Defense / Paramilitary Forces",
+					"value": "govt_defense_employee",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				},
+				{
+					"label": "Works in state PSU / govt department",
+					"value": "govt_state_employee",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Government)"]
+							},
+							{
+								"==": ["salariedActivityDetails.govt_central_employee", false]
+							}
+						]
+					}
+				},
+				{
+					"label": "Holds permanent/confirmed govt position",
+					"value": "govt_position_permanent",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				},
+				{
+					"label": "Holds contractual/temporary position",
+					"value": "govt_position_contractual",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Government)"]
+							},
+							{
+								"==": ["salariedActivityDetails.govt_position_permanent", false]
+							}
+						]
+					}
+				},
+				{
+					"label": "Has completed probation (if applicable)",
+					"value": "govt_probation_completed",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Government)"]
+							},
+							{
+								"==": ["salariedActivityDetails.govt_position_permanent", false]
+							}
+						]
+					}
+				},
+				{
+					"label": "Employed with govt for more than 2 years",
+					"value": "govt_more_than_2_years",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				},
+				{
+					"label": "No pending disciplinary actions",
+					"value": "govt_no_disciplinary_action",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				},
+				{
+					"label": "Posted in non-accessible/restricted area",
+					"value": "defense_non_accessible_posting",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Government)"]
+							},
+							{
+								"==": ["salariedActivityDetails.govt_defense_employee", true]
+							}
+						]
+					}
+				},
+				{
+					"label": "Physical verification possible?",
+					"value": "physical_verification_possible",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Government)"]
+							},
+							{
+								"==": ["salariedActivityDetails.defense_non_accessible_posting", false]
+							}
+						]
+					}
+				},
+				{
+					"label": "Alternate address available for verification",
+					"value": "alternate_verification_address_available",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Government)"]
+							},
+							{
+								"==": ["salariedActivityDetails.defense_non_accessible_posting", true]
+							}
+						]
+					}
+				},
+				{
+					"label": "Receives performance bonus/incentive",
+					"value": "govt_incentive_bonus",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				},
+				{
+					"label": "Eligible for pension under Old Pension Scheme (OPS) — not NPS",
+					"value": "govt_pension_eligible",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["employmentType", "Salaried(Government)"]
+							},
+							{
+								">=": ["age", 45]
+							}
+						]
+					}
+				},
+				{
+					"label": "Receives salary slip / DDO certificate regularly",
+					"value": "govt_salary_slip_received",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				},
+				{
+					"label": "Files Income Tax (ITR) regularly",
+					"value": "govt_itr_filed",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				},
+				{
+					"label": "Owns immovable property (house, land, etc.)",
+					"value": "govt_owns_property",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				},
+				{
+					"label": "Has additional income sources (rent, agriculture, etc.)",
+					"value": "govt_other_income_source",
+					"showWhen": {
+						"==": ["employmentType", "Salaried(Government)"]
+					}
+				}
+			],
+			"showWhen": {
+				"and": [
+					{
+						"in": ["employmentType", ["Salaried(Private)", "Salaried(Government)"]]
+					},
+					{
+						"!=": ["fullName", ""]
+					},
+					{
+						"!=": ["gender", ""]
+					},
+					{
+						"!=": ["age", ""]
+					}
+				]
+			}
+		},
+		{
+			"id": "q_grossIncome",
+			"key": "grossIncome",
+			"required": true,
+			"type": "number",
+			"question": "What is the monthly gross income?",
+			"description": "<div class='info-title'><span class='info-icon gold'>💰</span> Understanding Gross Income</div><div class='info-box highlight'><strong>Gross Income</strong> is your total monthly salary <em>before</em> any deductions are made.</div><div class='visual-diagram'><div class='diagram-row'><span>Basic Salary</span><span class='diagram-value'>₹ XX,XXX</span></div><div class='diagram-row'><span>HRA</span><span class='diagram-value'>+ ₹ X,XXX</span></div><div class='diagram-row'><span>Special Allowance</span><span class='diagram-value'>+ ₹ X,XXX</span></div><div class='diagram-row'><span>Other Allowances</span><span class='diagram-value'>+ ₹ X,XXX</span></div><div class='info-divider'></div><div class='diagram-row'><strong>Gross Salary</strong><span class='diagram-value highlight-text'>= ₹ XX,XXX</span></div></div><div class='info-box tip'><span class='bold'>Where to find it?</span><br/>Check your salary slip - it's usually labeled as <em>\"Gross Salary\"</em> or <em>\"Total Earnings\"</em> at the top.</div>",
+			"icon": "IndianRupee",
+			"showNumberInWords": true,
+			"validation": {
+				"condition_1": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "grossIncome"
+								},
+								15000
+							]
+						},
+						"grossIncomeError": "Gross salary should be greater than or equal to 15,000"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "grossIncome"
+								},
+								9999999999
+							]
+						},
+						"grossIncomeError": "Enter a valid amount"
+					}
+				],
+				"condition_2": [
+					{
+						"case": {
+							">": [
+								{
+									"var": "netIncome"
+								},
+								{
+									"var": "grossIncome"
+								}
+							]
+						},
+						"netIncomeError": "Net Income cannot be greater than Gross Income"
+					},
+					{
+						"case": {
+							"<": [
+								{
+									"var": "netIncome"
+								},
+								{
+									"var": "grossIncome"
+								}
+							]
+						},
+						"netIncomeError": ""
+					}
+				]
+			},
+			"showWhen": {
+				"and": [
+					{
+						"==": ["salariedActivityDetailsValidate", true]
+					}
+				]
+			}
+		},
+		{
+			"id": "q_netIncome",
+			"key": "netIncome",
+			"required": true,
+			"type": "number",
+			"question": "What is the monthly net income?",
+			"description": "<div class='info-title'><span class='info-icon blue'>🏦</span> Understanding Net Income</div><div class='info-box highlight'><strong>Net Income</strong> is your <em>take-home salary</em> — the amount credited to your bank account after all deductions.</div><div class='visual-diagram'><div class='diagram-row'><span>Gross Salary</span><span class='diagram-value'>₹ XX,XXX</span></div><div class='diagram-row' style='color: #dc2626;'><span>(-) PF Deduction</span><span class='diagram-value'>- ₹ X,XXX</span></div><div class='diagram-row' style='color: #dc2626;'><span>(-) Professional Tax</span><span class='diagram-value'>- ₹ XXX</span></div><div class='diagram-row' style='color: #dc2626;'><span>(-) TDS / Income Tax</span><span class='diagram-value'>- ₹ X,XXX</span></div><div class='info-divider'></div><div class='diagram-row'><strong>Net Salary (In-Hand)</strong><span class='diagram-value highlight-text'>= ₹ XX,XXX</span></div></div><div class='info-box tip'><span class='bold'>Where to find it?</span><br/>Check your bank statement for the salary credit amount, or look for <em>\"Net Pay\"</em> or <em>\"Take Home\"</em> on your salary slip.</div>",
+			"icon": "IndianRupee",
+			"showNumberInWords": true,
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "netIncome"
+								},
+								20000
+							]
+						},
+						"netIncomeError": "Net Income should be greater than or equal to 20,000"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "netIncome"
+								},
+								9999999999
+							]
+						},
+						"netIncomeError": "Enter a valid amount"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "netIncome"
+								},
+								{
+									"var": "grossIncome"
+								}
+							]
+						},
+						"netIncomeError": "Net Income cannot be greater than Gross Income"
+					}
+				]
+			},
+			"showWhen": {
+				"and": [
+					{
+						"==": ["salariedActivityDetailsValidate", true]
+					},
+					{
+						">": ["grossIncome", 0]
+					}
+				]
+			}
+		},
+		{
+			"id": "q_monthlyOtherIncome",
+			"key": "monthlyOtherIncome",
+			"required": true,
+			"type": "number",
+			"question": "What's the additional monthly income from bonuses, incentives, government pension and rental earnings?",
+			"icon": "IndianRupee",
+			"showNumberInWords": true,
+			"showWhen": {
+				"and": [
+					{
+						"==": ["salariedActivityDetailsValidate", true]
+					},
+					{
+						">": ["grossIncome", 0]
+					},
+					{
+						">": ["netIncome", 0]
+					}
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "monthlyOtherIncome"
+								},
+								0
+							]
+						},
+						"monthlyOtherIncomeError": "Income cannot be negative"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "monthlyOtherIncome"
+								},
+								999999999
+							]
+						},
+						"monthlyOtherIncomeError": "Enter a valid amount"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_Obligation",
+			"key": "ObligationsRunning",
+			"required": true,
+			"type": "radio",
+			"question": "Does this applicant have any running loans as borrower or co-applicant?",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "Yes",
+					"icon": "ThumbsUp"
+				},
+				{
+					"label": "No",
+					"value": "No",
+					"icon": "ThumbsDown"
+				}
+			],
+			"showWhen": {
+				"or": [
+					{
+						"and": [
+							{
+								">": ["grossIncome", 0]
+							},
+							{
+								">": ["netIncome", 0]
+							},
+							{
+								">=": ["monthlyOtherIncome", 0]
+							},
+							{
+								">=": ["creditScore", 300]
+							},
+							{
+								"==": ["whyPrimaryLowCreditValidate", true]
+							},
+							{
+								"==": ["salariedActivityDetailsValidate", true]
+							},
+							{
+								"!=": ["loanName", "Personal Loan"]
+							}
+						]
+					},
+					{
+						"and": [
+							{
+								">": ["grossIncome", 0]
+							},
+							{
+								">": ["netIncome", 0]
+							},
+							{
+								"==": ["salariedActivityDetailsValidate", true]
+							},
+							{
+								"!=": ["loanName", "Personal Loan"]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "q_creditScore",
+			"key": "creditScore",
+			"required": true,
+			"type": "number",
+			"question": "What's the Credit Score?",
+			"description": "<div class='info-title'><span class='info-icon gold'>⭐</span> Understanding Credit Score (CIBIL)</div><div class='info-box highlight'>Your <strong>Credit Score</strong> is a 3-digit number (300-900) that represents your creditworthiness based on your credit history.</div><div class='stats-row'><div class='stat'><span class='stat-value' style='color: #dc2626;'>300-549</span><span class='stat-label'>Poor</span></div><div class='stat'><span class='stat-value' style='color: #f59e0b;'>550-649</span><span class='stat-label'>Fair</span></div><div class='stat'><span class='stat-value' style='color: #10b981;'>650-749</span><span class='stat-label'>Good</span></div><div class='stat'><span class='stat-value' style='color: #059669;'>750-900</span><span class='stat-label'>Excellent</span></div></div><div class='info-box tip'><span class='bold'>How to check your score?</span><br/>Visit <em>cibil.com</em> or use apps like Paytm, PhonePe, or your bank's app to get a free credit report.</div><div class='info-box note'><span class='bold'>Note:</span> A score of 750+ increases your chances of loan approval and better interest rates.</div>",
+			"icon": "Sparkles",
+			"showNumberInWords": false,
+			"maxLength": 3,
+			"max": 900,
+			"showWhen": {
+				"or": [
+					{
+						"and": [
+							{
+								">": ["grossIncome", 0]
+							},
+							{
+								"==": ["salariedActivityDetailsValidate", true]
+							},
+							{
+								">": ["netIncome", 0]
+							},
+							{
+								">=": ["monthlyOtherIncome", 0]
+							}
+						]
+					},
+					{
+						"and": [
+							{
+								">": ["grossIncome", 0]
+							},
+							{
+								"==": ["salariedActivityDetailsValidate", true]
+							},
+							{
+								">": ["netIncome", 0]
+							}
+						]
+					}
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "creditScore"
+								},
+								300
+							]
+						},
+						"creditScoreError": "Credit Score must be at least 300"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "creditScore"
+								},
+								900
+							]
+						},
+						"creditScoreError": "Credit Score must be at most 900"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_whyPrimaryLowCredit",
+			"key": "whyPrimaryLowCredit",
+			"required": true,
+			"type": "multiple-select",
+			"question": "What factors have contributed to this CIBIL score?",
+			"description": "Please share honestly. Any incorrect or inconsistent information can lead to delays or rejection of the loan application.",
+			"showWhen": {
+				"or": [
+					{
+						"and": [
+							{
+								">": ["grossIncome", 0]
+							},
+							{
+								">": ["netIncome", 0]
+							},
+							{
+								">=": ["monthlyOtherIncome", 0]
+							},
+							{
+								">=": ["creditScore", 300]
+							},
+							{
+								"<=": ["creditScore", 699]
+							},
+							{
+								"==": ["salariedActivityDetailsValidate", true]
+							}
+						]
+					},
+					{
+						"and": [
+							{
+								">": ["grossIncome", 0]
+							},
+							{
+								">": ["netIncome", 0]
+							},
+							{
+								">=": ["creditScore", 300]
+							},
+							{
+								"<=": ["creditScore", 699]
+							},
+							{
+								"==": ["salariedActivityDetailsValidate", true]
+							}
+						]
+					}
+				]
+			},
+			"options": [
+				{
+					"label": "Delayed EMI payments in the past 12 months",
+					"value": "delayedEMI"
+				},
+				{
+					"label": "High utilization of available credit card limit",
+					"value": "highCreditUtilization"
+				},
+				{
+					"label": "Limited or no credit history",
+					"value": "noCreditHistory"
+				},
+				{
+					"label": "Only minimum due payments made on credit cards",
+					"value": "minimumDueOnly"
+				},
+				{
+					"label": "Multiple recent loan or credit card enquiries",
+					"value": "multipleEnquiries"
+				},
+				{
+					"label": "Defaulted in one or more previous loans as co-applicant / guarantor",
+					"value": "coApplicantDefault"
+				},
+				{
+					"label": "Loan default or settlement in the past",
+					"value": "loanDefault"
+				},
+				{
+					"label": "Only unsecured loans such as credit cards or personal loans in profile",
+					"value": "onlyUnsecuredLoans"
+				}
+			]
+		}
+	]
+}

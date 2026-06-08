@@ -1,0 +1,330 @@
+{
+	"pensionerQuestions": [
+		{
+			"id": "q_pensionActivityDetails",
+			"key": "pensionActivityDetails",
+			"required": true,
+			"type": "multiple-select",
+			"question": "Provide details of the applicant’s employment or occupation.",
+			"descriptionHeader": "Accurate employment details are required for lender credit assessment.",
+			"options": [
+				{
+					"label": "Pension is credited regularly to bank account",
+					"value": "pension_credited_regularly"
+				},
+				{
+					"label": "Pension is from Central Government / State Government",
+					"value": "govt_pension"
+				},
+				{
+					"label": "Pension is from PSU / Defence / Paramilitary",
+					"value": "psu_defence_pension",
+					"showWhen": {
+						"==": ["pensionActivityDetails.govt_pension", false]
+					}
+				},
+				{
+					"label": "Pension is lifelong (not fixed tenure)",
+					"value": "lifelong_pension"
+				},
+				{
+					"label": "Pension is family pension",
+					"value": "family_pension"
+				},
+				{
+					"label": "Pension continues beyond age of 75",
+					"value": "pension_continues_75plus",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["pensionActivityDetails.lifelong_pension", true]
+							},
+							{
+								"==": ["pensionActivityDetails.family_pension", false]
+							}
+						]
+					}
+				},
+				{
+					"label": "Receives pension slip / PPO regularly",
+					"value": "pension_slip_available"
+				},
+				{
+					"label": "Pension account is with nationalised bank",
+					"value": "pension_bank_nationalised"
+				},
+				{
+					"label": "No pension loan deductions ongoing",
+					"value": "no_pension_loan_deduction",
+					"showWhen": {
+						"==": ["pensionActivityDetails.pension_credited_regularly", true]
+					}
+				},
+				{
+					"label": "Has additional income sources (rent, interest, etc.)",
+					"value": "pension_other_income"
+				},
+				{
+					"label": "Owns immovable property (house / land)",
+					"value": "pension_owns_property"
+				},
+				{
+					"label": "Spouse pension applicable in future",
+					"value": "spouse_pension_applicable",
+					"showWhen": {
+						"and": [
+							{
+								"==": ["pensionActivityDetails.family_pension", false]
+							},
+							{
+								"==": ["maritalStatus", "married"]
+							}
+						]
+					}
+				},
+				{
+					"label": "Pension is taxable and ITR is filed regularly",
+					"value": "pension_itr_filed"
+				},
+				{
+					"label": "Physical verification possible at residence",
+					"value": "pension_physical_verification"
+				}
+			]
+		},
+		{
+			"id": "q_netIncome",
+			"key": "netIncome",
+			"required": true,
+			"type": "number",
+			"question": "What is the monthly total pensionable income include Dearness Relief (DR)?",
+			"description": "<div class='info-title'><span class='info-icon blue'>🏦</span> Understanding Pension Income</div><div class='info-box highlight'><strong>Total Pensionable Income</strong> is your complete monthly pension amount including all components.</div><div class='visual-diagram'><div class='diagram-row'><span>Basic Pension</span><span class='diagram-value'>₹ XX,XXX</span></div><div class='diagram-row'><span>Dearness Relief (DR)</span><span class='diagram-value'>+ ₹ X,XXX</span></div><div class='diagram-row'><span>Medical Allowance</span><span class='diagram-value'>+ ₹ XXX</span></div><div class='info-divider'></div><div class='diagram-row'><strong>Total Pension</strong><span class='diagram-value highlight-text'>= ₹ XX,XXX</span></div></div><div class='info-box tip'><span class='bold'>Where to find it?</span><br/>Check your Pension Payment Order (PPO) or monthly pension slip from the bank/treasury.</div>",
+			"icon": "IndianRupee",
+			"showNumberInWords": true,
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "netIncome"
+								},
+								10000
+							]
+						},
+						"netIncomeError": "Net Income should be greater than or equal to 10,000"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "netIncome"
+								},
+								9999999999
+							]
+						},
+						"netIncomeError": "Enter a valid amount"
+					}
+				]
+			},
+			"showWhen": {
+				"==": ["pensionActivityDetailsValidate", true]
+			}
+		},
+		{
+			"id": "q_monthlyOtherIncome",
+			"key": "monthlyOtherIncome",
+			"required": true,
+			"type": "number",
+			"question": "What's the additional monthly income from bonuses,  and rental earnings?",
+			"icon": "IndianRupee",
+			"showNumberInWords": true,
+			"showWhen": {
+				"and": [
+					{
+						"==": ["pensionActivityDetailsValidate", true]
+					},
+					{
+						">": ["netIncome", 0]
+					}
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "monthlyOtherIncome"
+								},
+								0
+							]
+						},
+						"monthlyOtherIncomeError": "Income cannot be negative"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "monthlyOtherIncome"
+								},
+								999999999
+							]
+						},
+						"monthlyOtherIncomeError": "Enter a valid amount"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_creditScore",
+			"key": "creditScore",
+			"required": true,
+			"type": "number",
+			"question": "What's the Credit Score?",
+			"description": "<div class='info-title'><span class='info-icon gold'>⭐</span> Understanding Credit Score (CIBIL)</div><div class='info-box highlight'>Your <strong>Credit Score</strong> is a 3-digit number (300-900) that represents your creditworthiness based on your credit history.</div><div class='stats-row'><div class='stat'><span class='stat-value' style='color: #dc2626;'>300-549</span><span class='stat-label'>Poor</span></div><div class='stat'><span class='stat-value' style='color: #f59e0b;'>550-649</span><span class='stat-label'>Fair</span></div><div class='stat'><span class='stat-value' style='color: #10b981;'>650-749</span><span class='stat-label'>Good</span></div><div class='stat'><span class='stat-value' style='color: #059669;'>750-900</span><span class='stat-label'>Excellent</span></div></div><div class='info-box tip'><span class='bold'>How to check your score?</span><br/>Visit <em>cibil.com</em> or use apps like Paytm, PhonePe, or your bank's app to get a free credit report.</div><div class='info-box note'><span class='bold'>Note:</span> A score of 750+ increases your chances of loan approval and better interest rates.</div>",
+			"icon": "Sparkles",
+			"showNumberInWords": false,
+			"maxLength": 3,
+			"max": 900,
+			"showWhen": {
+				"and": [
+					{
+						"==": ["pensionActivityDetailsValidate", true]
+					},
+					{
+						">": ["netIncome", 0]
+					},
+					{
+						">=": ["monthlyOtherIncome", 0]
+					}
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "creditScore"
+								},
+								300
+							]
+						},
+						"creditScoreError": "Credit Score must be at least 300"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "creditScore"
+								},
+								900
+							]
+						},
+						"creditScoreError": "Credit Score must be at most 900"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_whyPrimaryLowCredit",
+			"key": "whyPrimaryLowCredit",
+			"required": true,
+			"type": "multiple-select",
+			"question": "What factors have contributed to this CIBIL score?",
+			"description": "Please share honestly. Any incorrect or inconsistent information can lead to delays or rejection of the loan application.",
+			"showWhen": {
+				"and": [
+					{
+						">": ["netIncome", 0]
+					},
+					{
+						">=": ["monthlyOtherIncome", 0]
+					},
+					{
+						">=": ["creditScore", 300]
+					},
+					{
+						"<=": ["creditScore", 699]
+					},
+					{
+						"==": ["pensionActivityDetailsValidate", true]
+					}
+				]
+			},
+			"options": [
+				{
+					"label": "Delayed EMI payments in the past 12 months",
+					"value": "delayedEMI"
+				},
+				{
+					"label": "High utilization of available credit card limit",
+					"value": "highCreditUtilization"
+				},
+				{
+					"label": "Limited or no credit history",
+					"value": "noCreditHistory"
+				},
+				{
+					"label": "Only minimum due payments made on credit cards",
+					"value": "minimumDueOnly"
+				},
+				{
+					"label": "Multiple recent loan or credit card enquiries",
+					"value": "multipleEnquiries"
+				},
+				{
+					"label": "Defaulted in one or more previous loans as co-applicant / guarantor",
+					"value": "coApplicantDefault"
+				},
+				{
+					"label": "Loan default or settlement in the past",
+					"value": "loanDefault"
+				},
+				{
+					"label": "Only unsecured loans such as credit cards or personal loans in profile",
+					"value": "onlyUnsecuredLoans"
+				}
+			]
+		},
+		{
+			"id": "q_Obligation",
+			"key": "ObligationsRunning",
+			"required": true,
+			"type": "radio",
+			"question": "Does this applicant have any running loans as borrower or co-applicant?",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "Yes",
+					"icon": "ThumbsUp"
+				},
+				{
+					"label": "No",
+					"value": "No",
+					"icon": "ThumbsDown"
+				}
+			],
+			"showWhen": {
+				"and": [
+					{
+						">": ["netIncome", 0]
+					},
+					{
+						">=": ["monthlyOtherIncome", 0]
+					},
+					{
+						">=": ["creditScore", 300]
+					},
+					{
+						"==": ["whyPrimaryLowCreditValidate", true]
+					},
+					{
+						"==": ["pensionActivityDetailsValidate", true]
+					}
+				]
+			}
+		}
+	]
+}

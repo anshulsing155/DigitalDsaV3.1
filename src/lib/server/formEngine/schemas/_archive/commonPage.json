@@ -1,0 +1,801 @@
+{
+	"formId": "loanForm_v1",
+	"title": "Loan Application",
+	"pages": [
+		{
+			"id": "firstPage",
+			"title": "Let's Rock!",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": [
+				{
+					"id": "q1_loanName",
+					"bindsTo_template": "loanName",
+					"contextKey": "loanName",
+					"type": "radio",
+					"uiGroup": "loan_details",
+					"radioClass": "mt-[2rem] md:mt-[3rem]",
+					"required": true,
+					"question": "Which type of loan is needed?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🏦</span> Loan Type Selection</div><div class='info-box highlight'>Choosing the right loan type helps us guide you to the <span class='bold'>best options</span> for your needs.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>🏠 Secured Loans</span><span class='diagram-value'>Home, Plot, LAP</span></div><div class='diagram-row'><span class='diagram-label'>💼 Unsecured Loans</span><span class='diagram-value'>Business, Personal, Professional</span></div></div><div class='info-box tip'><span class='bold'>Tip:</span> Secured loans typically offer lower interest rates as they are backed by property.</div>",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"options": [
+						{
+							"label": "Home Loan",
+							"value": "Home Loan",
+							"flagKey": {
+								"isSecuredLoan": true,
+								"isHomeLoan": true
+							},
+							"icon": "Home"
+						},
+						{
+							"label": "Plot Loan",
+							"value": "Plot Loan",
+							"flagKey": {
+								"isSecuredLoan": true,
+								"isPlotLoan": true
+							},
+							"icon": "TreePine"
+						},
+						{
+							"label": "Loan Against Property (LAP)",
+							"value": "Loan Against Property",
+							"flagKey": {
+								"isSecuredLoan": true,
+								"isLAP": true
+							},
+							"icon": "Landmark"
+						},
+						{
+							"label": "Business Loan",
+							"value": "Business Loan",
+							"flagKey": {
+								"isUnsecuredLoan": true,
+								"isBusinessLoan": true
+							},
+							"icon": "Store"
+						},
+						{
+							"label": "Professional Loan",
+							"value": "Professional Loan",
+							"flagKey": {
+								"isUnsecuredLoan": true,
+								"isProfessionalLoan": true
+							},
+							"icon": "Stethoscope"
+						},
+						{
+							"label": "Personal Loan",
+							"value": "Personal Loan",
+							"flagKey": {
+								"isUnsecuredLoan": true,
+								"isPersonalLoan": true
+							},
+							"icon": "Wallet"
+						}
+					]
+				},
+				{
+					"id": "q2_LAPType",
+					"bindsTo_template": "LAPType",
+					"contextKey": "LAPType",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "How should the Loan Against Property be taken?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📋</span> LAP vs Drop-line Overdraft</div><div class='info-box highlight'>Choose the structure that best fits your <span class='bold'>cash flow needs</span>.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>🏦 LAP (Term Loan)</span><span class='diagram-value'>Up to 15 years</span></div><div class='diagram-row'><span class='diagram-label'>💳 Drop-line OD</span><span class='diagram-value'>Up to 10 years</span></div></div><div class='info-box note'><span class='bold'>LAP:</span> Fixed EMIs, better for predictable repayment.</div><div class='info-box tip'><span class='bold'>DOD:</span> Flexible withdrawals, pay interest only on used amount - ideal for business needs.</div>",
+					"options": [
+						{
+							"label": "LAP",
+							"value": "LAP",
+							"icon": "Scale"
+						},
+						{
+							"label": "Drop-line Overdraft (DOD)",
+							"value": "Drop-line OverDraft (DOD)",
+							"icon": "CreditCard"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "loanName"
+							},
+							["Loan Against Property"]
+						]
+					}
+				},
+				{
+					"id": "q2_PlotLoanActivity",
+					"bindsTo_template": "PlotLoanActivity",
+					"contextKey": "PlotLoanActivity",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "What is the purpose of the Plot Loan?",
+					"description": "<div class='info-title'><span class='info-icon green'>🎯</span> Plot Loan Purpose</div><div class='info-box highlight'>Select whether this is a <span class='bold'>fresh requirement</span> or you want to transfer an existing loan.</div><div class='stats-row'><div class='stat-item'><div class='stat-value'>🆕</div><div class='stat-label'>New Loan</div></div><div class='stat-item'><div class='stat-value'>🔄</div><div class='stat-label'>Balance Transfer</div></div></div><div class='info-box tip'><span class='bold'>Balance Transfer:</span> Move your existing loan to get better interest rates or terms!</div>",
+					"options": [
+						{
+							"label": "New Loan",
+							"value": "New Loan",
+							"icon": "CircleDollarSign"
+						},
+						{
+							"label": "Balance Transfer Only",
+							"value": "Balance Transfer Only",
+							"icon": "ArrowLeftRight"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "loanName"
+							},
+							"Plot Loan"
+						]
+					}
+				},
+				{
+					"id": "q2_unSecureLoanType",
+					"bindsTo_template": "unSecureLoanType",
+					"contextKey": "unSecureLoanType",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "How should the loan be structured?",
+					"description": "<div class='info-title'><span class='info-icon blue'>💡</span> Loan Structure</div><div class='info-box highlight'>Choose the <span class='bold'>facility type</span> that fits your cash flow needs.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>📊 Term Loan</span><span class='diagram-value'>Fixed EMIs, lump sum</span></div><div class='diagram-row'><span class='diagram-label'>🔄 OD</span><span class='diagram-value'>Revolving credit line</span></div><div class='diagram-row'><span class='diagram-label'>📉 DOD</span><span class='diagram-value'>OD with reducing limit</span></div><div class='diagram-row'><span class='diagram-label'>🏦 CC</span><span class='diagram-value'>Working capital against stock/receivables</span></div></div><div class='info-box tip'><span class='bold'>Term Loan:</span> Full amount disbursed, fixed monthly EMIs.</div><div class='info-box note'><span class='bold'>OD/DOD/CC:</span> Draw as needed, interest only on utilized amount.</div>",
+					"options": [
+						{
+							"label": "Term Loan",
+							"value": "Term Loan",
+							"icon": "Banknote",
+							"labelDescription": "Full amount disbursed upfront — repaid in fixed monthly EMIs"
+						},
+						{
+							"label": "Overdraft (OD)",
+							"value": "Overdraft (OD)",
+							"icon": "RefreshCw",
+							"labelDescription": "Revolving credit line — draw as needed, interest on utilized amount only"
+						},
+						{
+							"label": "Drop-line Overdraft (DOD)",
+							"value": "Drop-line OverDraft (DOD)",
+							"icon": "CreditCard",
+							"labelDescription": "OD with auto-reducing limit — combines flexibility with forced repayment"
+						},
+						{
+							"label": "Cash Credit (CC)",
+							"value": "Cash Credit (CC)",
+							"icon": "Landmark",
+							"labelDescription": "Working capital credit line — draw against stock, inventory, or receivables"
+						}
+					],
+					"showWhen": {
+						"in": [
+							{
+								"var": "loanName"
+							},
+							["Personal Loan", "Professional Loan", "Business Loan"]
+						]
+					}
+				},
+				{
+					"id": "q4_loanType",
+					"bindsTo_template": "loanType",
+					"contextKey": "loanType",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "loanName"
+										},
+										"Plot Loan"
+									]
+								},
+								"then": "Which Plot Loan option is required?"
+							},
+							{
+								"case": {
+									"in": [
+										{
+											"var": "loanName"
+										},
+										["Loan Against Property", "Home Loan"]
+									]
+								},
+								"then": "What is the loan requirement?"
+							},
+							{
+								"case": {
+									"in": [
+										{
+											"var": "loanName"
+										},
+										["Personal Loan", "Professional Loan", "Business Loan"]
+									]
+								},
+								"then": "What type of loan is needed?"
+							}
+						]
+					},
+					"description": {
+						"switch": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "loanName"
+										},
+										"Plot Loan"
+									]
+								},
+								"then": "<div class='info-title'><span class='info-icon green'>🏗️</span> Plot Loan Options</div><div class='info-box highlight'>Choose the option that <span class='bold'>matches your requirement</span> to ensure smooth processing.</div><ul class='info-list'><li>Correct selection speeds up document collection</li><li>Helps in accurate interest rate assessment</li><li>Avoids delays in loan approval</li></ul><div class='info-box tip'><span class='bold'>Tip:</span> If planning construction soon, consider Plot + Construction loan for better rates!</div>"
+							},
+							{
+								"case": {
+									"in": [
+										{
+											"var": "loanName"
+										},
+										["Home Loan", "Loan Against Property"]
+									]
+								},
+								"then": "<div class='info-title'><span class='info-icon gold'>🏠</span> Loan Requirement Type</div><div class='info-box highlight'>Select the option that best describes your <span class='bold'>loan requirement</span>.</div><div class='stats-row'><div class='stat-item'><div class='stat-value'>🆕</div><div class='stat-label'>New Loan</div></div><div class='stat-item'><div class='stat-value'>🔄</div><div class='stat-label'>Transfer</div></div></div><div class='info-box note'><span class='bold'>Options:</span> Fresh purchase, transfer existing loan, or get additional funds on current loan.</div>"
+							},
+							{
+								"case": {
+									"in": [
+										{
+											"var": "loanName"
+										},
+										["Personal Loan", "Professional Loan", "Business Loan"]
+									]
+								},
+								"then": "<div class='info-title'><span class='info-icon blue'>🎯</span> Loan Type Selection</div><div class='info-box highlight'>Choose the type of <span class='bold'>loan that fits your situation</span>.</div><ul class='info-list'><li><span class='bold'>New Loan:</span> Fresh borrowing for your needs</li><li><span class='bold'>Debt Consolidation:</span> Combine existing loans into one</li><li><span class='bold'>DC with Extra Funds:</span> Consolidate existing + borrow additional</li></ul><div class='info-box tip'><span class='bold'>Tip:</span> Debt consolidation can lower your overall interest rate by combining multiple loans.</div>"
+							}
+						]
+					},
+					"options": [
+						{
+							"label": "New Loan",
+							"value": "New Loan",
+							"showWhen": {
+								"or": [
+									{
+										"==": [
+											{
+												"var": "loanName"
+											},
+											["Home Loan"]
+										]
+									},
+									{
+										"and": [
+											{
+												"==": [
+													{
+														"var": "loanName"
+													},
+													["Loan Against Property"]
+												]
+											},
+											{
+												"!=": [
+													{
+														"var": "LAPType"
+													},
+													""
+												]
+											}
+										]
+									}
+								]
+							},
+							"icon": "CircleDollarSign",
+							"labelDescription": "Fresh borrowing — no existing loan being transferred"
+						},
+						{
+							"label": "New Loan",
+							"value": "New Loan",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Term Loan"
+								]
+							},
+							"icon": "CircleDollarSign",
+							"labelDescription": "Fresh term loan — no existing loan being transferred"
+						},
+						{
+							"label": "New OD Facility",
+							"value": "New Loan",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Overdraft (OD)"
+								]
+							},
+							"icon": "CircleDollarSign",
+							"labelDescription": "Fresh overdraft facility — new credit line"
+						},
+						{
+							"label": "New DOD Facility",
+							"value": "New Loan",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Drop-line OverDraft (DOD)"
+								]
+							},
+							"icon": "CircleDollarSign",
+							"labelDescription": "Fresh drop-line OD — new facility with reducing limit"
+						},
+						{
+							"label": "Balance Transfer With Top-up",
+							"value": "Balance Transfer With Top-up",
+							"showWhen": {
+								"or": [
+									{
+										"==": [
+											{
+												"var": "loanName"
+											},
+											["Home Loan"]
+										]
+									},
+									{
+										"and": [
+											{
+												"==": [
+													{
+														"var": "loanName"
+													},
+													["Loan Against Property"]
+												]
+											},
+											{
+												"!=": [
+													{
+														"var": "LAPType"
+													},
+													""
+												]
+											}
+										]
+									}
+								]
+							},
+							"icon": "Layers"
+						},
+						{
+							"label": "Balance Transfer Only",
+							"value": "Balance Transfer Only",
+							"showWhen": {
+								"or": [
+									{
+										"==": [
+											{
+												"var": "loanName"
+											},
+											["Home Loan"]
+										]
+									},
+									{
+										"and": [
+											{
+												"==": [
+													{
+														"var": "loanName"
+													},
+													["Loan Against Property"]
+												]
+											},
+											{
+												"==": [
+													{
+														"var": "LAPType"
+													},
+													"LAP"
+												]
+											}
+										]
+									}
+								]
+							},
+							"icon": "ArrowLeftRight"
+						},
+						{
+							"label": "Top-up Only",
+							"value": "Top-up Only",
+							"showWhen": {
+								"or": [
+									{
+										"==": [
+											{
+												"var": "loanName"
+											},
+											["Home Loan"]
+										]
+									},
+									{
+										"and": [
+											{
+												"==": [
+													{
+														"var": "loanName"
+													},
+													["Loan Against Property"]
+												]
+											},
+											{
+												"==": [
+													{
+														"var": "LAPType"
+													},
+													"LAP"
+												]
+											}
+										]
+									}
+								]
+							},
+							"icon": "RefreshCw"
+						},
+						{
+							"label": "Plot Loan Only",
+							"value": "Plot Loan Only",
+							"showWhen": {
+								"==": [
+									{
+										"var": "PlotLoanActivity"
+									},
+									"New Loan"
+								]
+							},
+							"icon": "TreePine"
+						},
+						{
+							"label": "Plot & Construction Loan",
+							"value": "Plot & Construction Loan",
+							"showWhen": {
+								"==": [
+									{
+										"var": "PlotLoanActivity"
+									},
+									"New Loan"
+								]
+							},
+							"icon": "Construction"
+						},
+						{
+							"label": "Plot & Equity Loan",
+							"value": "Plot & Equity Loan",
+							"showWhen": {
+								"==": [
+									{
+										"var": "PlotLoanActivity"
+									},
+									"New Loan"
+								]
+							},
+							"icon": "Landmark"
+						},
+						{
+							"label": "Construction Loan Only",
+							"value": "Construction Loan Only",
+							"showWhen": {
+								"==": [
+									{
+										"var": "PlotLoanActivity"
+									},
+									"New Loan"
+								]
+							},
+							"icon": "HardHat"
+						},
+						{
+							"label": "Debt Consolidation",
+							"value": "Debt Consolidation",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Term Loan"
+								]
+							},
+							"icon": "ArrowLeftRight",
+							"labelDescription": "Transfer existing loan(s) to a new lender for better rates"
+						},
+						{
+							"label": "DC with Extra Funds",
+							"value": "Debt Consolidation with Extra Funds",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Term Loan"
+								]
+							},
+							"icon": "HandCoins",
+							"labelDescription": "Transfer existing loan(s) plus borrow additional funds"
+						},
+						{
+							"label": "OD Takeover",
+							"value": "Debt Consolidation",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Overdraft (OD)"
+								]
+							},
+							"icon": "ArrowLeftRight",
+							"labelDescription": "Transfer existing OD facility to a new lender"
+						},
+						{
+							"label": "OD Takeover + Enhancement",
+							"value": "Debt Consolidation with Extra Funds",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Overdraft (OD)"
+								]
+							},
+							"icon": "HandCoins",
+							"labelDescription": "Transfer existing OD plus increase the credit limit"
+						},
+						{
+							"label": "DOD Takeover",
+							"value": "Debt Consolidation",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Drop-line OverDraft (DOD)"
+								]
+							},
+							"icon": "ArrowLeftRight",
+							"labelDescription": "Transfer existing DOD facility to a new lender"
+						},
+						{
+							"label": "DOD Takeover + Enhancement",
+							"value": "Debt Consolidation with Extra Funds",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Drop-line OverDraft (DOD)"
+								]
+							},
+							"icon": "HandCoins",
+							"labelDescription": "Transfer existing DOD plus increase the facility limit"
+						},
+						{
+							"label": "New CC Facility",
+							"value": "New Loan",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Cash Credit (CC)"
+								]
+							},
+							"icon": "CircleDollarSign",
+							"labelDescription": "Fresh cash credit facility — new working capital line"
+						},
+						{
+							"label": "CC Takeover",
+							"value": "Debt Consolidation",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Cash Credit (CC)"
+								]
+							},
+							"icon": "ArrowLeftRight",
+							"labelDescription": "Transfer existing CC facility to a new lender"
+						},
+						{
+							"label": "CC Takeover + Enhancement",
+							"value": "Debt Consolidation with Extra Funds",
+							"showWhen": {
+								"==": [
+									{
+										"var": "unSecureLoanType"
+									},
+									"Cash Credit (CC)"
+								]
+							},
+							"icon": "HandCoins",
+							"labelDescription": "Transfer existing CC plus increase the credit limit"
+						}
+					],
+					"showWhen": {
+						"or": [
+							{
+								"==": [
+									{
+										"var": "loanName"
+									},
+									["Home Loan"]
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "loanName"
+											},
+											["Loan Against Property"]
+										]
+									},
+									{
+										"!=": [
+											{
+												"var": "LAPType"
+											},
+											""
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"==": [
+											{
+												"var": "loanName"
+											},
+											["Plot Loan"]
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "PlotLoanActivity"
+											},
+											"New Loan"
+										]
+									}
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "unSecureLoanType"
+									},
+									""
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q3_obligationsRunning",
+					"bindsTo_template": "ObligationsRunning",
+					"contextKey": "ObligationsRunning",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"!=": [
+										{
+											"var": "loanName"
+										},
+										"Business Loan"
+									]
+								},
+								"then": "Does the applicant have any existing loans or credit obligations?"
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "loanName"
+										},
+										"Business Loan"
+									]
+								},
+								"then": "Are there any existing loans or credit dues under the business?"
+							}
+						]
+					},
+					"description": {
+						"switch": [
+							{
+								"case": {
+									"!=": [
+										{
+											"var": "loanName"
+										},
+										"Business Loan"
+									]
+								},
+								"then": "<div class='info-title'><span class='info-icon gold'>💰</span> Existing Obligations</div><div class='info-box highlight'>List all your <span class='bold'>current financial commitments</span> that require monthly payments.</div><ul class='info-list'><li>Personal Loans</li><li>Home Loans</li><li>Vehicle Loans</li><li>Credit Card Outstanding (not monthly bills)</li><li>Gold Loans</li><li>Overdraft facilities</li></ul><div class='info-box note'><span class='bold'>Note:</span> This helps calculate your debt-to-income ratio for loan eligibility.</div>"
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "loanName"
+										},
+										"Business Loan"
+									]
+								},
+								"then": "<div class='info-title'><span class='info-icon blue'>🏢</span> Business Obligations</div><div class='info-box highlight'>List all <span class='bold'>active business liabilities</span> with ongoing payment commitments.</div><ul class='info-list'><li>Business Loans</li><li>Overdraft (OD) facilities</li><li>Cash Credit (CC) limits</li><li>Home Loans under business</li><li>Vehicle Loans</li><li>Credit Card Outstanding</li></ul><div class='info-box note'><span class='bold'>Note:</span> Accurate information helps in proper assessment of business repayment capacity.</div>"
+							}
+						]
+					},
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"isObligation": true
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"isObligation": false
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "loanType"
+							},
+							"New Loan"
+						]
+					}
+				}
+			]
+		}
+	]
+}

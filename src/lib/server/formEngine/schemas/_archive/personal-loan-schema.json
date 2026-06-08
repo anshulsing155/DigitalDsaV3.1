@@ -1,0 +1,648 @@
+{
+	"formId": "loanForm_v1",
+	"title": "Loan Application",
+	"pages": [
+		{
+			"id": "creditHistoryPage",
+			"title": "Credit History Check",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [
+				{
+					"id": "q1_creditHistory",
+					"bindsTo_template": "creditHistoryStatus",
+					"contextKey": "creditHistoryStatus",
+					"type": "radio",
+					"uiGroup": "loan_details",
+					"radioClass": "mt-[2rem] md:mt-[3rem]",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiMeta": {
+						"icon": "shield-alert"
+					},
+					"required": true,
+					"question": "Has any applicant been involved in a loan default, settlement, or acted as guarantor on an unpaid loan?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🛡️</span> Credit History Check</div><div class='info-box highlight'>This helps lenders assess creditworthiness. A history of defaults, settlements, or acting as guarantor on defaulted loans may affect lender eligibility.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Being honest helps find the right lenders who can work with the applicant's credit history.</div>",
+					"options": [
+						{
+							"label": "None — clean record",
+							"value": "clean",
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "Yes — involved in default or settlement",
+							"value": "defaulter",
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "Yes — was guarantor on unpaid/settled loan",
+							"value": "guarantor",
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "Both — default/settlement AND guarantor",
+							"value": "both",
+							"icon": "AlertTriangle"
+						}
+					],
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"in": [
+										{
+											"var": "creditHistoryStatus"
+										},
+										[
+											"defaulter",
+											"guarantor",
+											"both"
+										]
+									]
+								},
+								"then": "A prior loan default or settlement where applicant acted as a guarantor may also affect lender eligibility. If no offers appear, applicant may explore our DSA pool, where a few DSAs may assist subject to additional fees or risk mitigation, such as collateral."
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "collateral_free_selectionPage",
+			"title": "A few check points !",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [
+				{
+					"id": "q_incomeDocumentation",
+					"bindsTo_template": "incomeDocAvailable",
+					"contextKey": "incomeDocAvailable",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "What income documentation is available?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📄</span> Income Documentation</div><div class='info-box highlight'>Select what income proof documents are available for the applicant.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Having both payslips and Form 16 gives the best chances of approval and better rates.</div>",
+					"options": [
+						{
+							"label": "Both payslips and Form 16",
+							"value": "both",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "Payslips only",
+							"value": "payslips_only",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Form 16 only",
+							"value": "form16_only",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "ITR available (self-employed / professional)",
+							"value": "itr_available",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Bank statement available (12 months)",
+							"value": "bank_statement_available",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Neither available",
+							"value": "neither",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "loanName"
+									},
+									"Personal Loan"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "creditHistoryStatus"
+									},
+									""
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q5_applicantIsNRI",
+					"bindsTo_template": "ApplicantIsNRI",
+					"contextKey": "ApplicantIsNRI",
+					"type": "radio",
+					"uiGroup": "radio_fields",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"required": true,
+					"question": "Does applicant currently live outside India or hold NRI status?",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"ApplicantIsNRI": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"ApplicantIsNRI": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "incomeDocAvailable"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "creditHistoryStatus"
+									},
+									""
+								]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "ApplicantIsNRI"
+										},
+										"Yes"
+									]
+								},
+								"then": "We regret to inform you that your request cannot be processed at this time as the applicant is NRI."
+							}
+						]
+					},
+					"description": "<div class='info-title'><span class='info-icon blue'>🌏</span> NRI Status</div><div class='info-box highlight'>If the applicant is an NRI, a General Power of Attorney (GPA) holder in India will be needed for documentation and verification.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Ensure the GPA holder's documents (Aadhaar, PAN, address proof) are ready if the applicant is NRI.</div>"
+				}
+			]
+		},
+		{
+			"id": "locationPage",
+			"title": "Residence Location",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [
+				{
+					"id": "q1_residenceStateName",
+					"bindsTo_template": "residenceStateName",
+					"contextKey": "residenceStateName",
+					"type": "select",
+					"uiGroup": "select_fields",
+					"subLabel": "State name",
+					"selectClass": "mt-[2rem] md:mt-[3rem]",
+					"uiMeta": {
+						"placeholder": "Select Residence State",
+						"icon": "map"
+					},
+					"question": "Location for residence verification ?",
+					"description": "Select the Indian state where the applicant currently resides. For NRI applicants, select the location of nearest family member or GPA (General Power of Attorney) holder.",
+					"required": true,
+					"showWhen": {
+						"!=": [
+							{
+								"var": "ApplicantIsNRI"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q2_residenceCityName",
+					"bindsTo_template": "residenceCityName",
+					"contextKey": "residenceCityName",
+					"type": "derivedSelect",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select City name",
+						"icon": "map-pin"
+					},
+					"subLabel": "City name",
+					"required": true,
+					"showWhen": {
+						"!=": [
+							{
+								"var": "ApplicantIsNRI"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q2b_residencePincode",
+					"bindsTo_template": "residencePincode",
+					"contextKey": "residencePincode",
+					"type": "text",
+					"fieldType": "pincode",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter 6-digit pincode",
+						"icon": "map-pin"
+					},
+					"required": false,
+					"question": "Residence pincode (if known)",
+					"descriptionHeader": "Helps verify applicant location for lender matching.",
+					"showWhen": {
+						"!=": [
+							{
+								"var": "residenceCityName"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q6_salariedBankName",
+					"bindsTo_template": "salariedBankName",
+					"contextKey": "salariedBankName",
+					"type": "select",
+					"uiGroup": "select_fields",
+					"selectClass": "mt-8 md:mt-12",
+					"uiMeta": {
+						"placeholder": "Select bank name",
+						"icon": "landmark"
+					},
+					"required": true,
+					"question": "Please select the bank associated with the applicant's active salary account.",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏦</span> Salary Account Selection</div><div class='info-box highlight'>Select the bank where the applicant's salary is credited monthly.</div><div class='visual-diagram'><div class='diagram-row'><span class='bold'>Requirement:</span> <span class='diagram-value'>Active for 12+ months</span></div><div class='diagram-row'><span class='bold'>Purpose:</span> <span class='diagram-value'>Income verification</span></div></div><div class='info-box tip'><span class='bold'>💡 Why this matters:</span> Lenders verify salary credits through bank statements to assess repayment capacity.</div><div class='info-box note'><span class='bold'>Note:</span> Select the primary account where employer deposits salary regularly.</div>",
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "employmentType"
+									},
+									[
+										"Salaried(Private)",
+										"Salaried(Government)"
+									]
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "residenceStateName"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "residenceCityName"
+									},
+									""
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "applicantPage",
+			"title": "Applicant Details",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "incomeProfilesPage",
+			"title": "Income Profiles",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "incomeDetailsPage",
+			"title": "Income Details",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "creditScorePage",
+			"title": "Credit Score",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "obligationsPage",
+			"title": "Existing Loans",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [],
+			"showWhen": {
+				"==": [
+					{
+						"var": "ObligationsRunning"
+					},
+					"Yes"
+				]
+			}
+		},
+		{
+			"id": "loanRequirementPage",
+			"title": "Loan Requirements",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [
+				{
+					"id": "q0_loanPurpose",
+					"bindsTo_template": "loanPurpose",
+					"contextKey": "loanPurpose",
+					"type": "radio",
+					"radioClass": "mt-[2rem] md:mt-[3rem]",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"uiMeta": {
+						"icon": "target"
+					},
+					"required": true,
+					"question": "What is the primary purpose of this loan?",
+					"description": "<div class='info-title'><span class='info-icon green'>🎯</span> Loan Purpose</div><div class='info-box highlight'>Helps match with lenders who specialize in your type of requirement.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Some lenders offer better rates for specific purposes like medical or education.</div>",
+					"options": [
+						{
+							"label": "Medical / Healthcare",
+							"value": "medical",
+							"icon": "Heart"
+						},
+						{
+							"label": "Education / Training",
+							"value": "education",
+							"icon": "GraduationCap"
+						},
+						{
+							"label": "Home Renovation",
+							"value": "home_renovation",
+							"icon": "Paintbrush"
+						},
+						{
+							"label": "Wedding / Family Event",
+							"value": "wedding",
+							"icon": "PartyPopper"
+						},
+						{
+							"label": "Travel",
+							"value": "travel",
+							"icon": "Plane"
+						},
+						{
+							"label": "Debt Consolidation",
+							"value": "debt_consolidation",
+							"icon": "ArrowLeftRight"
+						},
+						{
+							"label": "Consumer Purchase",
+							"value": "consumer_purchase",
+							"icon": "ShoppingCart"
+						},
+						{
+							"label": "Other Personal Need",
+							"value": "other",
+							"icon": "CircleDot"
+						}
+					]
+				},
+				{
+					"id": "q1_mortgageYear",
+					"bindsTo_template": "mortgageYear",
+					"contextKey": "mortgageYear",
+					"type": "select",
+					"uiGroup": "select_fields",
+					"selectClass": "mt-8 md:mt-12",
+					"uiMeta": {
+						"placeholder": "Select loan tenure in years",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "How long would the applicant like the loan term to be?",
+					"description": "<div class='info-title'><span class='info-icon green'>📅</span> Loan Tenure Selection</div><div class='info-box highlight'>Choose the preferred loan repayment duration (1-7 years).</div><div class='visual-diagram'><div class='diagram-row'><span class='bold'>Shorter Tenure:</span> <span class='diagram-value'>Higher EMI, Less Interest</span></div><div class='diagram-row'><span class='bold'>Longer Tenure:</span> <span class='diagram-value'>Lower EMI, More Interest</span></div></div><div class='stats-row'><div class='stat'><span class='stat-value'>1-3 yrs</span><span class='stat-label'>Short Term</span></div><div class='stat'><span class='stat-value'>4-5 yrs</span><span class='stat-label'>Medium Term</span></div><div class='stat'><span class='stat-value'>6-7 yrs</span><span class='stat-label'>Long Term</span></div></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Balance EMI affordability with total interest cost when selecting tenure.</div>",
+					"options": [
+						{
+							"label": "1",
+							"value": "1"
+						},
+						{
+							"label": "2",
+							"value": "2"
+						},
+						{
+							"label": "3",
+							"value": "3"
+						},
+						{
+							"label": "4",
+							"value": "4"
+						},
+						{
+							"label": "5",
+							"value": "5"
+						},
+						{
+							"label": "6",
+							"value": "6"
+						},
+						{
+							"label": "7",
+							"value": "7"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "loanPurpose"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q2_loanAmount",
+					"bindsTo_template": "loanAmount",
+					"contextKey": "loanAmount",
+					"type": "text",
+					"uiGroup": "number_fields",
+					"uiType": "number",
+					"textClass": "mt-8 md:mt-12",
+					"uiMeta": {
+						"placeholder": "Enter amount in rupees",
+						"icon": "indian-rupee"
+					},
+					"required": false,
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"!=": [
+										{
+											"var": "loanType"
+										},
+										"Debt Consolidation with Extra Funds"
+									]
+								},
+								"then": "Enter desired loan amount"
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "loanType"
+										},
+										"Debt Consolidation with Extra Funds"
+									]
+								},
+								"then": "Please specify extra loan amount"
+							}
+						]
+					},
+					"description": "<div class='info-title'><span class='info-icon green'>₹</span> Desired Loan Amount</div><div class='info-box highlight'>Enter the loan amount required for personal needs. Leave blank for maximum eligible amount.</div><div class='stats-row'><div class='stat'><span class='stat-value'>₹1L+</span><span class='stat-label'>Minimum</span></div><div class='stat'><span class='stat-value'>Up to 30x Salary</span><span class='stat-label'>Typical Max</span></div></div><div class='info-box tip'><span class='bold'>💡 Consider:</span> Monthly salary, existing EMIs, and essential expenses when deciding the amount.</div><div class='info-box warning'><span class='bold'>⚠️ Note:</span> Final sanctioned amount depends on CIBIL score, salary, and lender assessment.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "loanAmount"
+										},
+										100000
+									]
+								},
+								"then": "Please enter minimum 1 lakh amount"
+							}
+						]
+					},
+					"showWhen": {
+						"!=": [
+							{
+								"var": "mortgageYear"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q3_urgencyLevel",
+					"bindsTo_template": "urgencyLevel",
+					"contextKey": "urgencyLevel",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"optionContainerClass": "grid md:grid-cols-3 gap-3",
+					"uiGroup": "radio_fields",
+					"uiMeta": {
+						"icon": "clock"
+					},
+					"required": false,
+					"question": "How urgently is the loan needed?",
+					"description": "<div class='info-title'><span class='info-icon orange'>⏰</span> Urgency Assessment</div><div class='info-box highlight'>Helps prioritize your application and match with lenders who offer faster processing.</div>",
+					"options": [
+						{
+							"label": "Immediately (within 1 week)",
+							"value": "immediate",
+							"icon": "Zap"
+						},
+						{
+							"label": "Soon (within 1 month)",
+							"value": "soon",
+							"icon": "Clock"
+						},
+						{
+							"label": "Planning ahead",
+							"value": "planning",
+							"icon": "Calendar"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "mortgageYear"
+							},
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

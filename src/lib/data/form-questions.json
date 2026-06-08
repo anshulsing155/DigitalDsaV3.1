@@ -1,0 +1,57 @@
+[
+	{
+		"id": "q1_loanType_type",
+		"bindsTo": "loanType",
+		"type": "radio",
+		"question": "What type of loan are you financing?",
+		"uiGroup": "loanType",
+		"options": [
+			{ "label": "Home Loan", "value": "Home Loan", "flagKeys": ["isHomeLoan", "isSecuredLoan"] },
+			{
+				"label": "Personal Loan",
+				"value": "Personal Loan",
+				"flagKeys": ["isPersonalLoan", "isUnsecuredLoan"]
+			},
+			{ "label": "Plot Loan", "value": "Plot Loan", "flagKeys": ["isPlotLoan", "isSecuredLoan"] },
+			{
+				"label": "Business Loan",
+				"value": "Business Loan",
+				"flagKeys": ["isBusinessLoan", "isUnsecuredLoan"]
+			}
+		],
+		"derivedLogicGroup": "loanType"
+	},
+	{
+		"id": "q2_loan_amount",
+		"bindsTo": "loanAmount",
+		"type": "currency",
+		"question": "What is the loan amount?",
+		"uiGroup": "loanDetails",
+		"derivedLogicGroup": "loanDetails"
+	},
+	{
+		"id": "q3_city",
+		"bindsTo": "property.city",
+		"type": "select",
+		"question": "In which city is the property located?",
+		"uiGroup": "property",
+		"options": [
+			{ "label": "Mumbai", "value": "mumbai", "flagKeys": ["metroCity"] },
+			{ "label": "Pune", "value": "pune" },
+			{ "label": "Nagpur", "value": "nagpur" }
+		],
+		"derivedLogicGroup": "property"
+	},
+	{
+		"id": "q4_employment",
+		"bindsTo": "applicants[0].details.employmentType",
+		"type": "radio",
+		"question": "What is your employment type?",
+		"uiGroup": "applicantInfo",
+		"options": [
+			{ "label": "Salaried", "value": "salaried", "flagKeys": ["isSalaried"] },
+			{ "label": "Self-employed", "value": "selfEmployed", "flagKeys": ["isSelfEmployed"] }
+		],
+		"derivedLogicGroup": "applicants"
+	}
+]

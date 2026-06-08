@@ -1,0 +1,52 @@
+{
+  "_comment": "FM-1 pre-migration snapshot lock for PROF-NO-OBLIG (Architect).",
+  "_source": "src/lib/testing/journeys/professionalLoan.ts :: PROF_NO_OBLIG_JOURNEY",
+  "_capturedAt": "2026-04-22T00:00:00.000Z",
+  "_shift_notes_S77e_step4": "FIXTURE-WAS-WRONG corrections: dropped urgencyLevel/existingBankRelationship. No obligations, no hasBarCouncilChamber (architect, not lawyer).",
+  "payload": {
+    "loanTransaction": {
+      "loanName": "Professional Loan",
+      "loanType": "New Loan",
+      "numberOfApplicants": 1,
+      "loanAmount": 1200000,
+      "tenureYears": 4,
+      "assessmentStatus": "fresh"
+    },
+    "allApplicantDetails": [
+      {
+        "applicantType": "Individual",
+        "title": "Mr.",
+        "fullName": "Arjun Menon",
+        "age": 36,
+        "gender": "Male",
+        "maritalStatus": "Single",
+        "employmentType": "Self-employed(Professional)",
+        "creditScore": 770,
+        "hasExistingObligations": false,
+        "roleInApplication": "Primary",
+        "residenceType": "Rented",
+        "professionType": "Architect",
+        "businessProfile": {
+          "gstRegistered": true,
+          "hasCurrentAccount": true,
+          "usesSavingsAccount": false,
+          "filesITRRegularly": true,
+          "profitableLast3Years": true,
+          "profitableSinceStart": true,
+          "majorCashSales": false,
+          "fewKeyClients": false,
+          "hasCCOD": false,
+          "hasOtherIncome": false,
+          "hasProfessionalLicense": true,
+          "hasCommercialPremises": true,
+          "ownsPremises": false,
+          "threeYearsInBusiness": true,
+          "enrolledWithProfessionalBody": true,
+          "priorExperience": true,
+          "seasonalBusiness": false
+        },
+        "averageBankBalance": 300000
+      }
+    ]
+  }
+}

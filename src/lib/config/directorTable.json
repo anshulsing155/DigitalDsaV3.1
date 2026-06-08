@@ -1,0 +1,115 @@
+{
+	"questions": [
+		{
+			"id": "q_fullName",
+			"key": "fullNameOfDirector",
+			"styleClass": "col-span-2",
+			"placeholder": "Enter full name",
+			"type": "text",
+			"inputRestriction": "alphabet",
+			"maxlength": 50,
+			"maxLengthErrorMessage": "Name must not exceed 50 characters",
+			"required": true,
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"==": [
+								{
+									"var": "fullNameOfDirector"
+								},
+								""
+							]
+						},
+						"then": "Name is required"
+					},
+					{
+						"case": {
+							"==": [
+								{
+									"var": "fullNameOfDirector"
+								},
+								null
+							]
+						},
+						"then": "Name must contain at least 2 characters"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_director_income",
+			"key": "income",
+			"question": "Income Score",
+			"placeholder": "Enter Income",
+			"type": "text",
+			"inputRestriction": "numeric",
+			"maxlength": 12,
+			"maxLengthErrorMessage": "Income must not exceed 12 digits",
+			"required": true,
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"or": [
+								{ "==": [{ "var": "income" }, null] },
+								{ "==": [{ "var": "income" }, ""] },
+								{ "==": [{ "var": "income" }, 0] }
+							]
+						},
+						"then": "Income is required"
+					},
+					{
+						"case": {
+							"<": [{ "var": "income" }, 20000]
+						},
+						"then": "Income must be at least 20,000"
+					},
+					{
+						"case": {
+							">": [{ "var": "income" }, 999999999999]
+						},
+						"then": "Income is invalid"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_director_cibilScore",
+			"key": "cibilScore",
+			"question": "CIBIL Score",
+			"placeholder": "Enter CIBIL",
+			"type": "text",
+			"inputRestriction": "numeric",
+			"maxlength": 3,
+			"maxLengthErrorMessage": "cibil must not exceed 3 digits",
+			"required": true,
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"or": [
+								{ "==": [{ "var": "cibilScore" }, null] },
+								{ "==": [{ "var": "cibilScore" }, ""] },
+								{ "==": [{ "var": "cibilScore" }, 0] }
+							]
+						},
+						"then": "Cibil score is required"
+					},
+					{
+						"case": {
+							"<": [{ "var": "cibilScore" }, 300]
+						},
+						"then": "Cibil score must be at least 300"
+					},
+					{
+						"case": {
+							">": [{ "var": "cibilScore" }, 80]
+						},
+						"then": "Cibil score must not be more than 900"
+					}
+				]
+			}
+		}
+	]
+}

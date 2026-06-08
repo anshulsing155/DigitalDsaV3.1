@@ -1,0 +1,35 @@
+{
+	"directors": [
+		{
+			"id": "q_numberOfDirector",
+			"key": "numberOfDirector",
+			"type": "number",
+			"required": true,
+			"question": "How many directors currently exist in this company?",
+			"showWhen": {
+				"!=": ["companyDetails.companyType", "One Person Company (OPC)"]
+			}
+		},
+		{
+			"id": "q_directorName",
+			"key": "directorName",
+			"type": "text",
+			"required": true,
+			"question": "What is your full Name "
+		},
+		{
+			"id": "q_directorIncome",
+			"key": "directorIncome",
+			"type": "number",
+			"required": true,
+			"question": "What is your income ?"
+		},
+		{
+			"id": "q_directorCibilScore",
+			"key": "directorCibilScore",
+			"type": "number",
+			"required": true,
+			"question": "What is your Cibil Score?"
+		}
+	]
+}

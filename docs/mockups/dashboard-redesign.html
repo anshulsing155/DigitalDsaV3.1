@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigitalDSA — Dashboard Redesign Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-primary: #050505;
+      --bg-secondary: #0a0a0a;
+      --bg-card: rgba(255,255,255,0.03);
+      --bg-card-hover: rgba(255,255,255,0.06);
+      --bg-glass: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.06);
+      --border-hover: rgba(255,255,255,0.12);
+      --text-primary: #f5f5f5;
+      --text-secondary: rgba(255,255,255,0.5);
+      --text-muted: rgba(255,255,255,0.3);
+      --bronze: #cb997e;
+      --bronze-light: #e0b89a;
+      --bronze-glow: rgba(203,153,126,0.15);
+      --bronze-gradient: linear-gradient(135deg, #cb997e, #e8c4a8, #d4a574);
+      --red: #ef4444;
+      --amber: #f59e0b;
+      --green: #22c55e;
+      --blue: #3b82f6;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== TAB SWITCHER ===== */
+    .tab-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      gap: 0;
+      background: rgba(5,5,5,0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px;
+    }
+    .tab-btn {
+      padding: 16px 24px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .tab-btn:hover { color: var(--text-secondary); }
+    .tab-btn.active { color: var(--bronze); }
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 24px;
+      right: 24px;
+      height: 2px;
+      background: var(--bronze);
+      border-radius: 2px 2px 0 0;
+    }
+    .tab-content { display: none; padding-top: 53px; }
+    .tab-content.active { display: block; }
+
+    /* ===== DSA DASHBOARD ===== */
+    .dashboard {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      min-height: 100vh;
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border);
+      padding: 24px 0;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 53px;
+      bottom: 0;
+      left: 0;
+    }
+    .sidebar-logo {
+      padding: 0 20px 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+    .sidebar-logo h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      background: var(--bronze-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.3px;
+    }
+    .sidebar-logo span {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+    .nav-section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 16px 20px 8px;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s;
+      border-left: 2px solid transparent;
+    }
+    .nav-item:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-primary);
+    }
+    .nav-item.active {
+      color: var(--bronze-light);
+      background: var(--bronze-glow);
+      border-left-color: var(--bronze);
+    }
+    .nav-item .icon {
+      width: 18px;
+      height: 18px;
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
+    .nav-item.active .icon { opacity: 1; }
+    .nav-item.cta {
+      margin: 8px 16px;
+      padding: 10px 16px;
+      background: var(--bronze);
+      color: #1a1a1a;
+      font-weight: 600;
+      border-radius: 8px;
+      border-left: none;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .nav-item.cta:hover {
+      background: var(--bronze-light);
+      transform: translateY(-1px);
+    }
+    .nav-item .badge {
+      margin-left: auto;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.06);
+      color: var(--text-muted);
+    }
+    .nav-item .badge.locked {
+      font-size: 9px;
+      letter-spacing: 0.5px;
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding: 16px 20px;
+      border-top: 1px solid var(--border);
+    }
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--bronze-glow);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--bronze);
+    }
+    .user-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .user-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .user-role {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      margin-left: 240px;
+      padding: 32px 40px;
+      max-width: 900px;
+    }
+
+    /* Greeting */
+    .greeting {
+      margin-bottom: 32px;
+    }
+    .greeting h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+    .greeting p {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+    .greeting .highlight {
+      color: var(--bronze);
+      font-weight: 500;
+    }
+
+    /* Attention Section */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .section-link {
+      font-size: 12px;
+      color: var(--bronze);
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+    .section-link:hover { opacity: 1; }
+
+    .attention-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .attention-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+    }
+    .attention-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .attention-dot.red { background: var(--red); box-shadow: 0 0 8px rgba(239,68,68,0.4); }
+    .attention-dot.amber { background: var(--amber); box-shadow: 0 0 8px rgba(245,158,11,0.3); }
+    .attention-content { flex: 1; min-width: 0; }
+    .attention-name {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .attention-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .attention-meta .divider { color: rgba(255,255,255,0.1); }
+    .attention-action {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--bronze);
+      background: var(--bronze-glow);
+      padding: 6px 14px;
+      border-radius: 6px;
+      white-space: nowrap;
+      border: 1px solid rgba(203,153,126,0.15);
+      transition: all 0.15s;
+    }
+    .attention-action:hover {
+      background: rgba(203,153,126,0.2);
+      border-color: rgba(203,153,126,0.3);
+    }
+
+    /* Quick Glance */
+    .quick-glance {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+    .glance-card {
+      flex: 1;
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .glance-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+    }
+    .glance-number {
+      font-size: 28px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: -1px;
+      margin-bottom: 2px;
+    }
+    .glance-label {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .glance-card.bronze .glance-number { color: var(--bronze-light); }
+
+    /* Recent Cases */
+    .case-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 20px;
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .case-row:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+    }
+    .case-initials {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+    }
+    .case-info { flex: 1; min-width: 0; }
+    .case-name {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .case-detail {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .stage-badge {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+    }
+    .stage-badge.processing {
+      background: rgba(59,130,246,0.12);
+      color: var(--blue);
+      border: 1px solid rgba(59,130,246,0.15);
+    }
+    .stage-badge.sanctioned {
+      background: rgba(34,197,94,0.12);
+      color: var(--green);
+      border: 1px solid rgba(34,197,94,0.15);
+    }
+    .stage-badge.submitted {
+      background: rgba(203,153,126,0.12);
+      color: var(--bronze);
+      border: 1px solid rgba(203,153,126,0.15);
+    }
+    .stage-badge.profiling {
+      background: rgba(255,255,255,0.05);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+
+    /* ===== LANDING PAGE ===== */
+    .landing {
+      min-height: 100vh;
+    }
+
+    /* Landing Nav */
+    .landing-nav {
+      padding: 20px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 10;
+    }
+    .landing-brand {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      background: var(--bronze-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .landing-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .landing-nav-links a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .landing-nav-links a:hover { color: var(--text-primary); }
+    .btn-login {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--bronze);
+      background: var(--bronze-glow);
+      border: 1px solid rgba(203,153,126,0.2);
+      padding: 8px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-login:hover {
+      background: rgba(203,153,126,0.2);
+      border-color: rgba(203,153,126,0.35);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 60px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(203,153,126,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      max-width: 800px;
+      margin: 0 auto 24px;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero h1 .bronze {
+      background: var(--bronze-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #0a0a0a;
+      background: var(--bronze-gradient);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.25s;
+      box-shadow: 0 0 40px rgba(203,153,126,0.25);
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 60px rgba(203,153,126,0.35);
+    }
+    .hero-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-left: 12px;
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-cta-secondary:hover {
+      border-color: var(--border-hover);
+      color: var(--text-primary);
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .hero-stat-number {
+      font-family: 'Poppins', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -1px;
+    }
+    .hero-stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* How It Works */
+    .how-it-works {
+      padding: 100px 60px;
+      text-align: center;
+      background: var(--bg-secondary);
+    }
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: 16px;
+    }
+    .section-heading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 56px;
+    }
+    .steps {
+      display: flex;
+      gap: 32px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .step {
+      flex: 1;
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      transition: all 0.3s;
+    }
+    .step:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--bronze-glow);
+      border: 1px solid rgba(203,153,126,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--bronze);
+      margin: 0 auto 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .step h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .step p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .step-time {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--bronze);
+      background: var(--bronze-glow);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    /* Pricing */
+    .pricing {
+      padding: 100px 60px;
+      text-align: center;
+    }
+    .pricing-cards {
+      display: flex;
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      flex: 1;
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: left;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .pricing-card:hover {
+      border-color: var(--border-hover);
+    }
+    .pricing-card.featured {
+      border-color: rgba(203,153,126,0.25);
+      background: rgba(203,153,126,0.04);
+    }
+    .pricing-card.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: -11px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #0a0a0a;
+      background: var(--bronze);
+      padding: 3px 12px;
+      border-radius: 4px;
+    }
+    .pricing-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .pricing-price {
+      font-family: 'Poppins', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 4px;
+    }
+    .pricing-price span {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+    .pricing-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .pricing-feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+    .pricing-feature .check {
+      color: var(--bronze);
+      font-size: 14px;
+    }
+    .pricing-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 24px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+    }
+    .pricing-btn.primary {
+      background: var(--bronze);
+      color: #0a0a0a;
+      border: none;
+    }
+    .pricing-btn.primary:hover {
+      background: var(--bronze-light);
+    }
+    .pricing-btn.secondary {
+      background: none;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+    .pricing-btn.secondary:hover {
+      border-color: var(--border-hover);
+      color: var(--text-primary);
+    }
+
+    /* Trust Section */
+    .trust {
+      padding: 80px 60px;
+      background: var(--bg-secondary);
+      text-align: center;
+    }
+    .trust-grid {
+      display: flex;
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .trust-item {
+      flex: 1;
+      min-width: 200px;
+      max-width: 280px;
+      padding: 20px;
+    }
+    .trust-icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    .trust-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .trust-text strong {
+      color: var(--text-primary);
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      padding: 100px 60px;
+      text-align: center;
+      position: relative;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(203,153,126,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .final-cta h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .final-cta p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .trust-badge {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .trust-badge .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--bronze);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 40px 60px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      .main { margin-left: 0; padding: 24px 16px; }
+      .hero h1 { font-size: 36px; }
+      .hero { padding: 60px 24px; }
+      .hero-stats { flex-direction: column; gap: 24px; }
+      .steps { flex-direction: column; }
+      .pricing-cards { flex-direction: column; }
+      .quick-glance { flex-wrap: wrap; }
+      .glance-card { min-width: calc(50% - 8px); }
+      .landing-nav { padding: 16px 24px; }
+      .how-it-works, .pricing, .trust, .final-cta { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Tab Switcher -->
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('dashboard')">DSA Dashboard</button>
+  <button class="tab-btn" onclick="switchTab('landing')">Landing Page</button>
+  <button class="tab-btn" onclick="switchTab('rm')">RM Dashboard (Dense)</button>
+</div>
+
+<!-- ======= DSA DASHBOARD ======= -->
+<div id="dashboard" class="tab-content active">
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-logo">
+        <h2>DigitalDSA</h2>
+        <span>Loan Intelligence Platform</span>
+      </div>
+
+      <div class="nav-section-label">Main</div>
+      <div class="nav-item active">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        Home
+      </div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        My Cases
+        <span class="badge">12</span>
+      </div>
+      <div class="nav-item cta">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:1"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        New Case
+      </div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        Lenders
+      </div>
+
+      <div class="nav-section-label" style="margin-top: 8px;">Unlocks at 5+ cases</div>
+      <div class="nav-item" style="opacity: 0.4;">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Team
+        <span class="badge locked">5 CASES</span>
+      </div>
+      <div class="nav-item" style="opacity: 0.4;">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        CRM
+        <span class="badge locked">5 CASES</span>
+      </div>
+      <div class="nav-item" style="opacity: 0.4;">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        Analytics
+        <span class="badge locked">PRO</span>
+      </div>
+
+      <div class="nav-section-label" style="margin-top: 8px;">Account</div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        Settings
+      </div>
+
+      <!-- User Profile -->
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">RK</div>
+          <div class="user-info">
+            <div class="user-name">Ramesh Kumar</div>
+            <div class="user-role">DSA &middot; Mumbai</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Greeting -->
+      <div class="greeting">
+        <h1>Good morning, Ramesh.</h1>
+        <p>You have <span class="highlight">3 cases</span> that need your attention today.</p>
+      </div>
+
+      <!-- Needs Attention -->
+      <div class="section-header">
+        <div class="section-title">Needs Attention</div>
+        <a class="section-link">View all cases &rarr;</a>
+      </div>
+
+      <div class="attention-card">
+        <div class="attention-dot red"></div>
+        <div class="attention-content">
+          <div class="attention-name">Rajesh Sharma</div>
+          <div class="attention-meta">
+            Home Loan <span class="divider">&middot;</span> HDFC <span class="divider">&middot;</span> Query pending 3 days
+          </div>
+        </div>
+        <div class="attention-action">Reply &rarr;</div>
+      </div>
+
+      <div class="attention-card">
+        <div class="attention-dot amber"></div>
+        <div class="attention-content">
+          <div class="attention-name">Priya Mehta</div>
+          <div class="attention-meta">
+            LAP <span class="divider">&middot;</span> SBI <span class="divider">&middot;</span> Salary slip expires in 5 days
+          </div>
+        </div>
+        <div class="attention-action">Upload &rarr;</div>
+      </div>
+
+      <div class="attention-card">
+        <div class="attention-dot amber"></div>
+        <div class="attention-content">
+          <div class="attention-name">Vikram Singh</div>
+          <div class="attention-meta">
+            Personal Loan <span class="divider">&middot;</span> ICICI <span class="divider">&middot;</span> No movement for 8 days
+          </div>
+        </div>
+        <div class="attention-action">Follow up &rarr;</div>
+      </div>
+
+      <!-- Quick Glance -->
+      <div class="quick-glance">
+        <div class="glance-card bronze">
+          <div class="glance-number">12</div>
+          <div class="glance-label">Active Cases</div>
+        </div>
+        <div class="glance-card">
+          <div class="glance-number">3</div>
+          <div class="glance-label">Sanctioned</div>
+        </div>
+        <div class="glance-card">
+          <div class="glance-number">5</div>
+          <div class="glance-label">Files Submitted</div>
+        </div>
+        <div class="glance-card">
+          <div class="glance-number" style="color: var(--green);">&#8377;2.1Cr</div>
+          <div class="glance-label">Total Sanctioned</div>
+        </div>
+      </div>
+
+      <!-- Recent Cases -->
+      <div class="section-header">
+        <div class="section-title">Recent Cases</div>
+        <a class="section-link">All cases &rarr;</a>
+      </div>
+
+      <div class="case-row">
+        <div class="case-initials">RS</div>
+        <div class="case-info">
+          <div class="case-name">Rajesh Sharma</div>
+          <div class="case-detail">Home Loan &middot; &#8377;45L &middot; Updated 2h ago</div>
+        </div>
+        <span class="stage-badge processing">Processing</span>
+      </div>
+      <div class="case-row">
+        <div class="case-initials">PM</div>
+        <div class="case-info">
+          <div class="case-name">Priya Mehta</div>
+          <div class="case-detail">LAP &middot; &#8377;1.2Cr &middot; Updated yesterday</div>
+        </div>
+        <span class="stage-badge submitted">Submitted</span>
+      </div>
+      <div class="case-row">
+        <div class="case-initials">VS</div>
+        <div class="case-info">
+          <div class="case-name">Vikram Singh</div>
+          <div class="case-detail">Personal Loan &middot; &#8377;8L &middot; Updated 3d ago</div>
+        </div>
+        <span class="stage-badge processing">Processing</span>
+      </div>
+      <div class="case-row">
+        <div class="case-initials">AG</div>
+        <div class="case-info">
+          <div class="case-name">Anita Gupta</div>
+          <div class="case-detail">Business Loan &middot; &#8377;25L &middot; Updated 5d ago</div>
+        </div>
+        <span class="stage-badge sanctioned">Sanctioned</span>
+      </div>
+      <div class="case-row">
+        <div class="case-initials">KP</div>
+        <div class="case-info">
+          <div class="case-name">Kiran Patel</div>
+          <div class="case-detail">Home Loan &middot; &#8377;60L &middot; Updated 1w ago</div>
+        </div>
+        <span class="stage-badge profiling">Profiling</span>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ======= LANDING PAGE ======= -->
+<div id="landing" class="tab-content">
+  <div class="landing">
+    <!-- Nav -->
+    <nav class="landing-nav">
+      <div class="landing-brand">DigitalDSA</div>
+      <div class="landing-nav-links">
+        <a href="#">How It Works</a>
+        <a href="#">Pricing</a>
+        <a href="#">About</a>
+        <button class="btn-login">Log In</button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-eyebrow">India's Loan Intelligence Platform</div>
+      <h1>Know the <span class="bronze">right lender</span> before you file.</h1>
+      <p class="hero-sub">Stop guessing which bank will approve. Get instant lender matches, accurate eligibility, and file with confidence.</p>
+      <div>
+        <button class="hero-cta">Start Free &rarr;</button>
+        <button class="hero-cta-secondary">See how it works</button>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-number">1,247+</div>
+          <div class="hero-stat-label">Active DSAs</div>
+        </div>
+        <div>
+          <div class="hero-stat-number" style="background: var(--bronze-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">&#8377;847Cr</div>
+          <div class="hero-stat-label">Loans Matched</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">52+</div>
+          <div class="hero-stat-label">Lender Policies</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">94%</div>
+          <div class="hero-stat-label">First-File Approval</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="section-eyebrow">How It Works</div>
+      <h2 class="section-heading">Three steps. Two minutes. Full clarity.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Enter Client Profile</h3>
+          <p>Quick form with smart questions. We only ask what matters for lender matching.</p>
+          <span class="step-time">~2 minutes</span>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Get Instant Matches</h3>
+          <p>Our rule engine evaluates 50+ bank policies and shows you exactly who will approve.</p>
+          <span class="step-time">Instant</span>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>File with Confidence</h3>
+          <p>Auto-generated file builder, document checklist, and RM contacts. Ready to submit.</p>
+          <span class="step-time">Done</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+      <div class="section-eyebrow">Pricing</div>
+      <h2 class="section-heading">Start free. Scale when ready.</h2>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <div class="pricing-name">Starter</div>
+          <div class="pricing-price">Free</div>
+          <div class="pricing-desc">For DSAs getting started</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> 3 cases / month</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Basic lender matching</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> PDF file builder</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Email support</div>
+          <button class="pricing-btn secondary">Get Started</button>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-name">Professional</div>
+          <div class="pricing-price">&#8377;999 <span>/ month</span></div>
+          <div class="pricing-desc">For active DSAs handling 10+ files</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Unlimited cases</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Advanced matching + FOIR</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Team management (3 members)</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> CRM & lead tracking</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Priority support</div>
+          <button class="pricing-btn primary">Start 7-Day Trial</button>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Enterprise</div>
+          <div class="pricing-price">&#8377;2,999 <span>/ month</span></div>
+          <div class="pricing-desc">For DSA firms with teams</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Everything in Pro</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Unlimited team members</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Analytics & reporting</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> API access</div>
+          <div class="pricing-feature"><span class="check">&#10003;</span> Dedicated RM</div>
+          <button class="pricing-btn secondary">Contact Sales</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust -->
+    <section class="trust">
+      <div class="section-eyebrow">Our Promise</div>
+      <h2 class="section-heading">Your business stays yours.</h2>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">&#128274;</div>
+          <div class="trust-text">
+            <strong>No customer data shared</strong>
+            We never see your client's PAN, Aadhaar, or phone number.
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">&#128176;</div>
+          <div class="trust-text">
+            <strong>Zero commission cuts</strong>
+            Your payouts are yours. We charge a flat platform fee only.
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">&#129309;</div>
+          <div class="trust-text">
+            <strong>No competing with you</strong>
+            We don't process files. We give you intelligence to process better.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <h2>Ready to file smarter?</h2>
+      <p>Join 1,247+ DSAs who know which lender will approve before they file.</p>
+      <button class="hero-cta">Start Free — No Credit Card &rarr;</button>
+      <div class="trust-badges">
+        <div class="trust-badge"><span class="dot"></span> 7-day free trial</div>
+        <div class="trust-badge"><span class="dot"></span> No credit card needed</div>
+        <div class="trust-badge"><span class="dot"></span> Cancel anytime</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+      &copy; 2026 DigitalDSA. All rights reserved. &middot; Privacy &middot; Terms
+    </div>
+  </div>
+</div>
+
+<!-- ======= RM DASHBOARD (DENSE) ======= -->
+<div id="rm" class="tab-content">
+  <div class="dashboard">
+    <nav class="sidebar">
+      <div class="sidebar-logo">
+        <h2>DigitalDSA</h2>
+        <span>RM Portal</span>
+      </div>
+      <div class="nav-section-label">Overview</div>
+      <div class="nav-item active">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        Dashboard
+      </div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        Cases Received
+        <span class="badge">24</span>
+      </div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+        DSA Network
+      </div>
+      <div class="nav-section-label">Policies</div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+        My Policies
+      </div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        Submissions
+      </div>
+      <div class="nav-section-label">Communication</div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        Broadcasts
+      </div>
+      <div class="nav-section-label">Account</div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        Analytics
+      </div>
+      <div class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        Settings
+      </div>
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar" style="color: var(--blue); background: rgba(59,130,246,0.1);">AP</div>
+          <div class="user-info">
+            <div class="user-name">Anil Patil</div>
+            <div class="user-role">RM &middot; HDFC &middot; Mumbai</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main" style="max-width: 1100px;">
+      <div class="greeting">
+        <h1 style="font-size: 24px;">Dashboard</h1>
+        <p>24 active cases from 8 DSAs</p>
+      </div>
+
+      <!-- Dense Stats Row -->
+      <div style="display: flex; gap: 10px; margin-bottom: 32px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 120px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;">
+          <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px;">Received</div>
+          <div style="font-size: 22px; font-weight: 700; font-family: Poppins; letter-spacing: -0.5px;">24</div>
+        </div>
+        <div style="flex: 1; min-width: 120px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;">
+          <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px;">Under Review</div>
+          <div style="font-size: 22px; font-weight: 700; font-family: Poppins; letter-spacing: -0.5px;">7</div>
+        </div>
+        <div style="flex: 1; min-width: 120px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;">
+          <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px;">Sanctioned</div>
+          <div style="font-size: 22px; font-weight: 700; font-family: Poppins; letter-spacing: -0.5px; color: var(--green);">12</div>
+        </div>
+        <div style="flex: 1; min-width: 120px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;">
+          <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px;">Open Queries</div>
+          <div style="font-size: 22px; font-weight: 700; font-family: Poppins; letter-spacing: -0.5px; color: var(--red);">3</div>
+        </div>
+        <div style="flex: 1; min-width: 120px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;">
+          <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px;">DSAs</div>
+          <div style="font-size: 22px; font-weight: 700; font-family: Poppins; letter-spacing: -0.5px;">8</div>
+        </div>
+        <div style="flex: 1; min-width: 120px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;">
+          <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px;">Volume</div>
+          <div style="font-size: 22px; font-weight: 700; font-family: Poppins; letter-spacing: -0.5px; color: var(--bronze);">&#8377;4.2Cr</div>
+        </div>
+      </div>
+
+      <!-- Cases Table (Dense) -->
+      <div class="section-header">
+        <div class="section-title">Recent Cases</div>
+        <div style="display: flex; gap: 8px;">
+          <span style="font-size: 11px; padding: 4px 10px; border-radius: 4px; background: var(--bronze-glow); color: var(--bronze); cursor: pointer; border: 1px solid rgba(203,153,126,0.15);">All</span>
+          <span style="font-size: 11px; padding: 4px 10px; border-radius: 4px; background: var(--bg-glass); color: var(--text-muted); cursor: pointer; border: 1px solid var(--border);">Needs Action</span>
+          <span style="font-size: 11px; padding: 4px 10px; border-radius: 4px; background: var(--bg-glass); color: var(--text-muted); cursor: pointer; border: 1px solid var(--border);">Processing</span>
+        </div>
+      </div>
+
+      <!-- Table-like Dense Layout -->
+      <div style="background: var(--bg-glass); border: 1px solid var(--border); border-radius: 12px; overflow: hidden;">
+        <!-- Header -->
+        <div style="display: flex; padding: 10px 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); border-bottom: 1px solid var(--border);">
+          <div style="flex: 2;">Client / DSA</div>
+          <div style="flex: 1;">Product</div>
+          <div style="flex: 1;">Amount</div>
+          <div style="flex: 1;">Stage</div>
+          <div style="flex: 1; text-align: right;">Updated</div>
+        </div>
+        <!-- Rows -->
+        <div style="display: flex; padding: 12px 20px; align-items: center; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.15s;" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='none'">
+          <div style="flex: 2;"><div style="font-size: 13px; font-weight: 500;">Rajesh Sharma</div><div style="font-size: 11px; color: var(--text-muted);">via Ramesh Kumar</div></div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">Home Loan</div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">&#8377;45L</div>
+          <div style="flex: 1;"><span class="stage-badge processing">Processing</span></div>
+          <div style="flex: 1; text-align: right; font-size: 11px; color: var(--text-muted);">2h ago</div>
+        </div>
+        <div style="display: flex; padding: 12px 20px; align-items: center; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.15s;" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='none'">
+          <div style="flex: 2;"><div style="font-size: 13px; font-weight: 500;">Suresh Yadav</div><div style="font-size: 11px; color: var(--text-muted);">via Pooja Desai</div></div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">Business Loan</div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">&#8377;30L</div>
+          <div style="flex: 1;"><span class="stage-badge submitted">Submitted</span></div>
+          <div style="flex: 1; text-align: right; font-size: 11px; color: var(--text-muted);">5h ago</div>
+        </div>
+        <div style="display: flex; padding: 12px 20px; align-items: center; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.15s;" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='none'">
+          <div style="flex: 2;"><div style="font-size: 13px; font-weight: 500;">Meera Joshi</div><div style="font-size: 11px; color: var(--text-muted);">via Amit Soni</div></div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">LAP</div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">&#8377;85L</div>
+          <div style="flex: 1;"><span class="stage-badge sanctioned">Sanctioned</span></div>
+          <div style="flex: 1; text-align: right; font-size: 11px; color: var(--text-muted);">1d ago</div>
+        </div>
+        <div style="display: flex; padding: 12px 20px; align-items: center; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.15s;" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='none'">
+          <div style="flex: 2;"><div style="font-size: 13px; font-weight: 500;">Deepak Verma</div><div style="font-size: 11px; color: var(--text-muted);">via Ramesh Kumar</div></div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">Personal Loan</div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">&#8377;12L</div>
+          <div style="flex: 1;"><span class="stage-badge profiling">Profiling</span></div>
+          <div style="flex: 1; text-align: right; font-size: 11px; color: var(--text-muted);">2d ago</div>
+        </div>
+        <div style="display: flex; padding: 12px 20px; align-items: center; cursor: pointer; transition: background 0.15s;" onmouseover="this.style.background='var(--bg-card-hover)'" onmouseout="this.style.background='none'">
+          <div style="flex: 2;"><div style="font-size: 13px; font-weight: 500;">Kavita Nair</div><div style="font-size: 11px; color: var(--text-muted);">via Pooja Desai</div></div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">Plot Loan</div>
+          <div style="flex: 1; font-size: 12px; color: var(--text-secondary);">&#8377;50L</div>
+          <div style="flex: 1;"><span class="stage-badge processing">Processing</span></div>
+          <div style="flex: 1; text-align: right; font-size: 11px; color: var(--text-muted);">3d ago</div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+  function switchTab(id) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

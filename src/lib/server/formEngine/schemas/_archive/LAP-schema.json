@@ -1,0 +1,4080 @@
+{
+	"formId": "loanForm_v1",
+	"title": "Loan Application",
+	"pages": [
+		{
+			"id": "propertyIdentificationPage",
+			"title": "Property & Applicant Location",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [
+				{
+					"id": "q2_propertyStateName",
+					"bindsTo_template": "propertyStateName",
+					"contextKey": "propertyStateName",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "State Property state",
+						"icon": "map"
+					},
+					"subLabel": "State name",
+					"question": "Where your property is located?",
+					"required": true,
+					"showWhen": {
+						"!=": [
+							{
+								"var": "loanType"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q3_propertyCityName",
+					"bindsTo_template": "propertyCityName",
+					"contextKey": "propertyCityName",
+					"type": "derivedSelect",
+					"derivedClass": "mt-[0.1rem]",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select City name",
+						"icon": "map-pin"
+					},
+					"subLabel": "City name",
+					"required": true
+				},
+				{
+					"id": "q3b_propertyPincode",
+					"bindsTo_template": "propertyPincode",
+					"contextKey": "propertyPincode",
+					"type": "text",
+					"fieldType": "pincode",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter 6-digit pincode",
+						"icon": "map-pin"
+					},
+					"required": false,
+					"question": "Property pincode (if known)",
+					"descriptionHeader": "Accurate pincode helps identify negative areas for bank filtering — incorrect pincode may lead to wrong lender matches.",
+					"showWhen": {
+						"!=": [
+							{
+								"var": "propertyCityName"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q4_residenceOptionSame",
+					"bindsTo_template": "residenceOptionSame",
+					"contextKey": "residenceOptionSame",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is the applicant's residence in the same city as the property?",
+					"descriptionHeader": "For NRI applicants, answer from the perspective of the GPA (General Power of Attorney) holder.",
+					"options": [
+						{
+							"label": "Yes",
+							"value": "Yes",
+							"flagKey": {
+								"residenceOptionSame": true
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "No",
+							"value": "No",
+							"flagKey": {
+								"residenceOptionSame": false
+							},
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "propertyCityName"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q5_residenceStateName",
+					"bindsTo_template": "residenceStateName",
+					"contextKey": "residenceStateName",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select residence state",
+						"icon": "map"
+					},
+					"subLabel": "State name",
+					"question": "Applicant residence location in India (State)",
+					"description": "Select the Indian state where the applicant currently resides. For NRI applicants, select the city of nearest family member or GPA (General Power of Attorney) holder.",
+					"required": true,
+					"showWhen": {
+						"==": [
+							{
+								"var": "residenceOptionSame"
+							},
+							"No"
+						]
+					}
+				},
+				{
+					"id": "q6_residenceCityName",
+					"bindsTo_template": "residenceCityName",
+					"contextKey": "residenceCityName",
+					"type": "derivedSelect",
+					"uiGroup": "select_fields",
+					"derivedClass": "mt-[0.1rem]",
+					"uiMeta": {
+						"placeholder": "Select a City",
+						"icon": "map-pin"
+					},
+					"subLabel": "City name",
+					"required": true,
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "residenceOptionSame"
+									},
+									"No"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "residenceStateName"
+									},
+									""
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q6b_residencePincode",
+					"bindsTo_template": "residencePincode",
+					"contextKey": "residencePincode",
+					"type": "text",
+					"fieldType": "pincode",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter 6-digit pincode",
+						"icon": "map-pin"
+					},
+					"required": false,
+					"question": "Residence pincode (if known)",
+					"descriptionHeader": "Helps verify applicant location for lender matching.",
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "residenceOptionSame"
+									},
+									"No"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "residenceCityName"
+									},
+									""
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "propertyLocation_LAP",
+			"title": "Property Area & Location",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [
+				{
+					"id": "q1_propertyAreaType",
+					"bindsTo_template": "propertyAreaType",
+					"contextKey": "propertyAreaType",
+					"type": "select",
+					"selectClass": "mt-[1rem] md:mt-[2rem]",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select Area Type",
+						"icon": "map-pin"
+					},
+					"required": true,
+					"question": "Which type of area is this property located in?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📍</span> Property Area Type</div><div class='info-box highlight'>The surrounding area helps determine which lenders can finance the property.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Choose the option that best matches how the area looks and is commonly described.</div>",
+					"options": [
+						{
+							"label": "Planned / Development Authority Area",
+							"value": "PLANNED_AUTHORITY",
+							"helperText": "approved layout, township, large housing society"
+						},
+						{
+							"label": "Converted Land / Approved Residential Use",
+							"value": "CONVERTED_RESIDENTIAL",
+							"helperText": "earlier agricultural or village land, now residential"
+						},
+						{
+							"label": "Old Municipal Area / Traditional Mohalla",
+							"value": "OLD_MUNICIPAL",
+							"helperText": "inside city limits, older houses, narrow streets"
+						},
+						{
+							"label": "Local Colony / Village / Panchayat Area",
+							"value": "LOCAL_COLONY",
+							"helperText": "non-planned or organic development"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"helperText": "I'm not certain about the area classification"
+						}
+					]
+				},
+				{
+					"id": "q1b_specialAreaRestriction",
+					"bindsTo_template": "specialAreaRestriction",
+					"contextKey": "specialAreaRestriction",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "loan_details",
+					"required": false,
+					"question": "Does the property fall under any special restricted zone?",
+					"description": "<div class='info-title'><span class='info-icon red'>⛔</span> Special Restricted Zone</div><div class='info-box highlight'>Some zones have additional restrictions that affect which lenders can process the application.</div>",
+					"options": [
+						{
+							"label": "No special restrictions",
+							"value": "NONE",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "Cantonment Board area",
+							"value": "CANTONMENT",
+							"helperText": "Military/defense area with special building rules",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Shield"
+						},
+						{
+							"label": "Coastal Regulation Zone (CRZ)",
+							"value": "CRZ",
+							"helperText": "Within 500m of coastline",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertCircle"
+						},
+						{
+							"label": "Tribal / Adivasi / Schedule V area",
+							"value": "TRIBAL",
+							"helperText": "Land transfer restrictions apply",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "propertyAreaType"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propertyAreaType"
+									},
+									"LOCAL_COLONY"
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "specialAreaRestriction"
+										},
+										"TRIBAL"
+									]
+								},
+								"then": "Properties in tribal/Schedule V areas have severe transfer restrictions. Most banks will not finance. Specialized NBFCs may consider at higher rates."
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "specialAreaRestriction"
+										},
+										"CRZ"
+									]
+								},
+								"then": "Coastal Regulation Zone properties face construction restrictions. Only CRZ-II (developed urban coastal) is generally financeable with proper environmental clearances."
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "specialAreaRestriction"
+										},
+										"CANTONMENT"
+									]
+								},
+								"then": "Cantonment Board properties require additional clearances from the Board. Most banks accept but processing takes longer."
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "specialAreaRestriction"
+												},
+												"CRZ"
+											]
+										},
+										{
+											"!in": [
+												{
+													"var": "propertyStateName"
+												},
+												[
+													"Gujarat",
+													"Goa",
+													"Kerala",
+													"Tamil Nadu",
+													"Maharashtra",
+													"Odisha",
+													"West Bengal",
+													"Andhra Pradesh",
+													"Puducherry",
+													"Daman and Diu",
+													"Lakshadweep",
+													"Andaman and Nicobar Islands"
+												]
+											]
+										}
+									]
+								},
+								"then": "Coastal Regulation Zone (CRZ) is not applicable in this state. Please verify the property location is actually in a coastal state."
+							},
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "specialAreaRestriction"
+												},
+												"CANTONMENT"
+											]
+										},
+										{
+											"!in": [
+												{
+													"var": "propertyStateName"
+												},
+												[
+													"Punjab",
+													"Rajasthan",
+													"Uttar Pradesh",
+													"Maharashtra",
+													"Karnataka",
+													"Tamil Nadu",
+													"Delhi",
+													"Haryana",
+													"Madhya Pradesh",
+													"Telangana",
+													"Andhra Pradesh",
+													"Gujarat",
+													"West Bengal",
+													"Assam",
+													"Bihar",
+													"Uttarakhand",
+													"Jammu and Kashmir",
+													"Himachal Pradesh",
+													"Chandigarh"
+												]
+											]
+										}
+									]
+								},
+								"then": "Cantonment Board areas are not present in this state. Please verify the property location."
+							},
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "specialAreaRestriction"
+												},
+												"TRIBAL"
+											]
+										},
+										{
+											"!in": [
+												{
+													"var": "propertyStateName"
+												},
+												[
+													"Jharkhand",
+													"Chhattisgarh",
+													"Odisha",
+													"Andhra Pradesh",
+													"Telangana",
+													"Meghalaya",
+													"Mizoram",
+													"Nagaland",
+													"Manipur",
+													"Tripura",
+													"Assam",
+													"Bihar",
+													"Madhya Pradesh",
+													"Gujarat",
+													"Maharashtra",
+													"Karnataka"
+												]
+											]
+										}
+									]
+								},
+								"then": "Tribal / Schedule V areas are not present in this state. Please verify the property location."
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "propertyCharacter_LAP",
+			"title": "Property Character",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [
+				{
+					"id": "q1_categoryOfProperty",
+					"bindsTo_template": "categoryOfProperty",
+					"contextKey": "categoryOfProperty",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "What category of property is being offered as collateral?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏢</span> Property Category</div><div class='info-box highlight'>Residential properties get the best LAP terms (60-70% LTV). Commercial (50-60%) and industrial (40-55%) have lower LTV and fewer lender options.</div>",
+					"options": [
+						{
+							"label": "Residential",
+							"value": "Residential",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Home"
+						},
+						{
+							"label": "Commercial",
+							"value": "Commercial",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Building2"
+						},
+						{
+							"label": "Industrial",
+							"value": "Industrial",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Factory"
+						},
+						{
+							"label": "Mixed-use (Residential + Commercial)",
+							"value": "Mixed",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "LayoutGrid"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "propertyAreaType"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q2_constructionType",
+					"bindsTo_template": "constructionType",
+					"contextKey": "constructionType",
+					"type": "select",
+					"uiGroup": "select_fields",
+					"selectClass": "mt-8 md:mt-12",
+					"uiMeta": {
+						"placeholder": "Choose Construction Type",
+						"icon": "construction"
+					},
+					"required": true,
+					"question": "What type of construction is it?",
+					"options": [
+						{
+							"label": "House / Villa",
+							"value": "House",
+							"showWhen": {
+								"in": [
+									{
+										"var": "categoryOfProperty"
+									},
+									[
+										"Residential",
+										"Mixed"
+									]
+								]
+							}
+						},
+						{
+							"label": "Independent Floor",
+							"value": "Floor",
+							"showWhen": {
+								"in": [
+									{
+										"var": "categoryOfProperty"
+									},
+									[
+										"Residential",
+										"Mixed"
+									]
+								]
+							}
+						},
+						{
+							"label": "Flat (Apartment)",
+							"value": "Flat",
+							"showWhen": {
+								"in": [
+									{
+										"var": "categoryOfProperty"
+									},
+									[
+										"Residential",
+										"Commercial",
+										"Mixed"
+									]
+								]
+							}
+						},
+						{
+							"label": "Row House",
+							"value": "Row House",
+							"showWhen": {
+								"in": [
+									{
+										"var": "categoryOfProperty"
+									},
+									[
+										"Residential",
+										"Mixed"
+									]
+								]
+							}
+						},
+						{
+							"label": "Shop / Showroom",
+							"value": "Shop",
+							"showWhen": {
+								"in": [
+									{
+										"var": "categoryOfProperty"
+									},
+									[
+										"Commercial",
+										"Mixed"
+									]
+								]
+							}
+						},
+						{
+							"label": "Office Space",
+							"value": "Office",
+							"showWhen": {
+								"in": [
+									{
+										"var": "categoryOfProperty"
+									},
+									[
+										"Commercial",
+										"Mixed"
+									]
+								]
+							}
+						},
+						{
+							"label": "Commercial Building",
+							"value": "Building",
+							"showWhen": {
+								"==": [
+									{
+										"var": "categoryOfProperty"
+									},
+									"Commercial"
+								]
+							}
+						},
+						{
+							"label": "Warehouse / Godown",
+							"value": "Warehouse",
+							"showWhen": {
+								"in": [
+									{
+										"var": "categoryOfProperty"
+									},
+									[
+										"Commercial",
+										"Industrial"
+									]
+								]
+							}
+						},
+						{
+							"label": "Factory / Manufacturing Unit",
+							"value": "Factory",
+							"showWhen": {
+								"==": [
+									{
+										"var": "categoryOfProperty"
+									},
+									"Industrial"
+								]
+							}
+						},
+						{
+							"label": "Industrial Shed",
+							"value": "Industrial Shed",
+							"showWhen": {
+								"==": [
+									{
+										"var": "categoryOfProperty"
+									},
+									"Industrial"
+								]
+							}
+						},
+						{
+							"label": "Vacant Plot (with boundary wall)",
+							"value": "Plot"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "categoryOfProperty"
+							},
+							""
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "constructionType"
+										},
+										"Plot"
+									]
+								},
+								"then": "Very few lenders offer LAP on vacant plots. Expect limited options and lower LTV (40-50%)."
+							}
+						]
+					}
+				},
+				{
+					"id": "q3_propertyType",
+					"bindsTo_template": "propertyType",
+					"contextKey": "propertyType",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "What is the type of ownership for this property?",
+					"description": "<div class='info-title'><span class='info-icon gold'>📜</span> Ownership Type</div><div class='info-box highlight'>Freehold properties get better loan terms. Leasehold with less than 20 years remaining is nearly impossible to finance.</div>",
+					"options": [
+						{
+							"label": "Freehold",
+							"value": "Free Hold",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Leasehold",
+							"value": "Lease Hold",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileKey"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "constructionType"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q4_leaseRemainingPeriod",
+					"bindsTo_template": "leaseRemainingPeriod",
+					"contextKey": "leaseRemainingPeriod",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select remaining lease period",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "How many years are remaining on the lease?",
+					"options": [
+						{
+							"label": "More than 30 years",
+							"value": "MORE_THAN_30"
+						},
+						{
+							"label": "20 to 30 years",
+							"value": "20_TO_30"
+						},
+						{
+							"label": "10 to 20 years",
+							"value": "10_TO_20"
+						},
+						{
+							"label": "Less than 10 years",
+							"value": "LESS_THAN_10"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "propertyType"
+							},
+							"Lease Hold"
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"in": [
+										{
+											"var": "leaseRemainingPeriod"
+										},
+										[
+											"10_TO_20",
+											"LESS_THAN_10"
+										]
+									]
+								},
+								"then": "Leasehold properties with less than 20 years remaining are extremely difficult to finance. Most banks will reject."
+							}
+						]
+					}
+				},
+				{
+					"id": "q3_propertyAge",
+					"bindsTo_template": "propertyAge",
+					"contextKey": "propertyAge",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select Property Age",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "How old is this property?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏠</span> Property Age</div><div class='info-box highlight'>The age of the property affects loan eligibility, maximum tenure, and valuation.</div>",
+					"options": [
+						{
+							"label": "New (0–5 years)",
+							"value": "0-5"
+						},
+						{
+							"label": "6–10 years",
+							"value": "6-10"
+						},
+						{
+							"label": "11–15 years",
+							"value": "11-15"
+						},
+						{
+							"label": "16–20 years",
+							"value": "16-20"
+						},
+						{
+							"label": "21–25 years",
+							"value": "21-25"
+						},
+						{
+							"label": "26–30 years",
+							"value": "26-30"
+						},
+						{
+							"label": "Over 30 years",
+							"value": "30+"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									"Plot"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q4_carpetArea",
+					"bindsTo_template": "carpetArea",
+					"contextKey": "carpetArea",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter carpet area in sq ft",
+						"icon": "ruler",
+						"showNumberInWords": false
+					},
+					"required": true,
+					"question": "What is the carpet area / plot area? (in sq ft)",
+					"description": "<div class='info-title'><span class='info-icon blue'>📏</span> Carpet / Plot Area</div><div class='info-box highlight'>For constructed properties, enter carpet area (usable floor area). For plots, enter total plot area. Primary metric for valuation.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "carpetArea"
+										},
+										100
+									]
+								},
+								"then": "Carpet area seems too low. Please enter the area in square feet."
+							},
+							{
+								"case": {
+									">": [
+										{
+											"var": "carpetArea"
+										},
+										50000
+									]
+								},
+								"then": "Please enter a valid carpet area in square feet."
+							}
+						]
+					},
+					"showWhen": {
+						"!=": [
+							{
+								"var": "constructionType"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q7_builtArea",
+					"bindsTo_template": "builtArea",
+					"contextKey": "builtArea",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Enter built-up area in sq ft",
+						"icon": "ruler",
+						"showNumberInWords": false
+					},
+					"required": false,
+					"question": "Built-up area (in sq ft, if known)",
+					"showWhen": {
+						"in": [
+							{
+								"var": "constructionType"
+							},
+							[
+								"Flat",
+								"Floor",
+								"Building",
+								"Office"
+							]
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "propertyCondition_LAP",
+			"title": "Property Condition & Compliance",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [
+				{
+					"id": "q1a_propertyComplianceStatus_planned",
+					"bindsTo_template": "propertyComplianceStatus",
+					"contextKey": "propertyComplianceStatus",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Is the property built as per the development authority’s sanctioned building plan?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏛️</span> Property Compliance — Planned Area</div><div class='info-box highlight'>In planned/authority areas, lenders check whether construction follows the approved layout and sanctioned plan from DDA/MHADA/BDA/HUDA or similar authority.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Not fully compliant does not mean rejection — some NBFCs fund deviated properties at different terms.</div>",
+					"options": [
+						{
+							"label": "Yes — fully as per approved plan",
+							"value": "fully_compliant",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "Minor deviations from approved plan",
+							"value": "authorized_not_per_plan",
+							"helperText": "Small differences like balcony enclosure, staircase variation",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "Major deviations or no approved plan",
+							"value": "not_authorized",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "propertyAreaType"
+									},
+									"PLANNED_AUTHORITY"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									"Plot"
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"in": [
+										{
+											"var": "propertyComplianceStatus"
+										},
+										[
+											"authorized_not_per_plan",
+											"not_authorized"
+										]
+									]
+								},
+								"then": "Properties with deviations from approved plan have fewer lender options. Select NBFCs may still process at adjusted terms."
+							}
+						]
+					}
+				},
+				{
+					"id": "q1b_propertyComplianceStatus_converted",
+					"bindsTo_template": "propertyComplianceStatus",
+					"contextKey": "propertyComplianceStatus",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Has the land been formally converted from agricultural to residential use (NA conversion)?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏛️</span> Property Compliance — Converted Land</div><div class='info-box highlight'>Banks require confirmed NA (Non-Agricultural) conversion before financing any property on converted land. Without this, the property is treated as agricultural — which no bank will finance.</div>",
+					"options": [
+						{
+							"label": "Yes — NA order received and registered",
+							"value": "fully_compliant",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "Conversion applied but still pending",
+							"value": "authorized_not_per_plan",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "No -- still agricultural / not converted",
+							"value": "not_authorized",
+							"riskType": "NON_NA_LAND",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "propertyAreaType"
+									},
+									"CONVERTED_RESIDENTIAL"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									"Plot"
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "propertyComplianceStatus"
+										},
+										"authorized_not_per_plan"
+									]
+								},
+								"then": "NA conversion is still pending -- loan processing will be on hold until conversion is complete. High-risk status for lenders."
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "propertyComplianceStatus"
+										},
+										"not_authorized"
+									]
+								},
+								"then": "Non-NA land -- ineligible for financing. The land must be converted from agricultural use before any lender can process this loan."
+							}
+						]
+					}
+				},
+				{
+					"id": "q1c_propertyComplianceStatus_municipal",
+					"bindsTo_template": "propertyComplianceStatus",
+					"contextKey": "propertyComplianceStatus",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Is the property within municipal limits with valid municipal records?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏛️</span> Property Compliance — Municipal Area</div><div class='info-box highlight'>For properties in old municipal/city areas, lenders verify municipal records, property tax, and building permission history.</div>",
+					"options": [
+						{
+							"label": "Yes — proper municipal records and building permission",
+							"value": "fully_compliant",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "Municipal area but original plan has deviations",
+							"value": "authorized_not_per_plan",
+							"helperText": "Extra floor, balcony extension, unauthorized room addition",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "No formal building permission or municipal records",
+							"value": "not_authorized",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "propertyAreaType"
+									},
+									"OLD_MUNICIPAL"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									"Plot"
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "propertyComplianceStatus"
+										},
+										"authorized_not_per_plan"
+									]
+								},
+								"then": "Minor deviations in municipal areas are common. Some banks and most NBFCs can still process with adjusted valuation."
+							}
+						]
+					}
+				},
+				{
+					"id": "q1d_propertyComplianceStatus_colony",
+					"bindsTo_template": "propertyComplianceStatus",
+					"contextKey": "propertyComplianceStatus",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Is the colony officially recognised or regularized by the government?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏛️</span> Property Compliance — Local Colony</div><div class='info-box highlight'>Properties in village/panchayat areas are evaluated based on whether the colony or layout has been officially recognized. Regularized colonies have more lender options.</div>",
+					"options": [
+						{
+							"label": "Yes — colony is regularized with proper records",
+							"value": "fully_compliant",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "Regularization applied or partially approved",
+							"value": "authorized_not_per_plan",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "Not regularized / informal settlement",
+							"value": "not_authorized",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "propertyAreaType"
+							},
+							"LOCAL_COLONY"
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "propertyComplianceStatus"
+										},
+										"not_authorized"
+									]
+								},
+								"then": "Non-regularized colony properties are not accepted by banks. Specialized housing finance companies (Aavas, Grihashakti) may consider at higher interest rates and lower loan-to-value ratios."
+							}
+						]
+					}
+				},
+				{
+					"id": "q1e_propertyComplianceStatus_unknown",
+					"bindsTo_template": "propertyComplianceStatus",
+					"contextKey": "propertyComplianceStatus",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Is the property in a government-authorized area and built as per approved plan?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏛️</span> Property Compliance Status</div><div class='info-box highlight'>This determines which lenders (banks vs NBFCs) can process the application.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Not fully compliant does not mean rejection — some NBFCs fund non-authorized or deviated properties at different terms.</div>",
+					"options": [
+						{
+							"label": "Yes — authorized area, as per approved plan",
+							"value": "fully_compliant",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsUp"
+						},
+						{
+							"label": "Authorized area, but not as per plan",
+							"value": "authorized_not_per_plan",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "Not in government-authorized area",
+							"value": "not_authorized",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ThumbsDown"
+						}
+					],
+					"showWhen": {
+						"or": [
+							{
+								"==": [
+									{
+										"var": "propertyAreaType"
+									},
+									"UNKNOWN"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "propertyAreaType"
+									},
+									""
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"in": [
+										{
+											"var": "propertyComplianceStatus"
+										},
+										[
+											"authorized_not_per_plan",
+											"not_authorized"
+										]
+									]
+								},
+								"then": "Properties that are not fully compliant may still be eligible for funding through select NBFCs. Fewer lenders will appear in the results, but options are available."
+							}
+						]
+					}
+				},
+				{
+					"id": "q2_ocCcAvailable",
+					"bindsTo_template": "ocCcAvailable",
+					"contextKey": "ocCcAvailable",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Has the building received its OC (Occupancy Certificate) / CC (Completion Certificate)?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📋</span> OC / CC Status</div><div class='info-box highlight'>Most banks require OC/CC for processing. Without OC, lenders may consider the property legally incomplete.</div>",
+					"options": [
+						{
+							"label": "Yes, both OC and CC",
+							"value": "BOTH",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ClipboardList"
+						},
+						{
+							"label": "Only CC available",
+							"value": "CC_ONLY",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Neither available",
+							"value": "NONE",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									"not_authorized"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									""
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "constructionType"
+									},
+									[
+										"Flat",
+										"Floor",
+										"Building",
+										"Office",
+										"Shop"
+									]
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "propertyAreaType"
+									},
+									[
+										"PLANNED_AUTHORITY",
+										"CONVERTED_RESIDENTIAL",
+										"OLD_MUNICIPAL"
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q3_municipalApproval",
+					"bindsTo_template": "municipalApproval",
+					"contextKey": "municipalApproval",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Was the house built with a sanctioned building plan from the local authority?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏛️</span> Building Plan Approval</div><div class='info-box highlight'>For independent houses, lenders check whether construction followed a plan sanctioned by the local authority.</div>",
+					"options": [
+						{
+							"label": "Yes, with approved plan",
+							"value": "APPROVED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "ClipboardList"
+						},
+						{
+							"label": "Partially approved / Deviations exist",
+							"value": "PARTIAL",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "No approved plan",
+							"value": "NO_PLAN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									"not_authorized"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									"Plot"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									""
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "propertyAreaType"
+									},
+									[
+										"PLANNED_AUTHORITY",
+										"CONVERTED_RESIDENTIAL",
+										"OLD_MUNICIPAL"
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q5_reraRegistrationStatus",
+					"bindsTo_template": "reraRegistrationStatus",
+					"contextKey": "reraRegistrationStatus",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is the property / project RERA registered?",
+					"description": "<div class='info-title'><span class='info-icon green'>🏢</span> RERA Registration</div><div class='info-box highlight'>RERA registration is mandatory for projects over 500 sq.m. Banks verify RERA number before sanctioning loans for under-construction properties.</div>",
+					"options": [
+						{
+							"label": "Yes — RERA registered",
+							"value": "REGISTERED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "No — not registered",
+							"value": "NOT_REGISTERED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "Exempted (less than 500 sq.m. / 8 units)",
+							"value": "EXEMPTED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "propertyAreaType"
+									},
+									[
+										"PLANNED_AUTHORITY",
+										"CONVERTED_RESIDENTIAL"
+									]
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									""
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "constructionType"
+									},
+									[
+										"Flat",
+										"Floor",
+										"Row House"
+									]
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"and": [
+										{
+											"==": [
+												{
+													"var": "reraRegistrationStatus"
+												},
+												"NOT_REGISTERED"
+											]
+										},
+										{
+											"==": [
+												{
+													"var": "PropertyStage"
+												},
+												"Under Construction"
+											]
+										}
+									]
+								},
+								"then": "Banks will not finance under-construction projects without RERA registration. Verify with the builder."
+							}
+						]
+					}
+				},
+				{
+					"id": "q6_naConversionStatus",
+					"bindsTo_template": "naConversionStatus",
+					"contextKey": "naConversionStatus",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "What is the current status of the NA (Non-Agricultural) conversion order?",
+					"description": "<div class=’info-title’><span class=’info-icon blue’>📜</span> NA Conversion Status</div><div class=’info-box highlight’>The NA order from the District Collector’s office is the key document proving land use has been changed from agricultural to residential.</div>",
+					"options": [
+						{
+							"label": "NA order received and registered",
+							"value": "REGISTERED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "Application submitted, order pending",
+							"value": "APPLIED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Clock"
+						},
+						{
+							"label": "Not yet applied",
+							"value": "NOT_STARTED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"label": "Already in residential zone (no conversion needed)",
+							"value": "NOT_REQUIRED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "propertyAreaType"
+									},
+									"CONVERTED_RESIDENTIAL"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									""
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "naConversionStatus"
+										},
+										"NOT_STARTED"
+									]
+								},
+								"then": "Without NA conversion, no lender can process this loan. The conversion process typically takes 2-6 months."
+							}
+						]
+					}
+				},
+				{
+					"id": "q7_zoneClassification",
+					"bindsTo_template": "zoneClassification",
+					"contextKey": "zoneClassification",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "What is the zone classification of this land?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🗺️</span> Zone Classification</div><div class='info-box highlight'>Zone classification determines permissible construction type. Lenders prefer residential or mixed-use zones.</div>",
+					"options": [
+						{
+							"label": "Residential zone",
+							"value": "RESIDENTIAL",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Home"
+						},
+						{
+							"label": "Commercial zone",
+							"value": "COMMERCIAL",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Building2"
+						},
+						{
+							"label": "Mixed use (residential + commercial)",
+							"value": "MIXED_USE",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Layers"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									"not_authorized"
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "propertyAreaType"
+									},
+									[
+										"PLANNED_AUTHORITY",
+										"CONVERTED_RESIDENTIAL",
+										"OLD_MUNICIPAL"
+									]
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "zoneClassification"
+										},
+										"COMMERCIAL"
+									]
+								},
+								"then": "Commercial-zoned property: Some lenders may restrict residential loans on commercial-zoned land. Verify lender policy."
+							}
+						]
+					}
+				},
+				{
+					"id": "q8_municipalTaxStatus",
+					"bindsTo_template": "municipalTaxStatus",
+					"contextKey": "municipalTaxStatus",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is the municipal/property tax being paid regularly?",
+					"description": "<div class='info-title'><span class='info-icon green'>💰</span> Municipal Tax Status</div><div class='info-box highlight'>Regular tax payment history proves the property is recognized by the municipal body — an important signal for lenders.</div>",
+					"options": [
+						{
+							"label": "Yes — paid regularly and up to date",
+							"value": "PAID_REGULAR",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "Paid but with gaps or arrears",
+							"value": "PAID_IRREGULAR",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertCircle"
+						},
+						{
+							"label": "Not paid / no tax records",
+							"value": "UNPAID",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									"Plot"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									""
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "municipalTaxStatus"
+										},
+										"UNPAID"
+									]
+								},
+								"then": "Properties without municipal tax records are difficult to finance. Clearing arrears and obtaining tax receipts is recommended before applying."
+							}
+						]
+					}
+				},
+				{
+					"id": "q9_unauthorizedAdditions",
+					"bindsTo_template": "unauthorizedAdditions",
+					"contextKey": "unauthorizedAdditions",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Are there any unauthorized additions or modifications to the property?",
+					"description": "<div class='info-title'><span class='info-icon red'>🚧</span> Unauthorized Additions</div><div class='info-box highlight'>Extra floors, room additions, or balcony enclosures without permission are common in older areas. The extent affects lender decisions and valuation.</div>",
+					"options": [
+						{
+							"label": "No unauthorized additions",
+							"value": "NONE",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "Minor additions (balcony enclosure, extra room)",
+							"value": "MINOR",
+							"helperText": "Small changes that don't alter the building footprint significantly",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertCircle"
+						},
+						{
+							"label": "Major additions (extra floor, significant extension)",
+							"value": "MAJOR",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									"Plot"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									""
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "propertyAreaType"
+									},
+									[
+										"PLANNED_AUTHORITY",
+										"CONVERTED_RESIDENTIAL",
+										"OLD_MUNICIPAL"
+									]
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "unauthorizedAdditions"
+										},
+										"MAJOR"
+									]
+								},
+								"then": "Major unauthorized construction significantly reduces lender options. Banks will likely reject; select NBFCs may consider at lower LTV and higher rates."
+							}
+						]
+					}
+				},
+				{
+					"id": "q10_revenueRecordStatus",
+					"bindsTo_template": "revenueRecordStatus",
+					"contextKey": "revenueRecordStatus",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "What is the status of revenue records for this property?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📑</span> Revenue Records</div><div class='info-box highlight'>Revenue records (7/12 extract in Maharashtra, Khata in Karnataka, Patta in Tamil Nadu, Jamabandi in Rajasthan/Punjab) are the primary proof of land ownership in village/panchayat areas.</div>",
+					"options": [
+						{
+							"label": "Available and up to date",
+							"value": "AVAILABLE_CURRENT",
+							"helperText": "7/12, Khata, Patta, RTC — whichever applies in your state",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "Available but not updated recently",
+							"value": "AVAILABLE_OUTDATED",
+							"helperText": "Records exist but mutation or name transfer pending",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertCircle"
+						},
+						{
+							"label": "Not available or unclear",
+							"value": "NOT_AVAILABLE",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "propertyComplianceStatus"
+									},
+									""
+								]
+							},
+							{
+								"in": [
+									{
+										"var": "propertyAreaType"
+									},
+									[
+										"CONVERTED_RESIDENTIAL",
+										"LOCAL_COLONY"
+									]
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "revenueRecordStatus"
+										},
+										"NOT_AVAILABLE"
+									]
+								},
+								"then": "Properties without revenue records are extremely difficult to finance. Even specialized NBFCs require some form of ownership documentation."
+							}
+						]
+					}
+				},
+				{
+					"id": "q11_colonyRegularizationStatus",
+					"bindsTo_template": "colonyRegularizationStatus",
+					"contextKey": "colonyRegularizationStatus",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Has this colony/layout been regularized by the government?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏘️</span> Colony Regularization</div><div class='info-box highlight'>Many villages and panchayat areas have colonies that were developed informally but later regularized by state government orders. Regularized colonies are accepted by more lenders.</div>",
+					"options": [
+						{
+							"label": "Yes — officially regularized",
+							"value": "REGULARIZED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "Regularization applied/in progress",
+							"value": "PENDING",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Clock"
+						},
+						{
+							"label": "Not regularized",
+							"value": "NOT_REGULARIZED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "propertyAreaType"
+							},
+							"LOCAL_COLONY"
+						]
+					}
+				},
+				{
+					"id": "q12_gramPanchayatPermission",
+					"bindsTo_template": "gramPanchayatPermission",
+					"contextKey": "gramPanchayatPermission",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Has the Gram Panchayat issued permission for this construction?",
+					"description": "<div class='info-title'><span class='info-icon green'>🏡</span> Gram Panchayat Permission</div><div class='info-box highlight'>In panchayat areas, the Gram Panchayat is the local authority that grants building permission. This serves as proof of authorized construction.</div>",
+					"options": [
+						{
+							"label": "Yes — GP permission obtained",
+							"value": "YES",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "No permission obtained",
+							"value": "NO",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Ban"
+						},
+						{
+							"label": "Not required (pre-existing old construction)",
+							"value": "NOT_REQUIRED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "propertyAreaType"
+							},
+							"LOCAL_COLONY"
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "propertyLegal_LAP",
+			"title": "Legal, Title & Occupation",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": [
+				{
+					"id": "q1_propertyAcquisitionMethod",
+					"bindsTo_template": "propertyAcquisitionMethod",
+					"contextKey": "propertyAcquisitionMethod",
+					"type": "radio",
+					"radioClass": "mt-[1rem] md:mt-[2rem]",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "How did the current owner(s) acquire this property?",
+					"description": "<div class='info-title'><span class='info-icon gold'>📜</span> Acquisition Method</div><div class='info-box highlight'>GPA (Power of Attorney) transfers are rejected by most lenders after the Supreme Court ruling. Inherited properties need succession documents.</div>",
+					"options": [
+						{
+							"label": "Self-purchased (registered sale deed)",
+							"value": "self_purchased",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Inherited / Succession",
+							"value": "inherited",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Users"
+						},
+						{
+							"label": "Gift deed",
+							"value": "gift_deed",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Gift"
+						},
+						{
+							"label": "Partition deed",
+							"value": "partition",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Split"
+						},
+						{
+							"label": "Power of Attorney (GPA) transfer",
+							"value": "gpa_transfer",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "propertyComplianceStatus"
+							},
+							""
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "propertyAcquisitionMethod"
+										},
+										"gpa_transfer"
+									]
+								},
+								"then": "GPA transfers are not legally valid sales (Supreme Court ruling). Most lenders will reject. Only specialized HFCs may consider at very high rates."
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "propertyAcquisitionMethod"
+										},
+										"inherited"
+									]
+								},
+								"then": "Inherited properties need succession certificate / legal heir certificate / probate. All legal heirs must be co-applicants or provide NOC."
+							}
+						]
+					}
+				},
+				{
+					"id": "q6_successionStatus",
+					"bindsTo_template": "successionStatus",
+					"contextKey": "successionStatus",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Is this property inherited? If so, is the succession properly documented?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏠</span> Succession Status</div><div class='info-box highlight'>For inherited properties, lenders require succession certificate, legal heir certificate, probate of will, or partition deed — depending on how the property was inherited.</div>",
+					"options": [
+						{
+							"label": "Not inherited — purchased directly",
+							"value": "NOT_INHERITED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "Inherited — succession documents complete",
+							"value": "SUCCESSION_COMPLETE",
+							"helperText": "Succession certificate, will probate, or mutation done",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "Inherited — succession not yet complete",
+							"value": "SUCCESSION_PENDING",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Clock"
+						},
+						{
+							"label": "Not sure",
+							"value": "UNKNOWN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "HelpCircle"
+						}
+					],
+					"showWhen": {
+						"==": [
+							{
+								"var": "propertyAcquisitionMethod"
+							},
+							"inherited"
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "successionStatus"
+										},
+										"SUCCESSION_PENDING"
+									]
+								},
+								"then": "Incomplete succession documentation will delay or prevent loan processing. Succession certificate or mutation must be completed first."
+							}
+						]
+					}
+				},
+				{
+					"id": "q3_originalDocumentsAvailable",
+					"bindsTo_template": "originalDocumentsAvailable",
+					"contextKey": "originalDocumentsAvailable",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Are the original property documents available?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📚</span> Original Documents</div><div class='info-box highlight'>Lender holds original documents as mortgage security. Without originals, no lender can process LAP.</div>",
+					"options": [
+						{
+							"label": "Yes, all originals available",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "No, originals not available",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "XCircle"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "propertyAcquisitionMethod"
+							},
+							""
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "originalDocumentsAvailable"
+										},
+										"No"
+									]
+								},
+								"then": "Original property documents are mandatory for mortgage creation. Without originals, no lender can process LAP."
+							}
+						]
+					}
+				},
+				{
+					"id": "q4_ownershipChainComplete",
+					"bindsTo_template": "ownershipChainComplete",
+					"contextKey": "ownershipChainComplete",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Is the ownership chain (title chain) complete and traceable?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🔗</span> Title Chain</div><div class='info-box highlight'>Lenders need an unbroken chain of ownership from original allotment/sale to current owner.</div>",
+					"options": [
+						{
+							"label": "Yes, complete chain",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "No / Incomplete",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "XCircle"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "originalDocumentsAvailable"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q5_existingEncumbrance",
+					"bindsTo_template": "existingEncumbrance",
+					"contextKey": "existingEncumbrance",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Is there any existing loan / mortgage on this property?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🏦</span> Existing Mortgage</div><div class='info-box highlight'>If property already has a loan, this becomes a Balance Transfer case.</div>",
+					"options": [
+						{
+							"label": "No — property is free from any loan",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "Yes — existing mortgage on this property",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "ownershipChainComplete"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q6_noLegalDispute",
+					"bindsTo_template": "noLegalDispute",
+					"contextKey": "noLegalDispute",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Is the property free from any legal disputes or litigation?",
+					"options": [
+						{
+							"label": "Yes — no disputes",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "No — dispute exists",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "XCircle"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "existingEncumbrance"
+							},
+							""
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "noLegalDispute"
+										},
+										"No"
+									]
+								},
+								"then": "Properties under active litigation are rejected by ALL lenders. Dispute must be resolved first."
+							}
+						]
+					}
+				},
+				{
+					"id": "q7_encumbranceCertificateVerified",
+					"bindsTo_template": "encumbranceCertificateVerified",
+					"contextKey": "encumbranceCertificateVerified",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": false,
+					"question": "Has an Encumbrance Certificate (EC) been obtained?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📜</span> Encumbrance Certificate</div><div class='info-box highlight'>EC from sub-registrar shows 13-30 year transaction history. Clean EC confirms no hidden claims.</div>",
+					"options": [
+						{
+							"label": "Yes — clean EC",
+							"value": "Yes",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "Not yet obtained",
+							"value": "No",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Clock"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "noLegalDispute"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q8_typeOfOccupationProperty",
+					"bindsTo_template": "typeOfOccupationProperty",
+					"contextKey": "typeOfOccupationProperty",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "What is the current occupation status of the property?",
+					"options": [
+						{
+							"label": "Self-occupied",
+							"value": "Self-occupied",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Home"
+						},
+						{
+							"label": "Rented out",
+							"value": "Rent-out",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "DollarSign"
+						},
+						{
+							"label": "Vacant",
+							"value": "Vacant",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "Square"
+						},
+						{
+							"label": "Mixed (partially rented)",
+							"value": "Mixed",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "LayoutGrid"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "noLegalDispute"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "constructionType"
+									},
+									"Plot"
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q9_rentalIncome",
+					"bindsTo_template": "rentalIncome",
+					"contextKey": "rentalIncome",
+					"type": "text",
+					"uiType": "number",
+					"textFieldClass": "mt-8 md:mt-12",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Monthly rent amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "Monthly rental income from this property",
+					"showWhen": {
+						"in": [
+							{
+								"var": "typeOfOccupationProperty"
+							},
+							[
+								"Rent-out",
+								"Mixed"
+							]
+						]
+					}
+				},
+				{
+					"id": "q10_rentalAgreementType",
+					"bindsTo_template": "rentalAgreementType",
+					"contextKey": "rentalAgreementType",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black dark:text-white",
+					"optionContainerClass": "grid gap-3",
+					"uiGroup": "radio_fields",
+					"required": false,
+					"question": "What type of rental agreement is in place?",
+					"description": "<div class='info-title'><span class='info-icon blue'>📝</span> Rental Agreement</div><div class='info-box highlight'>Registered lease agreements are accepted as bankable income. Unregistered agreements may not be counted.</div>",
+					"options": [
+						{
+							"label": "Registered lease agreement",
+							"value": "REGISTERED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileCheck"
+						},
+						{
+							"label": "Unregistered agreement",
+							"value": "UNREGISTERED",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "FileText"
+						},
+						{
+							"label": "No written agreement",
+							"value": "NONE",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "File"
+						}
+					],
+					"showWhen": {
+						"in": [
+							{
+								"var": "typeOfOccupationProperty"
+							},
+							[
+								"Rent-out",
+								"Mixed"
+							]
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"in": [
+										{
+											"var": "rentalAgreementType"
+										},
+										[
+											"UNREGISTERED",
+											"NONE"
+										]
+									]
+								},
+								"then": "Without a registered lease, most lenders will not count rental income towards repayment capacity."
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "tellUsApplyingPage",
+			"title": "Applicant Information",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "applicantProfilePage",
+			"title": "Applicant Profile",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"showWhen": {
+				"<=": [
+					{
+						"var": "__applicantCount"
+					},
+					1
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "incomeProfilesPage",
+			"title": "Income Profiles",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"showWhen": {
+				"==": [
+					{
+						"var": "__applicantCount"
+					},
+					1
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "incomeDetailsPage",
+			"title": "Income Details",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"showWhen": {
+				"and": [
+					{
+						"==": [
+							{
+								"var": "__applicantCount"
+							},
+							1
+						]
+					},
+					{
+						"!": [
+							{
+								"var": "__hasOnlyNoCurrentIncome"
+							}
+						]
+					}
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "creditScorePage",
+			"title": "Credit Score",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"showWhen": {
+				"==": [
+					{
+						"var": "__applicantCount"
+					},
+					1
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "obligationsPage",
+			"title": "Existing Loans",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"showWhen": {
+				"and": [
+					{
+						"==": [
+							{
+								"var": "__applicantCount"
+							},
+							1
+						]
+					},
+					{
+						"==": [
+							{
+								"var": "ObligationsRunning"
+							},
+							"Yes"
+						]
+					}
+				]
+			},
+			"questions": []
+		},
+		{
+			"id": "existingDetailsPage",
+			"title": "Current Loan Details",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"showWhen": {
+				"in": [
+					{
+						"var": "loanType"
+					},
+					[
+						"Balance Transfer With Top-up",
+						"Balance Transfer Only",
+						"Top-up Only"
+					]
+				]
+			},
+			"questions": [
+				{
+					"id": "q1_principalOutstanding",
+					"bindsTo_template": "principalOutstanding",
+					"contextKey": "principalOutstanding",
+					"type": "text",
+					"textClass": "mt-[1rem] md:mt-[2rem]",
+					"uiType": "number",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "Enter outstanding amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"or": [
+										{
+											"and": [
+												{
+													"!=": [
+														{
+															"var": "LAPType"
+														},
+														""
+													]
+												},
+												{
+													"==": [
+														{
+															"var": "loanType"
+														},
+														"New Loan"
+													]
+												}
+											]
+										}
+									]
+								},
+								"then": "What is the outstanding principal amount?"
+							},
+							{
+								"case": {
+									"or": [
+										{
+											"and": [
+												{
+													"!=": [
+														{
+															"var": "LAPType"
+														},
+														""
+													]
+												},
+												{
+													"in": [
+														{
+															"var": "loanType"
+														},
+														[
+															"Balance Transfer With Top-up",
+															"Balance Transfer Only",
+															"Top-up Only"
+														]
+													]
+												}
+											]
+										}
+									]
+								},
+								"then": "What is the outstanding principal of the current loan (LAP), as on today?"
+							}
+						]
+					},
+					"description": "<div class='info-title'><span class='info-icon blue'>💰</span> Outstanding Principal Amount</div><div class='info-box highlight'>This is the remaining loan amount you still owe to your current lender (excluding interest).</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-value'>Original Loan</span> ₹50,00,000</div><div class='diagram-row'><span class='diagram-value'>Principal Paid</span> - ₹15,00,000</div><div class='info-divider'></div><div class='diagram-row'><span class='diagram-value bold'>Outstanding Principal</span> = ₹35,00,000</div></div><div class='info-box warning'><span class='bold'>⚠️ Common Mistake:</span> Don't confuse this with total remaining EMIs (which includes future interest). Outstanding principal is just the principal portion left.</div><div class='info-box tip'><span class='bold'>💡 Where to find it:</span><ul><li>📄 Loan Statement from your bank</li><li>📄 Schedule of Repayment document</li><li>📞 Call your current lender's customer care</li><li>💻 Check your net banking/app</li></ul></div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "principalOutstanding"
+										},
+										500000
+									]
+								},
+								"then": "Please enter a minimum principal outstanding amount of 5 lakh."
+							},
+							{
+								"case": {
+									">": [
+										{
+											"var": "principalOutstanding"
+										},
+										9999999999
+									]
+								},
+								"then": "Enter a valid amount"
+							}
+						]
+					}
+				},
+				{
+					"id": "q2_existingInterestRate",
+					"bindsTo_template": "existingInterestRate",
+					"contextKey": "existingInterestRate",
+					"type": "text",
+					"textClass": "mt-8 md:mt-12",
+					"uiType": "number",
+					"fieldType": "percentage",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "Enter existing interest rate",
+						"icon": "percent"
+					},
+					"required": true,
+					"question": "What's the current interest rate with existing Lender?",
+					"showWhen": {
+						"!=": [
+							{
+								"var": "principalOutstanding"
+							},
+							""
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"or": [
+										{
+											"<": [
+												{
+													"var": "existingInterestRate"
+												},
+												1
+											]
+										},
+										{
+											">": [
+												{
+													"var": "existingInterestRate"
+												},
+												40
+											]
+										}
+									]
+								},
+								"then": "Interest rate must be between 1% to 40%. Any figure beyond this may be unreasonable to our AI."
+							}
+						]
+					}
+				},
+				{
+					"id": "q3_originalRemainingTenure",
+					"bindsTo_template": "originalRemainingTenure",
+					"contextKey": "remainingTenure",
+					"type": "text",
+					"textClass": "mt-8 md:mt-12]",
+					"uiType": "number",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "Enter remaining tenure",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "What's the remaining tenure to close the loan at existing Lender?(in Months)",
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "principalOutstanding"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "existingInterestRate"
+									},
+									""
+								]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"or": [
+										{
+											"<": [
+												{
+													"var": "originalRemainingTenure"
+												},
+												12
+											]
+										},
+										{
+											">": [
+												{
+													"var": "originalRemainingTenure"
+												},
+												180
+											]
+										}
+									]
+								},
+								"then": "Remaining tenure must be between 12 months (1 year) to 180 months (15 years) as remaining tenures. Any figure beyond this seems unreasonable."
+							}
+						]
+					}
+				},
+				{
+					"id": "q_loanVintage",
+					"bindsTo_template": "loanVintage",
+					"contextKey": "loanVintage",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select loan vintage",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "How long have you had this loan with your current lender?",
+					"description": "<div class='info-title'><span class='info-icon blue'>⏱️</span> Loan Vintage</div><div class='info-box highlight'>Most lenders require a minimum of 12 months of repayment history before accepting a balance transfer.</div><div class='info-box note'><span class='bold'>Why this matters:</span> Longer repayment history demonstrates financial discipline and improves your chances of getting better terms from the new lender.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Count from the first EMI payment date, not from the loan sanction date.</div>",
+					"options": [
+						{
+							"label": "Less than 6 months",
+							"value": "LESS_THAN_6M"
+						},
+						{
+							"label": "6-12 months",
+							"value": "6_TO_12M"
+						},
+						{
+							"label": "1-2 years",
+							"value": "1_TO_2Y"
+						},
+						{
+							"label": "2-5 years",
+							"value": "2_TO_5Y"
+						},
+						{
+							"label": "More than 5 years",
+							"value": "MORE_THAN_5Y"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "principalOutstanding"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "existingInterestRate"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "originalRemainingTenure"
+									},
+									""
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "loanVintage"
+										},
+										"LESS_THAN_6M"
+									]
+								},
+								"then": "Most lenders require at least 12 months of repayment history for balance transfer. Very few lenders may accept loans less than 6 months old."
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "loanVintage"
+										},
+										"6_TO_12M"
+									]
+								},
+								"then": "Some lenders require a minimum 12-month relationship. Limited options may be available for loans with 6-12 months vintage."
+							}
+						]
+					}
+				},
+				{
+					"id": "q_repaymentTrack",
+					"bindsTo_template": "repaymentTrack",
+					"contextKey": "repaymentTrack",
+					"type": "radio",
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "radio_fields",
+					"required": true,
+					"question": "Have all EMIs been paid on time in the last 12 months? (No bounces or delays)",
+					"description": "<div class='info-title'><span class='info-icon green'>✅</span> Repayment Track Record</div><div class='info-box highlight'>Lenders check your repayment discipline before accepting a balance transfer. A clean track record gets you better rates and higher chances of approval.</div><div class='info-box note'><span class='bold'>What counts as irregular:</span><ul class='info-list'><li>EMI bounce (cheque/NACH return)</li><li>Payment delayed beyond due date</li><li>Partial payment made instead of full EMI</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Check your bank statement or loan account statement for EMI payment history over the last 12 months.</div>",
+					"options": [
+						{
+							"label": "Yes, all EMIs paid on time",
+							"value": "CLEAN",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "CheckCircle2"
+						},
+						{
+							"label": "1-2 irregular payments",
+							"value": "MINOR_IRREGULAR",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertCircle"
+						},
+						{
+							"label": "3 or more irregular payments",
+							"value": "MAJOR_IRREGULAR",
+							"uiMeta": {
+								"icon": "Circle"
+							},
+							"icon": "AlertTriangle"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "principalOutstanding"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "existingInterestRate"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "originalRemainingTenure"
+									},
+									""
+								]
+							}
+						]
+					},
+					"warning": {
+						"condition": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "repaymentTrack"
+										},
+										"MINOR_IRREGULAR"
+									]
+								},
+								"then": "1-2 irregular payments may limit your options. Some NBFCs are flexible on minor irregularities if recent months show improvement."
+							},
+							{
+								"case": {
+									"==": [
+										{
+											"var": "repaymentTrack"
+										},
+										"MAJOR_IRREGULAR"
+									]
+								},
+								"then": "Frequent EMI bounces significantly reduce balance transfer options. Very few lenders may consider your application, and terms may be less favorable."
+							}
+						]
+					}
+				},
+				{
+					"id": "q4_bankName",
+					"bindsTo_template": "bankName",
+					"contextKey": "banksName",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select bank name",
+						"icon": "landmark"
+					},
+					"required": true,
+					"question": "Please select the lender with whom your current loan is active.",
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "principalOutstanding"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "existingInterestRate"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "originalRemainingTenure"
+									},
+									""
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q5_includedCurrentEMIsAmount",
+					"bindsTo_template": "includedCurrentEMIsAmount",
+					"contextKey": "includedCurrentEMIsAmount",
+					"type": "text",
+					"textClass": "mt-8 md:mt-12",
+					"uiType": "number",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "Enter EMI amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What's the current EMI?",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									">": [
+										{
+											"var": "includedCurrentEMIsAmount"
+										},
+										999999999999
+									]
+								},
+								"then": "Please enter a valid EMI amount."
+							}
+						]
+					},
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "principalOutstanding"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "existingInterestRate"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "originalRemainingTenure"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "bankName"
+									},
+									""
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "topUpDetailstPage",
+			"title": "Balance Transfer & Top-Up",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"showWhen": {
+				"in": [
+					{
+						"var": "loanType"
+					},
+					[
+						"Balance Transfer With Top-up",
+						"Balance Transfer Only",
+						"Top-up Only"
+					]
+				]
+			},
+			"questions": [
+				{
+					"id": "q1_propCost",
+					"bindsTo_template": "propCost",
+					"contextKey": "propCost",
+					"type": "text",
+					"textClass": "mt-[1rem] md:mt-[2rem]",
+					"uiType": "number",
+					"uiMeta": {
+						"placeholder": "Enter property cost",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"uiGroup": "number_fields",
+					"required": true,
+					"question": "What would you estimate the current value of the property?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🏠</span> Property Valuation</div><div class='info-box highlight'>Enter your best estimate of the current market value of your property.</div><div class='stats-row'><div class='stat'><div class='stat-value'>60-70%</div><div class='stat-label'>Typical LTV for LAP</div></div><div class='stat'><div class='stat-value'>7-14 days</div><div class='stat-label'>Valuation Process</div></div></div><div class='info-box note'><span class='bold'>📊 How Lenders Value Property:</span><ul><li>Physical inspection by empaneled valuer</li><li>Comparison with recent sales in area</li><li>Circle rate consideration</li><li>Property condition assessment</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Provide a realistic estimate. The lender's valuation will determine your final eligible loan amount, so overestimating won't help your case.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "propCost"
+										},
+										2000000
+									]
+								},
+								"then": "We do not provide services for the property value less than 20 lakh."
+							}
+						]
+					}
+				},
+				{
+					"id": "q_btLoanPurpose",
+					"bindsTo_template": "loanPurpose",
+					"contextKey": "loanPurpose",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select purpose of top-up",
+						"icon": "target"
+					},
+					"required": true,
+					"question": "What is the primary purpose of the additional funds (top-up)?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🎯</span> Top-Up Purpose</div><div class='info-box highlight'>Lenders are required to document the purpose of the additional funds as part of regulatory compliance.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Choose the option that best describes your primary use of the top-up amount.</div>",
+					"options": [
+						{
+							"label": "Business Expansion / Working Capital",
+							"value": "BUSINESS_EXPANSION"
+						},
+						{
+							"label": "Personal Needs (Medical, Education, Wedding)",
+							"value": "PERSONAL_NEEDS"
+						},
+						{
+							"label": "Debt Consolidation",
+							"value": "DEBT_CONSOLIDATION"
+						},
+						{
+							"label": "Home Renovation / Improvement",
+							"value": "HOME_RENOVATION"
+						},
+						{
+							"label": "Purchase of Another Property",
+							"value": "PROPERTY_PURCHASE"
+						},
+						{
+							"label": "Investment / Asset Purchase",
+							"value": "INVESTMENT"
+						},
+						{
+							"label": "Other",
+							"value": "OTHER"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									[
+										"Balance Transfer With Top-up",
+										"Top-up Only"
+									]
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propCost"
+									},
+									""
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q2_topUpAmount",
+					"bindsTo_template": "topUpAmount",
+					"contextKey": "topUpAmount",
+					"type": "text",
+					"uiType": "number",
+					"textClass": "mt-8 md:mt-12",
+					"uiGroup": "number_fields",
+					"uiMeta": {
+						"placeholder": "Enter your required amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "Please specify the required Top-up amount?",
+					"description": "<div class='info-title'><span class='info-icon blue'>💵</span> Top-Up Loan Amount</div><div class='info-box highlight'>A top-up is additional loan amount over and above your existing outstanding principal.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-value'>Property Value</span> ₹1,00,00,000</div><div class='diagram-row'><span class='diagram-value'>Max LTV (65%)</span> ₹65,00,000</div><div class='diagram-row'><span class='diagram-value'>Outstanding Principal</span> - ₹35,00,000</div><div class='info-divider'></div><div class='diagram-row'><span class='diagram-value bold'>Possible Top-Up</span> = ₹30,00,000</div></div><div class='info-box note'><span class='bold'>📋 Top-Up Eligibility Factors:</span><ul><li>Current property market value</li><li>Your repayment track record</li><li>Income & existing obligations</li><li>Lender's LTV policy</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Top-up amounts vary by lender. We'll show you the best available options based on your profile.</div>",
+					"showWhen": {
+						"and": [
+							{
+								"in": [
+									{
+										"var": "loanType"
+									},
+									[
+										"Balance Transfer With Top-up",
+										"Top-up Only"
+									]
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propCost"
+									},
+									""
+								]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "topUpAmount"
+										},
+										500000
+									]
+								},
+								"then": "Lenders do not accept loan applications below 5 lakh. You should try for personal loan / Business loan for such low amount."
+							},
+							{
+								"case": {
+									">=": [
+										{
+											"var": "topUpAmount"
+										},
+										{
+											"var": "propCost"
+										}
+									]
+								},
+								"then": "Top-up amount should be less than property value."
+							}
+						]
+					}
+				},
+				{
+					"id": "q_topTenure",
+					"bindsTo_template": "mortgageYear",
+					"contextKey": "mortgageYear",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select loan tenure in years",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": {
+						"switch": [
+							{
+								"case": {
+									"==": [
+										{
+											"var": "loanType"
+										},
+										"Top-up Only"
+									]
+								},
+								"then": "What loan term would you prefer with this top-up?"
+							},
+							{
+								"case": {
+									"!=": [
+										{
+											"var": "loanType"
+										},
+										"Top-up Only"
+									]
+								},
+								"then": "What loan term would you prefer with the new lender?"
+							}
+						]
+					},
+					"description": "<div class='info-title'><span class='info-icon green'>📅</span> Loan Tenure Selection</div><div class='info-box highlight'>Choose how long you want to repay your loan - from 5 to 15 years.</div><div class='stats-row'><div class='stat'><div class='stat-value'>5 Years</div><div class='stat-label'>Min Tenure</div></div><div class='stat'><div class='stat-value'>15 Years</div><div class='stat-label'>Max Tenure</div></div></div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-value'>Shorter Tenure</span></div><div class='diagram-row'>✅ Less total interest | ❌ Higher EMI</div><div class='info-divider'></div><div class='diagram-row'><span class='diagram-value'>Longer Tenure</span></div><div class='diagram-row'>✅ Lower EMI | ❌ More total interest</div></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Choose a tenure that keeps your EMI within 40-50% of your monthly income for comfortable repayment. You can always prepay later to close the loan early!</div>",
+					"options": [
+						{
+							"label": "5",
+							"value": "5"
+						},
+						{
+							"label": "6",
+							"value": "6"
+						},
+						{
+							"label": "7",
+							"value": "7"
+						},
+						{
+							"label": "8",
+							"value": "8"
+						},
+						{
+							"label": "9",
+							"value": "9"
+						},
+						{
+							"label": "10",
+							"value": "10"
+						},
+						{
+							"label": "11",
+							"value": "11"
+						},
+						{
+							"label": "12",
+							"value": "12"
+						},
+						{
+							"label": "13",
+							"value": "13"
+						},
+						{
+							"label": "14",
+							"value": "14"
+						},
+						{
+							"label": "15",
+							"value": "15"
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "loanType"
+									},
+									"New Loan"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propCost"
+									},
+									""
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "loanRequirementPage",
+			"title": "Loan Amount & Tenure",
+			"nextButtonVisibility": {
+				"mode": [
+					"allRequiredAnswered"
+				]
+			},
+			"showWhen": {
+				"and": [
+					{
+						"==": [
+							{
+								"var": "loanName"
+							},
+							"Loan Against Property"
+						]
+					},
+					{
+						"!=": [
+							{
+								"var": "LAPType"
+							},
+							""
+						]
+					},
+					{
+						"==": [
+							{
+								"var": "loanType"
+							},
+							"New Loan"
+						]
+					}
+				]
+			},
+			"questions": [
+				{
+					"id": "q1_mortgageYear",
+					"bindsTo_template": "mortgageYear",
+					"contextKey": "mortgageYear",
+					"type": "select",
+					"selectClass": "mt-[1rem] md:mt-[2rem]",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select loan tenure in years",
+						"icon": "calendar"
+					},
+					"required": true,
+					"question": "How long would you like your LAP term to be?",
+					"description": "<div class='info-title'><span class='info-icon gold'>⏱️</span> LAP Loan Term</div><div class='info-box highlight'>The loan term determines how long you'll take to repay your Loan Against Property.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-value'>Example: ₹50 Lakh LAP @ 10%</span></div></div><div class='stats-row'><div class='stat'><div class='stat-value'>₹1,06,000</div><div class='stat-label'>EMI for 5 Yrs</div></div><div class='stat'><div class='stat-value'>₹66,000</div><div class='stat-label'>EMI for 10 Yrs</div></div><div class='stat'><div class='stat-value'>₹54,000</div><div class='stat-label'>EMI for 15 Yrs</div></div></div><div class='info-box note'><span class='bold'>📊 Interest Impact:</span><ul><li>5 Year Term → Total Interest: ~₹13.5 Lakh</li><li>10 Year Term → Total Interest: ~₹29 Lakh</li><li>15 Year Term → Total Interest: ~₹47 Lakh</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Balance between affordable EMI and total interest cost. Most borrowers prefer 8-12 year terms. You can prepay anytime to save on interest!</div>",
+					"options": [
+						{
+							"label": "5",
+							"value": "5"
+						},
+						{
+							"label": "6",
+							"value": "6"
+						},
+						{
+							"label": "7",
+							"value": "7"
+						},
+						{
+							"label": "8",
+							"value": "8"
+						},
+						{
+							"label": "9",
+							"value": "9"
+						},
+						{
+							"label": "10",
+							"value": "10"
+						},
+						{
+							"label": "11",
+							"value": "11"
+						},
+						{
+							"label": "12",
+							"value": "12"
+						},
+						{
+							"label": "13",
+							"value": "13"
+						},
+						{
+							"label": "14",
+							"value": "14"
+						},
+						{
+							"label": "15",
+							"value": "15"
+						}
+					]
+				},
+				{
+					"id": "q_loanPurpose",
+					"bindsTo_template": "loanPurpose",
+					"contextKey": "loanPurpose",
+					"type": "select",
+					"selectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select purpose of loan",
+						"icon": "target"
+					},
+					"required": true,
+					"question": "What is the primary purpose of this loan?",
+					"description": "<div class='info-title'><span class='info-icon gold'>🎯</span> Loan Purpose</div><div class='info-box highlight'>Lenders are required to document the purpose of the loan as part of RBI regulatory compliance.</div><div class='info-box note'><span class='bold'>This helps in:</span><ul class='info-list'><li>Matching you with the right lender programs</li><li>Faster processing as purpose is pre-documented</li><li>Some lenders offer better rates for business use cases</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Choose the option that best describes your primary use of the funds. If you have multiple purposes, select the one for which the majority of the amount will be used.</div>",
+					"options": [
+						{
+							"label": "Business Expansion / Working Capital",
+							"value": "BUSINESS_EXPANSION"
+						},
+						{
+							"label": "Personal Needs (Medical, Education, Wedding)",
+							"value": "PERSONAL_NEEDS"
+						},
+						{
+							"label": "Debt Consolidation",
+							"value": "DEBT_CONSOLIDATION"
+						},
+						{
+							"label": "Home Renovation / Improvement",
+							"value": "HOME_RENOVATION"
+						},
+						{
+							"label": "Purchase of Another Property",
+							"value": "PROPERTY_PURCHASE"
+						},
+						{
+							"label": "Investment / Asset Purchase",
+							"value": "INVESTMENT"
+						},
+						{
+							"label": "Other",
+							"value": "OTHER"
+						}
+					],
+					"showWhen": {
+						"!=": [
+							{
+								"var": "mortgageYear"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q3_propCost",
+					"bindsTo_template": "propCost",
+					"contextKey": "propCost",
+					"type": "text",
+					"uiType": "number",
+					"textClass": "mt-8 md:mt-12",
+					"uiGroup": "loan_details",
+					"uiMeta": {
+						"placeholder": "Enter property cost",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "What would you estimate the current value of the property?",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏠</span> Current Property Value</div><div class='info-box highlight'>Enter the estimated current market value of your property being mortgaged.</div><div class='stats-row'><div class='stat'><div class='stat-value'>60-70%</div><div class='stat-label'>LTV Residential</div></div><div class='stat'><div class='stat-value'>50-60%</div><div class='stat-label'>LTV Commercial</div></div></div><div class='info-box note'><span class='bold'>📊 Valuation Factors:</span><ul><li>Location & neighborhood</li><li>Property age & condition</li><li>Construction quality</li><li>Amenities & facilities</li><li>Recent sales in the area</li></ul></div><div class='info-box warning'><span class='bold'>⚠️ Important:</span> Accurate numbers get you accurate offers! The lender will conduct independent valuation, and significant discrepancies may cause delays.</div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Check recent property sales in your area or consult a local property dealer for a realistic estimate.</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "propCost"
+										},
+										2000000
+									]
+								},
+								"then": "We are providing services for the minimum loan amount of 20 Lakhs Hence the property cost should be more than 20 Lakhs."
+							}
+						]
+					},
+					"showWhen": {
+						"!=": [
+							{
+								"var": "mortgageYear"
+							},
+							""
+						]
+					}
+				},
+				{
+					"id": "q3_loanAmount",
+					"bindsTo_template": "RequiredLoanAmount",
+					"contextKey": "RequiredLoanAmount",
+					"type": "text",
+					"uiType": "number",
+					"textClass": "mt-8 md:mt-12",
+					"uiGroup": "number_fields",
+					"uiMeta": {
+						"placeholder": "Enter your required amount",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": true,
+					"question": "Please specify your desired loan amount.",
+					"description": "<div class='info-title'><span class='info-icon gold'>💰</span> Desired Loan Amount</div><div class='info-box highlight'>Specify how much funding you need from your Loan Against Property.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-value'>Property Value</span> × <span class='diagram-value'>LTV %</span> = <span class='diagram-value'>Max Eligible</span></div><div class='diagram-row'>₹1 Crore × 65% = ₹65 Lakhs</div></div><div class='info-box note'><span class='bold'>📋 Eligibility Factors:</span><ul><li>Property valuation by lender</li><li>Your income & repayment capacity</li><li>Existing loan obligations (FOIR)</li><li>Credit score & history</li><li>Property type (Residential/Commercial)</li></ul></div><div class='stats-row'><div class='stat'><div class='stat-value'>40-50%</div><div class='stat-label'>Ideal EMI to Income</div></div><div class='stat'><div class='stat-value'>750+</div><div class='stat-label'>Good CIBIL Score</div></div></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> Request only what you need. Lower loan amounts mean lower EMIs and better approval chances!</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"<": [
+										{
+											"var": "RequiredLoanAmount"
+										},
+										500000
+									]
+								},
+								"then": "We do not provide services for the requirement value less than 5,00,000."
+							},
+							{
+								"case": {
+									">=": [
+										{
+											"var": "RequiredLoanAmount"
+										},
+										{
+											"var": "propCost"
+										}
+									]
+								},
+								"then": "Loan amount should not exceed property value."
+							}
+						]
+					},
+					"showWhen": {
+						"and": [
+							{
+								"!=": [
+									{
+										"var": "mortgageYear"
+									},
+									""
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propCost"
+									},
+									""
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": "q_dodMonthlyWithdrawal",
+					"bindsTo_template": "dodMonthlyWithdrawal",
+					"contextKey": "dodMonthlyWithdrawal",
+					"type": "text",
+					"uiType": "number",
+					"textClass": "mt-8 md:mt-12",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "Expected monthly withdrawal",
+						"icon": "indian-rupee",
+						"showNumberInWords": true
+					},
+					"required": false,
+					"question": "What is your expected average monthly withdrawal from this overdraft facility? (Optional)",
+					"description": "<div class='info-title'><span class='info-icon blue'>💳</span> Expected Monthly Utilization</div><div class='info-box highlight'>For Drop-line OD, you only pay interest on the amount you actually use. Estimating monthly usage helps size the facility correctly.</div><div class='info-box note'><span class='bold'>How DOD works:</span><ul class='info-list'><li>Sanctioned limit reduces over time (drop-line)</li><li>Withdraw any amount up to the available limit</li><li>Pay interest only on the utilized amount</li><li>Repay and re-use within the available limit</li></ul></div><div class='info-box tip'><span class='bold'>💡 Tip:</span> This is optional but helps lenders offer better terms. If unsure, you can leave this blank.</div>",
+					"showWhen": {
+						"and": [
+							{
+								"==": [
+									{
+										"var": "LAPType"
+									},
+									"Drop-line OverDraft (DOD)"
+								]
+							},
+							{
+								"==": [
+									{
+										"var": "loanType"
+									},
+									"New Loan"
+								]
+							},
+							{
+								"!=": [
+									{
+										"var": "propCost"
+									},
+									""
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+}

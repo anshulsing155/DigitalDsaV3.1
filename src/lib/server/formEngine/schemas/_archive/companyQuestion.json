@@ -1,0 +1,504 @@
+{
+	"pages": [
+		{
+			"id": "loanStructurePage",
+			"title": "Applicant(s) Details",
+			"bindsTo_template": "allApplicantDetails",
+			"nextButtonVisibility": {
+				"mode": ["allRequiredAnswered"]
+			},
+			"questions": [
+				{
+					"id": "companyName",
+					"bindsTo_template": "companyName",
+					"contextKey": "companyName",
+					"type": "text",
+					"uiGroup": "text_fields",
+					"uiMeta": {
+						"placeholder": "Enter the full name",
+						"icon": "building-2"
+					},
+					"required": true,
+					"question": "What's the company name?",
+					"showWhen": {
+						"==": [
+							{
+								"var": "tellUsApplying"
+							},
+							"Company (Non-individual entity)"
+						]
+					}
+				},
+				{
+					"id": "companySelectedAge",
+					"bindsTo_template": "companySelectedAge",
+					"contextKey": "companySelectedAge",
+					"type": "select",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select employment type",
+						"icon": "calendar-1"
+					},
+					"required": true,
+					"question": "How many years has your company been in business?"
+				},
+				{
+					"id": "q_businessType",
+					"bindsTo_template": "businessType",
+					"contextKey": "businessType",
+					"type": "radio",
+					"searchBarNeeded": false,
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Select the category that represents the <span class=\"underline decoration-primary decoration-[3px] font-bold underline-offset-8\"> primary</span>  source of business income.",
+					"description": "<div class='info-title'><span class='info-icon blue'>🏢</span> Business Category Guide</div><div class='info-box highlight'>Select the category that represents your <span class='bold'>primary source</span> of business income.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>🏭 Manufacturing</span><span class='diagram-value'>Produces & stocks goods</span></div><div class='diagram-row'><span class='diagram-label'>🛒 Trading</span><span class='diagram-value'>Buys & sells goods</span></div><div class='diagram-row'><span class='diagram-label'>🔧 Services (B2B/B2C)</span><span class='diagram-value'>Service/job work</span></div><div class='diagram-row'><span class='diagram-label'>💼 Commission</span><span class='diagram-value'>Brokerage income</span></div></div><div class='info-box warning'><span class='bold'>Important:</span> Credit manager will verify. If multiple apply, select the one with major income share.</div>",
+					"descriptionHeader": "The lender's credit manager will verify business category, so choose the one that accurately reflects the main part of business.",
+					"options": [
+						{
+							"label": "Manufacturer / Producer",
+							"value": "manufacturing",
+							"icon": "HardHat"
+						},
+						{
+							"label": "Trading / Retailer",
+							"value": "trading",
+							"icon": "Store"
+						},
+						{
+							"label": "B2B Services / B2C Services",
+							"value": "b2b_services",
+							"icon": "Handshake"
+						},
+						{
+							"label": "Commission based business",
+							"value": "commission-business",
+							"icon": "Percent"
+						}
+					]
+				},
+				{
+					"id": "q_businessActivityDetails",
+					"bindsTo_template": "businessActivityDetails",
+					"contextKey": "allStatementAnswered",
+					"type": "multiple-select-toggle",
+					"searchBarNeeded": false,
+					"radioClass": "mt-8 md:mt-12",
+					"labelClass": "text-black",
+					"optionContainerClass": "grid md:grid-cols-2 gap-3",
+					"uiGroup": "loan_details",
+					"required": true,
+					"question": "Provide important information about your company’s activities",
+					"descriptionHeader": "Please provide accurate information about your business or practice. These details help lenders assess your profile correctly.",
+					"options": [
+						{
+							"label": "Has valid GST registration",
+							"value": "gst_registered",
+							"optionsDescription": "Indicates formal tax compliance and turnover."
+						},
+						{
+							"label": "Has active current account",
+							"value": "has_current_account",
+							"optionsDescription": "Shows formal banking and transaction trail."
+						},
+						{
+							"label": "Uses personal/family savings account for income",
+							"value": "has_saving_account",
+							"optionsDescription": "Acceptable if no current account.",
+							"showWhen": {
+								"==": [
+									{
+										"var": "businessActivityDetails.has_current_account"
+									},
+									false
+								]
+							}
+						},
+						{
+							"label": "Files ITR regularly (min 2 years)",
+							"value": "itr_filed_regularly",
+							"optionsDescription": "Essential for income proof."
+						},
+						{
+							"label": "Has been profitable for the last 3 years",
+							"value": "profit_last_3_years",
+							"optionsDescription": "Demonstrates financial health.",
+							"showWhen": {
+								"and": [
+									{
+										"==": [
+											{
+												"var": "businessActivityDetails.itr_filed_regularly"
+											},
+											true
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "businessActivityDetails.business_3plus_years"
+											},
+											true
+										]
+									}
+								]
+							}
+						},
+						{
+							"label": "Has been profitable since inception",
+							"value": "profit_since_starting",
+							"optionsDescription": "Strong early performance.",
+							"showWhen": {
+								"and": [
+									{
+										"==": [
+											{
+												"var": "businessActivityDetails.itr_filed_regularly"
+											},
+											true
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "businessActivityDetails.business_3plus_years"
+											},
+											false
+										]
+									}
+								]
+							}
+						},
+						{
+							"label": "More than 40% of income is in cash",
+							"value": "major_cash_sales",
+							"optionsDescription": "Reduces income transparency."
+						},
+						{
+							"label": "Most income from 1–2 key clients (reputed firms/brands)",
+							"value": "very_few_clients",
+							"optionsDescription": "Client concentration risk (lowered if reputed)."
+						},
+						{
+							"label": "Taken CC/OD or loan in last 12 months",
+							"value": "has_cc_od",
+							"optionsDescription": "Indicates existing leverage."
+						},
+						{
+							"label": "Business is seasonal in nature",
+							"value": "seasonal_business",
+							"optionsDescription": "Helps assess income stability."
+						},
+						{
+							"label": "Has additional income sources (rent, investment, etc.)",
+							"value": "has_other_income_source",
+							"optionsDescription": "Improves repayment capacity."
+						},
+						{
+							"label": "Applicant has 2+ years experience in same line of business",
+							"value": "two_years_experience_before_business",
+							"optionsDescription": "Shows domain expertise.",
+							"showWhen": {
+								"==": [
+									{
+										"var": "businessActivityDetails.business_3plus_years"
+									},
+									false
+								]
+							}
+						},
+						{
+							"label": "Owns or rents a factory, workshop or warehouse",
+							"value": "has_factory_or_warehouse",
+							"optionsDescription": "Shows business scale.",
+							"showWhen": {
+								"in": [
+									{
+										"var": "businessType"
+									},
+									["manufacturing"]
+								]
+							}
+						},
+						{
+							"label": "Maintains visible inventory or stock with records",
+							"value": "has_inventory",
+							"optionsDescription": "Shows organized operations.",
+							"showWhen": {
+								"in": [
+									{
+										"var": "businessType"
+									},
+									["manufacturing", "trading"]
+								]
+							}
+						},
+						{
+							"label": "Uses family member's savings account for business",
+							"value": "use_savingAccount_family",
+							"optionsDescription": "Acceptable but less preferred.",
+							"showWhen": {
+								"==": [
+									{
+										"var": "businessActivityDetails.has_saving_account"
+									},
+									true
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": "q5_financialsTable",
+					"bindsTo_template": "financialsTable",
+					"contextKey": "financialsTable",
+					"type": "table",
+					"continueButton": true,
+					"uiGroup": "table_fields",
+					"textFieldClass": "mt-8 md:mt-12",
+					"required": true,
+					"question": "Please provide financial details.",
+					"description": "<div class='info-title'><span class='info-icon gold'>📊</span> Financial Details Required</div><div class='info-box highlight'>Provide accurate financial data from your <span class='bold'>ITR filings</span> for proper assessment.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>📈 Turnover/Gross Receipts</span><span class='diagram-value'>As per ITR</span></div><div class='diagram-row'><span class='diagram-label'>💰 Net Profit</span><span class='diagram-value'>As per ITR</span></div><div class='diagram-row'><span class='diagram-label'>📉 Depreciation + Interest</span><span class='diagram-value'>As per ITR</span></div></div><div class='info-box warning'><span class='bold'>Important:</span> If any year shows decrease vs previous year, provide explanation (expansion, new machinery, increased workforce).</div><div class='info-box note'><span class='bold'>Note:</span> Up to 25% drop may be acceptable with valid reasons. Unexplained decreases affect approval.</div>",
+					"uiMeta": {
+						"headers": [],
+						"rows": [
+							{
+								"label": "ITR filed",
+								"field": "itrFiled",
+								"icons": ["indian-rupee", "indian-rupee", "indian-rupee"]
+							},
+							{
+								"label": "Net Profit <br /> <p class=\"alertText font-paragraph text-black\">(as per <span class=\" font-titleMedium inputText \">ITR</span>)</p>",
+								"field": "netProfitArray",
+								"icons": ["indian-rupee", "indian-rupee", "indian-rupee"]
+							},
+							{
+								"label": "Depreciation + Interest <br /> <p class=\"alertText font-paragraph text-black\">(as per <span class=\" font-titleMedium inputText \">ITR</span>)</p>",
+								"field": "depreciationArray",
+								"icons": ["indian-rupee", "indian-rupee", "indian-rupee"]
+							},
+							{
+								"label": "Turnover / Gross Receipts",
+								"field": "turnOver",
+								"icons": ["indian-rupee", "indian-rupee", "indian-rupee"]
+							}
+						]
+					},
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									">": [
+										{
+											"var": "netProfitArray"
+										},
+										{
+											"var": "turnOver"
+										}
+									]
+								},
+								"then": "Net Profit cannot be greater than Turnover."
+							},
+							{
+								"case": {
+									"<": [
+										{
+											"+": [
+												{
+													"var": "netProfitArray"
+												},
+												{
+													"var": "depreciationArray"
+												}
+											]
+										},
+										240000
+									]
+								},
+								"then": "Net Profit + Depreciation + Interest should be at least ₹2,40,000."
+							}
+						]
+					}
+				},
+				{
+					"id": "q_creditScore",
+					"bindsTo_template": "creditScore",
+					"contextKey": "creditScore",
+					"type": "text",
+					"continueButton": true,
+					"uiType": "number",
+					"uiGroup": "inputNumber",
+					"uiMeta": {
+						"placeholder": "Select credit score",
+						"icon": "gauge"
+					},
+					"required": true,
+					"question": "What's the Credit Score?",
+					"description": "<div class='info-title'><span class='info-icon gold'>📊</span> Credit Score Importance</div><div class='info-box highlight'>Your credit score is a <span class='bold'>key indicator</span> of your creditworthiness to lenders.</div><div class='visual-diagram'><div class='diagram-row'><span class='diagram-label'>🔴 Poor</span><span class='diagram-value'>300-549</span></div><div class='diagram-row'><span class='diagram-label'>🟡 Fair</span><span class='diagram-value'>550-649</span></div><div class='diagram-row'><span class='diagram-label'>🟢 Good</span><span class='diagram-value'>650-749</span></div><div class='diagram-row'><span class='diagram-label'>⭐ Excellent</span><span class='diagram-value'>750-900</span></div></div><div class='info-box tip'><span class='bold'>Benefits of high score:</span> Better interest rates, faster approval, and higher loan amounts!</div>",
+					"validation": {
+						"condition": [
+							{
+								"case": {
+									"or": [
+										{
+											"<": [
+												{
+													"var": "creditScore"
+												},
+												300
+											]
+										},
+										{
+											">": [
+												{
+													"var": "creditScore"
+												},
+												900
+											]
+										}
+									]
+								},
+								"then": "Credit score should be between 300 and 900"
+							}
+						]
+					}
+				},
+				{
+					"id": "q_whyPrimaryLowCredit",
+					"bindsTo_template": "whyPrimaryLowCredit",
+					"contextKey": "whyPrimaryLowCreditAnswered",
+					"continueButton": true,
+					"type": "multiple-select-toggle",
+					"multipleSelectClass": "mt-8 md:mt-12",
+					"uiGroup": "select_fields",
+					"uiMeta": {
+						"placeholder": "Select the reason why you have low credit score"
+					},
+					"required": true,
+					"question": "What factors have contributed to this CIBIL score?",
+					"description": "<div class='info-title'><span class='info-icon red'>⚠️</span> CIBIL Score Factors</div><div class='info-box warning'>Please share <span class='bold'>honestly</span> - incorrect information can lead to rejection.</div><ul class='info-list'><li>Delayed EMI payments affect your score</li><li>High credit card utilization impacts rating</li><li>Multiple loan enquiries reduce score temporarily</li><li>Limited credit history can lower scores</li></ul><div class='info-box tip'><span class='bold'>Why honesty matters:</span> Lenders verify this data. Accurate information helps find the right loan match for you!</div>",
+					"options": [
+						{
+							"label": "Delayed EMI payments in the past 12 months",
+							"value": "delayedEMI",
+							"showWhen": {
+								"<=": [
+									{
+										"var": "creditScore"
+									},
+									780
+								]
+							}
+						},
+						{
+							"label": "High utilization of available credit card limit",
+							"value": "highCreditUtilization",
+							"showWhen": {
+								"<=": [
+									{
+										"var": "creditScore"
+									},
+									780
+								]
+							}
+						},
+						{
+							"label": "Limited or no credit history",
+							"value": "noCreditHistory",
+							"showWhen": {
+								"<=": [
+									{
+										"var": "creditScore"
+									},
+									780
+								]
+							}
+						},
+						{
+							"label": "Only minimum due payments made on credit cards",
+							"value": "minimumDueOnly",
+							"showWhen": {
+								"<=": [
+									{
+										"var": "creditScore"
+									},
+									780
+								]
+							}
+						},
+						{
+							"label": "Multiple recent loan or credit card enquiries",
+							"value": "multipleEnquiries",
+							"showWhen": {
+								"<=": [
+									{
+										"var": "creditScore"
+									},
+									780
+								]
+							}
+						},
+						{
+							"label": "Defaulted in one or more previous loans as co-applicant / guarantor",
+							"value": "coApplicantDefault",
+							"showWhen": {
+								"<=": [
+									{
+										"var": "creditScore"
+									},
+									780
+								]
+							}
+						},
+						{
+							"label": "Loan default or settlement in the past",
+							"value": "loanDefault",
+							"showWhen": {
+								"<=": [
+									{
+										"var": "creditScore"
+									},
+									780
+								]
+							}
+						},
+						{
+							"label": "Only unsecured loans such as credit cards or personal loans in profile",
+							"value": "onlyUnsecuredLoans",
+							"showWhen": {
+								"<=": [
+									{
+										"var": "creditScore"
+									},
+									780
+								]
+							}
+						}
+					],
+					"showWhen": {
+						"and": [
+							{
+								"<=": [
+									{
+										"var": "creditScore"
+									},
+									780
+								]
+							},
+							{
+								">=": [
+									{
+										"var": "creditScore"
+									},
+									300
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+}

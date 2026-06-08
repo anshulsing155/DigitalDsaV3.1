@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Manage_picto_darkbg@1x</title>
+    <g id="Manage_picto_darkbg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path" fill-rule="nonzero" points="0 0 64 0 64 64 0 64"></polygon>
+        <g>
+            <rect id="Rectangle" fill="#4F4C4D" fill-rule="nonzero" x="0" y="0" width="64" height="64"></rect>
+            <g id="pictogram/Medium./Manage64" transform="translate(11.578125, 17.156250)" stroke-width="0.8">
+                <g id="pictogram">
+                    <line x1="0" y1="3.984375" x2="31.078125" y2="3.984375" id="Line" stroke="#FFFFFF" stroke-linecap="square"></line>
+                    <line x1="8.765625" y1="14.34375" x2="39.84375" y2="14.34375" id="Line" stroke="#FFFFFF" stroke-linecap="square"></line>
+                    <line x1="0" y1="24.703125" x2="15.140625" y2="24.703125" id="Line" stroke="#FFFFFF" stroke-linecap="square"></line>
+                    <line x1="24.703125" y1="24.703125" x2="39.84375" y2="24.703125" id="Line" stroke="#FFFFFF" stroke-linecap="square"></line>
+                    <path d="M31.875,3.984375 C31.875,1.787156 33.662156,0 35.859375,0 C38.0555372,0 39.84375,1.787156 39.84375,3.984375 C39.84375,6.18053714 38.0555372,7.96875 35.859375,7.96875 C33.662156,7.96875 31.875,6.18053714 31.875,3.984375 Z" id="Point-4" stroke="#FFFFFF" fill="#4F4C4D" fill-rule="nonzero"></path>
+                    <path d="M0,14.34375 C0,12.146531 1.787156,10.359375 3.984375,10.359375 C6.18053714,10.359375 7.96875,12.146531 7.96875,14.34375 C7.96875,16.5399122 6.18053714,18.328125 3.984375,18.328125 C1.787156,18.328125 0,16.5399122 0,14.34375 Z" id="Point-4" stroke="#FFFFFF" fill="#4F4C4D" fill-rule="nonzero"></path>
+                    <path d="M15.9375,24.703125 C15.9375,22.505906 17.724656,20.71875 19.921875,20.71875 C22.1180372,20.71875 23.90625,22.505906 23.90625,24.703125 C23.90625,26.8992872 22.1180372,28.6875 19.921875,28.6875 C17.724656,28.6875 15.9375,26.8992872 15.9375,24.703125 Z" id="Focus" stroke="#ffcc00" fill="#ffcc00" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

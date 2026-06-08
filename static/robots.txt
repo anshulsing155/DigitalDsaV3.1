@@ -1,0 +1,24 @@
+# robots.txt for DigitalDSA
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /internal/
+
+# Allow important pages
+Allow: /home-loan
+Allow: /personal-loan
+Allow: /business-loan
+Allow: /lap
+Allow: /calculators/
+Allow: /planners/
+
+# Sitemap location
+Sitemap: https://digitaldsa.com/sitemap.xml
+
+# Crawl delay to prevent server overload
+Crawl-delay: 10

@@ -1,0 +1,502 @@
+{
+	"questions": [
+		{
+			"id": "loanType",
+			"bindsTo": "currentLoanType",
+			"type": "select",
+			"label": "Loan Type",
+			"optionsKey": "loanTypeOptions",
+			"options": [],
+			"icon": "list"
+		},
+		{
+			"id": "bankName",
+			"bindsTo": "currentBankName",
+			"type": "select",
+			"label": "Bank Name",
+			"optionsKey": "banksWithoutNBFC",
+			"icon": "landmark"
+		},
+		{
+			"id": "emi",
+			"bindsTo": "currentEmi",
+			"type": "number",
+			"uiType": "number",
+			"inputRestriction": "numeric",
+			"maxlength": 8,
+			"label": "EMI paid by applicant",
+			"valueType": "number",
+			"placeholder": "Enter applicant’s EMI amount",
+			"icon": "indian-rupee",
+			"showWhen": {
+				"and": [
+					{
+						"!": {
+							"in": [
+								{
+									"var": "currentLoanType"
+								},
+								["OD Limit", "CC Limit", "Dropline OD"]
+							]
+						}
+					},
+					{
+						"and": [
+							{
+								"var": "currentLoanType"
+							},
+							{
+								"!": [
+									{
+										"==": [
+											{
+												"var": "currentLoanType"
+											},
+											""
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "currentEmi"
+								},
+								1000
+							]
+						},
+						"then": "value cannot be less than 1 thousand"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "currentEmi"
+								},
+								10000000
+							]
+						},
+						"then": "not greater than 1 crore"
+					}
+				]
+			}
+		},
+		{
+			"id": "totalLimit",
+			"bindsTo": "currentTotalLimit",
+			"type": "number",
+			"inputRestriction": "numeric",
+			"maxlength": 8,
+			"uiType": "number",
+			"valueType": "number",
+			"label": {
+				"switch": [
+					{
+						"case": {
+							"in": [
+								{
+									"var": "currentLoanType"
+								},
+								["OD Limit", "CC Limit"]
+							]
+						},
+						"then": "Total Limit"
+					},
+					{
+						"case": {
+							"==": [
+								{
+									"var": "currentLoanType"
+								},
+								"Dropline OD"
+							]
+						},
+						"then": "Sanctioned Limit"
+					}
+				]
+			},
+			"dynamicLabel": {
+				"ifIn": ["currentLoanType", ["OD Limit", "CC Limit"]],
+				"then": "Total Limit",
+				"else": "Remaining Limit"
+			},
+			"placeholder": {
+				"switch": [
+					{
+						"case": {
+							"in": [
+								{
+									"var": "currentLoanType"
+								},
+								["OD Limit", "CC Limit"]
+							]
+						},
+						"then": "Total Limit"
+					},
+					{
+						"case": {
+							"and": [
+								{
+									"!=": [
+										{
+											"var": "currentLoanType"
+										},
+										"OD Limit"
+									]
+								},
+								{
+									"!=": [
+										{
+											"var": "currentLoanType"
+										},
+										"CC Limit"
+									]
+								}
+							]
+						},
+						"then": "Sanctioned Limit"
+					}
+				]
+			},
+			"icon": "indian-rupee",
+			"showWhen": {
+				"in": [
+					{
+						"var": "currentLoanType"
+					},
+					["OD Limit", "CC Limit", "Dropline OD"]
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "currentTotalLimit"
+								},
+								100000
+							]
+						},
+						"then": "must be greater than 1 lakh"
+					}
+				]
+			}
+		},
+		{
+			"id": "sanctionedTenure",
+			"bindsTo": "currentSanctionedTenure",
+			"type": "number",
+			"uiType": "number",
+			"inputRestriction": "numeric",
+			"maxlength": 3,
+			"valueType": "number",
+			"label": "Sanctioned Tenure (months)",
+			"placeholder": "Enter sanctioned tenure",
+			"icon": "calendar",
+			"showWhen": {
+				"in": [
+					{
+						"var": "currentLoanType"
+					},
+					["OD Limit", "CC Limit", "Dropline OD"]
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "currentSanctionedTenure"
+								},
+								1
+							]
+						},
+						"then": "value cannot be less than 1"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "currentSanctionedTenure"
+								},
+								480
+							]
+						},
+						"then": "not greater than 480"
+					}
+				]
+			}
+		},
+		{
+			"id": "remainingLimit",
+			"bindsTo": "currentRemainingLimit",
+			"type": "number",
+			"uiType": "number",
+			"inputRestriction": "numeric",
+			"maxlength": 8,
+			"valueType": "number",
+			"label": "Remaining Limit (current)",
+			"placeholder": "Enter remaining limit",
+			"icon": "indian-rupee",
+			"showWhen": {
+				"==": [
+					{
+						"var": "currentLoanType"
+					},
+					"Dropline OD"
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "currentRemainingLimit"
+								},
+								100000
+							]
+						},
+						"then": "value cannot be less than 1 lakh"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "currentRemainingLimit"
+								},
+								{
+									"var": "currentTotalLimit"
+								}
+							]
+						},
+						"then": "not greater than total limit"
+					}
+				]
+			}
+		},
+		{
+			"id": "tenure",
+			"bindsTo": "currentTenure",
+			"type": "number",
+			"uiType": "number",
+			"inputRestriction": "numeric",
+			"maxlength": 3,
+			"valueType": "number",
+			"label": "Remaining Tenure (months)",
+			"placeholder": "Enter tenure in months",
+			"icon": "calendar",
+			"showWhen": {
+				"and": [
+					{
+						"var": "currentLoanType"
+					},
+					{
+						"!": {
+							"in": [
+								{
+									"var": "currentLoanType"
+								},
+								["OD Limit", "CC Limit"]
+							]
+						}
+					}
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "currentTenure"
+								},
+								1
+							]
+						},
+						"then": "value cannot be less than 1"
+					},
+					{
+						"case": {
+							"and": [
+								{
+									"!=": [
+										{
+											"var": "currentLoanType"
+										},
+										"Dropline OD"
+									]
+								},
+								{
+									">": [
+										{
+											"var": "currentTenure"
+										},
+										480
+									]
+								}
+							]
+						},
+						"then": "not greater than 480 months"
+					},
+					{
+						"case": {
+							"and": [
+								{
+									"==": [
+										{
+											"var": "currentLoanType"
+										},
+										"Dropline OD"
+									]
+								},
+								{
+									">": [
+										{
+											"var": "currentTenure"
+										},
+										{
+											"var": "currentSanctionedTenure"
+										}
+									]
+								}
+							]
+						},
+						"then": "not greater than sanctioned tenure (months)"
+					}
+				]
+			}
+		},
+		{
+			"id": "utilizedAmount",
+			"bindsTo": "currentUtilizedAmount",
+			"type": "number",
+			"uiType": "number",
+			"inputRestriction": "numeric",
+			"maxlength": 8,
+			"valueType": "number",
+			"label": "Utilized Amount",
+			"placeholder": "Enter utilized amount",
+			"icon": "indian-rupee",
+			"showWhen": {
+				"==": [
+					{
+						"var": "currentLoanType"
+					},
+					"Dropline OD"
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "currentUtilizedAmount"
+								},
+								100000
+							]
+						},
+						"then": "value cannot be less than 1 lakh"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "currentUtilizedAmount"
+								},
+								{
+									"var": "currentRemainingLimit"
+								}
+							]
+						},
+						"then": "not greater than remaining limit"
+					}
+				]
+			}
+		},
+		{
+			"id": "interestRate",
+			"bindsTo": "currentInterestRate",
+			"type": "interestRate",
+			"uiType": "number",
+			"valueType": "number",
+			"label": "Interest Rate (%)",
+			"placeholder": "Enter interest rate",
+			"icon": "percent",
+			"showWhen": {
+				"and": [
+					{
+						"var": "currentLoanType"
+					},
+					{
+						"!=": [
+							{
+								"var": "currentLoanType"
+							},
+							""
+						]
+					}
+				]
+			},
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "currentInterestRate"
+								},
+								1
+							]
+						},
+						"then": "value cannot be less than 1%"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "currentInterestRate"
+								},
+								99.99
+							]
+						},
+						"then": "not greater than 99.99%"
+					}
+				]
+			}
+		},
+		{
+			"id": "selectedToClose",
+			"bindsTo": "currentSelectedToClose",
+			"type": "select",
+			"label": "How to handle this loan?",
+			"optionsKey": "selectToCloseOptions",
+			"icon": "hand-coins",
+			"showWhen": {
+				"and": [
+					{
+						"var": "currentLoanType"
+					},
+					{
+						"!=": [
+							{
+								"var": "currentLoanType"
+							},
+							""
+						]
+					}
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,8 @@
+<svg width="29" height="42" viewBox="0 0 29 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="lock&#38;key">
+<path id="Hook" d="M23 15.3541C23 15.6877 23 14.0928 23 10.5694C23 5.28437 19.1944 1 14.5 1C9.80558 1 6 5.28437 6 10.5694C6 14.0928 6 15.6877 6 15.3541" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Lock" d="M27 15.5273H2C1.44772 15.5273 1 16.0232 1 16.6348V39.8922C1 40.5038 1.44772 40.9997 2 40.9997H27C27.5523 40.9997 28 40.5038 28 39.8922V16.6348C28 16.0232 27.5523 15.5273 27 15.5273Z" fill="white" stroke="#1E1E1E"/>
+<path id="Keyhole" d="M14 29.3705C15.6569 29.3705 17 27.883 17 26.0481C17 24.2131 15.6569 22.7256 14 22.7256C12.3431 22.7256 11 24.2131 11 26.0481C11 27.883 12.3431 29.3705 14 29.3705Z" fill="#ffcc00" stroke="#1E1E1E"/>
+<path id="Path" d="M14 29.3711V36.016" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

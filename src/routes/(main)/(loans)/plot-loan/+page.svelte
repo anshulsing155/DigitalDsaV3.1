@@ -1,0 +1,667 @@
+<script>
+  import ThingsYouShould from "$lib/components/website/ThingsYouShould.svelte";
+  import Button from "$lib/components/website/Button.svelte";
+  import Sublist from "$lib/components/website/Sublist.svelte";
+  import TwoColumnWithLeftHeading from "$lib/components/website/TwoColumnWithLeftHeading.svelte";
+  import PaymentTable from "$lib/components/website/PaymentTable.svelte";
+  import NewPageLayout from "$lib/components/website/NewPageLayout.svelte";
+  import HelpList from "$lib/components/website/HelpList.svelte";
+  import AboveTitleWithTopIconCard from "$lib/components/website/AboveTitleWithTopIconCard.svelte";
+  import AboveTitleWithBlackCard from "$lib/components/website/AboveTitleWithBlackCard.svelte";
+  import ButtonBanner from "$lib/components/website/ButtonBanner.svelte";
+  import TwoColumnWithImage from "$lib/components/website/TwoColumnWithImage.svelte";
+  import Loader from "$lib/components/website/Loader.svelte";
+  import Anchor from "$lib/components/website/Anchor.svelte";
+  import FeedbackCheck from "$lib/components/website/FeedbackCheck.svelte";
+  import { applicationData } from "$lib/stores/stores";
+  import Seo from "$lib/components/Seo.svelte";
+  import AboveTitleWithoutIconCard from "$lib/components/website/AboveTitleWithoutIconCard.svelte";
+
+  let subList = [
+    {
+      linkName: "Plot-Only Loan",
+      url: `/plot-loan/plot-only-loan`,
+      icon: "/icons/plotOnlyloan.svg",
+      altName: "plot-icon",
+    },
+    {
+      linkName: "Construction-Only Loan",
+      url: `/plot-loan/construction-loan`,
+      icon: "/icons/renovateHome.svg",
+      altName: "loan-icon",
+    },
+    {
+      linkName: "Plot + Construction Loan",
+      url: `/plot-loan/plot-and-construction-loan`,
+      icon: "/icons/propertyEligibility.svg",
+      altName: "loan-icon",
+    },
+    {
+      linkName: "Plot + Equity Loan",
+      url: `/plot-loan/plot-and-equity-loan`,
+      icon: "/icons/lap.svg",
+      altName: "loan-icon",
+    },
+    {
+      linkName: "Balance Transfer",
+      url: `/plot-loan/#bt`,
+      icon: "/icons/comparison.svg",
+      altName: "loan-icon",
+    },
+    {
+      linkName: "Calculators",
+      url: `/plot-loan/#calc`,
+      icon: "/icons/calc.svg",
+      altName: "loan-icon",
+    },
+  ];
+
+  let pageData = {
+    coverImage: "/images/plot-loan-blog.jpg",
+    coverAlt: "hero-cover",
+    classStyle: "object-cover xl:h-[90svh] 3xl:max-h-[60svh]",
+    heading: "Plot loans",
+    sourceName: "undefined",
+    originalSource:
+          "https://assets.undefined.com.au/is/image/undefined/family-new-home?$Responsive_Align_Center_Top$&fit=constrain&wid=978&dpr=off",
+    para: `Tools, calculators, and plot-buying guides to support you at every step of your journey. Whether you're looking for a balance transfer, upgrading or downsizing your plot, investing, or buying your first property, we’re here to help.`,
+    actionBtn: [
+      {
+        btnName: "Explore loan offers",
+        btnLink: "/get-started/how-can-we-help",
+        btnColor: "#ffcc00",
+        btnClick: () => {
+          $applicationData.LoanName = "Plot Loan";
+        },
+        animation: true,
+      },
+      {
+        btnName: "Book an appointment",
+        btnLink: "/appointment",
+        btnBorder: "#4F4C4D",
+      },
+    ],
+  };
+
+  let firstTableData = [
+    {
+      columnName: [
+        "<div class='flex gap-2 items-center'><img class='h-5' src='/icons/features.svg' alt='gear icon'> Feature </div>",
+        "<div class='flex gap-2 items-center'><img class='h-5' src='/icons/plotLoans.svg' alt='plot icon'> Plot Loan </div>",
+        "<div class='flex gap-2 items-centers'> <img class='h-5' src='/icons/home.svg' alt='home icon'> Home Loan </div>",
+      ],
+      rowData: [
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Purpose </span>":
+            [
+              "Purchase of residential plots",
+              "Purchase or construction of a house/apartment",
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>Construction Requirement</span>":
+            [
+              "Construction usually required within <span class='font-FourthHead'>2-5 years</span>",
+              "No such requirement",
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Property Eligibility	</span>":
+            [
+              "Only for <span class='font-FourthHead'>government-approved layouts or RERA-approved private plots</span>",
+              "Ready-built houses, under-construction properties, resale homes",
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='home icon'>Loan-to-Value (LTV) Ratio</span>":
+            [
+              "<span class='font-FourthHead'>Up to 70%</span> of the plot value",
+              "<span class='font-FourthHead'>Up to 80-90%</span> of the property value",
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/tenure.svg' alt='home icon'>Loan Tenure</span>":
+            [
+              "Shorter tenure: <span class='font-FourthHead'>10-15 years</span>",
+              "Longer tenure: <span class='font-FourthHead'>Up to 30 years</span>",
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Tax Benefits</span>":
+            [
+              "<span class='font-FourthHead'>No tax benefits</span> on plot purchase; available only if construction starts",
+              "Tax benefits on <span class='font-FourthHead'>principal (80C)</span> and <span class='font-FourthHead'>interest (24b)</span>",
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/interestRate.svg' alt='home icon'>Interest Rates</span>":
+            [
+              "Slightly <span class='font-FourthHead'>higher</span> than home loans",
+              "Generally <span class='font-FourthHead'>lower</span> interest rates",
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Availability</span>":
+            [
+              "Limited banks/NBFCs offer it; only for <span class='font-FourthHead'>residential plots</span>",
+              "Widely available from most banks/NBFCs",
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='home icon'>Best for?</span>":
+            [
+              "Buying land now and constructing later",
+              "Buying a ready-to-move or under-construction house",
+            ],
+        },
+      ],
+    },
+  ];
+
+  let btTable = [
+    {
+      columnName: [
+        "<div class='flex gap-2 items-center'><img class='h-5' src='/icons/features.svg' alt='gear icon'> Loan Category </div>",
+        "<div class='flex gap-2 items-center text-left'><img class='h-5' src='/icons/plotLoans.svg' alt='plot icon'> Supports Balance Transfer </div>",
+        "<div class='flex gap-2 items-center'> <img class='h-5' src='/icons/accessEnergy.svg' alt='energy icon'> Eligibility </div>",
+        "<div class='flex gap-2 items-center'> <img class='h-5' src='/icons/offers.svg' alt='gift icon'> Benefits </div>",
+        "<div class='flex gap-2 items-center'> <img class='h-5' src='/icons/manageLoan2.svg' alt='home icon'> Learn more </div>",
+      ],
+      rowData: [
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/plotOnlyloan.svg' alt='plot icon'> Plot-Only Loan </span>":
+            [
+              "❌ No",
+              `- Resident Indians aged 18-70 years 
+              <br>
+              - Salaried or self-employed individuals
+              <br>
+              - Credit score of 750 or above`,
+
+              `- Not applicable for balance transfer 
+              <br>
+              - Can finance up to 80% of plot value
+              <br>
+             - Flexible tenure up to 20 years`,
+              `<a href="/plot-loan/plot-only-loan/#bt">Know more</a>`,
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='construction icon'> Construction Loan </span>":
+            [
+              "✅ Yes",
+              `- Existing home construction loan 
+              <br>
+              - Good credit history
+              <br>
+              - Proof of income and employment`,
+
+              `- Potential for lower interest rates 
+              <br>
+              - Extended repayment tenure
+              <br>
+            - Reduced EMI burden
+            <br>
+            - top-up facility`,
+              `<a href="/plot-loan/construction-loan/#bt">Know more</a>`,
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/renovateHome.svg' alt='home icon'> Plot + Construction Loan </span>":
+            [
+              "✅ Yes",
+              `- Resident Indians aged 18-70 years 
+              <br>
+              - Salaried or self-employed
+              <br>
+              - Credit score of 750 or above
+              <br>
+              - Approved construction plan
+              `,
+
+              `- Single loan for both plot purchase and construction
+              <br>
+             - Possible interest rate reduction
+              <br>
+            - Streamlined repayment process
+            <br>
+            - top-up facility`,
+              `<a href="/plot-loan/plot-and-construction-loan/#bt">Know more</a>`,
+            ],
+        },
+        {
+          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Plot + Equity Loan </span>":
+            [
+              "❌ No",
+              `- Typically not offered as a combined product 
+              <br>
+              - Separate eligibility for plot loan and loan against property`,
+
+              `- Not applicable for balance transfer
+              <br>
+            - May need to refinance through separate loans`,
+              `<a href="/plot-loan/plot-and-equity-loan/#bt">Know more</a>`,
+            ],
+        },
+      ],
+    },
+  ];
+
+  let loaderValue = false;
+
+</script>
+<Seo
+  type="WebPage"
+  title="Plot Loans – Compare Offers & Apply for Low-Interest Rates"
+  image= "/images/plot-loan-blog.jpg"
+  description="Get the best plot loan offers for buying land or construction. Compare lenders, calculate EMI, and apply online with DigitalDSA today!"
+  keywords="Plot Loan, Buy Residential Plot, Construction Loan, Plot Financing, Balance Transfer, Plot Loan vs Home Loan, RERA Approved Plots, Low-Interest Plot Loans, Digital DSA Loan, Loan for Land Purchase, Property Investment Loan, Plot Loan Calculator, Transfer Plot Loan, Land Conversion, Secure Home Financing"
+/>
+{#if !loaderValue}
+  <section class="xl:contianer mx-auto w-full bg-mainBg content">
+    <NewPageLayout {pageData}>
+      <Sublist {subList} />
+
+      <!-- plot categories -->
+      <TwoColumnWithLeftHeading
+        contents={{
+          heading: `Plot categories, <br> we serve`,
+          list: [
+            {
+              heading: `Government Authorities–`,
+              desc: `State Development/Town Planning Authorities or other government-constituted bodies.`,
+            },
+            {
+              heading: `Statutory Authorities–`,
+              desc: `Central/State Government entities, local authorities, or public-private partnerships.`,
+            },
+            {
+              heading: `Private Entities–`,
+              desc: `Approved sites/layouts with statutory approval, registered under government authorities and RERA-approved projects (e.g., DLF, Omaxe), either directly or via resale.`,
+            },
+            {
+              heading: `Government Development Authorities–`,
+              desc: `Land from entities like DDA, LDA, JDA, HUDA, either directly or through resale.`,
+            },
+          ],
+        }}
+      />
+
+      <!-- diff b/w plot & home -->
+      <div
+        class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+      >
+        <div class="">
+          <h2
+            class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+          >
+            Plot Loan <br /> vs <br /> Home Loan:
+            <span
+              class="underline decoration-4 underline-offset-4 decoration-btnBg italic"
+              >Key Differences</span
+            >
+          </h2>
+        </div>
+        <div class="">
+          {#each firstTableData as tableData}
+            <PaymentTable {tableData} />
+          {/each}
+        </div>
+      </div>
+
+      <!-- why choose us -->
+      <AboveTitleWithTopIconCard
+        contents={{
+          heading: `Why choose us`,
+          xlGridCol: 3,
+          borderBottom: true,
+          cards: [
+            {
+              heading: "Better privacy",
+              para: `We don't collect your phone number to show the best deals available with all the lenders.`,
+              icon: "/icons/clock.svg",
+              altName: "clock-icon",
+            },
+            {
+              heading: "Negotiate your rate​​",
+              para: `Negotiate your rate with a plot Lending Specialist when you apply for a Standard Variable Rate plot loan with a Wealth Package.`,
+              icon: "/icons/negotiate.svg",
+              altName: "negotiate-icon",
+            },
+            {
+              heading: "Hyper secure​",
+              para: `If you apply with us, your private info is safe with our custom-built loan platform DDSA.`,
+              icon: "/icons/phoneConnection.svg",
+              altName: "phoneConnection-icon",
+            },
+            {
+              heading:
+                "Pay less interest on your plot loan with multiple offset accounts",
+              para: `Make your money work harder by saving on interest and paying off your plot loan sooner with multiple offset accounts with no set-up fee.​​`,
+              icon: "/icons/inte.svg",
+              altName: "inte-icon",
+            },
+            {
+              heading: "Track your application​",
+              para: `Follow your application through to settlement with Home Hub in the Digital DSA app.`,
+              icon: "/icons/contact.svg",
+              altName: "contact-icon",
+            },
+            {
+              heading: "Access exclusive offers & discounts​",
+              para: `Unlock fast contract reviews with Home-in, save on nbn and mobile plans with More and, if eligible, be rewarded as part of Digital DSA , our customer recognition program.`,
+              icon: "/icons/offers.svg",
+              altName: "offers-icon",
+            },
+          ],
+        }}
+      />
+
+      <!-- balance transfer -->
+      <div id="bt">
+        <div
+          class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+        >
+          <div class="">
+            <h2
+              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+            >
+              Balance Transfer for Plot Loans
+            </h2>
+          </div>
+          <div class="">
+            {#each btTable as tableData}
+              <PaymentTable {tableData} />
+            {/each}
+          </div>
+        </div>
+
+        <AboveTitleWithoutIconCard
+          contents={{
+            heading: `Charges & Savings on Loan Transfer`,
+            xlGridCol: 3,
+            borderBottom: true,
+            list: [
+              {
+                heading: "Processing Fee",
+                topPara: `Charged by the new lender (typically 0.5% to 2% of the loan amount).`,
+                para: `<span class="font-FourthHead">💡 Tip:</span> Negotiate with the lender or look for promotional offers with waived processing fees.`,
+              },
+              {
+                heading: "Foreclosure Charges",
+                topPara: `Some lenders may charge 2-5% of the outstanding loan for early closure.`,
+                para: `<span class="font-FourthHead">💡 Tip:</span> Check if your existing lender offers zero foreclosure charges, especially if you have a floating interest rate.`,
+              },
+              {
+                heading: "Legal & Valuation Fees",
+                topPara: `Costs for property verification and legal checks, which vary by lender.`,
+                para: `<span class="font-FourthHead">💡 Tip:</span> Choose a lender that covers valuation and legal charges as part of the loan transfer process.`,
+              },
+              {
+                heading: "Stamp Duty",
+                topPara: `Some states may require a nominal stamp duty for the loan agreement.`,
+                para: `<span class="font-FourthHead">💡 Tip:</span> Verify with the lender if stamp duty is applicable in your state and factor it into cost calculations.`,
+              },
+              {
+                heading: "Administrative Charges",
+                topPara: `Some lenders impose additional service or administrative fees.`,
+                para: `<span class="font-FourthHead">💡 Tip:</span> Ask for a detailed fee breakdown upfront to avoid hidden costs.`,
+              },
+              {
+                heading: "Insurance Charges",
+                topPara: `If the new lender requires a loan protection plan, this could add extra costs.`,
+                para: `<span class="font-FourthHead">💡 Tip:</span> Check if existing insurance policies are transferable or compare third-party options for lower premiums.`,
+              },
+            ],
+          }}
+        />
+
+        <AboveTitleWithTopIconCard
+          contents={{
+            heading: `Things to Consider Before Transferring Your Loan`,
+            xlGridCol: 3,
+            borderBottom: true,
+            cards: [
+              {
+                heading: "Right Time to Transfer",
+                para: `The best time to transfer your plot loan is when interest rates drop or your financial situation improves, allowing better terms. Transferring early in the tenure maximizes interest savings. A strong credit score increases approval chances at lower rates.`,
+                icon: "/icons/constructionTable.svg",
+                altName: "offers-icon",
+              },
+              {
+                heading: "Cost vs. Savings",
+                para: `A balance transfer includes fees like processing, legal, and foreclosure charges. Compare the new EMI and interest with your current loan to calculate total savings. If transfer costs exceed savings, it may not be beneficial.`,
+                icon: "/icons/bt-2.svg",
+                altName: "negotiate-icon",
+              },
+              {
+                heading: "Top-Up Loan Option",
+                para: `Some lenders offer a top-up loan with balance transfer, giving extra funds for construction or personal use. Check if the new lender provides this option and compare interest rates. Ensure the revised EMI and tenure stay within your budget before opting for it.`,
+                icon: "/icons/loanValue.svg",
+                altName: "phoneConnection-icon",
+              },
+            ],
+          }}
+        />
+      </div>
+      <!-- money map -->
+      <AboveTitleWithTopIconCard
+        contents={{
+          heading: `Smart savings calculators – Plan your future with confidence`,
+          xlGridCol: 4,
+          borderBottom: true,
+          cards: [
+            {
+              heading: "Know How Long Your Savings Will Last",
+              para: `Determine how many years your savings can support your lifestyle.`,
+              icon: "/icons/clock.svg",
+              altName: "clock-icon",
+              linkName: "Check Your Savings Longevity",
+              url: "/money-map/how-long-will-your-savings-support-you",
+            },
+            {
+              heading: "Track Your Progress Towards Your Goal​",
+              para: `Estimate the time required to reach your financial milestones.`,
+              icon: "/icons/phoneConnection.svg",
+              altName: "phoneConnection-icon",
+              linkName: "Plan Your Savings Journey",
+              url: "/money-map/how-long-will-it-take-to-save",
+            },
+            {
+              heading: "Set a Target for Retirement Savings​​",
+              para: `Calculate the amount needed for a secure and comfortable retirement.`,
+              icon: "/icons/negotiate.svg",
+              altName: "negotiate-icon",
+              linkName: "Plan Your Retirement Fund",
+              url: "/money-map/how-much-to-save-by-retirement",
+            },
+            {
+              heading: "Grow Your Savings with Consistency​",
+              para: `See how regular contributions can maximize your savings over time.`,
+              icon: "/icons/coinHouse.svg",
+              altName: "phoneConnection-icon",
+              linkName: "Calculate Your Future Savings",
+              url: "/money-map/how-much-can-i-save-with-regular-contributions",
+            },
+          ],
+        }}
+      />
+      <!-- plot loan calc -->
+      <div id="calc">
+        <AboveTitleWithBlackCard
+          contents={{
+            heading: "Plot loan calculator",
+            xlGridCol: 4,
+            borderBottom: true,
+            cards: [
+              {
+                heading: "How much can I borrow?",
+                icon: "/icons/calc.svg",
+                iconAltName: "icon-calc",
+                url: "/calculators/eligibility-calculator",
+              },
+              {
+                heading: "Plot loan repayments calculator",
+                icon: "/icons/lap.svg",
+                iconAltName: "loan-icon",
+                url: "/planners/part-payment-planner",
+              },
+              {
+                heading: "Stamp duty calculator",
+                icon: "/icons/apply.svg",
+                iconAltName: "icons-apply",
+                url: "/calculators/stamp-duty-calculator",
+              },
+              {
+                heading: "Balance transfer calculator",
+                icon: "/icons/calc.svg",
+                iconAltName: "icons-calc",
+                url: "/calculators/balance-transfer-calculator",
+              },
+            ],
+          }}
+        />
+      </div>
+      <!-- ways to pay off -->
+      <ButtonBanner
+        contents={{
+          heading: `Ways to pay off your plot loan faster`,
+          para: `Small changes now can mean big differences later to how much of your plot loan you end up repaying.`,
+          btnName: `Find out how`,
+          btnBorder: `#4F4C4D`,
+          btnLink: "/planners/both",
+        }}
+      />
+
+      <!-- journey -->
+      <TwoColumnWithLeftHeading
+        contents={{
+          heading: "Secure Your Dream Plot Effortlessly",
+
+          secHeading: "Hassle-Free Plot Loans & Balance Transfers",
+          secPara:
+            "Get the financing you need with ease. Discover flexible loan options, expert guidance, and a quick application process.",
+          btnName: "compare offers",
+          btnLink: "/get-started/how-can-we-help",
+          btnColor: "#ffcc00",
+          btnClick: () => {
+            $applicationData.LoanName = "Plot Loan";
+          },
+        }}
+      />
+
+      <TwoColumnWithImage
+        contents={{
+          cardImage: `/images/homeLoanGreenDigital.jpg`,
+          cardAltName: `images-HLGreenDigital`,
+          cardHeading: `Convert Agricultural Land to Residential with Ease`,
+          reverse: true,
+        }}
+      >
+        <p>
+          Thinking of transforming your agricultural land into a residential
+          property? The process involves legal approvals, zoning regulations,
+          and compliance with local laws. Understanding the right steps can help
+          you avoid delays and ensure a smooth conversion.
+        </p>
+        <Anchor
+          link="/plot-loan/agricultural-to-residential"
+          linkName="Learn more about land conversion"
+        />
+      </TwoColumnWithImage>
+
+      <!-- plot loan support -->
+      <TwoColumnWithLeftHeading
+        contents={{
+          heading: `Plot loan support`,
+          secPara:
+            "Explore the available financial assistance options for plot loan customers.",
+          linkName: "Learn more about Plot Loan Support",
+          url: "/plot-loan/plot-loan-support",
+        }}
+      />
+
+      <!-- message us  -->
+      <TwoColumnWithImage
+        contents={{
+          cardImage: `/images/message.jpg`,
+          cardAltName: `CardCover`,
+          cardHeading: `Message us 24/7`,
+          sourceName: "DigitalDSA",
+          originalSource: "www.digitaldsa.com",
+          reverse: false
+        }}
+      >
+        <p>
+          Feel free to message us anytime for expert assistance with your loan
+          needs. Our team is here to provide professional advice, guide you
+          through the loan process, and help you find the best options. No
+          matter the time, we’ve got you covered! Message us anytime, and we’ll
+          respond promptly.
+        </p>
+        <div class="w-auto">
+          <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
+        </div>
+      </TwoColumnWithImage>
+
+    
+      <FeedbackCheck />
+
+      <div slot="secondary">
+        <HelpList
+          contents={{
+            heading: `We're here to help`,
+            xlGridCol: 4,
+            borderBottom: true,
+            cards: [
+              {
+                heading: "Book an </br> appointment",
+                para: "Book instantly to speak to a plot loan specialist at a time that suits you",
+                icon: "/icons/appointment.svg",
+                altName: "appointment Icon",
+                url: "/appointment",
+              },
+              {
+                heading: "Check loan offers",
+                para: "In as little as 10 minutes and tailored exactly as per your financial profile.",
+                icon: "/icons/manageLoan2.svg",
+                altName: "Alert Icon",
+                url: "/get-started/how-can-we-help",
+              },
+              {
+                heading: "Contact us",
+                para: "Fast-track your call and connect with a specialist in the Digital DSA.",
+                icon: "/icons/contact.svg",
+                altName: "Alert Icon",
+                url: "/contact",
+              },
+              {
+                heading: "Message us",
+                para: `Get instant help from our online assistants  or chat to a specialist.`,
+                icon: "/icons/msg.svg",
+                altName: "Alert Icon",
+                url: "/contact",
+              },
+            ],
+          }}
+        />
+        <ThingsYouShould
+          thinkKnow={{
+            heading: `Things you should know`,
+            paraGraph: [
+              `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+              `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+              `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+              `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+            ],
+          }}
+          disc="list-decimal"
+        ></ThingsYouShould>
+      </div>
+    </NewPageLayout>
+  </section>
+{:else}
+  <div class="flex flex-col items-center justify-center h-screen">
+    <Loader />
+  </div>
+{/if}

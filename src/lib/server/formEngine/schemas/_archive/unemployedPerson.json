@@ -1,0 +1,126 @@
+{
+	"unemployedQuestions": [
+		{
+			"id": "q_creditScore",
+			"key": "creditScore",
+			"required": true,
+			"type": "number",
+			"question": "What's the Credit Score?",
+			"description": "<div class='info-title'><span class='info-icon gold'>⭐</span> Understanding Credit Score (CIBIL)</div><div class='info-box highlight'>Your <strong>Credit Score</strong> is a 3-digit number (300-900) that represents your creditworthiness based on your credit history.</div><div class='stats-row'><div class='stat'><span class='stat-value' style='color: #dc2626;'>300-549</span><span class='stat-label'>Poor</span></div><div class='stat'><span class='stat-value' style='color: #f59e0b;'>550-649</span><span class='stat-label'>Fair</span></div><div class='stat'><span class='stat-value' style='color: #10b981;'>650-749</span><span class='stat-label'>Good</span></div><div class='stat'><span class='stat-value' style='color: #059669;'>750-900</span><span class='stat-label'>Excellent</span></div></div><div class='info-box tip'><span class='bold'>How to check your score?</span><br/>Visit <em>cibil.com</em> or use apps like Paytm, PhonePe, or your bank's app to get a free credit report.</div><div class='info-box note'><span class='bold'>Note:</span> A score of 750+ increases your chances of loan approval and better interest rates.</div>",
+			"icon": "Sparkles",
+			"showNumberInWords": false,
+			"maxLength": 3,
+			"max": 900,
+			"validation": {
+				"condition": [
+					{
+						"case": {
+							"<": [
+								{
+									"var": "creditScore"
+								},
+								300
+							]
+						},
+						"creditScoreError": "Credit Score must be at least 300"
+					},
+					{
+						"case": {
+							">": [
+								{
+									"var": "creditScore"
+								},
+								900
+							]
+						},
+						"creditScoreError": "Credit Score must be at most 900"
+					}
+				]
+			}
+		},
+		{
+			"id": "q_whyPrimaryLowCredit",
+			"key": "whyPrimaryLowCredit",
+			"required": true,
+			"type": "multiple-select",
+			"question": "What factors have contributed to this CIBIL score?",
+			"description": "Please share honestly. Any incorrect or inconsistent information can lead to delays or rejection of the loan application.",
+			"options": [
+				{
+					"label": "Delayed EMI payments in the past 12 months",
+					"value": "delayedEMI"
+				},
+				{
+					"label": "High utilization of available credit card limit",
+					"value": "highCreditUtilization"
+				},
+				{
+					"label": "Limited or no credit history",
+					"value": "noCreditHistory"
+				},
+				{
+					"label": "Only minimum due payments made on credit cards",
+					"value": "minimumDueOnly"
+				},
+				{
+					"label": "Multiple recent loan or credit card enquiries",
+					"value": "multipleEnquiries"
+				},
+				{
+					"label": "Defaulted in one or more previous loans as co-applicant / guarantor",
+					"value": "coApplicantDefault"
+				},
+				{
+					"label": "Loan default or settlement in the past",
+					"value": "loanDefault"
+				},
+				{
+					"label": "Only unsecured loans such as credit cards or personal loans in profile",
+					"value": "onlyUnsecuredLoans"
+				}
+			],
+			"showWhen": {
+				"and": [
+					{
+						"!=": ["creditScore", ""]
+					},
+					{
+						"<=": ["creditScore", 900]
+					}
+				]
+			}
+		},
+		{
+			"id": "q_Obligation",
+			"key": "ObligationsRunning",
+			"required": true,
+			"type": "radio",
+			"question": "Does this applicant have any running loans as borrower or co-applicant?",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "Yes",
+					"icon": "ThumbsUp"
+				},
+				{
+					"label": "No",
+					"value": "No",
+					"icon": "ThumbsDown"
+				}
+			],
+			"showWhen": {
+				"and": [
+					{
+						">=": ["creditScore", 300]
+					},
+					{
+						"<=": ["creditScore", 900]
+					},
+					{
+						"==": ["whyPrimaryLowCreditValidate", true]
+					}
+				]
+			}
+		}
+	]
+}

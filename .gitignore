@@ -1,0 +1,144 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+/dist
+
+# Generated schema files (synced from src/lib/server/formEngine/schemas/ by build process)
+src/lib/config/*schema*.json
+!src/lib/config/gstStateCodes.json
+!src/lib/config/zoneStateMapping.ts
+
+# Test outputs (root-only — see "gitignore depth" note at the bottom of this file)
+/test-results/
+/playwright-output/
+/.playwright-mcp/
+/coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.test
+
+# IDE & Editors
+.idea
+.vscode
+*.sublime-*
+.claude
+*.editorconfig
+.editorconfig.swp
+
+# Editor temporary files
+*.tmp
+*.bak~
+*~
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Debug & temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+svelte-check-*.txt
+check-output*.txt
+svelte-errors*.txt
+svelte-files.txt
+error_files.txt
+nul
+
+# Backup & migration files (root-only — these were always meant for old
+# migration scratchpads at the project root, never for legitimate component
+# docs. The bare patterns previously caused src/lib/components/relationship-
+# capture/PROJECT_SUMMARY.md to land in a tracked-but-ignored state.)
+/BACKUP_*
+/*_BACKUP
+*.bak
+/*_PLAN.md
+/*_SUMMARY.md
+/*_CHECKLIST.md
+/temp/
+
+# Stale phase/milestone documentation that was at repo root and consolidated
+# into docs/DEVELOPMENT-PLAN.md. All root-only — leading `/` so future docs
+# at any nested depth (e.g. src/lib/foo/CHECKLIST.md) aren't silently hidden.
+/CHECKLIST.md
+/DASHBOARD_COMPLETE.md
+/DASHBOARD_VS_PHASE2_DECISION.md
+/DEPLOYMENT_READY.md
+/IMPLEMENTATION_COMPLETE.md
+/IMPLEMENTATION_GUIDE.md
+/PARALLEL_BUILD_COMPLETE.md
+/PHASE_1_COMPLETE.md
+/README_TEST_DATA_SYSTEM.md
+/TESTING_DASHBOARD_SECURITY.md
+/TEST_DATA_QUICK_START.md
+/VISUAL_WORKFLOW_GUIDE.md
+/WEBSITE_REVAMP_SPEC.md
+/WEBSITE_REVAMP_SPEC_updated.md
+/docs/ADMIN-DASHBOARD-HANDOFF.md
+/docs/PLATFORM-AUDIT-*.md
+/docs/RULE-ENGINE-BROWSER-TESTS.md
+/docs/SCHEMA_RECOMMENDATIONS.md
+/docs/STORE-REDESIGN*.md
+/docs/SVELTE5_STATE_MIGRATION.md
+/docs/TESTING_DATA_SPECIFICATION.md
+/docs/TESTING_GUIDE_FOR_BEGINNERS.md
+/docs/TEST_DATA_MANAGEMENT_SYSTEM.md
+/docs/TEST_PROFILES.md
+
+# Archive folders — tracked in git for history, never imported by production code
+# SvelteKit only bundles what's imported — _archive/ files are safe to commit
+# Verify with: grep -r "/_archive/" src/routes/ src/lib/ --include="*.svelte" --include="*.ts" -l | grep -v _archive/
+
+# Platform specific (Capacitor iOS build dir at root — never the bare `ios`
+# pattern which matches at any depth, including legitimate iOS-related
+# directories that may exist deeper in the tree)
+/ios/
+.kiro
+
+# Lock files (using pnpm)
+package-lock.json
+yarn.lock
+
+# Static generated
+static/meta.json
+
+# ──────────────────────────────────────────────────────────────────────────
+# GITIGNORE DEPTH NOTES — read before editing patterns above
+# ──────────────────────────────────────────────────────────────────────────
+# A pattern with NO leading slash matches at EVERY depth in the repo. So
+# `coverage` matches both /coverage/ and src/foo/coverage/. This is the
+# default Git behavior and it is a foot-gun for short common names.
+#
+# Use `/<name>` or `/<name>/` to restrict a pattern to the repo ROOT only.
+# Use `<name>` (no slashes) only when you genuinely want at-any-depth match
+# (node_modules, .DS_Store, *.log, editor swap files like *~ / *.swp).
+#
+# When in doubt, prefer leading-slash. If you've ever had `git add` silently
+# refuse a file, run `git check-ignore -v <path>` — it tells you exactly
+# which line in this file rejected it.
+#
+# History: the bare `coverage` pattern silently hid the QA Coverage Map
+# route at src/routes/dashboard/admin/qa/coverage/ for 6 days (Phase 5 of
+# S78 — files on disk, never tracked, no warning). Don't repeat the trap.
+# ──────────────────────────────────────────────────────────────────────────

@@ -1,0 +1,92 @@
+{
+  "_comment": "FM-1 pre-migration snapshot lock for EDGE-NRI.",
+  "_source": "src/lib/testing/scenarios/formPathScenarios.ts :: EDGE_NRI.payload (rewritten 2026-04-22)",
+  "_capturedAt": "2026-04-22T00:00:00.000Z",
+  "_shift_notes_S77e_step4": "Classification (i) FIXTURE-WAS-WRONG — hand-written payload authored as a desired shape, not derived from buildLoanPayload(). Corrections: (1) purchaseType 'Direct Sale' → 'resale_normal' (valid V2 option value); (2) propertyType 'Villa' REMOVED — no V2 schema question binds propertyType; villa is expressed via constructionType='House' (schema label 'House/Villa'); (3) constructionStatus 'Ready to Move' → 'House' (builder maps constructionType answer → constructionStatus; RTM is expressed via propertyStage); (4) propertyStage 'Ready To Move' added (flagKey on propertyLocation for resale_normal); (5) carpetArea/carpetAreaUnit/carpetAreaRaw added from propertyCharacter page; (6) residence fields (residenceState/residenceCity) REMOVED — residenceOptionSame='Yes' → residenceSameAsProperty=true with no residence state/city keys emitted (same-as-property branch); (7) sellerOwnershipType/propertyAcquisitionMethod/sellerOnLoan/lastRegistryDuration/isAnyBuilderDemand added from sellerTransaction_homeLoan; (8) documentationReadiness ['SALE_DEED','EC'] added; (9) registryTimeline/auctionPropertyStatus added from dealFinancials; (10) titleChainStatus/encumbranceCertStatus REMOVED (showWhen requires CONVERTED_RESIDENTIAL/OLD_MUNICIPAL/LOCAL_COLONY/UNKNOWN, not PLANNED_AUTHORITY); (11) ocCcAvailable NOT added — requires constructionType='Flat', hidden for House; (12) hasNRIApplicant on loanTransaction NOT added — builder reads applicationData.ApplicantIsNRI/hasNRIApplicant (loanTransaction.ts line 366), but the journey threads NRI only via applicant.isNRI (applicantPayload.ts line 112-126), so the transaction-level flag is not synthesized. Same drop pattern as HL-BT-TOPUP applicationStructure. (13) grossIncome/netIncome REMOVED from applicant — Self-employed(Professional) path in applicantPayload.ts doesn't set them (only Salaried path does). (14) businessProfile added via businessActivityDetailsVisible (snake_case option keys → buildBusinessProfile camelCase booleans); gstRegistered stays false (doctors typically unregistered). (15) financials added via financialsTableVisible. (16) gpaDetails: isNRI='Yes' + gpaFullName/gpaAge/gpaRelationship/gpaAddress raw applicant keys → gpaDetails {fullName,age,relationship,address} (applicantPayload.ts line 117-125).",
+  "payload": {
+    "loanTransaction": {
+      "loanName": "Home Loan",
+      "loanType": "New Loan",
+      "numberOfApplicants": 1,
+      "propertyIdentified": true,
+      "propertyComplianceStatus": "fully_compliant",
+      "propertyRegistered": true,
+      "loanAmount": 13500000,
+      "tenureYears": 20,
+      "propertyState": "Goa",
+      "propertyCity": "Panaji",
+      "purchaseType": "resale_normal",
+      "constructionStatus": "House",
+      "propertyStage": "Ready To Move",
+      "propertyCost": 18000000,
+      "marketValue": 19000000,
+      "registryValue": 18000000,
+      "downPayment": 4500000,
+      "carpetArea": 2400,
+      "carpetAreaUnit": "Feet",
+      "carpetAreaRaw": 2400,
+      "propertyAreaType": "PLANNED_AUTHORITY",
+      "sellerOwnershipType": "SOLE_OWNER",
+      "propertyAcquisitionMethod": "PURCHASED",
+      "lastRegistryDuration": "moreThanTwoYears",
+      "isAnyBuilderDemand": "No",
+      "propertyUsageIntent": "SELF_USE",
+      "residenceSameAsProperty": true,
+      "assessmentStatus": "fresh",
+      "registryTimeline": "1_3_MONTHS",
+      "auctionPropertyStatus": "STANDARD",
+      "sellerOnLoan": "No",
+      "documentationReadiness": ["SALE_DEED", "EC"]
+    },
+    "allApplicantDetails": [
+      {
+        "applicantType": "Individual",
+        "title": "Dr.",
+        "fullName": "Anand Pai",
+        "age": 42,
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "employmentType": "Self-employed(Professional)",
+        "creditScore": 810,
+        "hasExistingObligations": false,
+        "roleInApplication": "Primary",
+        "residenceType": "Owned",
+        "isNRI": true,
+        "nriCountry": "United Arab Emirates",
+        "gpaDetails": {
+          "fullName": "Suresh Pai",
+          "age": 68,
+          "relationship": "Father",
+          "address": "Panaji, Goa"
+        },
+        "professionType": "Doctor",
+        "businessProfile": {
+          "gstRegistered": false,
+          "hasCurrentAccount": true,
+          "usesSavingsAccount": false,
+          "filesITRRegularly": true,
+          "profitableLast3Years": true,
+          "profitableSinceStart": true,
+          "majorCashSales": false,
+          "fewKeyClients": false,
+          "hasCCOD": false,
+          "hasOtherIncome": false,
+          "hasProfessionalLicense": true,
+          "hasCommercialPremises": true,
+          "ownsPremises": true,
+          "threeYearsInBusiness": true,
+          "enrolledWithProfessionalBody": false,
+          "priorExperience": true,
+          "seasonalBusiness": false
+        },
+        "financials": {
+          "grossReceipts": [6000000, 6800000, 7500000],
+          "netProfit": [3800000, 4400000, 5000000],
+          "depreciation": [120000, 130000, 140000],
+          "itrFiled": ["FY21-22", "FY22-23", "FY23-24"]
+        },
+        "averageBankBalance": 1500000
+      }
+    ]
+  }
+}

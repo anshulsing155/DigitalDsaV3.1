@@ -1,0 +1,125 @@
+{
+  "_comment": "FM-1 pre-migration snapshot lock for EDGE-HIGH-FOIR.",
+  "_source": "src/lib/testing/scenarios/formPathScenarios.ts :: EDGE_HIGH_FOIR.payload (rewritten 2026-04-22)",
+  "_capturedAt": "2026-04-22T00:00:00.000Z",
+  "_shift_notes_S77e_step4": "Classification (i) FIXTURE-WAS-WRONG — hand-written scenario was authored as a desired payload shape, not derived from buildLoanPayload(). Corrected to match current schema + builder output: (1) purchaseType 'Direct Sale' → 'resale_normal' (raw schema option value; 'Direct Sale' was never a valid option); (2) propertyType 'Flat' REMOVED (no V2 schema question binds to propertyType key); (3) constructionStatus 'Ready to Move' → 'Flat' (builder maps constructionType answer → constructionStatus; V2 options are Flat/House/Floor); (4) propertyStage 'Ready To Move' added (builder maps PropertyStage flagKey answer set on propertyLocation page for resale_normal); (5) carpetArea/carpetAreaUnit/carpetAreaRaw (900/Feet/900) added from propertyCharacter page; (6) ocCcAvailable 'BOTH' added (shown for Flat+RTM on merged complianceLegal page); (7) marketValue/registryValue/auctionPropertyStatus/registryTimeline added from dealFinancials page; (8) sellerOwnershipType/propertyAcquisitionMethod/sellerOnLoan/lastRegistryDuration/isAnyBuilderDemand added from sellerTransaction page; (9) documentationReadiness ['SALE_DEED','EC'] added; (10) titleChainStatus/encumbranceCertStatus REMOVED (hidden for PLANNED_AUTHORITY — their showWhen requires CONVERTED_RESIDENTIAL/OLD_MUNICIPAL/LOCAL_COLONY/UNKNOWN); (11) obligation entries carry cleanObligationEntries defaults (totalLimit/remainingLimit/utilizedAmount '0' strings, tenure/interestRate '' for the CC entry) that the old hand-written fixture omitted; (12) obligation ids pinned deterministically ('obl-high-foir-1..4') since cleanObligationEntries generates a UUID otherwise; (13) Credit Card obligation carries explicit obligationType 'credit_line' override — 'Credit Card' is NOT in CREDIT_LINE_TYPES set (only 'CC Limit'/'OD Limit'/'Dropline OD' auto-map), so without the override it would default to term_loan.",
+  "payload": {
+    "loanTransaction": {
+      "loanName": "Home Loan",
+      "loanType": "New Loan",
+      "numberOfApplicants": 1,
+      "propertyIdentified": true,
+      "propertyComplianceStatus": "fully_compliant",
+      "propertyRegistered": true,
+      "loanAmount": 5500000,
+      "tenureYears": 20,
+      "propertyState": "Uttar Pradesh",
+      "propertyCity": "Noida",
+      "purchaseType": "resale_normal",
+      "constructionStatus": "Flat",
+      "propertyStage": "Ready To Move",
+      "propertyCost": 6500000,
+      "marketValue": 7000000,
+      "registryValue": 6500000,
+      "downPayment": 1000000,
+      "carpetArea": 900,
+      "carpetAreaUnit": "Feet",
+      "carpetAreaRaw": 900,
+      "propertyAreaType": "PLANNED_AUTHORITY",
+      "ocCcAvailable": "BOTH",
+      "sellerOwnershipType": "SOLE_OWNER",
+      "propertyAcquisitionMethod": "PURCHASED",
+      "lastRegistryDuration": "moreThanTwoYears",
+      "isAnyBuilderDemand": "No",
+      "propertyUsageIntent": "SELF_USE",
+      "residenceSameAsProperty": true,
+      "assessmentStatus": "fresh",
+      "registryTimeline": "1_3_MONTHS",
+      "auctionPropertyStatus": "STANDARD",
+      "sellerOnLoan": "No",
+      "documentationReadiness": [
+        "SALE_DEED",
+        "EC"
+      ]
+    },
+    "allApplicantDetails": [
+      {
+        "applicantType": "Individual",
+        "title": "Mr.",
+        "fullName": "Sanjay Sharma",
+        "age": 38,
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "employmentType": "Salaried(Private)",
+        "creditScore": 740,
+        "hasExistingObligations": true,
+        "roleInApplication": "Primary",
+        "residenceType": "Rented",
+        "salariedProfile": {
+          "worksForReputedOrg": true,
+          "companyHas100PlusEmployees": true,
+          "employerIsProprietorship": false,
+          "employerSharesFinancials": false,
+          "isPermanentEmployee": true,
+          "twoYearsWithSameEmployer": true,
+          "threeYearsTotalExperience": true,
+          "hasProvidentFund": true,
+          "salaryInBankAccount": true,
+          "receivesBonus": true,
+          "receivesSalarySlip": true,
+          "hasHigherEducation": true
+        },
+        "grossIncome": 150000,
+        "netIncome": 120000,
+        "obligations": [
+          {
+            "id": "obl-high-foir-1",
+            "obligationType": "term_loan",
+            "loanType": "Home Loan",
+            "bankName": "ICICI Bank",
+            "selectedToClose": "Keep running",
+            "emi": "35000",
+            "tenure": "240",
+            "interestRate": "8.75",
+            "remainingTenure": "180"
+          },
+          {
+            "id": "obl-high-foir-2",
+            "obligationType": "term_loan",
+            "loanType": "Car Loan",
+            "bankName": "Axis Bank",
+            "selectedToClose": "Keep running",
+            "emi": "18000",
+            "tenure": "60",
+            "interestRate": "9",
+            "remainingTenure": "36"
+          },
+          {
+            "id": "obl-high-foir-3",
+            "obligationType": "term_loan",
+            "loanType": "Personal Loan",
+            "bankName": "Bajaj Finserv",
+            "selectedToClose": "Keep running",
+            "emi": "15000",
+            "tenure": "48",
+            "interestRate": "14",
+            "remainingTenure": "30"
+          },
+          {
+            "id": "obl-high-foir-4",
+            "obligationType": "credit_line",
+            "loanType": "Credit Card",
+            "bankName": "SBI Card",
+            "selectedToClose": "Keep running",
+            "emi": "0",
+            "tenure": "",
+            "interestRate": "",
+            "totalLimit": "300000",
+            "remainingLimit": "0",
+            "utilizedAmount": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

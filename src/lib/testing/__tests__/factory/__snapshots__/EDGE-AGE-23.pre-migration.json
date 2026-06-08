@@ -1,0 +1,47 @@
+{
+  "_comment": "FM-1 pre-migration snapshot lock for EDGE-AGE-23.",
+  "_source": "src/lib/testing/scenarios/formPathScenarios.ts :: EDGE_AGE_23.payload (rewritten 2026-04-22)",
+  "_capturedAt": "2026-04-22T00:00:00.000Z",
+  "_shift_notes_S77e_step4": "Classification (i) FIXTURE-WAS-WRONG: (1) residenceState/residenceCity REMOVED — no V2 PL schema question binds these keys; the old hand-written payload authored them as a target shape. (2) loanAmount comes from loanRequirementPage.loanAmount; tenureYears from mortgageYear via initialAnswers (bypasses schema). Applicant shape matches PL-FRESH-YES-OBLIG pattern.",
+  "payload": {
+    "loanTransaction": {
+      "loanName": "Personal Loan",
+      "loanType": "New Loan",
+      "numberOfApplicants": 1,
+      "loanAmount": 500000,
+      "tenureYears": 3,
+      "assessmentStatus": "fresh"
+    },
+    "allApplicantDetails": [
+      {
+        "applicantType": "Individual",
+        "title": "Mr.",
+        "fullName": "Arun Kumar S",
+        "age": 23,
+        "gender": "Male",
+        "maritalStatus": "Single",
+        "employmentType": "Salaried(Private)",
+        "creditScore": 710,
+        "hasExistingObligations": false,
+        "roleInApplication": "Primary",
+        "residenceType": "With Parents",
+        "salariedProfile": {
+          "worksForReputedOrg": false,
+          "companyHas100PlusEmployees": true,
+          "employerIsProprietorship": false,
+          "employerSharesFinancials": false,
+          "isPermanentEmployee": false,
+          "twoYearsWithSameEmployer": false,
+          "threeYearsTotalExperience": false,
+          "hasProvidentFund": true,
+          "salaryInBankAccount": true,
+          "receivesBonus": false,
+          "receivesSalarySlip": true,
+          "hasHigherEducation": true
+        },
+        "grossIncome": 42000,
+        "netIncome": 35000
+      }
+    ]
+  }
+}

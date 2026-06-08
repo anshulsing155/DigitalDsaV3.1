@@ -1,0 +1,26 @@
+# Package Managers
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lock
+bun.lockb
+
+# Package manager caches and installed deps
+/node_modules/
+/.pnpm-store/
+
+# Build output
+/build/
+/dist/
+/.svelte-kit/
+
+# Miscellaneous
+/static/
+
+# Docs — intentionally excluded from automated formatting
+# (historical session logs, architectural specs — formatting
+# rewraps and produces noisy diffs without value)
+/docs/
+
+# Archived code — preserved as-was for historical reference
+**/_archive/
