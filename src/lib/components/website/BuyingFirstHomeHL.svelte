@@ -12,12 +12,13 @@
 			actionBtns: [
 				{
 					btnName: 'Book appointment',
-					btnLink: '/appointment'
+					btnLink: '/appointment',
+					btnClass: 'btn-secondary'
 				},
 				{
 					btnName: 'Compare rates',
 					btnLink: '/get-started/how-can-we-help',
-					btnColor: '#ffcc00',
+					btnClass: 'btn-primary text-white dark:text-black',
 					animation: true
 				}
 			]
