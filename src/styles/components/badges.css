@@ -1,0 +1,57 @@
+.badge-primary {
+	background: var(--ddsa-primary-100);
+	color: var(--ddsa-primary-700);
+}
+
+.badge-success {
+	background: var(--ddsa-success-bg);
+	color: var(--ddsa-success);
+}
+
+.badge-warning {
+	background: var(--ddsa-warning-bg);
+	color: var(--ddsa-warning);
+}
+
+.badge-danger {
+	background: var(--ddsa-error-bg);
+	color: var(--ddsa-error);
+}
+
+.badge-neutral {
+	background: var(--dash-bg-alt);
+	color: var(--dash-text-secondary);
+}
+
+.badge-approved,
+.badge-success {
+	@apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium;
+	background-color: var(--ddsa-success-light);
+	color: var(--ddsa-success-dark);
+}
+
+.badge-pending,
+.badge-warning {
+	@apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium;
+	background-color: var(--ddsa-warning-light);
+	color: var(--ddsa-warning-dark);
+}
+
+.badge-rejected,
+.badge-error {
+	@apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium;
+	background-color: var(--ddsa-error-light);
+	color: var(--ddsa-error-dark);
+}
+
+.badge-info {
+	@apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium;
+	background-color: var(--ddsa-info-light);
+	color: var(--ddsa-info-dark);
+}
+
+.badge-neutral {
+	@apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium;
+	background-color: var(--ddsa-gray-100);
+	color: var(--ddsa-gray-700);
+}

@@ -1,0 +1,120 @@
+/* Card surface — replaces: bg-white shadow-sm ring-1 ring-gray-100 */
+.card-surface {
+	background-color: var(--dash-bg-card);
+	border: 1px solid var(--dash-border);
+	border-radius: 0.75rem;
+}
+
+/* Glass card utility — frosted translucent card for Bold & Premium design */
+.card-glass {
+	background: var(--dash-glass-bg);
+	backdrop-filter: blur(var(--dash-glass-blur));
+	-webkit-backdrop-filter: blur(var(--dash-glass-blur));
+	border: 1px solid var(--dash-glass-border);
+	border-radius: 0.75rem;
+	transition: all 0.2s ease;
+}
+
+.card-glass:hover {
+	background: var(--dash-glass-hover);
+	border-color: rgba(203, 153, 126, 0.15);
+}
+
+/* --- Landing Glass Card (for landing page sections) --- */
+.landing-glass {
+	background: var(--landing-glass-bg);
+	backdrop-filter: blur(var(--landing-glass-blur));
+	-webkit-backdrop-filter: blur(var(--landing-glass-blur));
+	border: 1px solid var(--landing-glass-border);
+	border-radius: 1rem;
+	box-shadow: var(--landing-shadow-glass);
+	transition: all 0.3s ease;
+}
+.landing-glass:hover {
+	background: var(--landing-glass-hover);
+	box-shadow: var(--landing-shadow-glass-hover);
+	border-color: var(--landing-glass-border-glow);
+}
+
+/* --- Landing Dark Glass Card (for dark bg sections) --- */
+.landing-dark-glass {
+	background: var(--landing-dark-glass-bg);
+	backdrop-filter: blur(var(--landing-glass-blur));
+	-webkit-backdrop-filter: blur(var(--landing-glass-blur));
+	border: 1px solid var(--landing-dark-glass-border);
+	border-radius: 1rem;
+	box-shadow: var(--landing-shadow-glass);
+	transition: all 0.3s ease;
+}
+.landing-dark-glass:hover {
+	background: var(--landing-dark-glass-hover);
+	box-shadow: var(--landing-shadow-glass-hover);
+	border-color: var(--landing-glass-border-glow);
+}
+
+.gold-animated-border {
+	position: relative;
+	z-index: 0;
+}
+
+.gold-animated-border::before {
+	content: '';
+	position: absolute;
+	inset: -2px;
+	z-index: -1;
+	border-radius: inherit;
+	background: linear-gradient(
+		90deg,
+		var(--ddsa-primary-400),
+		var(--ddsa-accent-500),
+		var(--ddsa-primary-400),
+		var(--ddsa-accent-500)
+	);
+	background-size: 400% 400%;
+	animation: goldBorderMove 6s linear infinite;
+}
+
+.gold-animated-border::after {
+	content: '';
+	position: absolute;
+	inset: 2px;
+	background: inherit;
+	border-radius: inherit;
+	z-index: -1;
+}
+
+
+
+.gold-animated-ring {
+	position: relative;
+	z-index: 0;
+}
+
+.gold-animated-ring::after {
+	content: '';
+	position: absolute;
+	inset: -4px;
+	border-radius: inherit;
+	padding: 4px;
+	--gold: linear-gradient(
+		90deg,
+		var(--ddsa-primary-400),
+		var(--ddsa-accent-500),
+		var(--ddsa-primary-400),
+		var(--ddsa-accent-500)
+	);
+	background: var(--gold);
+	background-size: 300% 300%;
+	animation: rectGoldMove 5s linear infinite;
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	z-index: -1;
+}
+
+

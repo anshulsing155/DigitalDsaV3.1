@@ -1,0 +1,147 @@
+@theme {
+	--font-primary: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+	/* Success */
+	--success-50: #ecfdf5;
+	--success-100: #d1fae5;
+	--success-500: #10b981;
+	--success-600: #059669;
+	--success-700: #047857;
+
+	/* Warning */
+	--warning-50: #fffbeb;
+	--warning-100: #fef3c7;
+	--warning-500: #f59e0b;
+	--warning-600: #d97706;
+	--warning-700: #b45309;
+
+	/* Error */
+	--error-50: #fef2f2;
+	--error-100: #fee2e2;
+	--error-500: #ef4444;
+	--error-600: #dc2626;
+	--error-700: #b91c1c;
+
+	/* Info */
+	--info-50: #eff6ff;
+	--info-100: #dbeafe;
+	--info-500: #3b82f6;
+	--info-600: #2563eb;
+	--info-700: #1d4ed8;
+
+	/* --breakpoint-*: initial; */
+	--breakpoint-mobile: 375px;
+	--breakpoint-sm: 480px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 976px;
+
+	/* --- Primary Colors (Updated for DigitalDSA) --- */
+	/* --color-primary maps to bg-primary in Tailwind. White text on primary-500
+	   (#cb997e) is 2.15:1 — unreadable. Aligning with --dash-btn-bg which uses
+	   primary-700 (#8e5739, 5.2:1 with white text). Light bronze surfaces remain
+	   available via --color-primary-light (primary-200) for badges/accent fills. */
+	--color-primary: var(--ddsa-primary-700);
+	--color-primaryText: var(--ddsa-primary-700);
+	--color-primary-hover: var(--ddsa-primary-800);
+	--color-primary-light: var(--ddsa-primary-200);
+	--color-primary-bg: var(--ddsa-primary-50);
+
+	/* --- Accent Colors --- */
+	--color-accent: var(--ddsa-accent-500);
+	--color-accent-hover: var(--ddsa-accent-600);
+	--color-accent-bg: var(--ddsa-accent-100);
+
+	/* --- Neutrals --- */
+	--color-text-main: var(--ddsa-secondary-900);
+	--color-text-light: var(--ddsa-gray-500);
+	--color-bg-main: var(--ddsa-white);
+	--color-bg-alt: var(--ddsa-gray-50);
+	--color-border: var(--ddsa-gray-200);
+
+	/* --- System Feedback --- */
+	--color-success: var(--ddsa-success);
+	--color-warning: var(--ddsa-warning);
+	--color-error: var(--ddsa-error);
+	--color-info: var(--ddsa-info);
+
+	/* --- Buttons & States --- */
+	--button-text: var(--ddsa-white);
+	--button-secondary-text: var(--ddsa-secondary-900);
+	--button-disabled-bg: var(--ddsa-gray-300);
+	/* WCAG AA non-text: gray-400 on gray-300 is 1.41:1 — fails. gray-700 → ~3.5:1.
+	   Disabled state still reads as "muted" because the bg is pale, but text is legible. */
+	--button-disabled-text: var(--ddsa-gray-700);
+
+	--stepper-node-size: 24px;
+	--stepper-dot-size: 6px;
+	--stepper-line-width: 2px;
+
+	/* color  */
+	--gradient-primary: linear-gradient(
+		135deg,
+		var(--ddsa-primary-500) 0%,
+		var(--ddsa-accent-500) 100%
+	);
+
+	--layout-sidebar-width: 280px;
+	--layout-content-width: 56rem;
+
+	--layout-bottom-nav-height: 80px;
+	--layout-right-panel-width: 380px;
+
+	--layout-context-panel-width: 380px;
+
+	--radius-md: 0.75rem;
+	--radius-lg: 1rem;
+
+	--panel-icon-size: 44px;
+
+	--sidebar-gradient: linear-gradient(165deg, #1e2430 0%, #151a24 50%, #0f1318 100%);
+
+	/* --sidebar-border: rgba(255, 255, 255, 0.06); */
+
+	--sidebar-text: rgba(255, 255, 255, 0.85);
+	--sidebar-text-muted: rgba(255, 255, 255, 0.45);
+
+	/* Sidebar Surfaces */
+	--sidebar-surface: rgba(255, 255, 255, 0.04);
+	--sidebar-surface-hover: rgba(255, 255, 255, 0.06);
+
+	/* Sidebar Borders */
+	--sidebar-border: rgba(255, 255, 255, 0.08);
+
+	/* Sidebar Text */
+	--sidebar-text-primary: rgba(255, 255, 255, 0.9);
+	--sidebar-text-secondary: rgba(255, 255, 255, 0.7);
+
+	/* Scrollbar */
+	--sidebar-scrollbar: rgba(255, 255, 255, 0.15);
+	--sidebar-scrollbar-hover: rgba(255, 255, 255, 0.25);
+
+	/* Warning */
+	--warning-surface: rgba(245, 158, 11, 0.06);
+	--warning-surface-hover: rgba(245, 158, 11, 0.08);
+
+	--warning-border: rgba(245, 158, 11, 0.15);
+
+	--warning-text: #b45309;
+	--warning-text-muted: #92400e;
+
+	/* Accent / Tips */
+	--tips-surface: rgba(203, 153, 126, 0.06);
+	--tips-surface-hover: rgba(203, 153, 126, 0.08);
+
+	--tips-border: rgba(203, 153, 126, 0.12);
+
+	--tips-text: #cb997e;
+	--tips-text-muted: #b08968;
+
+	/* Danger */
+	--danger-surface: rgba(239, 68, 68, 0.06);
+	--danger-surface-hover: rgba(239, 68, 68, 0.08);
+
+	--danger-border: rgba(239, 68, 68, 0.15);
+
+	--danger-text: #dc2626;
+	--danger-text-muted: #b91c1c;
+}

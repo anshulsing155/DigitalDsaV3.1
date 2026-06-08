@@ -1,0 +1,66 @@
+/* Chrome, Edge, Brave, Safari */
+
+.pincode-input:-webkit-autofill,
+.pincode-input:-webkit-autofill:hover,
+.pincode-input:-webkit-autofill:focus,
+.pincode-input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 1000px white inset !important;
+	box-shadow: 0 0 0 1000px white inset !important;
+
+	-webkit-text-fill-color: #111827 !important;
+	caret-color: #111827 !important;
+
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Dark mode */
+
+.dark .pincode-input:-webkit-autofill,
+.dark .pincode-input:-webkit-autofill:hover,
+.dark .pincode-input:-webkit-autofill:focus,
+.dark .pincode-input:-webkit-autofill:active {
+	/* -webkit-box-shadow: 0 0 0 1000px var(--form-bg-input) inset !important; */
+	box-shadow: 0 0 0 1000px var(--form-bg-input) inset !important;
+
+	-webkit-text-fill-color: white !important;
+	caret-color: white !important;
+}
+
+/* Chrome, Safari, Edge */
+input:-webkit-autofill
+/* input:-webkit-autofill:active  */
+/* input:-webkit-autofill:hover, */
+/* input:-webkit-autofill:focus, */ {
+	-webkit-box-shadow: 0 0 0 1000px var(--form-bg-card) inset !important;
+	-webkit-text-fill-color: currentColor !important;
+	caret-color: currentColor;
+	transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Firefox */
+input:autofill {
+	box-shadow: 0 0 0 1000px var(--form-bg-card) inset !important;
+	-moz-text-fill-color: currentColor !important;
+}
+
+input:-webkit-autofill {
+	-webkit-text-fill-color: var(--form-text-label) !important;
+}
+
+/* * Firefox */ 
+
+.pincode-input:-moz-autofill {
+	box-shadow: 0 0 0 1000px white inset !important;
+
+	color: #111827 !important;
+	caret-color: #111827 !important;
+}
+
+/* Firefox dark */
+
+.dark .pincode-input:-moz-autofill {
+	box-shadow: 0 0 0 1000px var(--form-bg-input) inset !important;
+
+	color: white !important;
+	caret-color: white !important;
+}
