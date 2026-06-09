@@ -15,9 +15,9 @@
 
   let profileIsOpen = $state(false);
   let mobileProfileIsOpen = $state(false);
-  let userName = $state(page.data.user?.name?.split(" ")[0] || "");
-  let formattedName = $state(
-    userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase()
+  let userName = $derived(page.data.user?.name?.split(" ")[0] || "");
+  let formattedName = $derived(
+    userName ? userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase() : ""
   );
 
   let profileDropDown = [
@@ -361,10 +361,9 @@
             {/if}
             <span
               class="font-Paragraph text-paraFont text-black group-hover:underline"
-              >{(formattedName =
-                formattedName.length > 10
-                  ? formattedName.slice(0, 10) + "..."
-                  : formattedName)}</span
+              >{formattedName.length > 10
+                ? formattedName.slice(0, 10) + "..."
+                : formattedName}</span
             >
           </div>
           <i

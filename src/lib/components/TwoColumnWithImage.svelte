@@ -65,6 +65,7 @@
 		{/if}
 
 		<div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-4">
+			<!-- svelte-ignore slot_element_deprecated -->
 			<slot />
 		</div>
 	</div>

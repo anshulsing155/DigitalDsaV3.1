@@ -100,7 +100,7 @@
     title="Business Loan Eligibility Factors - Requirements & Criteria"
     image="/images/business-loan.jpg"
     description="Explore key business loan eligibility factors, including credit score, documentation, and financial metrics. Get tips to improve your approval chances."
-    canonical="https://yourwebsite.com/business-loan-eligibility"
+    url="https://yourwebsite.com/business-loan-eligibility"
     keywords="business loan eligibility, loan requirements, credit score, financial metrics, loan approval"
 />
 

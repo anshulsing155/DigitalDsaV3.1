@@ -11,7 +11,6 @@
 	import HelpList from './HelpList.svelte';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import Seo from './Seo.svelte';
-	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { content } from '$lib/data/buyingFirstHomeHL.js';
 
 	const toggleDropdown = (event, index) => {
@@ -37,15 +36,21 @@
 		const isOpen = detailsElement.hasAttribute('open');
 		if (isOpen) {
 			detailsElement.removeAttribute('open');
-			icon.classList.remove('fa-angle-up');
-			icon.classList.add('fa-angle-down');
+			if (icon) {
+				icon.classList.remove('fa-angle-up');
+				icon.classList.add('fa-angle-down');
+			}
 		} else {
 			detailsElement.setAttribute('open', 'true');
-			icon.classList.remove('fa-angle-down');
-			icon.classList.add('fa-angle-up');
+			if (icon) {
+				icon.classList.remove('fa-angle-down');
+				icon.classList.add('fa-angle-up');
+			}
 		}
 		setTimeout(() => {
-			detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			if (detailsElement) {
+				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
 		}, 100);
 	};
 
@@ -158,10 +163,8 @@
 					>
 						<div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="">{list}</h2>
-							<div class="icon-container">
-								<ChevronDown
-									class="h-5 w-5 text-darkColor-contrast transition-transform duration-300"
-								/>
+							<div class="icon-container justify-self-end text-mobSubHead">
+								<span><i class="fa-solid fa-angle-down faq-icon text-darkColor-contrast transition-transform duration-300"></i></span>
 							</div>
 						</div>
 					</summary>

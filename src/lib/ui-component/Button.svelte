@@ -12,6 +12,8 @@
 		btnAnimation?: boolean;
 		btnBorder?: string;
 		btnColor?: string;
+		hasRoundedOverride?: boolean;
+		hasPaddingOverride?: boolean;
 	};
 
 	const {
@@ -26,7 +28,9 @@
 		onClick = () => {},
 		btnAnimation = false,
 		btnBorder = '',
-		btnColor = ''
+		btnColor = '',
+		hasRoundedOverride = false,
+		hasPaddingOverride = false
 	}: Props = $props();
 </script>
 

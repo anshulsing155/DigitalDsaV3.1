@@ -91,7 +91,7 @@
 		content={themeColor}
 	/>
 	<meta
-		http-equiv="content-language"
+		http-equiv={"content-language" as any}
 		content={locale}
 	/>
 
