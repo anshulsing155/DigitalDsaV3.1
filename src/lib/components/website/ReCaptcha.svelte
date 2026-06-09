@@ -1,7 +1,8 @@
 <script>
 	let {
 		siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY,
-		version = 'v2'
+		version = 'v2',
+		ontoken = null
 	} = $props();
 
 

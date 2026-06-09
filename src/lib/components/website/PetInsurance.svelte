@@ -317,10 +317,9 @@
               Compare pet insurance
             </h2>
             <p class="font-Paragraph text-minParaFont">
-              Take a closer look at the inclusions in the <a
-                href=""
-                class="underline underline-offset-4 hover:no-underline text-linkColor"
-              >Product Disclosure Statement (PDS).</a> 
+              Take a closer look at the inclusions in the <span
+                class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"
+              >Product Disclosure Statement (PDS).</span> 
             </p>
             <p>Pet Insurance isn’t available in branch.</p>
           </div>
@@ -337,10 +336,9 @@
               <ul class="list-disc ml-5 space-y-4">
                 <li>Open a new, individual CommSec account</li>
                 <li>
-                  Select <a
-                    href=""
-                    class="underline underline-offset-4 hover:no-underline text-linkColor"
-                    >Commonwealth Direct Investment Account (CDIA)</a
+                  Select <span
+                    class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"
+                    >Commonwealth Direct Investment Account (CDIA)</span
                   > as your settlement account
                 </li>
                 <li>Start investing with $0 brokerage</li>
@@ -375,8 +373,8 @@
                 <li>
                   To qualify, settle at least one investment over $1,000 each
                   month into the
-                  <a href="" class="underline underline-offset-4 hover:no-underline text-linkColor"
-                    >Commonwealth Direct Investment Account (CDIA)</a
+                  <span class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"
+                    >Commonwealth Direct Investment Account (CDIA)</span
                   >
                 </li>
                 <li>
@@ -440,12 +438,10 @@
               Invest in a broad range of ETFs to suit your preferences
             </h4>
             <p class="font-subPara text-subParaFont">
-              Ten themed <a
-                href=""
-                class="underline underline-offset-4 hover:no-underline text-linkColor"
+              Ten themed <span
+                class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"
               >
-                ETF options</a
-              > to choose from.
+                ETF options</span> to choose from.
             </p>
           </div>
 
@@ -569,12 +565,10 @@
                   Invest in a broad range of ETFs to suit your preferences
                 </h4>
                 <p class="font-subPara text-subParaFont">
-                  Ten themed <a
-                    href=""
-                    class="underline underline-offset-4 hover:no-underline text-linkColor"
+                  Ten themed <span
+                    class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"
                   >
-                    ETF options</a
-                  > to choose from.
+                    ETF options</span> to choose from.
                 </p>
               </div>
 
@@ -675,10 +669,8 @@
             <div class="grid gap-4 pt-[2rem] font-Paragraph text-subParaFont">
               <p>
                 The investing experience features and functionality in the
-                undefined app is only available for CommSec Pocket and individual <a
-                  href=""
-                  class="underline underline-offset-4 hover:no-underline text-linkColor">CommSec</a
-                > Australian Shares accounts. You can view other CommSec account
+                undefined app is only available for CommSec Pocket and individual <span
+                  class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer">CommSec</span> Australian Shares accounts. You can view other CommSec account
                 types, like Margin Loans and Exchange Traded Options, via the Accounts
                 list. You can access more share trading services, features and functionality
                 on CommSec's apps and platforms
@@ -754,16 +746,4 @@
   </PageDesign>
 </section>
 
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
 
-  details summary .icon-container .faq-icon {
-    transition: transform 0.3s ease;
-  }
-
-  details[open] summary .icon-container .faq-icon {
-    transform: rotate(180deg);
-  }
-</style>

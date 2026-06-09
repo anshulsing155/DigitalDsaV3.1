@@ -45,11 +45,11 @@
 
 
 
-  let origin = "https://digitaldsa.com";
+  let origin = $state("https://digitaldsa.com");
 
   onMount(() => {
     if (typeof window !== "undefined") {
-origin = window.location.origin;
+      origin = window.location.origin;
     }
   });
 
@@ -78,7 +78,7 @@ item: item?.url || url,
   <meta name="author" content={author} />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content={themeColor} />
-  <meta http-equiv="content-language" content={locale} />
+  <meta name="language" content={locale} />
 
   <!-- Open Graph -->
   <meta property="og:title" content={title} />

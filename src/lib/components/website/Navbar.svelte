@@ -9,15 +9,16 @@
   import { afterNavigate } from "$app/navigation";
   import { FileUser, CircleUserRound, LogOut } from "lucide-svelte";
 
-  let firstPart, finalValue;
+  let firstPart = $state(""), finalValue = $state("");
 
-  let goToCalculators = false;
+  let goToCalculators = $state(false);
 
-  let profileIsOpen = false;
-  let mobileProfileIsOpen = false;
-  let userName = page.data.user?.name?.split(" ")[0] || "";
-  let formattedName =
-    userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
+  let profileIsOpen = $state(false);
+  let mobileProfileIsOpen = $state(false);
+  let userName = $state(page.data.user?.name?.split(" ")[0] || "");
+  let formattedName = $state(
+    userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase()
+  );
 
   let profileDropDown = [
     {
@@ -85,8 +86,8 @@
     finalValue = matched ? firstPart : "/"; // not received any url is will on the Loans navbar
     active = finalValue;
   });
-  let active = "/";
-  let overlayOpen = false; // For managing overlay visibility
+  let active = $state("/");
+  let overlayOpen = $state(false); // For managing overlay visibility
 
   let width = spring(0, { stiffness: 0.04, damping: 0.8 });
 
@@ -156,9 +157,9 @@
     { id: 6, title: "Blogs", link: "" },
   ];
 
-  let navOpen = false;
-  let searchOpen = false;
-  let searchInput;
+  let navOpen = $state(false);
+  let searchOpen = $state(false);
+  let searchInput = $state();
 
   function toggleNav() {
     navOpen = !navOpen;
@@ -232,7 +233,7 @@
 </script>
 
 <section
-  class="relative z-50 mx-auto w-full bg-white border-b border-borderColor"
+  class="relative z-50 mx-auto w-full bg-[var(--landing-bg)] border-b border-[var(--form-border)]"
 >
   <div class="mx-auto flex items-center justify-between">
     <div class="flex items-center gap-[4rem]">
@@ -245,10 +246,17 @@
             goto("/");
             active = "/";}}
         >
+          <!-- Light mode logo -->
           <img
             src="/logo/logoBlack.svg"
             alt="digital-dsa-logo"
-            class=" h-[2rem] lg:h-[3rem]"
+            class="h-[2rem] lg:h-[3rem] block dark:hidden"
+          />
+          <!-- Dark mode logo -->
+          <img
+            src="/logo/logoWhite.svg"
+            alt="digital-dsa-logo"
+            class="h-[2rem] lg:h-[3rem] hidden dark:block"
           />
           <div class="block">
             <p class="text-center font-FifthHead text-xs sm:text-subParaFont">
@@ -266,7 +274,7 @@
           <li class="text-center">
             <a
               href={nav.link}
-              class="group relative font-FourthHead text-subParaFont lg:py-10 text-black"
+              class="group relative font-FourthHead text-subParaFont lg:py-10 text-black dark:text-white hover:text-black dark:hover:text-white"
             >
               {nav.list}
               {#if nav.hasOwnProperty("star")}
@@ -298,6 +306,7 @@
       <button
         type="button"
         onclick={toggleNav}
+        aria-label="Open navigation"
         class="flex text-minHeadFont faBarCloseCustomClass items-center"
       >
         <span>
@@ -318,9 +327,9 @@
       </button>
     </div>
     <!-- search & login grid-cols-2-->
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
     <div
       class="loginBtnCloseCustomClass group"
       onmouseleave={() => (profileIsOpen = false)}
@@ -368,13 +377,13 @@
         <!-- Dropdown Menu -->
         {#if profileIsOpen}
           <div
-            class="absolute py-2 w-[11.35rem] text-gray-700 hover:bg-gray-100 font-Paragraph text-minParaFont border shadow-lg bg-white"
+            class="absolute py-2 w-[11.35rem] text-[var(--form-text-secondary)] hover:bg-[var(--landing-bg-card)] font-Paragraph text-minParaFont border border-[var(--form-border)] shadow-lg bg-[var(--landing-bg)]"
           >
             <ul>
               {#each profileDropDown as item}
                 {@const IconComponent = item.icon}
                 <li
-                  class="w-full flex gap-2 items-center px-2 py-2 hover:bg-btnBg hover:text-black"
+                  class="w-full flex gap-2 items-center px-2 py-2 hover:bg-btnBg hover:text-black text-black dark:text-white"
                 >
                   <div class="flex items-start justify-start">
                     {#if typeof item.icon === "string"}
@@ -417,7 +426,7 @@
   <!-- Search Bar (Hidden/Visible based on toggleSearch) -->
   {#if searchOpen}
     <div
-      class="fixed top-0 w-full h-[3.2rem] md:h-[6.2rem] bg-white"
+      class="fixed top-0 w-full h-[3.2rem] md:h-[6.2rem] bg-[var(--landing-bg)]"
       bind:this={searchInput}
       out:fade={{ duration: 200 }}
     >
@@ -427,6 +436,7 @@
         <button
           class="relative w-2/12 lg:w-1/12 h-full"
           onclick={toggleSearch}
+          aria-label="Back"
         >
           <i class="fa-solid fa-arrow-left text-minSubHead lg:text-minHeadFont"
           ></i>
@@ -526,7 +536,7 @@
           </button>
         </div>
 
-        <button type="button" onclick={toggleNav}
+        <button type="button" onclick={toggleNav} aria-label="Close navigation"
           ><i class="fa-solid fa-xmark text-2xl"></i></button
         >
       </div>
@@ -573,8 +583,8 @@
           </li>
         {/each}
 
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
         <div
           class=" w-full pt-3"
           onclick={() => (mobileProfileIsOpen = !mobileProfileIsOpen)}
@@ -644,14 +654,6 @@
     }
     .toggleBtnCloseCustomClass {
       display: none;
-    }
-    .logoCloseCustomClass {
-      height: 64px;
-    }
-  }
-  @media screen and (min-width: 1028px) {
-    .logoCloseCustomClass {
-      height: 64px;
     }
   }
 

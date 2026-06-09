@@ -29,6 +29,8 @@
 	}
 </script>
 
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<!-- svelte-ignore a11y_mouse_events_have_key_events -->
 <div
 	class="relative flex w-full"
 	onmouseover={() => (isHovered = true)}
@@ -47,11 +49,12 @@
 	</div>
 
 	{#if isHovered}
-		<div
-			class="absolute top-4 right-0 z-50 cursor-pointer whitespace-nowrap rounded-md bg-black px-3 py-1 text-sm text-white"
+		<button
+			type="button"
+			class="absolute top-4 right-0 z-50 cursor-pointer whitespace-nowrap rounded-md bg-black px-3 py-1 text-sm text-white border-0"
 			onclick={copyToClipboard}
 		>
 			{copied ? 'Copied!' : 'Copy'}
-		</div>
+		</button>
 	{/if}
 </div>

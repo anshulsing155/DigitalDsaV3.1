@@ -10,10 +10,10 @@
   import { slide } from "svelte/transition";
   import Seo from "$lib/components/Seo.svelte";
 
-  let activeSection = "";
+  let activeSection = $state('');
   let cardImg2 = "/images/credits & attributions.jpg";
   let cardAlt1 = "CardCover";
-  let activeIndex: number | null = null;
+  let activeIndex = $state<number | null>(null);
 
   let navBarMedium = [
     "Attribution Practices",
@@ -156,7 +156,7 @@
         <div
           data-section="attribution"
           id="attribution"
-          class="flex flex-col gap-[2.5rem] border-b border-borderColor py-[3rem]"
+          class="flex flex-col gap-[2.5rem] border-b border-[var(--form-border)] py-[3rem] text-black dark:text-white"
         >
           <p
             class="mt-[1rem] font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
@@ -321,7 +321,7 @@
 
             secPara: `<div class="">
                                         <p class="font-FourthHead text-minSubHead pb-6">At DigitalDSA, we:</p>
-                                        <ul class="list-none space-y-2 bg-[#F7F7F7] p-4">
+                                        <ul class="list-none space-y-2 bg-[var(--landing-bg-card)] p-4">
                                             <li class="flex items-center font-Paragraph text-subParaFont">
                                                 <span class="text-green-500 mr-2 self-start">✔</span> 
                                                 Ensure proper licensing and fair use of all third-party assets.
@@ -366,13 +366,13 @@
 
           {#if activeIndex === index}
             <div
-              transitionslide={{ duration: slideDuration, delay: 200}}
+              transition:slide={{ duration: slideDuration, delay: 200}}
               class="dropdown-content"
             >
               {#if index == 0}
                 <div
                   id="attribution"
-                  class="flex flex-col gap-[2.5rem] border-b border-borderColor text-black bg-white px-[0.5rem] py-[3rem]"
+                  class="flex flex-col gap-[2.5rem] border-b border-[var(--form-border)] bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] py-[3rem]"
                 >
                   <p
                     class="mt-[1rem] font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
@@ -390,7 +390,7 @@
                   </div>
                 </div>
               {:else if index == 1}
-                <div id="resources" class="text-black bg-white px-[0.5rem]">
+                <div id="resources" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]">
                   <TwoColumn
                     cardImage={cardImg2}
                     cardAltName={cardAlt1}
@@ -511,7 +511,7 @@
                   </TwoColumn>
                 </div>
               {:else if index == 2}
-                <div id="logo" class="text-black bg-white px-[0.5rem]">
+                <div id="logo" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]">
                   <TwoColumnWithLeftHeading
                     contents={{
                       heading: `Bank Logos & Trademarks`,
@@ -534,14 +534,14 @@
                   />
                 </div>
               {:else if index == 3}
-                <div id="compliance" class="text-black bg-white">
+                <div id="compliance" class="bg-[var(--landing-bg)] text-black dark:text-white">
                   <TwoColumnWithLeftHeading
                     contents={{
                       heading: `Compliance & Fair Use`,
 
                       secPara: `<div class="">
                                     <p class="font-FourthHead text-minSubHead pb-6">At DigitalDSA, we:</p>
-                                    <ul class="list-none space-y-2 bg-[#F7F7F7] p-4">
+                                    <ul class="list-none space-y-2 bg-[var(--landing-bg-card)] p-4">
                                         <li class="flex items-center font-Paragraph text-subParaFont">
                                             <span class="text-green-500 mr-2 self-start">✔</span> 
                                             Ensure proper licensing and fair use of all third-party assets.

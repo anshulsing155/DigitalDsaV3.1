@@ -10,6 +10,8 @@
 		// btnClassStyle?: string;
 		onClick?: () => void;
 		btnAnimation?: boolean;
+		btnBorder?: string;
+		btnColor?: string;
 	};
 
 	const {
@@ -22,7 +24,9 @@
 		imageClass = '',
 		// btnClassStyle = 'py-3',
 		onClick = () => {},
-		btnAnimation = false
+		btnAnimation = false,
+		btnBorder = '',
+		btnColor = ''
 	}: Props = $props();
 </script>
 
@@ -31,9 +35,10 @@
 		<button
 			type="button"
 			onclick={onClick}
-			class={`typography-button typography-button w-full cursor-pointer rounded-full
-				px-8 py-3 transition-all
-				duration-300 hover:opacity-90 md:w-auto
+			style={`${btnColor ? `background-color: ${btnColor};` : ''}${btnBorder ? `border-color: ${btnBorder}; border-width: 1px; border-style: solid;` : ''}`}
+			class={`typography-button w-full cursor-pointer transition-all duration-300 hover:opacity-90 md:w-auto
+				${hasRoundedOverride ? '' : 'rounded-full'}
+				${hasPaddingOverride ? '' : 'px-8 py-3'}
 				${btnClass}
 				${btnAnimation ? 'animate-scaleLoop' : ''}`}
 		>
@@ -52,9 +57,10 @@
 	<button
 		type="button"
 		onclick={onClick}
-		class={`typography-button typography-button w-full cursor-pointer rounded-full
-			px-8 py-3 transition-all
-			duration-300 hover:opacity-90 md:w-auto
+		style={`${btnColor ? `background-color: ${btnColor};` : ''}${btnBorder ? `border-color: ${btnBorder}; border-width: 1px; border-style: solid;` : ''}`}
+		class={`typography-button w-full cursor-pointer transition-all duration-300 hover:opacity-90 md:w-auto
+			${hasRoundedOverride ? '' : 'rounded-full'}
+			${hasPaddingOverride ? '' : 'px-8 py-3'}
 			${btnClass}
 			${btnAnimation ? 'animate-scaleLoop' : ''}`}
 	>

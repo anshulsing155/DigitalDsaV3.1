@@ -46,7 +46,7 @@
     }, 100);
   };
   // logic for second nav bar which is not working yet
-  let activeSection = ""; // Initially no section is active
+  let activeSection = $state(''); // Initially no section is active
   let showFeedback = false;
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {

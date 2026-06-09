@@ -123,7 +123,7 @@
   };
 
   // logic for second nav bar which is not working yet
-  let activeSection = ""; // Initially no section is active
+  let activeSection = $state(''); // Initially no section is active
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {
@@ -553,12 +553,4 @@
   </PageFullTextDesign>
 </section>
 
-<style>
-  details summary .icon-container .faq-icon {
-    transition: transform 0.3s ease;
-  }
 
-  details[open] summary .icon-container .faq-icon {
-    transform: rotate(180deg);
-  }
-</style>

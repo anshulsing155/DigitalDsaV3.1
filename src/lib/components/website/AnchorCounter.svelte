@@ -4,9 +4,9 @@
   import { onMount } from "svelte";
   import { page } from "$app/state";
 
-  let count = 0;
-  let anchorNames = [];
-  let slug = "";
+  let count = $state(0);
+  let anchorNames = $state([]);
+  let slug = $state("");
 
   const countAnchors = () => {
     const anchors = document.querySelectorAll('a[href=""]');

@@ -1,29 +1,4 @@
 <script>
-	let {
-		pageData = {
-			coverImage: '/images/first-home-buyer.jpg',
-			coverAlt:
-				'photo of a happy indian couple who has bought their first home and took home loan through DigitalDSA.com',
-			sourceName: 'Freepik',
-			originalSource:
-				'https://www.freepik.com/free-photo/people-recording-their-house-tour_129835217.htm',
-			heading: 'First home buyers - Guide to buying your first home',
-			para: 'Knowing where to start can be the biggest hurdle. The right tools and support will get you moving with confidence.',
-			actionBtns: [
-				{
-					btnName: 'Book appointment',
-					btnLink: '/appointment'
-				},
-				{
-					btnName: 'Compare rates',
-					btnLink: '/get-started/how-can-we-help',
-					btnColor: '#ffcc00',
-					animation: true
-				}
-			]
-		}
-	} = $props();
-
 	import Button from './Button.svelte';
 	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
 	import { onMount } from 'svelte';
@@ -36,6 +11,7 @@
 	import HelpList from './HelpList.svelte';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import Seo from './Seo.svelte';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { content } from '$lib/data/buyingFirstHomeHL.js';
 
 	const toggleDropdown = (event, index) => {
@@ -73,7 +49,7 @@
 		}, 100);
 	};
 
-	let activeSection = $state("");
+	let activeSection = $state('');
 	const initializeActiveSection = () => {
 		const firstSection = document.querySelector('[data-section]');
 		if (firstSection) {
@@ -105,6 +81,32 @@
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
+
+	let {
+		pageData = {
+			coverImage: '/images/first-home-buyer.jpg',
+			coverAlt:
+				'photo of a happy indian couple who has bought their first home and took home loan through DigitalDSA.com',
+			sourceName: 'Freepik',
+			originalSource:
+				'https://www.freepik.com/free-photo/people-recording-their-house-tour_129835217.htm',
+			heading: 'First home buyers - Guide to buying your first home',
+			para: 'Knowing where to start can be the biggest hurdle. The right tools and support will get you moving with confidence.',
+			actionBtns: [
+				{
+					btnName: 'Book appointment',
+					btnLink: '/appointment',
+					btnClass: 'btn-secondary'
+				},
+				{
+					btnName: 'Compare rates',
+					btnLink: '/get-started/how-can-we-help',
+					btnClass: 'btn-primary text-white dark:text-black',
+					animation: true
+				}
+			]
+		}
+	} = $props();
 </script>
 
 <Seo
@@ -157,7 +159,9 @@
 						<div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="">{list}</h2>
 							<div class="icon-container">
-								<span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+								<ChevronDown
+									class="h-5 w-5 text-darkColor-contrast transition-transform duration-300"
+								/>
 							</div>
 						</div>
 					</summary>

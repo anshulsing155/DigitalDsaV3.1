@@ -16,7 +16,7 @@
   import ButtonBanner from "./ButtonBanner.svelte";
   import FeedbackCheck from "./FeedbackCheck.svelte";
 
-  let activeSection = "";
+  let activeSection = $state("");
 
   let help = [
     {
@@ -103,7 +103,7 @@ icon.classList.add("fa-angle-up");
 detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
-  //let activeSection = ""; // Initially no section is active
+  //let activeSection = $state(""); // Initially no section is active
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {

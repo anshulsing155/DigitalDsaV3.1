@@ -2,7 +2,8 @@
 	let {
 		contents = [],
 		supportHeading = "",
-		gridCol = 3
+		gridCol = 3,
+		children = undefined
 	} = $props();
 
 
@@ -13,10 +14,10 @@
 
 </script>
 
-<section class=" flex flex-col gap-[2rem] lg:pt-[4rem] lg:pb-[8rem]">
+<section class=" flex flex-col gap-[2rem] lg:pt-[4rem] lg:pb-[8rem] text-black dark:text-white">
   {#if supportHeading}
     <p
-      class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+      class="typography-h2 text-black dark:text-white"
     >
       {supportHeading}
     </p>
@@ -28,11 +29,11 @@
         class="col-span-1 flex flex-col gap-[1rem] border-b md:border-b-0 py-[1rem]"
       >
         {#if content.title}
-          <p class="font-ThirdHead text-minSubHead md:w-3/4">{content.title}</p>
+          <p class="typography-body-lg !font-semibold text-black dark:text-white md:w-3/4">{content.title}</p>
         {/if}
 
         {#if content.lists}
-          <ul class="font-Paragraph text-subParaFont flex flex-col gap-4">
+          <ul class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-4">
             {#each content.lists as list}
               <li>{@html list.name}</li>
             {/each}
@@ -40,10 +41,10 @@
         {/if}
 
         {#if content.links}
-          <ul class="grid list-disc gap-2 pl-5 marker:text-black">
+          <ul class="grid list-disc gap-2 pl-5 marker:text-black dark:marker:text-white">
             {#each content.links as link}
               <li
-                class="font-Paragraph text-minParaFont"
+                class="typography-body-md text-[var(--form-text-secondary)]"
                 class:text-linkColor={link.url !== ""}
                 class:text-deActiveLinkColor={!link.url}
               >
@@ -57,7 +58,7 @@
           </ul>
         {/if}
         <div>
-          <slot />
+          {@render children?.()}
         </div>
         {#if content.btn}
           <Button

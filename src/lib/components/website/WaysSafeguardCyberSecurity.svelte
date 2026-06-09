@@ -50,7 +50,7 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
 
-  let activeSection = "";
+  let activeSection = $state('');
   let pageData = {
     coverImage: "/images/ways-safeguard-blog.jpg",
     coverAlt: "hero-cover",
@@ -500,8 +500,4 @@ dispatch("pageData", pageData);
   </NewPageLayout>
 </section>
 
-<style>
-  .section {
-    scroll-margin-top: 4rem; /* Adjust this value to match your navbar height */
-  }
-</style>
+

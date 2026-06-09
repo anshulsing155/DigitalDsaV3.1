@@ -2,7 +2,7 @@
 	let {
 		inputType = "text",
 		name = "",
-		bindValue = "",
+		bindValue = $bindable(""),
 		label = "Enter name",
 		iconSrc = "",
 		altIcon = "",

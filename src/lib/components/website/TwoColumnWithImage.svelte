@@ -10,6 +10,7 @@
 			originalSource?: string;
 			reverse?: boolean;
 		};
+		children?: import('svelte').Snippet;
 	};
 
 	const {
@@ -20,7 +21,8 @@
 			sourceName: '',
 			originalSource: '',
 			reverse: false
-		}
+		},
+		children
 	}: Props = $props();
 </script>
 
@@ -65,7 +67,7 @@
 		{/if}
 
 		<div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-4">
-			<slot />
+			{@render children?.()}
 		</div>
 	</div>
 </div>

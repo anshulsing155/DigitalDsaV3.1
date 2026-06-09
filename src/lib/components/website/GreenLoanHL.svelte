@@ -297,7 +297,7 @@ Make sure you obtain any relevant approvals for strata titled properties before 
                 <p>Minimum loan size $5,000. Maximum loan size</p>
                 <p>
                   $30,000. 
-                  <a class="underline text-linkColor">^Comparison rate warning.</a>
+                  <span class="underline text-linkColor cursor-pointer">^Comparison rate warning.</span>
                 </p>
               </div>
             </div>
@@ -353,7 +353,7 @@ Make sure you obtain any relevant approvals for strata titled properties before 
                 <div class="flex flex-col gap-1  justify-center font-Paragraph text-subParaFont">
                     <p class="font-FifthHead">10 Year fixed rate and Comparison rate^</p>
                     <p>Minimum loan size $5,000. Maximum loan size</p>
-                    <p> $30,000. <a class="underline text-linkColor">^Comparison rate warning.</a> </p>
+                    <p> $30,000. <span class="underline text-linkColor cursor-pointer">^Comparison rate warning.</span> </p>
                 </div>
               </div>
               
@@ -631,12 +631,4 @@ Make sure you obtain any relevant approvals for strata titled properties before 
   </PageDesign>
 </section>
 
-<style>
-  details summary .icon-container .faq-icon {
-    transition: transform 0.3s ease;
-  }
 
-  details[open] summary .icon-container .faq-icon {
-    transform: rotate(180deg);
-  }
-</style>

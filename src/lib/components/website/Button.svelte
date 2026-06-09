@@ -10,6 +10,8 @@
 		// btnClassStyle?: string;
 		onClick?: () => void;
 		btnAnimation?: boolean;
+		btnBorder?: string;
+		btnColor?: string;
 	};
 
 	const {
@@ -22,7 +24,9 @@
 		imageClass = '',
 		// btnClassStyle = 'py-3',
 		onClick = () => {},
-		btnAnimation = false
+		btnAnimation = false,
+		btnBorder = '',
+		btnColor = ''
 	}: Props = $props();
 </script>
 
@@ -31,6 +35,7 @@
 		<button
 			type="button"
 			onclick={onClick}
+			style={`${btnColor ? `background-color: ${btnColor};` : ''}${btnBorder ? `border-color: ${btnBorder}; border-width: 1px; border-style: solid;` : ''}`}
 			class={`typography-button typography-button w-full cursor-pointer rounded-full
 				px-8 py-3 transition-all
 				duration-300 hover:opacity-90 md:w-auto
@@ -52,6 +57,7 @@
 	<button
 		type="button"
 		onclick={onClick}
+		style={`${btnColor ? `background-color: ${btnColor};` : ''}${btnBorder ? `border-color: ${btnBorder}; border-width: 1px; border-style: solid;` : ''}`}
 		class={`typography-button typography-button w-full cursor-pointer rounded-full
 			px-8 py-3 transition-all
 			duration-300 hover:opacity-90 md:w-auto

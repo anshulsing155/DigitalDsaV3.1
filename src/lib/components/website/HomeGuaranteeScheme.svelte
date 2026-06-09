@@ -434,7 +434,7 @@ icon.classList.add("fa-angle-up");
 detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
-  let activeSection = ""; // Initially no section is active
+  let activeSection = $state(''); // Initially no section is active
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {
@@ -575,7 +575,7 @@ window.removeEventListener("scroll", handleScroll);
                               </div>
                             </div>
                             <a
-                              href=""
+                              href="/home-loan/home-loan-tools-calculator"
                               class="hover:underline text-linkColor font-Paragraph text-subParaFont"
                               >Show me more home loan tools and calculators</a
                             >

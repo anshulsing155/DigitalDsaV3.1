@@ -9,7 +9,7 @@
 </script>
 
 <section
-  class="grid gap-4 md:gap-[2rem] border-b border-borderColor  lg:grid-cols-7 lg:gap-4 pt-[4rem] pb-[4rem] lg:pb-[8rem]"
+  class="grid gap-4 md:gap-[2rem] border-b border-[var(--form-border)]  lg:grid-cols-7 lg:gap-4 pt-[4rem] pb-[4rem] lg:pb-[8rem] text-black dark:text-white"
 >
   <div
     class="grid font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:col-span-3 lg:text-minHeadFont"

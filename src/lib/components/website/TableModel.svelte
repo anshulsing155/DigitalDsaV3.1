@@ -1,7 +1,8 @@
 <script>
 	let {
 		showModal = $bindable(),
-		dialog
+		dialog = undefined,
+		children = undefined
 	} = $props();
 
 
@@ -43,9 +44,10 @@ enableScroll();
   aria-modal="true"
   class="overflow-auto max-h-[70svh] shadow-lg backdrop:bg-black/30 lg:max-w-5xl mx-auto"
 >
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div class="" on:click|stopPropagation>
-    <slot />
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
+  <div class="" onclick={(e) => e.stopPropagation()}>
+    {@render children?.()}
   </div>
 </dialog>
 

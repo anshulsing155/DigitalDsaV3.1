@@ -69,7 +69,7 @@
     }
   };
 
-  let activeSection = ""; // Initially no section is active
+  let activeSection = $state(''); // Initially no section is active
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {
@@ -277,40 +277,40 @@
               class="grid grid-cols-2 gap-4 lg:gap-[2rem] col-span-12 lg:col-span-8"
             >
              <div
-                class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
                 <p class="font-FourthHead text-subParaFont">Software Development</p>
               </div>
               <div
-                class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
                 <p class="font-FourthHead text-subParaFont">Loan Services</p>
               </div>
 
              
               <div
-                class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
                 <p class="font-FourthHead text-subParaFont">
                   Investment Advisory
                 </p>
               </div>
               <div
-                class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
                 <p class="font-FourthHead text-subParaFont">
                   Operations & Administartion
                 </p>
               </div>
               <div
-                class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
                 <p class="font-FourthHead text-subParaFont">
                   Sales & Business Development
                 </p>
               </div>
               <div
-                class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
                 <p class="font-FourthHead text-subParaFont">
                   Digital Marketing
@@ -478,7 +478,7 @@
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
+          class="dropdown col-span-3 bg-darkColor text-darkColor-contrast {index <
           list.length - 1
             ? 'border-b'
             : ''} "
@@ -498,7 +498,7 @@
           {#if index == 0}
             <div
               id="businessArea"
-              class="pb-[2rem] bg-white text-black px-[.5rem]"
+              class="pb-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]"
             >
               <div class="border-b border-dividerColor">
                 <TwoColumn
@@ -595,7 +595,7 @@
                   class="grid grid-cols-2 gap-4 lg:gap-[2rem] lg:col-span-8"
                 >
                   <div
-                    class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                    class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
                     <p class="font-FourthHead text-subParaFont">
                       Loan Services
@@ -603,33 +603,33 @@
                   </div>
 
                   <div
-                    class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                    class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
                     <p class="font-FourthHead text-subParaFont">Insurance</p>
                   </div>
                   <div
-                    class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                    class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
                     <p class="font-FourthHead text-subParaFont">
                       Investment Advisory
                     </p>
                   </div>
                   <div
-                    class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                    class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
                     <p class="font-FourthHead text-subParaFont">
                       Operations & Risk Management
                     </p>
                   </div>
                   <div
-                    class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                    class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
                     <p class="font-FourthHead text-subParaFont">
                       Sales & Business Development
                     </p>
                   </div>
                    <div
-                    class="border border-borderColor px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md"
+                    class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
                     <p class="font-FourthHead text-subParaFont">
                       Digital Marketing
@@ -639,7 +639,7 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="rewards" class="pb-[2rem] bg-white text-black px-[.5rem]">
+            <div id="rewards" class="pb-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]">
               <TwoColumn
                 cardImage={cardImg2}
                 cardAltName={cardAlt2}
@@ -685,7 +685,7 @@
           {:else if index == 2}
             <div
               id="diversity"
-              class="pb-[2rem] bg-white text-black px-[.5rem]"
+              class="pb-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]"
             >
               <TwoColumn
                 cardImage={cardImg3}
@@ -726,7 +726,7 @@
             </div>
           {:else if index == 3}
             <div
-              class="pb-[2rem] bg-white text-black px-[.5rem]"
+              class="pb-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]"
               id="graduates"
             >
               <TwoColumn
@@ -759,7 +759,7 @@
               </TwoColumn>
             </div>
           {:else if index == 4}
-            <div class="bg-white text-black px-[.5rem]" id="appInfo">
+            <div class="bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]" id="appInfo">
               <Payments supportHeading="Awards and recognition">
                 <div slot="para">
                   Our commitment to excellence has earned us:

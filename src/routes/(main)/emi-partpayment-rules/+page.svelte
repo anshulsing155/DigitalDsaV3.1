@@ -284,7 +284,7 @@
       detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
-  let activeSection = "";
+  let activeSection = $state("");
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {
@@ -370,33 +370,33 @@
 
       <div class="px-[2rem] lg:px-[4rem]">
         <div id="emi" data-section="emi">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={emiIncrement} disc={"list-disc"} />
           </div>
 
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={whenToIncreaseEmi} disc={"list-disc"} />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <WhyChoose facilities={benefitsOfEmiIncrement} />
           </div>
         </div>
 
         <div id="partPayment" data-section="partPayment">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={partPayment} disc={"list-disc"} />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={partPaymentRules} disc={"list-disc"} />
           </div>
         </div>
         <div id="table" data-section="table">
           <div
-            class="flex flex-col xl:grid grid-cols-5 gap-[3rem] pt-[4rem] pb-[8rem] border-b border-borderColor"
+            class="flex flex-col xl:grid grid-cols-5 gap-[3rem] pt-[4rem] pb-[8rem] border-b border-[var(--form-border)] text-black dark:text-white"
           >
             <div class=" col-span-2">
               <h2
-                class="grid mb-[1.5rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="grid mb-[1.5rem] typography-h2 text-black dark:text-white"
               >
                 Maximum Part-Payment Limits in Indian Banks
               </h2>
@@ -409,11 +409,11 @@
           </div>
 
           <div
-            class="flex flex-col xl:grid grid-cols-5 gap-[3rem] pt-[4rem] pb-[8rem] border-b border-borderColor"
+            class="flex flex-col xl:grid grid-cols-5 gap-[3rem] pt-[4rem] pb-[8rem] border-b border-[var(--form-border)] text-black dark:text-white"
           >
             <div class="col-span-2">
               <h2
-                class="grid mb-[1.5rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="grid mb-[1.5rem] typography-h2 text-black dark:text-white"
               >
                 Bank-Wise EMI Increment & Part-Payment Rules
               </h2>
@@ -427,7 +427,7 @@
         </div>
 
         <div id="tips" data-section="tips">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={smartBorrowerTips} disc={"list-disc"} />
           </div>
           <ThingsYouShould thinkKnow={finalThought} disc={"list-disc"} />
@@ -456,13 +456,13 @@
             <div
               id="emi"
               data-section="emi"
-              class="bg-white text-black border-borderColor"
+              class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]"
             >
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould thinkKnow={emiIncrement} disc={"list-disc"} />
               </div>
 
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould
                   thinkKnow={whenToIncreaseEmi}
                   disc={"list-disc"}
@@ -476,9 +476,9 @@
             <div
               id="partPayment"
               data-section="partPayment"
-              class="bg-white text-black border-borderColor"
+              class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]"
             >
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould thinkKnow={partPayment} disc={"list-disc"} />
               </div>
 
@@ -491,14 +491,14 @@
             <div
               id="table"
               data-section="table"
-              class="bg-white text-black border-borderColor"
+              class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]"
             >
               <div
-                class="flex flex-col xl:grid grid-cols-5 gap-[1rem] py-[4rem] px-[0.5rem] border-b border-borderColor"
+                class="flex flex-col xl:grid grid-cols-5 gap-[1rem] py-[4rem] px-[0.5rem] border-b border-[var(--form-border)]"
               >
                 <div class=" col-span-2">
                   <h2
-                    class="grid font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="grid typography-h2 text-black dark:text-white"
                   >
                     Maximum Part-Payment Limits in Indian Banks
                   </h2>
@@ -515,7 +515,7 @@
               >
                 <div class="col-span-2">
                   <h2
-                    class="grid font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="grid typography-h2 text-black dark:text-white"
                   >
                     Bank-Wise EMI Increment & Part-Payment Rules
                   </h2>
@@ -531,9 +531,9 @@
             <div
               id="tips"
               data-section="tips"
-              class="bg-white text-black border-borderColor"
+              class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]"
             >
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould
                   thinkKnow={smartBorrowerTips}
                   disc={"list-disc"}
@@ -552,9 +552,4 @@
   </NewPageLayout>
 </section>
 
-<style>
-  .custom-tooltip {
-    background-color: #4caf50; /* Green background */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  }
-</style>
+

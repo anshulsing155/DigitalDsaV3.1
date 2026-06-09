@@ -30,7 +30,7 @@
   
   let activeIndex = -1;
   
-  function toggleFAQ(index) {
+  function toggleFAQ(index: number) {
     activeIndex = activeIndex === index ? -1 : index;
   }
 </script>
@@ -43,15 +43,15 @@
   
   <div class="max-w-3xl mx-auto">
     {#each faqs as faq, i}
-      <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+      <div class="mb-4 border border-[var(--form-border)] rounded-lg overflow-hidden">
         <button
-          class="w-full flex justify-between items-center p-5 bg-white hover:bg-gray-50 focus:outline-none"
+          class="w-full flex justify-between items-center p-5 bg-[var(--landing-bg-card)] hover:bg-[var(--landing-bg)] focus:outline-none"
           onclick={() => toggleFAQ(i)}
           aria-expanded={activeIndex === i}
         >
-          <span class="text-left font-medium text-gray-900">{faq.question}</span>
+          <span class="text-left font-medium text-black dark:text-white">{faq.question}</span>
           <svg
-            class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeIndex === i ? 'rotate-180' : ''}"
+            class="w-5 h-5 text-[var(--form-text-secondary)] transform transition-transform duration-200 {activeIndex === i ? 'rotate-180' : ''}"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -61,8 +61,8 @@
         </button>
         
         {#if activeIndex === i}
-          <div class="px-5 pb-5" transitionslide={{ duration: 300}}>
-            <p class="text-gray-700">{faq.answer}</p>
+          <div class="px-5 pb-5" transition:slide={{ duration: 300}}>
+            <p class="text-[var(--form-text-secondary)]">{faq.answer}</p>
           </div>
         {/if}
       </div>
@@ -70,8 +70,8 @@
   </div>
   
   <div class="mt-8 text-center">
-    <p class="text-gray-600">
-      Have more questions? <a href="/contact" class="text-yellow-600 hover:underline">Contact our loan experts</a>
+    <p class="text-[var(--form-text-secondary)]">
+      Have more questions? <a href="/contact" class="text-btnBg hover:underline">Contact our loan experts</a>
     </p>
   </div>
 </div>

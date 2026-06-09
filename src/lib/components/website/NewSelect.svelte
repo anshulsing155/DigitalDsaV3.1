@@ -1,4 +1,9 @@
 <script lang="ts">
+	interface NestedOption {
+		title: string;
+		value: string;
+	}
+
 	interface Props {
 		placeholder?: string;
 		inputPlaceholder?: string;
@@ -12,7 +17,7 @@
 		optionListClass?: string;
 		optionClass?: string;
 		chevronColor?: string;
-		nestedOptions?: any;
+		nestedOptions?: NestedOption[];
 		disabled?: boolean;
 		showOptionsHeight?: string;
 		onChange?: (event?: Event, value?: string) => void;
@@ -58,11 +63,11 @@
 
 
 
-  let inputRef: HTMLInputElement | null = null;
-  let dropdownRef: HTMLUListElement | null = null;
-  let showOptions: boolean = false;
-  let rotate: boolean = false;
-  let isMobile: boolean = false;
+  let inputRef = $state<HTMLInputElement | null>(null);
+  let dropdownRef = $state<HTMLUListElement | null>(null);
+  let showOptions = $state(false);
+  let rotate = $state(false);
+  let isMobile = $state(false);
 
   const dispatch = createEventDispatcher();
   function toggleDropdown(): void {
@@ -80,7 +85,7 @@
     rotate = false;
 
     if (typeof onChange === "function") {
-onChange(event, selectedValue);
+      onChange(event, selectedValue);
     }
 
     dispatch("change", selectedValue);
@@ -90,14 +95,14 @@ onChange(event, selectedValue);
 
   // Function to handle selection of nested options
 
-  function nestedSelectOption(option) {
+  function nestedSelectOption(option: NestedOption) {
     selectedValue = option.value; // Store value for backend
     selectedTitle = option.title; // Display title in UI
     showOptions = false;
     rotate = false;
 
     if (typeof onChange === "function") {
-onChange(selectedValue);
+      onChange(undefined, selectedValue);
     }
 
     dispatch("change", selectedValue);
@@ -109,13 +114,13 @@ onChange(selectedValue);
 
   function handleClickOutside(event: MouseEvent): void {
     if (
-inputRef &&
-!inputRef.contains(event.target as Node) &&
-dropdownRef &&
-!dropdownRef.contains(event.target as Node)
+      inputRef &&
+      !inputRef.contains(event.target as Node) &&
+      dropdownRef &&
+      !dropdownRef.contains(event.target as Node)
     ) {
-showOptions = false;
-rotate = false;
+      showOptions = false;
+      rotate = false;
     }
   }
 
@@ -128,12 +133,12 @@ rotate = false;
     detectDevice();
 
     return () => {
-document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   });
 
   $effect(() => {
-    selectedTitle = nestedOptions.find((opt) => opt.value === selectedValue)?.title || inputPlaceholder;
+    selectedTitle = nestedOptions.find((opt: NestedOption) => opt.value === selectedValue)?.title || inputPlaceholder;
   });
 </script>
 
@@ -250,7 +255,12 @@ document.removeEventListener("click", handleClickOutside);
               nestedOptions.length - 1
                 ? 'border-b'
                 : ''} border-gray-200 p-3 transition-all ease-in-out duration-200"
+              role="option"
+              tabindex="0"
+              aria-selected={option.value === selectedValue}
               onclick={() => nestedSelectOption(option)}
+              onkeydown={(event) =>
+                event.key === "Enter" && nestedSelectOption(option)}
             >
               {option.title}
             </li>

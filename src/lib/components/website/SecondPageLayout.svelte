@@ -15,7 +15,7 @@
     return pathSegments.length > 1; // Show breadcrumbs only if there's more than one segment
   })());</script>
 
-<section class="w-full ">
+<section class="w-full bg-[var(--landing-bg)] text-black dark:text-white">
   <div id="parentDiv" class=" mx-1 lg:mx-auto relative">
     {#if shouldShowBreadcrumbs}
       <div class="hidden lg:flex pl-[4rem] py-4">
@@ -42,22 +42,23 @@
       class="w-full relative -top-[3rem] md:-top-[5rem] lg:-top-[13rem]  lg:px-0 mx-auto"
     >
       <div
-        class="bg-white lg:w-[80%] mx-auto border-b p-6 sm:p-8 text-center flex justify-center items-center relative z-40"
+        class="bg-[var(--landing-bg)] text-black dark:text-white lg:w-[80%] mx-auto border border-[var(--landing-glass-border)] border-b p-6 sm:p-8 text-center flex justify-center items-center relative z-40"
       >
         <div class="flex flex-col gap-4">
           <h1
-            class="font-ThirdHead text-miniHeadFont md:text-mobHeadFont lg:text-headFont"
+            class="typography-h1 text-black dark:text-white"
           >
             {pageData.heading}
           </h1>
           {#if pageData.para}
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               {@html pageData.para}
             </p>
           {/if}
         </div>
       </div>
-      <div class="bg-white h-full right-0 mx-auto">
+      <div class="bg-[var(--landing-bg)] text-black dark:text-white h-full right-0 mx-auto">
+        <!-- svelte-ignore slot_element_deprecated -->
         <slot />
       </div>
     </div>
@@ -65,6 +66,7 @@
     <div
       class="lg:p-[4rem] relative -top-[3rem] md:-top-[5rem] lg:-top-[13rem]"
     >
+      <!-- svelte-ignore slot_element_deprecated -->
       <slot name="secondary" />
     </div>
   </div>

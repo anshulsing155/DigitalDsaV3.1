@@ -121,7 +121,7 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
 
-  let activeSection = "";
+  let activeSection = $state("");
   let pageData = {
     coverImage: "/images/senior-person-looking-on-phone.jpg",
     coverAlt: "cyber security related photo",

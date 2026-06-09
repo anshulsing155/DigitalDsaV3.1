@@ -34,7 +34,7 @@
   import ThingsYouKnow from "$lib/components/website/ThingsYouKnow.svelte";
   import Seo from "./Seo.svelte";
 
-  let activeSection = "";
+  let activeSection = $state('');
 
   // mobile-accordion
   let navBarMedium = [

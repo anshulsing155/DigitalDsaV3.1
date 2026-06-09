@@ -48,7 +48,7 @@
     "Tools & calculator",
   ];
 
-  let activeSection = "";
+  let activeSection = $state("");
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {
@@ -763,12 +763,4 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
   </NewPageLayout>
 </section>
 
-<style>
-  details summary .icon-container .faq-icon {
-    transition: transform 0.3s ease;
-  }
 
-  details[open] summary .icon-container .faq-icon {
-    transform: rotate(180deg);
-  }
-</style>

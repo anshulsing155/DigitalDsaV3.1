@@ -155,7 +155,7 @@ icon.classList.add("fa-angle-up");
 detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
-  let activeSection = ""; // Initially no section is active
+  let activeSection = $state(""); // Initially no section is active
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {
@@ -697,8 +697,4 @@ window.removeEventListener("scroll", handleScroll);
   </NewPageLayout>
 </section>
 
-<style>
-  .section {
-    scroll-margin-top: 4rem; /* Adjust this value to match your navbar height */
-  }
-</style>
+

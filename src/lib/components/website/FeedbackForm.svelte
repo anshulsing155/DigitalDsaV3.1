@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import PopupModal from "./PopupModal.svelte";
   import Check from "./Check.svelte";
   import ReCaptcha from "$lib/components/website/ReCaptcha.svelte";
@@ -6,22 +6,20 @@
   import { feedbackSchema } from "$lib/formValidationSchema";
   import { page } from "$app/state";
 
-  let hasErrors;
-  let showDDSARating = false;
-  let uploadedImage = null;
-  let successModal = false;
-  let errorModal = false;
+  let showDDSARating = $state(false);
+  let successModal = $state(false);
+  let errorModal = $state(false);
   let userName = "";
   let userEmail = "";
   let feedbackMsg = "";
-  let recaptchaToken = "";
-  let recaptchaComponent;
+  let recaptchaToken = $state("");
+  let recaptchaComponent = $state<any>();
 
-  let feedbackData = {
+  let feedbackData = $state({
     userName,
     userEmail,
     feedbackMsg,
-    uploadedImage,
+    uploadedImage: null as string | null,
     ddsaOptions: page.url.searchParams.getAll("features") ?? [],
     // concentFormation: "",
     ddsaAgainstReview: [],
@@ -32,7 +30,12 @@
     bankOtherReview: "",
     ddsaRatingDetailsId: Number(page.url.searchParams.get("star")) || 0,
     bankRatingDetails: {},
-  };
+  });
+
+  let errors = $state<any>({});
+  let hasErrors = $derived(Object.values(errors).some(
+    (error: any) => Array.isArray(error?._errors) && error._errors.length > 0
+  ));
 
   $effect(() => { feedbackData; });
 
@@ -42,7 +45,7 @@
       feedbackData.ddsaRatingDetailsId = $feedbackYes;
     }
   });
-  let isWaiting = false;
+  let isWaiting = $state(false);
 
   let dsaRating = [
     "Calculators",
@@ -57,7 +60,7 @@
     "Other",
   ];
 
-  let fileInput = null;
+  let fileInput = $state<HTMLInputElement | null>(null);
 
   function triggerFileUpload() {
     if (fileInput) {
@@ -65,7 +68,7 @@
     }
   }
 
-  async function handleImageUpload(event) {
+  async function handleImageUpload(event: any) {
     const file = event.target.files[0];
     if (!file) return;
 
@@ -85,21 +88,21 @@
     feedbackData.uploadedImage = await toBase64(file);
   }
 
-  function removeImage(event) {
+  function removeImage(event: any) {
     event.stopPropagation(); // Prevent triggering upload when clicking remove button
     feedbackData.uploadedImage = null;
   }
 
-  const toBase64 = (file) => {
+  const toBase64 = (file: any): Promise<string> => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result);
+      reader.onload = () => resolve(reader.result as string);
       reader.onerror = (error) => reject(error);
     });
   };
 
-  const ratingMap = {
+  const ratingMap: Record<number, { label: string; icon: string; color: string; star: string }> = {
     1: {
       label: "Very dissatisfied",
       icon: "fa-face-frown",
@@ -132,7 +135,7 @@
     },
   };
 
-  function ddsaStar(event) {
+  function ddsaStar(event: any) {
     showDDSARating = true;
     feedbackData.ddsaRatingDetailsId = parseInt(event.target.id);
     feedbackData.ddsaRatingDetails = {
@@ -141,11 +144,11 @@
     };
   }
 
-  function handleToken(event) {
+  function handleToken(event: any) {
     recaptchaToken = event.detail.token;
   }
 
-  let errors = {};
+  // errors is defined above hasErrors
   const submitFeedback = async () => {
     const result = feedbackSchema.safeParse(
       Object.fromEntries(Object.entries(feedbackData).slice(0, 3))
@@ -193,7 +196,7 @@
     }
   };
 
-  let modalIcon;
+  let modalIcon = $state<string>();
   $effect(() => {
     if (feedbackData.ddsaRatingDetailsId > 3) {
       modalIcon = "/pngs/fun.png";
@@ -246,7 +249,7 @@
 
     <form
       method="post"
-      onsubmit={(e) => { e.preventDefault(); (submitFeedback)(e); }}
+      onsubmit={(e) => { e.preventDefault(); submitFeedback(); }}
       class="w-full md:w-[70%] mx-auto"
     >
       <div class="flex flex-col gap-[2rem] justify-between w-full mx-auto">
@@ -262,12 +265,12 @@
           >
             <div class="cursor-pointer text-paraFont md:text-mobSubHead">
               {#each [1, 2, 3, 4, 5] as star}
-                <button type="button" onclick={ddsaStar}>
+                <button type="button" onclick={ddsaStar} aria-label="Rate {star} star{star > 1 ? 's' : ''}">
                   <i
                     class={feedbackData.ddsaRatingDetailsId >= star
                       ? ratingMap[star].star
                       : "fa-regular fa-star text-btnBg"}
-                    id={star}
+                    id={String(star)}
                   ></i>
                 </button>
               {/each}
@@ -324,7 +327,7 @@
                       class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 font-Paragraph text-paraFont resize-none text-black outline-none focus:border-btnBg focus:ring-0"
                       placeholder=" "
                       rows="3"
-                    />
+                    ></textarea>
                     <label
                       for="ddsaOther"
                       class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
@@ -376,7 +379,7 @@
                       class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 font-Paragraph text-paraFont resize-none text-black outline-none focus:border-btnBg focus:ring-0"
                       placeholder=" "
                       rows="3"
-                    />
+                    ></textarea>
                     <label
                       for="ddsaOther"
                       class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
@@ -419,6 +422,7 @@
                     type="button"
                     onclick={removeImage}
                     class="absolute top-0 right-0 bg-red-500 text-white p-1 rounded-full shadow hidden group-hover:block transition"
+                    aria-label="Remove Image"
                   >
                     <i class="fa-solid fa-trash"></i>
                   </button>
@@ -519,7 +523,7 @@
                     class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 font-Paragraph text-paraFont resize-none text-black outline-none focus:border-btnBg focus:ring-0"
                     placeholder=" "
                     rows="6"
-                  />
+                  ></textarea>
                   <label
                     for="message"
                     class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
@@ -587,6 +591,7 @@
               type="button"
               class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none font-Paragraph text-minParaFont md:text-subParaFont rounded-lg text-sm w-full px-5 py-2.5 text-center"
               disabled
+              aria-label="Submitting feedback"
             >
               <div class="flex text-center justify-center items-center">
                 <div class="loader"></div>

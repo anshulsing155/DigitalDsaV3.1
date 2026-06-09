@@ -57,23 +57,24 @@
 </script>
 
 {#if visible}
-  <div class="py-12 bg-gray-50" in:fade={{ duration: 500 }}>
-    <h2 class="text-3xl font-bold text-center mb-8">Business Loan Eligibility Calculator</h2>
-    <p class="text-lg text-center max-w-3xl mx-auto mb-12">
+  <div class="py-12 bg-[var(--landing-bg)]" in:fade={{ duration: 500 }}>
+    <h2 class="text-3xl font-bold text-center mb-8 text-black dark:text-white">Business Loan Eligibility Calculator</h2>
+    <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-[var(--form-text-secondary)]">
       Estimate how much business loan you might qualify for based on your financial details.
     </p>
     
-    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <div class="max-w-4xl mx-auto bg-[var(--landing-bg-card)] rounded-lg shadow-lg overflow-hidden">
       <div class="p-6 md:p-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="business-type">
               Business Type
             </label>
             <select
+              id="business-type"
               bind:value={businessType}
               onchange={calculateEligibility}
-              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+              class="w-full px-3 py-2 border border-[var(--form-border)] rounded-md shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
             >
               <option value="retail">Retail Business</option>
               <option value="manufacturing">Manufacturing Business</option>
@@ -82,78 +83,82 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="monthly-income">
               Monthly Cash Income (₹)
             </label>
             <input
+              id="monthly-income"
               type="number"
               bind:value={monthlyIncome}
               oninput={calculateEligibility}
               min="10000"
               step="10000"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+              class="w-full px-3 py-2 border border-[var(--form-border)] rounded-md shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
             />
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="average-balance">
               Average Monthly Balance (₹)
             </label>
             <input
+              id="average-balance"
               type="number"
               bind:value={averageBalance}
               oninput={calculateEligibility}
               min="5000"
               step="5000"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+              class="w-full px-3 py-2 border border-[var(--form-border)] rounded-md shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
             />
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="annual-turnover">
               Annual GST Turnover (₹)
             </label>
             <input
+              id="annual-turnover"
               type="number"
               bind:value={annualTurnover}
               oninput={calculateEligibility}
               min="100000"
               step="100000"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+              class="w-full px-3 py-2 border border-[var(--form-border)] rounded-md shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
             />
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="annual-profit">
               Annual Net Profit (₹)
             </label>
             <input
+              id="annual-profit"
               type="number"
               bind:value={annualProfit}
               oninput={calculateEligibility}
               min="50000"
               step="50000"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+              class="w-full px-3 py-2 border border-[var(--form-border)] rounded-md shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
             />
           </div>
         </div>
         
-        <div class="mt-8 p-6 bg-yellow-50 rounded-lg">
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Estimated Loan Eligibility</h3>
+        <div class="mt-8 p-6 bg-[var(--landing-bg)] border border-[var(--form-border)] rounded-lg">
+          <h3 class="text-xl font-semibold text-black dark:text-white mb-4">Estimated Loan Eligibility</h3>
           <div class="flex flex-col md:flex-row md:items-center justify-between">
             <div>
-              <p class="text-sm text-gray-600 mb-1">Estimated Range</p>
-              <p class="text-2xl font-bold text-yellow-700">
+              <p class="text-sm text-[var(--form-text-secondary)] mb-1">Estimated Range</p>
+              <p class="text-2xl font-bold text-btnBg">
                 {formatCurrency(eligibilityRange.min)} - {formatCurrency(eligibilityRange.max)}
               </p>
             </div>
             <div class="mt-4 md:mt-0">
-              <a href="/get-started/how-can-we-help" class="inline-block px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition-colors">
+              <a href="/get-started/how-can-we-help" class="inline-block px-6 py-3 bg-btnBg text-black font-medium rounded-md hover:opacity-90 transition-opacity">
                 Get Personalized Offers
               </a>
             </div>
           </div>
-          <p class="mt-4 text-sm text-gray-600">
+          <p class="mt-4 text-sm text-[var(--form-text-secondary)]">
             This is an estimate based on the information provided. Actual loan eligibility may vary based on additional factors like credit score, business vintage, and lender policies.
           </p>
         </div>

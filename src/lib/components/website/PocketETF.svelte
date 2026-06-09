@@ -358,7 +358,7 @@
                 </h2>
                 <h4 class=" font-ThirdHead text-paraFont ">Invest in a broad range of ETFs to suit your preferences
                 </h4>
-                <p class="font-subPara text-subParaFont">Ten themed <a href="" class="underline underline-offset-4 hover:no-underline text-linkColor"> ETF options</a> to choose from.
+                <p class="font-subPara text-subParaFont">Ten themed <span class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"> ETF options</span> to choose from.
     
                 </p>
             </div>
@@ -467,7 +467,7 @@
                 </h2>
                 <h4 class=" font-ThirdHead text-paraFont ">Invest in a broad range of ETFs to suit your preferences
                 </h4>
-                <p class="font-subPara text-subParaFont">Ten themed <a href="" class="underline underline-offset-4 hover:no-underline text-linkColor"> ETF options</a> to choose from.
+                <p class="font-subPara text-subParaFont">Ten themed <span class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"> ETF options</span> to choose from.
     
                 </p>
             </div>
@@ -568,10 +568,8 @@
             <div class="grid gap-4 pt-[2rem] font-Paragraph text-subParaFont">
               <p>
                 The investing experience features and functionality in the
-                undefined app is only available for CommSec Pocket and individual <a
-                  href=""
-                  class="underline underline-offset-4 hover:no-underline text-linkColor">CommSec</a
-                > Australian Shares accounts. You can view other CommSec account
+                undefined app is only available for CommSec Pocket and individual <span
+                  class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer">CommSec</span> Australian Shares accounts. You can view other CommSec account
                 types, like Margin Loans and Exchange Traded Options, via the Accounts
                 list. You can access more share trading services, features and functionality
                 on CommSec's apps and platforms
@@ -647,16 +645,4 @@
   </PageDesign>
 </section>
 
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
 
-  details summary .icon-container .faq-icon {
-    transition: transform 0.3s ease;
-  }
-
-  details[open] summary .icon-container .faq-icon {
-    transform: rotate(180deg);
-  }
-</style>

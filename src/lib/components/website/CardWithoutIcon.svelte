@@ -19,16 +19,16 @@
 
 </script>
 
-<div class="flex gap-4 items-start mt-4 pr-4">
+<div class="flex gap-4 items-start mt-4 pr-4 text-black dark:text-white">
   <div class="flex flex-col gap-4">
     {#if cardData.heading}
-      <h2 class="font-FourthHead text-cardHeading">{cardData.heading}</h2>
+      <h2 class="typography-body-lg !font-semibold text-black dark:text-white">{cardData.heading}</h2>
     {/if}
     {#if cardData.subHeading}
-    <h2 class="font-SubPara text-subPara">{@html cardData.subHeading}</h2>
-  {/if}
+      <h2 class="typography-body-md text-[var(--form-text-secondary)]">{@html cardData.subHeading}</h2>
+    {/if}
     {#if cardData.para}
-      <p class="font-SubPara text-subPara">{@html cardData.para}</p>
+      <p class="typography-body-md text-[var(--form-text-secondary)]">{@html cardData.para}</p>
     {/if}
     {#if cardData.linkName}
       <Anchor link={cardData.url} linkName={cardData.linkName} />
@@ -45,7 +45,7 @@
     {#if cardData.links}
       <div class="flex flex-col gap-2">
         {#each cardData.links as link}
-          <ul class="grid list-disc pl-5 marker:text-black">
+          <ul class="grid list-disc pl-5 marker:text-black dark:marker:text-white">
             <li>
               <Anchor link={link.secUrl} linkName={link.secLinkName} />
             </li>

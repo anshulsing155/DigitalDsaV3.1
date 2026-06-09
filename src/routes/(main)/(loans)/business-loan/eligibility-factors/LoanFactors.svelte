@@ -46,17 +46,17 @@
     {#each factors as factor, i}
       {#if visible}
         <div 
-          class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-yellow-500 hover:shadow-xl transition-all duration-300"
+          class="bg-[var(--landing-bg-card)] rounded-lg shadow-lg p-6 border-l-4 border-btnBg hover:shadow-xl transition-all duration-300"
           in:fly={{ y: 50, delay: i * 150, duration: 500 }}
         >
           <div class="flex items-start">
            
             <div>
-              <h3 class="text-xl font-semibold mb-2">{factor.title}</h3>
-              <p class="text-gray-700 mb-3">{factor.description}</p>
-              <div class="bg-gray-50 p-3 rounded-md">
-                <p class="text-sm font-medium text-gray-800">
-                  <span class="text-yellow-600 font-bold">Important:</span> {factor.importance}
+              <h3 class="text-xl font-semibold mb-2 text-black dark:text-white">{factor.title}</h3>
+              <p class="text-[var(--form-text-secondary)] mb-3">{factor.description}</p>
+              <div class="bg-[var(--landing-bg)] p-3 rounded-md">
+                <p class="text-sm font-medium text-black dark:text-white">
+                  <span class="text-btnBg font-bold">Important:</span> {factor.importance}
                 </p>
               </div>
             </div>

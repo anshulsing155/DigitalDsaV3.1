@@ -208,8 +208,8 @@
             >
               <p>
                 Get help from  the undefined app or connect with a
-                specialist who can message you back. You’ll need <a
-                  class="text-linkColor underline underline-offset-4">undefined app</a
+                specialist who can message you back. You’ll need <span
+                  class="text-linkColor underline underline-offset-4">undefined app</span
                 > notifications turned on so you know when you’ve received a reply.
               </p>
 
@@ -233,12 +233,4 @@
   </PageDesign>
 </section>
 
-<style>
-  details summary .icon-container .faq-icon {
-    transition: transform 0.3s ease;
-  }
 
-  details[open] summary .icon-container .faq-icon {
-    transform: rotate(180deg);
-  }
-</style>

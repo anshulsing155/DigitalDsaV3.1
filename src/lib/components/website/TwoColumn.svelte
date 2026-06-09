@@ -1,22 +1,16 @@
 <script>
-	let {
-		columnsData = {},
-		cardImage,
-		cardAltName,
-		cardHeading,
-		sourceName,
-		originalSource,
-		reverse = false,
-		imageHeight = 4
-	} = $props();
-
+  let {
+    columnsData = {},
+    cardImage = '',
+    cardAltName = '',
+    cardHeading = '',
+    sourceName = '',
+    originalSource = '',
+    reverse = false,
+    imageHeight = 4
+  } = $props();
 
   import Tooltip from "./Tooltip.svelte";
-
-  //;
-
-// Default: left div is on the left
-
 </script>
 
 <div
@@ -51,12 +45,14 @@
   >
     {#if cardHeading}
       <h3
-        class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont"
+        class="md:text-start typography-h2-md text-black dark:text-white"
       >
         {@html cardHeading}
       </h3>
     {/if}
+    <!-- svelte-ignore slot_element_deprecated -->
     <slot name="list" />
+    <!-- svelte-ignore slot_element_deprecated -->
     <slot></slot>
   </div>
 </div>

@@ -44,7 +44,7 @@
   import HelpList from "./HelpList.svelte";
   import ThingsYouKnow from "./ThingsYouKnow.svelte";
   import Seo from "./Seo.svelte";
-  let activeSection = "";
+  let activeSection = $state('');
 
   let firstTableData = [
     {

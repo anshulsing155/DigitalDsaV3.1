@@ -11,7 +11,7 @@
   import { applicationData } from "$lib/stores/stores";
   import { onMount } from "svelte";
 
-  let activeSection = "";
+  let activeSection = $state('');
   let navBarMedium = [
     "What is Debt Consolidation?",
     "Benefits",

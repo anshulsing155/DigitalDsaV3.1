@@ -51,7 +51,7 @@
     }, 100);
   };
 
-  let activeSection = "";
+  let activeSection = $state("");
 
   // end-here
 

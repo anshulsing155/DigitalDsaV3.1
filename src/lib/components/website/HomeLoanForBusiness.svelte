@@ -307,7 +307,7 @@
       detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
-  let activeSection = ""; // Initially no section is active
+  let activeSection = $state(''); // Initially no section is active
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {
