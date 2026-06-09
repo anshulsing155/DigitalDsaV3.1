@@ -1,114 +1,115 @@
-@utility bg-gradient {
-	background: linear-gradient(
-		90deg,
-		hsla(64, 41%, 92%, 1) 0%,
-		hsla(196, 83%, 84%, 1) 50%,
-		hsla(305, 75%, 83%, 1) 100%
-	);
-}
+@layer utilities {
+	.bg-gradient {
+		background: linear-gradient(
+			90deg,
+			hsla(64, 41%, 92%, 1) 0%,
+			hsla(196, 83%, 84%, 1) 50%,
+			hsla(305, 75%, 83%, 1) 100%
+		);
+	}
 
-@utility bg-ddsa-gradient-error {
-	background: linear-gradient(135deg, #b91c1c 0%, #e11d48 100%);
-	transition:
-		background 0.3s ease,
-		transform 0.2s ease,
-		box-shadow 0.3s ease;
-	&:hover {
+	.bg-ddsa-gradient-error {
+		background: linear-gradient(135deg, #b91c1c 0%, #e11d48 100%);
+		transition:
+			background 0.3s ease,
+			transform 0.2s ease,
+			box-shadow 0.3s ease;
+	}
+
+	.bg-ddsa-gradient-error:hover {
 		background: linear-gradient(135deg, #991b1b 0%, #be123c 100%);
 		box-shadow: 0 8px 20px rgb(190 24 93 / 0.25);
 		transform: translateY(-1px);
 	}
-}
 
-/* --- DigitalDSA Brand Gradients --- */
-@utility bg-ddsa-gradient-primary {
-	background: var(--gradient-primary);
-}
+	/* --- DigitalDSA Brand Gradients --- */
+	.bg-ddsa-gradient-primary {
+		background: var(--gradient-primary);
+	}
 
-@utility bg-ddsa-gradient-hero {
-	background: linear-gradient(
-		135deg,
-		var(--ddsa-secondary-900) 0%,
-		var(--ddsa-secondary-800) 50%,
-		var(--ddsa-secondary-700) 100%
-	);
-}
+	.bg-ddsa-gradient-hero {
+		background: linear-gradient(
+			135deg,
+			var(--ddsa-secondary-900) 0%,
+			var(--ddsa-secondary-800) 50%,
+			var(--ddsa-secondary-700) 100%
+		);
+	}
 
-@utility bg-ddsa-gradient-card {
-	background: linear-gradient(180deg, var(--ddsa-white) 0%, var(--ddsa-primary-100) 100%);
-}
+	.bg-ddsa-gradient-card {
+		background: linear-gradient(180deg, var(--ddsa-white) 0%, var(--ddsa-primary-100) 100%);
+	}
 
-@utility bg-ddsa-gradient-subtle {
-	background: linear-gradient(135deg, var(--ddsa-gray-50) 0%, var(--ddsa-primary-50) 100%);
-}
+	.bg-ddsa-gradient-subtle {
+		background: linear-gradient(135deg, var(--ddsa-gray-50) 0%, var(--ddsa-primary-50) 100%);
+	}
 
-@utility text-muted {
-	color: var(--dash-text-muted);
-}
+	.text-muted {
+		color: var(--dash-text-muted);
+	}
 
-@utility text-secondary {
-	color: var(--dash-text-secondary);
-}
+	.text-secondary {
+		color: var(--dash-text-secondary);
+	}
 
-@utility text-main {
-	color: var(--dash-text);
-}
+	.text-main {
+		color: var(--dash-text);
+	}
 
-@utility bg-card {
-	background-color: var(--dash-bg-card);
-}
+	.bg-card {
+		background-color: var(--dash-bg-card);
+	}
 
-@utility bg-card-alt {
-	background-color: var(--dash-bg-alt);
-}
+	.bg-card-alt {
+		background-color: var(--dash-bg-alt);
+	}
 
-@utility border-token {
-	border-color: var(--dash-border);
-}
+	.border-token {
+		border-color: var(--dash-border);
+	}
 
-@utility border-subtle {
-	border-color: var(--dash-border-light, var(--dash-border));
-}
+	.border-subtle {
+		border-color: var(--dash-border-light, var(--dash-border));
+	}
 
-@utility focus-ring {
-	&:focus {
+	.focus-ring:focus {
 		box-shadow: 0 0 0 3px rgba(var(--ddsa-primary-rgb, 203 153 126), 0.2);
 		outline: none;
 	}
-}
 
-@utility text-ddsa-primary {
-	color: var(--ddsa-primary-500);
-}
+	.text-ddsa-primary {
+		color: var(--ddsa-primary-500);
+	}
 
-@utility text-ddsa-accent {
-	color: var(--ddsa-accent-500);
-}
+	.text-ddsa-accent {
+		color: var(--ddsa-accent-500);
+	}
 
-@utility bg-ddsa-primary {
-	background-color: var(--ddsa-primary-500);
-}
+	.bg-ddsa-primary {
+		background-color: var(--ddsa-primary-500);
+	}
 
-@utility bg-ddsa-accent {
-	background-color: var(--ddsa-accent-500);
-}
+	.bg-ddsa-accent {
+		background-color: var(--ddsa-accent-500);
+	}
 
-@utility border-ddsa-primary {
-	border-color: var(--ddsa-primary-500);
-}
+	.border-ddsa-primary {
+		border-color: var(--ddsa-primary-500);
+	}
 
-@utility border-ddsa-accent {
-	border-color: var(--ddsa-accent-500);
-}
+	.border-ddsa-accent {
+		border-color: var(--ddsa-accent-500);
+	}
 
-@utility shadow-ddsa-primary {
-	box-shadow:
-		0 10px 15px -3px rgba(203, 153, 126, 0.2),
-		0 4px 6px -4px rgba(203, 153, 126, 0.1);
-}
+	.shadow-ddsa-primary {
+		box-shadow:
+			0 10px 15px -3px rgba(203, 153, 126, 0.2),
+			0 4px 6px -4px rgba(203, 153, 126, 0.1);
+	}
 
-@utility shadow-ddsa-accent {
-	box-shadow:
-		0 10px 15px -3px rgba(221, 190, 169, 0.2),
-		0 4px 6px -4px rgba(221, 190, 169, 0.1);
+	.shadow-ddsa-accent {
+		box-shadow:
+			0 10px 15px -3px rgba(221, 190, 169, 0.2),
+			0 4px 6px -4px rgba(221, 190, 169, 0.1);
+	}
 }

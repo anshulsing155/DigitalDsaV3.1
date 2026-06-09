@@ -1,0 +1,71 @@
+<script lang="ts">
+	import Tooltip from './Tooltip.svelte';
+
+	type Props = {
+		contents?: {
+			cardImage?: string;
+			cardAltName?: string;
+			cardHeading?: string;
+			sourceName?: string;
+			originalSource?: string;
+			reverse?: boolean;
+		};
+	};
+
+	const {
+		contents = {
+			cardImage: '',
+			cardAltName: '',
+			cardHeading: '',
+			sourceName: '',
+			originalSource: '',
+			reverse: false
+		}
+	}: Props = $props();
+</script>
+
+<div
+	class="relative grid items-start gap-8 border-b border-[var(--form-border)] px-2 py-16 md:gap-12 lg:grid-cols-2 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32 space-x-20"
+>
+	<!-- Image -->
+	<div
+		class="top-0 w-full transform lg:relative"
+		class:lg\:order-last={contents.reverse}
+		class:lg\:translate-x-\[8rem\]={contents.reverse}
+		class:lg\:-translate-x-\[8rem\]={!contents.reverse}
+	>
+		<div class="relative">
+			<div
+				class="absolute top-0 right-0 bg-opacity-50 text-center text-white"
+			>
+				<Tooltip
+					linkName={`image source: <span class="underline">${contents.sourceName}</span>`}
+					hoverLink={contents.originalSource}
+				/>
+			</div>
+
+			<img
+				src={contents.cardImage}
+				alt={contents.cardAltName}
+				class="aspect-[5/3] h-60 w-full object-cover object-top lg:h-full"
+			/>
+		</div>
+	</div>
+
+	<!-- Content -->
+	<div
+		class="flex flex-col justify-self-start gap-10"
+		class:lg\:order-first={contents.reverse}
+	>
+		{#if contents.cardHeading}
+			<h3
+				class="typography-h2-md text-black dark:text-white">
+				{@html contents.cardHeading}
+			</h3>
+		{/if}
+
+		<div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-4">
+			<slot />
+		</div>
+	</div>
+</div>

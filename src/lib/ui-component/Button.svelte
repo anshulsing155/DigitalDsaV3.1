@@ -7,6 +7,7 @@
 		imgAltName?: string;
 		img?: string;
 		imageClass?: string;
+		// btnClassStyle?: string;
 		onClick?: () => void;
 		btnAnimation?: boolean;
 		btnBorder?: string;
@@ -21,17 +22,12 @@
 		imgAltName = '',
 		img = '',
 		imageClass = '',
+		// btnClassStyle = 'py-3',
 		onClick = () => {},
 		btnAnimation = false,
 		btnBorder = '',
 		btnColor = ''
 	}: Props = $props();
-
-	// Resolve conflicts dynamically: detect overrides in incoming classes
-	const hasRoundedOverride = $derived(btnClass.includes('rounded-') || btnClass.includes('rounded'));
-	const hasPaddingOverride = $derived(
-		btnClass.includes('px-') || btnClass.includes('py-') || btnClass.includes('p-')
-	);
 </script>
 
 {#if link}

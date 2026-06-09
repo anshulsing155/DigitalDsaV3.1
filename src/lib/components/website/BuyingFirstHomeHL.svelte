@@ -11,6 +11,7 @@
 	import HelpList from './HelpList.svelte';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import Seo from './Seo.svelte';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	const toggleDropdown = (event, index) => {
 		event.preventDefault();
@@ -294,7 +295,7 @@
 
 		<!-- for mobile -->
 		<div class="block lg:hidden">
-			{#each ['Getting ready', 'Start buying journey', "What's next?", 'Tools & calculators'] as list, index}
+			{#each ['Getting ready', 'Start buying journey', "What's next?", 'Tools & calculators'] as list, index (index)}
 				<details
 					class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index <
 					list.length - 1
@@ -308,7 +309,9 @@
 						<div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="">{list}</h2>
 							<div class="icon-container">
-								<span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+								<ChevronDown
+									class="h-5 w-5 text-darkColor-contrast transition-transform duration-300"
+								/>
 							</div>
 						</div>
 					</summary>

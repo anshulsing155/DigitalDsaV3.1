@@ -16,7 +16,7 @@
 	<div class="flex w-full flex-col gap-8">
 		<h2
 			class="
-				typography-h2-md text-black dark:text-red-500
+				typography-h2-md text-black dark:text-white
 			"
 		>
 			{@html contents.heading}
@@ -28,7 +28,7 @@
 					contents.xlGridCol === 4 ? 'xl:grid-cols-4' : 'lg:grid-cols-3'
 				}`}
 			>
-				{#each contents.cards as card, index (index)}
+				{#each contents.cards as card, index}
 					<div
 						class={index < contents.cards.length - 1
 							? 'border-b border-[var(--form-border)] pb-16 md:border-b-0 md:pb-0'

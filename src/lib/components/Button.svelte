@@ -1,10 +1,71 @@
 <script lang="ts">
-	interface Props {
+	type Props = {
+		btnClass?: string;
 		btnName?: string;
-		onclick?: () => void;
-	}
+		link?: string;
+		icon?: string;
+		imgAltName?: string;
+		img?: string;
+		imageClass?: string;
+		// btnClassStyle?: string;
+		onClick?: () => void;
+		btnAnimation?: boolean;
+	};
 
-	let { btnName = 'Submit', onclick = () => {} }: Props = $props();
+	const {
+		btnClass = '',
+		btnName = '',
+		link = '',
+		icon = '',
+		imgAltName = '',
+		img = '',
+		imageClass = '',
+		// btnClassStyle = 'py-3',
+		onClick = () => {},
+		btnAnimation = false
+	}: Props = $props();
 </script>
 
-<button class="rounded-md bg-[#006FFD] py-2 text-white" onclick={() => onclick()}>{btnName}</button>
+{#if link}
+	<a href={link} class="inline-block">
+		<button
+			type="button"
+			onclick={onClick}
+			class={`typography-button typography-button w-full cursor-pointer rounded-full
+				px-8 py-3 transition-all
+				duration-300 hover:opacity-90 md:w-auto
+				${btnClass}
+				${btnAnimation ? 'animate-scaleLoop' : ''}`}
+		>
+			<span class="flex items-center justify-center gap-2">
+				{btnName}
+
+				{#if icon}
+					<i class={icon}></i>
+				{:else if img}
+					<img src={img} alt={imgAltName} class={`h-2 ${imageClass}`} />
+				{/if}
+			</span>
+		</button>
+	</a>
+{:else}
+	<button
+		type="button"
+		onclick={onClick}
+		class={`typography-button typography-button w-full cursor-pointer rounded-full
+			px-8 py-3 transition-all
+			duration-300 hover:opacity-90 md:w-auto
+			${btnClass}
+			${btnAnimation ? 'animate-scaleLoop' : ''}`}
+	>
+		<span class="flex items-center justify-center gap-2">
+			{btnName}
+
+			{#if icon}
+				<i class={icon}></i>
+			{:else if img}
+				<img src={img} alt={imgAltName} class={`h-2 ${imageClass}`} />
+			{/if}
+		</span>
+	</button>
+{/if}

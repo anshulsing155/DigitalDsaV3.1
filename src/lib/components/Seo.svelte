@@ -1,7 +1,25 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	interface Props {
+	type BreadcrumbItem = {
+		name: string;
+		url: string;
+	};
+
+	const {
+		title = "Digital DSA - India's Leading Loan Comparison Platform",
+		description = "Compare loan offers from top Indian banks and get expert advice. Use our loan calculators to find the best rates and apply online with Digital DSA.",
+		keywords = '',
+		url = 'https://digitaldsa.com/',
+		image = 'https://digitaldsa.com/logo/newLogo.png',
+		author = 'Digital DSA Team',
+		twitterHandle = '@DigitalDSA001',
+		type = 'Website',
+		siteName = 'Digital DSA',
+		locale = 'en_IN',
+		themeColor = '#ffffff',
+		breadcrumb = []
+	}: {
 		title?: string;
 		description?: string;
 		keywords?: string;
@@ -13,37 +31,23 @@
 		siteName?: string;
 		locale?: string;
 		themeColor?: string;
-		canonical?: string;
-		breadcrumb?: { name: string; url: string }[];
-	}
-
-	let {
-		title = 'DigitalDSA Pro – Intelligence for DSAs & Loan Agents',
-		description = 'Real-time bank matches, highest payout slabs, verified RM contacts – built for independent DSAs and loan professionals.',
-		keywords = 'DSA platform, loan DSA, bank matching, corporate DSA, RM network, slab comparison, loan filing, digital dsa',
-		url = 'https://digitaldsa.com',
-		image = 'https://digitaldsa.com/og-image.jpg',
-		author = 'Digital DSA Team',
-		twitterHandle = '@DigitalDSA001',
-		type = 'website',
-		siteName = 'Digital DSA',
-		locale = 'en_IN',
-		themeColor = '#ffffff',
-		canonical,
-		breadcrumb = []
-	}: Props = $props();
+		breadcrumb?: BreadcrumbItem[];
+	} = $props();
 
 	let origin = $state('https://digitaldsa.com');
 
 	onMount(() => {
-		if (typeof window !== 'undefined') {
-			origin = window.location.origin;
-		}
+		origin = window.location.origin;
 	});
 
-	let fullImageUrl = $derived(image?.startsWith('http') ? image : `${origin}${image || '/logo.png'}`);
-	let breadcrumbJson = $derived(
-		Array.isArray(breadcrumb) && breadcrumb.length > 0
+	const fullImageUrl = $derived(
+		image?.startsWith('http')
+			? image
+			: `${origin}${image || '/logo.png'}`
+	);
+
+	const breadcrumbJson = $derived(
+		Array.isArray(breadcrumb) && breadcrumb.length
 			? {
 					'@context': 'https://schema.org',
 					'@type': 'BreadcrumbList',
@@ -60,54 +64,142 @@
 
 <svelte:head>
 	<title>{title}</title>
-	<meta name="description" content={description} />
-	<meta name="keywords" content={keywords} />
-	<meta name="author" content={author} />
-	<meta name="robots" content="index, follow" />
-	<meta name="theme-color" content={themeColor} />
-	<meta http-equiv={"content-language" as any} content={locale} />
+
+	<meta charset="UTF-8" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1"
+	/>
+	<meta
+		name="description"
+		content={description}
+	/>
+	<meta
+		name="keywords"
+		content={keywords}
+	/>
+	<meta
+		name="author"
+		content={author}
+	/>
+	<meta
+		name="robots"
+		content="index, follow"
+	/>
+	<meta
+		name="theme-color"
+		content={themeColor}
+	/>
+	<meta
+		http-equiv="content-language"
+		content={locale}
+	/>
 
 	<!-- Open Graph -->
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="og:image" content={fullImageUrl} />
-	<meta property="og:url" content={url} />
-	<meta property="og:type" content={type} />
-	<meta property="og:locale" content={locale} />
-	<meta property="og:site_name" content={siteName} />
+	<meta
+		property="og:title"
+		content={title}
+	/>
+	<meta
+		property="og:description"
+		content={description}
+	/>
+	<meta
+		property="og:image"
+		content={fullImageUrl}
+	/>
+	<meta
+		property="og:url"
+		content={url}
+	/>
+	<meta
+		property="og:type"
+		content={type}
+	/>
+	<meta
+		property="og:locale"
+		content={locale}
+	/>
+	<meta
+		property="og:site_name"
+		content={siteName}
+	/>
 
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content={fullImageUrl} />
-	<meta name="twitter:site" content={twitterHandle} />
+	<!-- Twitter -->
+	<meta
+		name="twitter:card"
+		content="summary_large_image"
+	/>
+	<meta
+		name="twitter:title"
+		content={title}
+	/>
+	<meta
+		name="twitter:description"
+		content={description}
+	/>
+	<meta
+		name="twitter:image"
+		content={fullImageUrl}
+	/>
+	<meta
+		name="twitter:site"
+		content={twitterHandle}
+	/>
 
-	<link rel="canonical" href={canonical || url} />
+	<link
+		rel="canonical"
+		href={url}
+	/>
 
-	<!-- JSON-LD: Main Schema -->
+	<link
+		rel="icon"
+		href="/favicon.png"
+	/>
+
+	<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="/apple-touch-icon.png"
+	/>
+
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="32x32"
+		href="/favicon-32x32.png"
+	/>
+
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="16x16"
+		href="/favicon-16x16.png"
+	/>
+
 	{@html `<script type="application/ld+json">
-		${JSON.stringify({
-			'@context': 'http://schema.org',
-			'@type': type === 'website' ? 'WebSite' : 'WebPage',
-			name: title,
-			description: description,
-			url: url,
-			image: fullImageUrl,
-			publisher: {
-				'@type': 'Organization',
-				name: siteName,
-				url: origin,
-				logo: {
-					'@type': 'ImageObject',
-					url: `${origin}/logo/logoBlack.png`
-				}
+	${JSON.stringify({
+		'@context': 'http://schema.org',
+		'@type': type,
+		name: title,
+		description,
+		url,
+		image: fullImageUrl,
+		publisher: {
+			'@type': 'Organization',
+			name: siteName,
+			url: origin,
+			logo: {
+				'@type': 'ImageObject',
+				url: `${origin}/logo.png`
 			}
-		})}
+		}
+	})}
 	</script>`}
 
-	<!-- JSON-LD: Breadcrumb Schema -->
 	{#if breadcrumbJson}
-		{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbJson)}</script>`}
+		{@html `<script type="application/ld+json">
+		${JSON.stringify(breadcrumbJson)}
+		</script>`}
 	{/if}
 </svelte:head>
