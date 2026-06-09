@@ -15,13 +15,13 @@
   <div class="space-y-5">
     {#if facilities.heading}
       <h2
-        class="typography-h2 text-black dark:text-white md:col-span-2"
+        class="typography-h2-md text-black dark:text-white md:col-span-2"
       >
         {@html facilities.heading}
       </h2>
     {/if}
     {#if facilities.subHeading}
-      <p class="typography-body-md text-[var(--form-text-secondary)]">
+      <p class="typography-body-lg !font-semibold text-[var(--form-text-secondary)]">
         {@html facilities.subHeading}
       </p>
     {/if}
