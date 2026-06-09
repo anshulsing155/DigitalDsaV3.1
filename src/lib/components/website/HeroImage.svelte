@@ -53,11 +53,16 @@
 
 	@media (max-width: 1023px) {
 		#image {
-			height: 60%;
+			height: calc(55% + 0px);
+		}
+	}
+	@media (min-width: 975px) and (max-width: 1023px) {
+		#image {
+			height: calc(100% + 10%);
 		}
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 480px) {
 		#image {
 			height: 250px;
 		}

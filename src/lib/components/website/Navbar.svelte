@@ -25,14 +25,14 @@
       title: "My Profile",
       url: "/my-profile",
       icon: CircleUserRound,
-      iconProps: { strokeWidth: 1, size: 20, color:"#000000", },
+      iconProps: { strokeWidth: 1, size: 20 },
       alt: "icons-userBg",
     },
     {
       title: "My Assessment",
       url: "/my-assessment",
       icon: FileUser,
-      iconProps: { strokeWidth: 1, size: 20, color:"#000000" },
+      iconProps: { strokeWidth: 1, size: 20 },
       alt: "icons-financialProfile",
     },
     {
@@ -233,7 +233,7 @@
 </script>
 
 <section
-  class="relative z-50 mx-auto w-full bg-[var(--landing-bg)] border-b border-[var(--form-border)]"
+  class="relative z-50 mx-auto w-full bg-[var(--landing-bg)] border-b border-[var(--form-border)] text-black dark:text-white"
 >
   <div class="mx-auto flex items-center justify-between">
     <div class="flex items-center gap-[4rem]">
@@ -274,7 +274,7 @@
           <li class="text-center">
             <a
               href={nav.link}
-              class="group relative font-FourthHead text-subParaFont lg:py-10 text-black dark:text-white hover:text-black dark:hover:text-white"
+              class="group relative font-FourthHead text-subParaFont lg:py-10  hover:text-black dark:hover:text-white"
             >
               {nav.list}
               {#if nav.hasOwnProperty("star")}
@@ -311,10 +311,11 @@
       >
         <span>
           <svg
-            class="w-8 h-8"
+            class="w-8 h-8 text-black dark:text-white" 
             aria-hidden="true"
             fill="currentColor"
             viewBox="0 0 20 20"
+            
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -382,7 +383,7 @@
               {#each profileDropDown as item}
                 {@const IconComponent = item.icon}
                 <li
-                  class="w-full flex gap-2 items-center px-2 py-2 hover:bg-btnBg hover:text-black text-black dark:text-white"
+                  class="w-full flex gap-2 items-center px-2 py-2 hover:bg-btnBg hover:text-black "
                 >
                   <div class="flex items-start justify-start">
                     {#if typeof item.icon === "string"}
@@ -506,7 +507,7 @@
 
   {#if navOpen}
     <div
-      class="fixed top-0 h-full w-full bg-darkColor px-[1rem] text-white overflow-auto navbarForMobile"
+      class="fixed top-0 h-full w-full bg-[var(--landing-bg)] border-b border-[var(--form-border)] px-[1rem] text-black dark:text-white hover:text-black dark:hover:text-white overflow-auto navbarForMobile"
       in:fly={{ x: -100, duration: 500 }}
       out:fly={{ x: -100, duration: 500 }}
     >
@@ -521,14 +522,24 @@
               toggleNav();}}
             class="flex flex-col items-center space-y-1"
           >
+          <!-- White mode logo -->
             <img
               src="/logo/logoWhite.svg"
               alt="Digital DSA Logo"
-              class="h-[2rem] lg:h-[3rem] object-contain"
+              class="h-[2rem] lg:h-[3rem] object-contain hidden dark:block"
               loading="lazy"
             />
+
+<!-- Dark mode logo -->
+             <img
+            src="/logo/logoBlack.svg"
+            alt="digital-dsa-logo"
+            class="h-[2rem] lg:h-[3rem] block dark:hidden"
+          />
+          
+        
             <p
-              class="text-center text-white font-FifthHead text-xs sm:text-subParaFont"
+              class="text-center  font-FifthHead text-xs sm:text-subParaFont"
             >
               {$hostName}
             </p>
@@ -547,7 +558,7 @@
           <li class="hover:text-btnBg py-1">
             <a
               href={nav.link}
-              class="block text-white {i < navList.length - 1
+              class="block  {i < navList.length - 1
                 ? ' border-b border-borderColor/50'
                 : '  border-b border-btnBg/60'} py-[0.75rem]"
               onclick={(e) => {
@@ -589,13 +600,14 @@
           onclick={() => (mobileProfileIsOpen = !mobileProfileIsOpen)}
         >
           {#if page.data.user?.name}
-            {#each profileDropDown as item}
+            {#each profileDropDown as item (item.title)}
               <li
                 class="w-full flex items-end text-btnBg gap-[1.5rem] px-2 font-Paragraph text-[0.75rem] hover:bg-btnBg hover:text-black border-b border-borderColor/60
                 py-[.6rem]"
               >
                 {#if item.url}
-                  <img src={item.icon} alt={item.alt} class="h-5" />
+                  <!-- <img src={item.icon} alt={item.alt} class="h-5" /> -->
+                    <item.icon {...item.iconProps}  />
                   <button onclick={() => goto(item.url)}>{item.title}</button>
                 {/if}
               </li>
@@ -603,7 +615,7 @@
 
             <button
               type="button"
-              class="font-FifthHead text-subParaFont py-[.4rem] bg-btnBg text-black w-full"
+              class="font-FifthHead text-subParaFont py-[.4rem] bg-btnBg  w-full"
               onclick={() => {
                 signOut();}}
             >
@@ -611,15 +623,20 @@
                 <img
                   src="/icons/logoutBlack.svg"
                   alt="icon-logout"
-                  class="h-10"
+                  class="h-10 block dark:hidden"
+                />
+                <img
+                  src="/icons/logout.svg"
+                  alt="icon-logout"
+                  class="h-10 hidden dark:block"
                 />
                 <p>Logout</p>
-              </div>
+              </div>  
             </button>
           {:else}
             <button
               type="button"
-              class="font-FifthHead text-subParaFont py-[.4rem] bg-btnBg text-black w-full"
+              class="font-FifthHead text-subParaFont py-[.4rem] bg-btnBg  w-full"
               onclick={() => goto("/login")}
             >
               <div class="flex gap-[1rem] items-center px-2">
