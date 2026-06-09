@@ -1,0 +1,1185 @@
+[
+  {
+    "page": "src/routes/(main)/(loans)/business-loan/+page.svelte",
+    "components": [
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "Sublist",
+        "path": "$lib/components/website/Sublist.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      },
+      {
+        "name": "AboveTitleWithTopIconCard",
+        "path": "$lib/components/website/AboveTitleWithTopIconCard.svelte"
+      },
+      {
+        "name": "AboveTitleWithoutIconCard",
+        "path": "$lib/components/website/AboveTitleWithoutIconCard.svelte"
+      },
+      {
+        "name": "ButtonBanner",
+        "path": "$lib/components/website/ButtonBanner.svelte"
+      },
+      {
+        "name": "AboveTitleWithBlackCard",
+        "path": "$lib/components/website/AboveTitleWithBlackCard.svelte"
+      },
+      {
+        "name": "TwoColumnWithImage",
+        "path": "$lib/components/website/TwoColumnWithImage.svelte"
+      },
+      {
+        "name": "FeedbackCheck",
+        "path": "$lib/components/website/FeedbackCheck.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/business-loan/eligibility-factors/+page.svelte",
+    "components": [
+      {
+        "name": "LoanFactors",
+        "path": "./LoanFactors.svelte"
+      },
+      {
+        "name": "ExampleCalculations",
+        "path": "./ExampleCalculations.svelte"
+      },
+      {
+        "name": "Calculator",
+        "path": "./Calculator.svelte"
+      },
+      {
+        "name": "FAQ",
+        "path": "./FAQ.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "Sublist",
+        "path": "$lib/components/website/Sublist.svelte"
+      },
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/home-loan/+page.svelte",
+    "components": [
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      },
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "Loader",
+        "path": "$lib/components/website/Loader.svelte"
+      },
+      {
+        "name": "Sublist",
+        "path": "$lib/components/website/Sublist.svelte"
+      },
+      {
+        "name": "AboveTitleWithTopIconCard",
+        "path": "$lib/components/website/AboveTitleWithTopIconCard.svelte"
+      },
+      {
+        "name": "AboveTitleWithBlackCard",
+        "path": "$lib/components/website/AboveTitleWithBlackCard.svelte"
+      },
+      {
+        "name": "NewBlogCard",
+        "path": "$lib/components/website/NewBlogCard.svelte"
+      },
+      {
+        "name": "ButtonBanner",
+        "path": "$lib/components/website/ButtonBanner.svelte"
+      },
+      {
+        "name": "AboveTitleWithoutIconCard",
+        "path": "$lib/components/website/AboveTitleWithoutIconCard.svelte"
+      },
+      {
+        "name": "ThreeColumWithLeftHeading",
+        "path": "$lib/components/website/ThreeColumWithLeftHeading.svelte"
+      },
+      {
+        "name": "VerticalBlog",
+        "path": "$lib/components/website/VerticalBlog.svelte"
+      },
+      {
+        "name": "TwoColumnWithImage",
+        "path": "$lib/components/website/TwoColumnWithImage.svelte"
+      },
+      {
+        "name": "TwoColumnWithLeftHeading",
+        "path": "$lib/components/website/TwoColumnWithLeftHeading.svelte"
+      },
+      {
+        "name": "FeedbackCheck",
+        "path": "$lib/components/website/FeedbackCheck.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "DownloadGuideModal",
+        "path": "$lib/components/website/DownloadGuideModal.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/home-loan/[slug]/+page.svelte",
+    "components": [
+      {
+        "name": "PageNotFound",
+        "path": "$lib/components/website/PageNotFound.svelte"
+      },
+      {
+        "name": "BalanceTransfer",
+        "path": "$lib/components/website/BalanceTransfer.svelte"
+      },
+      {
+        "name": "HomeTopUp",
+        "path": "$lib/components/website/HomeTopUp.svelte"
+      },
+      {
+        "name": "HomeLoanForBusiness",
+        "path": "$lib/components/website/HomeLoanForBusiness.svelte"
+      },
+      {
+        "name": "BuyingFirstHomeHl",
+        "path": "$lib/components/website/BuyingFirstHomeHL.svelte"
+      },
+      {
+        "name": "BuyingNextHomeHl",
+        "path": "$lib/components/website/BuyingNextHomeHL.svelte"
+      },
+      {
+        "name": "HomeLoanToolsandCalculator",
+        "path": "$lib/components/website/HomeLoanToolsandCalculator.svelte"
+      },
+      {
+        "name": "HomeLoanProcess",
+        "path": "$lib/components/website/HomeLoanProcess.svelte"
+      },
+      {
+        "name": "SavingForDepositArticle",
+        "path": "$lib/components/website/SavingForDepositArticle.svelte"
+      },
+      {
+        "name": "ConditionalPreApprovalArticle",
+        "path": "$lib/components/website/ConditionalPreApprovalArticle.svelte"
+      },
+      {
+        "name": "UnderstandCostOfBuyingHomeArticle",
+        "path": "$lib/components/website/UnderstandCostOfBuyingHomeArticle.svelte"
+      },
+      {
+        "name": "BuyOrRentArticle",
+        "path": "$lib/components/website/BuyOrRentArticle.svelte"
+      },
+      {
+        "name": "BuyPropertyResaleOrDirectArticle",
+        "path": "$lib/components/website/BuyPropertyResaleOrDirectArticle.svelte"
+      },
+      {
+        "name": "ChoosePerfectNeighbourhoodArticle",
+        "path": "$lib/components/website/ChoosePerfectNeighbourhoodArticle.svelte"
+      },
+      {
+        "name": "CloseYourLoanEarlyArticle",
+        "path": "$lib/components/website/CloseYourLoanEarlyArticle.svelte"
+      },
+      {
+        "name": "HomeRenovationArticle",
+        "path": "$lib/components/website/HomeRenovationArticle.svelte"
+      },
+      {
+        "name": "InvestingInPropertyArticle",
+        "path": "$lib/components/website/InvestingInPropertyArticle.svelte"
+      },
+      {
+        "name": "SellingYourPropertyArticle",
+        "path": "$lib/components/website/SellingYourPropertyArticle.svelte"
+      },
+      {
+        "name": "HomeLoanSupport",
+        "path": "$lib/components/website/HomeLoanSupport.svelte"
+      },
+      {
+        "name": "RenovateOrMove",
+        "path": "$lib/components/website/RenovateOrMove.svelte"
+      },
+      {
+        "name": "TurningYourHomeIntoInvestment",
+        "path": "$lib/components/website/TurningYourHomeIntoInvestment.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/lap/+page.svelte",
+    "components": [
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      },
+      {
+        "name": "TwoColumn",
+        "path": "$lib/components/website/TwoColumn.svelte"
+      },
+      {
+        "name": "Information",
+        "path": "$lib/components/website/Information.svelte"
+      },
+      {
+        "name": "NewHome",
+        "path": "$lib/components/website/NewHome.svelte"
+      },
+      {
+        "name": "Ways",
+        "path": "$lib/components/website/Ways.svelte"
+      },
+      {
+        "name": "WhyChoose",
+        "path": "$lib/components/website/WhyChoose.svelte"
+      },
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "BlogCard",
+        "path": "$lib/components/website/BlogCard.svelte"
+      },
+      {
+        "name": "Sublist",
+        "path": "$lib/components/website/Sublist.svelte"
+      },
+      {
+        "name": "ButtonBanner",
+        "path": "$lib/components/website/ButtonBanner.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/lap/[slug]/+page.svelte",
+    "components": [
+      {
+        "name": "LapBt",
+        "path": "$lib/components/website/LapBT.svelte"
+      },
+      {
+        "name": "LapBtWithTopUp",
+        "path": "$lib/components/website/LapBTWithTopUp.svelte"
+      },
+      {
+        "name": "LapNewLoan",
+        "path": "$lib/components/website/LapNewLoan.svelte"
+      },
+      {
+        "name": "TopUpPlot",
+        "path": "$lib/components/website/TopUpPlot.svelte"
+      },
+      {
+        "name": "UnlockingPowerCollateralArticle",
+        "path": "$lib/components/website/UnlockingPowerCollateralArticle.svelte"
+      },
+      {
+        "name": "BusinessFinancialHealth",
+        "path": "$lib/components/website/BusinessFinancialHealth.svelte"
+      },
+      {
+        "name": "LapvsDOD",
+        "path": "$lib/components/website/LapvsDOD.svelte"
+      },
+      {
+        "name": "DodArticle",
+        "path": "$lib/components/website/DodArticle.svelte"
+      },
+      {
+        "name": "DataConsolidation",
+        "path": "$lib/components/website/DataConsolidation.svelte"
+      },
+      {
+        "name": "PageNotFound",
+        "path": "$lib/components/website/PageNotFound.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/personal-loan/+page.svelte",
+    "components": [
+      {
+        "name": "TwoColumn",
+        "path": "$lib/components/website/TwoColumn.svelte"
+      },
+      {
+        "name": "Information",
+        "path": "$lib/components/website/Information.svelte"
+      },
+      {
+        "name": "WhyChoose",
+        "path": "$lib/components/website/WhyChoose.svelte"
+      },
+      {
+        "name": "WeAreHereHelp",
+        "path": "$lib/components/website/WeAreHereHelp.svelte"
+      },
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "Sublist",
+        "path": "$lib/components/website/Sublist.svelte"
+      },
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "ThreeColumWithLeftHeading",
+        "path": "$lib/components/website/ThreeColumWithLeftHeading.svelte"
+      },
+      {
+        "name": "ButtonBanner",
+        "path": "$lib/components/website/ButtonBanner.svelte"
+      },
+      {
+        "name": "PaymentTable",
+        "path": "$lib/components/website/PaymentTable.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/personal-loan/[slug]/+page.svelte",
+    "components": [
+      {
+        "name": "PageNotFound",
+        "path": "$lib/components/website/PageNotFound.svelte"
+      },
+      {
+        "name": "PoliceLawyersLoanArticle",
+        "path": "$lib/components/website/PoliceLawyersLoanArticle.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/plot-loan/+page.svelte",
+    "components": [
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "Sublist",
+        "path": "$lib/components/website/Sublist.svelte"
+      },
+      {
+        "name": "TwoColumnWithLeftHeading",
+        "path": "$lib/components/website/TwoColumnWithLeftHeading.svelte"
+      },
+      {
+        "name": "PaymentTable",
+        "path": "$lib/components/website/PaymentTable.svelte"
+      },
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "AboveTitleWithTopIconCard",
+        "path": "$lib/components/website/AboveTitleWithTopIconCard.svelte"
+      },
+      {
+        "name": "AboveTitleWithBlackCard",
+        "path": "$lib/components/website/AboveTitleWithBlackCard.svelte"
+      },
+      {
+        "name": "ButtonBanner",
+        "path": "$lib/components/website/ButtonBanner.svelte"
+      },
+      {
+        "name": "TwoColumnWithImage",
+        "path": "$lib/components/website/TwoColumnWithImage.svelte"
+      },
+      {
+        "name": "Loader",
+        "path": "$lib/components/website/Loader.svelte"
+      },
+      {
+        "name": "Anchor",
+        "path": "$lib/components/website/Anchor.svelte"
+      },
+      {
+        "name": "FeedbackCheck",
+        "path": "$lib/components/website/FeedbackCheck.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "AboveTitleWithoutIconCard",
+        "path": "$lib/components/website/AboveTitleWithoutIconCard.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/plot-loan/[slug]/+page.svelte",
+    "components": [
+      {
+        "name": "ConstructionLoan",
+        "path": "$lib/components/website/ConstructionLoan.svelte"
+      },
+      {
+        "name": "PlotConstructionLoan",
+        "path": "$lib/components/website/Plot&ConstructionLoan.svelte"
+      },
+      {
+        "name": "PlotEquityLoan",
+        "path": "$lib/components/website/Plot&EquityLoan.svelte"
+      },
+      {
+        "name": "PlotLoanOnly",
+        "path": "$lib/components/website/PlotLoanOnly.svelte"
+      },
+      {
+        "name": "PlotLoanOnlyChallenges",
+        "path": "$lib/components/website/PlotLoanOnlyChallenges.svelte"
+      },
+      {
+        "name": "PlotLoanSupport",
+        "path": "$lib/components/website/PlotLoanSupport.svelte"
+      },
+      {
+        "name": "AgriculturalToResidential",
+        "path": "$lib/components/website/AgriculturalToResidential.svelte"
+      },
+      {
+        "name": "PageNotFound",
+        "path": "$lib/components/website/PageNotFound.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/(loans)/professional-loan/+page.svelte",
+    "components": [
+      {
+        "name": "TwoColumn",
+        "path": "$lib/components/website/TwoColumn.svelte"
+      },
+      {
+        "name": "Information",
+        "path": "$lib/components/website/Information.svelte"
+      },
+      {
+        "name": "WhyChoose",
+        "path": "$lib/components/website/WhyChoose.svelte"
+      },
+      {
+        "name": "WeAreHereHelp",
+        "path": "$lib/components/website/WeAreHereHelp.svelte"
+      },
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "Sublist",
+        "path": "$lib/components/website/Sublist.svelte"
+      },
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "ThreeColumWithLeftHeading",
+        "path": "$lib/components/website/ThreeColumWithLeftHeading.svelte"
+      },
+      {
+        "name": "ButtonBanner",
+        "path": "$lib/components/website/ButtonBanner.svelte"
+      },
+      {
+        "name": "PaymentTable",
+        "path": "$lib/components/website/PaymentTable.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/about-us/+page.svelte",
+    "components": [
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "NewBlogCard",
+        "path": "$lib/components/website/NewBlogCard.svelte"
+      },
+      {
+        "name": "SecondPageLayout",
+        "path": "$lib/components/website/SecondPageLayout.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "StickyNavbar",
+        "path": "$lib/components/website/StickyNavbar.svelte"
+      },
+      {
+        "name": "TwoColumn",
+        "path": "$lib/components/website/TwoColumn.svelte"
+      },
+      {
+        "name": "TwoColumnWithImage",
+        "path": "$lib/components/website/TwoColumnWithImage.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/arrange-down-payment/+page.svelte",
+    "components": [
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "Anchor",
+        "path": "$lib/components/website/Anchor.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "AboveTitleWithTopIconCard",
+        "path": "$lib/components/website/AboveTitleWithTopIconCard.svelte"
+      },
+      {
+        "name": "AboveTitleWithoutIconCard",
+        "path": "$lib/components/website/AboveTitleWithoutIconCard.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "SecondPageLayout",
+        "path": "$lib/components/website/SecondPageLayout.svelte"
+      },
+      {
+        "name": "StickyNavbar",
+        "path": "$lib/components/website/StickyNavbar.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/career/+page.svelte",
+    "components": [
+      {
+        "name": "PageDesign",
+        "path": "$lib/components/website/PageDesign.svelte"
+      },
+      {
+        "name": "TwoColumn",
+        "path": "$lib/components/website/TwoColumn.svelte"
+      },
+      {
+        "name": "StickyNavbar",
+        "path": "$lib/components/website/StickyNavbar.svelte"
+      },
+      {
+        "name": "Payments",
+        "path": "$lib/components/website/Payments.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/career/[slug]/+page.svelte",
+    "components": [
+      {
+        "name": "ApplicationProcess",
+        "path": "$lib/components/website/ApplicationProcess.svelte"
+      },
+      {
+        "name": "CareerFaq",
+        "path": "$lib/components/website/CareerFAQ.svelte"
+      },
+      {
+        "name": "WorkingWithUs",
+        "path": "$lib/components/website/WorkingWithUs.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/complaint-compliment/+page.svelte",
+    "components": [
+      {
+        "name": "ComplaintCompliments",
+        "path": "$lib/components/website/Complaint-compliments.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/contact/+page.svelte",
+    "components": [
+      {
+        "name": "Contact",
+        "path": "$lib/components/website/Contact.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/cookies/+page.svelte",
+    "components": [
+      {
+        "name": "Cookies",
+        "path": "$lib/components/website/Cookies.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/credits-attributions/+page.svelte",
+    "components": [
+      {
+        "name": "SecondPageLayout",
+        "path": "$lib/components/website/SecondPageLayout.svelte"
+      },
+      {
+        "name": "StickyNavbar",
+        "path": "$lib/components/website/StickyNavbar.svelte"
+      },
+      {
+        "name": "TwoColumn",
+        "path": "$lib/components/website/TwoColumn.svelte"
+      },
+      {
+        "name": "TwoColumnWithLeftHeading",
+        "path": "$lib/components/website/TwoColumnWithLeftHeading.svelte"
+      },
+      {
+        "name": "TwoColumnWithImage",
+        "path": "$lib/components/website/TwoColumnWithImage.svelte"
+      },
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/cyber-security-against-scams/+page.svelte",
+    "components": [
+      {
+        "name": "ScamCyberSecurityBusinessProtection",
+        "path": "$lib/components/website/ScamCyberSecurityBusinessProtection.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/cyber-security-against-scams/[slug]/+page.svelte",
+    "components": [
+      {
+        "name": "ProtectYourselfFromScamCyberSecurity",
+        "path": "$lib/components/website/ProtectYourselfFromScamCyberSecurity.svelte"
+      },
+      {
+        "name": "ScamTargetBusinesses",
+        "path": "$lib/components/website/ScamTargetBusinesses.svelte"
+      },
+      {
+        "name": "WaysSafeguardCyberSecurity",
+        "path": "$lib/components/website/WaysSafeguardCyberSecurity.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/emi-partpayment-rules/+page.svelte",
+    "components": [
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      },
+      {
+        "name": "WhyChoose",
+        "path": "$lib/components/website/WhyChoose.svelte"
+      },
+      {
+        "name": "WeAreHereHelp",
+        "path": "$lib/components/website/WeAreHereHelp.svelte"
+      },
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "StickyNavbar",
+        "path": "$lib/components/website/StickyNavbar.svelte"
+      },
+      {
+        "name": "PaymentTable",
+        "path": "$lib/components/website/PaymentTable.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/finance-support/+page.svelte",
+    "components": [
+      {
+        "name": "FinancialCover",
+        "path": "$lib/components/website/FinancialCover.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/finance-support/[slug]/+page.svelte",
+    "components": [
+      {
+        "name": "AdjustYourBudget",
+        "path": "$lib/components/website/AdjustYourBudget.svelte"
+      },
+      {
+        "name": "BehavioralScienceBehindBudgeting",
+        "path": "$lib/components/website/BehavioralScienceBehindBudgeting.svelte"
+      },
+      {
+        "name": "BudgetingTips",
+        "path": "$lib/components/website/BudgetingTips.svelte"
+      },
+      {
+        "name": "CostOfLiving",
+        "path": "$lib/components/website/CostOfLiving.svelte"
+      },
+      {
+        "name": "FinancialHardship",
+        "path": "$lib/components/website/FinancialHardship.svelte"
+      },
+      {
+        "name": "MakeBudget",
+        "path": "$lib/components/website/MakeBudget.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/financial-wellbeing/+page.svelte",
+    "components": [
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "StickyNavbar",
+        "path": "$lib/components/website/StickyNavbar.svelte"
+      },
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "TwoColumn",
+        "path": "$lib/components/website/TwoColumn.svelte"
+      },
+      {
+        "name": "WhyChoose",
+        "path": "$lib/components/website/WhyChoose.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/home-loan-support/+page.svelte",
+    "components": [
+      {
+        "name": "HomeLoanSupport",
+        "path": "$lib/components/website/HomeLoanSupport.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/important-info/+page.svelte",
+    "components": [
+      {
+        "name": "Guides",
+        "path": "$lib/components/website/Guides.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "PageFullTextDesign",
+        "path": "$lib/components/website/PageFullTextDesign.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "StickyNavbar",
+        "path": "$lib/components/website/StickyNavbar.svelte"
+      },
+      {
+        "name": "Support",
+        "path": "$lib/components/website/Support.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/knowledge/+page.svelte",
+    "components": [
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "SecondPageLayout",
+        "path": "$lib/components/website/SecondPageLayout.svelte"
+      },
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "TwoColumnWithImage",
+        "path": "$lib/components/website/TwoColumnWithImage.svelte"
+      },
+      {
+        "name": "Loader",
+        "path": "$lib/components/website/Loader.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/knowledge/[slug]/+page.svelte",
+    "components": [
+      {
+        "name": "PageNotFound",
+        "path": "$lib/components/website/PageNotFound.svelte"
+      },
+      {
+        "name": "Budget101",
+        "path": "$lib/components/website/Budget101.svelte"
+      },
+      {
+        "name": "BuildingHome",
+        "path": "$lib/components/website/BuildingHome.svelte"
+      },
+      {
+        "name": "BusinessCantAffordCyberSecurityArticle",
+        "path": "$lib/components/website/BusinessCantAffordCyberSecurityArticle.svelte"
+      },
+      {
+        "name": "CompanyCultureCyberSecurityArticle",
+        "path": "$lib/components/website/CompanyCultureCyberSecurityArticle.svelte"
+      },
+      {
+        "name": "DodArticle",
+        "path": "$lib/components/website/DodArticle.svelte"
+      },
+      {
+        "name": "EquityInHome",
+        "path": "$lib/components/website/EquityInHome.svelte"
+      },
+      {
+        "name": "GreenLoanHl",
+        "path": "$lib/components/website/GreenLoanHL.svelte"
+      },
+      {
+        "name": "HomeBTwithTopup",
+        "path": "$lib/components/website/HomeBTwithTopup.svelte"
+      },
+      {
+        "name": "HomeGuaranteeScheme",
+        "path": "$lib/components/website/HomeGuaranteeScheme.svelte"
+      },
+      {
+        "name": "HomeLoanOffset",
+        "path": "$lib/components/website/HomeLoanOffset.svelte"
+      },
+      {
+        "name": "HomeLoanRedraw",
+        "path": "$lib/components/website/HomeLoanRedraw.svelte"
+      },
+      {
+        "name": "HowCyberSecurityIntegralBusinessCyberSecurityArticle",
+        "path": "$lib/components/website/HowCyberSecurityIntegralBusinessCyberSecurityArticle.svelte"
+      },
+      {
+        "name": "IncomeTaxNewSlabIncomeTaxArticle",
+        "path": "$lib/components/website/IncomeTaxNewSlabIncomeTaxArticle.svelte"
+      },
+      {
+        "name": "InvestInProperty",
+        "path": "$lib/components/website/InvestInProperty.svelte"
+      },
+      {
+        "name": "LowItr",
+        "path": "$lib/components/website/LowITR.svelte"
+      },
+      {
+        "name": "ManageHomeLoan",
+        "path": "$lib/components/website/ManageHomeLoan.svelte"
+      },
+      {
+        "name": "MyProperty",
+        "path": "$lib/components/website/MyProperty.svelte"
+      },
+      {
+        "name": "NewLoan",
+        "path": "$lib/components/website/NewLoan.svelte"
+      },
+      {
+        "name": "ParentalLeave",
+        "path": "$lib/components/website/ParentalLeave.svelte"
+      },
+      {
+        "name": "PartnershipOffers",
+        "path": "$lib/components/website/PartnershipOffers.svelte"
+      },
+      {
+        "name": "PetInsurance",
+        "path": "$lib/components/website/PetInsurance.svelte"
+      },
+      {
+        "name": "PocketEtf",
+        "path": "$lib/components/website/PocketETF.svelte"
+      },
+      {
+        "name": "PropertyInsight",
+        "path": "$lib/components/website/PropertyInsight.svelte"
+      },
+      {
+        "name": "ProtectYourBusinessCyberSecurityArticle",
+        "path": "$lib/components/website/ProtectYourBusinessCyberSecurityArticle.svelte"
+      },
+      {
+        "name": "RenovatingProperty",
+        "path": "$lib/components/website/RenovatingProperty.svelte"
+      },
+      {
+        "name": "WhyHaveBudgetArticle",
+        "path": "$lib/components/website/WhyHaveBudgetArticle.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/message24/+page.svelte",
+    "components": [
+      {
+        "name": "Message24",
+        "path": "$lib/components/website/Message24.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/privacy-policy/+page.svelte",
+    "components": [
+      {
+        "name": "PrivacyPolicy",
+        "path": "$lib/components/website/PrivacyPolicy.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/refer-&-earn/+page.svelte",
+    "components": [
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "Payments",
+        "path": "$lib/components/website/Payments.svelte"
+      },
+      {
+        "name": "HelpList",
+        "path": "$lib/components/website/HelpList.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "AboveTitleWithLeftIconCard",
+        "path": "$lib/components/website/AboveTitleWithLeftIconCard.svelte"
+      },
+      {
+        "name": "TwoColumnWithImage",
+        "path": "$lib/components/website/TwoColumnWithImage.svelte"
+      },
+      {
+        "name": "Button",
+        "path": "$lib/components/website/Button.svelte"
+      },
+      {
+        "name": "NewPageLayout",
+        "path": "$lib/components/website/NewPageLayout.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/refer-&-earn/[refer_slug]/+page.svelte",
+    "components": [
+      {
+        "name": "PageDesign",
+        "path": "$lib/components/website/PageDesign.svelte"
+      },
+      {
+        "name": "Payments",
+        "path": "$lib/components/website/Payments.svelte"
+      },
+      {
+        "name": "Seo",
+        "path": "$lib/components/Seo.svelte"
+      },
+      {
+        "name": "ThingsYouShould",
+        "path": "$lib/components/website/ThingsYouShould.svelte"
+      },
+      {
+        "name": "WeAreHereHelp",
+        "path": "$lib/components/website/WeAreHereHelp.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/terms-conditions/+page.svelte",
+    "components": [
+      {
+        "name": "TermCondition",
+        "path": "$lib/components/website/TermCondition.svelte"
+      }
+    ]
+  },
+  {
+    "page": "src/routes/(main)/testimonial/+page.svelte",
+    "components": [
+      {
+        "name": "CheckCard2",
+        "path": "$lib/components/website/CheckCard2.svelte"
+      },
+      {
+        "name": "CheckCard5",
+        "path": "$lib/components/website/CheckCard5.svelte"
+      },
+      {
+        "name": "Testimonial",
+        "path": "$lib/components/website/Testimonial.svelte"
+      }
+    ]
+  }
+]
