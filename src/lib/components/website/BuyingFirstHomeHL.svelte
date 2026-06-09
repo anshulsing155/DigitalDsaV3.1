@@ -47,7 +47,7 @@
 		}, 100);
 	};
 
-	let activeSection = '';
+	let activeSection = $state('');
 	const initializeActiveSection = () => {
 		const firstSection = document.querySelector('[data-section]');
 		if (firstSection) {
