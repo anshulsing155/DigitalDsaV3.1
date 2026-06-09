@@ -1,6 +1,7 @@
 <script>
 	let {
-		contents = {}
+		contents = {},
+		children
 	} = $props();
 
 
@@ -17,6 +18,6 @@
   {/if}
 
   <div class="md:col-span-3 typography-body-md text-[var(--form-text-secondary)]">
-    <slot />
+    {@render children?.()}
   </div>
 </div>

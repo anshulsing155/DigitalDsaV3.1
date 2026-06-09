@@ -132,7 +132,6 @@
             {#each sortedBanks as bank, i}
               <tr
                 class="{i % 2 === 0 ? 'bg-[var(--landing-bg-card)]' : 'bg-[var(--landing-bg)]'} hover:bg-[var(--form-border)] transition-colors duration-200"
-                role="row"
               >
                 <td class="py-4 px-6">
                   <div class="flex space-x-3">

@@ -16,7 +16,8 @@
 		sourceName = "undefined",
 		originalSource = "",
 		url = "",
-		onClick = () => {}
+		onClick = () => {},
+		children = undefined
 	} = $props();
 
 
@@ -106,7 +107,7 @@
     {/if}
     {#if !btnName}
       <div>
-        <slot />
+        {@render children?.()}
       </div>
     {/if}
   </div>

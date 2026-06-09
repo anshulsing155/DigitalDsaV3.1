@@ -264,7 +264,7 @@ icon.classList.add("fa-angle-up");
 detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
 }, 100);
   };
-  let activeSection = ""; // Initially no section is active
+  let activeSection = $state(""); // Initially no section is active
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {
@@ -405,8 +405,8 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <li>
                   Get help from  the undefined app or connect with a
-                  specialist who can message you back. You’ll need <a
-                    class="underline text-linkColor">undefined app</a
+                  specialist who can message you back. You’ll need <span
+                    class="underline text-linkColor cursor-pointer">undefined app</span
                   >
                   notifications turned on so you know when you’ve received a reply.
                 </li>
@@ -526,8 +526,8 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <li>
                   Get help from  the undefined app or connect with a
-                  specialist who can message you back. You’ll need <a
-                    class="underline text-linkColor">undefined app</a
+                  specialist who can message you back. You’ll need <span
+                    class="underline text-linkColor cursor-pointer">undefined app</span
                   >
                   notifications turned on so you know when you’ve received a reply.
                 </li>

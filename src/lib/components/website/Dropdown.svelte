@@ -1,6 +1,7 @@
 <script>
 	let {
-		heading = ""
+		heading = "",
+		children = undefined
 	} = $props();
 
 
@@ -18,7 +19,7 @@
       </div>
     </summary>
     <div class="grid gap-4 pt-[2rem] font-Paragraph text-subParaFont">
-      <slot />
+      {@render children?.()}
     </div>
   </details>
 </div>

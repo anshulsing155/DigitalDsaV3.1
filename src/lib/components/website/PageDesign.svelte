@@ -18,7 +18,7 @@
 
 ;
 
-  let isBelow1024 = false;
+  let isBelow1024 = $state(false);
 
   function updateSize() {
     isBelow1024 = window.innerWidth < 1024;
@@ -192,9 +192,11 @@ window.removeEventListener("resize", updateSize); // Cleanup
       </div>
     </div>
     <div class="relative flex flex-col bg-[var(--landing-bg-card)] border-t border-[var(--landing-border)] text-black dark:text-white z-20 mx-1 lg:mx-0">
+      <!-- svelte-ignore slot_element_deprecated -->
       <slot />
     </div>
     <div class="lg:p-[4rem]">
+      <!-- svelte-ignore slot_element_deprecated -->
       <slot name="secondary" />
     </div>
   </div>

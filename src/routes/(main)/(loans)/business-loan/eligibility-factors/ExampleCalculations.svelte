@@ -4,6 +4,7 @@
 
   // Define interfaces for type safety
   interface Example {
+    [key: string]: string;
     title: string;
     business: string;
     cashIncome: string;

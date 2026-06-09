@@ -53,7 +53,7 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
 
-  let activeSection = "";
+  let activeSection = $state("");
   let pageData = {
     coverImage: "/images/protect-business-from-scam-blog.jpg",
     coverAlt: "descriptive photo of a person trying to scam a young lady",

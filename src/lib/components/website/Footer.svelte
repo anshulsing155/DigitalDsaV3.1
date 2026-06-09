@@ -122,6 +122,7 @@
       <button
         onclick={goToTop}
         type="button"
+        aria-label="Go to Top"
         class="absolute -top-[2.5rem] right-2 flex h-[4rem] w-[4rem] cursor-pointer items-center justify-center bg-btnBg hover:opacity-90"
       >
         <i class="fa-solid fa-angle-up"></i>

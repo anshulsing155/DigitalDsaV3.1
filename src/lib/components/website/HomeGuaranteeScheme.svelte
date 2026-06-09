@@ -575,7 +575,7 @@ window.removeEventListener("scroll", handleScroll);
                               </div>
                             </div>
                             <a
-                              href=""
+                              href="/home-loan/home-loan-tools-calculator"
                               class="hover:underline text-linkColor font-Paragraph text-subParaFont"
                               >Show me more home loan tools and calculators</a
                             >

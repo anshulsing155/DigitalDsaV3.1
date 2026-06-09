@@ -2,7 +2,8 @@
 	let {
 		contents = [],
 		supportHeading = "",
-		gridCol = 3
+		gridCol = 3,
+		children = undefined
 	} = $props();
 
 
@@ -57,7 +58,7 @@
           </ul>
         {/if}
         <div>
-          <slot />
+          {@render children?.()}
         </div>
         {#if content.btn}
           <Button

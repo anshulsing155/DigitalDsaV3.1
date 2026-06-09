@@ -65,9 +65,9 @@
             >{item.btnText}</a
           >
         {:else if item.btnChangeAfter}
-          <a
+          <span
             class="font-Paragraph text-subParaFont text-underline underline-black underline-offset-4"
-            >{item.btnChangeAfter}</a
+            >{item.btnChangeAfter}</span
           >
         {:else if item.btn}
           <Button

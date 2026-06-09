@@ -12,6 +12,8 @@
 		btnLink?: string;
 		btnClick?: () => void;
 		btnClass?: string;
+		btnColor?: string;
+		btnBorder?: string;
 	};
 
 	type NavList = {
@@ -106,6 +108,8 @@
 								link={btn.btnLink}
 								onClick={btn.btnClick}
 								btnClass={btn.btnClass}
+								btnColor={btn.btnColor}
+								btnBorder={btn.btnBorder}
 							/>
 						{/each}
 					</div>

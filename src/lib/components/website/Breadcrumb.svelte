@@ -62,9 +62,6 @@
   a.underline {
     text-decoration: underline;
   }
-  a.black {
-    color: black;
-  }
   /* a:hover {
     text-decoration: underline;
   } */

@@ -55,6 +55,7 @@
 
       {#if !blog.btnName && !blog.linkName}
         <div>
+          <!-- svelte-ignore slot_element_deprecated -->
           <slot />
         </div>
       {/if}

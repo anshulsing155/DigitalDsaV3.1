@@ -11,23 +11,23 @@
   import Modal from "./Modal.svelte";
   
 
-  let dialog: HTMLDialogElement;
+  let dialog = $state<HTMLDialogElement>();
   
-  let formData = {
+  let formData = $state({
     name: "",
     email: "",
     whatsappNumber: ""
-  };
+  });
   
-  let errors = {
+  let errors = $state({
     name: "",
     email: "",
     whatsappNumber: ""
-  };
+  });
   
-  let isSubmitting = false;
-  let submitError = "";
-  let successMessage = "";
+  let isSubmitting = $state(false);
+  let submitError = $state("");
+  let successMessage = $state("");
   
   function closeModal() {
     showModal = false;
@@ -176,7 +176,7 @@ isSubmitting = false;
       </div>
     {/if}
     
-    <form onsubmit={(e) => { e.preventDefault(); (handleSubmit)(e); }} class="space-y-4">
+    <form onsubmit={(e) => { e.preventDefault(); handleSubmit(); }} class="space-y-4">
       <!-- Name Field -->
       <div>
         <label for="name" class="block text-sm font-medium text-gray-700 mb-1">

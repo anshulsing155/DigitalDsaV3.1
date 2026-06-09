@@ -26,13 +26,13 @@
   ];
 
   // State variables - using Code 2's simpler approach
-  let searchQuery = "";
-  let selectedCategories = []; // Code 2's approach - empty array means "All"
-  let itemsPerPage = 20;
-  let currentPage = 1;
-  let mobileCategoryBar = false;
-  let handleImageLoad = false;
-  let isLoading = false;
+  let searchQuery = $state("");
+  let selectedCategories = $state([]); // Code 2's approach - empty array means "All"
+  let itemsPerPage = $state(20);
+  let currentPage = $state(1);
+  let mobileCategoryBar = $state(false);
+  let handleImageLoad = $state(false);
+  let isLoading = $state(false);
 
   onMount(() => {
     // Simple image loading delay
@@ -188,6 +188,7 @@
           <button
             class="absolute top-1/2 right-0 transform -translate-y-1/2 typography-button p-3 bg-black text-white"
             onclick={resetFilters}
+            aria-label="Clear search"
           >
             <i class="fa-solid fa-trash"></i>
           </button>
@@ -260,6 +261,7 @@
               class="text-white bg-btnBg w-8 h-8"
               onclick={() => (mobileCategoryBar = true)}
               class:hidden={mobileCategoryBar}
+              aria-label="Toggle categories"
             >
               <i class="fa-solid fa-filter"></i>
             </button>
@@ -276,6 +278,7 @@
             <button
               class="absolute top-1/2 right-0 transform -translate-y-1/2 typography-button p-3 bg-black text-white"
               onclick={resetFilters}
+              aria-label="Clear search"
             >
               <i class="fa-solid fa-trash"></i>
             </button>
@@ -347,13 +350,16 @@
             ? 'hidden'
             : 'flex'}"
         >
-          <span
+          <button
+            type="button"
             class="cursor-pointer bg-btnBg rounded-full px-2"
             onclick={goToPreviousPage}
             class:opacity-50={currentPage === 1}
+            disabled={currentPage === 1}
+            aria-label="Previous page"
           >
             <i class="fa-solid fa-chevron-left text-black"></i>
-          </span>
+          </button>
 
           <div class="flex items-center">
             <span>{currentPage}</span>
@@ -363,13 +369,16 @@
             <span>{totalPages}</span>
           </div>
 
-          <span
+          <button
+            type="button"
             class="cursor-pointer bg-btnBg rounded-full px-2"
             onclick={goToNextPage}
             class:opacity-50={currentPage === totalPages}
+            disabled={currentPage === totalPages}
+            aria-label="Next page"
           >
             <i class="fa-solid fa-chevron-right text-black"></i>
-          </span>
+          </button>
         </div>
       </div>
     </div>
@@ -462,6 +471,7 @@
           type="button"
           class="text-white w-10 h-10"
           onclick={() => (mobileCategoryBar = false)}
+          aria-label="Close categories"
         >
           <i class="fa-solid fa-xmark"></i>
         </button>

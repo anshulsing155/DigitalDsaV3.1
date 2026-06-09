@@ -1,7 +1,7 @@
 <script>
 	let {
 		supportHeading = "",
-		supportpara,
+		supportpara = "",
 		colSpan = 1,
 		colSpanText = 2
 	} = $props();
@@ -22,12 +22,14 @@
         {supportHeading}
       </p>
     {/if}
+    <!-- svelte-ignore slot_element_deprecated -->
     <slot name="para" />
   </div>
 
   <div
     class="lg:col-span-{colSpanText} grid md:gap-[2rem] font-Paragraph text-subParaFont justify-self-end "
   >
+    <!-- svelte-ignore slot_element_deprecated -->
     <slot />
   </div>
 </section>

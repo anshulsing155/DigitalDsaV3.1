@@ -304,12 +304,4 @@
   </PageFullTextDesign>
 </section>
 
-<style>
-  details summary .icon-container .faq-icon {
-    transition: transform 0.3s ease;
-  }
 
-  details[open] summary .icon-container .faq-icon {
-    transform: rotate(180deg);
-  }
-</style>

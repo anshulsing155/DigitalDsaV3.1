@@ -78,7 +78,7 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
 
-  let activeSection = "";
+  let activeSection = $state("");
 ;
 
   const initializeActiveSection = () => {

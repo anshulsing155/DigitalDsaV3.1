@@ -9,15 +9,16 @@
   import { afterNavigate } from "$app/navigation";
   import { FileUser, CircleUserRound, LogOut } from "lucide-svelte";
 
-  let firstPart, finalValue;
+  let firstPart = $state(""), finalValue = $state("");
 
-  let goToCalculators = false;
+  let goToCalculators = $state(false);
 
-  let profileIsOpen = false;
-  let mobileProfileIsOpen = false;
-  let userName = page.data.user?.name?.split(" ")[0] || "";
-  let formattedName =
-    userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
+  let profileIsOpen = $state(false);
+  let mobileProfileIsOpen = $state(false);
+  let userName = $state(page.data.user?.name?.split(" ")[0] || "");
+  let formattedName = $state(
+    userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase()
+  );
 
   let profileDropDown = [
     {
@@ -85,8 +86,8 @@
     finalValue = matched ? firstPart : "/"; // not received any url is will on the Loans navbar
     active = finalValue;
   });
-  let active = "/";
-  let overlayOpen = false; // For managing overlay visibility
+  let active = $state("/");
+  let overlayOpen = $state(false); // For managing overlay visibility
 
   let width = spring(0, { stiffness: 0.04, damping: 0.8 });
 
@@ -156,9 +157,9 @@
     { id: 6, title: "Blogs", link: "" },
   ];
 
-  let navOpen = false;
-  let searchOpen = false;
-  let searchInput;
+  let navOpen = $state(false);
+  let searchOpen = $state(false);
+  let searchInput = $state();
 
   function toggleNav() {
     navOpen = !navOpen;
@@ -305,6 +306,7 @@
       <button
         type="button"
         onclick={toggleNav}
+        aria-label="Open navigation"
         class="flex text-minHeadFont faBarCloseCustomClass items-center"
       >
         <span>
@@ -325,9 +327,9 @@
       </button>
     </div>
     <!-- search & login grid-cols-2-->
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
     <div
       class="loginBtnCloseCustomClass group"
       onmouseleave={() => (profileIsOpen = false)}
@@ -434,6 +436,7 @@
         <button
           class="relative w-2/12 lg:w-1/12 h-full"
           onclick={toggleSearch}
+          aria-label="Back"
         >
           <i class="fa-solid fa-arrow-left text-minSubHead lg:text-minHeadFont"
           ></i>
@@ -533,7 +536,7 @@
           </button>
         </div>
 
-        <button type="button" onclick={toggleNav}
+        <button type="button" onclick={toggleNav} aria-label="Close navigation"
           ><i class="fa-solid fa-xmark text-2xl"></i></button
         >
       </div>
@@ -580,8 +583,8 @@
           </li>
         {/each}
 
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
         <div
           class=" w-full pt-3"
           onclick={() => (mobileProfileIsOpen = !mobileProfileIsOpen)}
@@ -651,14 +654,6 @@
     }
     .toggleBtnCloseCustomClass {
       display: none;
-    }
-    .logoCloseCustomClass {
-      height: 64px;
-    }
-  }
-  @media screen and (min-width: 1028px) {
-    .logoCloseCustomClass {
-      height: 64px;
     }
   }
 

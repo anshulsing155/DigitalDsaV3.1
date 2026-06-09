@@ -1,6 +1,7 @@
 <script>
 	let {
-		contents = {}
+		contents = {},
+		children = undefined
 	} = $props();
 
 
@@ -77,6 +78,6 @@
         {/each}
       </div>
     {/if}
-    <slot />
+    {@render children?.()}
   </div>
 </section>

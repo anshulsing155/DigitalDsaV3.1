@@ -38,8 +38,8 @@
   let inputText = $state("");
   let loading = $state(false);
   let isMinimized = $state(false);
-  let messagesEndRef: HTMLDivElement;
-  let inputRef: HTMLInputElement;
+  let messagesEndRef: HTMLDivElement | undefined = $state();
+  let inputRef: HTMLInputElement | undefined = $state();
 
   const scrollToBottom = () => {
     messagesEndRef?.scrollIntoView({ behavior: "smooth" });
@@ -231,7 +231,7 @@ handleSendMessage();
               </div>
             </div>
           {/if}
-          <div bind:this={messagesEndRef} />
+          <div bind:this={messagesEndRef}></div>
         </div>
 
         <!-- Input Field -->

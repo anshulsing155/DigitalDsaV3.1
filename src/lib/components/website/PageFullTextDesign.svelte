@@ -36,10 +36,12 @@
       </div>
     </div>
     <div class="relative flex flex-col bg-[var(--landing-bg)]">
+      <!-- svelte-ignore slot_element_deprecated -->
       <slot />
     </div>
 
     <div class="lg:p-[4rem]">
+      <!-- svelte-ignore slot_element_deprecated -->
       <slot name="secondary" />
     </div>
   </div>

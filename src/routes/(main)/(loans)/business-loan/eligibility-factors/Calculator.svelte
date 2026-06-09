@@ -67,10 +67,11 @@
       <div class="p-6 md:p-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="business-type">
               Business Type
             </label>
             <select
+              id="business-type"
               bind:value={businessType}
               onchange={calculateEligibility}
               class="w-full px-3 py-2 border border-[var(--form-border)] rounded-md shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
@@ -82,10 +83,11 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="monthly-income">
               Monthly Cash Income (₹)
             </label>
             <input
+              id="monthly-income"
               type="number"
               bind:value={monthlyIncome}
               oninput={calculateEligibility}
@@ -96,10 +98,11 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="average-balance">
               Average Monthly Balance (₹)
             </label>
             <input
+              id="average-balance"
               type="number"
               bind:value={averageBalance}
               oninput={calculateEligibility}
@@ -110,10 +113,11 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="annual-turnover">
               Annual GST Turnover (₹)
             </label>
             <input
+              id="annual-turnover"
               type="number"
               bind:value={annualTurnover}
               oninput={calculateEligibility}
@@ -124,10 +128,11 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2">
+            <label class="block text-sm font-medium text-[var(--form-text-secondary)] mb-2" for="annual-profit">
               Annual Net Profit (₹)
             </label>
             <input
+              id="annual-profit"
               type="number"
               bind:value={annualProfit}
               oninput={calculateEligibility}

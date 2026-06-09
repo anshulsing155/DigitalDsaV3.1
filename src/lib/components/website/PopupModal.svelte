@@ -7,7 +7,8 @@
     icon: "/pngs/fun.png",
     altName: "default-icon",
   },
-		onClose = () => {}
+		onClose = () => {},
+		children = undefined
 	} = $props();
 
 
@@ -45,7 +46,7 @@
             {@html content.subTitle}
           </p>
           <div>
-            <slot />
+            {@render children?.()}
           </div>
         </div>
 

@@ -16,7 +16,7 @@
   import { goto } from "$app/navigation";
 
 
-  let showModal = false;
+  let showModal = $state(false);
   let dialogBox;
 
   function handleModal() {
@@ -33,9 +33,9 @@
   };
 
   // ----------generate-=link-------------------
-  let referralLink = page.data.user?.referralLink || "";
-  let copied = false;
-  let errorMessage = "";
+  let referralLink = $state(page.data.user?.referralLink || "");
+  let copied = $state(false);
+  let errorMessage = $state("");
 
   const generateReferralLink = async () => {
     if (!data.user) {
@@ -106,7 +106,7 @@ console.error("Failed to copy:", err);
 
           {#if !referralLink}
             <button
-              onclick={(e) => { e.preventDefault(); (generateReferralLink)(e); }}
+              onclick={(e) => { e.preventDefault(); generateReferralLink(); }}
               class="bg-btnBg p-4"
             >
               Generate Referral Link

@@ -500,8 +500,4 @@ dispatch("pageData", pageData);
   </NewPageLayout>
 </section>
 
-<style>
-  .section {
-    scroll-margin-top: 4rem; /* Adjust this value to match your navbar height */
-  }
-</style>
+

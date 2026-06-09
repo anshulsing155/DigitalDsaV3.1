@@ -21,7 +21,7 @@
   
   import Seo from "./Seo.svelte";
 
-  let activeSection = "";
+  let activeSection = $state("");
 
   let help = [
     {

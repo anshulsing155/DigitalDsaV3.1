@@ -2,14 +2,11 @@
 	let {
 		linkName = "",
 		hoverLink = "",
-		linkNameStyle
+		linkNameStyle = ""
 	} = $props();
 
-
-
-// This will be copied but not displayed
-  let isHovered = false;
-  let copied = false;
+  let isHovered = $state(false);
+  let copied = $state(false);
   //
   const copyToClipboard = async () => {
     if (!hoverLink) return; // Ensure there's a valid link
@@ -24,6 +21,8 @@ console.error("Failed to copy:", err);
 
 </script>
 
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<!-- svelte-ignore a11y_mouse_events_have_key_events -->
 <div
   class="relative w-full flex"
   onmouseover={() => (isHovered = true)}
@@ -40,11 +39,12 @@ console.error("Failed to copy:", err);
   </div>
 
   {#if isHovered}
-    <div
-      class="absolute z-50 top-4 right-0 transform bg-black text-white text-sm px-3 py-1 rounded-md whitespace-nowrap cursor-pointer"
+    <button
+      type="button"
+      class="absolute z-50 top-4 right-0 transform bg-black text-white text-sm px-3 py-1 rounded-md whitespace-nowrap cursor-pointer border-0"
       onclick={copyToClipboard}
     >
       {copied ? "Copied!" : "Copy"}
-    </div>
+    </button>
   {/if}
 </div>

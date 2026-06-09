@@ -552,9 +552,4 @@
   </NewPageLayout>
 </section>
 
-<style>
-  .custom-tooltip {
-    background-color: #4caf50; /* Green background */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  }
-</style>
+

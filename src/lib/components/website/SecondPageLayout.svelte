@@ -58,6 +58,7 @@
         </div>
       </div>
       <div class="bg-[var(--landing-bg)] text-black dark:text-white h-full right-0 mx-auto">
+        <!-- svelte-ignore slot_element_deprecated -->
         <slot />
       </div>
     </div>
@@ -65,6 +66,7 @@
     <div
       class="lg:p-[4rem] relative -top-[3rem] md:-top-[5rem] lg:-top-[13rem]"
     >
+      <!-- svelte-ignore slot_element_deprecated -->
       <slot name="secondary" />
     </div>
   </div>

@@ -106,8 +106,8 @@
     </div>
 
     <div class="flex justify-end gap-4 items-center">
-      <button><i class="fa-solid fa-angle-left"></i></button>
-      <button><i class="fa-solid fa-angle-right"></i></button>
+      <button aria-label="Previous"><i class="fa-solid fa-angle-left"></i></button>
+      <button aria-label="Next"><i class="fa-solid fa-angle-right"></i></button>
     </div>
   </div>
 </section>

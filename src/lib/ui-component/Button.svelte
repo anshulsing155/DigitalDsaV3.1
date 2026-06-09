@@ -9,6 +9,8 @@
 		imageClass?: string;
 		onClick?: () => void;
 		btnAnimation?: boolean;
+		btnBorder?: string;
+		btnColor?: string;
 	};
 
 	const {
@@ -20,7 +22,9 @@
 		img = '',
 		imageClass = '',
 		onClick = () => {},
-		btnAnimation = false
+		btnAnimation = false,
+		btnBorder = '',
+		btnColor = ''
 	}: Props = $props();
 
 	// Resolve conflicts dynamically: detect overrides in incoming classes
@@ -35,6 +39,7 @@
 		<button
 			type="button"
 			onclick={onClick}
+			style={`${btnColor ? `background-color: ${btnColor};` : ''}${btnBorder ? `border-color: ${btnBorder}; border-width: 1px; border-style: solid;` : ''}`}
 			class={`typography-button w-full cursor-pointer transition-all duration-300 hover:opacity-90 md:w-auto
 				${hasRoundedOverride ? '' : 'rounded-full'}
 				${hasPaddingOverride ? '' : 'px-8 py-3'}
@@ -56,6 +61,7 @@
 	<button
 		type="button"
 		onclick={onClick}
+		style={`${btnColor ? `background-color: ${btnColor};` : ''}${btnBorder ? `border-color: ${btnBorder}; border-width: 1px; border-style: solid;` : ''}`}
 		class={`typography-button w-full cursor-pointer transition-all duration-300 hover:opacity-90 md:w-auto
 			${hasRoundedOverride ? '' : 'rounded-full'}
 			${hasPaddingOverride ? '' : 'px-8 py-3'}

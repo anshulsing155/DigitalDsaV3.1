@@ -123,10 +123,12 @@
 		<div
 			class="relative z-10 mx-2 flex flex-col border border-[var(--form-border)] bg-[var(--landing-bg)] lg:mx-0"
 		>
+			<!-- svelte-ignore slot_element_deprecated -->
 			<slot />
 		</div>
 
 		<div class="lg:p-16">
+			<!-- svelte-ignore slot_element_deprecated -->
 			<slot name="secondary" />
 		</div>
 	</div>

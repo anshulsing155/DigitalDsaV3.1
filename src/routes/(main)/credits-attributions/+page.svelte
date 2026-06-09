@@ -13,7 +13,7 @@
   let activeSection = $state('');
   let cardImg2 = "/images/credits & attributions.jpg";
   let cardAlt1 = "CardCover";
-  let activeIndex: number | null = null;
+  let activeIndex = $state<number | null>(null);
 
   let navBarMedium = [
     "Attribution Practices",
@@ -366,7 +366,7 @@
 
           {#if activeIndex === index}
             <div
-              transitionslide={{ duration: slideDuration, delay: 200}}
+              transition:slide={{ duration: slideDuration, delay: 200}}
               class="dropdown-content"
             >
               {#if index == 0}

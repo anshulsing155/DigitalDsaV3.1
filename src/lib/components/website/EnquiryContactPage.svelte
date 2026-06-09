@@ -33,35 +33,35 @@
 
 
 
-  let selectedEnquiry = "";
-  let selectedSubCategory = "";
-  let successModal = false;
-  let errorModal = false;
-  let otp = ["", "", "", ""];
+  let selectedEnquiry = $state("");
+  let selectedSubCategory = $state("");
+  let successModal = $state(false);
+  let errorModal = $state(false);
+  let otp = $state(["", "", "", ""]);
   let otpCode = $derived(otp.join(""));
-  let lastOtpSent = 0;
+  let lastOtpSent = $state(0);
   const OTP_COOLDOWN = 30000;
-  let requestId = "";
-  let widgetData: any = null;
+  let requestId = $state("");
+  let widgetData = $state<any>(null);
 
-  let activeState = {
+  let activeState = $state({
     isOtpSent: false,
     otpVerified: false,
-  };
+  });
 
   $effect(() => {
 		if (selectedEnquiry) {
     selectedSubCategory = "";
   		}
 	});
-  let errors: any = {};
+  let errors = $state<any>({});
   $effect(() => { errors; });
-  let feedbackData = {
+  let feedbackData = $state({
     userSubject: "",
     userName: "",
     userMobile: "",
     feedbackMsg: "",
-  };
+  });
 
   $effect(() => { feedbackData.feedbackMsg; });
 
@@ -77,9 +77,9 @@
 ? `${selectedEnquiry}/${selectedSubCategory}`
 : selectedEnquiry; });
 
-  let recaptchaToken = "";
-  let recaptchaComponent: any;
-  let isWaiting = false;
+  let recaptchaToken = $state("");
+  let recaptchaComponent = $state<any>(null);
+  let isWaiting = $state(false);
 
   $effect(() => { feedbackData; });
 
@@ -103,7 +103,7 @@ errors.userMobile = null;
   }
 
   let hasErrors = $derived(Object.values(errors).some(
-    (error) => Array.isArray(error?._errors) && error._errors.length > 0
+    (error: any) => Array.isArray(error?._errors) && error._errors.length > 0
   ));
 
   const submitFeedback = async () => {
@@ -329,8 +329,8 @@ showAlert("Failed to resend OTP", 3000, "text-dangerColor");
     }
   }
 
-  let countdown = 30;
-  let isResendDisabled = true;
+  let countdown = $state(30);
+  let isResendDisabled = $state(true);
   function startCountdown() {
     isResendDisabled = true;
     countdown = 30;
@@ -456,7 +456,7 @@ notificationStore.set(null);
       {/if}
       <form
         method="POST"
-        onsubmit={(e) => { e.preventDefault(); (submitFeedback)(e); }}
+        onsubmit={(e) => { e.preventDefault(); submitFeedback(); }}
         class="flex flex-col gap-4"
       >
         {#if selectedSubCategory || selectedEnquiry == "Other"}
@@ -475,7 +475,7 @@ notificationStore.set(null);
                   class="border-1 peer block w-full appearance-none border border-[#0000003A] bg-white py-[0.6rem] pl-[3rem] pr-4 font-Paragraph text-minParaFont md:text-paraFont resize-none text-black outline-none focus:border-btnBg focus:ring-0"
                   placeholder="Describe your query atleast in 20 characters and 5 words."
                   rows="6"
-                />
+                ></textarea>
                 <label
                   for="message"
                   class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
@@ -597,6 +597,7 @@ notificationStore.set(null);
                         <button
                           type="button"
                           class="w-full rounded-full px-[2rem] py-3 font-Paragraph text-subParaFont hover:opacity-90"
+                          aria-label="Verifying OTP"
                           ><div class="flex text-center">
                             <div class="loader"></div>
                           </div></button
@@ -640,6 +641,7 @@ notificationStore.set(null);
                   type="button"
                   class="text-white bg-gray-200 font-Paragraph focus:outline-none text-minParaFont md:text-subParaFont w-full px-5 py-2.5 text-center cursor-not-allowed"
                   disabled
+                  aria-label="Submitting query"
                 >
                   <div class="flex justify-center items-center">
                     <div class="loader"></div>

@@ -33,7 +33,7 @@
   import { onMount } from "svelte";
   import ThreeColumWithLeftHeading from "./ThreeColumWithLeftHeading.svelte";
   import Seo from "$lib/components/Seo.svelte";
-  let activeSection = "";
+  let activeSection = $state("");
 
   // mobile-accordion
   let navBarMedium = [

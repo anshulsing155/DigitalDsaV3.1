@@ -117,6 +117,7 @@
 				</a>
 			{/if}
 
+			<!-- svelte-ignore slot_element_deprecated -->
 			<slot name="list" />
 		</div>
 	</div>

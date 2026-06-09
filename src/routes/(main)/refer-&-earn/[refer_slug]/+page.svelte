@@ -13,7 +13,7 @@
 
 
 
-  let pageData = {
+  let pageData = $derived({
     coverImage: "/images/pexels-pixabay-207983.jpg",
     coverAlt: "photo of two friends represeting refferal of DigitalDSA web app",
     sourceName: "Pexel",
@@ -28,7 +28,7 @@ btnColor: "#ffcc00",
 link: "/get-started/how-can-we-help",
 },
     ],
-  };
+  });
   let help = [
     {
 Heading: "Book an </br> appointment",

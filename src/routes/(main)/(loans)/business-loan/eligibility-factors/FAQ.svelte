@@ -30,7 +30,7 @@
   
   let activeIndex = -1;
   
-  function toggleFAQ(index) {
+  function toggleFAQ(index: number) {
     activeIndex = activeIndex === index ? -1 : index;
   }
 </script>
@@ -61,7 +61,7 @@
         </button>
         
         {#if activeIndex === i}
-          <div class="px-5 pb-5" transitionslide={{ duration: 300}}>
+          <div class="px-5 pb-5" transition:slide={{ duration: 300}}>
             <p class="text-[var(--form-text-secondary)]">{faq.answer}</p>
           </div>
         {/if}

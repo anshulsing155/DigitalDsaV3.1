@@ -2,7 +2,8 @@
 	let {
 		isOpen = false,
 		content = {},
-		onClose = () => {}
+		onClose = () => {},
+		children
 	} = $props();
 
 
@@ -19,11 +20,11 @@
     >
       <!-- Icon Section -->
       <!-- <div
-          class="absolute -top-[3rem] left-1/2 transform -translate-x-1/2 w-[5rem] h-[5rem] rounded-full p-4 bg-spanColor z-20"
-        >
+          class="absolute -top-[3rem] left-1/2 transform -translate-y-1/2 w-[5rem] h-[5rem] rounded-full p-4 bg-spanColor z-20"
+         >
           <img src={content.icon} alt={content.altName} />
         </div> -->
-      <button type="button" onclick={() => (isOpen = false)} class="absolute top-4 right-4">
+      <button type="button" onclick={() => (isOpen = false)} class="absolute top-4 right-4" aria-label="Close">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
@@ -32,7 +33,7 @@
         <!-- <h2 class="font-FifthHead text-mobSubHead">{@html content.title}</h2>
           <p class="font-Paragraph text-minParaFont">{@html content.subTitle}</p> -->
         <div>
-          <slot />
+          {@render children?.()}
         </div>
       </div>
     </div>

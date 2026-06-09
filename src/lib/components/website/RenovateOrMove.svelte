@@ -34,7 +34,7 @@
   import Button from "./Button.svelte";
   import { onMount } from "svelte";
   import Seo from "./Seo.svelte";
-  let activeSection = "";
+  let activeSection = $state("");
   let firstTableData = [
     {
 columnName: [
