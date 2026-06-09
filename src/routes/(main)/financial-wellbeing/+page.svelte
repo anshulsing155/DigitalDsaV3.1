@@ -149,7 +149,7 @@
     "/images/financial-wellbeing-exploration-onDigitalDSA-website.png";
   let cardAlt1 =
     "Photo of a person who is taking survey of the financial wellbeing on DigitalDSA.com";
-  let activeSection = ""; // Initially no section is active
+  let activeSection = $state(''); // Initially no section is active
 
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {

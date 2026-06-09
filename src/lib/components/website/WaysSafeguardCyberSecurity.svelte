@@ -50,7 +50,7 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
 
-  let activeSection = "";
+  let activeSection = $state('');
   let pageData = {
     coverImage: "/images/ways-safeguard-blog.jpg",
     coverAlt: "hero-cover",

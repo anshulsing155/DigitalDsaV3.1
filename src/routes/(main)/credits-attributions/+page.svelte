@@ -10,7 +10,7 @@
   import { slide } from "svelte/transition";
   import Seo from "$lib/components/Seo.svelte";
 
-  let activeSection = "";
+  let activeSection = $state('');
   let cardImg2 = "/images/credits & attributions.jpg";
   let cardAlt1 = "CardCover";
   let activeIndex: number | null = null;

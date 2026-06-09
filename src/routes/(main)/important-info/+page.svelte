@@ -68,7 +68,7 @@
   ];
 
  
-  let activeSection = ""; // Initially no section is active
+  let activeSection = $state(''); // Initially no section is active
 
   
   const initializeActiveSection = () => {
