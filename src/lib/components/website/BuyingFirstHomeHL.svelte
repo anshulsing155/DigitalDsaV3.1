@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button from './Button.svelte';
 	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
 	import { onMount } from 'svelte';
@@ -13,11 +13,54 @@
 	import Seo from './Seo.svelte';
 	import { content } from '$lib/data/buyingFirstHomeHL.js';
 
-	const toggleDropdown = (event, index) => {
+	interface ButtonProps {
+		btnName: string;
+		btnLink: string;
+		btnClass?: string;
+		animation?: boolean;
+	}
+
+	interface PageDataProps {
+		coverImage: string;
+		coverAlt: string;
+		sourceName?: string;
+		originalSource?: string;
+		heading: string;
+		para: string;
+		actionBtns: ButtonProps[];
+	}
+
+	let {
+		pageData = {
+			coverImage: '/images/first-home-buyer.jpg',
+			coverAlt:
+				'photo of a happy indian couple who has bought their first home and took home loan through DigitalDSA.com',
+			sourceName: 'Freepik',
+			originalSource:
+				'https://www.freepik.com/free-photo/people-recording-their-house-tour_129835217.htm',
+			heading: 'First home buyers - Guide to buying your first home',
+			para: 'Knowing where to start can be the biggest hurdle. The right tools and support will get you moving with confidence.',
+			actionBtns: [
+				{
+					btnName: 'Book appointment',
+					btnLink: '/appointment',
+					btnClass: 'btn-secondary'
+				},
+				{
+					btnName: 'Compare rates',
+					btnLink: '/get-started/how-can-we-help',
+					btnClass: 'btn-primary text-black',
+					animation: true
+				}
+			]
+		}
+	}: { pageData?: PageDataProps } = $props();
+
+	const toggleDropdown = (event: Event, index: number) => {
 		event.preventDefault();
-		const summaryElement = event.currentTarget;
+		const summaryElement = event.currentTarget as HTMLElement;
 		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement;
+		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
 
 		// Close all dropdowns except the clicked one
 		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
@@ -87,32 +130,52 @@
 		};
 	});
 
-	let {
-		pageData = {
-			coverImage: '/images/first-home-buyer.jpg',
-			coverAlt:
-				'photo of a happy indian couple who has bought their first home and took home loan through DigitalDSA.com',
-			sourceName: 'Freepik',
-			originalSource:
-				'https://www.freepik.com/free-photo/people-recording-their-house-tour_129835217.htm',
-			heading: 'First home buyers - Guide to buying your first home',
-			para: 'Knowing where to start can be the biggest hurdle. The right tools and support will get you moving with confidence.',
-			actionBtns: [
-				{
-					btnName: 'Book appointment',
-					btnLink: '/appointment',
-					btnClass: 'btn-secondary'
-				},
-				{
-					btnName: 'Compare rates',
-					btnLink: '/get-started/how-can-we-help',
-					btnClass: 'btn-primary text-black',
-					animation: true
+	// JSON-LD Structured Data Schema for Breadcrumbs and FAQ Rich Snippets
+	const breadcrumbSchema = {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://www.digitaldsa.com"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Home Loan",
+				"item": "https://www.digitaldsa.com/home-loan"
+			},
+			{
+				"@type": "ListItem",
+				"position": 3,
+				"name": "First Home Buyer Guide",
+				"item": "https://www.digitaldsa.com/home-loan/buying-first-home"
+			}
+		]
+	};
+
+	const faqSchema = {
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": content.ready.contents.cardData
+			.filter(c => c.url !== '')
+			.map(c => ({
+				"@type": "Question",
+				"name": c.title,
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": c.para
 				}
-			]
-		}
-	} = $props();
+			}))
+	};
 </script>
+
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
+</svelte:head>
 
 <Seo
 	type="WebPage"
@@ -125,27 +188,25 @@
 <section class="content">
 	<NewPageLayout {pageData}>
 		<!-- for desktop -->
-
 		<div class="hidden lg:block">
 			<StickyNavbar navList={content.navList} {activeSection} />
 
-			<div id="ready" data-section="ready" class="section">
+			<section id="ready" data-section="ready" class="section">
 				<ThreeColumWithLeftHeading contents={content.ready.contents} />
-			</div>
+			</section>
 
-			<div id="start" data-section="start" class="section">
+			<section id="start" data-section="start" class="section">
 				<AboveTitleWithLeftIconCard contents={content.start.contents} />
-			</div>
+			</section>
 
-			<div id="next" data-section="next" class="section">
+			<section id="next" data-section="next" class="section">
 				<ThreeColumWithLeftHeading contents={content.next.contents} />
-
 				<ButtonBanner contents={content.next.buttonBanner} />
-			</div>
+			</section>
 
-			<div id="calculators" data-section="calculators" class="section">
+			<section id="calculators" data-section="calculators" class="section">
 				<AboveTitleWithBlackCard contents={content.calculators.contents} />
-			</div>
+			</section>
 		</div>
 		
 		<!-- for mobile -->
@@ -169,7 +230,7 @@
 					{#if index == 0}
 						<div id="ready" class="bg-white text-black">
 							<ThreeColumWithLeftHeading
-							contents={content.ready.contents}
+								contents={content.ready.contents}
 							/>
 						</div>
 					{:else if index == 1}
@@ -198,26 +259,15 @@
 			{/each}
 		</div>
 
-		<TwoColumnWithImage
-			contents={{
-				cardImage: '/images/message.jpg',
-				cardAltName: 'photo of a laptop screen showing contact page of DigitalDSA',
-				cardHeading: 'Message us 24/7',
-				sourceName: 'DigitalDSA.com',
-				originalSource: 'www.digitaldsa.com',
-				reverse: true
-			}}
-		>
+		<!-- Dynamic Configured Message Us Section -->
+		<TwoColumnWithImage contents={content.messageUs.contents}>
 			<p class="typography-body-md text-[var(--form-text-secondary)]">
-				Feel free to message us anytime for expert assistance with your loan needs. Our team is here
-				to provide professional advice, guide you through the loan process, and help you find the
-				best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll
-				respond promptly.
+				{content.messageUs.para}
 			</p>
 			<Button
-				link="/contact"
-				btnName="Message us"
-				btnClass="btn-primary text-white dark:text-black"
+				link={content.messageUs.button.link}
+				btnName={content.messageUs.button.btnName}
+				btnClass={content.messageUs.button.btnClass}
 			/>
 		</TwoColumnWithImage>
 

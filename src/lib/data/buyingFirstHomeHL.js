@@ -185,6 +185,22 @@ export const content = {
 			]
 		}
 	},
+	messageUs: {
+		contents: {
+			cardImage: '/images/message.jpg',
+			cardAltName: 'photo of a laptop screen showing contact page of DigitalDSA',
+			cardHeading: 'Message us 24/7',
+			sourceName: 'DigitalDSA.com',
+			originalSource: 'www.digitaldsa.com',
+			reverse: true
+		},
+		para: 'Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.',
+		button: {
+			link: '/contact',
+			btnName: 'Message us',
+			btnClass: 'btn-primary text-white dark:text-black'
+		}
+	},
 	common_components: {
 		helpList: {
 			contents: {
