@@ -192,7 +192,7 @@
           <Payments supportHeading="Different types of cookies">
             <div class="grid grid-cols-2 gap-[2rem]">
               <div class="flex flex-col col-span-1 gap-[2rem]">
-                <h2 class="font-ThirdHead text-minSubHead">
+                <h2 class="typography-h3 font-semibold text-text-main">
                   Strictly necessary
                 </h2>
                 <p>
@@ -202,14 +202,14 @@
                 </p>
               </div>
               <div class="flex flex-col col-span-1 gap-[2rem]">
-                <h2 class="font-ThirdHead text-minSubHead">Functional</h2>
+                <h2 class="typography-h3 font-semibold text-text-main">Functional</h2>
                 <p>
                   Recognize you when you return to our website, so we can do
                   things like remember your preferences from last time.
                 </p>
               </div>
               <div class="flex flex-col col-span-1 gap-[2rem]">
-                <h2 class="font-ThirdHead text-minSubHead">
+                <h2 class="typography-h3 font-semibold text-text-main">
                   User identification
                 </h2>
                 <p>
@@ -222,7 +222,7 @@
                 </p>
               </div>
               <div class="flex flex-col col-span-1 gap-[2rem]">
-                <h2 class="font-ThirdHead text-minSubHead">
+                <h2 class="typography-h3 font-semibold text-text-main">
                   Analytics, performance and research
                 </h2>
                 <p>
@@ -273,7 +273,7 @@
               </p>
               <p>To change your web browser preferences:</p>
               <div class="flex flex-col gap-4">
-                <h2 class="font-ThirdHead text-minSubHead">Google Chrome</h2>
+                <h2 class="typography-h3 font-semibold text-text-main">Google Chrome</h2>
                 <div class="flex flex-col gap-4">
                   <p>
                     Open your Chrome browser &gt; go to Customise and Control
@@ -283,7 +283,7 @@
                   </p>
                   <p>
                     For more instructions visit <span
-                      class=" underline underline-offset-4 hover:no-underline"
+                      class="underline underline-offset-4 hover:no-underline"
                       ><a href="https://support.google.com/chrome/answer/95647"
                         >how to adjust cookie settings on mobile devices</a
                       ></span
@@ -292,7 +292,7 @@
                 </div>
               </div>
               <div class="flex flex-col gap-[2rem]">
-                <h2 class="font-ThirdHead text-minSubHead">Safari</h2>
+                <h2 class="typography-h3 font-semibold text-text-main">Safari</h2>
                 <div class="flex flex-col gap-4">
                   <p>
                     Go to Settings &gt; Safari &gt; Preferences &gt; Privacy.
@@ -300,7 +300,7 @@
                   </p>
                   <p>
                     For more information, including on mobile visit <span
-                      class=" underline underline-offset-4 hover:no-underline"
+                      class="underline underline-offset-4 hover:no-underline"
                       ><a href="https://support.apple.com/en-au/HT201265"
                         >how to adjust cookie settings on Apple devices.</a
                       ></span
@@ -309,7 +309,7 @@
                 </div>
               </div>
               <div class="flex flex-col gap-[2rem]">
-                <h2 class="font-ThirdHead text-minSubHead">
+                <h2 class="typography-h3 font-semibold text-text-main">
                   Internet Explorer and Edge
                 </h2>
                 <div class="flex flex-col gap-4">
@@ -320,7 +320,7 @@
                   </p>
                   <p>
                     For more information visit <span
-                      class=" underline underline-offset-4 hover:no-underline"
+                      class="underline underline-offset-4 hover:no-underline"
                       ><a href="https://support.microsoft.com/en-au"
                         >Microsoft Support</a
                       ></span
@@ -329,7 +329,7 @@
                 </div>
               </div>
               <div class="flex flex-col gap-[2rem]">
-                <h2 class="font-ThirdHead text-minSubHead">Mozilla Firefox</h2>
+                <h2 class="typography-h3 font-semibold text-text-main">Mozilla Firefox</h2>
                 <div class="flex flex-col gap-4">
                   <p>
                     Open Firefox &gt; select Tools &gt; Options &gt; Privacy
@@ -337,7 +337,7 @@
                   </p>
                   <p>
                     For more information visit <span
-                      class=" underline underline-offset-4 hover:no-underline"
+                      class="underline underline-offset-4 hover:no-underline"
                       ><a
                         href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences"
                         >Mozilla support</a
@@ -351,13 +351,10 @@
         </div>
       </div>
     </div>
-    <div class=" lg:hidden">
+    <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-[1rem] py-[1.5rem]"
@@ -369,18 +366,18 @@
             </div>
           </summary>
           {#if index == 0}
-            <div id="cookies" class="text-black bg-white ">
+            <div id="cookies" class="text-black bg-white">
               <ThingsYouShould thinkKnow={cookies} />
             </div>
           {:else if index == 1}
             <div
               id="firstPartyCookies"
-              class=" text-black bg-white px-[0.5rem]"
+              class="text-black bg-white px-[0.5rem]"
             >
               <Payments supportHeading="Different types of cookies">
                 <div class="grid md:grid-cols-2 gap-[2rem]">
                   <div class="flex flex-col col-span-1 gap-[2rem]">
-                    <h2 class="font-ThirdHead text-minSubHead">
+                    <h2 class="typography-h3 font-semibold text-text-main">
                       Strictly necessary
                     </h2>
                     <p>
@@ -390,14 +387,14 @@
                     </p>
                   </div>
                   <div class="flex flex-col col-span-1 gap-[2rem]">
-                    <h2 class="font-ThirdHead text-minSubHead">Functional</h2>
+                    <h2 class="typography-h3 font-semibold text-text-main">Functional</h2>
                     <p>
                       Recognize you when you return to our website, so we can do
                       things like remember your preferences from last time.
                     </p>
                   </div>
                   <div class="flex flex-col col-span-1 gap-[2rem]">
-                    <h2 class="font-ThirdHead text-minSubHead">
+                    <h2 class="typography-h3 font-semibold text-text-main">
                       User identification
                     </h2>
                     <p>
@@ -411,7 +408,7 @@
                     </p>
                   </div>
                   <div class="flex flex-col col-span-1 gap-[2rem]">
-                    <h2 class="font-ThirdHead text-minSubHead">
+                    <h2 class="typography-h3 font-semibold text-text-main">
                       Analytics, performance and research
                     </h2>
                     <p>
@@ -425,7 +422,7 @@
               </Payments>
             </div>
           {:else if index == 2}
-            <div id="thirdPartyCookies" class="text-black bg-white ">
+            <div id="thirdPartyCookies" class="text-black bg-white">
               <ThingsYouShould thinkKnow={thirdPartyCookies} disc="list-disc">
                 <ul slot="list" class="list-disc ml-5">
                   <a class="underline underline-offset-4 hover:no-underline"
@@ -443,7 +440,7 @@
           {:else if index == 3}
             <div
               id="deleteCookies"
-              class=" text-black bg-white px-[0.5rem]"
+              class="text-black bg-white px-[0.5rem]"
             >
               <Payments supportHeading="How to block or delete cookies">
                 <div class="flex flex-col gap-[2rem]">
@@ -465,7 +462,7 @@
                   </p>
                   <p>To change your web browser preferences:</p>
                   <div class="flex flex-col gap-2">
-                    <h2 class="font-ThirdHead text-minSubHead">
+                    <h2 class="typography-h3 font-semibold text-text-main">
                       Google Chrome
                     </h2>
                     <div class="flex flex-col py-[1rem] gap-4">
@@ -477,7 +474,7 @@
                       </p>
                       <p>
                         For more instructions visit <span
-                          class=" underline underline-offset-4 hover:no-underline"
+                          class="underline underline-offset-4 hover:no-underline"
                           ><a
                             href="https://support.google.com/chrome/answer/95647"
                             >how to adjust cookie settings on mobile devices</a
@@ -487,7 +484,7 @@
                     </div>
                   </div>
                   <div class="flex flex-col gap-2">
-                    <h2 class="font-ThirdHead text-minSubHead">Safari</h2>
+                    <h2 class="typography-h3 font-semibold text-text-main">Safari</h2>
                     <div class="flex flex-col gap-4 py-[1rem]">
                       <p>
                         Go to Settings &gt; Safari &gt; Preferences &gt;
@@ -495,7 +492,7 @@
                       </p>
                       <p>
                         For more information, including on mobile visit <span
-                          class=" underline underline-offset-4 hover:no-underline"
+                          class="underline underline-offset-4 hover:no-underline"
                           ><a href="https://support.apple.com/en-au/HT201265"
                             >how to adjust cookie settings on Apple devices.</a
                           ></span
@@ -504,7 +501,7 @@
                     </div>
                   </div>
                   <div class="flex flex-col gap-2">
-                    <h2 class="font-ThirdHead text-minSubHead">
+                    <h2 class="typography-h3 font-semibold text-text-main">
                       Internet Explorer and Edge
                     </h2>
                     <div class="flex flex-col py-[1rem] gap-4">
@@ -515,7 +512,7 @@
                       </p>
                       <p>
                         For more information visit <span
-                          class=" underline underline-offset-4 hover:no-underline"
+                          class="underline underline-offset-4 hover:no-underline"
                           ><a href="https://support.microsoft.com/en-au"
                             >Microsoft Support</a
                           ></span
@@ -524,7 +521,7 @@
                     </div>
                   </div>
                   <div class="flex flex-col gap-2">
-                    <h2 class="font-ThirdHead text-minSubHead">
+                    <h2 class="typography-h3 font-semibold text-text-main">
                       Mozilla Firefox
                     </h2>
                     <div class="flex flex-col py-[1rem] gap-4">
@@ -534,7 +531,7 @@
                       </p>
                       <p>
                         For more information visit <span
-                          class=" underline underline-offset-4 hover:no-underline"
+                          class="underline underline-offset-4 hover:no-underline"
                           ><a
                             href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences"
                             >Mozilla support</a

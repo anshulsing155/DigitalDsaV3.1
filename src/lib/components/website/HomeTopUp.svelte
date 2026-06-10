@@ -23,7 +23,7 @@
         },
       },
     ],
-    para: "A <span class='font-FourthHead'>Home Loan Top-Up</span> is an additional loan that you can avail over and above your existing home loan. It is a great option for borrowers who need extra funds for renovation, education, medical emergencies, or even a new investment. Since the loan is given against an existing home loan, the processing is simpler and faster than other loan types.",
+    para: "A <span class='font-semibold'>Home Loan Top-Up</span> is an additional loan that you can avail over and above your existing home loan. It is a great option for borrowers who need extra funds for renovation, education, medical emergencies, or even a new investment. Since the loan is given against an existing home loan, the processing is simpler and faster than other loan types.",
   }
 	} = $props();
 
@@ -173,7 +173,7 @@ window.removeEventListener("scroll", handleScroll);
           <TwoColumnWithLeftHeading
             contents={{
               heading: `What is a Home Loan Top-Up?`,
-              secPara: `A <span class="font-FourthHead">home loan top-up</span> is an additional amount that can be borrowed over an existing home loan, without the need for a fresh property mortgage. This means you can access extra funds without going through the hassle of a new loan application.`,
+              secPara: `A <span class="font-semibold">home loan top-up</span> is an additional amount that can be borrowed over an existing home loan, without the need for a fresh property mortgage. This means you can access extra funds without going through the hassle of a new loan application.`,
               listTopPara: `Key Features:`,
               list: [
                 {
@@ -207,7 +207,7 @@ window.removeEventListener("scroll", handleScroll);
                   iconAltName: "check Icon",
                   heading: "Good Repayment History",
                   desc: [
-                    `Most lenders require <span class="font-FourthHead">at least 12 months</span> of timely EMI payments on your existing home loan.`,
+                    `Most lenders require <span class="font-semibold">at least 12 months</span> of timely EMI payments on your existing home loan.`,
                     `No missed or delayed payments in recent months.`,
                   ],
                 },
@@ -216,8 +216,8 @@ window.removeEventListener("scroll", handleScroll);
                   iconAltName: "pen Icon",
                   heading: "Sufficient Loan Eligibility",
                   desc: [
-                    `Banks will check your <span class="font-FourthHead">loan-to-value (LTV) ratio</span> to ensure the total loan amount (existing loan + top-up) does not exceed 75%-80% of the property value.`,
-                    `Your <span class="font-FourthHead">monthly income</span> and <span class="font-FourthHead">debt-to-income ratio</span> also determine your eligibility.`,
+                    `Banks will check your <span class="font-semibold">loan-to-value (LTV) ratio</span> to ensure the total loan amount (existing loan + top-up) does not exceed 75%-80% of the property value.`,
+                    `Your <span class="font-semibold">monthly income</span> and <span class="font-semibold">debt-to-income ratio</span> also determine your eligibility.`,
                   ],
                 },
                 {
@@ -225,8 +225,8 @@ window.removeEventListener("scroll", handleScroll);
                   iconAltName: "home Icon",
                   heading: "Clean Property Title & Ownership",
                   desc: [
-                    `The property should be <span class="font-FourthHead">legally clear</span> with no pending disputes.`,
-                    `The property should already be <span class="font-FourthHead">registered in your name</span>.`,
+                    `The property should be <span class="font-semibold">legally clear</span> with no pending disputes.`,
+                    `The property should already be <span class="font-semibold">registered in your name</span>.`,
                   ],
                 },
               ],
@@ -241,17 +241,17 @@ window.removeEventListener("scroll", handleScroll);
               heading: `Loan Amount & Tenure`,
               list: [
                 {
-                  desc: `<span class="font-FourthHead">Minimum Loan– </span> ₹2 lakh (varies by bank)`,
+                  desc: `<span class="font-semibold">Minimum Loan– </span> ₹2 lakh (varies by bank)`,
                 },
 
                 {
-                  desc: `<span class="font-FourthHead">Maximum Loan– </span> Up to ₹1 crore (or as per bank policy)`,
+                  desc: `<span class="font-semibold">Maximum Loan– </span> Up to ₹1 crore (or as per bank policy)`,
                 },
                 {
-                  desc: `<span class="font-FourthHead">Loan Tenure– </span> Up to 15-20 years (varies by lender)`,
+                  desc: `<span class="font-semibold">Loan Tenure– </span> Up to 15-20 years (varies by lender)`,
                 },
                 {
-                  desc: `<span class="font-FourthHead">Loan-to-Value (LTV)– </span> Total loan (existing + top-up) should not exceed 80% of property value.`,
+                  desc: `<span class="font-semibold">Loan-to-Value (LTV)– </span> Total loan (existing + top-up) should not exceed 80% of property value.`,
                 },
               ],
             }}
@@ -263,19 +263,19 @@ window.removeEventListener("scroll", handleScroll);
               heading: `Interest Rates & Processing Fees`,
               list: [
                 {
-                  desc: `<span class="font-FourthHead">Interest Rate– </span> Generally 0.5%-1% higher than your existing home loan rate.`,
+                  desc: `<span class="font-semibold">Interest Rate– </span> Generally 0.5%-1% higher than your existing home loan rate.`,
                 },
                 {
-                  desc: `<span class="font-FourthHead">Processing Fees– </span> 0.5% - 1% of loan amount (some banks offer discounts).`,
+                  desc: `<span class="font-semibold">Processing Fees– </span> 0.5% - 1% of loan amount (some banks offer discounts).`,
                 },
                 {
-                  desc: `<span class="font-FourthHead">Prepayment Charges– </span> Nil for floating-rate loans, may apply for fixed-rate loans.`,
+                  desc: `<span class="font-semibold">Prepayment Charges– </span> Nil for floating-rate loans, may apply for fixed-rate loans.`,
                 },
                 {
-                  desc: `<span class="font-FourthHead">Other Charges– </span> Legal, valuation, and documentation charges may apply.`,
+                  desc: `<span class="font-semibold">Other Charges– </span> Legal, valuation, and documentation charges may apply.`,
                 },
               ],
-              listSecPara: `<span class="font-FourthHead">💡 Tip:</span> If you have an existing home loan at a <span class="font-FourthHead">higher interest rate</span>, consider transferring your loan to a lower rate before taking a top-up.`,
+              listSecPara: `<span class="font-semibold">💡 Tip:</span> If you have an existing home loan at a <span class="font-semibold">higher interest rate</span>, consider transferring your loan to a lower rate before taking a top-up.`,
             }}
           />
         </div>
@@ -290,18 +290,18 @@ window.removeEventListener("scroll", handleScroll);
               cardHeading: `Home Loan Top-Up Processing: <br> Step-by-Step Guide`,
             }}
           >
-            <div class="font-Paragraph text-minParaFont">
+            <div class="typography-body-sm text-text-light">
               <ul class="space-y-6">
                 <li class="">
-                  <div class="text-paraFont space-y-4">
-                    <span class="font-FourthHead"
+                  <div class="typography-body-md space-y-4">
+                    <span class="font-semibold"
                       >1️⃣ Check Your Loan Eligibility</span
                     >
                     <ul class="list-disc ml-[2rem] space-y-2">
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         Use an Eligibility Calculator (We can help! 😉).
                       </li>
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         Check your remaining loan balance and current property
                         value.
                       </li>
@@ -309,77 +309,77 @@ window.removeEventListener("scroll", handleScroll);
                   </div>
                 </li>
                 <li class="">
-                  <div class="text-paraFont space-y-4">
-                    <span class="font-FourthHead"
+                  <div class="typography-body-md space-y-4">
+                    <span class="font-semibold"
                       >2️⃣ Submit Application & Documents</span
                     >
                     <ul class="list-disc ml-[2rem] space-y-2">
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         KYC Documents (Aadhaar, PAN, Passport, Voter ID)
                       </li>
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         Income Proof (Salary Slips, ITR, Bank Statements)
                       </li>
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         Property Papers (Registry, Approved Plan)
                       </li>
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         Existing Loan Details (Sanction Letter, EMI Schedule)
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="">
-                  <div class="text-paraFont space-y-4">
-                    <span class="font-FourthHead"
+                  <div class="typography-body-md space-y-4">
+                    <span class="font-semibold"
                       >3️⃣ Bank Verification & Processing</span
                     >
                     <ul class="list-disc ml-[2rem] space-y-2">
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         The lender will verify your documents.
                       </li>
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         A property re-evaluation may be done.
                       </li>
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         Loan amount is decided based on eligibility.
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="">
-                  <div class="text-paraFont space-y-4">
-                    <span class="font-FourthHead"
+                  <div class="typography-body-md space-y-4">
+                    <span class="font-semibold"
                       >4️⃣ Loan Approval & Offer Letter</span
                     >
                     <ul class="list-disc ml-[2rem] space-y-2">
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         Once approved, you’ll receive a sanction letter with
                         loan details.
                       </li>
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         Carefully check interest rates, tenure, and charges.
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="">
-                  <div class="text-paraFont space-y-4">
-                    <span class="font-FourthHead">5️⃣ Disbursement of Funds</span
+                  <div class="typography-body-md space-y-4">
+                    <span class="font-semibold">5️⃣ Disbursement of Funds</span
                     >
                     <ul class="list-disc ml-[2rem] space-y-2">
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         The loan amount is credited to your bank account.
                       </li>
-                      <li class="font-para text-subParaFont">
+                      <li class="font-para typography-body-md">
                         The EMIs start from the next billing cycle.
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="text-subParaFont">
-                  <span class="font-FourthHead">📢 Processing Time:</span>
-                  <p class="font-para text-subParaFont">
+                <li class="typography-body-md">
+                  <span class="font-semibold">📢 Processing Time:</span>
+                  <p class="font-para typography-body-md">
                     Generally takes 3-7 working days if all documents are in
                     order.
                   </p>
@@ -443,7 +443,7 @@ window.removeEventListener("scroll", handleScroll);
                     class="h-4 mt-1"
                   />
                   <span>
-                    <span class="font-FourthHead"
+                    <span class="font-semibold"
                       >Instant Eligibility Check</span
                     > with our tools.
                   </span>
@@ -455,7 +455,7 @@ window.removeEventListener("scroll", handleScroll);
                     class="h-4 mt-1"
                   />
                   <span>
-                    <span class="font-FourthHead"
+                    <span class="font-semibold"
                       >Lower Interest Rate Guidance</span
                     >(Balance Transfer + Top-Up).
                   </span>
@@ -467,7 +467,7 @@ window.removeEventListener("scroll", handleScroll);
                     class="h-4 mt-1"
                   />
                   <span>
-                    <span class="font-FourthHead"
+                    <span class="font-semibold"
                       >Negotiate with lenders for better deals!</span
                     >
                   </span>
@@ -479,13 +479,13 @@ window.removeEventListener("scroll", handleScroll);
                     class="h-4 mt-1"
                   />
                   <span>
-                    <span class="font-FourthHead">Paperwork Assistance</span> to
+                    <span class="font-semibold">Paperwork Assistance</span> to
                     speed up approval.
                   </span>
                 </li>
                 <li>
                   <span>
-                    <span class="font-FourthHead"
+                    <span class="font-semibold"
                       >📌 Want to check your eligibility?</span
                     > Visit our Home Loan Top-Up Page or call us for personalized
                     assistance.
@@ -604,10 +604,7 @@ window.removeEventListener("scroll", handleScroll);
     <div class="lg:hidden block">
       {#each ["Getting started", "Loan Tenure & Fee", "Step-by-step", "How we help", "Tools & calculators"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -615,7 +612,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -626,7 +623,7 @@ window.removeEventListener("scroll", handleScroll);
               <TwoColumnWithLeftHeading
                 contents={{
                   heading: `What is a Home Loan Top-Up?`,
-                  secPara: `A <span class="font-FourthHead">home loan top-up</span> is an additional amount that can be borrowed over an existing home loan, without the need for a fresh property mortgage. This means you can access extra funds without going through the hassle of a new loan application.`,
+                  secPara: `A <span class="font-semibold">home loan top-up</span> is an additional amount that can be borrowed over an existing home loan, without the need for a fresh property mortgage. This means you can access extra funds without going through the hassle of a new loan application.`,
                   listTopPara: `Key Features:`,
                   list: [
                     {
@@ -660,7 +657,7 @@ window.removeEventListener("scroll", handleScroll);
                       iconAltName: "check Icon",
                       heading: "Good Repayment History",
                       desc: [
-                        `Most lenders require <span class="font-FourthHead">at least 12 months</span> of timely EMI payments on your existing home loan.`,
+                        `Most lenders require <span class="font-semibold">at least 12 months</span> of timely EMI payments on your existing home loan.`,
                         `No missed or delayed payments in recent months.`,
                       ],
                     },
@@ -669,8 +666,8 @@ window.removeEventListener("scroll", handleScroll);
                       iconAltName: "pen Icon",
                       heading: "Sufficient Loan Eligibility",
                       desc: [
-                        `Banks will check your <span class="font-FourthHead">loan-to-value (LTV) ratio</span> to ensure the total loan amount (existing loan + top-up) does not exceed 75%-80% of the property value.`,
-                        `Your <span class="font-FourthHead">monthly income</span> and <span class="font-FourthHead">debt-to-income ratio</span> also determine your eligibility.`,
+                        `Banks will check your <span class="font-semibold">loan-to-value (LTV) ratio</span> to ensure the total loan amount (existing loan + top-up) does not exceed 75%-80% of the property value.`,
+                        `Your <span class="font-semibold">monthly income</span> and <span class="font-semibold">debt-to-income ratio</span> also determine your eligibility.`,
                       ],
                     },
                     {
@@ -678,8 +675,8 @@ window.removeEventListener("scroll", handleScroll);
                       iconAltName: "home Icon",
                       heading: "Clean Property Title & Ownership",
                       desc: [
-                        `The property should be <span class="font-FourthHead">legally clear</span> with no pending disputes.`,
-                        `The property should already be <span class="font-FourthHead">registered in your name</span>.`,
+                        `The property should be <span class="font-semibold">legally clear</span> with no pending disputes.`,
+                        `The property should already be <span class="font-semibold">registered in your name</span>.`,
                       ],
                     },
                   ],
@@ -687,23 +684,23 @@ window.removeEventListener("scroll", handleScroll);
               />
             </div>
           {:else if index == 1}
-            <div id="fee" class=" bg-white text-black">
+            <div id="fee" class="bg-white text-black">
               <TwoColumnWithLeftHeading
                 contents={{
                   heading: `Loan Amount & Tenure`,
                   list: [
                     {
-                      desc: `<span class="font-FourthHead">Minimum Loan– </span> ₹2 lakh (varies by bank)`,
+                      desc: `<span class="font-semibold">Minimum Loan– </span> ₹2 lakh (varies by bank)`,
                     },
 
                     {
-                      desc: `<span class="font-FourthHead">Maximum Loan– </span> Up to ₹1 crore (or as per bank policy)`,
+                      desc: `<span class="font-semibold">Maximum Loan– </span> Up to ₹1 crore (or as per bank policy)`,
                     },
                     {
-                      desc: `<span class="font-FourthHead">Loan Tenure– </span> Up to 15-20 years (varies by lender)`,
+                      desc: `<span class="font-semibold">Loan Tenure– </span> Up to 15-20 years (varies by lender)`,
                     },
                     {
-                      desc: `<span class="font-FourthHead">Loan-to-Value (LTV)– </span> Total loan (existing + top-up) should not exceed 80% of property value.`,
+                      desc: `<span class="font-semibold">Loan-to-Value (LTV)– </span> Total loan (existing + top-up) should not exceed 80% of property value.`,
                     },
                   ],
                 }}
@@ -715,19 +712,19 @@ window.removeEventListener("scroll", handleScroll);
                   heading: `Interest Rates & Processing Fees`,
                   list: [
                     {
-                      desc: `<span class="font-FourthHead">Interest Rate– </span> Generally 0.5%-1% higher than your existing home loan rate.`,
+                      desc: `<span class="font-semibold">Interest Rate– </span> Generally 0.5%-1% higher than your existing home loan rate.`,
                     },
                     {
-                      desc: `<span class="font-FourthHead">Processing Fees– </span> 0.5% - 1% of loan amount (some banks offer discounts).`,
+                      desc: `<span class="font-semibold">Processing Fees– </span> 0.5% - 1% of loan amount (some banks offer discounts).`,
                     },
                     {
-                      desc: `<span class="font-FourthHead">Prepayment Charges– </span> Nil for floating-rate loans, may apply for fixed-rate loans.`,
+                      desc: `<span class="font-semibold">Prepayment Charges– </span> Nil for floating-rate loans, may apply for fixed-rate loans.`,
                     },
                     {
-                      desc: `<span class="font-FourthHead">Other Charges– </span> Legal, valuation, and documentation charges may apply.`,
+                      desc: `<span class="font-semibold">Other Charges– </span> Legal, valuation, and documentation charges may apply.`,
                     },
                   ],
-                  listSecPara: `<span class="font-FourthHead">💡 Tip:</span> If you have an existing home loan at a <span class="font-FourthHead">higher interest rate</span>, consider transferring your loan to a lower rate before taking a top-up.`,
+                  listSecPara: `<span class="font-semibold">💡 Tip:</span> If you have an existing home loan at a <span class="font-semibold">higher interest rate</span>, consider transferring your loan to a lower rate before taking a top-up.`,
                 }}
               />
             </div>
@@ -741,18 +738,18 @@ window.removeEventListener("scroll", handleScroll);
                   cardHeading: `Home Loan Top-Up Processing: <br> Step-by-Step Guide`,
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <ul class="space-y-6">
                     <li class="">
-                      <div class="text-paraFont space-y-4">
-                        <span class="font-FourthHead"
+                      <div class="typography-body-md space-y-4">
+                        <span class="font-semibold"
                           >1️⃣ Check Your Loan Eligibility</span
                         >
                         <ul class="list-disc ml-[2rem] space-y-2">
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             Use an Eligibility Calculator (We can help! 😉).
                           </li>
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             Check your remaining loan balance and current
                             property value.
                           </li>
@@ -760,21 +757,21 @@ window.removeEventListener("scroll", handleScroll);
                       </div>
                     </li>
                     <li class="">
-                      <div class="text-paraFont space-y-4">
-                        <span class="font-FourthHead"
+                      <div class="typography-body-md space-y-4">
+                        <span class="font-semibold"
                           >2️⃣ Submit Application & Documents</span
                         >
                         <ul class="list-disc ml-[2rem] space-y-2">
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             KYC Documents (Aadhaar, PAN, Passport, Voter ID)
                           </li>
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             Income Proof (Salary Slips, ITR, Bank Statements)
                           </li>
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             Property Papers (Registry, Approved Plan)
                           </li>
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             Existing Loan Details (Sanction Letter, EMI
                             Schedule)
                           </li>
@@ -782,57 +779,57 @@ window.removeEventListener("scroll", handleScroll);
                       </div>
                     </li>
                     <li class="">
-                      <div class="text-paraFont space-y-4">
-                        <span class="font-FourthHead"
+                      <div class="typography-body-md space-y-4">
+                        <span class="font-semibold"
                           >3️⃣ Bank Verification & Processing</span
                         >
                         <ul class="list-disc ml-[2rem] space-y-2">
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             The lender will verify your documents.
                           </li>
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             A property re-evaluation may be done.
                           </li>
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             Loan amount is decided based on eligibility.
                           </li>
                         </ul>
                       </div>
                     </li>
                     <li class="">
-                      <div class="text-paraFont space-y-4">
-                        <span class="font-FourthHead"
+                      <div class="typography-body-md space-y-4">
+                        <span class="font-semibold"
                           >4️⃣ Loan Approval & Offer Letter</span
                         >
                         <ul class="list-disc ml-[2rem] space-y-2">
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             Once approved, you’ll receive a sanction letter with
                             loan details.
                           </li>
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             Carefully check interest rates, tenure, and charges.
                           </li>
                         </ul>
                       </div>
                     </li>
                     <li class="">
-                      <div class="text-paraFont space-y-4">
-                        <span class="font-FourthHead"
+                      <div class="typography-body-md space-y-4">
+                        <span class="font-semibold"
                           >5️⃣ Disbursement of Funds</span
                         >
                         <ul class="list-disc ml-[2rem] space-y-2">
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             The loan amount is credited to your bank account.
                           </li>
-                          <li class="font-para text-subParaFont">
+                          <li class="font-para typography-body-md">
                             The EMIs start from the next billing cycle.
                           </li>
                         </ul>
                       </div>
                     </li>
-                    <li class="text-subParaFont">
-                      <span class="font-FourthHead">📢 Processing Time:</span>
-                      <p class="font-para text-subParaFont">
+                    <li class="typography-body-md">
+                      <span class="font-semibold">📢 Processing Time:</span>
+                      <p class="font-para typography-body-md">
                         Generally takes 3-7 working days if all documents are in
                         order.
                       </p>
@@ -877,7 +874,7 @@ window.removeEventListener("scroll", handleScroll);
                   reverse: true,
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <ul class="space-y-4">
                     <li class="flex items-start gap-1">
                       <img
@@ -1109,10 +1106,10 @@ window.removeEventListener("scroll", handleScroll);
         thinkKnow={{
           heading: "Things you should know",
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

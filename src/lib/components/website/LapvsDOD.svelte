@@ -16,27 +16,27 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'>Loan Type </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'>Loan Type </span>":
             ["Term Loan", "Overdraft Facility"],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/mutualFund.svg' alt='fund icon'>Disbursal</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/mutualFund.svg' alt='fund icon'>Disbursal</span>":
             ["Lump sum", "Withdraw as needed"],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='calc icon'>Interest Calculation</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='calc icon'>Interest Calculation</span>":
             ["Charged on full loan amount", "Charged only on utilized amount"],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='home icon'>Repayment</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='home icon'>Repayment</span>":
             ["Fixed EMIs over tenure", "Flexible, based on withdrawals"],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/comparison.svg' alt='reduction icon'>Limit Reduction</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/comparison.svg' alt='reduction icon'>Limit Reduction</span>":
             ["No reduction", "Limit reduces over time"],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='best icon'>Best For</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='best icon'>Best For</span>":
             ["Long-term expenses", "Short-term cash flow needs"],
         },
       ],
@@ -70,16 +70,16 @@
         listTopPara: `A term loan where you pledge your property as collateral to get a lump sum loan amount, which is repaid in fixed EMIs over a tenure.`,
         list: [
           {
-            heading: `Lump Sum Disbursal:  <span class="font-Paragraph">The entire loan amount is given at once.</span>`,
+            heading: `Lump Sum Disbursal:  <span class="typography-body-md">The entire loan amount is given at once.</span>`,
           },
           {
-            heading: `Fixed EMI Payments:  <span class="font-Paragraph">You repay the loan in monthly EMIs over a fixed tenure.Longer Tenure: Typically 10-20 years.</span>`,
+            heading: `Fixed EMI Payments:  <span class="typography-body-md">You repay the loan in monthly EMIs over a fixed tenure.Longer Tenure: Typically 10-20 years.</span>`,
           },
           {
-            heading: `Longer Tenure: <span class="font-Paragraph">Typically 10-20 years.</span>`,
+            heading: `Longer Tenure: <span class="typography-body-md">Typically 10-20 years.</span>`,
           },
           {
-            heading: `Fixed or Floating Interest Rate:<span class="font-Paragraph">Interest can be fixed or linked to market rates.</span>`,
+            heading: `Fixed or Floating Interest Rate:<span class="typography-body-md">Interest can be fixed or linked to market rates.</span>`,
           },
         ],
         listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><strong>💡Use case : </strong>Ideal for long-term financial needs like business expansion, medical expenses, or home renovation.</p>`,
@@ -92,18 +92,18 @@
         listTopPara: `A flexible overdraft facility where you can withdraw funds as needed up to a sanctioned limit, and the limit reduces over time.`,
         list: [
           {
-            heading: `Overdraft Facility: <span class="font-Paragraph">You can withdraw money as per your requirement instead of taking a lump sum.</span>`,
+            heading: `Overdraft Facility: <span class="typography-body-md">You can withdraw money as per your requirement instead of taking a lump sum.</span>`,
           },
           {
-            heading: `Interest on Used Amount:  <span class="font-Paragraph">You pay interest only on the amount utilized and not on the full sanctioned limit.</span>`,
-          },
-
-          {
-            heading: `Limit Reduction:  <span class="font-Paragraph">The sanctioned limit reduces at regular intervals (monthly or quarterly).</span>`,
+            heading: `Interest on Used Amount:  <span class="typography-body-md">You pay interest only on the amount utilized and not on the full sanctioned limit.</span>`,
           },
 
           {
-            heading: `Flexible Repayment:   <span class="font-Paragraph">No fixed EMIs; you can repay as per your cash flow.</span>`,
+            heading: `Limit Reduction:  <span class="typography-body-md">The sanctioned limit reduces at regular intervals (monthly or quarterly).</span>`,
+          },
+
+          {
+            heading: `Flexible Repayment:   <span class="typography-body-md">No fixed EMIs; you can repay as per your cash flow.</span>`,
           },
         ],
         listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><Strong>💡Use case :</Strong> Best for businesses needing working capital or individuals with fluctuating cash flow needs</p>`,
@@ -115,7 +115,7 @@
     >
       <div class="">
         <h2
-          class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+          class="grid mb-[4rem] typography-h2 text-text-main text-center"
         >
           LAP vs DOD
           <span
@@ -139,11 +139,11 @@
     >
       <ul class="list-disc pl-4">
         <li class="">
-          <span class="font-FourthHead">Choose LAP </span> if you need a large sum
+          <span class="font-semibold">Choose LAP </span> if you need a large sum
           upfront and prefer structured repayments.
         </li>
         <li class="">
-          <span class="font-FourthHead">Choose DOD </span> if you need flexibility
+          <span class="font-semibold">Choose DOD </span> if you need flexibility
           in withdrawals and want to save on interest by paying only for what you
           use.
         </li>

@@ -47,7 +47,7 @@
           <a
             class:text-linkColor={facility.link !== ""}
             class:text-dangerColor={facility.link == ""}
-            class="font-Paragraph text-subParaFont underline underline-offset-4 hover:no-underline text-linkColor"
+            class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline text-linkColor"
             href={facility.link}>{facility.linkText}</a
           >
         {/if}
@@ -61,7 +61,7 @@
                     href={item.url}
                     class:text-linkColor={item.url !== ""}
                     class:text-dangerColor={item.url == ""}
-                    class="font-Paragraph text-subParaFont underline underline-offset-4 hover:no-underline text-linkColor"
+                    class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline text-linkColor"
                     >{item.linkName}</a
                   >
                 </li>
@@ -76,7 +76,7 @@
 
         {#if facility.subTick}
           {#each facility.subTick as item}
-            <ul class=" space-y-4">
+            <ul class="space-y-4">
               <li class="flex items-start gap-2">
                 <svg
                   class="w-5 h-5 text-black flex-shrink-0 dark:text-white"

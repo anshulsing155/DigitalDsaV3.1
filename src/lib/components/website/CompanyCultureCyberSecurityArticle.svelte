@@ -273,11 +273,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {storyData.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             {@html storyData.para}
           </p>
         </div>
@@ -286,11 +286,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {everyone.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             {@html everyone.para}
           </p>
         </div>
@@ -299,11 +299,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {example.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             {@html example.para}
           </p>
         </div>
@@ -315,23 +315,23 @@ So, as you sip your next cup of chai at work, remember: You might just be
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               {fun.heading}
             </h2>
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-sm text-text-light">
               {@html fun.firstPara}
             </p>
           </div>
           <ul class="space-y-6">
             {#each fun.listItems as list}
               <li class="space-y-2">
-                <h3 class="font-FourthHead text-paraFont">{list.heading}</h3>
-                <p class="font-Paragraph text-minParaFont">{@html list.desc}</p>
+                <h3 class="font-semibold typography-body-md">{list.heading}</h3>
+                <p class="typography-body-sm text-text-light">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             {@html fun.secPara}
           </p>
         </div>
@@ -342,11 +342,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {empowerment.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             {@html empowerment.para}
           </p>
         </div>
@@ -355,11 +355,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {investing.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             {@html investing.para}
           </p>
         </div>
@@ -370,11 +370,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {team.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             {@html team.para}
           </p>
         </div>
@@ -383,11 +383,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {final.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             {@html final.para}
           </p>
         </div>
@@ -396,10 +396,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -407,7 +404,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -418,11 +415,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {storyData.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html storyData.para}
                 </p>
               </div>
@@ -431,11 +428,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {everyone.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html everyone.para}
                 </p>
               </div>
@@ -444,11 +441,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {example.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html example.para}
                 </p>
               </div>
@@ -460,27 +457,27 @@ So, as you sip your next cup of chai at work, remember: You might just be
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     {fun.heading}
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-sm text-text-light">
                     {@html fun.firstPara}
                   </p>
                 </div>
                 <ul class="space-y-6">
                   {#each fun.listItems as list}
                     <li class="space-y-2">
-                      <h3 class="font-FourthHead text-paraFont">
+                      <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-sm text-text-light">
                         {@html list.desc}
                       </p>
                     </li>
                   {/each}
                 </ul>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html fun.secPara}
                 </p>
               </div>
@@ -491,11 +488,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {empowerment.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html empowerment.para}
                 </p>
               </div>
@@ -504,11 +501,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {investing.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html investing.para}
                 </p>
               </div>
@@ -519,11 +516,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {team.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html team.para}
                 </p>
               </div>
@@ -532,11 +529,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {final.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html final.para}
                 </p>
               </div>
@@ -587,10 +584,10 @@ So, as you sip your next cup of chai at work, remember: You might just be
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

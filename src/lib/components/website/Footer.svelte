@@ -82,13 +82,13 @@
         {#each footerList as section}
           {#each Object.entries(section) as [title, items]}
             <div>
-              <h3 class="mb-4 font-FourthHead text-subParaFont lg:text-paraFont text-black dark:text-white">{title}</h3>
+              <h3 class="mb-4 font-semibold typography-body-md lg:typography-body-md text-black dark:text-white">{title}</h3>
               <ul>
                 {#each items as item}
                     <a
                     href={item.link}
                     target={item.link.includes("http") ? "_blank" : "_self"}
-                    class="text-black dark:text-white mb-2 font-Paragraph text-minParaFont md:text-subParaFont underline-offset-4 hover:underline flex gap-2 items-center"
+                    class="text-black dark:text-white mb-2 typography-body-sm text-text-light md:typography-body-md underline-offset-4 hover:underline flex gap-2 items-center"
                     >{#if item.icon}
                       <img
                         src={item.icon}
@@ -107,7 +107,7 @@
       <div class="h-[1px] w-full bg-dividerColor"></div>
 
       <div
-        class="flex flex-col gap-2 py-4 text-center justify-center items-center px-[1rem] font-SubPara text-minParaFont lg:px-[4rem] text-[var(--form-text-secondary)]"
+        class="flex flex-col gap-2 py-4 text-center justify-center items-center px-[1rem] typography-body-sm lg:px-[4rem] text-[var(--form-text-secondary)]"
       >
         <p>
           Digital DSA is a platform fully owned and operated by E YANTRIK, a

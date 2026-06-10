@@ -251,15 +251,15 @@ dispatch("pageData", pageData);
           <div slot="list">
             <ul class="list-decimal pl-5 space-y-5">
               {#each callerIdServices as item}
-                <li class="font-FourthHead text-miniSubHead space-y-2">
+                <li class="font-semibold text-miniSubHead space-y-2">
                   <h3>{item.heading}</h3>
                   {#each Object.entries(item) as [key, value], i}
                     {#if key != "heading"}
                       <ul
-                        class="list-disc pl-4 font-Paragraph text-subParaFont space-y-3"
+                        class="list-disc pl-4 typography-body-md text-text-light space-y-3"
                       >
                         <li>
-                          <span class="font-FourthHead">
+                          <span class="font-semibold">
                             {key} :
                           </span>{value}
                         </li>
@@ -282,24 +282,24 @@ dispatch("pageData", pageData);
                 title:
                   "Tips for Creating a Strong Password for Online Banking & Digital Accounts ",
                 para: `<ul class="list-disc pl-4">
-  <li><span class="font-FourthHead"> Use a mix</span> of letters, numbers, and symbols to increase security. </li>
-  <li> <span class="font-FourthHead">Make it as long as possible</span>—longer passwords are harder to crack. </li>
-  <li> <span class="font-FourthHead">Avoid easily guessable details</span>, such as your name, birthdate, or common phrases. </li>
-  <li>  <span class="font-FourthHead">Consider using a passphrase</span>—instead of a random string, create a memorable phrase that tells a story.</li>
+  <li><span class="font-semibold"> Use a mix</span> of letters, numbers, and symbols to increase security. </li>
+  <li> <span class="font-semibold">Make it as long as possible</span>—longer passwords are harder to crack. </li>
+  <li> <span class="font-semibold">Avoid easily guessable details</span>, such as your name, birthdate, or common phrases. </li>
+  <li>  <span class="font-semibold">Consider using a passphrase</span>—instead of a random string, create a memorable phrase that tells a story.</li>
    </ul>
   
-<span class="font-FourthHead">For example: </span> 
+<span class="font-semibold">For example: </span> 
 "MyD0gL0v3sCh@seC@ts!" (It’s fun, unique, and hard to guess!)
 `,
               },
               {
                 title: "Password Security: Keep Your Accounts Safe",
                 para: `<ul class="list-disc pl-5">
-<li><span class="font-FourthHead">Never share your passwords</span> with anyone, including bank representatives.</li>
-<li><span class="font-FourthHead">Avoid writing passwords down</span>—store them securely using a password manager if needed.</li>
-<li><span class="font-FourthHead">Use unique passwords</span> for each account; reusing passwords increases the risk of multiple accounts being compromised in a data breach.</li>
-<li><span class="font-FourthHead">Consider passphrases</span> if managing complex passwords becomes difficult. A memorable phrase with numbers and symbols is both secure and easy to recall.</li>
-<li><span class="font-FourthHead">Enable multi-factor authentication (MFA)</span> wherever possible. This adds an extra layer of security, such as an OTP from an authenticator app on your phone.</li>
+<li><span class="font-semibold">Never share your passwords</span> with anyone, including bank representatives.</li>
+<li><span class="font-semibold">Avoid writing passwords down</span>—store them securely using a password manager if needed.</li>
+<li><span class="font-semibold">Use unique passwords</span> for each account; reusing passwords increases the risk of multiple accounts being compromised in a data breach.</li>
+<li><span class="font-semibold">Consider passphrases</span> if managing complex passwords becomes difficult. A memorable phrase with numbers and symbols is both secure and easy to recall.</li>
+<li><span class="font-semibold">Enable multi-factor authentication (MFA)</span> wherever possible. This adds an extra layer of security, such as an OTP from an authenticator app on your phone.</li>
 </ul>
 `,
               },
@@ -313,10 +313,7 @@ dispatch("pageData", pageData);
     <div class="lg:hidden block">
       {#each ["Multi-Factor authentication", " Caller ID check", "Options with telecom companies", "Password securing"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -324,7 +321,7 @@ dispatch("pageData", pageData);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -344,7 +341,7 @@ dispatch("pageData", pageData);
               />
             </div>
           {:else if index == 1}
-            <div class=" bg-white text-black" id="caller">
+            <div class="bg-white text-black" id="caller">
               <ThingsYouShould
                 thinkKnow={{
                   heading: "Caller ID and spam protection",
@@ -366,15 +363,15 @@ dispatch("pageData", pageData);
                 <div slot="list">
                   <ul class="list-decimal pl-5 space-y-5">
                     {#each callerIdServices as item}
-                      <li class="font-FourthHead text-miniSubHead space-y-2">
+                      <li class="font-semibold text-miniSubHead space-y-2">
                         <h3>{item.heading}</h3>
                         {#each Object.entries(item) as [key, value], i}
                           {#if key != "heading"}
                             <ul
-                              class="list-disc pl-4 font-Paragraph text-subParaFont space-y-3"
+                              class="list-disc pl-4 typography-body-md text-text-light space-y-3"
                             >
                               <li>
-                                <span class="font-FourthHead">
+                                <span class="font-semibold">
                                   {key} :
                                 </span>{value}
                               </li>
@@ -397,24 +394,24 @@ dispatch("pageData", pageData);
                       title:
                         "Tips for Creating a Strong Password for Online Banking & Digital Accounts ",
                       para: `<ul class="list-disc pl-4">
-  <li><span class="font-FourthHead"> Use a mix</span> of letters, numbers, and symbols to increase security. </li>
-  <li> <span class="font-FourthHead">Make it as long as possible</span>—longer passwords are harder to crack. </li>
-  <li> <span class="font-FourthHead">Avoid easily guessable details</span>, such as your name, birthdate, or common phrases. </li>
-  <li>  <span class="font-FourthHead">Consider using a passphrase</span>—instead of a random string, create a memorable phrase that tells a story.</li>
+  <li><span class="font-semibold"> Use a mix</span> of letters, numbers, and symbols to increase security. </li>
+  <li> <span class="font-semibold">Make it as long as possible</span>—longer passwords are harder to crack. </li>
+  <li> <span class="font-semibold">Avoid easily guessable details</span>, such as your name, birthdate, or common phrases. </li>
+  <li>  <span class="font-semibold">Consider using a passphrase</span>—instead of a random string, create a memorable phrase that tells a story.</li>
    </ul>
         
-      <span class="font-FourthHead">For example: </span> 
+      <span class="font-semibold">For example: </span> 
       "MyD0gL0v3sCh@seC@ts!" (It’s fun, unique, and hard to guess!)
       `,
                     },
                     {
                       title: "Password Security: Keep Your Accounts Safe",
                       para: `<ul class="list-disc pl-5">
-      <li><span class="font-FourthHead">Never share your passwords</span> with anyone, including bank representatives.</li>
-      <li><span class="font-FourthHead">Avoid writing passwords down</span>—store them securely using a password manager if needed.</li>
-      <li><span class="font-FourthHead">Use unique passwords</span> for each account; reusing passwords increases the risk of multiple accounts being compromised in a data breach.</li>
-      <li><span class="font-FourthHead">Consider passphrases</span> if managing complex passwords becomes difficult. A memorable phrase with numbers and symbols is both secure and easy to recall.</li>
-      <li><span class="font-FourthHead">Enable multi-factor authentication (MFA)</span> wherever possible. This adds an extra layer of security, such as an OTP from an authenticator app on your phone.</li>
+      <li><span class="font-semibold">Never share your passwords</span> with anyone, including bank representatives.</li>
+      <li><span class="font-semibold">Avoid writing passwords down</span>—store them securely using a password manager if needed.</li>
+      <li><span class="font-semibold">Use unique passwords</span> for each account; reusing passwords increases the risk of multiple accounts being compromised in a data breach.</li>
+      <li><span class="font-semibold">Consider passphrases</span> if managing complex passwords becomes difficult. A memorable phrase with numbers and symbols is both secure and easy to recall.</li>
+      <li><span class="font-semibold">Enable multi-factor authentication (MFA)</span> wherever possible. This adds an extra layer of security, such as an OTP from an authenticator app on your phone.</li>
       </ul>
       `,
                     },
@@ -488,10 +485,10 @@ dispatch("pageData", pageData);
         thinkKnow={{
           heading: "Things you should know",
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

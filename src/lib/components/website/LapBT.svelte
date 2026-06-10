@@ -66,10 +66,10 @@ link: "/contact",
   let thinkKnow = {
     heading: "Things you should know",
     paraGraph: [
-`<span class="font-FourthHead"> Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-`<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-`<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-`<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+`<span class="font-semibold"> Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+`<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+`<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+`<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
 ,
     ],
   };
@@ -161,7 +161,7 @@ window.removeEventListener("scroll", handleScroll);
       coverImage: "/images/lap-bt-blog.jpg",
       coverAlt: "hero-cover",
       heading: "LAP Balance Transfer Made Easy",
-      para: `<span class="font-FourthHead">Switch, Save & Gain!</span> Get lower interest rates, better repayment options, and increased loan eligibility with our hassle-free LAP balance transfer services.`,
+      para: `<span class="font-semibold">Switch, Save & Gain!</span> Get lower interest rates, better repayment options, and increased loan eligibility with our hassle-free LAP balance transfer services.`,
 
       actionBtns: [
         {
@@ -228,11 +228,11 @@ window.removeEventListener("scroll", handleScroll);
                 id: "1",
                 title: "Key Benefits:<br>",
                 para: `<ul class="list-disc flex flex-col gap-2 pl-4">
-          <li>Lower interest rates <span class="font-FourthHead">(9% to 12% p.a.)</span>, reducing your EMIs.</li>
-          <li>Access a <span class="font-FourthHead">Top-Up Loan</span> for personal or business needs.</li>
+          <li>Lower interest rates <span class="font-semibold">(9% to 12% p.a.)</span>, reducing your EMIs.</li>
+          <li>Access a <span class="font-semibold">Top-Up Loan</span> for personal or business needs.</li>
           <li>Save significantly on total interest costs.</li>
           <li>Flexible repayment options to shorten loan tenure.</li>
-          <li>Enjoy better terms: <span class="font-FourthHead">prepayment flexibility</span> & zero hidden fees.</li>
+          <li>Enjoy better terms: <span class="font-semibold">prepayment flexibility</span> & zero hidden fees.</li>
         </ul>`,
               },
 
@@ -240,11 +240,11 @@ window.removeEventListener("scroll", handleScroll);
                 id: "2",
                 title: "Important Considerations:<br>",
                 para: `<ul class="list-disc flex flex-col gap-2 pl-4">
-          <li>Balance transfer includes a <span class="font-FourthHead">processing fee</span> charged by the new lender.</li>
-          <li>Delays in the process may lead to <span class="font-FourthHead">penalties</span> from the existing lender.</li>
-          <li>Incorrect or incomplete documents can result in <span class="font-FourthHead">application rejection</span>.</li>
+          <li>Balance transfer includes a <span class="font-semibold">processing fee</span> charged by the new lender.</li>
+          <li>Delays in the process may lead to <span class="font-semibold">penalties</span> from the existing lender.</li>
+          <li>Incorrect or incomplete documents can result in <span class="font-semibold">application rejection</span>.</li>
           <li>Prepayment charges may apply if closing the current loan early.</li>
-          <li>New lenders with floating rates may cause <span class="font-FourthHead">EMI fluctuations</span>.</li>
+          <li>New lenders with floating rates may cause <span class="font-semibold">EMI fluctuations</span>.</li>
         </ul>`,
               },
             ],
@@ -273,9 +273,9 @@ window.removeEventListener("scroll", handleScroll);
             reverse: true,
           }}
         >
-          <div class="font-Paragraph text-minParaFont">
+          <div class="typography-body-sm text-text-light">
             <ul
-              class="list-disc space-y-4 font-Paragraph text-subParaFont"
+              class="list-disc space-y-4 typography-body-md text-text-light"
             >
               <li class="flex items-start gap-2">
                 <img
@@ -284,11 +284,11 @@ window.removeEventListener("scroll", handleScroll);
                   class="h-5 mt-1"
                 />
                 <p>
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Compare Top Bank/NBFC Offers :
                   </span>
                   Find the
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >best interest rates and flexible tenure</span
                   > for your LAP balance transfer.
                 </p>
@@ -300,11 +300,11 @@ window.removeEventListener("scroll", handleScroll);
                   class="h-5 mt-1"
                 />
                 <p>
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >100% Transparent & Zero Spam :
                   </span>
                   No hidden charges,
-                  <span class="font-FourthHead">no spam calls - </span>your
+                  <span class="font-semibold">no spam calls - </span>your
                   privacy is protected.
                 </p>
               </li>
@@ -315,11 +315,11 @@ window.removeEventListener("scroll", handleScroll);
                   class="h-5 mt-1"
                 />
                 <p>
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Powerful Tools & Calculators :
                   </span>
                   Check
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >EMI affordability, eligibility, and savings</span
                   > instantly.
                 </p>
@@ -331,11 +331,11 @@ window.removeEventListener("scroll", handleScroll);
                   class="h-5 mt-1"
                 />
                 <p>
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Exclusive Cashback & Discounts :
                   </span>
                   Get special benefits
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >when you apply through Digital DSA</span
                   >.
                 </p>
@@ -347,10 +347,10 @@ window.removeEventListener("scroll", handleScroll);
                   class="h-5 mt-1"
                 />
                 <p>
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Doorstep Document Pickup :
                   </span>
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Hassle-free processing -
                   </span>we collect and verify documents at your convenience.
                 </p>
@@ -398,7 +398,7 @@ window.removeEventListener("scroll", handleScroll);
           <ul class="list-disc flex flex-col gap-2 pl-4">
             <li>Failure to repay a Loan Against Property can risk property loss, but with smart planning and our expert tools, you can ensure safe and manageable repayments.</li>
             <li>Since the property needs to be appraised and verified, the approval process might take longer compared to unsecured loans.</li>
-            <li>If not planned carefully, EMIs can affect monthly finances, especially during financial stress. In such cases, you can opt for an <span class="font-FourthHead">Overdraft facility</span> if you are unsure about immediate usage of the entire funds.</li>
+            <li>If not planned carefully, EMIs can affect monthly finances, especially during financial stress. In such cases, you can opt for an <span class="font-semibold">Overdraft facility</span> if you are unsure about immediate usage of the entire funds.</li>
           </ul>
         `,
               },
@@ -408,8 +408,8 @@ window.removeEventListener("scroll", handleScroll);
                 para: `
           When you reach out for support, we’ll work with you to understand your situation and determine the best way to assist you. To help us do that, we may ask for:
           <ul class="list-disc flex flex-col gap-2 pl-4">
-            <li><span class="font-FourthHead">Information</span> about your profession, income, and expenses.</li>
-            <li><span class="font-FourthHead">Documents</span> to support your income and property ownership.</li>
+            <li><span class="font-semibold">Information</span> about your profession, income, and expenses.</li>
+            <li><span class="font-semibold">Documents</span> to support your income and property ownership.</li>
           </ul>
           <br />
         
@@ -458,10 +458,7 @@ window.removeEventListener("scroll", handleScroll);
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -469,7 +466,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -486,11 +483,11 @@ window.removeEventListener("scroll", handleScroll);
                       id: "1",
                       title: "Key Benefits:<br>",
                       para: `<ul class="list-disc flex flex-col gap-2 pl-4">
-          <li>Lower interest rates <span class="font-FourthHead">(9% to 12% p.a.)</span>, reducing your EMIs.</li>
-          <li>Access a <span class="font-FourthHead">Top-Up Loan</span> for personal or business needs.</li>
+          <li>Lower interest rates <span class="font-semibold">(9% to 12% p.a.)</span>, reducing your EMIs.</li>
+          <li>Access a <span class="font-semibold">Top-Up Loan</span> for personal or business needs.</li>
           <li>Save significantly on total interest costs.</li>
           <li>Flexible repayment options to shorten loan tenure.</li>
-          <li>Enjoy better terms: <span class="font-FourthHead">prepayment flexibility</span> & zero hidden fees.</li>
+          <li>Enjoy better terms: <span class="font-semibold">prepayment flexibility</span> & zero hidden fees.</li>
         </ul>`,
                     },
 
@@ -498,11 +495,11 @@ window.removeEventListener("scroll", handleScroll);
                       id: "2",
                       title: "Important Considerations:<br>",
                       para: `<ul class="list-disc flex flex-col gap-2 pl-4">
-          <li>Balance transfer includes a <span class="font-FourthHead">processing fee</span> charged by the new lender.</li>
-          <li>Delays in the process may lead to <span class="font-FourthHead">penalties</span> from the existing lender.</li>
-          <li>Incorrect or incomplete documents can result in <span class="font-FourthHead">application rejection</span>.</li>
+          <li>Balance transfer includes a <span class="font-semibold">processing fee</span> charged by the new lender.</li>
+          <li>Delays in the process may lead to <span class="font-semibold">penalties</span> from the existing lender.</li>
+          <li>Incorrect or incomplete documents can result in <span class="font-semibold">application rejection</span>.</li>
           <li>Prepayment charges may apply if closing the current loan early.</li>
-          <li>New lenders with floating rates may cause <span class="font-FourthHead">EMI fluctuations</span>.</li>
+          <li>New lenders with floating rates may cause <span class="font-semibold">EMI fluctuations</span>.</li>
         </ul>`,
                     },
                   ],
@@ -531,9 +528,9 @@ window.removeEventListener("scroll", handleScroll);
                   reverse: true,
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <ul
-                    class="list-disc font-Paragraph text-subParaFont"
+                    class="list-disc typography-body-md text-text-light"
                   >
                     <li class="flex items-start gap-2">
                       <img
@@ -542,11 +539,11 @@ window.removeEventListener("scroll", handleScroll);
                         class="h-5 mt-1"
                       />
                       <p>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Compare Top Bank/NBFC Offers :
                         </span>
                         Find the
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >best interest rates and flexible tenure</span
                         > for your LAP balance transfer.
                       </p>
@@ -558,11 +555,11 @@ window.removeEventListener("scroll", handleScroll);
                         class="h-5 mt-1"
                       />
                       <p>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >100% Transparent & Zero Spam :
                         </span>
                         No hidden charges,
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >no spam calls -
                         </span>your privacy is protected.
                       </p>
@@ -574,11 +571,11 @@ window.removeEventListener("scroll", handleScroll);
                         class="h-5 mt-1"
                       />
                       <p>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Powerful Tools & Calculators :
                         </span>
                         Check
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >EMI affordability, eligibility, and savings</span
                         > instantly.
                       </p>
@@ -590,11 +587,11 @@ window.removeEventListener("scroll", handleScroll);
                         class="h-5 mt-1"
                       />
                       <p>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Exclusive Cashback & Discounts :
                         </span>
                         Get special benefits
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >when you apply through Digital DSA</span
                         >.
                       </p>
@@ -606,10 +603,10 @@ window.removeEventListener("scroll", handleScroll);
                         class="h-5 mt-1"
                       />
                       <p>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Doorstep Document Pickup :
                         </span>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Hassle-free processing -
                         </span>we collect and verify documents at your
                         convenience.
@@ -623,11 +620,11 @@ window.removeEventListener("scroll", handleScroll);
                 thinkKnow={{
                   heading: "Documents required",
                   paraGraph: [
-                    `<span class=font-FourthHead>Identity Proof:</span> Aadhaar, PAN, Passport.`,
-                    `<span class=font-FourthHead>Address Proof:</span> Aadhaar, Passport, Utility Bills.`,
-                    `<span class=font-FourthHead>Income Proof:</span> Salary Slips, Bank Statement, ITR, Audited financials.`,
-                    `<span class=font-FourthHead>Property Documents:</span> Title Deeds, Property Chain documents.`,
-                    `<span class=font-FourthHead>Foreclosure Letter:</span> List of original document (LOD) and Foreclosure Letter from Current Lender.`,
+                    `<span class=font-semibold>Identity Proof:</span> Aadhaar, PAN, Passport.`,
+                    `<span class=font-semibold>Address Proof:</span> Aadhaar, Passport, Utility Bills.`,
+                    `<span class=font-semibold>Income Proof:</span> Salary Slips, Bank Statement, ITR, Audited financials.`,
+                    `<span class=font-semibold>Property Documents:</span> Title Deeds, Property Chain documents.`,
+                    `<span class=font-semibold>Foreclosure Letter:</span> List of original document (LOD) and Foreclosure Letter from Current Lender.`,
                   ],
                 }}
                 disc="list-disc"
@@ -657,7 +654,7 @@ window.removeEventListener("scroll", handleScroll);
           <ul class="list-disc flex flex-col gap-2 pl-4">
             <li>Failure to repay a Loan Against Property can risk property loss, but with smart planning and our expert tools, you can ensure safe and manageable repayments.</li>
             <li>Since the property needs to be appraised and verified, the approval process might take longer compared to unsecured loans.</li>
-            <li>If not planned carefully, EMIs can affect monthly finances, especially during financial stress. In such cases, you can opt for an <span class="font-FourthHead">Overdraft facility</span> if you are unsure about immediate usage of the entire funds.</li>
+            <li>If not planned carefully, EMIs can affect monthly finances, especially during financial stress. In such cases, you can opt for an <span class="font-semibold">Overdraft facility</span> if you are unsure about immediate usage of the entire funds.</li>
           </ul>
         `,
               },
@@ -667,8 +664,8 @@ window.removeEventListener("scroll", handleScroll);
                 para: `
           When you reach out for support, we’ll work with you to understand your situation and determine the best way to assist you. To help us do that, we may ask for:
           <ul class="list-disc flex flex-col gap-2 pl-4">
-            <li><span class="font-FourthHead">Information</span> about your profession, income, and expenses.</li>
-            <li><span class="font-FourthHead">Documents</span> to support your income and property ownership.</li>
+            <li><span class="font-semibold">Information</span> about your profession, income, and expenses.</li>
+            <li><span class="font-semibold">Documents</span> to support your income and property ownership.</li>
           </ul>
           <br />
         
@@ -762,11 +759,11 @@ window.removeEventListener("scroll", handleScroll);
         thinkKnow={{
           heading: "Things You Should Know About LAP Balance Transfer",
           paraGraph: [
-            `<span class="font-FourthHead">Independent Service Provider:</span> DigitalDSA is a loan facilitation platform connecting users with banks and NBFCs for LAP balance transfers. We do not provide loans directly or influence approval decisions.`,
-            `<span class="font-FourthHead">Approval & Eligibility:</span> Loan transfer approvals are subject to the policies of the respective banks or NBFCs. DigitalDSA does not guarantee approval or specific interest rates. All applications undergo credit assessment and eligibility checks.`,
-            `<span class="font-FourthHead">Processing & Charges:</span> LAP balance transfers may involve processing fees, foreclosure charges, valuation costs, and other associated expenses. Ensure you review these costs before proceeding.`,
-            `<span class="font-FourthHead">Liability Disclaimer:</span> DigitalDSA is not responsible for any delays, rejections, or additional costs incurred during the LAP transfer process. The final decision rests with the financial institution.`,
-            `<span class="font-FourthHead">Make an Informed Decision:</span> Before transferring your LAP, evaluate the new loan terms, repayment structure, and total cost savings to ensure it benefits your financial situation.`,
+            `<span class="font-semibold">Independent Service Provider:</span> DigitalDSA is a loan facilitation platform connecting users with banks and NBFCs for LAP balance transfers. We do not provide loans directly or influence approval decisions.`,
+            `<span class="font-semibold">Approval & Eligibility:</span> Loan transfer approvals are subject to the policies of the respective banks or NBFCs. DigitalDSA does not guarantee approval or specific interest rates. All applications undergo credit assessment and eligibility checks.`,
+            `<span class="font-semibold">Processing & Charges:</span> LAP balance transfers may involve processing fees, foreclosure charges, valuation costs, and other associated expenses. Ensure you review these costs before proceeding.`,
+            `<span class="font-semibold">Liability Disclaimer:</span> DigitalDSA is not responsible for any delays, rejections, or additional costs incurred during the LAP transfer process. The final decision rests with the financial institution.`,
+            `<span class="font-semibold">Make an Informed Decision:</span> Before transferring your LAP, evaluate the new loan terms, repayment structure, and total cost savings to ensure it benefits your financial situation.`,
           ],
         }}
         disc="list-decimal"

@@ -403,8 +403,8 @@ window.removeEventListener("scroll", handleScroll);
           contents={{
             heading: "What is Budgeting ?",
             secPara: `Budgeting looks different for everyone, depending on individual needs and priorities.<br><br> Our research 
-              shows that taking the time to create and follow a budget can significantly improve your <a  class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/financial-wellbeing"> financial well-being</a>. 
-              <br><br>Already confident in budgeting but need help with the numbers? <br> Check out our <a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/planners/budget-planner"> Budget Planner</a>. <br>
+              shows that taking the time to create and follow a budget can significantly improve your <a  class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/financial-wellbeing"> financial well-being</a>. 
+              <br><br>Already confident in budgeting but need help with the numbers? <br> Check out our <a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/planners/budget-planner"> Budget Planner</a>. <br>
               If you're just getting started and need some practical tips, keep reading!`,
           }}
         />
@@ -454,14 +454,14 @@ window.removeEventListener("scroll", handleScroll);
             reverse: true,
           }}
         >
-          <p class="font-Paragraph text-subParaFont">
+          <p class="typography-body-md text-text-light">
             Income isn’t just your salary—it includes any sources of money you
             regularly receive. This could be freelance earnings, interest from
             savings, or investments, side gigs, or even alimony.
           </p>
 
           <div class="flex flex-col gap-2">
-            <p class="font-FourthHead">Tips:</p>
+            <p class="font-semibold">Tips:</p>
 
             <li>List all your income sources.</li>
             <li>Use apps or simple spreadsheets to track it each month.</li>
@@ -475,20 +475,20 @@ window.removeEventListener("scroll", handleScroll);
             cardHeading: "Categorizing Your Expenses",
           }}
         >
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             Expenses are typically broken down into:<br /><br />
-            <span class="font-FourthHead">Fixed Expenses:</span> Bills you pay
+            <span class="font-semibold">Fixed Expenses:</span> Bills you pay
             monthly, like rent, utilities, loans, and subscriptions.<br />
-            <span class="font-FourthHead">Variable Expenses:</span> Costs that
+            <span class="font-semibold">Variable Expenses:</span> Costs that
             can fluctuate month-to-month, like groceries, entertainment, and
             shopping.<br />
-            <span class="font-FourthHead">Discretionary Expenses:</span>
+            <span class="font-semibold">Discretionary Expenses:</span>
             Non-essential spending, like dining out, hobbies, and vacations.<br
             />
           </p>
 
           <div class="flex flex-col gap-2">
-            <p class="font-FourthHead">Tips:</p>
+            <p class="font-semibold">Tips:</p>
             <li>
               Use budgeting apps that automatically categorize your expenses.
             </li>
@@ -510,16 +510,16 @@ window.removeEventListener("scroll", handleScroll);
                 heading: "Plan SMART goals",
                 para: `<ul class="list-disc flex flex-col gap-2 list-inside">
         
-        <li><span class="font-FourthHead">S</span>pecific, <li><span class="font-FourthHead">M</span>easurable, <li><span class="font-FourthHead">A</span>chievable, <li><span class="font-FourthHead">R</span>ealistic, and <li><span class="font-FourthHead">T</span>ime-bound goals help you stay on track.
-        <br><br> You may set a <span class="font-FourthHead">SMART</span> goal like:<br>
+        <li><span class="font-semibold">S</span>pecific, <li><span class="font-semibold">M</span>easurable, <li><span class="font-semibold">A</span>chievable, <li><span class="font-semibold">R</span>ealistic, and <li><span class="font-semibold">T</span>ime-bound goals help you stay on track.
+        <br><br> You may set a <span class="font-semibold">SMART</span> goal like:<br>
 
         "Save ₹5,000 per month for the next 6 months for my emergency fund."`,
               },
               {
                 heading: "Prioritize your Goals",
-                para: `It’s important to differentiate between <span class="font-FourthHead"> short-term</span> goals (1 year or less) and <span class="font-FourthHead">long-term</span> goals (3-5 years or more).
+                para: `It’s important to differentiate between <span class="font-semibold"> short-term</span> goals (1 year or less) and <span class="font-semibold">long-term</span> goals (3-5 years or more).
         <br><br>
-          <span class="font-FourthHead">Tips:</span>
+          <span class="font-semibold">Tips:</span>
          
           <li>List your goals, then prioritize them based on urgency and importance.</li>
           <li>Create a timeline for achieving each goal.</li>`,
@@ -541,18 +541,18 @@ window.removeEventListener("scroll", handleScroll);
                 heading: "How to Categorize Your Expenses",
                 para: `
         
-        <li><span class="font-FourthHead">Essentials:</span>Rent, bills, groceries, transportation. 
-        <li><span class="font-FourthHead">Non-Essentials:</span>Dining out, shopping, entertainment. 
-        <li><span class="font-FourthHead">Savings & Investments:</span>Emergency funds, retirement savings, mutual funds.
+        <li><span class="font-semibold">Essentials:</span>Rent, bills, groceries, transportation. 
+        <li><span class="font-semibold">Non-Essentials:</span>Dining out, shopping, entertainment. 
+        <li><span class="font-semibold">Savings & Investments:</span>Emergency funds, retirement savings, mutual funds.
                 `,
               },
               {
                 heading: "Benefits of Categorization",
                 para: `
         
-        <li><span class="font-FourthHead">Tracking:</span>It becomes easier to see where your money goes. 
-        <li><span class="font-FourthHead">Cut Back:</span>: You can identify areas where you’re overspending and make adjustments.
-        <li><span class="font-FourthHead">Flexibility:</span>Reassign funds to essential categories if needed, especially during uncertain times.
+        <li><span class="font-semibold">Tracking:</span>It becomes easier to see where your money goes. 
+        <li><span class="font-semibold">Cut Back:</span>: You can identify areas where you’re overspending and make adjustments.
+        <li><span class="font-semibold">Flexibility:</span>Reassign funds to essential categories if needed, especially during uncertain times.
                 `,
               },
             ],
@@ -578,19 +578,19 @@ window.removeEventListener("scroll", handleScroll);
               </p>
               <ul class="list-disc pl-4">
                 <li>
-                  <span class="font-FourthHead">50%</span> for Essential Expenses
+                  <span class="font-semibold">50%</span> for Essential Expenses
                   (rent, bills, groceries)
                 </li>
                 <li>
-                  <span class="font-FourthHead">30%</span> for Lifestyle Costs (entertainment,
+                  <span class="font-semibold">30%</span> for Lifestyle Costs (entertainment,
                   dining out, shopping)
                 </li>
                 <li>
-                  <span class="font-FourthHead">20%</span> for Savings (emergency
+                  <span class="font-semibold">20%</span> for Savings (emergency
                   fund, retirement fund, investment)
                 </li>
               </ul>
-              <p class="font-ThirdHead">Why It Works:</p>
+              <p class="typography-h3 font-semibold">Why It Works:</p>
               <ul class="list-disc pl-4">
                 <li>
                   It’s simple, effective, and easy to follow, ensuring you take
@@ -598,7 +598,7 @@ window.removeEventListener("scroll", handleScroll);
                   for the future.
                 </li>
                 <li>
-                  <span class="font-FourthHead">Tips:</span>
+                  <span class="font-semibold">Tips:</span>
                 </li>
                 <li>
                   If you’re spending more than 50% on essentials, reassess your
@@ -619,11 +619,11 @@ window.removeEventListener("scroll", handleScroll);
           contents={{
             heading: `Start Budgeting Today`,
             secPara: `Creating a budget doesn’t have to be overwhelming. With these simple steps, you can begin to take control of your financial life, achieve your goals, and gain peace of mind. <br><br><br>
-                <span class="font-FourthHead"">Read more</span></br>
+                <span class="font-semibold"">Read more</span></br>
                 <ul class="list-disc pl-4 space-y-2"> 
-                <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/finance-support/budgeting-tips">6 budgeting tips for a financially successful year</a></li>
-                <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/finance-support/behavioral-science-behind-budgeting">Would you like to learn about the behavioral science behind budgeting? Read this article to dive deeper into how psychology impacts your financial choices.</a></li>
-                <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/finance-support/adjust-your-budget">How to Adjust Your Budget When You Need To</a></li>
+                <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/finance-support/budgeting-tips">6 budgeting tips for a financially successful year</a></li>
+                <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/finance-support/behavioral-science-behind-budgeting">Would you like to learn about the behavioral science behind budgeting? Read this article to dive deeper into how psychology impacts your financial choices.</a></li>
+                <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/finance-support/adjust-your-budget">How to Adjust Your Budget When You Need To</a></li>
                 </ul>`,
           }}
         />
@@ -633,18 +633,15 @@ window.removeEventListener("scroll", handleScroll);
     <div class="lg:hidden block">
       {#each navBarMedium as navBar, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          navBar.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < navBar.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
             onclick={(e) => toggleDropdown(e, index)}
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="font-FifthHead text-paraFont">{navBar}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <h2 class="font-semibold typography-body-md">{navBar}</h2>
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -656,8 +653,8 @@ window.removeEventListener("scroll", handleScroll);
                 contents={{
                   heading: "What is Budgeting ?",
                   secPara: `Budgeting looks different for everyone, depending on individual needs and priorities.<br><br> Our research 
-              shows that taking the time to create and follow a budget can significantly improve your <a  class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/financial-wellbeing"> financial well-being</a>. 
-              <br><br>Already confident in budgeting but need help with the numbers? Check out our <a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/planners/budget-planner"> Budget Planner</a>.
+              shows that taking the time to create and follow a budget can significantly improve your <a  class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/financial-wellbeing"> financial well-being</a>. 
+              <br><br>Already confident in budgeting but need help with the numbers? Check out our <a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/planners/budget-planner"> Budget Planner</a>.
               If you're just getting started and need some practical tips, keep reading!`,
                 }}
               />
@@ -678,7 +675,7 @@ window.removeEventListener("scroll", handleScroll);
                   reverse: true,
                 }}
               >
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   Income isn’t just your salary—it includes any sources of money
                   you regularly receive. This could be freelance earnings,
                   interest from savings, or investments, side gigs, or even
@@ -686,7 +683,7 @@ window.removeEventListener("scroll", handleScroll);
                 </p>
 
                 <div class="flex flex-col gap-2">
-                  <p class="font-FourthHead">Tips:</p>
+                  <p class="font-semibold">Tips:</p>
 
                   <li>List all your income sources.</li>
                   <li>
@@ -702,21 +699,21 @@ window.removeEventListener("scroll", handleScroll);
                   cardHeading: "Categorizing Your Expenses",
                 }}
               >
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   Expenses are typically broken down into:<br /><br />
-                  <span class="font-FourthHead">Fixed Expenses:</span> Bills you
+                  <span class="font-semibold">Fixed Expenses:</span> Bills you
                   pay monthly, like rent, utilities, loans, and subscriptions.<br
                   />
-                  <span class="font-FourthHead">Variable Expenses:</span> Costs
+                  <span class="font-semibold">Variable Expenses:</span> Costs
                   that can fluctuate month-to-month, like groceries,
                   entertainment, and shopping.<br />
-                  <span class="font-FourthHead">Discretionary Expenses:</span>
+                  <span class="font-semibold">Discretionary Expenses:</span>
                   Non-essential spending, like dining out, hobbies, and vacations.<br
                   />
                 </p>
 
                 <div class="flex flex-col gap-2">
-                  <p class="font-FourthHead">Tips:</p>
+                  <p class="font-semibold">Tips:</p>
                   <li>
                     Use budgeting apps that automatically categorize your
                     expenses.
@@ -739,16 +736,16 @@ window.removeEventListener("scroll", handleScroll);
                       heading: "Plan SMART goals",
                       para: `<ul class="list-disc flex flex-col gap-2 list-inside">
         
-        <li><span class="font-FourthHead">S</span>pecific, <li><span class="font-FourthHead">M</span>easurable, <li><span class="font-FourthHead">A</span>chievable, <li><span class="font-FourthHead">R</span>ealistic, and <li><span class="font-FourthHead">T</span>ime-bound goals help you stay on track.
-        <br><br> You may set a <span class="font-FourthHead">SMART</span> goal like:<br>
+        <li><span class="font-semibold">S</span>pecific, <li><span class="font-semibold">M</span>easurable, <li><span class="font-semibold">A</span>chievable, <li><span class="font-semibold">R</span>ealistic, and <li><span class="font-semibold">T</span>ime-bound goals help you stay on track.
+        <br><br> You may set a <span class="font-semibold">SMART</span> goal like:<br>
 
         "Save ₹5,000 per month for the next 6 months for my emergency fund."`,
                     },
                     {
                       heading: "Prioritize your Goals",
-                      para: `It’s important to differentiate between <span class="font-FourthHead"> short-term</span> goals (1 year or less) and <span class="font-FourthHead">long-term</span> goals (3-5 years or more).
+                      para: `It’s important to differentiate between <span class="font-semibold"> short-term</span> goals (1 year or less) and <span class="font-semibold">long-term</span> goals (3-5 years or more).
         <br><br>
-          <span class="font-FourthHead">Tips:</span>
+          <span class="font-semibold">Tips:</span>
          
           <li>List your goals, then prioritize them based on urgency and importance.</li>
           <li>Create a timeline for achieving each goal.</li>`,
@@ -770,18 +767,18 @@ window.removeEventListener("scroll", handleScroll);
                       heading: "How to Categorize Your Expenses",
                       para: `
         
-        <li><span class="font-FourthHead">Essentials:</span>Rent, bills, groceries, transportation. 
-        <li><span class="font-FourthHead">Non-Essentials:</span>Dining out, shopping, entertainment. 
-        <li><span class="font-FourthHead">Savings & Investments:</span>Emergency funds, retirement savings, mutual funds.
+        <li><span class="font-semibold">Essentials:</span>Rent, bills, groceries, transportation. 
+        <li><span class="font-semibold">Non-Essentials:</span>Dining out, shopping, entertainment. 
+        <li><span class="font-semibold">Savings & Investments:</span>Emergency funds, retirement savings, mutual funds.
                 `,
                     },
                     {
                       heading: "Benefits of Categorization",
                       para: `
         
-        <li><span class="font-FourthHead">Tracking:</span>It becomes easier to see where your money goes. 
-        <li><span class="font-FourthHead">Cut Back:</span>: You can identify areas where you’re overspending and make adjustments.
-        <li><span class="font-FourthHead">Flexibility:</span>Reassign funds to essential categories if needed, especially during uncertain times.
+        <li><span class="font-semibold">Tracking:</span>It becomes easier to see where your money goes. 
+        <li><span class="font-semibold">Cut Back:</span>: You can identify areas where you’re overspending and make adjustments.
+        <li><span class="font-semibold">Flexibility:</span>Reassign funds to essential categories if needed, especially during uncertain times.
                 `,
                     },
                   ],
@@ -808,19 +805,19 @@ window.removeEventListener("scroll", handleScroll);
                     </p>
                     <ul class="list-disc pl-4">
                       <li>
-                        <span class="font-FourthHead">50%</span> for Essential Expenses
+                        <span class="font-semibold">50%</span> for Essential Expenses
                         (rent, bills, groceries)
                       </li>
                       <li>
-                        <span class="font-FourthHead">30%</span> for Lifestyle Costs
+                        <span class="font-semibold">30%</span> for Lifestyle Costs
                         (entertainment, dining out, shopping)
                       </li>
                       <li>
-                        <span class="font-FourthHead">20%</span> for Savings (emergency
+                        <span class="font-semibold">20%</span> for Savings (emergency
                         fund, retirement fund, investment)
                       </li>
                     </ul>
-                    <p class="font-ThirdHead">Why It Works:</p>
+                    <p class="typography-h3 font-semibold">Why It Works:</p>
                     <ul class="list-disc pl-4">
                       <li>
                         It’s simple, effective, and easy to follow, ensuring you
@@ -828,7 +825,7 @@ window.removeEventListener("scroll", handleScroll);
                         and saving for the future.
                       </li>
                       <li>
-                        <span class="font-FourthHead">Tips:</span>
+                        <span class="font-semibold">Tips:</span>
                       </li>
                       <li>
                         If you’re spending more than 50% on essentials, reassess
@@ -849,11 +846,11 @@ window.removeEventListener("scroll", handleScroll);
                 contents={{
                   heading: `Start Budgeting Today`,
                   secPara: `Creating a budget doesn’t have to be overwhelming. With these simple steps, you can begin to take control of your financial life, achieve your goals, and gain peace of mind. <br><br><br>
-                    <span class="font-FourthHead"">Read more</span></br>
+                    <span class="font-semibold"">Read more</span></br>
                     <ul class="list-disc pl-4 space-y-2"> 
-                    <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/finance-support/budgeting-tips">6 budgeting tips for a financially successful year</a></li>
-                    <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/finance-support/behavioral-science-behind-budgeting">Would you like to learn about the behavioral science behind budgeting? Read this article to dive deeper into how psychology impacts your financial choices.</a></li>
-                    <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/finance-support/adjust-your-budget">How to Adjust Your Budget When You Need To</a></li>
+                    <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/finance-support/budgeting-tips">6 budgeting tips for a financially successful year</a></li>
+                    <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/finance-support/behavioral-science-behind-budgeting">Would you like to learn about the behavioral science behind budgeting? Read this article to dive deeper into how psychology impacts your financial choices.</a></li>
+                    <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/finance-support/adjust-your-budget">How to Adjust Your Budget When You Need To</a></li>
                     </ul>`,
                 }}
               />

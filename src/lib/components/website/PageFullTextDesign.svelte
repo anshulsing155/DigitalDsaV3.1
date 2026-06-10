@@ -20,12 +20,12 @@
       <div class="relative w-full bg-[var(--landing-bg)] text-black dark:text-white px-[2rem] py-[3rem] lg:p-[4rem]">
         <div class="flex flex-col gap-4 sm:gap-[2rem] lg:w-2/3">
           <h1
-            class="font-ThirdHead text-minHeadFont sm:text-mobHeadFont lg:text-headFont"
+            class="typography-h3 font-semibold typography-h2 sm:text-mobHeadFont lg:text-headFont"
           >
             {pageData.heroHeading}
           </h1>
           {#if pageData.heroParagraph}
-            <p class="font-SubPara text-minParaFont md:text-subParaFont">
+            <p class="typography-body-sm md:typography-body-md">
               {@html pageData.heroParagraph}
             </p>
           {/if}

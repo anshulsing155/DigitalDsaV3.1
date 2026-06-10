@@ -294,7 +294,7 @@ window.removeEventListener("scroll", handleScroll);
     <div>
       <div class="hidden lg:block">
         <StickyNavbar navList={subList} {activeSection}>
-          <div class="  flex gap-4 pr-4">
+          <div class="flex gap-4 pr-4">
             {#each navList as lastItem}
               {#if lastItem.actionBtn}
                 {#each lastItem.actionBtn as action}
@@ -311,7 +311,7 @@ window.removeEventListener("scroll", handleScroll);
           </div>
         </StickyNavbar>
 
-        <div class=" px-[2rem] lg:px-[4rem]">
+        <div class="px-[2rem] lg:px-[4rem]">
           <div>
             <div id="started" data-section="started" class="section">
               {#each started as steps}
@@ -332,7 +332,7 @@ window.removeEventListener("scroll", handleScroll);
               cardHeading="What’s your budget?"
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
                 <li>
@@ -353,7 +353,7 @@ window.removeEventListener("scroll", handleScroll);
             <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
               {#if planProject.length > 0}
                 <h2
-                  class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="md:text-start typography-h2 text-black dark:text-white"
                 >
                   Plan your project
                 </h2>
@@ -385,7 +385,7 @@ window.removeEventListener("scroll", handleScroll);
           <div data-section="calculators" id="calculators" class="section">
             <div class="border-b pt-[3rem]">
               <h2
-                class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h2 text-black dark:text-white"
               >
                 Tools & calculators
               </h2>
@@ -406,10 +406,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -419,7 +416,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end text-black dark:text-white">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -444,7 +441,7 @@ window.removeEventListener("scroll", handleScroll);
                   cardHeading="What’s your budget?"
                 >
                   <ul
-                    class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                    class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                     slot="list"
                   >
                     <li>
@@ -468,7 +465,7 @@ window.removeEventListener("scroll", handleScroll);
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
                   {#if planProject.length > 0}
                     <h2
-                      class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="md:text-start typography-h2 text-black dark:text-white"
                     >
                       Plan your project
                     </h2>
@@ -503,7 +500,7 @@ window.removeEventListener("scroll", handleScroll);
               >
               <div class="pt-[3rem]">
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-black dark:text-white"
                 >
                   Tools & calculators
                 </h2>
@@ -531,7 +528,7 @@ window.removeEventListener("scroll", handleScroll);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
             slot="list"
           >
             <li>

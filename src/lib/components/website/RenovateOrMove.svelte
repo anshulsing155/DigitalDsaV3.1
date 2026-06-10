@@ -44,56 +44,56 @@ columnName: [
 ],
 rowData: [
 {
-"<span class='font-FourthHead flex gap-4 items-center md:pl-20'> Cost </span>":
+"<span class='font-semibold flex gap-4 items-center md:pl-20'> Cost </span>":
 [
 "<div class='md:pl-24'>Lower, ₹5-15 lakh for major work.</div>",
 "<div class='md:pl-24'>Higher, ₹30 lakh to ₹1 crore+.</div>",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center md:pl-20'> Time </span>":
+"<span class='font-semibold flex gap-4 items-center md:pl-20'> Time </span>":
 [
 "<div class='md:pl-24'>Longer, several months.</div>",
 "<div class='md:pl-24'>Faster, move-in ready.</div>",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center md:pl-20'> Emotional Value </span>":
+"<span class='font-semibold flex gap-4 items-center md:pl-20'> Emotional Value </span>":
 [
 "<div class='md:pl-24'>Retain attachment to your home/neighborhood.</div>",
 "<div class='md:pl-24'>Fresh start, but leaving old memories.</div>",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center md:pl-20'> Customization </span>":
+"<span class='font-semibold flex gap-4 items-center md:pl-20'> Customization </span>":
 [
 "<div class='md:pl-24'>Fully tailored to your needs.</div>",
 "<div class='md:pl-24'>Limited, unless it’s a new build.</div>",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center md:pl-20'> Resale Value </span>":
+"<span class='font-semibold flex gap-4 items-center md:pl-20'> Resale Value </span>":
 [
 "<div class='md:pl-24'>Boosts value if done well.</div>",
 "<div class='md:pl-24'>Higher resale, but costly to sell later.</div>",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center md:pl-20'> Stress Level </span>":
+"<span class='font-semibold flex gap-4 items-center md:pl-20'> Stress Level </span>":
 [
 "<div class='md:pl-24'>High—living through disruptions.</div>",
 "<div class='md:pl-24'>Lower—ready to move in.</div>",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center md:pl-20'> Location </span>":
+"<span class='font-semibold flex gap-4 items-center md:pl-20'> Location </span>":
 [
 "<div class='md:pl-24'>Stay in your current community.</div>",
 "<div class='md:pl-24'>Freedom to choose a new, ideal location.</div>",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center md:pl-20'> Energy Efficiency </span>":
+"<span class='font-semibold flex gap-4 items-center md:pl-20'> Energy Efficiency </span>":
 [
 "<div class='md:pl-24'>Upgrade as needed.</div>",
 "<div class='md:pl-24'>Likely pre-equipped with modern systems.</div>",
@@ -238,19 +238,19 @@ window.removeEventListener("scroll", handleScroll);
             listTopPara: `<p>Renovating your existing home can give it a fresh new feel without the hassle of moving. You can add new features, modernize spaces, and create the dream home you’ve always wanted right where you are. <br><br>Here are some benefits of home renovation:</p>`,
             list: [
               {
-                heading: `<span class="font-Paragraph">Cost-Effective</span>`,
+                heading: `<span class="typography-body-md">Cost-Effective</span>`,
               },
               {
-                heading: `<span class="font-Paragraph">Personalized Upgrades</span>`,
+                heading: `<span class="typography-body-md">Personalized Upgrades</span>`,
               },
               {
-                heading: `<span class="font-Paragraph">Save on Moving Costs</span>`,
+                heading: `<span class="typography-body-md">Save on Moving Costs</span>`,
               },
               {
-                heading: `<span class="font-Paragraph">Increased Property Value</span>`,
+                heading: `<span class="typography-body-md">Increased Property Value</span>`,
               },
               {
-                heading: `<span class="font-Paragraph">Stay in a Familiar Environment</span>`,
+                heading: `<span class="typography-body-md">Stay in a Familiar Environment</span>`,
               },
             ],
           }}
@@ -264,19 +264,19 @@ window.removeEventListener("scroll", handleScroll);
             listTopPara: `<p>On the other hand, buying a new home allows you to start afresh, with the amenities and features you’ve always dreamed of. Whether it’s more space, better location, or modern designs, moving can provide a whole new lifestyle.<br><br> Here’s why buying a new home could be the better option for some:</p>`,
             list: [
               {
-                heading: `<span class="font-Paragraph">Modern Features and Amenities</span>`,
+                heading: `<span class="typography-body-md">Modern Features and Amenities</span>`,
               },
               {
-                heading: `<span class="font-Paragraph">No Renovation Hassles</span>`,
+                heading: `<span class="typography-body-md">No Renovation Hassles</span>`,
               },
               {
-                heading: `<span class="font-Paragraph">Better Location or Neighborhood</span>`,
+                heading: `<span class="typography-body-md">Better Location or Neighborhood</span>`,
               },
               {
-                heading: `<span class="font-Paragraph">Increased Energy Efficiency</span>`,
+                heading: `<span class="typography-body-md">Increased Energy Efficiency</span>`,
               },
               {
-                heading: `<span class="font-Paragraph">No Need for Future Renovations</span>`,
+                heading: `<span class="typography-body-md">No Need for Future Renovations</span>`,
               },
             ],
           }}
@@ -287,10 +287,10 @@ window.removeEventListener("scroll", handleScroll);
         <div class="pb-[8rem] border-b border-[#E5E5E5]">
           <div class="mt-[4rem]">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+              class="grid mb-[4rem] typography-h2 text-text-main text-center"
             >
               <p class="mb-[1rem]">The Ultimate Comparison</p>
-              <span class="font-Paragraph text-minParaFont"
+              <span class="typography-body-sm text-text-light"
                 >Here’s a detailed comparison of the <span
                   class="underline underline-offset-4 decoration-btnBg"
                   >Home Renovation</span
@@ -326,13 +326,13 @@ window.removeEventListener("scroll", handleScroll);
             listTopPara: `<p>Choosing between Home Renovation and Buying a New Home depends on:</p>`,
             list: [
               {
-                heading: `<span class="font-Paragraph"><strong>Budget :</strong> Renovating is cost-effective, while buying offers modern features with less effort.</span>`,
+                heading: `<span class="typography-body-md"><strong>Budget :</strong> Renovating is cost-effective, while buying offers modern features with less effort.</span>`,
               },
               {
-                heading: `<span class="font-Paragraph"><strong>Preferences :</strong> Renovate if you love your current home and neighborhood; buy if you want a fresh start.</span>`,
+                heading: `<span class="typography-body-md"><strong>Preferences :</strong> Renovate if you love your current home and neighborhood; buy if you want a fresh start.</span>`,
               },
               {
-                heading: `<span class="font-Paragraph"><strong>Long-Term Goals :</strong> Stay longer? Renovate to add value. Relocating soon? Buying might be better.</span>`,
+                heading: `<span class="typography-body-md"><strong>Long-Term Goals :</strong> Stay longer? Renovate to add value. Relocating soon? Buying might be better.</span>`,
               },
             ],
           }}
@@ -344,10 +344,10 @@ window.removeEventListener("scroll", handleScroll);
             listTopPara: `<p>The choice ultimately comes down to your budget, personal priorities, and long-term plans.</p>`,
             list: [
               {
-                heading: `<span class="font-Paragraph"><strong>Renovation:</strong> Keeps the comfort of your current home and community intact, while allowing you to customize and upgrade. It’s ideal if you value familiarity and have a limited budget.</span>`,
+                heading: `<span class="typography-body-md"><strong>Renovation:</strong> Keeps the comfort of your current home and community intact, while allowing you to customize and upgrade. It’s ideal if you value familiarity and have a limited budget.</span>`,
               },
               {
-                heading: `<span class="font-Paragraph"><strong>Buying a New Home:</strong> Offers fresh opportunities with modern amenities, better energy efficiency, and a potential lifestyle shift. It’s the way to go if you’re ready for change and can manage higher upfront costs.</span>`,
+                heading: `<span class="typography-body-md"><strong>Buying a New Home:</strong> Offers fresh opportunities with modern amenities, better energy efficiency, and a potential lifestyle shift. It’s the way to go if you’re ready for change and can manage higher upfront costs.</span>`,
               },
             ],
           }}
@@ -360,10 +360,7 @@ window.removeEventListener("scroll", handleScroll);
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -371,7 +368,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -385,19 +382,19 @@ window.removeEventListener("scroll", handleScroll);
                   listTopPara: `<p>Renovating your existing home can give it a fresh new feel without the hassle of moving. You can add new features, modernize spaces, and create the dream home you’ve always wanted right where you are. <br><br>Here are some benefits of home renovation:</p>`,
                   list: [
                     {
-                      heading: `<span class="font-Paragraph">Cost-Effective</span>`,
+                      heading: `<span class="typography-body-md">Cost-Effective</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph">Personalized Upgrades</span>`,
+                      heading: `<span class="typography-body-md">Personalized Upgrades</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph">Save on Moving Costs</span>`,
+                      heading: `<span class="typography-body-md">Save on Moving Costs</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph">Increased Property Value</span>`,
+                      heading: `<span class="typography-body-md">Increased Property Value</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph">Stay in a Familiar Environment</span>`,
+                      heading: `<span class="typography-body-md">Stay in a Familiar Environment</span>`,
                     },
                   ],
                 }}
@@ -411,19 +408,19 @@ window.removeEventListener("scroll", handleScroll);
                   listTopPara: `<p>On the other hand, buying a new home allows you to start afresh, with the amenities and features you’ve always dreamed of. Whether it’s more space, better location, or modern designs, moving can provide a whole new lifestyle.<br><br> Here’s why buying a new home could be the better option for some:</p>`,
                   list: [
                     {
-                      heading: `<span class="font-Paragraph">Modern Features and Amenities</span>`,
+                      heading: `<span class="typography-body-md">Modern Features and Amenities</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph">No Renovation Hassles</span>`,
+                      heading: `<span class="typography-body-md">No Renovation Hassles</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph">Better Location or Neighborhood</span>`,
+                      heading: `<span class="typography-body-md">Better Location or Neighborhood</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph">Increased Energy Efficiency</span>`,
+                      heading: `<span class="typography-body-md">Increased Energy Efficiency</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph">No Need for Future Renovations</span>`,
+                      heading: `<span class="typography-body-md">No Need for Future Renovations</span>`,
                     },
                   ],
                 }}
@@ -434,10 +431,10 @@ window.removeEventListener("scroll", handleScroll);
               <div class="">
                 <div class="mt-[4rem]">
                   <h2
-                    class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                    class="grid mb-[4rem] typography-h2 text-text-main text-center"
                   >
                     <p class="mb-[1rem]">The Ultimate Comparison</p>
-                    <span class="font-Paragraph text-minParaFont"
+                    <span class="typography-body-sm text-text-light"
                       >Here’s a detailed comparison of the <span
                         class="underline underline-offset-4 decoration-btnBg"
                         >Home Renovation</span
@@ -473,13 +470,13 @@ window.removeEventListener("scroll", handleScroll);
                   listTopPara: `<p>Choosing between Home Renovation and Buying a New Home depends on:</p>`,
                   list: [
                     {
-                      heading: `<span class="font-Paragraph"><strong>Budget :</strong> Renovating is cost-effective, while buying offers modern features with less effort.</span>`,
+                      heading: `<span class="typography-body-md"><strong>Budget :</strong> Renovating is cost-effective, while buying offers modern features with less effort.</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph"><strong>Preferences :</strong> Renovate if you love your current home and neighborhood; buy if you want a fresh start.</span>`,
+                      heading: `<span class="typography-body-md"><strong>Preferences :</strong> Renovate if you love your current home and neighborhood; buy if you want a fresh start.</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph"><strong>Long-Term Goals :</strong> Stay longer? Renovate to add value. Relocating soon? Buying might be better.</span>`,
+                      heading: `<span class="typography-body-md"><strong>Long-Term Goals :</strong> Stay longer? Renovate to add value. Relocating soon? Buying might be better.</span>`,
                     },
                   ],
                 }}
@@ -491,10 +488,10 @@ window.removeEventListener("scroll", handleScroll);
                   listTopPara: `<p>The choice ultimately comes down to your budget, personal priorities, and long-term plans.</p>`,
                   list: [
                     {
-                      heading: `<span class="font-Paragraph"><strong>Renovation:</strong> Keeps the comfort of your current home and community intact, while allowing you to customize and upgrade. It’s ideal if you value familiarity and have a limited budget.</span>`,
+                      heading: `<span class="typography-body-md"><strong>Renovation:</strong> Keeps the comfort of your current home and community intact, while allowing you to customize and upgrade. It’s ideal if you value familiarity and have a limited budget.</span>`,
                     },
                     {
-                      heading: `<span class="font-Paragraph"><strong>Buying a New Home:</strong> Offers fresh opportunities with modern amenities, better energy efficiency, and a potential lifestyle shift. It’s the way to go if you’re ready for change and can manage higher upfront costs.</span>`,
+                      heading: `<span class="typography-body-md"><strong>Buying a New Home:</strong> Offers fresh opportunities with modern amenities, better energy efficiency, and a potential lifestyle shift. It’s the way to go if you’re ready for change and can manage higher upfront costs.</span>`,
                     },
                   ],
                 }}

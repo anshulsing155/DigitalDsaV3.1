@@ -62,10 +62,10 @@ link: "/contact",
   let thinkKnow = {
     heading: "Things you should know",
     paraGraph: [
-`<span class="font-FourthHead"> Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-`<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-`<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-`<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+`<span class="font-semibold"> Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+`<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+`<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+`<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
 ,
     ],
   };
@@ -149,7 +149,7 @@ window.removeEventListener("scroll", handleScroll);
       coverImage: "/images/familyWorkWithSmile.jpg",
       altName: "hero-cover",
       heading: "Low ITR",
-      para: `<span class="font-FourthHead">Switch, Save & Gain!</span>`,
+      para: `<span class="font-semibold">Switch, Save & Gain!</span>`,
 
       actionBtn: [
         {
@@ -218,8 +218,8 @@ window.removeEventListener("scroll", handleScroll);
               id: "1",
               title:
                 "Advantages: <br>Why Consider a Balance Transfer for Your LAP",
-              para: `<ul class="list-disc flex flex-col gap-2 pl-4 ">
-                <li>Lower interest rates <span class="font-FourthHead">(9% to 12% p.a.)</span> leading to reduced EMIs.</li>
+              para: `<ul class="list-disc flex flex-col gap-2 pl-4">
+                <li>Lower interest rates <span class="font-semibold">(9% to 12% p.a.)</span> leading to reduced EMIs.</li>
                 <li>Top-up loan option to meet personal or business expenses.</li>
                 <li>Save on overall interest cost.</li>
                 <li>Flexible repayment options to reduce tenure.</li>
@@ -268,7 +268,7 @@ window.removeEventListener("scroll", handleScroll);
           reverse: true,
         }}
       >
-        <div class="font-Paragraph text-minParaFont">
+        <div class="typography-body-sm text-text-light">
           <ul class="list-disc text-gray-700 space-y-4">
             <li class="flex items-start gap-1">
               <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
@@ -319,11 +319,11 @@ window.removeEventListener("scroll", handleScroll);
         thinkKnow={{
           heading: "What documents you need to arrange:",
           paraGraph: [
-            `<span class="font-FourthHead">Identity Proof:</span> <br>Aadhaar, PAN, Passport.`,
-            `<span class="font-FourthHead">Address Proof:</span><br> Aadhaar, Passport, Utility Bills.`,
-            `<span class="font-FourthHead">Income Proof:</span> <br> Salary Slips, Bank Statement, ITR, Audited financials.`,
-            `<span class="font-FourthHead">Property Documents:</span> <br> Title Deeds, Property Chain documents.`,
-            `<span class="font-FourthHead">Foreclosure Letter:</span> <br> List of original document (LOD) and Foreclosure Letter from Current Lender.`,
+            `<span class="font-semibold">Identity Proof:</span> <br>Aadhaar, PAN, Passport.`,
+            `<span class="font-semibold">Address Proof:</span><br> Aadhaar, Passport, Utility Bills.`,
+            `<span class="font-semibold">Income Proof:</span> <br> Salary Slips, Bank Statement, ITR, Audited financials.`,
+            `<span class="font-semibold">Property Documents:</span> <br> Title Deeds, Property Chain documents.`,
+            `<span class="font-semibold">Foreclosure Letter:</span> <br> List of original document (LOD) and Foreclosure Letter from Current Lender.`,
           ],
         }}
         disc="list-disc"
@@ -353,7 +353,7 @@ window.removeEventListener("scroll", handleScroll);
              <ul class="list-disc flex flex-col gap-2 pl-4">
              <li>Failure to repay a Loan Against Property can risk property loss, but with smart planning and our expert tools, you can ensure safe and manageable repayments.</li>
              <li>Since the property needs to be appraised and verified, the approval process might take longer compared to unsecured loans.</li>
-             <li>If not planned carefully, EMIs can affect monthly finances, especially during financial stress. In such case you opt for <span class="font-FourthHead">Overdraft facility</span> if you are not sure about immediate usage of entire funds
+             <li>If not planned carefully, EMIs can affect monthly finances, especially during financial stress. In such case you opt for <span class="font-semibold">Overdraft facility</span> if you are not sure about immediate usage of entire funds
       
     </ul>
   
@@ -364,8 +364,8 @@ window.removeEventListener("scroll", handleScroll);
               title: "What to expect",
               para: `When you reach out for support, we’ll work with you to understand your situation and determine the best way to assist you. To help us do that, we may ask for:
             <ul class="list-disc flex flex-col gap-2 pl-4">
-            <li> <span class="font-FourthHead">Information</span> about your profession, income and expenses.</li>
-            <li> <span class="font-FourthHead">Documents</span> to support your income and property ownership.</li>
+            <li> <span class="font-semibold">Information</span> about your profession, income and expenses.</li>
+            <li> <span class="font-semibold">Documents</span> to support your income and property ownership.</li>
             </ul>
              `,
             },
@@ -384,19 +384,19 @@ window.removeEventListener("scroll", handleScroll);
               title: "Tools",
               para: `
           <ul class="list-disc flex flex-col gap-1 pl-4">
-            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/get-started/how-can-we-help"</a>Check bank offers
+            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/get-started/how-can-we-help"</a>Check bank offers
             </li>
             
-            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/planners/budget-planner"</a>Budget Planner</li>
-            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/calculators/eligibility-calculator"</a>How much I can borrow</li> </ul>`,
+            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/planners/budget-planner"</a>Budget Planner</li>
+            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/calculators/eligibility-calculator"</a>How much I can borrow</li> </ul>`,
             },
             {
               id: "2",
               title: "Calculators",
-              para: `<ul class="list-disc flex flex-col gap-1 pl-4 ">
-          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/planners/part-payment-planner"</a>Part-payment Calculator</li>
-          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/calculators/emi-calculator"</a>How much EMI I can pay</li>
-          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline font-Paragraph text-subParaFont cursor-pointer" href="/planners/flexible-emi-planner"</a>Optimize my loan tenure</li>`,
+              para: `<ul class="list-disc flex flex-col gap-1 pl-4">
+          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/planners/part-payment-planner"</a>Part-payment Calculator</li>
+          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/calculators/emi-calculator"</a>How much EMI I can pay</li>
+          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/planners/flexible-emi-planner"</a>Optimize my loan tenure</li>`,
             },
           ],
         }}

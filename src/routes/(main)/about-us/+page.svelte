@@ -122,19 +122,16 @@
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
-            onclick={(e) => { e.preventDefault(); ((e) => toggleDropdown(e, index))(e); }}
+            onclick={(e) => { e.preventDefault(); toggleDropdown(e, index); }}
           >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
-                <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+            <div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
+              <h2 class="">{list}</h2>
+              <div class="icon-container justify-self-end typography-h3">
+                <span><i class="fa-solid fa-angle-down faq-icon text-darkColor-contrast transition-transform duration-300"></i></span>
               </div>
             </div>
           </summary>
@@ -142,14 +139,14 @@
           {#if index == 0}
             <div
               id="began"
-              class="flex flex-col gap-[2.5rem] border-b border-[var(--form-border)] py-[3rem] bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]"
+              class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 bg-[var(--landing-bg)] text-black dark:text-white px-4"
             >
               <p
-                class="mt-[1rem] font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+                class="mt-4 typography-h3 text-black dark:text-white"
               >
                 Where it all began
               </p>
-              <div class="grid gap-4 font-Paragraph text-subParaFont">
+              <div class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]">
                 <p>
                   Prashant and Nishant Bajpai, two determined brothers, turned a
                   frustrating experience into a groundbreaking venture. At the
@@ -188,8 +185,8 @@
               </div>
             </div>
           {:else if index == 1}
-            <div class="pt-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]" id="team">
-              <h2 class="font-ThirdHead text-mobSubHead text-center">
+            <div class="pt-8 bg-[var(--landing-bg)] text-black dark:text-white px-4" id="team">
+              <h2 class="typography-h2 text-center text-black dark:text-white">
                 Meet Our Leaders
               </h2>
               <TwoColumn
@@ -200,11 +197,11 @@
                 originalSource="www.digitaldsa.com/about-us"
               >
                 <ul
-                  class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                  class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
                   slot="list"
                 >
                   <div class="grid gap-4">
-                    <li class="font-ThirdHead text-minSubHead">
+                    <li class="typography-h3 font-semibold text-text-main">
                       Founder Digital DSA
                     </li>
                     <li>
@@ -229,11 +226,11 @@
                 reverse={true}
               >
                 <ul
-                  class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                  class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
                   slot="list"
                 >
                   <div class="grid gap-4">
-                    <li class="font-ThirdHead text-minSubHead">
+                    <li class="typography-h3 font-semibold text-text-main">
                       Co-founder Digital DSA
                     </li>
                     <li>
@@ -271,7 +268,7 @@
                   reverse={true}
                 >
                   <ul
-                    class="grid gap-4 font-Paragraph text-subParaFont"
+                    class="grid gap-4 typography-body-md text-text-light"
                     slot="list"
                   >
                     <li>
@@ -288,15 +285,15 @@
           {:else if index == 2}
             <div
               id="sustainability"
-              class="pt-[2rem] flex flex-col gap-[2.5rem] bg-[var(--landing-bg)] text-black dark:text-white px-[1rem]"
+              class="pt-8 flex flex-col gap-8 bg-[var(--landing-bg)] text-black dark:text-white px-4"
             >
               <h3
-                class="font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h3 text-black dark:text-white"
               >
                 Core Values
               </h3>
               <div
-                class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-[3rem]"
+                class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
               >
                 <NewBlogCard
                   blogLists={[
@@ -344,7 +341,7 @@
               >
                 <div class="grid gap-[2rem] border-t border-borderColor">
                   <h3
-                    class="font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h3 font-semibold md:text-start md:typography-h2-md lg:typography-h2"
                   >
                     Careers
                   </h3>
@@ -387,18 +384,18 @@
         {activeSection}
       />
 
-      <div class="grid px-[4rem]">
+      <div class="grid px-16">
         <div
           data-section="where"
           id="where"
-          class="flex flex-col gap-[2.5rem] border-b border-[var(--form-border)] py-[3rem] text-black dark:text-white"
+          class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 text-black dark:text-white"
         >
           <p
-            class="mt-[1rem] font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+            class="mt-4 typography-h3 text-black dark:text-white"
           >
             Where it all began
           </p>
-          <div class="grid gap-4 font-Paragraph text-subParaFont">
+          <div class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]">
             <p>
               Prashant and Nishant Bajpai, two determined brothers, turned a
               frustrating experience into a groundbreaking venture. At the
@@ -435,8 +432,8 @@
           </div>
         </div>
 
-        <div data-section="ourteam" id="ourteam" class="mt-[2rem]">
-          <h2 class="font-SecHead text-mobHeadFont text-center">
+        <div data-section="ourteam" id="ourteam" class="mt-8">
+          <h2 class="typography-h2 text-center text-black dark:text-white">
             Meet Our Leaders
           </h2>
           <TwoColumn
@@ -447,11 +444,11 @@
             originalSource="www.digitaldsa.com/about-us"
           >
             <ul
-              class="grid gap-[2rem] font-Paragraph text-subParaFont"
+              class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
               slot="list"
             >
               <div class="grid gap-4">
-                <li class="font-ThirdHead text-minSubHead">Founder</li>
+                <li class="typography-h3 font-semibold text-text-main">Founder</li>
                 <li>
                   Introducing Prashant Bajpai – the engineering wizard and
                   founder of Digital DSA! With a B.Tech. in Mechanical
@@ -474,11 +471,11 @@
             reverse={true}
           >
             <ul
-              class="grid gap-[2rem] font-Paragraph text-subParaFont"
+              class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
               slot="list"
             >
               <div class="grid gap-4">
-                <li class="font-ThirdHead text-minSubHead">Co-founder</li>
+                <li class="typography-h3 font-semibold text-text-main">Co-founder</li>
                 <li>
                   Meet Nishant Bajpai – the financial superhero and our other
                   co-founder! Armed with a B.Tech. in Information Technology and
@@ -498,14 +495,14 @@
         <div
           data-section="sustain"
           id="sustain"
-          class="grid gap-[2.5rem] py-[2rem] border-y border-[var(--form-border)] text-black dark:text-white"
+          class="grid gap-8 py-8 border-y border-[var(--form-border)] text-black dark:text-white"
         >
           <h3
-            class="font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h3 text-black dark:text-white"
           >
             Core Values
           </h3>
-          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-[3rem]">
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             <NewBlogCard
               blogLists={[
                 {
@@ -557,7 +554,7 @@
         reverse: false
       }}
     >
-      <p>
+      <p class="typography-body-md text-[var(--form-text-secondary)]">
         Feel free to message us anytime for expert assistance with your loan
         needs. Our team is here to provide professional advice, guide you
         through the loan process, and help you find the best options. No matter

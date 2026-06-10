@@ -43,8 +43,7 @@
 </script>
 
 <div
-  class="flex flex-col border group relative overflow-hidden gap-2 "
-  style={`border: ${cardBorder ? `1px solid ${cardBorder}` : "none"};`}
+  class="flex flex-col group relative overflow-hidden gap-2 {cardBorder ? 'border border-[var(--form-border)] rounded-xl' : ''}"
 >
   <div class="relative w-full">
     {#if icon}
@@ -69,21 +68,19 @@
     </div>
   </div>
   <div
-    class="flex h-full flex-col items-start justify-between gap-4 {cardBorder
-      ? 'p-[1rem]'
-      : ''}"
+    class="flex h-full flex-col items-start justify-between gap-4 {cardBorder ? 'p-4' : ''}"
   >
     <div class="flex flex-col gap-4">
-      <h3 class="typography-body-lg !font-semibold text-black dark:text-white">{title}</h3>
+      <h3 class="typography-h3 text-black dark:text-white">{title}</h3>
       <p class="typography-body-md text-[var(--form-text-secondary)]">{paragraph}</p>
     </div>
-    <!-- font-Paragraph text-minParaFont md:text-subParaFont -->
+    <!-- typography-body-sm text-text-light md:typography-body-md -->
     {#if linkName}
       <div class="flex w-full h-full items-end justify-start text-start">
         <a
           href={url}
           onclick={onClick}
-          class={`block w-full rounded-full font-Paragraph text-minParaFont md:text-subParaFont hover:no-underline hover:opacity-90 md:w-auto`}
+          class={`block w-full rounded-full typography-body-md hover:no-underline hover:opacity-90 md:w-auto`}
           class:text-linkColor={url !== ""}
           class:text-dangerColor={url == ""}
           class:underline
@@ -96,13 +93,22 @@
     {/if}
     {#if btnName}
       <div class="w-full">
-        <button
-          type="button"
-          class="w-full rounded-full border px-[3rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 md:w-auto"
-          style={`background-color: ${btnColor || 'transparent'}; border-color: ${btnBorder};${btnColor ? ' color: #0f172a !important;' : ' color: inherit;'}`}
-        >
-          <a href={link} class="block w-full" style={btnColor ? 'color: #0f172a !important;' : 'color: inherit;'}>{btnName}</a>
-        </button>
+        {#if btnColor}
+          <button
+            type="button"
+            class="w-full typography-button btn text-black md:w-auto"
+            style={`background: ${btnColor}; border: 1px solid ${btnBorder || 'transparent'};`}
+          >
+            <a href={link} class="block w-full">{btnName}</a>
+          </button>
+        {:else}
+          <button
+            type="button"
+            class="w-full typography-button btn btn-secondary md:w-auto"
+          >
+            <a href={link} class="block w-full">{btnName}</a>
+          </button>
+        {/if}
       </div>
     {/if}
     {#if !btnName}

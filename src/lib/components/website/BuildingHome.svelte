@@ -126,7 +126,7 @@ window.removeEventListener("scroll", handleScroll);
             targetId: `calculators`,
           },
         ]} {activeSection}>
-          <div class="  flex gap-4 pr-4">
+          <div class="flex gap-4 pr-4">
             {#each [
               {
                 actionBtn: [
@@ -153,7 +153,7 @@ window.removeEventListener("scroll", handleScroll);
           </div>
         </StickyNavbar>
 
-        <div class=" px-[2rem] lg:px-[4rem]">
+        <div class="px-[2rem] lg:px-[4rem]">
           <div>
             <div
               id="started"
@@ -198,7 +198,7 @@ window.removeEventListener("scroll", handleScroll);
               cardHeading="Work out your upfront costs"
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>
@@ -223,7 +223,7 @@ window.removeEventListener("scroll", handleScroll);
             </div>
           </div>
 
-          <div data-section="plan" id="plan" class=" section">
+          <div data-section="plan" id="plan" class="section">
             {#each [
               {
                 heading: "Plan your build",
@@ -302,7 +302,7 @@ window.removeEventListener("scroll", handleScroll);
           <div data-section="calculators" id="calculators" class="section">
             <div class="border-b grid grid-cols-3 gap-4">
               <h2
-                class="col-span-1 pt-[3rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="col-span-1 pt-[3rem] typography-h2 text-text-main"
               >
                 Tools & calculators
               </h2>
@@ -360,10 +360,7 @@ window.removeEventListener("scroll", handleScroll);
           "Tools & calculators",
         ] as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -373,7 +370,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -418,7 +415,7 @@ window.removeEventListener("scroll", handleScroll);
                   cardHeading="Work out your upfront costs"
                 >
                   <ul
-                    class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                    class="grid gap-[2rem] typography-body-md text-text-light"
                     slot="list"
                   >
                     <li>
@@ -526,7 +523,7 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <div class="">
                   <h2
-                    class="pt-[3rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="pt-[3rem] typography-h2 text-text-main"
                   >
                     Tools & calculators
                   </h2>
@@ -586,7 +583,7 @@ window.removeEventListener("scroll", handleScroll);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-[2rem] typography-body-md text-text-light"
             slot="list"
           >
             <li>

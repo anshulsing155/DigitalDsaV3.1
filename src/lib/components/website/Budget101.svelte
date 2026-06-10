@@ -41,10 +41,10 @@
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-12 md:col-span-9 mx-auto">
           <div class="space-y-4 pt-[2rem] pb-[6rem]">
-            <h2 class="text-mobSubHead font-SecHead text-darkColor">
+            <h2 class="typography-h2 text-text-main">
               Why This Matters
             </h2>
-            <p class="font-Paragraph text-subParaFont text-darkColor">
+            <p class="typography-body-md text-text-main">
               Imagine discovering that your customers’ financial data has been
               leaked online . <span class="underline underline-offset-4">
                 Could your business recover from the damage?
@@ -57,12 +57,12 @@
           </div>
 
           <div class="space-y-4 pt-[4rem] pb-[6rem]">
-            <h2 class="text-mobSubHead font-SecHead text-darkColor">
+            <h2 class="typography-h2 text-text-main">
               Protect, Prevent, Prevail:
             </h2>
 
             <ul
-              class=" pl-2 text-subParaFont font-Paragraph space-y-2 text-darkColor"
+              class="pl-2 typography-body-md space-y-2 text-text-main"
             >
               <li>✅ Identify Key Cyber Threats Targeting Indian Businesses</li>
               <li>
@@ -77,73 +77,47 @@
           <div class="space-y-4 pt-[4rem] pb-[6rem]">
             <ul class="list-decimal pl-6">
               <li>
-                <h3 class="text-paraFont font-ThirdHead text-darkColor">
+                <h3 class="typography-h3 font-semibold text-text-main">
                   Ransomware Attacks – The Digital Hostage Situation
                 </h3>
-                <div class="text-subParaFont font-Paragraph">
+                <div class="typography-body-md text-text-light">
                   <br />
-                  <div class="text-subParaFont py-[.5rem] px-2 italic">
-                    <span class="font-FourthHead">💡 Real Story:</span> In
+                  <div class="typography-body-sm py-[.5rem] px-2 italic text-text-light">
+                    <span class="font-semibold">💡 Real Story:</span> In
                     November 2022, AIIMS Delhi suffered a ransomware attack that
                     wiped outpatient and research data from both primary and
                     backup servers, disrupting services for over a month.
-                    <!-- <a
-                      href="https://www.hindustantimes.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-linkColor underline underline-offset-4"
-                      >Source: Hindustan Times</a
-                    > -->
                   </div>
                 </div>
               </li>
 
               <li>
-                <h3 class="text-paraFont font-ThirdHead text-darkColor">
+                <h3 class="typography-h3 font-semibold text-text-main">
                   Business Email Compromise (BEC) – The CEO Fraud
                 </h3>
-                <div class="text-subParaFont font-Paragraph">
+                <div class="typography-body-md text-text-light">
                   <br />
-                  <div class="text-subParaFont py-[.5rem] px-2 italic">
-                    <span class="font-FourthHead">💡 Real Story:</span> A
+                  <div class="typography-body-sm py-[.5rem] px-2 italic text-text-light">
+                    <span class="font-semibold">💡 Real Story:</span> A
                     Mumbai-based chemicals trading firm lost ₹10 lakh when
                     cybercriminals spoofed a supplier’s email. The accounts team
                     processed the payment, realizing the scam only after it was
                     too late.
-                    <!-- <a
-                      href="https://www.hindustantimes.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-linkColor underline underline-offset-4"
-                      >Source: Hindustan Times</a
-                    > -->
                   </div>
                 </div>
               </li>
 
               <li>
-                <h3 class="text-paraFont font-ThirdHead text-darkColor">
+                <h3 class="typography-h3 font-semibold text-text-main">
                   Phishing Scams – The Fake But Convincing Trap
                 </h3>
-                <div class="text-subParaFont font-Paragraph">
-                  <!-- <p>
-                  Fraudulent emails, SMS, or messages appear to be from trusted
-                  sources, tricking victims into sharing credentials or clicking
-                  malicious links.
-                </p> -->
+                <div class="typography-body-md text-text-light">
                   <br />
-                  <div class="text-subParaFont py-[.5rem] px-2 italic">
-                    <span class="font-FourthHead">💡 Real Story:</span> Across
+                  <div class="typography-body-sm py-[.5rem] px-2 italic text-text-light">
+                    <span class="font-semibold">💡 Real Story:</span> Across
                     Indian organizations, phishing scams have led to significant
                     financial losses as attackers impersonate bosses, urging
                     employees to transfer funds or share confidential data.
-                    <!-- <a
-                      href="https://www.indianexpress.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-linkColor underline underline-offset-4"
-                      >Source: Indian Express</a
-                    > -->
                   </div>
                 </div>
               </li>
@@ -151,16 +125,16 @@
           </div>
 
           <div class="space-y-4 pt-[4rem] pb-[6rem]">
-            <h2 class="text-mobSubHead font-SecHead text-darkColor">
+            <h2 class="typography-h2 text-text-main">
               🛡️ Steps to Safeguard Your Business Today
             </h2>
             <ul class="list-decimal pl-8 space-y-8">
               <li class="space-y-3">
-                <h3 class="text-paraFont font-FourthHead text-darkColor">
+                <h3 class="typography-h3 font-semibold text-text-main">
                   Educate Your Team
                 </h3>
                 <ul
-                  class="list-disc pl-4 space-y-3 font-Paragraph text-subParaFont"
+                  class="list-disc pl-4 space-y-3 typography-body-md text-text-light"
                 >
                   <li>
                     Teach employees how to spot suspicious emails and scams.
@@ -176,52 +150,52 @@
                 </ul>
               </li>
               <li class="space-y-3">
-                <h3 class="text-paraFont font-FourthHead text-darkColor">
+                <h3 class="typography-h3 font-semibold text-text-main">
                   Lock Down Data & Devices
                 </h3>
                 <ul
-                  class="list-disc pl-4 space-y-3 font-Paragraph text-subParaFont"
+                  class="list-disc pl-4 space-y-3 typography-body-md text-text-light"
                 >
                   <li>
                     Always back up important files using <span
-                      class="font-FourthHead"
+                      class="font-semibold"
                     >
                       Google Drive, OneDrive,
                     </span>
                     or
-                    <span class="font-FourthHead"> Zoho WorkDrive</span> .
+                    <span class="font-semibold"> Zoho WorkDrive</span> .
                   </li>
                   <li>Keep devices updated to block security loopholes.</li>
                   <li>
                     Avoid public Wi-Fi—use secure hotspots like <span
-                      class="font-FourthHead">JioFi</span
+                      class="font-semibold">JioFi</span
                     >
-                    or <span class="font-FourthHead">Airtel</span>
+                    or <span class="font-semibold">Airtel</span>
                     Hotspot when working remotely.
                   </li>
                 </ul>
               </li>
               <li class="space-y-3">
-                <h3 class="text-paraFont font-FourthHead text-darkColor">
+                <h3 class="typography-h3 font-semibold text-text-main">
                   Secure Passwords & Accounts
                 </h3>
                 <ul
-                  class="list-disc pl-4 space-y-3 font-Paragraph text-subParaFont"
+                  class="list-disc pl-4 space-y-3 typography-body-md text-text-light"
                 >
                   <li>
                     Use strong, unique passwords—no birthdays or common words!
                   </li>
                   <li>
                     Store passwords safely with tools like <span
-                      class="font-FourthHead"
+                      class="font-semibold"
                     >
                       Bitwarden</span
                     >
-                    or <span class="font-FourthHead">Zoho Vault </span>.
+                    or <span class="font-semibold">Zoho Vault </span>.
                   </li>
                   <li>
                     Turn on two-step verification (2FA) with free apps like <span
-                      class="font-FourthHead"
+                      class="font-semibold"
                     >
                       Google Authenticator</span
                     >.
@@ -229,11 +203,11 @@
                 </ul>
               </li>
               <li class="space-y-3">
-                <h3 class="text-paraFont font-FourthHead text-darkColor">
+                <h3 class="typography-h3 font-semibold text-text-main">
                   Stay Vigilant
                 </h3>
                 <ul
-                  class="list-disc pl-4 space-y-3 font-Paragraph text-subParaFont"
+                  class="list-disc pl-4 space-y-3 typography-body-md text-text-light"
                 >
                   <li>
                     Always verify unexpected financial requests through a phone
@@ -254,24 +228,24 @@
 
           <div class="space-y-4 pt-[4rem] pb-[2rem]">
             <div class="space-y-10 text-center">
-              <h2 class="text-mobSubHead font-SecHead text-darkColor">
+              <h2 class="typography-h2 text-text-main">
                 💪 Take Action Now 💪
               </h2>
 
               <div class="space-y-4">
-                <p class="text-subParaFont font-Paragraph">
+                <p class="typography-body-md text-text-light">
                   Cybersecurity isn’t a luxury—it’s a necessity. By taking
                   simple proactive measures today, you can protect your business
                   from costly disruptions tomorrow.
                 </p>
 
                 <div
-                  class="text-subParaFont font-SubPara text-darkColor text-start space-y-4"
+                  class="typography-body-sm text-text-main text-start space-y-4"
                 >
                   <p>
                     ✅ Best Practices for Digital Nagriks and Enterprises from
                     govt of India <a
-                      class="font-FourthHead"
+                      class="font-semibold"
                       href="https://www.csk.gov.in/documents/CERT-In_Safe_Internet-Best_Practices_Booklet.pdf"
                       ><i class="fa-solid fa-file-arrow-down"></i> download PDF</a
                     >
@@ -279,7 +253,7 @@
                   <p>
                     ✅ Mobile Phone Security instruction from govt of India
                     <a
-                      class="font-FourthHead"
+                      class="font-semibold"
                       href="https://www.csk.gov.in/documents/Mobile_phone_Security.pdf"
                       ><i class="fa-solid fa-file-arrow-down"></i> download PDF
                     </a>
@@ -288,12 +262,12 @@
               </div>
 
               <div class="pt-[2rem]">
-                <p class="text-subParaFont font-Paragraph">
+                <p class="typography-body-md text-text-light">
                   Review your cybersecurity measures and educate your team
                   today. Not sure where to start?
                 </p>
-                <p class="font-Paragraph text-minParaFont">
-                  💡 Visit <span class="font-FourthHead"
+                <p class="typography-body-sm text-text-light">
+                  💡 Visit <span class="font-semibold"
                     >Cyber Swachhta Kendra,</span
                   >
                   Government of India’s cybersecurity hub (<span

@@ -279,7 +279,7 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
             cardHeading: "Essential Steps Before Buying a Home",
           }}
         >
-          <div class="font-Paragraph text-minParaFont">
+          <div class="typography-body-sm text-text-light">
             <ul class="list-disc space-y-4">
               <li class="flex items-start gap-1">
                 <img
@@ -420,17 +420,14 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     <div class="lg:hidden block">
       {#each navBarMedium as navBar, index}
         <details
-          class="border-bgBtn dropdown col-span-3 bg-darkColor text-white {index <
-          navBar.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-bgBtn dropdown col-span-3 bg-darkColor text-white {index < navBar.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-[1rem] py-[1.5rem]"
             onclick={(e) => { e.preventDefault(); ((e) => toggleDropdown(e, index))(e); }}
           >
             <div
-              class="flex justify-between items-center font-FourthHead text-subParaFont"
+              class="flex justify-between items-center font-semibold typography-body-md"
             >
               <h2>{navBar}</h2>
               <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
@@ -541,7 +538,7 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
                   cardHeading: "Essential Steps Before Buying a Home",
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <ul class="list-disc space-y-4">
                     <li class="flex items-start gap-1">
                       <img
@@ -751,10 +748,10 @@ detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

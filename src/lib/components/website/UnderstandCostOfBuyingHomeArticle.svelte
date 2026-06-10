@@ -177,8 +177,8 @@ window.removeEventListener("scroll", handleScroll);
               {
                 heading: `Stamp Duty: `,
                 desc: `<p class="mb-2">Stamp duty is one of the biggest additional expenses when buying a home. This state government tax is calculated based on the property’s market value or purchase price, whichever is higher. It varies from state to state, typically ranging from 5% to 7% of the property’s value.</p>
-            <p><span class="font-FourthHead mr-2">💡 Tip:</span> First-time homebuyers in some states may be eligible for concessions or rebates on stamp duty. Check with your state government for specific benefits.</p>
-            <p><span class="font-FourthHead mr-2">💡 Payment Deadline:</span> It’s usually paid before property registration.</p>`,
+            <p><span class="font-semibold mr-2">💡 Tip:</span> First-time homebuyers in some states may be eligible for concessions or rebates on stamp duty. Check with your state government for specific benefits.</p>
+            <p><span class="font-semibold mr-2">💡 Payment Deadline:</span> It’s usually paid before property registration.</p>`,
               },
               {
                 heading: `Property Registration Charges: `,
@@ -207,7 +207,7 @@ window.removeEventListener("scroll", handleScroll);
               {
                 heading: `Legal & Technical Verification: `,
                 desc: `<p class="mb-2">Before buying, ensure the property has a clear title and all necessary approvals. A lawyer or real estate consultant can help verify the documents, including sale deed, encumbrance certificate, and RERA registration.</p>
-                    <p><span class="font-FourthHead mr-2">🪙 Cost Range :</span> ₹10,000–₹25,000 depending on the complexity of the verification.</p>
+                    <p><span class="font-semibold mr-2">🪙 Cost Range :</span> ₹10,000–₹25,000 depending on the complexity of the verification.</p>
                     
                     `,
                 cost: ``,
@@ -215,7 +215,7 @@ window.removeEventListener("scroll", handleScroll);
               {
                 heading: `Home Valuation: `,
                 desc: `<p class="mb-2">A professional valuation ensures that the property’s market value aligns with the purchase price, which is especially important if you’re applying for a home loan.</p>
-                                        <p><span class="font-FourthHead mr-2">🪙 Cost Range :</span>  ₹3,000–₹7,000.</p>
+                                        <p><span class="font-semibold mr-2">🪙 Cost Range :</span>  ₹3,000–₹7,000.</p>
 
                     `,
 
@@ -308,7 +308,7 @@ window.removeEventListener("scroll", handleScroll);
                 desc: `These include legal fees, valuation charges, and administrative fees by the lender.`,
               },
             ],
-            listSecPara: `<span class="font-ThirdHead mr-2">💡 Tip : </span>  Use Digital DSA’s tools like the Home Loan Affordability Calculator and EMI Planner to get a clear understanding of your loan costs and manage your finances effectively.`,
+            listSecPara: `<span class="typography-h3 font-semibold mr-2">💡 Tip : </span>  Use Digital DSA’s tools like the Home Loan Affordability Calculator and EMI Planner to get a clear understanding of your loan costs and manage your finances effectively.`,
           }}
         />
 
@@ -338,7 +338,7 @@ window.removeEventListener("scroll", handleScroll);
               },
               {
                 heading: `Expert Guidance: `,
-                desc: `Our team is here to simplify legal processes and help you access government benefits like <span class="font-FourthHead" >PMAY.</span>`,
+                desc: `Our team is here to simplify legal processes and help you access government benefits like <span class="font-semibold" >PMAY.</span>`,
               },
             ],
           }}
@@ -351,10 +351,7 @@ window.removeEventListener("scroll", handleScroll);
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -362,7 +359,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -378,8 +375,8 @@ window.removeEventListener("scroll", handleScroll);
                     {
                       heading: `Stamp Duty: `,
                       desc: `<p class="mb-2">Stamp duty is one of the biggest additional expenses when buying a home. This state government tax is calculated based on the property’s market value or purchase price, whichever is higher. It varies from state to state, typically ranging from 5% to 7% of the property’s value.</p>
-                    <p><span class="font-FourthHead mr-2"> 💡 Tip:</span> First-time homebuyers in some states may be eligible for concessions or rebates on stamp duty. Check with your state government for specific benefits.</p>
-                    <p><span class="font-FourthHead mr-2"> 💡 Payment Deadline:</span> It’s usually paid before property registration.</p>`,
+                    <p><span class="font-semibold mr-2"> 💡 Tip:</span> First-time homebuyers in some states may be eligible for concessions or rebates on stamp duty. Check with your state government for specific benefits.</p>
+                    <p><span class="font-semibold mr-2"> 💡 Payment Deadline:</span> It’s usually paid before property registration.</p>`,
                     },
                     {
                       heading: `Property Registration Charges: `,
@@ -408,7 +405,7 @@ window.removeEventListener("scroll", handleScroll);
                     {
                       heading: `Legal & Technical Verification: `,
                       desc: `<p class="mb-2">Before buying, ensure the property has a clear title and all necessary approvals. A lawyer or real estate consultant can help verify the documents, including sale deed, encumbrance certificate, and RERA registration.</p>
-                            <p><span class="font-FourthHead mr-2">🪙 Cost Range :</span> ₹10,000–₹25,000 depending on the complexity of the verification.</p>
+                            <p><span class="font-semibold mr-2">🪙 Cost Range :</span> ₹10,000–₹25,000 depending on the complexity of the verification.</p>
                             
                             `,
                       cost: ``,
@@ -416,7 +413,7 @@ window.removeEventListener("scroll", handleScroll);
                     {
                       heading: `Home Valuation: `,
                       desc: `<p class="mb-2">A professional valuation ensures that the property’s market value aligns with the purchase price, which is especially important if you’re applying for a home loan.</p>
-                                                <p><span class="font-FourthHead mr-2">🪙 Cost Range :</span>  ₹3,000–₹7,000.</p>
+                                                <p><span class="font-semibold mr-2">🪙 Cost Range :</span>  ₹3,000–₹7,000.</p>
         
                             `,
 
@@ -509,7 +506,7 @@ window.removeEventListener("scroll", handleScroll);
                       desc: `These include legal fees, valuation charges, and administrative fees by the lender.`,
                     },
                   ],
-                  listSecPara: `<span class="font-ThirdHead mr-2">💡 Tip : </span>  Use Digital DSA’s tools like the Home Loan Affordability Calculator and EMI Planner to get a clear understanding of your loan costs and manage your finances effectively.`,
+                  listSecPara: `<span class="typography-h3 font-semibold mr-2">💡 Tip : </span>  Use Digital DSA’s tools like the Home Loan Affordability Calculator and EMI Planner to get a clear understanding of your loan costs and manage your finances effectively.`,
                 }}
               />
 
@@ -540,7 +537,7 @@ window.removeEventListener("scroll", handleScroll);
                     },
                     {
                       heading: `Expert Guidance: `,
-                      desc: `Our team is here to simplify legal processes and help you access government benefits like <span class="font-FourthHead" >PMAY.</span>`,
+                      desc: `Our team is here to simplify legal processes and help you access government benefits like <span class="font-semibold" >PMAY.</span>`,
                     },
                   ],
                 }}
@@ -552,7 +549,7 @@ window.removeEventListener("scroll", handleScroll);
     </div>
 
     <div class="px-1 py-4 md:p-16">
-      <p class="mb-4 font-FourthHead">Related Articles:</p>
+      <p class="mb-4 font-semibold">Related Articles:</p>
       <div class="flex flex-col md:flex-row gap-4">
         <VerticalBlog
           blogLists={[

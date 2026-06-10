@@ -156,7 +156,7 @@
         <TwoColumnWithLeftHeading
           contents={{
             heading: "How we can help",
-            listTopPara: `<span class="font-FourthHead">Life is full of uncertainties, and unexpected challenges can arise
+            listTopPara: `<span class="font-semibold">Life is full of uncertainties, and unexpected challenges can arise
             when we least expect them.</span>`,
             list: [
               {
@@ -184,14 +184,14 @@
             reverse: true,
           }}
         >
-          <ul class="flex flex-col gap-4 font-SubPara text-subParaFont">
+          <ul class="flex flex-col gap-4 typography-body-sm typography-body-md">
             <li>
               If you’re struggling to meet loan or EMI payments, our platform
-              provides tools like <span class="font-FourthHead"
+              provides tools like <span class="font-semibold"
                 >Part Payment Planner</span
               >,
-              <span class="font-FourthHead">Flexible EMI Planner</span>, and
-              <span class="font-FourthHead">Affordability Calculator</span>
+              <span class="font-semibold">Flexible EMI Planner</span>, and
+              <span class="font-semibold">Affordability Calculator</span>
               to help you strategize repayments effectively. Reach out to explore
               tailored solutions for loan restructuring or balance transfers.
             </li>
@@ -279,30 +279,30 @@
             reverse: true,
           }}
         >
-          <ul class="space-y-4 font-Paragraph text-subParaFont">
+          <ul class="space-y-4 typography-body-md text-text-light">
             <li class="flex flex-col gap-2">
-              <span class="font-ThirdHead text-minSubHead">Loans Without Labels</span>
+              <span class="typography-h3 font-semibold text-text-main">Loans Without Labels</span>
               <p>
                 <strong>Salaried</strong>, <strong>self-employed</strong>, <strong>freelancer</strong>, or somewhere in between? We don’t do stereotypes—our loans fit <em>your profile</em>, not the other way around.
               </p>
             </li>
 
             <li class="flex flex-col gap-2">
-              <span class="font-ThirdHead text-minSubHead">For NRIs: Homecoming Without Headaches</span>
+              <span class="typography-h3 font-semibold text-text-main">For NRIs: Homecoming Without Headaches</span>
               <p>
                 Buying a home in India shouldn’t feel like an <em>immigration checkpoint</em>. We simplify the process so you get the <strong>best loan</strong> without the <em>red tape</em>.
               </p>
             </li>
 
             <li class="flex flex-col gap-2">
-              <span class="font-ThirdHead text-minSubHead">First-Time Borrower? We’ve Got You</span>
+              <span class="typography-h3 font-semibold text-text-main">First-Time Borrower? We’ve Got You</span>
               <p>
                 Confused by <em>bank jargon</em>? Don't worry, we keep it simple—<strong>real numbers</strong>, <strong>clear guidance</strong>, and no <em>hidden fees lurking</em> in the fine print.
               </p>
             </li>
 
             <li class="flex flex-col gap-2">
-              <span class="font-ThirdHead text-minSubHead">100% Digital, 0% Spam</span>
+              <span class="typography-h3 font-semibold text-text-main">100% Digital, 0% Spam</span>
               <p>
                 Compare loans, check eligibility, and apply without your number ending up in a <em>million marketing lists</em>. <strong>Your privacy</strong>, our priority.
               </p>
@@ -342,10 +342,7 @@
     <div class="lg:hidden lg:mt-0">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -353,7 +350,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont leading-5">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -363,7 +360,7 @@
               <TwoColumnWithLeftHeading
                 contents={{
                   heading: "How we can help",
-                  listTopPara: `<span class="font-FourthHead">Life is full of uncertainties, and unexpected challenges can arise
+                  listTopPara: `<span class="font-semibold">Life is full of uncertainties, and unexpected challenges can arise
             when we least expect them.</span>`,
                   list: [
                     {
@@ -391,15 +388,15 @@
                 reverse: true,
               }}
               >
-                <ul class="flex flex-col gap-4 font-SubPara text-subParaFont">
+                <ul class="flex flex-col gap-4 typography-body-sm typography-body-md">
                   <li>
                     If you’re struggling to meet loan or EMI payments, our
-                    platform provides tools like <span class="font-FourthHead"
+                    platform provides tools like <span class="font-semibold"
                       >Part Payment Planner</span
                     >,
-                    <span class="font-FourthHead">Flexible EMI Planner</span>,
+                    <span class="font-semibold">Flexible EMI Planner</span>,
                     and
-                    <span class="font-FourthHead">Affordability Calculator</span
+                    <span class="font-semibold">Affordability Calculator</span
                     >
                     to help you strategize repayments effectively. Reach out to explore
                     tailored solutions for loan restructuring or balance transfers.
@@ -476,9 +473,9 @@
                   reverse: true,
                 }}
               >
-                <ul class=" space-y-4 font-Paragraph text-subParaFont">
+                <ul class="space-y-4 typography-body-md text-text-light">
                   <li class="flex flex-col gap-2">
-                    <span class="font-ThirdHead text-minSubHead"
+                    <span class="typography-h3 font-semibold text-text-main"
                       >Accessible Financial Solutions</span
                     >
                     <p>
@@ -489,7 +486,7 @@
                     </p>
                   </li>
                   <li class="flex flex-col gap-2">
-                    <span class="font-ThirdHead text-minSubHead"
+                    <span class="typography-h3 font-semibold text-text-main"
                       >Support for Migrants</span
                     >
                     <p>
@@ -499,7 +496,7 @@
                     </p>
                   </li>
                   <li class="flex flex-col gap-2">
-                    <span class="font-ThirdHead text-minSubHead"
+                    <span class="typography-h3 font-semibold text-text-main"
                       >Digital Assistance</span
                     >
                     <p>
@@ -583,10 +580,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

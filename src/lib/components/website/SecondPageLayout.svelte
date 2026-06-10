@@ -16,7 +16,7 @@
   })());</script>
 
 <section class="w-full bg-[var(--landing-bg)] text-black dark:text-white">
-  <div id="parentDiv" class=" mx-1 lg:mx-auto relative">
+  <div id="parentDiv" class="mx-1 lg:mx-auto relative">
     {#if shouldShowBreadcrumbs}
       <div class="hidden lg:flex pl-[4rem] py-4">
         <TestBreadCrumb />
@@ -39,7 +39,7 @@
 
     <div
       id="pageDesign"
-      class="w-full relative -top-[3rem] md:-top-[5rem] lg:-top-[13rem]  lg:px-0 mx-auto"
+      class="w-full relative -top-[3rem] md:-top-[5rem] lg:-top-[13rem] lg:px-0 mx-auto"
     >
       <div
         class="bg-[var(--landing-bg)] text-black dark:text-white lg:w-[80%] mx-auto border border-[var(--landing-glass-border)] border-b p-6 sm:p-8 text-center flex justify-center items-center relative z-40"

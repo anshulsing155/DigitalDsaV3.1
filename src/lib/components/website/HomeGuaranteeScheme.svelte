@@ -479,7 +479,7 @@ window.removeEventListener("scroll", handleScroll);
     <div>
       <div class="hidden lg:block">
         <StickyNavbar navList={subList} {activeSection}>
-          <div class="  flex gap-4 pr-4">
+          <div class="flex gap-4 pr-4">
             <div>
               <Button
                 btnName={navList.firstBtn}
@@ -490,7 +490,7 @@ window.removeEventListener("scroll", handleScroll);
           </div>
         </StickyNavbar>
 
-        <div class=" px-[2rem] lg:px-[4rem]">
+        <div class="px-[2rem] lg:px-[4rem]">
           <div>
             <div id="guarantee" data-section="guarantee">
               <div class="border-b border-borderColor">
@@ -521,7 +521,7 @@ window.removeEventListener("scroll", handleScroll);
               {#if cardDataList.length > 0}
                 <div class="pt-[4rem]">
                   <h3
-                    class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="md:text-start typography-h2 text-text-main"
                   >
                     {IconCardHeading}
                   </h3>
@@ -539,7 +539,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="grid grid-cols-3 border-b border-borderColor gap-[2rem]"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont col-span-1 pt-[8rem]"
+                  class="typography-h2 text-text-main col-span-1 pt-[8rem]"
                 >
                   Other assistance grants & concessions
                 </h2>
@@ -559,7 +559,7 @@ window.removeEventListener("scroll", handleScroll);
                             class="border-2 border-borderColor min-h-[50svh] h-full p-[1rem] md:p-[2rem] flex flex-col justify-between"
                           >
                             <div class="flex flex-col gap-4">
-                              <h3 class="font-ThirdHead text-minSubHead">
+                              <h3 class="typography-h3 font-semibold text-text-main">
                                 {details.title}
                               </h3>
                               <div class="flex flex-col gap-2">
@@ -576,7 +576,7 @@ window.removeEventListener("scroll", handleScroll);
                             </div>
                             <a
                               href="/home-loan/home-loan-tools-calculator"
-                              class="hover:underline text-linkColor font-Paragraph text-subParaFont"
+                              class="hover:underline text-linkColor typography-body-md text-text-light"
                               >Show me more home loan tools and calculators</a
                             >
                           </div>
@@ -588,7 +588,7 @@ window.removeEventListener("scroll", handleScroll);
                           >
                             <div class="flex flex-col justify-center items-center">
                               <img src={details.icon} alt="icon" />
-                              <p class="text-center font-Paragraph text-subParaFont">
+                              <p class="text-center typography-body-md text-text-light">
                                 {details.linkName}
                               </p>
                             </div>
@@ -600,15 +600,15 @@ window.removeEventListener("scroll", handleScroll);
                               <img src={details.src} alt={details.alt} />
                             </div>
                             <div class="p-[1rem] md:p-[2rem] flex flex-col gap-4">
-                              <h3 class="font-ThirdHead text-minSubHead">
+                              <h3 class="typography-h3 font-semibold text-text-main">
                                 {details.heading}
                               </h3>
-                              <p class="font-Paragraph text-minParaFont">
+                              <p class="typography-body-sm text-text-light">
                                 {details.para}
                               </p>
                               <a
                                 href={details.url}
-                                class="text-linkColor hover:underline font-Paragraph text-subParaFont"
+                                class="text-linkColor hover:underline typography-body-md text-text-light"
                                 >{details.link}</a
                               >
                             </div>
@@ -621,7 +621,7 @@ window.removeEventListener("scroll", handleScroll);
 
               <div class="border-b grid gap-4 md:grid-cols-3">
                 <h2
-                  class="col-span-1 py-[3rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="col-span-1 py-[3rem] typography-h2 text-text-main"
                 >
                   Tools & calculators
                 </h2>
@@ -636,7 +636,7 @@ window.removeEventListener("scroll", handleScroll);
               cardHeading="Message us 24/7"
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>
@@ -665,10 +665,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -678,7 +675,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -695,7 +692,7 @@ window.removeEventListener("scroll", handleScroll);
                 {#if cardDataList.length > 0}
                   <div class="pt-[2rem]">
                     <h3
-                      class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="md:text-start typography-h2 text-text-main"
                     >
                       {IconCardHeading}
                     </h3>
@@ -713,12 +710,12 @@ window.removeEventListener("scroll", handleScroll);
                   reverse
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <p class="font-Paragraph text-minParaFont">
+                    <p class="typography-body-sm text-text-light">
                       Get an estimate of how much you may be able to borrow.
                     </p>
                     <a
                       href="/calculators/emi-calculator"
-                      class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                       >Use calculator</a
                     >
                   </div>
@@ -731,7 +728,7 @@ window.removeEventListener("scroll", handleScroll);
               >
                 {#if forHome.length > 0}
                   <h2
-                    class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="md:text-start typography-h2 text-text-main"
                   >
                     Looking for a home
                   </h2>
@@ -752,13 +749,13 @@ window.removeEventListener("scroll", handleScroll);
                   cardHeading="Home Guarantee Scheme"
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <p class="font-Paragraph text-minParaFont">
+                    <p class="typography-body-sm text-text-light">
                       You may be able to buy your first home sooner with a
                       smaller deposit.
                     </p>
                     <a
                       href="/finance-support"
-                      class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                       >Discover the Scheme</a
                     >
                   </div>
@@ -767,7 +764,7 @@ window.removeEventListener("scroll", handleScroll);
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
                   {#if whatNext.length > 0}
                     <h2
-                      class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="md:text-start typography-h2 text-text-main"
                     >
                       What's next?
                     </h2>
@@ -794,7 +791,7 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <div class="grid lg:grid-cols-3">
                   <h2
-                    class="lg:col-span-1 pt-[3rem] lg:pb-[3rem] pb-0 font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="lg:col-span-1 pt-[3rem] lg:pb-[3rem] pb-0 typography-h2 text-text-main"
                   >
                     Tools & calculators
                   </h2>

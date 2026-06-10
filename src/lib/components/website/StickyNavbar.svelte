@@ -85,10 +85,7 @@
 									e.preventDefault();
 									scrollToSection(nav.targetId);
 								}}
-								class="typography-label mx-4 flex items-center gap-2 py-6 text-[var(--form-text-secondary)] transition-colors hover:text-primary {activeSection ===
-								nav.targetId
-									? 'text-primary'
-									: 'text-black dark:text-white'}"
+								class="typography-label mx-4 flex items-center gap-2 py-6 text-[var(--form-text-secondary)] transition-colors hover:text-primary {activeSection === nav.targetId ? 'text-primary' : 'text-black dark:text-white'}"
 							>
 								{@html nav.name}
 							</a>

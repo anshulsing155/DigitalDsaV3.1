@@ -5,12 +5,12 @@
   
 </script>
 
-<section class="relative  ">
+<section class="relative">
   <div
-    class=" animate-rotate  "
+    class="animate-rotate"
   >
     <svg
-      class="h-[4rem] md:h-[5.5rem] w-[5rem]  LoaderLogo"
+      class="h-[4rem] md:h-[5.5rem] w-[5rem] LoaderLogo"
       viewBox="0 0 240 308 "
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@
     </svg>
   </div>
   <div class="absolute mt-2">
-    <p class="text-minParaFont font-FourthHead text-black">
+    <p class="typography-body-sm font-semibold text-black">
       {$hostName}
     </p>
   </div>

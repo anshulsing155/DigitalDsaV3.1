@@ -286,14 +286,14 @@ Make sure you obtain any relevant approvals for strata titled properties before 
               slot="list"
             >
               <div class="flex items-center gap-1">
-                <h4 class="text-[6rem] font-ThirdHead">3.99</h4>
-                <div class="flex flex-col items-center justify-center font-FourthHead">
+                <h4 class="text-[6rem] typography-h3 font-semibold">3.99</h4>
+                <div class="flex flex-col items-center justify-center font-semibold">
                   <span class="text-[3rem] leading-[3rem]">%</span>
                   <span class="text-[2rem] leading-[2.15rem]">PA</span>
                 </div>
               </div>
-              <div class="flex flex-col gap-1 justify-center font-Paragraph text-subParaFont">
-                <p class="font-FifthHead">10 Year fixed rate and Comparison rate^</p>
+              <div class="flex flex-col gap-1 justify-center typography-body-md text-text-light">
+                <p class="font-semibold">10 Year fixed rate and Comparison rate^</p>
                 <p>Minimum loan size $5,000. Maximum loan size</p>
                 <p>
                   $30,000. 
@@ -316,7 +316,7 @@ Make sure you obtain any relevant approvals for strata titled properties before 
     </div>
     <div class="hidden lg:block">
       <StickyNavbar navList={subList} {activeSection}>
-        <div class="  flex gap-4 pr-4">
+        <div class="flex gap-4 pr-4">
           {#each navList as lastItem}
             {#if lastItem.actionBtn}
               {#each lastItem.actionBtn as action}
@@ -342,16 +342,16 @@ Make sure you obtain any relevant approvals for strata titled properties before 
                 <div
                 class="flex items-center gap-1"
               >
-                <h4 class="text-[6rem] font-ThirdHead">3.99</h4>
+                <h4 class="text-[6rem] typography-h3 font-semibold">3.99</h4>
                 <div
-                  class="flex flex-col items-center justify-center font-FourthHead"
+                  class="flex flex-col items-center justify-center font-semibold"
                 >
                   <span class="text-[3rem] leading-[3rem]">%</span>
                   <span class="text-[2rem] leading-[2.15rem]">PA</span>
                 </div>
               </div>
-                <div class="flex flex-col gap-1  justify-center font-Paragraph text-subParaFont">
-                    <p class="font-FifthHead">10 Year fixed rate and Comparison rate^</p>
+                <div class="flex flex-col gap-1 justify-center typography-body-md text-text-light">
+                    <p class="font-semibold">10 Year fixed rate and Comparison rate^</p>
                     <p>Minimum loan size $5,000. Maximum loan size</p>
                     <p> $30,000. <span class="underline text-linkColor cursor-pointer">^Comparison rate warning.</span> </p>
                 </div>
@@ -371,7 +371,7 @@ Make sure you obtain any relevant approvals for strata titled properties before 
           </div>
           <div class="grid lg:grid-cols-5 py-[2rem] border-b">
             <h2
-              class="col-span-full lg:col-span-2 font-ThirdHead text-mobSubHead md:col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+              class="col-span-full lg:col-span-2 typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2"
             >
               At glance
             </h2>
@@ -406,7 +406,7 @@ Make sure you obtain any relevant approvals for strata titled properties before 
             cardAltName={cardAlt1}
             cardHeading={cardHead1}
           >
-            <div class="grid gap-4 font-Paragraph text-subParaFont" slot="list">
+            <div class="grid gap-4 typography-body-md text-text-light" slot="list">
               <li>
                 Check out our range of resources to help you on your journey
                 towards a more sustainable life.
@@ -432,12 +432,12 @@ Make sure you obtain any relevant approvals for strata titled properties before 
           class="border-b border-dividerColor grid gap-4 py-[4rem] lg:grid-cols-5"
         >
           <h3
-            class="font-ThirdHead text-mobSubHead md:col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2"
           >
             How to apply
           </h3>
           <div
-            class="grid gap-5 overflow-hidden font-Paragraph text-subParaFont md:col-span-3"
+            class="grid gap-5 overflow-hidden typography-body-md text-text-light md:col-span-3"
           >
             {#each switchList as list}
               <ul class="flex flex-col gap-4">
@@ -448,7 +448,7 @@ Make sure you obtain any relevant approvals for strata titled properties before 
                       >{list.num}</span
                     >
                     <p
-                      class="md:col-span-8 col-span-5 font-Paragraph text-subParaFont"
+                      class="md:col-span-8 col-span-5 typography-body-md text-text-light"
                     >
                       {@html list.text}
                     </p>
@@ -465,13 +465,13 @@ Make sure you obtain any relevant approvals for strata titled properties before 
         >
           <div class="lg:col-span-2">
             <h2
-              class="  font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               FAQs
             </h2>
           </div>
 
-          <div class=" lg:col-span-3 border-b">
+          <div class="lg:col-span-3 border-b">
             {#each faq as question}
               <div class="border-b border-borderColor">
                 <ThingsYouShould
@@ -485,13 +485,10 @@ Make sure you obtain any relevant approvals for strata titled properties before 
         </div>
       </div>
     </div>
-    <div class=" lg:hidden">
+    <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-6 py-4"
@@ -504,13 +501,13 @@ Make sure you obtain any relevant approvals for strata titled properties before 
           </summary>
 
           {#if index == 0}
-            <div class=" bg-white text-black px-[2rem]" id="glance">
+            <div class="bg-white text-black px-[2rem]" id="glance">
                 <div class="">
                     
                       
                   <div class="grid lg:grid-cols-5 py-[2rem] border-b">
                     <h2
-                      class="col-span-full lg:col-span-2 font-ThirdHead text-mobSubHead md:col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+                      class="col-span-full lg:col-span-2 typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2"
                     >
                       At glance
                     </h2>
@@ -545,7 +542,7 @@ Make sure you obtain any relevant approvals for strata titled properties before 
                     cardAltName={cardAlt1}
                     cardHeading={cardHead1}
                   >
-                    <div class="grid gap-4 font-Paragraph text-subParaFont" slot="list">
+                    <div class="grid gap-4 typography-body-md text-text-light" slot="list">
                       <li>
                         Check out our range of resources to help you on your journey
                         towards a more sustainable life.
@@ -561,19 +558,19 @@ Make sure you obtain any relevant approvals for strata titled properties before 
             </div>
             </div>
           {:else if index == 1}
-            <div id="eligibility" class=" bg-white text-black px-[2rem]">
+            <div id="eligibility" class="bg-white text-black px-[2rem]">
                 <ThingsYouShould thinkKnow={areYouEligible} disc="list-disc" />
 
             </div>
           {:else if index == 2}
-            <div class=" bg-white text-black px-[2rem] py-[1rem] flex flex-col  gap-[1rem] " id="apply">
+            <div class="bg-white text-black px-[2rem] py-[1rem] flex flex-col gap-[1rem]" id="apply">
                 <h3
-                class="font-ThirdHead text-mobSubHead  md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h2 text-text-main"
               >
                 How to apply
               </h3>
               <div
-                class="grid gap-5 overflow-hidden font-Paragraph text-subParaFont "
+                class="grid gap-5 overflow-hidden typography-body-md text-text-light"
               >
                 {#each switchList as list}
                   <ul class="flex flex-col gap-4">
@@ -584,7 +581,7 @@ Make sure you obtain any relevant approvals for strata titled properties before 
                           >{list.num}</span
                         >
                         <p
-                          class="md:col-span-8 col-span-5 font-Paragraph text-subParaFont"
+                          class="md:col-span-8 col-span-5 typography-body-md text-text-light"
                         >
                           {@html list.text}
                         </p>
@@ -595,16 +592,16 @@ Make sure you obtain any relevant approvals for strata titled properties before 
               </div>
             </div>
           {:else if index == 3}
-            <div class=" bg-white text-black px-[2rem]" id="disclosure">
+            <div class="bg-white text-black px-[2rem]" id="disclosure">
                 <div class="lg:col-span-2">
                     <h2
-                      class="  font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="typography-h2 text-text-main"
                     >
                       FAQs
                     </h2>
                   </div>
         
-                  <div class=" lg:col-span-3 border-b">
+                  <div class="lg:col-span-3 border-b">
                     {#each faq as question}
                       <div class="border-b border-borderColor">
                         <ThingsYouShould
@@ -622,7 +619,7 @@ Make sure you obtain any relevant approvals for strata titled properties before 
     </div>
     <div slot="secondary" class="p-4 lg:p-0">
         <!-- <h2
-                  class="font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h3 font-semibold md:text-start md:typography-h2-md lg:typography-h2"
               >
                   We're here to help
               </h2> -->

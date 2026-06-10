@@ -85,14 +85,14 @@
       {
         id: 1,
         title: " Compare Loans from Multiple Banks​",
-        desc: `Compare  <span class="font-FourthHead">50+ banks</span>  in one place and find the best interest rates, loan amounts, and eligibility criteria without visiting multiple lenders.`,
+        desc: `Compare  <span class="font-semibold">50+ banks</span>  in one place and find the best interest rates, loan amounts, and eligibility criteria without visiting multiple lenders.`,
         icon: "/icons/balanceTransferTopup.svg",
         altName: "compare-icon",
       },
       {
         id: 2,
         title: "Hassle-Free Online Application​​",
-        desc: `Apply online with a <span class="font-FourthHead">100% digital process </span> —no paperwork, no long queues. Just enter details, upload documents, and submit in minutes.`,
+        desc: `Apply online with a <span class="font-semibold">100% digital process </span> —no paperwork, no long queues. Just enter details, upload documents, and submit in minutes.`,
         icon: "/icons/apply.svg",
         altName: "apply-icon",
       },
@@ -100,7 +100,7 @@
       {
         id: 3,
         title: "No Hidden Costs – Clear Terms & Conditions​",
-        desc: `We ensure 100% transparency, displaying interest rates, fees, and terms upfront— <span class="font-FifthHead"> no hidden charges or surprises</span>, just clear loan details.`,
+        desc: `We ensure 100% transparency, displaying interest rates, fees, and terms upfront— <span class="font-semibold"> no hidden charges or surprises</span>, just clear loan details.`,
         icon: "/icons/no-fee.svg",
         altName: "fee-icon",
       },
@@ -108,19 +108,19 @@
   };
   let balanceTransferTopup = {
     heading: "Personal Loan Balance Transfer with Top-Up",
-    subHeading: `It  allows you to transfer your existing loan to a new lender offering a lower interest rate, while also availing an <span class="font-FourthHead" > additional loan amount</span> . This helps you save on <span class="font-FourthHead" > interest costs</span>  and get extra funds for personal or financial needs.`,
+    subHeading: `It  allows you to transfer your existing loan to a new lender offering a lower interest rate, while also availing an <span class="font-semibold" > additional loan amount</span> . This helps you save on <span class="font-semibold" > interest costs</span>  and get extra funds for personal or financial needs.`,
     items: [
       {
         id: 1,
         title: " Lower Interest & EMI​",
-        desc: ` Moving your loan to a lender with a  <span class="font-FourthHead" >lower interest rate </span>  reduces your <span class="font-FourthHead" >  monthly EMI</span>, making it easier to manage finances. This also helps in <span class="font-FourthHead" >saving a significant amount on interest </span>  over the loan tenure.`,
+        desc: ` Moving your loan to a lender with a  <span class="font-semibold" >lower interest rate </span>  reduces your <span class="font-semibold" >  monthly EMI</span>, making it easier to manage finances. This also helps in <span class="font-semibold" >saving a significant amount on interest </span>  over the loan tenure.`,
         icon: "/icons/interestIcon.svg",
         altName: "interest-icon",
       },
       {
         id: 2,
         title: " Get Additional Funds ​​",
-        desc: ` A top-up loan provides <span class="font-FourthHead" >extra funds  </span> without the hassle of a new loan application. You can use this amount for <span class="font-FourthHead" >home renovation, medical bills, education, or personal expenses </span> , ensuring financial flexibility when needed.`,
+        desc: ` A top-up loan provides <span class="font-semibold" >extra funds  </span> without the hassle of a new loan application. You can use this amount for <span class="font-semibold" >home renovation, medical bills, education, or personal expenses </span> , ensuring financial flexibility when needed.`,
         icon: "/icons/negotiate.svg",
         altName: "negotiate-icon",
       },
@@ -128,28 +128,28 @@
       {
         id: 3,
         title: "Improved Credit Score​",
-        desc: `A balance transfer helps in maintaining or improving your  <span class="font-FourthHead" >  credit score by reducing EMI amounts</span>, making timely repayments easier, and keeping your debt under control.`,
+        desc: `A balance transfer helps in maintaining or improving your  <span class="font-semibold" >  credit score by reducing EMI amounts</span>, making timely repayments easier, and keeping your debt under control.`,
         icon: "/icons/emiIcon.svg",
         altName: "emi-icon",
       },
       {
         id: 4,
         title: "Minimal Documentation ​",
-        desc: `Since you are already a loan borrower, a balance transfer with a top-up usually requires <span class="font-FourthHead" > less paperwork</span>  compared to applying for a fresh personal loan.`,
+        desc: `Since you are already a loan borrower, a balance transfer with a top-up usually requires <span class="font-semibold" > less paperwork</span>  compared to applying for a fresh personal loan.`,
         icon: "/icons/apply.svg",
         altName: "contact-icon",
       },
       {
         id: 5,
         title: "Flexible Repayment Options​",
-        desc: ` Balance transfer allows you to <span class="font-FourthHead">choose a repayment tenure </span>  that suits your financial goals. Opt for a <span class="font-FourthHead"> shorter tenure to close the loan faster</span>  or a <span class="font-FourthHead">longer tenure to reduce EMI burden </span> .`,
+        desc: ` Balance transfer allows you to <span class="font-semibold">choose a repayment tenure </span>  that suits your financial goals. Opt for a <span class="font-semibold"> shorter tenure to close the loan faster</span>  or a <span class="font-semibold">longer tenure to reduce EMI burden </span> .`,
         icon: "/icons/personalLoan.svg",
         altName: "loan-icon",
       },
       {
         id: 5,
         title: "Debt Consolidation ​",
-        desc: ` If you have multiple loans, a balance transfer with a top-up can <span class="font-FourthHead" >combine them into a single loan </span> , making repayment more manageable and reducing the stress of handling multiple EMIs.`,
+        desc: ` If you have multiple loans, a balance transfer with a top-up can <span class="font-semibold" >combine them into a single loan </span> , making repayment more manageable and reducing the stress of handling multiple EMIs.`,
         icon: "/icons/riskFactor.svg",
         altName: "risk-icon",
       },
@@ -213,42 +213,42 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Collateral </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Collateral </span>":
             [
               `Requires collateral (property, gold, vehicle, etc.)`,
               `No collateral needed ❌`,
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Risk for Borrower</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Risk for Borrower</span>":
             [
               "Risk of losing assets if unpaid ⚠️",
               "No asset risk, but impacts credit score 📉",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/problem.svg' alt='home icon'>Loan Amount</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/problem.svg' alt='home icon'>Loan Amount</span>":
             [
               "Higher amounts due to security 📈",
               "Lower amounts compared to secured loans 📉",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Approval Time</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Approval Time</span>":
             [
               "Longer due to collateral verification ⏳",
               "Faster approval and disbursal ⚡",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Eligibility</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Eligibility</span>":
             [
               "Based on asset value and income 🏠📊",
               "Based on credit score and income 📊💳",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/tenure.svg' alt='home icon'>Examples</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/tenure.svg' alt='home icon'>Examples</span>":
             [
               "Home loan 🏠, Car loan 🚗, Gold loan 🏅",
               "Personal loan 👤🪙, Credit card loan 💳, Education loan 🎓",
@@ -267,7 +267,7 @@
     originalSource:
       "https://www.freepik.com/free-photo/young-couple-preparing-vacation-trip-car-sunny-day-woman-man-stacking-up-sport-equipment-ready-going-sea-riverside-ocean-concept-relationship-summer-weekend_10444920.htm",
     heading: "Personal loans",
-    para: `A personal loan is an <a  href="#securedUnsecured" class="cursor-pointer text-black"><span class="font-FourthHead "> unsecured loan <sup class="text-red-700 text-[.9rem]">*</sup> </span> </a> that helps individuals meet financial needs like medical emergencies, wedding expenses, home renovations, or debt consolidation. Since it doesn’t require collateral, lenders evaluate your eligibility based on income, credit score, and repayment capacity.`,
+    para: `A personal loan is an <a  href="#securedUnsecured" class="cursor-pointer text-black"><span class="font-semibold"> unsecured loan <sup class="text-red-700 text-[.9rem]">*</sup> </span> </a> that helps individuals meet financial needs like medical emergencies, wedding expenses, home renovations, or debt consolidation. Since it doesn’t require collateral, lenders evaluate your eligibility based on income, credit score, and repayment capacity.`,
     actionBtn: [
       {
         btnName: "Explore loan offers",
@@ -294,34 +294,34 @@
   const loanEligibilityCriteria = {
     heading: "Are You Eligible to Apply for a Personal Loan?",
     subPara: [
-      `<span class="font-ThirdHead text-paraFont">  1. Age Requirement</span>`,
-      `You must be at least <span class="font-FourthHead">18 years old </span>  (or 21 in some cases, depending on the lender).
+      `<span class="typography-h3 font-semibold text-text-main">  1. Age Requirement</span>`,
+      `You must be at least <span class="font-semibold">18 years old </span>  (or 21 in some cases, depending on the lender).
         This ensures that you are legally eligible to enter into a financial agreement.
         Some lenders may also have an upper age limit (typically 60–65 years for salaried individuals and up to 70 years for self-employed applicants).`,
-      `<span class="font-ThirdHead text-paraFont">  2. Minimum Income Requirement  </span>`,
-      `Lenders require borrowers to meet a  <span class="font-FourthHead">  minimum income threshold</span> to ensure their ability to repay the loan.`,
+      `<span class="typography-h3 font-semibold text-text-main">  2. Minimum Income Requirement  </span>`,
+      `Lenders require borrowers to meet a  <span class="font-semibold">  minimum income threshold</span> to ensure their ability to repay the loan.`,
       `<ul class="list-disc pl-5">
            <li>Your employment type (salaried or self-employed) </li>
           <li> The city you reside in (higher thresholds in metro cities)</li>
           <li> The lender's internal criteria</li>
           </ul>`,
-      `For example, some banks may require a  <span class="font-FourthHead">minimum monthly income of ₹20,000 </span> , while others may set a higher or lower requirement.`,
-      `<span class="font-ThirdHead text-paraFont"> 3. Employment and Regular Income  </span>`,
-      `A stable and verifiable  <span class="font-FourthHead"> </span> source of income is essential.`,
+      `For example, some banks may require a  <span class="font-semibold">minimum monthly income of ₹20,000 </span> , while others may set a higher or lower requirement.`,
+      `<span class="typography-h3 font-semibold text-text-main"> 3. Employment and Regular Income  </span>`,
+      `A stable and verifiable  <span class="font-semibold"> </span> source of income is essential.`,
       `<ul class="list-disc pl-5"> 
-          <li> <span class="font-FourthHead"> Salaried Employees –</span> Must have a stable job in a reputable organization with at least 6 months to 1 year of continuous employment. </li>
-          <li> <span class="font-FourthHead">Self-Employed Individuals – </span> Should have a steady income from a business, freelance work, or profession with at least 2–3 years of stable financial records. </li>
-          <li> <span class="font-FourthHead">Pensioners –  </span> Some lenders offer loans to pensioners with a fixed monthly pension.</li>
+          <li> <span class="font-semibold"> Salaried Employees –</span> Must have a stable job in a reputable organization with at least 6 months to 1 year of continuous employment. </li>
+          <li> <span class="font-semibold">Self-Employed Individuals – </span> Should have a steady income from a business, freelance work, or profession with at least 2–3 years of stable financial records. </li>
+          <li> <span class="font-semibold">Pensioners –  </span> Some lenders offer loans to pensioners with a fixed monthly pension.</li>
           </ul>`,
 
-      `<span class="font-ThirdHead text-paraFont">  4. Good Credit Rating </span>`,
-      `A  <span class="font-FourthHead">good credit score (typically 700 or above) </span>  improves loan approval chances and helps secure lower interest rates.`,
+      `<span class="typography-h3 font-semibold text-text-main">  4. Good Credit Rating </span>`,
+      `A  <span class="font-semibold">good credit score (typically 700 or above) </span>  improves loan approval chances and helps secure lower interest rates.`,
       ` <ul class="list-disc pl-5">
-          <li>  <span class="font-FourthHead"> Credit history –</span>  Previous loans, credit card usage, repayment patterns </li>
-          <li>  <span class="font-FourthHead"> Debt-to-income ratio –</span>  Your total monthly debt compared to your income</li>
-          <li>  <span class="font-FourthHead"> Financial discipline –</span>  Timely payments of past loans and bills</li>
+          <li>  <span class="font-semibold"> Credit history –</span>  Previous loans, credit card usage, repayment patterns </li>
+          <li>  <span class="font-semibold"> Debt-to-income ratio –</span>  Your total monthly debt compared to your income</li>
+          <li>  <span class="font-semibold"> Financial discipline –</span>  Timely payments of past loans and bills</li>
            </ul>`,
-      `If your credit score is low, improving it through <span class="font-FourthHead"> timely repayments, reducing outstanding debt, and avoiding unnecessary credit applications</span>  can enhance eligibility.`,
+      `If your credit score is low, improving it through <span class="font-semibold"> timely repayments, reducing outstanding debt, and avoiding unnecessary credit applications</span>  can enhance eligibility.`,
     ],
   };
 
@@ -338,11 +338,11 @@
 <section class="content">
   <NewPageLayout {pageData} >
     <Sublist {subList} />
-    <div class=" divide-y">
-      <div id="type" class="px-[0.5rem] lg:px-[4rem]">
+    <div class="divide-y">
+      <div id="type" class="px-4 lg:px-16">
         <WhyChoose facilities={personalLoanPurpose} />
       </div>
-      <div class="px-[0.5rem] lg:px-[4rem]" id="balanceTransfer">
+      <div class="px-4 lg:px-16" id="balanceTransfer">
         <WhyChoose facilities={balanceTransferTopup} />
       </div>
       <ButtonBanner
@@ -378,7 +378,7 @@
         />
       </div>
 
-      <div id="repayment" class="px-[0.5rem] lg:px-[4rem]">
+      <div id="repayment" class="px-4 lg:px-16">
         <TwoColumn
           cardImage={cardImg1}
           cardAltName={cardAlt1}
@@ -388,11 +388,11 @@
           originalSource="www.pexel.com"
         >
           <div class="flex flex-col gap-2">
-            <p class="font-FifthHead text-subParaFont">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               We’ll provide an estimate based on the bank’s representative rate
               and your selected loan amount, loan term and loan type
             </p>
-            <ul class="font-Paragraph space-y-2 text-subParaFont">
+            <ul class="typography-body-md space-y-2 text-[var(--form-text-secondary)]">
               <li class="flex gap-2 items-center">
                 <img
                   src="/icons/circle-check.svg"
@@ -426,10 +426,10 @@
           cardData: [
             {
               title: "Investment Helps Beat Inflation",
-              para: `If you only focus on <span class="font-FourthHead">paying EMIs and  keeping money in a savings account </span> , your funds lose value over time due to <span class="font-FourthHead">inflation </span>. Investing ensures your savings grow and retain their <span class="font-FourthHead"> purchasing power </span> . <br> <br> 💡 <span class="font-FourthHead">Example: </span> 
-      <ul class="list-disc pl-5 space-y-3 mt-2 text-subParaFont">
+              para: `If you only focus on <span class="font-semibold">paying EMIs and  keeping money in a savings account </span> , your funds lose value over time due to <span class="font-semibold">inflation </span>. Investing ensures your savings grow and retain their <span class="font-semibold"> purchasing power </span> . <br> <br> 💡 <span class="font-semibold">Example: </span> 
+      <ul class="list-disc pl-5 space-y-3 mt-2 typography-body-md">
    
-      <li>Suppose you want to accumulate <span class="font-FourthHead">₹10 lakh </span>  and can invest <span class="font-FourthHead"> ₹5,000 per month </span>. If you invest in a <span class="font-FourthHead">SIP with 12% returns </span> , you can reach your goal in 10 years. </li>
+      <li>Suppose you want to accumulate <span class="font-semibold">₹10 lakh </span>  and can invest <span class="font-semibold"> ₹5,000 per month </span>. If you invest in a <span class="font-semibold">SIP with 12% returns </span> , you can reach your goal in 10 years. </li>
       </ul>
       `,
               linkName: "Calculate Your Investment Tenure",
@@ -438,16 +438,16 @@
             {
               title: "Emergency Fund is Crucial",
               para: `While repaying a loan, unexpected financial emergencies like: <br> 
-      <ul class="list-disc pl-5 font-FifthHead space-y-2 mt-2"> 
+      <ul class="list-disc pl-5 font-semibold space-y-2 mt-2"> 
       <li>Job loss </li>
       <li>Medical expenses </li>
       <li> Business losses</li>
       <li>Additional expenses (children’s education, home repairs, etc.) </li>
-      </ul> <br> <p> can arise at any time. If you <span class="font-FourthHead">maintain an emergency fund </span> , you can <span class="font-FourthHead">continue your loan repayments stress-free </span>  while managing urgent expenses. </p> <p class="mt-5">💡 Best Investment Options for Emergency Fund: </p> 
+      </ul> <br> <p> can arise at any time. If you <span class="font-semibold">maintain an emergency fund </span> , you can <span class="font-semibold">continue your loan repayments stress-free </span>  while managing urgent expenses. </p> <p class="mt-5">💡 Best Investment Options for Emergency Fund: </p> 
       <ul class="list-disc pl-5 space-y-3 mt-2">
-      <li><span class="font-FourthHead">Recurring Deposit (RD) </span> </li>
-        <li><span class="font-FourthHead">Fixed Deposit (FD) </span>  </li>
-        <li><span class="font-FourthHead">Systematic Investment plan (SIP) </span>  </li>
+      <li><span class="font-semibold">Recurring Deposit (RD) </span> </li>
+        <li><span class="font-semibold">Fixed Deposit (FD) </span>  </li>
+        <li><span class="font-semibold">Systematic Investment plan (SIP) </span>  </li>
          
            
       </ul>`,
@@ -459,16 +459,14 @@
       />
       <div
         id="securedUnsecured"
-        class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
+        class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
       >
-        <div class=" ">
+        <div class="">
           <h2
-            class=" font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center py-5"
+            class="typography-h2 text-center py-5 text-black dark:text-white"
           >
-            <p>
-              <span class="underline"> Secured </span> vs
-              <span class="underline"> Unsecured Loans</span>
-            </p>
+            <span class="underline"> Secured </span> vs
+            <span class="underline"> Unsecured Loans</span>
           </h2>
         </div>
         <div class="">
@@ -477,10 +475,10 @@
           {/each}
         </div>
       </div>
-      <div class=" lg:px-[4rem]" id="eligibility">
+      <div class="px-4 lg:px-16" id="eligibility">
         <ThingsYouShould thinkKnow={loanEligibilityCriteria} disc="list-disc" />
       </div>
-      <div class="px-[0.5rem] lg:px-[4rem]">
+      <div class="px-4 lg:px-16">
         <WhyChoose facilities={whyChooseUs} />
       </div>
 
@@ -505,7 +503,7 @@
         }}
       />
 
-      <div class="px-[0.5rem] lg:px-[4rem]">
+      <div class="px-4 lg:px-16">
         <TwoColumn
           cardImage={cardImg2}
           cardAltName={cardAlt2}
@@ -513,7 +511,7 @@
           sourceName="DigitalDSA"
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
             slot="list"
           >
             <li>
@@ -535,7 +533,7 @@
         </TwoColumn>
       </div>
 
-      <div class="px-[0.5rem] lg:px-[4rem]">
+      <div class="px-4 lg:px-16">
         <Information />
       </div>
     </div>
@@ -551,10 +549,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

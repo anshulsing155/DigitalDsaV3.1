@@ -30,8 +30,8 @@
 
       <!-- Dynamic Text Section -->
       <div class="flex flex-col gap-4 text-center">
-        <!-- <h2 class="font-FifthHead text-mobSubHead">{@html content.title}</h2>
-          <p class="font-Paragraph text-minParaFont">{@html content.subTitle}</p> -->
+        <!-- <h2 class="font-semibold typography-h3">{@html content.title}</h2>
+          <p class="typography-body-sm text-text-light">{@html content.subTitle}</p> -->
         <div>
           {@render children?.()}
         </div>

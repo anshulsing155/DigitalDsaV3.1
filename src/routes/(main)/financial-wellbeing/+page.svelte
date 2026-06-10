@@ -278,15 +278,15 @@
       ></StickyNavbar>
     </div>
 
-    <div class=" hidden px-[2rem] lg:block lg:px-[4rem]">
-      <div class=" relative pb-[14rem]" data-section="wellbeing" id="wellbeing">
+    <div class="hidden px-[2rem] lg:block lg:px-[4rem]">
+      <div class="relative pb-[14rem]" data-section="wellbeing" id="wellbeing">
         <ThingsYouShould thinkKnow={wellBeing} disc="list-decimal" />
         <div class="grid grid-cols-3 gap-[2rem] absolute top-[50%]">
           <div
-            class="flex flex-col items-start gap-3 font-Paragraph text-subParaFont"
+            class="flex flex-col items-start gap-3 typography-body-md text-[var(--form-text-secondary)]"
           >
             <img src="/icons/everyDay.svg" alt="" class="h-10" />
-            <h2 class=" font-FifthHead text-paraFont">
+            <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
               Every Day – Managing Regular Finances
             </h2>
             <p>
@@ -299,10 +299,10 @@
             </p>
           </div>
           <div
-            class="flex flex-col items-start gap-3 font-Paragraph text-subParaFont"
+            class="flex flex-col items-start gap-3 typography-body-md text-[var(--form-text-secondary)]"
           >
             <img src="/icons/rainyDay.svg" alt="" class="h-10" />
-            <h2 class=" font-FifthHead text-paraFont">
+            <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
               Rainy Day – Preparing for Emergencies
             </h2>
             <p>
@@ -315,10 +315,10 @@
             </p>
           </div>
           <div
-            class="flex flex-col gap-3 items-start font-Paragraph text-subParaFont"
+            class="flex flex-col gap-3 items-start typography-body-md text-[var(--form-text-secondary)]"
           >
             <img src="/icons/oneFineDay.svg" alt="" class="h-10" />
-            <h2 class=" font-FifthHead text-paraFont">
+            <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
               One fine Day – Building Long-Term Security
             </h2>
             <p>
@@ -354,11 +354,11 @@
           cardHeading="Why take this assessment?"
         >
           <div
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
             slot="list"
           >
             <p>
-              <span class="font-FifthHead text-paraFont"
+              <span class="typography-body-lg !font-semibold text-black dark:text-white"
                 >1. Personalized Insights – Know Where You Stand</span
               > <br />
               Understanding your financial well-being is key to security. This assessment
@@ -366,7 +366,7 @@
               personalized score to highlight strengths and areas for improvement.
             </p>
             <p>
-              <span class="font-FifthHead text-paraFont"
+              <span class="typography-body-lg !font-semibold text-black dark:text-white"
                 >2. Actionable Steps – Improve Your Financial Health</span
               > <br />
               A score is just the start—you need a plan. Get step-by-step advice
@@ -374,7 +374,7 @@
               stability.
             </p>
             <p>
-              <span class="font-FifthHead text-paraFont"
+              <span class="typography-body-lg !font-semibold text-black dark:text-white"
                 >3. Better Decision-Making – Plan with Confidence</span
               > <br />
               Smart financial decisions require planning. This assessment helps you
@@ -390,13 +390,10 @@
       </div>
     </div>
 
-    <div class=" lg:hidden">
+    <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-6 py-4"
@@ -413,10 +410,10 @@
               <ThingsYouShould thinkKnow={wellBeing} disc="list-decimal" />
               <div class="grid md:grid-cols-2 gap-[2rem] px-[0.5rem] pb-[3rem]">
                 <div
-                  class="flex flex-col items-start gap-3 font-Paragraph text-subParaFont"
+                  class="flex flex-col items-start gap-3 typography-body-md text-[var(--form-text-secondary)]"
                 >
                   <img src="/icons/everyDay.svg" alt="" class="h-10" />
-                  <h2 class=" font-FifthHead text-paraFont">
+                  <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
                     Every Day – Managing Regular Finances
                   </h2>
                   <p>
@@ -429,10 +426,10 @@
                   </p>
                 </div>
                 <div
-                  class="flex flex-col items-start gap-3 font-Paragraph text-subParaFont"
+                  class="flex flex-col items-start gap-3 typography-body-md text-[var(--form-text-secondary)]"
                 >
                   <img src="/icons/rainyDay.svg" alt="" class="h-10" />
-                  <h2 class=" font-FifthHead text-paraFont">
+                  <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
                     Rainy Day – Preparing for Emergencies
                   </h2>
                   <p>
@@ -445,10 +442,10 @@
                   </p>
                 </div>
                 <div
-                  class="flex flex-col gap-3 items-start font-Paragraph text-subParaFont"
+                  class="flex flex-col gap-3 items-start typography-body-md text-[var(--form-text-secondary)]"
                 >
                   <img src="/icons/oneFineDay.svg" alt="" class="h-10" />
-                  <h2 class=" font-FifthHead text-paraFont">
+                  <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
                     One fine Day – Building Long-Term Security
                   </h2>
                   <p>
@@ -474,11 +471,11 @@
                 cardHeading="Why take this assessment?"
               >
                 <div
-                  class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                  class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                   slot="list"
                 >
                   <p>
-                    <span class="font-FifthHead text-paraFont"
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >1. Personalized Insights – Know Where You Stand</span
                     > <br />
                     Understanding your financial well-being is key to security. This
@@ -487,7 +484,7 @@
                     for improvement.
                   </p>
                   <p>
-                    <span class="font-FifthHead text-paraFont"
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >2. Actionable Steps – Improve Your Financial Health</span
                     > <br />
                     A score is just the start—you need a plan. Get step-by-step advice
@@ -495,7 +492,7 @@
                     financial stability.
                   </p>
                   <p>
-                    <span class="font-FifthHead text-paraFont"
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >3. Better Decision-Making – Plan with Confidence</span
                     > <br />
                     Smart financial decisions require planning. This assessment helps

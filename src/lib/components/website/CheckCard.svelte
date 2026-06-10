@@ -22,6 +22,6 @@
     <p>
       {contents.para}
     </p>
-    <h2 class="font-FourthHead text-end">{contents.userName}</h2>
+    <h2 class="font-semibold text-end">{contents.userName}</h2>
   </div>
 </div>

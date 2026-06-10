@@ -237,11 +237,11 @@
   <div class="space-y-6 w-full mx-auto">
     <div class="flex flex-col gap-2 py-5">
       <h2
-        class="md:text-center font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+        class="md:text-center typography-h2 text-text-main"
       >
         Feedback matters!
       </h2>
-      <p class="font-Paragraph text-subParaFont md:w-[50%] mx-auto">
+      <p class="typography-body-md text-text-light md:w-[50%] mx-auto">
         We value your feedback to help us improve our portal and services.
         Please take a moment to share your thoughts and suggestions.
       </p>
@@ -255,7 +255,7 @@
       <div class="flex flex-col gap-[2rem] justify-between w-full mx-auto">
         <div class="flex flex-col gap-2 justify-start md:justify-center">
           <h2
-            class="font-FifthHead text-paraFont md:text-subParaFont text-start md:text-center"
+            class="font-semibold typography-body-md md:typography-body-md text-start md:text-center"
           >
             How would you rate your overall experience with the Digital DSA
             service?
@@ -263,7 +263,7 @@
           <div
             class="flex w-full gap-4 justify-start md:justify-center mx-auto"
           >
-            <div class="cursor-pointer text-paraFont md:text-mobSubHead">
+            <div class="cursor-pointer typography-body-md md:typography-h3">
               {#each [1, 2, 3, 4, 5] as star}
                 <button type="button" onclick={ddsaStar} aria-label="Rate {star} star{star > 1 ? 's' : ''}">
                   <i
@@ -278,7 +278,7 @@
 
             {#if showDDSARating && feedbackData.ddsaRatingDetailsId >= 1}
               <div
-                class={`text-paraFont md:text-mobSubHead ${ratingMap[feedbackData.ddsaRatingDetailsId]?.color}`}
+                class={`typography-body-md md:typography-h3 ${ratingMap[feedbackData.ddsaRatingDetailsId]?.color}`}
               >
                 <span
                   ><i
@@ -286,7 +286,7 @@
                   ></i></span
                 >
                 <span
-                  class="font-FifthHead text-subParaFont md:text-paraFont align-middle"
+                  class="font-semibold typography-body-md md:typography-body-md align-middle"
                 >
                   {ratingMap[feedbackData.ddsaRatingDetailsId]?.label}
                 </span>
@@ -298,10 +298,10 @@
         {#if feedbackData.ddsaRatingDetailsId > 3}
           <div class="flex flex-col gap-2 text-start md:text-center">
             <div class="flex flex-col gap-1">
-              <h2 class="font-FifthHead text-subParaFont">
+              <h2 class="font-semibold typography-body-md">
                 That's great! What features do you find most useful?
               </h2>
-              <p class="font-Paragraph text-minParaFont">
+              <p class="typography-body-sm text-text-light">
                 (We’d love to hear your feedback, we'll feature it as a
                 testimonial on our web app!)
               </p>
@@ -324,18 +324,18 @@
                       name="ddsaOther"
                       bind:value={feedbackData.ddsaOtherReview}
                       id="ddsaOther"
-                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 font-Paragraph text-paraFont resize-none text-black outline-none focus:border-btnBg focus:ring-0"
+                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
                       placeholder=" "
                       rows="3"
                     ></textarea>
                     <label
                       for="ddsaOther"
-                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
                     >
                       Other
                     </label>
                     <div
-                      class="absolute top-0 left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-FifthHead text-black"
+                      class="absolute top-0 left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-semibold text-black"
                     >
                       <img src="/icons/msgBg.svg" alt="mail" class="h-5" />
                     </div>
@@ -346,7 +346,7 @@
           </div>
         {:else if feedbackData.ddsaRatingDetailsId > 0 && feedbackData.ddsaRatingDetailsId <= 3}
           <div class="flex flex-col gap-2 text-start md:text-center">
-            <h2 class="font-FifthHead text-subParaFont">
+            <h2 class="font-semibold typography-body-md">
               {#if feedbackData.ddsaRatingDetailsId == 1}
                 <span
                   >We regret that we couldn't satisfy your requirements😒;</span
@@ -376,18 +376,18 @@
                       name="ddsaOther"
                       bind:value={feedbackData.ddsaOtherReview}
                       id="ddsaOther"
-                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 font-Paragraph text-paraFont resize-none text-black outline-none focus:border-btnBg focus:ring-0"
+                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
                       placeholder=" "
                       rows="3"
                     ></textarea>
                     <label
                       for="ddsaOther"
-                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
                     >
                       Other
                     </label>
                     <div
-                      class="absolute top-0 left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-FifthHead text-black"
+                      class="absolute top-0 left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-semibold text-black"
                     >
                       <img src="/icons/msgBg.svg" alt="mail" class="h-5" />
                     </div>
@@ -443,10 +443,10 @@
                 onkeydown={(e) =>
                   (e.key === "Enter" || e.key === " ") && triggerFileUpload()}
                 aria-label="Upload Image"
-                class="font-FifthHead text-subParaFont md:text-paraFont text-start cursor-pointer"
+                class="font-semibold typography-body-md md:typography-body-md text-start cursor-pointer"
               >
                 Upload Image <br />
-                <span class="font-SubPara text-[0.6rem]">
+                <span class="typography-body-sm text-[0.6rem]">
                   (2MB & Only JPG, PNG, or WEBP are allowed.)
                 </span>
               </div>
@@ -459,23 +459,23 @@
                 type="text"
                 name="userName"
                 bind:value={feedbackData.userName}
-                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 font-Paragraph text-paraFont text-black outline-none focus:border-btnBg focus:ring-0 bg-transparent"
+                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-black outline-none focus:border-btnBg focus:ring-0 bg-transparent"
               />
               <label
                 for="userName"
-                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
               >
                 Enter name
               </label>
               <div
-                class="absolute left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-FifthHead text-black"
+                class="absolute left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-semibold text-black"
               >
                 <img src="/icons/userBg.svg" alt="user" class="h-5" />
               </div>
             </div>
             {#if errors.userName}
               <p
-                class="text-dangerColor font-SubPara text-minParaFont text-start"
+                class="text-dangerColor typography-body-sm text-start"
               >
                 {errors.userName._errors[0]}
               </p>
@@ -488,24 +488,24 @@
                 type="text"
                 name="userEmail"
                 bind:value={feedbackData.userEmail}
-                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 font-Paragraph text-paraFont text-black outline-none focus:border-btnBg focus:ring-0"
+                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-black outline-none focus:border-btnBg focus:ring-0"
                 placeholder=" "
               />
               <label
                 for="userEmail"
-                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
               >
                 Enter email
               </label>
               <div
-                class="absolute left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-FifthHead text-black"
+                class="absolute left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-semibold text-black"
               >
                 <img src="/icons/mailBg.svg" alt="mail" class="h-5" />
               </div>
             </div>
             {#if errors.userEmail}
               <p
-                class="text-dangerColor font-SubPara text-minParaFont text-start"
+                class="text-dangerColor typography-body-sm text-start"
               >
                 {errors.userEmail._errors[0]}
               </p>
@@ -520,25 +520,25 @@
                     name="message"
                     bind:value={feedbackData.feedbackMsg}
                     id="message"
-                    class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 font-Paragraph text-paraFont resize-none text-black outline-none focus:border-btnBg focus:ring-0"
+                    class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
                     placeholder=" "
                     rows="6"
                   ></textarea>
                   <label
                     for="message"
-                    class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                    class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
                   >
                     Message
                   </label>
                   <div
-                    class="absolute top-0 left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-FifthHead text-black"
+                    class="absolute top-0 left-0 flex h-full w-11 items-center justify-center rounded-l-md px-2 font-semibold text-black"
                   >
                     <img src="/icons/msgBg.svg" alt="mail" class="h-5" />
                   </div>
                 </div>
                 {#if errors.feedbackMsg}
                   <p
-                    class="text-dangerColor font-SubPara text-minParaFont text-start"
+                    class="text-dangerColor typography-body-sm text-start"
                   >
                     {errors.feedbackMsg._errors[0]}
                   </p>
@@ -547,7 +547,7 @@
 
               {#if feedbackData.ddsaRatingDetailsId >= 4}
                 <div class="text-start">
-                  <p class="font-Paragraph text-subParaFont">
+                  <p class="typography-body-md text-text-light">
                     We may showcase your feedback as a testimonial
                     {#if !feedbackData.uploadedImage}
                       if you provide a profile image.
@@ -574,13 +574,13 @@
       </div>
 
       {#if feedbackData.userName && feedbackData.userEmail}
-        <div class=" my-5 w-full mx-auto space-y-6">
-          <div class=" grid place-content-end">
+        <div class="my-5 w-full mx-auto space-y-6">
+          <div class="grid place-content-end">
             <ReCaptcha ontoken={handleToken} bind:this={recaptchaComponent} />
           </div>
           {#if errors.recaptcha}
             <p
-              class="text-dangerColor font-SubPara text-minParaFont text-center"
+              class="text-dangerColor typography-body-sm text-center"
             >
               {errors.recaptcha._errors[0]}
             </p>
@@ -589,7 +589,7 @@
           {#if isWaiting}
             <button
               type="button"
-              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none font-Paragraph text-minParaFont md:text-subParaFont rounded-lg text-sm w-full px-5 py-2.5 text-center"
+              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-text-light md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
               disabled
               aria-label="Submitting feedback"
             >
@@ -600,7 +600,7 @@
           {:else}
             <button
               type="submit"
-              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none font-Paragraph text-minParaFont md:text-subParaFont rounded-lg text-sm w-full px-5 py-2.5 text-center"
+              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-text-light md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
               disabled={hasErrors || !recaptchaToken}
             >
               Submit

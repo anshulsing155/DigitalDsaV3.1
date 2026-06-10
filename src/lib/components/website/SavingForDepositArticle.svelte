@@ -171,7 +171,7 @@ window.removeEventListener("scroll", handleScroll);
           contents={{
             heading: "Ways to Save for a Down Payment",
 
-            secPara: `<p class="font-Paragraph text-miniSubHead mb-8">Turning your dream of owning your first home into reality starts here.✨</p>
+            secPara: `<p class="typography-body-md text-miniSubHead mb-8">Turning your dream of owning your first home into reality starts here.✨</p>
                         
                         <p class="mb-4">Owning your first home is a major milestone—but we know it can also feel overwhelming, especially when you’re navigating the world of <a href="/finance-support/financial-hardship" class="underline">financial planning</a> and <a href="/home-loan" class="underline">home loans</a> for the first time. That’s where we come in. At Digital DSA, we’re not just advisors; we’re partners in your journey, here to ensure you feel informed, confident, and supported every step of the way.</p>
                         <p>🚀 Let’s start with some practical steps to help you save for your down payment.</p>
@@ -216,7 +216,7 @@ window.removeEventListener("scroll", handleScroll);
                 desc: `<span>Start saving an amount similar to your expected loan EMI. This will not only help you build a down payment but also prepare you for managing repayments later.</span>`,
               },
             ],
-            listSecPara: `<p><span class="font-FourthHead">💡Remember :</span> Slow and steady wins the race. Aim for a sustainable budget you can stick to over the long term.</p>`,
+            listSecPara: `<p><span class="font-semibold">💡Remember :</span> Slow and steady wins the race. Aim for a sustainable budget you can stick to over the long term.</p>`,
           }}
         />
         <TwoColumnWithLeftHeading
@@ -252,7 +252,7 @@ window.removeEventListener("scroll", handleScroll);
               },
               {
                 heading: `<span>Plan for additional costs :</span>`,
-                desc: `<span>Beyond the down payment, remember to budget for upfront costs like <span class="font-FourthHead">stamp duty</span>, <span class="font-FourthHead">registration charges</span>, or <span class="font-FourthHead">legal fees.</span></span>`,
+                desc: `<span>Beyond the down payment, remember to budget for upfront costs like <span class="font-semibold">stamp duty</span>, <span class="font-semibold">registration charges</span>, or <span class="font-semibold">legal fees.</span></span>`,
               },
             ],
           }}
@@ -315,7 +315,7 @@ window.removeEventListener("scroll", handleScroll);
               },
               {
                 heading: `<span>Tools to empower you :</span>`,
-                desc: `<span>Use our <a href="/calculators/emi-calculator" class="font-FourthHead underline">Calculators</a> and <a href="/planners/part-payment-planner" class="font-FourthHead underline">Planners</a> to make informed decisions.</span>`,
+                desc: `<span>Use our <a href="/calculators/emi-calculator" class="font-semibold underline">Calculators</a> and <a href="/planners/part-payment-planner" class="font-semibold underline">Planners</a> to make informed decisions.</span>`,
               },
             ],
           }}
@@ -341,7 +341,7 @@ window.removeEventListener("scroll", handleScroll);
           }}
         />
         <div class="px-2 py-8 md:p-16 items-center border-b border-[#E5E5E5]">
-          <h2 class="text-minSubHead mb-4 font-ThirdHead">Final Thoughts</h2>
+          <h2 class="typography-h3 mb-4 font-semibold">Final Thoughts</h2>
           <p>
             At Digital DSA, we’ll help you navigate every aspect of buying your
             first home, from saving for a down payment to securing the best loan
@@ -357,10 +357,7 @@ window.removeEventListener("scroll", handleScroll);
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -368,7 +365,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -380,7 +377,7 @@ window.removeEventListener("scroll", handleScroll);
                 contents={{
                   heading: "Ways to Save for a Down Payment",
 
-                  secPara: `<p class="font-Paragraph text-miniSubHead mb-8">Turning your dream of owning your first home into reality starts here.✨</p>
+                  secPara: `<p class="typography-body-md text-miniSubHead mb-8">Turning your dream of owning your first home into reality starts here.✨</p>
                         
                         <p class="mb-4">Owning your first home is a major milestone—but we know it can also feel overwhelming, especially when you’re navigating the world of <a href="/finance-support/financial-hardship" class="underline">financial planning</a> and <a href="/home-loan" class="underline">home loans</a> for the first time. That’s where we come in. At Digital DSA, we’re not just advisors; we’re partners in your journey, here to ensure you feel informed, confident, and supported every step of the way.</p>
                         <p>🚀 Let’s start with some practical steps to help you save for your down payment.</p>
@@ -422,7 +419,7 @@ window.removeEventListener("scroll", handleScroll);
                       desc: `<span>Start saving an amount similar to your expected loan EMI. This will not only help you build a down payment but also prepare you for managing repayments later.</span>`,
                     },
                   ],
-                  listSecPara: `<p><span class="font-FourthHead">💡Remember :</span> Slow and steady wins the race. Aim for a sustainable budget you can stick to over the long term.</p>`,
+                  listSecPara: `<p><span class="font-semibold">💡Remember :</span> Slow and steady wins the race. Aim for a sustainable budget you can stick to over the long term.</p>`,
                 }}
               />
               <TwoColumnWithLeftHeading
@@ -459,7 +456,7 @@ window.removeEventListener("scroll", handleScroll);
                     },
                     {
                       heading: `<span>Plan for additional costs :</span>`,
-                      desc: `<span>Beyond the down payment, remember to budget for upfront costs like <span class="font-FourthHead">stamp duty</span>, <span class="font-FourthHead">registration charges</span>, or <span class="font-FourthHead">legal fees.</span></span>`,
+                      desc: `<span>Beyond the down payment, remember to budget for upfront costs like <span class="font-semibold">stamp duty</span>, <span class="font-semibold">registration charges</span>, or <span class="font-semibold">legal fees.</span></span>`,
                     },
                   ],
                 }}
@@ -523,7 +520,7 @@ window.removeEventListener("scroll", handleScroll);
                     },
                     {
                       heading: `<span>Tools to empower you :</span>`,
-                      desc: `<span>Use our <a href="/calculators/emi-calculator" class="font-FourthHead underline">Calculators</a> and <a href="/planners/part-payment-planner" class="font-FourthHead underline">Planners</a> to make informed decisions.</span>`,
+                      desc: `<span>Use our <a href="/calculators/emi-calculator" class="font-semibold underline">Calculators</a> and <a href="/planners/part-payment-planner" class="font-semibold underline">Planners</a> to make informed decisions.</span>`,
                     },
                   ],
                 }}
@@ -551,7 +548,7 @@ window.removeEventListener("scroll", handleScroll);
               <div
                 class="px-2 py-8 md:p-16 items-center border-b border-[#E5E5E5]"
               >
-                <h2 class="text-minSubHead mb-4 font-ThirdHead">
+                <h2 class="typography-h3 mb-4 font-semibold">
                   Final Thoughts
                 </h2>
                 <p>
@@ -569,10 +566,10 @@ window.removeEventListener("scroll", handleScroll);
     </div>
 
     <div class="px-[0.5rem] lg:px-[4rem] py-[4rem]">
-      <h2 class="mb-5 text-minSubHead font-ThirdHead">
+      <h2 class="mb-5 typography-h3 font-semibold">
         Explore More Resources 📖
       </h2>
-      <p class="mb-4 font-FourthHead">Related Articles:</p>
+      <p class="mb-4 font-semibold">Related Articles:</p>
       <div class="flex flex-col md:flex-row gap-4">
         <VerticalBlog
           blogLists={[

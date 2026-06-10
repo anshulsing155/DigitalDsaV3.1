@@ -57,6 +57,7 @@
 	--color-bg-main: var(--ddsa-white);
 	--color-bg-alt: var(--ddsa-gray-50);
 	--color-border: var(--ddsa-gray-200);
+	--color-mainBg: var(--ddsa-white);
 
 	/* --- System Feedback --- */
 	--color-success: var(--ddsa-success);

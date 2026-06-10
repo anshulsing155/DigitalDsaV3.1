@@ -259,10 +259,10 @@
             class="h-[2rem] lg:h-[3rem] hidden dark:block"
           />
           <div class="block">
-            <p class="text-center font-FifthHead text-xs sm:text-subParaFont">
+            <p class="text-center font-semibold text-xs sm:typography-body-md">
               {$hostName}
             </p>
-            <p class="font-SubPara sm:text-minParaFont 2xl:flex hidden">
+            <p class="typography-body-sm sm:typography-body-sm 2xl:flex hidden">
               powered by EYantrik
             </p>
           </div>
@@ -274,7 +274,7 @@
           <li class="text-center">
             <a
               href={nav.link}
-              class="group relative font-FourthHead text-subParaFont lg:py-10 text-black dark:text-white hover:text-black dark:hover:text-white"
+              class="group relative font-semibold typography-body-md lg:py-10 text-black dark:text-white hover:text-black dark:hover:text-white"
             >
               {nav.list}
               {#if nav.hasOwnProperty("star")}
@@ -292,10 +292,7 @@
               {/if}
 
               <span
-                class="absolute bottom-0 left-0 h-1 w-full bg-btnBg group-hover:scale-x-100 {finalValue ===
-                nav.id
-                  ? 'scale-x-100'
-                  : 'scale-x-0'}"
+                class="absolute bottom-0 left-0 h-1 w-full bg-btnBg group-hover:scale-x-100 {finalValue === nav.id ? 'scale-x-100' : 'scale-x-0'}"
               ></span>
             </a>
           </li>
@@ -307,7 +304,7 @@
         type="button"
         onclick={toggleNav}
         aria-label="Open navigation"
-        class="flex text-minHeadFont faBarCloseCustomClass items-center"
+        class="flex typography-h2 faBarCloseCustomClass items-center"
       >
         <span>
           <svg
@@ -338,7 +335,7 @@
       {#if page.data.user?.name}
         <!-- <button
           type="button"
-          class="font-FifthHead text-navFont bg-btnBg p-5 sm:py-11"
+          class="font-semibold text-navFont bg-btnBg p-5 sm:py-11"
           onclick={signOut}>Logout</button
         > -->
 
@@ -360,23 +357,21 @@
               </div>
             {/if}
             <span
-              class="font-Paragraph text-paraFont text-black group-hover:underline"
+              class="typography-body-md text-black group-hover:underline"
               >{formattedName.length > 10
                 ? formattedName.slice(0, 10) + "..."
                 : formattedName}</span
             >
           </div>
           <i
-            class="fa-solid fa-angle-down text-black {profileIsOpen
-              ? ' rotate-180'
-              : '0'} transition transform"
+            class="fa-solid fa-angle-down text-black {profileIsOpen ? ' rotate-180' : '0'} transition transform"
           ></i>
         </div>
 
         <!-- Dropdown Menu -->
         {#if profileIsOpen}
           <div
-            class="absolute py-2 w-[11.35rem] text-[var(--form-text-secondary)] hover:bg-[var(--landing-bg-card)] font-Paragraph text-minParaFont border border-[var(--form-border)] shadow-lg bg-[var(--landing-bg)]"
+            class="absolute py-2 w-[11.35rem] text-[var(--form-text-secondary)] hover:bg-[var(--landing-bg-card)] typography-body-sm text-text-light border border-[var(--form-border)] shadow-lg bg-[var(--landing-bg)]"
           >
             <ul>
               {#each profileDropDown as item}
@@ -413,7 +408,7 @@
       {:else}
         <a
           href="/login"
-          class="flex gap-4 items-center font-FifthHead text-navFont bg-btnBg p-5 sm:py-11 text-black"
+          class="flex gap-4 items-center font-semibold text-navFont bg-btnBg p-5 sm:py-11 text-black"
         >
           <img src="/icons/lock.svg" alt="lock-svg" class="h-[.9rem]" />
           <p>Login</p>
@@ -437,14 +432,14 @@
           onclick={toggleSearch}
           aria-label="Back"
         >
-          <i class="fa-solid fa-arrow-left text-minSubHead lg:text-minHeadFont"
+          <i class="fa-solid fa-arrow-left typography-h3 lg:typography-h2"
           ></i>
         </button>
 
         <!-- Slow expansion with right to left animation -->
         <div class="h-full w-full flex justify-end">
           <input
-            class="text-minSubHead font-Paragraph h-full outline-none px-[2rem] inputBox"
+            class="typography-h3 typography-body-md h-full outline-none px-[2rem] inputBox"
             type="text"
             placeholder="Search..."
             style="width: {$width}%; transform-origin: right center; transition: ease;"
@@ -459,14 +454,14 @@
     <div class="overlay bg-mainBg">
       <div class="w-11/12 md:w-10/12 lg:w-9/12 mx-auto h-screen">
         <div class="flex flex-col gap-[2rem] p-[2rem]">
-          <h2 class="font-ThirdHead text-minSubHead text-black">
+          <h2 class="typography-h3 font-semibold text-text-main text-black">
             Popular searches
           </h2>
           <div class="grid md:grid-cols-2 md:gap-[3rem]">
             <div class="col-span-1 grid">
               {#each searches.slice(0, 3) as search}
                 <button
-                  class="text-paraFont font-Paragraph flex justify-between items-center border-b border-borderColor hover:border-linkColor"
+                  class="typography-body-md flex justify-between items-center border-b border-borderColor hover:border-linkColor"
                   onclick={() => {
                     goto(search.link);
                     overlayOpen = false;
@@ -482,7 +477,7 @@
             <div class="col-span-1 grid">
               {#each searches.slice(3, 6) as search}
                 <button
-                  class="text-paraFont font-Paragraph flex justify-between items-center border-b border-borderColor hover:border-linkColor"
+                  class="typography-body-md flex justify-between items-center border-b border-borderColor hover:border-linkColor"
                   onclick={() => {
                     goto(search.link);
                     overlayOpen = false;
@@ -528,7 +523,7 @@
               loading="lazy"
             />
             <p
-              class="text-center text-white font-FifthHead text-xs sm:text-subParaFont"
+              class="text-center text-white font-semibold text-xs sm:typography-body-md"
             >
               {$hostName}
             </p>
@@ -541,15 +536,13 @@
       </div>
 
       <ul
-        class="flex flex-col font-FifthHead text-subParaFont relative pb-[1rem] h-[calc(100vh-4rem)]"
+        class="flex flex-col font-semibold typography-body-md relative pb-[1rem] h-[calc(100vh-4rem)]"
       >
         {#each navList as nav, i}
           <li class="hover:text-btnBg py-1">
             <a
               href={nav.link}
-              class="block text-white {i < navList.length - 1
-                ? ' border-b border-borderColor/50'
-                : '  border-b border-btnBg/60'} py-[0.75rem]"
+              class="block text-white {i < navList.length - 1 ? ' border-b border-borderColor/50' : ' border-b border-btnBg/60'} py-[0.75rem]"
               onclick={(e) => {
                 handleNavigation(nav.link, nav.mobId);}}
             >
@@ -560,7 +553,7 @@
                 <div class="relative flex">
                   {nav.list}
                   {#if nav.hasOwnProperty("star")}
-                    <sup class=" -top-4 -right-1 h-full">
+                    <sup class="-top-4 -right-1 h-full">
                       <img
                         src="/gif/moneyMapStar.gif"
                         alt="money-map-star-icon"
@@ -568,7 +561,7 @@
                       />
                     </sup>
                   {:else if nav.hasOwnProperty("offer")}
-                    <sup class=" -top-4 -right-1 h-full">
+                    <sup class="-top-4 -right-1 h-full">
                       <img
                         src="/gif/sale.gif"
                         alt="sale-icon"
@@ -585,14 +578,13 @@
         <!-- svelte-ignore a11y_click_events_have_key_events -->
         <!-- svelte-ignore a11y_no_static_element_interactions -->
         <div
-          class=" w-full pt-3"
+          class="w-full pt-3"
           onclick={() => (mobileProfileIsOpen = !mobileProfileIsOpen)}
         >
           {#if page.data.user?.name}
             {#each profileDropDown as item}
               <li
-                class="w-full flex items-end text-btnBg gap-[1.5rem] px-2 font-Paragraph text-[0.75rem] hover:bg-btnBg hover:text-black border-b border-borderColor/60
-                py-[.6rem]"
+                class="w-full flex items-end text-btnBg gap-[1.5rem] px-2 typography-body-md text-[0.75rem] hover:bg-btnBg hover:text-black border-b border-borderColor/60 py-[.6rem]"
               >
                 {#if item.url}
                   <img src={item.icon} alt={item.alt} class="h-5" />
@@ -603,7 +595,7 @@
 
             <button
               type="button"
-              class="font-FifthHead text-subParaFont py-[.4rem] bg-btnBg text-black w-full"
+              class="font-semibold typography-body-md py-[.4rem] bg-btnBg text-black w-full"
               onclick={() => {
                 signOut();}}
             >
@@ -619,7 +611,7 @@
           {:else}
             <button
               type="button"
-              class="font-FifthHead text-subParaFont py-[.4rem] bg-btnBg text-black w-full"
+              class="font-semibold typography-body-md py-[.4rem] bg-btnBg text-black w-full"
               onclick={() => goto("/login")}
             >
               <div class="flex gap-[1rem] items-center px-2">

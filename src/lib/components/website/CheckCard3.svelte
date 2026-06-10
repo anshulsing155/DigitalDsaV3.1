@@ -23,7 +23,7 @@
   </div>
 
   <div class="flex flex-col gap-2 justify-center text-center pt-[2rem]">
-    <h2 class="font-FourthHead">{contents.userName}</h2>
+    <h2 class="font-semibold">{contents.userName}</h2>
     {#if contents.stars}
       <div class="flex justify-center gap-1 items-center">
         {#each contents.stars as star}

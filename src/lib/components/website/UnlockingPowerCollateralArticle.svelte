@@ -32,10 +32,10 @@
         listTopPara: `When you pledge your property as collateral, banks assess its market value, ownership clarity, and title history before determining the loan amount.`,
         list: [
           {
-            heading: `✅ LAP : <span class="font-Paragraph">Provides a lump-sum loan based on 50–75% of your property value, with repayment over 10–20 years.</span>`,
+            heading: `✅ LAP : <span class="typography-body-md">Provides a lump-sum loan based on 50–75% of your property value, with repayment over 10–20 years.</span>`,
           },
           {
-            heading: `✅ DOD : <span class="font-Paragraph">Works as an overdraft facility with a dropping credit limit, offering flexibility but requiring frequent repayments.</span>`,
+            heading: `✅ DOD : <span class="typography-body-md">Works as an overdraft facility with a dropping credit limit, offering flexibility but requiring frequent repayments.</span>`,
           },
         ],
         listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><strong>💡Key Takeaway : </strong>Both options turn property into a financial tool—but choosing the right one depends on your business model.</p>`,
@@ -49,7 +49,7 @@
           {
             heading: `A. Choose the Right Property Type
                     
-                    <ul class="list-disc list-inside font-Paragraph my-4">
+                    <ul class="list-disc list-inside typography-body-md my-4">
                     <li class="my-2">Banks prefer commercial properties over residential ones for business loans.</li>
                     <li>If pledging residential property, ensure it has a clear title and is in a high-value location.</li>
                     
@@ -58,7 +58,7 @@
           {
             heading: `B. Improve Your Credit Profile
                     
-                    <ul class="list-disc list-inside font-Paragraph my-4">
+                    <ul class="list-disc list-inside typography-body-md my-4">
                     <li class="my-2">Maintain a CIBIL score of 700+ for better loan terms.</li>
                     <li>Reduce existing debts before applying.</li>
                     
@@ -67,7 +67,7 @@
           {
             heading: `C. Negotiate Loan Terms with Multiple Lenders
                     
-                    <ul class="list-disc list-inside font-Paragraph my-4">
+                    <ul class="list-disc list-inside typography-body-md my-4">
                     <li class="my-2">Compare LTV (Loan-to-Value) ratios and interest rates across banks.</li>
                     
                     </ul>`,

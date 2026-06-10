@@ -20,31 +20,31 @@
     },
     {
       heading: `Impact on Credit Score & Financial History`,
-      para: `Engaging in a <span class="font-FourthHead">financial hardship arrangement</span> (such as loan restructuring or EMI deferrals) may impact your <span class="font-FourthHead">CIBIL score</span> or overall credit profile. While such arrangements may help in the short term, they could also affect your future loan eligibility and borrowing capacity. We recommend consulting a <span class="font-FourthHead">financial advisor</span> or <span class="font-FourthHead">credit bureau</span> before making a decision.`,
+      para: `Engaging in a <span class="font-semibold">financial hardship arrangement</span> (such as loan restructuring or EMI deferrals) may impact your <span class="font-semibold">CIBIL score</span> or overall credit profile. While such arrangements may help in the short term, they could also affect your future loan eligibility and borrowing capacity. We recommend consulting a <span class="font-semibold">financial advisor</span> or <span class="font-semibold">credit bureau</span> before making a decision.`,
     },
     {
       heading: `No Guarantee of Approval`,
-      para: `Digital DSA provides assistance and guidance, but we <span class="font-FourthHead">do not guarantee</span> approval for hardship relief, loan restructuring, or any other financial modifications. Approval is subject to lender discretion, financial assessment, and relevant eligibility criteria.`,
+      para: `Digital DSA provides assistance and guidance, but we <span class="font-semibold">do not guarantee</span> approval for hardship relief, loan restructuring, or any other financial modifications. Approval is subject to lender discretion, financial assessment, and relevant eligibility criteria.`,
     },
     {
       heading: `Personal Responsibility & Decision-Making`,
-      para: `Financial decisions should be made after <span class="font-FourthHead">careful evaluation</span> of your situation. The information provided here is for <span class="font-FourthHead">general informational purposes only</span> and should <span class="font-FourthHead">not</span> replace professional financial, legal, or tax advice. Always consider seeking independent advice before proceeding with any financial commitments.`,
+      para: `Financial decisions should be made after <span class="font-semibold">careful evaluation</span> of your situation. The information provided here is for <span class="font-semibold">general informational purposes only</span> and should <span class="font-semibold">not</span> replace professional financial, legal, or tax advice. Always consider seeking independent advice before proceeding with any financial commitments.`,
     },
     {
       heading: `Liability Limitation & Risk Acknowledgment`,
-      para: `Digital DSA is <span class="font-FourthHead">not responsible</span> for any <span class="font-FourthHead">direct, indirect, incidental, or consequential</span> losses, damages, or financial impacts resulting from the use of this information or any decisions made based on it. The responsibility for financial actions lies solely with the user.`,
+      para: `Digital DSA is <span class="font-semibold">not responsible</span> for any <span class="font-semibold">direct, indirect, incidental, or consequential</span> losses, damages, or financial impacts resulting from the use of this information or any decisions made based on it. The responsibility for financial actions lies solely with the user.`,
     },
     {
       heading: `Alternative Financial Support May Be Available`,
-      para: `In some cases, additional financial aid options such as <span class="font-FourthHead">government assistance programs, debt consolidation, or refinancing solutions</span> may be more suitable. It is advisable to explore all available options before committing to a hardship arrangement.`,
+      para: `In some cases, additional financial aid options such as <span class="font-semibold">government assistance programs, debt consolidation, or refinancing solutions</span> may be more suitable. It is advisable to explore all available options before committing to a hardship arrangement.`,
     },
     {
       heading: `Third-Party Involvement & Lender Policies`,
-      para: `Digital DSA acts as a facilitator for financial solutions but does <span class="font-FourthHead">not</span> control lender policies, approval decisions, or repayment terms. Each lender may have different criteria and procedures for handling financial hardship cases.`,
+      para: `Digital DSA acts as a facilitator for financial solutions but does <span class="font-semibold">not</span> control lender policies, approval decisions, or repayment terms. Each lender may have different criteria and procedures for handling financial hardship cases.`,
     },
     {
       heading: `Confidentiality & Data Usage`,
-      para: `Any personal or financial information shared with Digital DSA is handled with <span class="font-FourthHead">strict confidentiality</span> and used only for the purpose of assessing and assisting with financial hardship requests. However, we recommend reviewing our <span class="font-FourthHead">privacy policy</span> for details on data handling and third-party interactions.`,
+      para: `Any personal or financial information shared with Digital DSA is handled with <span class="font-semibold">strict confidentiality</span> and used only for the purpose of assessing and assisting with financial hardship requests. However, we recommend reviewing our <span class="font-semibold">privacy policy</span> for details on data handling and third-party interactions.`,
     },
   ];
 
@@ -177,13 +177,13 @@
         <AboveTitleWithoutIconCard
           contents={{
             heading: `When to Get Help`,
-            para: `If you're worried about missing a payment or struggling to manage your ongoing repayments, <a href="/contact" class="underline underline-offset-4 hover:no-underline "> reach out to us</a> as soon as possible. Early communication can help reduce stress, and we can work together to find the right solutions for your situation.`,
+            para: `If you're worried about missing a payment or struggling to manage your ongoing repayments, <a href="/contact" class="underline underline-offset-4 hover:no-underline"> reach out to us</a> as soon as possible. Early communication can help reduce stress, and we can work together to find the right solutions for your situation.`,
             xlGridCol: 3,
             cards: [
               {
                 heading: "Reach out for support early",
-                para: `Unexpected increases in daily expenses, such as <a href="/finance-support/cost-of-living" class="underline underline-offset-4 hover:no-underline ">cost-of-living pressures</a>, may require you to adjust your budget. </br> </br>
-       If you're struggling with <span class="font-FourthHead">EMI payments</span> or concerned about <span class="font-FourthHead"> managing running loan,</span> don’t wait—reach out to us as soon as possible. </br> </br> 
+                para: `Unexpected increases in daily expenses, such as <a href="/finance-support/cost-of-living" class="underline underline-offset-4 hover:no-underline">cost-of-living pressures</a>, may require you to adjust your budget. </br> </br>
+       If you're struggling with <span class="font-semibold">EMI payments</span> or concerned about <span class="font-semibold"> managing running loan,</span> don’t wait—reach out to us as soon as possible. </br> </br> 
         `,
               },
               {
@@ -215,8 +215,8 @@
     
     
     <ul class="list-disc list-inside">
-        <li>Avoid <span class="font-FourthHead">late payments</span> fees or penalties.</li>
-        <li>Protect your <span class="font-FourthHead">credit score</span> in CIBIL.</li>
+        <li>Avoid <span class="font-semibold">late payments</span> fees or penalties.</li>
+        <li>Protect your <span class="font-semibold">credit score</span> in CIBIL.</li>
     </ul></div>
           </div>`,
               },
@@ -251,9 +251,9 @@
               {
                 title: `Can a hardship arrangement impact your credit score?`,
                 para: `<div class="flex flex-col gap-4">
-              <p>When a borrower enters into a <span class="font-FourthHead">financial hardship arrangement</span> or avails of <span class="font-FourthHead">loan restructuring</span>, it can have an impact on their <span class="font-FourthHead">CIBIL score</span> (or <span class="font-FourthHead">credit score</span> in general), although the extent of the impact depends on the nature of the arrangement and how it's reported.</p>
+              <p>When a borrower enters into a <span class="font-semibold">financial hardship arrangement</span> or avails of <span class="font-semibold">loan restructuring</span>, it can have an impact on their <span class="font-semibold">CIBIL score</span> (or <span class="font-semibold">credit score</span> in general), although the extent of the impact depends on the nature of the arrangement and how it's reported.</p>
              
-                <p>Entering into an arrangement is <span class="font-FourthHead">recommended</span> as it demonstrates your commitment to getting back on track. If you cannot make your repayments and do not enter an arrangement, it may negatively impact your credit score.</p>
+                <p>Entering into an arrangement is <span class="font-semibold">recommended</span> as it demonstrates your commitment to getting back on track. If you cannot make your repayments and do not enter an arrangement, it may negatively impact your credit score.</p>
                 <p>
                    Here's how different types of financial support arrangements may affect your CIBIL score </p>
             </div>`,
@@ -267,7 +267,7 @@
           class="flex flex-col gap-[2rem] border-b border-divideColor pt-[4rem] pb-[8rem] lg:px-[4rem]"
         >
           <h2
-            class="md:col-span-1 font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="md:col-span-1 typography-h2 text-text-main"
           >
             Watch to learn more
           </h2>
@@ -299,7 +299,7 @@
             reverse: true,
           }}
         >
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             You can easily request help at Digital DSA by visiting our website
             to raise an online request. We’ll ask a few questions to understand
             your situation and connect you with the right support.
@@ -308,14 +308,14 @@
             so don’t hesitate to reach out whenever you need support.
           </p>
           <div class="flex gap-2 items-center">
-            <p class="font-FourthHead text-subParaFont">Email:</p>
+            <p class="font-semibold typography-body-md">Email:</p>
             <Anchor
               link="mailto:support@digitaldsa.com"
               linkName="support@digitaldsa.com"
             />
           </div>
           <div class="flex gap-2 items-center">
-            <p class="font-FourthHead text-subParaFont">Call us:</p>
+            <p class="font-semibold typography-body-md">Call us:</p>
             <Anchor link="tel:+918587033787" linkName="+91 8587033787" />
           </div>
         </TwoColumnWithImage>
@@ -386,10 +386,7 @@
     <div class="lg:hidden block">
       {#each ["When to Get Help", "Financial Hardship Arrangements", "Ways to Contact Us", "How We Can Help", "Support for Businesses"] as list, index}
           <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -397,7 +394,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -408,13 +405,13 @@
               <AboveTitleWithoutIconCard
                 contents={{
                   heading: `When to Get Help`,
-                  para: `If you're worried about missing a payment or struggling to manage your ongoing repayments, <a href="/contact" class="underline underline-offset-4 hover:no-underline "> reach out to us</a> as soon as possible. Early communication can help reduce stress, and we can work together to find the right solutions for your situation.`,
+                  para: `If you're worried about missing a payment or struggling to manage your ongoing repayments, <a href="/contact" class="underline underline-offset-4 hover:no-underline"> reach out to us</a> as soon as possible. Early communication can help reduce stress, and we can work together to find the right solutions for your situation.`,
                   xlGridCol: 3,
                   cards: [
                     {
                       heading: "Reach out for support early",
-                      para: `Unexpected increases in daily expenses, such as <a href="/finance-support/cost-of-living" class="underline underline-offset-4 hover:no-underline ">cost-of-living pressures</a>, may require you to adjust your budget. </br> </br>
-       If you're struggling with <span class="font-FourthHead">EMI payments</span> or concerned about <span class="font-FourthHead"> managing running loan,</span> don’t wait—reach out to us as soon as possible. </br> </br> 
+                      para: `Unexpected increases in daily expenses, such as <a href="/finance-support/cost-of-living" class="underline underline-offset-4 hover:no-underline">cost-of-living pressures</a>, may require you to adjust your budget. </br> </br>
+       If you're struggling with <span class="font-semibold">EMI payments</span> or concerned about <span class="font-semibold"> managing running loan,</span> don’t wait—reach out to us as soon as possible. </br> </br> 
         `,
                     },
                     {
@@ -446,8 +443,8 @@
     
     
     <ul class="list-disc list-inside">
-        <li>Avoid <span class="font-FourthHead">late payments</span> fees or penalties.</li>
-        <li>Protect your <span class="font-FourthHead">credit score</span> in CIBIL.</li>
+        <li>Avoid <span class="font-semibold">late payments</span> fees or penalties.</li>
+        <li>Protect your <span class="font-semibold">credit score</span> in CIBIL.</li>
     </ul></div>
           </div>`,
                     },
@@ -478,9 +475,9 @@
                     {
                       title: `Can a hardship arrangement impact your credit score?`,
                       para: `<div class="flex flex-col gap-4">
-              <p>When a borrower enters into a <span class="font-FourthHead">financial hardship arrangement</span> or avails of <span class="font-FourthHead">loan restructuring</span>, it can have an impact on their <span class="font-FourthHead">CIBIL score</span> (or <span class="font-FourthHead">credit score</span> in general), although the extent of the impact depends on the nature of the arrangement and how it's reported.</p>
+              <p>When a borrower enters into a <span class="font-semibold">financial hardship arrangement</span> or avails of <span class="font-semibold">loan restructuring</span>, it can have an impact on their <span class="font-semibold">CIBIL score</span> (or <span class="font-semibold">credit score</span> in general), although the extent of the impact depends on the nature of the arrangement and how it's reported.</p>
              
-                <p>Entering into an arrangement is <span class="font-FourthHead">recommended</span> as it demonstrates your commitment to getting back on track. If you cannot make your repayments and do not enter an arrangement, it may negatively impact your credit score.</p>
+                <p>Entering into an arrangement is <span class="font-semibold">recommended</span> as it demonstrates your commitment to getting back on track. If you cannot make your repayments and do not enter an arrangement, it may negatively impact your credit score.</p>
                 <p>
                    Here's how different types of financial support arrangements may affect your CIBIL score </p>
             </div>`,
@@ -493,7 +490,7 @@
                 class="flex flex-col gap-[2rem] border-b border-divideColor pt-[4rem] pb-[8rem] lg:px-[4rem]"
               >
                 <h2
-                  class="md:col-span-1 font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="md:col-span-1 typography-h2 text-text-main"
                 >
                   Watch to learn more
                 </h2>
@@ -526,7 +523,7 @@
                   reverse: true,
                 }}
               >
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   You can easily request help at Digital DSA by visiting our
                   website to raise an online request. We’ll ask a few questions
                   to understand your situation and connect you with the right
@@ -536,14 +533,14 @@
                   whenever you need support.
                 </p>
                 <div class="flex gap-2 items-center">
-                  <p class="font-FourthHead text-subParaFont">Email:</p>
+                  <p class="font-semibold typography-body-md">Email:</p>
                   <Anchor
                     link="mailto:support@digitaldsa.com"
                     linkName="support@digitaldsa.com"
                   />
                 </div>
                 <div class="flex gap-2 items-center">
-                  <p class="font-FourthHead text-subParaFont">Call us:</p>
+                  <p class="font-semibold typography-body-md">Call us:</p>
                   <Anchor link="tel:+918587033787" linkName="+91 8587033787" />
                 </div>
               </TwoColumnWithImage>
@@ -670,10 +667,10 @@
         <ul class="list-decimal flex flex-col gap-4">
           {#each youKnowlists as youKnow}
             <li>
-              <h3 class="font-FourthHead text-subParaFont">
+              <h3 class="font-semibold typography-body-md">
                 {@html youKnow.heading}
               </h3>
-              <p class="font-Paragraph text-minParaFont">
+              <p class="typography-body-sm text-text-light">
                 {@html youKnow.para}
               </p>
             </li>

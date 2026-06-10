@@ -341,10 +341,7 @@
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-[1rem] py-[1.5rem]"
@@ -357,7 +354,7 @@
           </summary>
 
           {#if index == 0}
-          <div id="explore" data-section="explore" class=" bg-white text-black">
+          <div id="explore" data-section="explore" class="bg-white text-black">
             <div class="border-b border-borderColor">
               <ThingsYouShould thinkKnow={explore} disc="list-disc" />
             </div>
@@ -366,7 +363,7 @@
             </div>
           </div>
           {:else if index == 1}
-          <div id="restriction" data-section="restriction" class=" bg-white text-black" >
+          <div id="restriction" data-section="restriction" class="bg-white text-black" >
             <div class="border-b border-borderColor">
               <ThingsYouShould thinkKnow={eligibility} disc="list-disc" />
             </div>
@@ -378,7 +375,7 @@
             </div>
           </div>
           {:else if index == 2}
-          <div id="submission" data-section="submission" class=" bg-white text-black">
+          <div id="submission" data-section="submission" class="bg-white text-black">
             <div class="border-b border-borderColor">
               <ThingsYouShould thinkKnow={submission} disc="list-disc" />
             </div>
@@ -387,7 +384,7 @@
             </div>
           </div>
           {:else if index == 3}
-          <div id="online" data-section="online" class=" bg-white text-black">
+          <div id="online" data-section="online" class="bg-white text-black">
             <div class="border-b border-borderColor">
               <ThingsYouShould thinkKnow={online} disc="list-disc" />
             </div>
@@ -396,7 +393,7 @@
             </div>
           </div>
           {:else if index == 4}
-          <div id="communication" data-section="communication" class=" bg-white text-black">
+          <div id="communication" data-section="communication" class="bg-white text-black">
             <div class="border-b border-borderColor">
               <ThingsYouShould thinkKnow={communication} disc="list-disc" />
             </div>
@@ -405,7 +402,7 @@
             </div>
           </div>
           {:else if index == 5}
-          <div id="externalLink" data-section="externalLink" class=" bg-white text-black">
+          <div id="externalLink" data-section="externalLink" class="bg-white text-black">
             <div class="border-b border-borderColor">
               <ThingsYouShould thinkKnow={externalLink} disc="list-disc" />
             </div>
@@ -414,7 +411,7 @@
             </div>
           </div>
           {:else if index == 6}
-          <div id="intellectual" data-section="intellectual" class=" bg-white text-black">
+          <div id="intellectual" data-section="intellectual" class="bg-white text-black">
             <div class="border-b border-borderColor">
               <ThingsYouShould thinkKnow={intellectual} disc="list-disc" />
             </div>
@@ -423,7 +420,7 @@
             </div>
           </div>
           {:else if index==7}
-          <div id="standard" data-section="standard" class=" bg-white text-black">
+          <div id="standard" data-section="standard" class="bg-white text-black">
             <div class="border-b border-borderColor">
               <ThingsYouShould thinkKnow={standard} disc="list-disc" />
             </div>

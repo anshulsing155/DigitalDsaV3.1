@@ -65,8 +65,7 @@
 
 						{#if pageData.para}
 							<p
-								class={`typography-body-lg text-black dark:text-white
-								${pageData.paraStyle}`}
+								class={`typography-body-lg text-black dark:text-white ${pageData.paraStyle}`}
 							>
 								{@html pageData.para}
 							</p>

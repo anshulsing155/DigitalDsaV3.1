@@ -83,7 +83,7 @@
   keywords="Business loans, Small business financing, Fast business loan approval, Working capital loan, Term loan for business, Equipment financing, Business expansion loan, Best business loan rates, Compare business loans, Government business loan schemes, Business loan eligibility, Low-interest business loan, Quick business funding, Secure business financing, Online business loan application"
 />
 
-<section class="xl:container mx-auto w-full bg-mainBg content">
+<section class="content">
   <NewPageLayout
     pageData={{
       coverImage: "/images/business-loan-blog.jpg",
@@ -97,19 +97,19 @@
       subHeading: `
         Lending solutions that work for you
         <ul class="flex flex-col gap-4 mt-4">
-          <li class="flex gap-2 items-center font-Paragraph text-subParaFont">
+          <li class="flex gap-2 items-center typography-body-md text-[var(--form-text-secondary)]">
             <img src="/icons/circle-check.svg" alt="check-icon" class="h-4" />
             <p class="text-start">Tailored lending for every stage of your business journey</p>
           </li>
-          <li class="flex gap-2 items-center font-Paragraph text-subParaFont">
+          <li class="flex gap-2 items-center typography-body-md text-[var(--form-text-secondary)]">
             <img src="/icons/circle-check.svg" alt="check-icon" class="h-4" />
             <p class="text-start">Fast, easy online application with instant decision, if eligible.</p>
           </li>
-          <li class="flex gap-2 items-center font-Paragraph text-subParaFont">
+          <li class="flex gap-2 items-center typography-body-md text-[var(--form-text-secondary)]">
             <img src="/icons/circle-check.svg" alt="check-icon" class="h-4" />
             <p class="text-start">Get an online application experience with lender support after you submit</p>
           </li>
-          <li class="font-Paragraph text-subParaFont">
+          <li class="typography-body-md text-[var(--form-text-secondary)]">
             <p>Alternatively, book an appointment and talk through your options with a Business Lending Specialist.</p>
           </li>
         </ul>
@@ -225,7 +225,7 @@
             },
             {
               heading: "Term Loan",
-              para: `A term loan is a fixed amount borrowed for a specific period, repaid in installments. Used for expansion, infrastructure, or asset purchases, it can be <span class="font-FourthHead">short-term (1-3 years)</span> or <span class="font-FourthHead">long-term (up to 15 years)</span>. With fixed or floating interest rates, it offers structured repayment, aiding financial planning.`,
+              para: `A term loan is a fixed amount borrowed for a specific period, repaid in installments. Used for expansion, infrastructure, or asset purchases, it can be <span class="font-semibold">short-term (1-3 years)</span> or <span class="font-semibold">long-term (up to 15 years)</span>. With fixed or floating interest rates, it offers structured repayment, aiding financial planning.`,
             },
             {
               heading: "Overdraft Facility",
@@ -237,20 +237,20 @@
             },
             {
               heading: "Loans under Government Schemes",
-              para: `Governments offer subsidized loans to support SMEs, startups, and key industries. In India, schemes like <span class="font-FourthHead">MSME Loans under CGTMSE, Mudra Loans, and Stand-Up India</span> provide low-interest, minimal-collateral credit, promoting entrepreneurship, job creation, and economic growth.`,
+              para: `Governments offer subsidized loans to support SMEs, startups, and key industries. In India, schemes like <span class="font-semibold">MSME Loans under CGTMSE, Mudra Loans, and Stand-Up India</span> provide low-interest, minimal-collateral credit, promoting entrepreneurship, job creation, and economic growth.`,
             },
           ],
         }}
       />
     </div>
 
-    <section id="factors" class="py-20 px-10 bg-[var(--landing-bg)] section">
+    <section id="factors" class="pt-16 pb-32 px-4 lg:px-16 bg-[var(--landing-bg)] section">
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4 text-black dark:text-white">
+          <h2 class="typography-h2 mb-4 text-black dark:text-white">
             Key Factors in Business Loan Calculations
           </h2>
-          <p class="text-md text-[var(--form-text-secondary)]">
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             Indian banks use multiple criteria to evaluate your business loan
             eligibility. Understanding these factors can help you optimize your
             application and secure higher loan amounts.
@@ -283,14 +283,14 @@
                   </div>
                 </div>
 
-                <h3 class="text-xl font-semibold mb-2 text-black dark:text-white">
+                <h3 class="typography-h3 mb-2 text-black dark:text-white">
                   {factor.title}
                 </h3>
-                <p class="text-[var(--form-text-secondary)] mb-4">{factor.description}</p>
+                <p class="typography-body-md text-[var(--form-text-secondary)] mb-4">{factor.description}</p>
 
                 <div class="mt-auto">
-                  <div class="bg-[var(--landing-bg-card)] p-3 rounded-lg">
-                    <p class="text-sm font-medium text-black dark:text-white">
+                  <div class="bg-[var(--landing-bg-card)] p-3 rounded-xl">
+                    <p class="typography-body-sm text-black dark:text-white">
                       <span class="text-btnBg font-semibold">Important:</span>
                       {factor.importance}
                     </p>
@@ -301,7 +301,7 @@
           </div>
         {/if}
 
-        <div class="mt-12 p-6 bg-[var(--landing-bg-card)] rounded-lg">
+        <div class="mt-12 p-6 bg-[var(--landing-bg-card)] border border-[var(--form-border)] rounded-xl">
           <div class="flex flex-col md:flex-row items-center">
             <div class="mr-4">
               <div
@@ -313,10 +313,10 @@
               </div>
             </div>
             <div>
-              <h4 class="text-lg font-semibold mb-2 text-black dark:text-white">
+              <h4 class="typography-h3 mb-2 text-black dark:text-white">
                 Which factor matters most?
               </h4>
-              <p class="text-[var(--form-text-secondary)]">
+              <p class="typography-body-md text-[var(--form-text-secondary)]">
                 Banks typically consider the <strong>highest value</strong> among
                 these factors to determine your maximum loan eligibility. However,
                 all factors are evaluated to assess your overall financial health.
@@ -428,7 +428,7 @@
             reverse: true,
           }}
         >
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             Feel free to message us anytime for expert assistance with your loan
             needs. Our team is here to provide professional advice, guide you
             through the loan process, and help you find the best options. No
@@ -484,10 +484,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"
@@ -499,14 +499,15 @@
 <style>
   .card {
     background: var(--landing-bg-card);
-    border-radius: 0.5rem;
-    box-shadow:
-      0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border: 1px solid var(--form-border);
+    border-radius: var(--radius-md, 0.75rem);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
   }
 
   .card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary, #cb997e);
   }
 </style>

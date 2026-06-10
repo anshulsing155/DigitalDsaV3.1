@@ -99,7 +99,7 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Purpose </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Purpose </span>":
             [
               "Buying a plot for building a home",
               "Purchasing land for commercial development (offices, shops, warehouses, etc.)",
@@ -108,7 +108,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Eligibility</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Eligibility</span>":
             [
               "Salaried or self-employed individuals meeting income criteria",
               "Business owners, companies, developers",
@@ -117,7 +117,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/problem.svg' alt='home icon'>Location Restrictions</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/problem.svg' alt='home icon'>Location Restrictions</span>":
             [
               "Must be in government-approved residential zones",
               "Must be in designated commercial areas",
@@ -126,7 +126,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Loan-to-Value (LTV) Ratio</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Loan-to-Value (LTV) Ratio</span>":
             [
               "60%–80% of plot value",
               "50%–70% of plot value",
@@ -135,7 +135,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Interest Rates</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Interest Rates</span>":
             [
               "Lower compared to other plot loans (similar to home loans)",
               "Higher than residential loans due to commercial nature",
@@ -144,7 +144,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/tenure.svg' alt='home icon'>Repayment Tenure</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/tenure.svg' alt='home icon'>Repayment Tenure</span>":
             [
               "Up to 15 years",
               "Shorter tenure (7–10 years)",
@@ -153,7 +153,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>Construction Requirement</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>Construction Requirement</span>":
             [
               "Some lenders require construction within a set timeframe (e.g., 3–5 years)",
               "No requirement to develop immediately",
@@ -162,7 +162,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/interestRate.svg' alt='home icon'>Tax Benefits</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/interestRate.svg' alt='home icon'>Tax Benefits</span>":
             [
               "Eligible for tax deductions on loan interest and principal",
               "No tax benefits on repayment",
@@ -171,7 +171,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='home icon'>Legal Approvals</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='home icon'>Legal Approvals</span>":
             [
               "Land must be in an approved residential layout",
               "Requires commercial land approvals and zoning compliance",
@@ -180,7 +180,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/riskFactor.svg' alt='home icon'>Risk Factors</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/riskFactor.svg' alt='home icon'>Risk Factors</span>":
             [
               "Low risk if in an approved residential area",
               "Higher risk due to dependency on business profitability",
@@ -189,7 +189,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/payment.svg' alt='home icon'>Down Payment</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/payment.svg' alt='home icon'>Down Payment</span>":
             [
               "20%–40% of the plot cost",
               "30%–50% of the plot cost",
@@ -198,7 +198,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/processing.svg' alt='home icon'>Processing Time</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/processing.svg' alt='home icon'>Processing Time</span>":
             [
               "Moderate (2–4 weeks)",
               "Longer (due to business and commercial verification)",
@@ -354,7 +354,7 @@
               url: "/plot-loan/plot-only-loan-challenges",
               linkName: "Learn More About Plot Loan Challenges →",
             },
-            listSecPara: `💡 <span class="font-FourthHead">Tip:</span> Before applying, check if your lender allows <span class="font-FourthHead">plot purchase without mandatory construction</span> to avoid future complications.`,
+            listSecPara: `💡 <span class="font-semibold">Tip:</span> Before applying, check if your lender allows <span class="font-semibold">plot purchase without mandatory construction</span> to avoid future complications.`,
           }}
         />
 
@@ -366,25 +366,25 @@
             cards: [
               {
                 heading: "Residential Plot Loan",
-                para: "A loan designed for individuals looking to purchase a plot for <span class='font-FourthHead'>building a home</span> in a residential area. Some lenders may require you to start <span class='font-FourthHead'>construction</span> within a specific <span class='font-FourthHead'>timeframe</span>.",
+                para: "A loan designed for individuals looking to purchase a plot for <span class='font-semibold'>building a home</span> in a residential area. Some lenders may require you to start <span class='font-semibold'>construction</span> within a specific <span class='font-semibold'>timeframe</span>.",
                 icon: "/icons/residential.svg",
                 altName: "residential Icon",
               },
               {
                 heading: "Commercial Plot Loan",
-                para: "This type of loan is for buying land intended for <span class='font-FourthHead'>commercial use</span>, such as <span class='font-FourthHead'>office spaces</span>, <span class='font-FourthHead'>retail outlets</span>, or <span class='font-FourthHead'>warehouses</span>. Interest rates and <span class='font-FourthHead'>eligibility criteria</span> may differ from <span class='font-FourthHead'>residential plot loans</span>.",
+                para: "This type of loan is for buying land intended for <span class='font-semibold'>commercial use</span>, such as <span class='font-semibold'>office spaces</span>, <span class='font-semibold'>retail outlets</span>, or <span class='font-semibold'>warehouses</span>. Interest rates and <span class='font-semibold'>eligibility criteria</span> may differ from <span class='font-semibold'>residential plot loans</span>.",
                 icon: "/icons/bt-2.svg",
                 altName: "commercial Icon",
               },
               {
                 heading: "Agricultural Land Loan",
-                para: "A loan provided for <span class='font-FourthHead'>purchasing farmland</span>, often <span class='font-FourthHead'>restricted</span> to individuals engaged in <span class='font-FourthHead'>farming</span> or <span class='font-FourthHead'>agriculture</span>. Some countries have <span class='font-FourthHead'>regulations</span> on who can buy <span class='font-FourthHead'>agricultural land</span>.",
+                para: "A loan provided for <span class='font-semibold'>purchasing farmland</span>, often <span class='font-semibold'>restricted</span> to individuals engaged in <span class='font-semibold'>farming</span> or <span class='font-semibold'>agriculture</span>. Some countries have <span class='font-semibold'>regulations</span> on who can buy <span class='font-semibold'>agricultural land</span>.",
                 icon: "/icons/agriZone.svg",
                 altName: "plot Icon",
               },
               {
                 heading: "Investment Plot Loan",
-                para: "For those looking to buy land purely for <span class='font-FourthHead'>investment purposes</span> without immediate plans to develop it. These loans may have <span class='font-FourthHead'>stricter conditions</span> since they <span class='font-FourthHead'>don’t involve immediate construction</span>.",
+                para: "For those looking to buy land purely for <span class='font-semibold'>investment purposes</span> without immediate plans to develop it. These loans may have <span class='font-semibold'>stricter conditions</span> since they <span class='font-semibold'>don’t involve immediate construction</span>.",
                 icon: "/icons/sellingHome.svg",
                 altName: "home Icon",
               },
@@ -397,7 +397,7 @@
         >
           <div class="">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+              class="grid mb-[4rem] typography-h2 text-text-main text-center"
             >
               Plot-Only loans : <br />
               <span
@@ -431,7 +431,7 @@
               //   url: "/plot-loan/plot-only-loan-challenges",
               //   linkName: "Learn More About Plot Loan Challenges →",
               // },
-              // listSecPara: `💡 <span class="font-FourthHead">Tip:</span> Before applying, check if your lender allows <span class="font-FourthHead">plot purchase without mandatory construction</span> to avoid future complications.`,
+              // listSecPara: `💡 <span class="font-semibold">Tip:</span> Before applying, check if your lender allows <span class="font-semibold">plot purchase without mandatory construction</span> to avoid future complications.`,
             }}
           />
         </div>
@@ -472,7 +472,7 @@
             reverse: true,
           }}
         >
-          <div class="font-Paragraph text-minParaFont">
+          <div class="typography-body-sm text-text-light">
             <ul class="list-disc space-y-4">
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
@@ -620,10 +620,7 @@
     <div class="lg:hidden block">
       {#each ["Getting ready", "Challenges & categories", "How Digital DSA helps", "Tools & calculators"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -631,7 +628,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -704,7 +701,7 @@
                     url: "/plot-loan/plot-only-loan-challenges",
                     linkName: "Learn More About Plot Loan Challenges →",
                   },
-                  listSecPara: `💡 <span class="font-FourthHead">Tip:</span> Before applying, check if your lender allows <span class="font-FourthHead">plot purchase without mandatory construction</span> to avoid future complications.`,
+                  listSecPara: `💡 <span class="font-semibold">Tip:</span> Before applying, check if your lender allows <span class="font-semibold">plot purchase without mandatory construction</span> to avoid future complications.`,
                 }}
               />
 
@@ -716,25 +713,25 @@
                   cards: [
                     {
                       heading: "Residential Plot Loan",
-                      para: "A loan designed for individuals looking to purchase a plot for <span class='font-FourthHead'>building a home</span> in a residential area. Some lenders may require you to start <span class='font-FourthHead'>construction</span> within a specific <span class='font-FourthHead'>timeframe</span>.",
+                      para: "A loan designed for individuals looking to purchase a plot for <span class='font-semibold'>building a home</span> in a residential area. Some lenders may require you to start <span class='font-semibold'>construction</span> within a specific <span class='font-semibold'>timeframe</span>.",
                       icon: "/icons/residential.svg",
                       altName: "Message Icon",
                     },
                     {
                       heading: "Commercial Plot Loan",
-                      para: "This type of loan is for buying land intended for <span class='font-FourthHead'>commercial use</span>, such as <span class='font-FourthHead'>office spaces</span>, <span class='font-FourthHead'>retail outlets</span>, or <span class='font-FourthHead'>warehouses</span>. Interest rates and <span class='font-FourthHead'>eligibility criteria</span> may differ from <span class='font-FourthHead'>residential plot loans</span>.",
+                      para: "This type of loan is for buying land intended for <span class='font-semibold'>commercial use</span>, such as <span class='font-semibold'>office spaces</span>, <span class='font-semibold'>retail outlets</span>, or <span class='font-semibold'>warehouses</span>. Interest rates and <span class='font-semibold'>eligibility criteria</span> may differ from <span class='font-semibold'>residential plot loans</span>.",
                       icon: "/icons/bt-2.svg",
                       altName: "commercial Icon",
                     },
                     {
                       heading: "Agricultural Land Loan",
-                      para: "A loan provided for <span class='font-FourthHead'>purchasing farmland</span>, often <span class='font-FourthHead'>restricted</span> to individuals engaged in <span class='font-FourthHead'>farming</span> or <span class='font-FourthHead'>agriculture</span>. Some countries have <span class='font-FourthHead'>regulations</span> on who can buy <span class='font-FourthHead'>agricultural land</span>.",
+                      para: "A loan provided for <span class='font-semibold'>purchasing farmland</span>, often <span class='font-semibold'>restricted</span> to individuals engaged in <span class='font-semibold'>farming</span> or <span class='font-semibold'>agriculture</span>. Some countries have <span class='font-semibold'>regulations</span> on who can buy <span class='font-semibold'>agricultural land</span>.",
                       icon: "/icons/agriZone.svg",
                       altName: "plot Icon",
                     },
                     {
                       heading: "Investment Plot Loan",
-                      para: "For those looking to buy land purely for <span class='font-FourthHead'>investment purposes</span> without immediate plans to develop it. These loans may have <span class='font-FourthHead'>stricter conditions</span> since they <span class='font-FourthHead'>don’t involve immediate construction</span>.",
+                      para: "For those looking to buy land purely for <span class='font-semibold'>investment purposes</span> without immediate plans to develop it. These loans may have <span class='font-semibold'>stricter conditions</span> since they <span class='font-semibold'>don’t involve immediate construction</span>.",
                       icon: "/icons/sellingHome.svg",
                       altName: "home Icon",
                     },
@@ -747,7 +744,7 @@
               >
                 <div class="">
                   <h2
-                    class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                    class="grid mb-[4rem] typography-h2 text-text-main text-center"
                   >
                     Plot-Only loans : <br />
                     <span
@@ -781,7 +778,7 @@
                     //   url: "/plot-loan/plot-only-loan-challenges",
                     //   linkName: "Learn More About Plot Loan Challenges →",
                     // },
-                    // listSecPara: `💡 <span class="font-FourthHead">Tip:</span> Before applying, check if your lender allows <span class="font-FourthHead">plot purchase without mandatory construction</span> to avoid future complications.`,
+                    // listSecPara: `💡 <span class="font-semibold">Tip:</span> Before applying, check if your lender allows <span class="font-semibold">plot purchase without mandatory construction</span> to avoid future complications.`,
                   }}
                 />
               </div>
@@ -822,7 +819,7 @@
                   reverse: true,
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <ul class="list-disc space-y-4">
                     <li class="flex items-start gap-1">
                       <img
@@ -1053,10 +1050,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

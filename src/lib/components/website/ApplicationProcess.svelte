@@ -8,10 +8,10 @@
   let thinkYouShouldKnow = {
     heading: "Things You Should Know",
     paraGraph: [
-      `<span class="font-FourthHead">Timelines vary:</span> While we strive to move quickly, some roles may have longer processing times depending on the number of applicants and required background checks.`,
-      `<span class="font-FourthHead">Stay connected:</span> Keep an eye on your  email and phone  for updates regarding your application status.`,
-      `<span class="font-FourthHead">Multiple applications?</span> If you apply for multiple roles, each application will be assessed independently.`,
-      `<span class="font-FourthHead">Need assistance?</span> If you require accessibility accommodations, don’t hesitate to reach out – we’re here to support you.`,
+      `<span class="font-semibold">Timelines vary:</span> While we strive to move quickly, some roles may have longer processing times depending on the number of applicants and required background checks.`,
+      `<span class="font-semibold">Stay connected:</span> Keep an eye on your  email and phone  for updates regarding your application status.`,
+      `<span class="font-semibold">Multiple applications?</span> If you apply for multiple roles, each application will be assessed independently.`,
+      `<span class="font-semibold">Need assistance?</span> If you require accessibility accommodations, don’t hesitate to reach out – we’re here to support you.`,
     ],
   };
 </script>

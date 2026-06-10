@@ -23,7 +23,7 @@
     <button
       type="button"
       onclick={onClick}
-      class="relative w-full rounded-full bg-btnBg border px-[3rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 md:w-auto"
+      class="relative w-full rounded-full bg-btnBg border px-[3rem] py-3 typography-body-md text-text-light hover:opacity-90 md:w-auto"
     >
       {premiumBtnName}
       <span

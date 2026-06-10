@@ -356,7 +356,7 @@ window.removeEventListener("scroll", handleScroll);
               class="grid lg:grid-cols-5 gap-4 border-b border-borderColor py-[4rem]"
             >
               <h2
-                class="font-ThirdHead text-mobSubHead md:col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2"
               >
                 Current offers
               </h2>
@@ -382,11 +382,11 @@ window.removeEventListener("scroll", handleScroll);
             >
               <div class="md:col-span-2 space-y-4">
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   Shop till you drop
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   We want to make sure you get the best deals when you shop.
                   That’s why we’ve partnered with Australia’s biggest brands to
                   give you personalised cashback rewards, helping you save when
@@ -403,12 +403,12 @@ window.removeEventListener("scroll", handleScroll);
                       <img src={items.icon} alt={items.altName} />
                     </div>
                     <div
-                      class="font-Paragraph text-subParaFont flex flex-col gap-3 p-4"
+                      class="typography-body-md text-text-light flex flex-col gap-3 p-4"
                     >
-                      <h3 class="font-FourthHead text-miniSubHead">
+                      <h3 class="font-semibold text-miniSubHead">
                         {items.title}
                       </h3>
-                      <ul class=" space-y-4">
+                      <ul class="space-y-4">
                         {#each items.lists as list}
                           <li class="flex items-start gap-2">
                             <svg
@@ -449,11 +449,11 @@ window.removeEventListener("scroll", handleScroll);
             >
               <div class="md:col-span-2 space-y-4">
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   There’s no place like home
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   Looking for a new home? Moving into a new home? Or just
                   looking for a better NBN and electricity deal? We’ve got you
                   covered.
@@ -467,12 +467,12 @@ window.removeEventListener("scroll", handleScroll);
                       <img src={items.icon} alt={items.altName} />
                     </div>
                     <div
-                      class="font-Paragraph text-subParaFont flex flex-col gap-3 p-4"
+                      class="typography-body-md text-text-light flex flex-col gap-3 p-4"
                     >
-                      <h3 class="font-FourthHead text-miniSubHead">
+                      <h3 class="font-semibold text-miniSubHead">
                         {items.title}
                       </h3>
-                      <ul class=" space-y-4">
+                      <ul class="space-y-4">
                         {#each items.lists as list}
                           <li class="flex items-start gap-2">
                             <svg
@@ -513,11 +513,11 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="md:col-span-2 space-y-4">
               <h2
-                class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h2 text-text-main"
               >
               Control what matters to you
               </h2>
-              <p class="font-Paragraph text-minParaFont">
+              <p class="typography-body-sm text-text-light">
                 We can help you feel in control of your money and more protected when it comes to your credit score. Take a look at our current partners supporting you in the finance space.
               </p>
             </div>
@@ -529,12 +529,12 @@ window.removeEventListener("scroll", handleScroll);
                     <img src={items.icon} alt={items.altName} />
                   </div>
                   <div
-                    class="font-Paragraph text-subParaFont flex flex-col gap-3 p-4"
+                    class="typography-body-md text-text-light flex flex-col gap-3 p-4"
                   >
-                    <h3 class="font-FourthHead text-miniSubHead">
+                    <h3 class="font-semibold text-miniSubHead">
                       {items.title}
                     </h3>
-                    <ul class=" space-y-4">
+                    <ul class="space-y-4">
                       {#each items.lists as list}
                         <li class="flex items-start gap-2">
                           <svg
@@ -576,7 +576,7 @@ window.removeEventListener("scroll", handleScroll);
               cardHeading="Business partnerships"
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>
@@ -600,10 +600,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -613,7 +610,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -623,7 +620,7 @@ window.removeEventListener("scroll", handleScroll);
               <div id="offers" class="bg-white text-black px-[2rem]">
                 <div class="grid gap-4 border-b border-borderColor py-[4rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     Current offers
                   </h2>
@@ -649,11 +646,11 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <div class="space-y-4">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     Shop till you drop
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-sm text-text-light">
                     We want to make sure you get the best deals when you shop.
                     That’s why we’ve partnered with Australia’s biggest brands to
                     give you personalised cashback rewards, helping you save when
@@ -663,19 +660,19 @@ window.removeEventListener("scroll", handleScroll);
                   </p>
                 </div>
   
-                <div class=" grid md:grid-cols-2 gap-4">
+                <div class="grid md:grid-cols-2 gap-4">
                   {#each shop as items}
                     <div class="border border-[#E3E3E3]">
                       <div>
                         <img src={items.icon} alt={items.altName} />
                       </div>
                       <div
-                        class="font-Paragraph text-subParaFont flex flex-col gap-3 p-4"
+                        class="typography-body-md text-text-light flex flex-col gap-3 p-4"
                       >
-                        <h3 class="font-FourthHead text-miniSubHead">
+                        <h3 class="font-semibold text-miniSubHead">
                           {items.title}
                         </h3>
-                        <ul class=" space-y-4">
+                        <ul class="space-y-4">
                           {#each items.lists as list}
                             <li class="flex items-start gap-2">
                               <svg
@@ -716,11 +713,11 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <div class="space-y-4">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     There’s no place like home
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-sm text-text-light">
                     Looking for a new home? Moving into a new home? Or just
                     looking for a better NBN and electricity deal? We’ve got you
                     covered.
@@ -734,12 +731,12 @@ window.removeEventListener("scroll", handleScroll);
                         <img src={items.icon} alt={items.altName} />
                       </div>
                       <div
-                        class="font-Paragraph text-subParaFont flex flex-col gap-3 p-4"
+                        class="typography-body-md text-text-light flex flex-col gap-3 p-4"
                       >
-                        <h3 class="font-FourthHead text-miniSubHead">
+                        <h3 class="font-semibold text-miniSubHead">
                           {items.title}
                         </h3>
-                        <ul class=" space-y-4">
+                        <ul class="space-y-4">
                           {#each items.lists as list}
                             <li class="flex items-start gap-2">
                               <svg
@@ -780,11 +777,11 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <div class="space-y-4">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                   Control what matters to you
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-sm text-text-light">
                     We can help you feel in control of your money and more protected when it comes to your credit score. Take a look at our current partners supporting you in the finance space.
                   </p>
                 </div>
@@ -796,12 +793,12 @@ window.removeEventListener("scroll", handleScroll);
                         <img src={items.icon} alt={items.altName} />
                       </div>
                       <div
-                        class="font-Paragraph text-subParaFont flex flex-col gap-3 p-4"
+                        class="typography-body-md text-text-light flex flex-col gap-3 p-4"
                       >
-                        <h3 class="font-FourthHead text-miniSubHead">
+                        <h3 class="font-semibold text-miniSubHead">
                           {items.title}
                         </h3>
-                        <ul class=" space-y-4">
+                        <ul class="space-y-4">
                           {#each items.lists as list}
                             <li class="flex items-start gap-2">
                               <svg
@@ -843,7 +840,7 @@ window.removeEventListener("scroll", handleScroll);
                   cardHeading="Business partnerships"
                 >
                   <ul
-                    class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                    class="grid gap-[2rem] typography-body-md text-text-light"
                     slot="list"
                   >
                     <li>

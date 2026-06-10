@@ -236,11 +236,11 @@
                 icon: "/icons/checklist.svg",
                 altName: "check Icon",
                 desc: [
-                  `<span class="font-FourthHead">Age:</span> 21 to 65 years (varies by lender).`,
-                  `<span class="font-FourthHead">Employment Type:</span> Salaried, self-employed, or business owners.`,
-                  `<span class="font-FourthHead">Income Stability:</span> Regular income with proof of salary slips or ITRs.`,
-                  `<span class="font-FourthHead">Credit Score:</span> Minimum 700+ for easy approval.`,
-                  `<span class="font-FourthHead">Land Criteria:</span> The plot must be non-agricultural and approved by local authorities.`,
+                  `<span class="font-semibold">Age:</span> 21 to 65 years (varies by lender).`,
+                  `<span class="font-semibold">Employment Type:</span> Salaried, self-employed, or business owners.`,
+                  `<span class="font-semibold">Income Stability:</span> Regular income with proof of salary slips or ITRs.`,
+                  `<span class="font-semibold">Credit Score:</span> Minimum 700+ for easy approval.`,
+                  `<span class="font-semibold">Land Criteria:</span> The plot must be non-agricultural and approved by local authorities.`,
                 ],
               },
               {
@@ -248,10 +248,10 @@
                 icon: "/icons/accessEnergy.svg",
                 altName: "thunder Icon",
                 desc: [
-                  `<span class="font-FourthHead">Loan-to-Value (LTV) Ratio:</span> Up to 80-85% of the plot + construction cost.`,
-                  `<span class="font-FourthHead">EMI-to-Income Ratio:</span> Ideally 50-60% of monthly income.`,
-                  `<span class="font-FourthHead">Down Payment:</span> Minimum 15-20% of the total cost.`,
-                  `<span class="font-FourthHead">Interest Rates:</span> Typically between 8% - 12% (varies by lender and credit profile).`,
+                  `<span class="font-semibold">Loan-to-Value (LTV) Ratio:</span> Up to 80-85% of the plot + construction cost.`,
+                  `<span class="font-semibold">EMI-to-Income Ratio:</span> Ideally 50-60% of monthly income.`,
+                  `<span class="font-semibold">Down Payment:</span> Minimum 15-20% of the total cost.`,
+                  `<span class="font-semibold">Interest Rates:</span> Typically between 8% - 12% (varies by lender and credit profile).`,
                 ],
               },
               {
@@ -259,9 +259,9 @@
                 icon: "/icons/personalLoan.svg",
                 altName: "money-bag Icon",
                 desc: [
-                  `<span class="font-FourthHead">Creditworthiness:</span> Good financial history with no loan defaults.`,
-                  `<span class="font-FourthHead">Employment Stability:</span> Salaried individuals should have at least 2 years of job experience(<a href="/appointment">below this contact us</a>), self-employed applicants need 3+ years of business continuity.`,
-                  `<span class="font-FourthHead">Property Verification:</span> The lender ensures legal clearance and approval from local development authorities.`,
+                  `<span class="font-semibold">Creditworthiness:</span> Good financial history with no loan defaults.`,
+                  `<span class="font-semibold">Employment Stability:</span> Salaried individuals should have at least 2 years of job experience(<a href="/appointment">below this contact us</a>), self-employed applicants need 3+ years of business continuity.`,
+                  `<span class="font-semibold">Property Verification:</span> The lender ensures legal clearance and approval from local development authorities.`,
                 ],
               },
             ],
@@ -277,35 +277,35 @@
               {
                 heading: "1. Construction Loan Approval",
                 desc: [
-                  `<span class="font-FourthHead">Approved building plan</span> from local authorities must submit`,
-                  `<span class="font-FourthHead">Construction cost estimate</span> verified by an engineer/architect must submit`,
-                  `<span class="font-FourthHead">Builder agreement</span> or self-construction plan must submit`,
-                  `Most lenders require construction to <span class="font-FourthHead">start within 1-2 years</span> of plot purchase.`,
+                  `<span class="font-semibold">Approved building plan</span> from local authorities must submit`,
+                  `<span class="font-semibold">Construction cost estimate</span> verified by an engineer/architect must submit`,
+                  `<span class="font-semibold">Builder agreement</span> or self-construction plan must submit`,
+                  `Most lenders require construction to <span class="font-semibold">start within 1-2 years</span> of plot purchase.`,
                 ],
               },
               {
                 heading: "2. Plot Purchase Disbursement",
                 desc: [
-                  `The first installment covers the cost of the <span class="font-FourthHead">land purchase</span>.`,
-                  `The lender transfers this amount directly to the <span class="font-FourthHead">seller</span> or <span class="font-FourthHead">landowner</span> after verifying legal approvals.`,
-                  `The borrower may need to make a <span class="font-FourthHead">down payment (typically 15-20%)</span>.`,
+                  `The first installment covers the cost of the <span class="font-semibold">land purchase</span>.`,
+                  `The lender transfers this amount directly to the <span class="font-semibold">seller</span> or <span class="font-semibold">landowner</span> after verifying legal approvals.`,
+                  `The borrower may need to make a <span class="font-semibold">down payment (typically 15-20%)</span>.`,
                 ],
               },
               {
                 heading: "3. Stage-Wise Construction Fund Release​",
                 desc: [
-                  `<span class="font-FourthHead">Foundation & Plinth Work –</span> First payout after site preparation`,
-                  `<span class="font-FourthHead">Walls & Structure Completion –</span> Second payout after walls are raised`,
-                  `<span class="font-FourthHead">Roofing & Flooring –</span> Third payout when structural work is nearing completion`,
-                  `<span class="font-FourthHead">Final Completion –</span> Last payout after finishing work is done`,
-                  `Each stage is verified by the lender through <span class="font-FourthHead">site inspections</span>.`,
+                  `<span class="font-semibold">Foundation & Plinth Work –</span> First payout after site preparation`,
+                  `<span class="font-semibold">Walls & Structure Completion –</span> Second payout after walls are raised`,
+                  `<span class="font-semibold">Roofing & Flooring –</span> Third payout when structural work is nearing completion`,
+                  `<span class="font-semibold">Final Completion –</span> Last payout after finishing work is done`,
+                  `Each stage is verified by the lender through <span class="font-semibold">site inspections</span>.`,
                 ],
               },
               {
                 heading: "4. EMI & Repayment Process",
                 desc: [
-                  `<span class="font-FourthHead">Pre-EMI (Interest-Only Payments) –</span> Until construction is completed, the borrower may only need to pay interest on the amount disbursed.`,
-                  `<span class="font-FourthHead">Full EMI Starts –</span> Once construction is complete, full <span class="font-FourthHead">principal + interest</span> payments begin, just like a regular home loan.`,
+                  `<span class="font-semibold">Pre-EMI (Interest-Only Payments) –</span> Until construction is completed, the borrower may only need to pay interest on the amount disbursed.`,
+                  `<span class="font-semibold">Full EMI Starts –</span> Once construction is complete, full <span class="font-semibold">principal + interest</span> payments begin, just like a regular home loan.`,
                 ],
               },
             ],
@@ -318,7 +318,7 @@
               heading: `Balance Transfer for Plot + Construction Loan`,
               list: [
                 {
-                  heading: `<span class="font-FourthHead">Eligibility for Balance Transfer–</span>`,
+                  heading: `<span class="font-semibold">Eligibility for Balance Transfer–</span>`,
                   desc: `Good repayment history on the current loan.
                       <br>
                       Credit score 750+ for better rates.
@@ -331,7 +331,7 @@
                       `,
                 },
                 {
-                  heading: `<span class="font-FourthHead">Benefits of Balance Transfer–</span>`,
+                  heading: `<span class="font-semibold">Benefits of Balance Transfer–</span>`,
                   desc: `Lower Interest Rates
                       <br>
                       Extended Loan Tenure
@@ -342,16 +342,16 @@
                       `,
                 },
                 {
-                  heading: `<span class="font-FourthHead">Steps to Transfer a Construction Loan–</span>`,
-                  desc: `<span class="font-FourthHead">Compare Lenders –</span> Check interest rates, fees, and repayment terms.
+                  heading: `<span class="font-semibold">Steps to Transfer a Construction Loan–</span>`,
+                  desc: `<span class="font-semibold">Compare Lenders –</span> Check interest rates, fees, and repayment terms.
                       <br>
-                      <span class="font-FourthHead">Apply for Balance Transfer –</span> Submit required documents (loan statement, income proof, property papers).
+                      <span class="font-semibold">Apply for Balance Transfer –</span> Submit required documents (loan statement, income proof, property papers).
                       <br>
-                      <span class="font-FourthHead">Loan Approval & Processing –</span> The new lender will assess eligibility and approve the transfer.
+                      <span class="font-semibold">Loan Approval & Processing –</span> The new lender will assess eligibility and approve the transfer.
                       <br>
-                      <span class="font-FourthHead">Foreclosure of Existing Loan –</span> Your current lender will close the loan, and the new lender will take over.
+                      <span class="font-semibold">Foreclosure of Existing Loan –</span> Your current lender will close the loan, and the new lender will take over.
                       <br>
-                      <span class="font-FourthHead">New Loan Agreement –</span> You start repayment with the new lender under better terms.
+                      <span class="font-semibold">New Loan Agreement –</span> You start repayment with the new lender under better terms.
                       `,
                 },
               ],
@@ -364,12 +364,12 @@
               class="flex flex-col justify-center items-center gap-[4rem] w-full lg:w-auto"
             >
               <h2
-                class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                class="typography-h2 text-text-main text-center"
               >
                 Top-Up Loan in Plot+Construction
               </h2>
               <p
-                class="font-Paragraph text-subParaFont text-center lg:w-8/12 lg:justify-self-end"
+                class="typography-body-md text-text-light text-center lg:w-8/12 lg:justify-self-end"
               >
                 A top-up loan in a Plot + Construction Loan is strictly meant
                 for construction-related expenses and cannot be used to buy more
@@ -417,7 +417,7 @@
             reverse: true,
           }}
         >
-          <div class="font-Paragraph text-minParaFont">
+          <div class="typography-body-sm text-text-light">
             <ul class="list-disc space-y-4">
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
@@ -565,10 +565,7 @@
     <div class="lg:hidden block">
       {#each ["Guide & benefits", "Eligibility & loan structure", "How Digital DSA helps", "Tools & calculators"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -576,7 +573,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -659,11 +656,11 @@
                       icon: "/icons/checklist.svg",
                       altName: "check Icon",
                       desc: [
-                        `<span class="font-FourthHead">Age:</span> 21 to 65 years (varies by lender).`,
-                        `<span class="font-FourthHead">Employment Type:</span> Salaried, self-employed, or business owners.`,
-                        `<span class="font-FourthHead">Income Stability:</span> Regular income with proof of salary slips or ITRs.`,
-                        `<span class="font-FourthHead">CredCeba init Score:</span> Minimum 700+ for easy approval.`,
-                        `<span class="font-FourthHead">Land Criteria:</span> The plot must be non-agricultural and approved by local authorities.`,
+                        `<span class="font-semibold">Age:</span> 21 to 65 years (varies by lender).`,
+                        `<span class="font-semibold">Employment Type:</span> Salaried, self-employed, or business owners.`,
+                        `<span class="font-semibold">Income Stability:</span> Regular income with proof of salary slips or ITRs.`,
+                        `<span class="font-semibold">CredCeba init Score:</span> Minimum 700+ for easy approval.`,
+                        `<span class="font-semibold">Land Criteria:</span> The plot must be non-agricultural and approved by local authorities.`,
                       ],
                     },
                     {
@@ -671,10 +668,10 @@
                       icon: "/icons/accessEnergy.svg",
                       altName: "thunder Icon",
                       desc: [
-                        `<span class="font-FourthHead">Loan-to-Value (LTV) Ratio:</span> Up to 80-85% of the plot + construction cost.`,
-                        `<span class="font-FourthHead">EMI-to-Income Ratio:</span> Ideally 50-60% of monthly income.`,
-                        `<span class="font-FourthHead">Down Payment:</span> Minimum 15-20% of the total cost.`,
-                        `<span class="font-FourthHead">Interest Rates:</span> Typically between 8% - 12% (varies by lender and credit profile).`,
+                        `<span class="font-semibold">Loan-to-Value (LTV) Ratio:</span> Up to 80-85% of the plot + construction cost.`,
+                        `<span class="font-semibold">EMI-to-Income Ratio:</span> Ideally 50-60% of monthly income.`,
+                        `<span class="font-semibold">Down Payment:</span> Minimum 15-20% of the total cost.`,
+                        `<span class="font-semibold">Interest Rates:</span> Typically between 8% - 12% (varies by lender and credit profile).`,
                       ],
                     },
                     {
@@ -682,9 +679,9 @@
                       icon: "/icons/personalLoan.svg",
                       altName: "money-bag Icon",
                       desc: [
-                        `<span class="font-FourthHead">Creditworthiness:</span> Good financial history with no loan defaults.`,
-                        `<span class="font-FourthHead">Employment Stability:</span> Salaried individuals should have at least 2 years of job experience(<a href="/appointment">below this contact us</a>), self-employed applicants need 3+ years of business continuity.`,
-                        `<span class="font-FourthHead">Property Verification:</span> The lender ensures legal clearance and approval from local development authorities.`,
+                        `<span class="font-semibold">Creditworthiness:</span> Good financial history with no loan defaults.`,
+                        `<span class="font-semibold">Employment Stability:</span> Salaried individuals should have at least 2 years of job experience(<a href="/appointment">below this contact us</a>), self-employed applicants need 3+ years of business continuity.`,
+                        `<span class="font-semibold">Property Verification:</span> The lender ensures legal clearance and approval from local development authorities.`,
                       ],
                     },
                   ],
@@ -700,35 +697,35 @@
                     {
                       heading: "1. Construction Loan Approval",
                       desc: [
-                        `<span class="font-FourthHead">Approved building plan</span> from local authorities must submit`,
-                        `<span class="font-FourthHead">Construction cost estimate</span> verified by an engineer/architect must submit`,
-                        `<span class="font-FourthHead">Builder agreement</span> or self-construction plan must submit`,
-                        `Most lenders require construction to <span class="font-FourthHead">start within 1-2 years</span> of plot purchase.`,
+                        `<span class="font-semibold">Approved building plan</span> from local authorities must submit`,
+                        `<span class="font-semibold">Construction cost estimate</span> verified by an engineer/architect must submit`,
+                        `<span class="font-semibold">Builder agreement</span> or self-construction plan must submit`,
+                        `Most lenders require construction to <span class="font-semibold">start within 1-2 years</span> of plot purchase.`,
                       ],
                     },
                     {
                       heading: "2. Plot Purchase Disbursement",
                       desc: [
-                        `The first installment covers the cost of the <span class="font-FourthHead">land purchase</span>.`,
-                        `The lender transfers this amount directly to the <span class="font-FourthHead">seller</span> or <span class="font-FourthHead">landowner</span> after verifying legal approvals.`,
-                        `The borrower may need to make a <span class="font-FourthHead">down payment (typically 15-20%)</span>.`,
+                        `The first installment covers the cost of the <span class="font-semibold">land purchase</span>.`,
+                        `The lender transfers this amount directly to the <span class="font-semibold">seller</span> or <span class="font-semibold">landowner</span> after verifying legal approvals.`,
+                        `The borrower may need to make a <span class="font-semibold">down payment (typically 15-20%)</span>.`,
                       ],
                     },
                     {
                       heading: "3. Stage-Wise Construction Fund Release​",
                       desc: [
-                        `<span class="font-FourthHead">Foundation & Plinth Work –</span> First payout after site preparation`,
-                        `<span class="font-FourthHead">Walls & Structure Completion –</span> Second payout after walls are raised`,
-                        `<span class="font-FourthHead">Roofing & Flooring –</span> Third payout when structural work is nearing completion`,
-                        `<span class="font-FourthHead">Final Completion –</span> Last payout after finishing work is done`,
-                        `Each stage is verified by the lender through <span class="font-FourthHead">site inspections</span>.`,
+                        `<span class="font-semibold">Foundation & Plinth Work –</span> First payout after site preparation`,
+                        `<span class="font-semibold">Walls & Structure Completion –</span> Second payout after walls are raised`,
+                        `<span class="font-semibold">Roofing & Flooring –</span> Third payout when structural work is nearing completion`,
+                        `<span class="font-semibold">Final Completion –</span> Last payout after finishing work is done`,
+                        `Each stage is verified by the lender through <span class="font-semibold">site inspections</span>.`,
                       ],
                     },
                     {
                       heading: "4. EMI & Repayment Process",
                       desc: [
-                        `<span class="font-FourthHead">Pre-EMI (Interest-Only Payments) –</span> Until construction is completed, the borrower may only need to pay interest on the amount disbursed.`,
-                        `<span class="font-FourthHead">Full EMI Starts –</span> Once construction is complete, full <span class="font-FourthHead">principal + interest</span> payments begin, just like a regular home loan.`,
+                        `<span class="font-semibold">Pre-EMI (Interest-Only Payments) –</span> Until construction is completed, the borrower may only need to pay interest on the amount disbursed.`,
+                        `<span class="font-semibold">Full EMI Starts –</span> Once construction is complete, full <span class="font-semibold">principal + interest</span> payments begin, just like a regular home loan.`,
                       ],
                     },
                   ],
@@ -741,7 +738,7 @@
                     heading: `Balance Transfer for Plot + Construction Loan`,
                     list: [
                       {
-                        heading: `<span class="font-FourthHead">Eligibility for Balance Transfer–</span>`,
+                        heading: `<span class="font-semibold">Eligibility for Balance Transfer–</span>`,
                         desc: `Good repayment history on the current loan.
                       <br>
                       Credit score 750+ for better rates.
@@ -754,7 +751,7 @@
                       `,
                       },
                       {
-                        heading: `<span class="font-FourthHead">Benefits of Balance Transfer–</span>`,
+                        heading: `<span class="font-semibold">Benefits of Balance Transfer–</span>`,
                         desc: `Lower Interest Rates
                       <br>
                       Extended Loan Tenure
@@ -765,16 +762,16 @@
                       `,
                       },
                       {
-                        heading: `<span class="font-FourthHead">Steps to Transfer a Construction Loan–</span>`,
-                        desc: `<span class="font-FourthHead">Compare Lenders –</span> Check interest rates, fees, and repayment terms.
+                        heading: `<span class="font-semibold">Steps to Transfer a Construction Loan–</span>`,
+                        desc: `<span class="font-semibold">Compare Lenders –</span> Check interest rates, fees, and repayment terms.
                       <br>
-                      <span class="font-FourthHead">Apply for Balance Transfer –</span> Submit required documents (loan statement, income proof, property papers).
+                      <span class="font-semibold">Apply for Balance Transfer –</span> Submit required documents (loan statement, income proof, property papers).
                       <br>
-                      <span class="font-FourthHead">Loan Approval & Processing –</span> The new lender will assess eligibility and approve the transfer.
+                      <span class="font-semibold">Loan Approval & Processing –</span> The new lender will assess eligibility and approve the transfer.
                       <br>
-                      <span class="font-FourthHead">Foreclosure of Existing Loan –</span> Your current lender will close the loan, and the new lender will take over.
+                      <span class="font-semibold">Foreclosure of Existing Loan –</span> Your current lender will close the loan, and the new lender will take over.
                       <br>
-                      <span class="font-FourthHead">New Loan Agreement –</span> You start repayment with the new lender under better terms.
+                      <span class="font-semibold">New Loan Agreement –</span> You start repayment with the new lender under better terms.
                       `,
                       },
                     ],
@@ -787,12 +784,12 @@
                     class="flex flex-col justify-center items-center gap-[4rem] w-full lg:w-auto"
                   >
                     <h2
-                      class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                      class="typography-h2 text-text-main text-center"
                     >
                       Top-Up Loan in Plot+Construction
                     </h2>
                     <p
-                      class="font-Paragraph text-subParaFont text-center lg:w-8/12 lg:justify-self-end"
+                      class="typography-body-md text-text-light text-center lg:w-8/12 lg:justify-self-end"
                     >
                       A top-up loan in a Plot + Construction Loan is strictly
                       meant for construction-related expenses and cannot be used
@@ -841,7 +838,7 @@
                   reverse: true,
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <ul class="list-disc space-y-4">
                     <li class="flex items-start gap-1">
                       <img
@@ -1072,10 +1069,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

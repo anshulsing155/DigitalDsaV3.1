@@ -296,10 +296,10 @@ link: "/contact",
 
   let thinkKnow = {
     heading: "Things you should know",
-    paraGraph: [ `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-  `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-  `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-  `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`]
+    paraGraph: [ `<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+  `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+  `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+  `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`]
   };
 
   const toggleDropdown = (event, index) => {
@@ -382,7 +382,7 @@ window.removeEventListener("scroll", handleScroll);
     <div>
       <div class="hidden lg:block">
         <StickyNavbar navList={subList} {activeSection}>
-          <div class="  flex gap-4 pr-4">
+          <div class="flex gap-4 pr-4">
             {#each navList as lastItem}
               {#if lastItem.actionBtn}
                 {#each lastItem.actionBtn as action}
@@ -423,14 +423,14 @@ window.removeEventListener("scroll", handleScroll);
               class="border-b border-dividerColor grid gap-4 py-[4rem] lg:grid-cols-5"
             >
               <h2
-                class="font-ThirdHead text-mobSubHead md:col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2"
               >
                 How to switch an account to Everyday Offset
               </h2>
               <div
-                class="grid gap-5 overflow-hidden font-Paragraph text-subParaFont md:col-span-3"
+                class="grid gap-5 overflow-hidden typography-body-md text-text-light md:col-span-3"
               >
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   You can switch an eligible transaction account to an Everyday
                   Offset online with your eligible Digital DSA Standard Variable
                   Rate home loan
@@ -438,7 +438,7 @@ window.removeEventListener("scroll", handleScroll);
                 {#each switchList as switchItems}
                   {#each switchItems.lists as list}
                     <ul class="flex flex-col gap-4">
-                      <h3 class="mb-4 font-ThirdHead text-minSubHead">
+                      <h3 class="mb-4 typography-h3 font-semibold text-text-main">
                         {list.heading}
                       </h3>
                       {#each list.listItems as item}
@@ -451,7 +451,7 @@ window.removeEventListener("scroll", handleScroll);
                               >{item.num}</span
                             >
                             <p
-                              class="md:col-span-7 col-span-5 font-Paragraph text-subParaFont"
+                              class="md:col-span-7 col-span-5 typography-body-md text-text-light"
                             >
                               {@html item.text}
                             </p>
@@ -463,7 +463,7 @@ window.removeEventListener("scroll", handleScroll);
                 {/each}
                 <a
                   href="/"
-                  class="text-linkColor hover:no-underline underline font-Paragraph text-subParaFont"
+                  class="text-linkColor hover:no-underline underline typography-body-md text-text-light"
                   >Download the Everyday Offset fact sheet (PDF)</a
                 >
               </div>
@@ -473,7 +473,7 @@ window.removeEventListener("scroll", handleScroll);
           <div id="benefits" data-section="benefits" class="section">
             <div class="pt-[2rem] lg:pt-[4rem] border-b border-borderColor">
               <h2
-                class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="md:text-start typography-h2 text-text-main"
               >
                 Looking for a home
               </h2>
@@ -488,7 +488,7 @@ window.removeEventListener("scroll", handleScroll);
           <div id="offset" data-section="offset" class="section">
             <div class="pt-[2rem] lg:pt-[4rem] border-b border-borderColor">
               <h2
-                class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="md:text-start typography-h2 text-text-main"
               >
                 Home loans with an offset account
               </h2>
@@ -509,7 +509,7 @@ window.removeEventListener("scroll", handleScroll);
                       class="border-2 border-borderColor min-h-[25svh] p-[2rem] flex flex-col gap-[3rem]"
                     >
                       <div class="flex flex-col gap-4">
-                        <h3 class="font-ThirdHead text-minSubHead">
+                        <h3 class="typography-h3 font-semibold text-text-main">
                           {content.title}
                         </h3>
 
@@ -518,7 +518,7 @@ window.removeEventListener("scroll", handleScroll);
                             <ul class="list-disc marker:text-black pl-4">
                               {#if index < content.links.length - 1}
                                 <li
-                                  class=" underline text-linkColor hover:no-underline"
+                                  class="underline text-linkColor hover:no-underline"
                                 >
                                   <a href={link.url}>{link.name}</a>
                                 </li>
@@ -563,10 +563,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -576,7 +573,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -607,14 +604,14 @@ window.removeEventListener("scroll", handleScroll);
               <div id="switch" class="bg-white text-black px-[2rem]">
                 <div class="grid gap-4 py-[4rem] lg:grid-cols-5">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2"
                   >
                     How to switch an account to Everyday Offset
                   </h2>
                   <div
-                    class="grid gap-5 overflow-hidden font-Paragraph text-subParaFont md:col-span-3"
+                    class="grid gap-5 overflow-hidden typography-body-md text-text-light md:col-span-3"
                   >
-                    <p class="font-Paragraph text-minParaFont">
+                    <p class="typography-body-sm text-text-light">
                       You can switch an eligible transaction account to an
                       Everyday Offset online with your eligible Digital DSA
                       Standard Variable Rate home loan
@@ -622,7 +619,7 @@ window.removeEventListener("scroll", handleScroll);
                     {#each switchList as switchItems}
                       {#each switchItems.lists as list}
                         <ul class="flex flex-col gap-4">
-                          <h3 class="mb-4 font-ThirdHead text-minSubHead">
+                          <h3 class="mb-4 typography-h3 font-semibold text-text-main">
                             {list.heading}
                           </h3>
                           {#each list.listItems as item}
@@ -635,7 +632,7 @@ window.removeEventListener("scroll", handleScroll);
                                   >{item.num}</span
                                 >
                                 <p
-                                  class="md:col-span-7 col-span-5 font-Paragraph text-subParaFont"
+                                  class="md:col-span-7 col-span-5 typography-body-md text-text-light"
                                 >
                                   {@html item.text}
                                 </p>
@@ -647,7 +644,7 @@ window.removeEventListener("scroll", handleScroll);
                     {/each}
                     <a
                       href="/"
-                      class="text-linkColor hover:no-underline underline font-Paragraph text-subParaFont"
+                      class="text-linkColor hover:no-underline underline typography-body-md text-text-light"
                       >Download the Everyday Offset fact sheet (PDF)</a
                     >
                   </div>
@@ -657,7 +654,7 @@ window.removeEventListener("scroll", handleScroll);
               <div id="benefits" class="bg-white text-black px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem]">
                   <h2
-                    class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="md:text-start typography-h2 text-text-main"
                   >
                     Looking for a home
                   </h2>
@@ -672,7 +669,7 @@ window.removeEventListener("scroll", handleScroll);
               <div id="offset" class="bg-white text-black px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem]">
                   <h2
-                    class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="md:text-start typography-h2 text-text-main"
                   >
                     Home loans with an offset account
                   </h2>
@@ -692,7 +689,7 @@ window.removeEventListener("scroll", handleScroll);
                         class="border-2 border-borderColor min-h-[25svh] p-[2rem] flex flex-col gap-[3rem]"
                       >
                         <div class="flex flex-col gap-4">
-                          <h3 class="font-ThirdHead text-minSubHead">
+                          <h3 class="typography-h3 font-semibold text-text-main">
                             {content.title}
                           </h3>
 
@@ -701,7 +698,7 @@ window.removeEventListener("scroll", handleScroll);
                               <ul class="list-disc marker:text-black pl-4">
                                 {#if index < content.links.length - 1}
                                   <li
-                                    class=" underline text-linkColor hover:no-underline"
+                                    class="underline text-linkColor hover:no-underline"
                                   >
                                     <a href={link.url}>{link.name}</a>
                                   </li>
@@ -751,7 +748,7 @@ window.removeEventListener("scroll", handleScroll);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-[2rem] typography-body-md text-text-light"
             slot="list"
           >
             <li>

@@ -27,7 +27,7 @@
     {/if}
 
     <h2
-      class="text-center typography-h3 text-primary text-wrap "
+      class="text-center typography-h3 text-primary text-wrap"
     >
       {@html cardData.heading}
     </h2>

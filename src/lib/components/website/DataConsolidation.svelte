@@ -264,13 +264,13 @@
             listTopPara: `<p>Debt consolidation can work wonders if:</p>`,
             list: [
               {
-                heading: `<p class="font-Paragraph">You’re paying multiple high-interest loans.</p>`,
+                heading: `<p class="typography-body-md">You’re paying multiple high-interest loans.</p>`,
               },
               {
-                heading: `<p class="font-Paragraph">You qualify for a loan with lower interest rates.</p>`,
+                heading: `<p class="typography-body-md">You qualify for a loan with lower interest rates.</p>`,
               },
               {
-                heading: `<p class="font-Paragraph">You’re disciplined enough to avoid accumulating new debt.</p>`,
+                heading: `<p class="typography-body-md">You’re disciplined enough to avoid accumulating new debt.</p>`,
               },
             ],
             listSecPara: `<p>However, it’s not a magic solution. If overspending or poor budgeting caused your debt, it’s important to address those habits too.</p>`,
@@ -284,7 +284,7 @@
             cardHeading: "Get Started with Debt Consolidation",
           }}
         >
-          <div class="font-Paragraph text-minParaFont">
+          <div class="typography-body-sm text-text-light">
             <p>
               Assess your debts and explore options that fit your needs. Tools
               like our <a
@@ -326,10 +326,7 @@
     <div class="lg:hidden">
       {#each navBarMedium as navBar, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          navBar.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < navBar.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -337,7 +334,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{navBar}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -446,13 +443,13 @@
                   listTopPara: `<p>Debt consolidation can work wonders if:</p>`,
                   list: [
                     {
-                      heading: `<p class="font-Paragraph">You’re paying multiple high-interest loans.</p>`,
+                      heading: `<p class="typography-body-md">You’re paying multiple high-interest loans.</p>`,
                     },
                     {
-                      heading: `<p class="font-Paragraph">You qualify for a loan with lower interest rates.</p>`,
+                      heading: `<p class="typography-body-md">You qualify for a loan with lower interest rates.</p>`,
                     },
                     {
-                      heading: `<p class="font-Paragraph">You’re disciplined enough to avoid accumulating new debt.</p>`,
+                      heading: `<p class="typography-body-md">You’re disciplined enough to avoid accumulating new debt.</p>`,
                     },
                   ],
                   listSecPara: `<p>However, it’s not a magic solution. If overspending or poor budgeting caused your debt, it’s important to address those habits too.</p>`,
@@ -466,7 +463,7 @@
                   cardHeading: "Get Started with Debt Consolidation",
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <p>
                     Assess your debts and explore options that fit your needs.
                     Tools like our <a
@@ -515,7 +512,7 @@
         reverse: true,
       }}
     >
-      <p class="font-Paragraph text-minParaFont">
+      <p class="typography-body-sm text-text-light">
         Reach out to us anytime for expert guidance on your loan needs. Our team
         is ready to offer professional advice, assist you through the loan
         process, and help you find the best solutions. No matter when you need

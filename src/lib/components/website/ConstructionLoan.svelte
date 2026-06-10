@@ -169,28 +169,28 @@
             heading: `Loan features`,
             list: [
               {
-                heading: `<span class="font-FourthHead">Loan Disbursement in Phases–</span>`,
+                heading: `<span class="font-semibold">Loan Disbursement in Phases–</span>`,
                 desc: `The bank releases funds after verifying the completion of specific construction. `,
               },
 
               {
-                heading: `<span class="font-FourthHead">Loan Tenure–</span>`,
+                heading: `<span class="font-semibold">Loan Tenure–</span>`,
                 desc: `Typically, 10 to 30 years, depending on the bank and your profile.`,
               },
               {
-                heading: `<span class="font-FourthHead">Loan-to-Value (LTV) Ratio–</span>`,
+                heading: `<span class="font-semibold">Loan-to-Value (LTV) Ratio–</span>`,
                 desc: `Banks finance 75% to 90% of construction costs while borrowers fund the rest. LTV is based on construction cost not land value.`,
               },
               {
-                heading: `<span class="font-FourthHead">Property as Collateral–</span>`,
+                heading: `<span class="font-semibold">Property as Collateral–</span>`,
                 desc: `The land and the under-construction property are typically mortgaged until repayment.`,
               },
               {
-                heading: `<span class="font-FourthHead">Monitoring & Inspections–</span>`,
+                heading: `<span class="font-semibold">Monitoring & Inspections–</span>`,
                 desc: `Banks conduct regular site inspections to verify construction progress before disbursing the next installment.`,
               },
               {
-                heading: `<span class="font-FourthHead">Tax Benefits–</span>`,
+                heading: `<span class="font-semibold">Tax Benefits–</span>`,
                 desc: `Similar to home loans, tax benefits are available under Section 80C (principal repayment) and Section 24(b) (interest paid), but only after construction is complete.`,
               },
             ],
@@ -204,23 +204,23 @@
             heading: `Key benefits`,
             list: [
               {
-                heading: `<span class="font-FourthHead">Custom-Built Home–</span>`,
+                heading: `<span class="font-semibold">Custom-Built Home–</span>`,
                 desc: `Enables you to build your <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">dream home</span> according to your preferences rather than buying a pre-built property.`,
               },
               {
-                heading: `<span class="font-FourthHead">Preserve Your Savings–</span>`,
+                heading: `<span class="font-semibold">Preserve Your Savings–</span>`,
                 desc: `You don’t have to exhaust your savings instead, you can use loan funds for smooth cash flow management.`,
               },
               {
-                heading: `<span class="font-FourthHead">Higher Loan Amount–</span>`,
+                heading: `<span class="font-semibold">Higher Loan Amount–</span>`,
                 desc: `Compared to personal loans, construction loans offer higher funding based on project cost and your eligibility.`,
               },
               {
-                heading: `<span class="font-FourthHead">Flexible Repayment Options–</span>`,
+                heading: `<span class="font-semibold">Flexible Repayment Options–</span>`,
                 desc: `During construction, banks may require only Pre-EMI (interest). Full EMI starts after full disbursement or project completion.`,
               },
               {
-                heading: `<span class="font-FourthHead">Unlock the value–</span>`,
+                heading: `<span class="font-semibold">Unlock the value–</span>`,
                 desc: `Once the house is complete, you will be eligible for a top-up loan for further expenses (like expansion of business, medical emergencies, higher education, weddings, foreign travel etc).`,
               },
             ],
@@ -250,33 +250,33 @@
                 altName: "profile-icon",
                 heading: "Applicant's Financial Profile",
                 desc: [
-                  `<span class="font-FourthHead">Income Stability –</span> Banks assess salary slips or business financials.`,
-                  `<span class="font-FourthHead">Credit Score –</span> A 700+ CIBIL score boosts approval chances.`,
-                  `<span class="font-FourthHead">Debt-to-Income Ratio –</span> Lower existing loans for better eligibility.`,
+                  `<span class="font-semibold">Income Stability –</span> Banks assess salary slips or business financials.`,
+                  `<span class="font-semibold">Credit Score –</span> A 700+ CIBIL score boosts approval chances.`,
+                  `<span class="font-semibold">Debt-to-Income Ratio –</span> Lower existing loans for better eligibility.`,
                 ],
-                para: `<span class="font-FourthHead">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Maintain good credit history & reduce debts before applying.</span>`,
+                para: `<span class="font-semibold">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Maintain good credit history & reduce debts before applying.</span>`,
               },
               {
                 icon: "/icons/personalLoan.svg",
                 altName: "money-pouch-icon",
                 heading: "Property & Loan-to-Value (LTV) Ratio",
                 desc: [
-                  `<span class="font-FourthHead">Land Ownership –</span> Must own the plot or have a valid sale agreement.`,
-                  `<span class="font-FourthHead">LTV Ratio –</span> Banks fund up to 80%, requiring a 20% down payment.`,
-                  `<span class="font-FourthHead">Location & Approval –</span> Plot must be in a lender-approved area with all permits.`,
+                  `<span class="font-semibold">Land Ownership –</span> Must own the plot or have a valid sale agreement.`,
+                  `<span class="font-semibold">LTV Ratio –</span> Banks fund up to 80%, requiring a 20% down payment.`,
+                  `<span class="font-semibold">Location & Approval –</span> Plot must be in a lender-approved area with all permits.`,
                 ],
-                para: `<span class="font-FourthHead">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Ensure clear land titles & approvals to avoid loan rejection.</span>`,
+                para: `<span class="font-semibold">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Ensure clear land titles & approvals to avoid loan rejection.</span>`,
               },
               {
                 icon: "/icons/apply-pen.svg",
                 altName: "document-icon",
                 heading: "Documentation & Legal Compliance",
                 desc: [
-                  `<span class="font-FourthHead">KYC Documents –</span> PAN, Aadhaar, and address proof.`,
-                  `<span class="font-FourthHead">Income Proof –</span> Salary slips & ITRs (salaried) / Business financials (self-employed).`,
-                  `<span class="font-FourthHead">Construction Plan & Cost Estimate –</span> Architect-certified plan & cost estimate.`,
+                  `<span class="font-semibold">KYC Documents –</span> PAN, Aadhaar, and address proof.`,
+                  `<span class="font-semibold">Income Proof –</span> Salary slips & ITRs (salaried) / Business financials (self-employed).`,
+                  `<span class="font-semibold">Construction Plan & Cost Estimate –</span> Architect-certified plan & cost estimate.`,
                 ],
-                para: `<span class="font-FourthHead">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Keep all documents updated for faster approval.</span>`,
+                para: `<span class="font-semibold">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Keep all documents updated for faster approval.</span>`,
               },
             ],
           }}
@@ -288,7 +288,7 @@
               heading: `Balance Transfer of Construction-Only Loan`,
               list: [
                 {
-                  heading: `<span class="font-FourthHead">Eligibility for Balance Transfer–</span>`,
+                  heading: `<span class="font-semibold">Eligibility for Balance Transfer–</span>`,
                   desc: `Good repayment history on the current loan.
                       <br>
                       Credit score 750+ for better rates.
@@ -301,7 +301,7 @@
                       `,
                 },
                 {
-                  heading: `<span class="font-FourthHead">Benefits of Balance Transfer–</span>`,
+                  heading: `<span class="font-semibold">Benefits of Balance Transfer–</span>`,
                   desc: `Lower Interest Rates
                       <br>
                       Extended Loan Tenure
@@ -312,16 +312,16 @@
                       `,
                 },
                 {
-                  heading: `<span class="font-FourthHead">Steps to Transfer a Construction Loan–</span>`,
-                  desc: `<span class="font-FourthHead">Compare Lenders –</span> Check interest rates, fees, and repayment terms.
+                  heading: `<span class="font-semibold">Steps to Transfer a Construction Loan–</span>`,
+                  desc: `<span class="font-semibold">Compare Lenders –</span> Check interest rates, fees, and repayment terms.
                       <br>
-                      <span class="font-FourthHead">Apply for Balance Transfer –</span> Submit required documents (loan statement, income proof, property papers).
+                      <span class="font-semibold">Apply for Balance Transfer –</span> Submit required documents (loan statement, income proof, property papers).
                       <br>
-                      <span class="font-FourthHead">Loan Approval & Processing –</span> The new lender will assess eligibility and approve the transfer.
+                      <span class="font-semibold">Loan Approval & Processing –</span> The new lender will assess eligibility and approve the transfer.
                       <br>
-                      <span class="font-FourthHead">Foreclosure of Existing Loan –</span> Your current lender will close the loan, and the new lender will take over.
+                      <span class="font-semibold">Foreclosure of Existing Loan –</span> Your current lender will close the loan, and the new lender will take over.
                       <br>
-                      <span class="font-FourthHead">New Loan Agreement –</span> You start repayment with the new lender under better terms.
+                      <span class="font-semibold">New Loan Agreement –</span> You start repayment with the new lender under better terms.
                       `,
                 },
               ],
@@ -334,12 +334,12 @@
               class="flex flex-col justify-center items-center gap-[4rem] w-full lg:w-auto"
             >
               <h2
-                class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                class="typography-h2 text-text-main text-center"
               >
                 Top-Up Loan in Construction
               </h2>
               <p
-                class="font-Paragraph text-subParaFont text-center lg:w-8/12 lg:justify-self-end"
+                class="typography-body-md text-text-light text-center lg:w-8/12 lg:justify-self-end"
               >
                 A top-up loan is extra money you can borrow on top of your
                 existing construction loan. It helps cover additional costs like
@@ -385,7 +385,7 @@
             cardHeading: "Step-by-step guide",
           }}
         >
-          <div class="font-Paragraph text-minParaFont">
+          <div class="typography-body-sm text-text-light">
             <ul class="list-disc space-y-4">
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
@@ -517,10 +517,7 @@
     <div class="lg:hidden block">
       {#each ["Loan features", "Key benefits", "Know your eligibility", "Step-by-step guide", "Tools & calculators"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -528,7 +525,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -541,28 +538,28 @@
                   heading: `Loan features`,
                   list: [
                     {
-                      heading: `<span class="font-FourthHead">Loan Disbursement in Phases–</span>`,
+                      heading: `<span class="font-semibold">Loan Disbursement in Phases–</span>`,
                       desc: `The bank releases funds after verifying the completion of specific construction. `,
                     },
 
                     {
-                      heading: `<span class="font-FourthHead">Loan Tenure–</span>`,
+                      heading: `<span class="font-semibold">Loan Tenure–</span>`,
                       desc: `Typically, 10 to 30 years, depending on the bank and your profile.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Loan-to-Value (LTV) Ratio–</span>`,
+                      heading: `<span class="font-semibold">Loan-to-Value (LTV) Ratio–</span>`,
                       desc: `Banks finance 75% to 90% of construction costs while borrowers fund the rest. LTV is based on construction cost not land value.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Property as Collateral–</span>`,
+                      heading: `<span class="font-semibold">Property as Collateral–</span>`,
                       desc: `The land and the under-construction property are typically mortgaged until repayment.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Monitoring & Inspections–</span>`,
+                      heading: `<span class="font-semibold">Monitoring & Inspections–</span>`,
                       desc: `Banks conduct regular site inspections to verify construction progress before disbursing the next installment.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Tax Benefits–</span>`,
+                      heading: `<span class="font-semibold">Tax Benefits–</span>`,
                       desc: `Similar to home loans, tax benefits are available under Section 80C (principal repayment) and Section 24(b) (interest paid), but only after construction is complete.`,
                     },
                   ],
@@ -576,23 +573,23 @@
                   heading: `Key benefits`,
                   list: [
                     {
-                      heading: `<span class="font-FourthHead">Custom-Built Home–</span>`,
+                      heading: `<span class="font-semibold">Custom-Built Home–</span>`,
                       desc: `Enables you to build your <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">dream home</span> according to your preferences rather than buying a pre-built property.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Preserve Your Savings–</span>`,
+                      heading: `<span class="font-semibold">Preserve Your Savings–</span>`,
                       desc: `You don’t have to exhaust your savings instead, you can use loan funds for smooth cash flow management.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Higher Loan Amount–</span>`,
+                      heading: `<span class="font-semibold">Higher Loan Amount–</span>`,
                       desc: `Compared to personal loans, construction loans offer higher funding based on project cost and your eligibility.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Flexible Repayment Options–</span>`,
+                      heading: `<span class="font-semibold">Flexible Repayment Options–</span>`,
                       desc: `During construction, banks may require only Pre-EMI (interest). Full EMI starts after full disbursement or project completion.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Unlock the value–</span>`,
+                      heading: `<span class="font-semibold">Unlock the value–</span>`,
                       desc: `Once the house is complete, you will be eligible for a top-up loan for further expenses (like expansion of business, medical emergencies, higher education, weddings, foreign travel etc).`,
                     },
                   ],
@@ -622,33 +619,33 @@
                       altName: "profile-icon",
                       heading: "Applicant's Financial Profile",
                       desc: [
-                        `<span class="font-FourthHead">Income Stability –</span> Banks assess salary slips or business financials.`,
-                        `<span class="font-FourthHead">Credit Score –</span> A 700+ CIBIL score boosts approval chances.`,
-                        `<span class="font-FourthHead">Debt-to-Income Ratio –</span> Lower existing loans for better eligibility.`,
+                        `<span class="font-semibold">Income Stability –</span> Banks assess salary slips or business financials.`,
+                        `<span class="font-semibold">Credit Score –</span> A 700+ CIBIL score boosts approval chances.`,
+                        `<span class="font-semibold">Debt-to-Income Ratio –</span> Lower existing loans for better eligibility.`,
                       ],
-                      para: `<span class="font-FourthHead">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Maintain good credit history & reduce debts before applying.</span>`,
+                      para: `<span class="font-semibold">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Maintain good credit history & reduce debts before applying.</span>`,
                     },
                     {
                       icon: "/icons/personalLoan.svg",
                       altName: "money-pouch-icon",
                       heading: "Property & Loan-to-Value (LTV) Ratio",
                       desc: [
-                        `<span class="font-FourthHead">Land Ownership –</span> Must own the plot or have a valid sale agreement.`,
-                        `<span class="font-FourthHead">LTV Ratio –</span> Banks fund up to 80%, requiring a 20% down payment.`,
-                        `<span class="font-FourthHead">Location & Approval –</span> Plot must be in a lender-approved area with all permits.`,
+                        `<span class="font-semibold">Land Ownership –</span> Must own the plot or have a valid sale agreement.`,
+                        `<span class="font-semibold">LTV Ratio –</span> Banks fund up to 80%, requiring a 20% down payment.`,
+                        `<span class="font-semibold">Location & Approval –</span> Plot must be in a lender-approved area with all permits.`,
                       ],
-                      para: `<span class="font-FourthHead">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Ensure clear land titles & approvals to avoid loan rejection.</span>`,
+                      para: `<span class="font-semibold">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Ensure clear land titles & approvals to avoid loan rejection.</span>`,
                     },
                     {
                       icon: "/icons/apply-pen.svg",
                       altName: "document-icon",
                       heading: "Documentation & Legal Compliance",
                       desc: [
-                        `<span class="font-FourthHead">KYC Documents –</span> PAN, Aadhaar, and address proof.`,
-                        `<span class="font-FourthHead">Income Proof –</span> Salary slips & ITRs (salaried) / Business financials (self-employed).`,
-                        `<span class="font-FourthHead">Construction Plan & Cost Estimate –</span> Architect-certified plan & cost estimate.`,
+                        `<span class="font-semibold">KYC Documents –</span> PAN, Aadhaar, and address proof.`,
+                        `<span class="font-semibold">Income Proof –</span> Salary slips & ITRs (salaried) / Business financials (self-employed).`,
+                        `<span class="font-semibold">Construction Plan & Cost Estimate –</span> Architect-certified plan & cost estimate.`,
                       ],
-                      para: `<span class="font-FourthHead">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Keep all documents updated for faster approval.</span>`,
+                      para: `<span class="font-semibold">Tip:</span> <span class="underline decoration-[1.5px] underline-offset-4 decoration-btnBg">Keep all documents updated for faster approval.</span>`,
                     },
                   ],
                 }}
@@ -660,7 +657,7 @@
                     heading: `Balance Transfer of Construction-Only Loan`,
                     list: [
                       {
-                        heading: `<span class="font-FourthHead">Eligibility for Balance Transfer–</span>`,
+                        heading: `<span class="font-semibold">Eligibility for Balance Transfer–</span>`,
                         desc: `Good repayment history on the current loan.
                       <br>
                       Credit score 750+ for better rates.
@@ -673,7 +670,7 @@
                       `,
                       },
                       {
-                        heading: `<span class="font-FourthHead">Benefits of Balance Transfer–</span>`,
+                        heading: `<span class="font-semibold">Benefits of Balance Transfer–</span>`,
                         desc: `Lower Interest Rates
                       <br>
                       Extended Loan Tenure
@@ -684,16 +681,16 @@
                       `,
                       },
                       {
-                        heading: `<span class="font-FourthHead">Steps to Transfer a Construction Loan–</span>`,
-                        desc: `<span class="font-FourthHead">Compare Lenders –</span> Check interest rates, fees, and repayment terms.
+                        heading: `<span class="font-semibold">Steps to Transfer a Construction Loan–</span>`,
+                        desc: `<span class="font-semibold">Compare Lenders –</span> Check interest rates, fees, and repayment terms.
                       <br>
-                      <span class="font-FourthHead">Apply for Balance Transfer –</span> Submit required documents (loan statement, income proof, property papers).
+                      <span class="font-semibold">Apply for Balance Transfer –</span> Submit required documents (loan statement, income proof, property papers).
                       <br>
-                      <span class="font-FourthHead">Loan Approval & Processing –</span> The new lender will assess eligibility and approve the transfer.
+                      <span class="font-semibold">Loan Approval & Processing –</span> The new lender will assess eligibility and approve the transfer.
                       <br>
-                      <span class="font-FourthHead">Foreclosure of Existing Loan –</span> Your current lender will close the loan, and the new lender will take over.
+                      <span class="font-semibold">Foreclosure of Existing Loan –</span> Your current lender will close the loan, and the new lender will take over.
                       <br>
-                      <span class="font-FourthHead">New Loan Agreement –</span> You start repayment with the new lender under better terms.
+                      <span class="font-semibold">New Loan Agreement –</span> You start repayment with the new lender under better terms.
                       `,
                       },
                     ],
@@ -706,12 +703,12 @@
                     class="flex flex-col justify-center items-center gap-[4rem] w-full lg:w-auto"
                   >
                     <h2
-                      class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                      class="typography-h2 text-text-main text-center"
                     >
                       Top-Up Loan in Construction
                     </h2>
                     <p
-                      class="font-Paragraph text-subParaFont text-center lg:w-8/12 lg:justify-self-end"
+                      class="typography-body-md text-text-light text-center lg:w-8/12 lg:justify-self-end"
                     >
                       A top-up loan is extra money you can borrow on top of your
                       existing construction loan. It helps cover additional
@@ -758,7 +755,7 @@
                   cardHeading: "Step-by-step guide",
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <ul class="list-disc space-y-4">
                     <li class="flex items-start gap-1">
                       <img
@@ -967,10 +964,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

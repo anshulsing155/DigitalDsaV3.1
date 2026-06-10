@@ -38,13 +38,13 @@
         heading: "Define Your Investment Goal 🎯",
         listTopPara: `<p>Before jumping into real estate, ask yourself:</p>
 
-           <p class="font-FourthHead text-subParaFont mt-5">✔️ Are you buying for rental income? <span class="font-Paragraph">(Steady cash flow 🏧)</span></p>
-            <p class="font-FourthHead text-subParaFont mt-5">✔️ Do you want capital appreciation? <span class="font-Paragraph">(Property value growth 📈)</span></p>
-            <p class="font-FourthHead text-subParaFont mt-5">✔️ Are you buying for business use?<span class="font-Paragraph"> (Own workspace 🏢)</span></p>
-            <p class="font-FourthHead text-subParaFont mt-5">✔️ Is it a second home or vacation property?<span class="font-Paragraph"> (Lifestyle upgrade 🌴)</span></p>
+           <p class="font-semibold typography-body-md mt-5">✔️ Are you buying for rental income? <span class="typography-body-md">(Steady cash flow 🏧)</span></p>
+            <p class="font-semibold typography-body-md mt-5">✔️ Do you want capital appreciation? <span class="typography-body-md">(Property value growth 📈)</span></p>
+            <p class="font-semibold typography-body-md mt-5">✔️ Are you buying for business use?<span class="typography-body-md"> (Own workspace 🏢)</span></p>
+            <p class="font-semibold typography-body-md mt-5">✔️ Is it a second home or vacation property?<span class="typography-body-md"> (Lifestyle upgrade 🌴)</span></p>
         `,
         list: [],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">💡 Why this matters?</span> Your goal determines location, property type, and financial planning.</p>`,
+        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">💡 Why this matters?</span> Your goal determines location, property type, and financial planning.</p>`,
       }}
     />
 
@@ -54,13 +54,13 @@
         listTopPara: `<p>Choosing between residential and commercial property depends on your investment goals and risk tolerance:</p>
                                <table class="table-auto w-full mt-5">
                                 <thead>
-                                    <tr class="font-FourthHead text-subParaFont">
+                                    <tr class="font-semibold typography-body-md">
                                         <th class="border bg-gray-100 px-4 py-2">Factor</th>
                                         <th class="border bg-gray-100 px-4 py-2">Residential 🏡</th>
                                         <th class="border bg-gray-100 px-4 py-2">Commercial 🏢</th>
                                     </tr>
                                 </thead>
-                                <tbody class="font-Paragraph">
+                                <tbody class="typography-body-md">
                                     <tr>
                                         <td class="border px-4 py-2">Investment Cost</td>
                                         <td class="border px-4 py-2">Lower</td>
@@ -96,7 +96,7 @@
                 
                 `,
         list: [],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">💡 If you want regular income, commercial properties give better rental returns, but require higher investment & patience.</span></p>`,
+        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">💡 If you want regular income, commercial properties give better rental returns, but require higher investment & patience.</span></p>`,
       }}
     />
 
@@ -104,17 +104,17 @@
       contents={{
         heading: "How to Choose the Right Location? 🗺️",
         listTopPara: `<p>Choosing the right location is crucial for property investment:</p>
-                  <ul class="font-FourthHead text-subParaFont mb-8 mt-5">
-                      <li class="my-2">✔️ Rental demand –<span class="font-Paragraph"> Is there high tenant interest? (Near IT parks, colleges, business hubs)</span></li>
-                      <li class="my-2">✔️ Infrastructure growth –<span class="font-Paragraph"> Are metro, highways, airports coming up?</span></li>
-                      <li class="my-2">✔️ Historical price trends –<span class="font-Paragraph"> Has the area given steady price appreciation?</span></li>
-                      <li class="my-2">✔️ Resale & liquidity – <span class="font-Paragraph">Will it be easy to sell if needed?</span></li>
+                  <ul class="font-semibold typography-body-md mb-8 mt-5">
+                      <li class="my-2">✔️ Rental demand –<span class="typography-body-md"> Is there high tenant interest? (Near IT parks, colleges, business hubs)</span></li>
+                      <li class="my-2">✔️ Infrastructure growth –<span class="typography-body-md"> Are metro, highways, airports coming up?</span></li>
+                      <li class="my-2">✔️ Historical price trends –<span class="typography-body-md"> Has the area given steady price appreciation?</span></li>
+                      <li class="my-2">✔️ Resale & liquidity – <span class="typography-body-md">Will it be easy to sell if needed?</span></li>
                   </ul>
                   <div class="p-4 bg-gray-100 border-l-4 border-btnBg">
-                  <p class="mr-2 font-FourthHead">💡 Example:</p>
+                  <p class="mr-2 font-semibold">💡 Example:</p>
                   <ul>
-                      <li class="font-FourthHead text-subParaFont ml-6 my-2">Smart Choice: <span class="font-Paragraph">Gurgaon, Bangalore, Hyderabad (IT hubs) – High demand + appreciation</span></li>
-                      <li class="font-FourthHead text-subParaFont ml-6">High Risk: <span class="font-Paragraph">Tier-3 cities with slow infrastructure growth – Low resale value</span></li>
+                      <li class="font-semibold typography-body-md ml-6 my-2">Smart Choice: <span class="typography-body-md">Gurgaon, Bangalore, Hyderabad (IT hubs) – High demand + appreciation</span></li>
+                      <li class="font-semibold typography-body-md ml-6">High Risk: <span class="typography-body-md">Tier-3 cities with slow infrastructure growth – Low resale value</span></li>
                   </ul>
                   </div>
                   `,
@@ -129,13 +129,13 @@
         listTopPara: `<p>Choosing between under construction and ready to move properties depends on your financial situation and investment goals:</p>
                               <table class="table-auto w-full mt-5">
                                 <thead>
-                                    <tr class="font-FourthHead text-subParaFont">
+                                    <tr class="font-semibold typography-body-md">
                                         <th class="border bg-gray-100 px-4 py-2">Factor</th>
                                         <th class="border bg-gray-100 px-4 py-2">Under-Construction 🏗️</th>
                                         <th class="border bg-gray-100 px-4 py-2">Ready-to-Move 🏡</th>
                                     </tr>
                                 </thead>
-                                <tbody class="font-Paragraph">
+                                <tbody class="typography-body-md">
                                     <tr>
                                         <td class="border px-4 py-2">Price</td>
                                         <td class="border px-4 py-2">15-30% cheaper</td>
@@ -164,7 +164,7 @@
                                 </tbody>
                               </table>`,
         list: [],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">💡 Best strategy?</span> If you can wait and trust the builder, under-construction is cheaper. But for immediate rental income, go for ready-to-move.</p>`,
+        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">💡 Best strategy?</span> If you can wait and trust the builder, under-construction is cheaper. But for immediate rental income, go for ready-to-move.</p>`,
       }}
     />
 
@@ -172,15 +172,15 @@
       contents={{
         heading: "Should You Take a Loan or Buy with Full Cash? 🪙🏦",
         listTopPara: `<p>If you have full cash, should you invest outright or take a home loan?</p>
-                      <ul class="font-FourthHead text-subParaFont mb-8 mt-5">
+                      <ul class="font-semibold typography-body-md mb-8 mt-5">
                       <li class="my-2">✔️ Loan Benefits:
-                          <ul class="font-Paragraph list-disc mt-2 ml-6">
+                          <ul class="typography-body-md list-disc mt-2 ml-6">
                           <li>Tax benefits on interest paid 🏦</li>
                           <li>Allows you to invest extra cash in other assets (mutual funds, stocks)</li>
                           </ul>
                       </li>
                       <li class="my-2">✔️ Cash Purchase Benefits:
-                          <ul class="font-Paragraph list-disc mt-2 ml-6">
+                          <ul class="typography-body-md list-disc mt-2 ml-6">
                           <li>No EMI burden, complete peace of mind 😌</li>
                           <li>More negotiation power with the seller</li>
                           </ul>
@@ -188,25 +188,25 @@
                       </ul>
                       `,
         list: [],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">💡 Smart Approach?</span> <span class="font-Paragraph">Use a mix of both take a small loan, keep liquidity, and enjoy tax benefits!</span></p>`,
+        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">💡 Smart Approach?</span> <span class="typography-body-md">Use a mix of both take a small loan, keep liquidity, and enjoy tax benefits!</span></p>`,
       }}
     />
 
     <TwoColumnWithLeftHeading
       contents={{
         heading: "Rental Income: How to Maximize Returns? 🪙",
-        listTopPara: `<ul class="font-FourthHead text-subParaFont mb-8 mt-5">
-                                <li class="my-2">✔️ Furnished vs Unfurnished? – <span class="font-Paragraph">Furnished homes get higher rent (20-30% more), but require more maintenance.</span></li>
-                                <li class="my-2">✔️ Target Corporate Tenants – <span class="font-Paragraph">They pay higher rent and stay longer.</span></li>
-                                <li class="my-2">✔️ Short-Term Rentals (Airbnb) vs Long-Term Lease? – <span class="font-Paragraph">Short-term rentals give higher returns but require more effort.</span></li>
-                                <li class="my-2">✔️ Rent Agreement – <span class="font-Paragraph">Always register the agreement to avoid disputes.</span></li>
+        listTopPara: `<ul class="font-semibold typography-body-md mb-8 mt-5">
+                                <li class="my-2">✔️ Furnished vs Unfurnished? – <span class="typography-body-md">Furnished homes get higher rent (20-30% more), but require more maintenance.</span></li>
+                                <li class="my-2">✔️ Target Corporate Tenants – <span class="typography-body-md">They pay higher rent and stay longer.</span></li>
+                                <li class="my-2">✔️ Short-Term Rentals (Airbnb) vs Long-Term Lease? – <span class="typography-body-md">Short-term rentals give higher returns but require more effort.</span></li>
+                                <li class="my-2">✔️ Rent Agreement – <span class="typography-body-md">Always register the agreement to avoid disputes.</span></li>
                               </ul>`,
         list: [],
         listSecPara: `<div class="p-4 bg-gray-100 border-l-4 border-btnBg">
-                                <p class="mr-2 font-FourthHead">💡 Example:</p>
+                                <p class="mr-2 font-semibold">💡 Example:</p>
                                 <ul>
-                                    <li class="font-Paragraph ml-6 my-2">A ₹1 crore property in Mumbai can get ₹25,000/month rent (3% rental yield).</li>
-                                    <li class="font-Paragraph ml-6">The same amount in commercial property may generate ₹60,000/month rent (7% rental yield).</li>
+                                    <li class="typography-body-md ml-6 my-2">A ₹1 crore property in Mumbai can get ₹25,000/month rent (3% rental yield).</li>
+                                    <li class="typography-body-md ml-6">The same amount in commercial property may generate ₹60,000/month rent (7% rental yield).</li>
                                 </ul>
                               </div>`,
       }}
@@ -215,11 +215,11 @@
     <TwoColumnWithLeftHeading
       contents={{
         heading: "Tax Benefits & Legal Checks 🧐",
-        listTopPara: `<ul class="font-FourthHead text-subParaFont mb-8 mt-5">
-                                <li class="my-2">✔️ Home loan tax benefits – <span class="font-Paragraph">Up to ₹2 lakh deduction on interest paid under Section 24(b).</span></li>
-                                <li class="my-2">✔️ Capital Gains Tax – <span class="font-Paragraph">If selling within 2 years, short-term capital gains tax (STCG) applies (as per your income tax slab).</span></li>
-                                <li class="my-2">✔️ Property Title & Encumbrance Check – <span class="font-Paragraph">Ensure no legal disputes or unpaid dues.</span></li>
-                                <li class="my-2">✔️ RERA Verification – <span class="font-Paragraph">For under-construction properties, check if the builder is registered with RERA for protection against delays.</span></li>
+        listTopPara: `<ul class="font-semibold typography-body-md mb-8 mt-5">
+                                <li class="my-2">✔️ Home loan tax benefits – <span class="typography-body-md">Up to ₹2 lakh deduction on interest paid under Section 24(b).</span></li>
+                                <li class="my-2">✔️ Capital Gains Tax – <span class="typography-body-md">If selling within 2 years, short-term capital gains tax (STCG) applies (as per your income tax slab).</span></li>
+                                <li class="my-2">✔️ Property Title & Encumbrance Check – <span class="typography-body-md">Ensure no legal disputes or unpaid dues.</span></li>
+                                <li class="my-2">✔️ RERA Verification – <span class="typography-body-md">For under-construction properties, check if the builder is registered with RERA for protection against delays.</span></li>
                               </ul>`,
         list: [],
         listSecPara: ``,
@@ -229,27 +229,27 @@
     <TwoColumnWithLeftHeading
       contents={{
         heading: "Real-Life Investment Scenarios – What Works Best?",
-        listTopPara: `<h3 class="font-FourthHead text-subParaFont mb-4">Case 1: Young IT Professional (Age 30, Salary ₹20 Lakh) 👨‍💻</h3>
-                              <ul class="font-Paragraph mb-8">
+        listTopPara: `<h3 class="font-semibold typography-body-md mb-4">Case 1: Young IT Professional (Age 30, Salary ₹20 Lakh) 👨‍💻</h3>
+                              <ul class="typography-body-md mb-8">
                                   <li class="my-2">🔹 Goal: Capital appreciation + tax savings</li>
                                   <li class="my-2">🔹 Best Option: Under-construction property in an IT hub (Bangalore, Gurgaon)</li>
                                   <li class="my-2">🔹 Strategy: 10-year home loan, invest extra cash in mutual funds</li>
                               </ul>
-                              <p class="p-4 text-subParaFont bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">💡 Why?</span><span class="font-Paragraph"> This ensures property growth while building wealth in other assets.</span></p>
-                              <h3 class="font-FourthHead text-subParaFont mb-4 mt-8">Case 2: Business Owner (Age 45, ₹50 Lakh Annual Profit) 🏢</h3>
-                              <ul class="font-Paragraph mb-8">
+                              <p class="p-4 typography-body-md bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">💡 Why?</span><span class="typography-body-md"> This ensures property growth while building wealth in other assets.</span></p>
+                              <h3 class="font-semibold typography-body-md mb-4 mt-8">Case 2: Business Owner (Age 45, ₹50 Lakh Annual Profit) 🏢</h3>
+                              <ul class="typography-body-md mb-8">
                                   <li class="my-2">🔹 Goal: Stable rental income</li>
                                   <li class="my-2">🔹 Best Option: Commercial property in a prime area (Delhi, Mumbai, Pune)</li>
                                   <li class="my-2">🔹 Strategy: Higher rental yields, tenants on long leases</li>
                               </ul>
-                              <p class="p-4 text-subParaFont bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">💡 Why?</span> <span class="font-Paragraph">Business owners prefer steady passive income from real estate.</span></p>
-                              <h3 class="font-FourthHead text-subParaFont mb-4 mt-8">Case 3: Retired Couple (Age 60, ₹2 Crore Savings) 👴👵</h3>
-                              <ul class="font-Paragraph mb-8">
+                              <p class="p-4 typography-body-md bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">💡 Why?</span> <span class="typography-body-md">Business owners prefer steady passive income from real estate.</span></p>
+                              <h3 class="font-semibold typography-body-md mb-4 mt-8">Case 3: Retired Couple (Age 60, ₹2 Crore Savings) 👴👵</h3>
+                              <ul class="typography-body-md mb-8">
                                   <li class="my-2">🔹 Goal: Steady passive income, low risk</li>
                                   <li class="my-2">🔹 Best Option: Ready-to-move 2BHK in a high-demand rental area</li>
                                   <li class="my-2">🔹 Strategy: No loan, use rent as retirement income</li>
                               </ul>
-                              <p class="p-4 text-subParaFont bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">💡 Why?</span><span class="font-Paragraph"> No EMI burden, regular income, and low risk.</span></p>`,
+                              <p class="p-4 typography-body-md bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">💡 Why?</span><span class="typography-body-md"> No EMI burden, regular income, and low risk.</span></p>`,
         list: [],
         listSecPara: ``,
       }}
@@ -258,7 +258,7 @@
     <TwoColumnWithLeftHeading
       contents={{
         heading: "Where We Can Help You? 🤝",
-        listTopPara: `<ul class="font-FourthHead text-subParaFont mb-8 mt-5">
+        listTopPara: `<ul class="font-semibold typography-body-md mb-8 mt-5">
                                 <li class="my-2">✅ Compare different property investment options (Residential vs Commercial).</li>
                                 <li class="my-2">✅ Calculate expected returns & rental yields before you invest.</li>
                                 <li class="my-2">✅ Guide on loan eligibility & tax saving strategies.</li>
@@ -266,7 +266,7 @@
                               </ul>
                               `,
         list: [],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">🚀 Thinking about investing in property?</span> Let’s plan your smart real estate strategy together!</p>`,
+        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">🚀 Thinking about investing in property?</span> Let’s plan your smart real estate strategy together!</p>`,
       }}
     />
 
@@ -312,10 +312,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Define Your Investment Goals:</span> Whether it’s rental income, capital appreciation, or business use, your objectives dictate the property type, location, and financial planning.`,
-            `<span class="font-FourthHead">Residential vs Commercial:</span> Residential properties offer lower risk and moderate liquidity, while commercial properties provide higher rental yields but require larger investments.`,
-            `<span class="font-FourthHead">Loan vs Cash Purchase:</span> Taking a loan offers tax benefits and preserves liquidity, while cash purchases eliminate EMI burdens. A mix of both can balance risks and returns.`,
-            `<span class="font-FourthHead">Maximizing Rental Income:</span> Furnished homes attract higher rent, corporate tenants ensure stability, and registering rent agreements avoids legal disputes.`,
+            `<span class="font-semibold">Define Your Investment Goals:</span> Whether it’s rental income, capital appreciation, or business use, your objectives dictate the property type, location, and financial planning.`,
+            `<span class="font-semibold">Residential vs Commercial:</span> Residential properties offer lower risk and moderate liquidity, while commercial properties provide higher rental yields but require larger investments.`,
+            `<span class="font-semibold">Loan vs Cash Purchase:</span> Taking a loan offers tax benefits and preserves liquidity, while cash purchases eliminate EMI burdens. A mix of both can balance risks and returns.`,
+            `<span class="font-semibold">Maximizing Rental Income:</span> Furnished homes attract higher rent, corporate tenants ensure stability, and registering rent agreements avoids legal disputes.`,
           ],
         }}
         disc="list-decimal"

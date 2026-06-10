@@ -159,7 +159,7 @@
       <StickyNavbar navList={{ items: navBarLarge }} {activeSection} />
     </div>
 
-    <div class="hidden  lg:block lg:px-[4rem]">
+    <div class="hidden lg:block lg:px-[4rem]">
       <div data-section="FinancialServicesGuides" id="FinancialServicesGuides">
         <Guides guide={serviceGuide} />
       </div>
@@ -172,7 +172,7 @@
       <div
         data-section="Productcategories"
         id="Productcategories"
-        class="grid gap-[2rem] py-[4rem] pb-[8rem] lg:grid-cols-3 "
+        class="grid gap-[2rem] py-[4rem] pb-[8rem] lg:grid-cols-3"
       >
         <p class="text-nowrap typography-h2 text-black dark:text-white">
           Product Categories
@@ -183,13 +183,10 @@
       </div>
     </div>
 
-    <div class=" lg:hidden">
+    <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-[1rem] py-[1.5rem]"

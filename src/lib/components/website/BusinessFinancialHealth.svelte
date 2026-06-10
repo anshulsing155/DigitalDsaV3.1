@@ -152,25 +152,25 @@
                 id: "1",
                 title: "Cash flow: the lifeblood of your business",
                 para: `<ul class="list-disc space-y-3 pl-5"> 
-              <li>	Lenders assess whether your business generates  <span class="font-FourthHead" > consistent cash flow  </span> to repay a loan. </li>
-               <li>	A healthy  <span class="font-FourthHead" > operating cash flow (OCF)  </span> ensures that you won’t struggle with EMI payments. </li>
-                <li>	Before applying, track cash inflows and outflows for at least  <span class="font-FourthHead" > 12–24 months  </span> to detect any inconsistencies. </li>
+              <li>	Lenders assess whether your business generates  <span class="font-semibold" > consistent cash flow  </span> to repay a loan. </li>
+               <li>	A healthy  <span class="font-semibold" > operating cash flow (OCF)  </span> ensures that you won’t struggle with EMI payments. </li>
+                <li>	Before applying, track cash inflows and outflows for at least  <span class="font-semibold" > 12–24 months  </span> to detect any inconsistencies. </li>
               </ul>`,
               },
               {
                 id: "2",
                 title: "Profitability and revenue trends",
                 para: `<ul class="list-disc space-y-3 pl-5">
-              <li> 	Look at your  <span class="font-FourthHead" > profit margins (gross and net)  </span> over the past few years.</li>
-              <li>Stable or increasing   <span class="font-FourthHead" > revenues  </span> strengthen your case for loan approval. </li>
-              <li> 	If your profits are inconsistent, opting for  <span class="font-FourthHead" > DoD over LAP  </span> might be better, as DoD provides flexible withdrawal options.</li>
+              <li> 	Look at your  <span class="font-semibold" > profit margins (gross and net)  </span> over the past few years.</li>
+              <li>Stable or increasing   <span class="font-semibold" > revenues  </span> strengthen your case for loan approval. </li>
+              <li> 	If your profits are inconsistent, opting for  <span class="font-semibold" > DoD over LAP  </span> might be better, as DoD provides flexible withdrawal options.</li>
               </ul>`,
               },
               {
                 id: "3",
                 title: "Debt-to-income ratio (DTI) & existing liabilities",
                 para: `<ul class="list-disc space-y-3 pl-5">
-              <li>	Banks calculate your  <span class="font-FourthHead" >  DTI ratio  </span> to determine how much of your income is already committed to existing debt. </li>
+              <li>	Banks calculate your  <span class="font-semibold" >  DTI ratio  </span> to determine how much of your income is already committed to existing debt. </li>
               <li>	A lower DTI (<40%) indicates better financial health and higher loan approval chances. </li>
               <li>	Before applying, check if you have outstanding loans that might impact your repayment capacity. </li>
               </ul>`,
@@ -180,8 +180,8 @@
                 title:
                   "Asset valuation & property ownership (for LAP applicants)",
                 para: `<ul class="list-disc space-y-3 pl-5">
-              <li>	If applying for a LAP, ensure your property  <span class="font-FourthHead" > meets bank eligibility criteria  </span> (clear title, no legal disputes). </li>
-              <li>Get an updated  <span class="font-FourthHead" > property valuation  </span> to understand the maximum loan amount you can receive. </li>
+              <li>	If applying for a LAP, ensure your property  <span class="font-semibold" > meets bank eligibility criteria  </span> (clear title, no legal disputes). </li>
+              <li>Get an updated  <span class="font-semibold" > property valuation  </span> to understand the maximum loan amount you can receive. </li>
              
               </ul>`,
               },
@@ -202,10 +202,10 @@
               `Banks and NBFCs use the following methods to assess financial health:`,
             ],
             paraGraph: [
-              ` <span class="font-FourthHead" > CIBIL & Credit scores –  </span> A score above   <span class="font-FourthHead underline underline-offset-2" > 700</span> increases approval chances.`,
-              ` <span class="font-FourthHead" > Past 3–5 years’ financial statements –  </span>Helps determine income stability.`,
-              ` <span class="font-FourthHead" > ITR filings –  </span> Consistent tax filings show financial discipline.`,
-              `  <span class="font-FourthHead" > Bank statements – </span> lenders check for irregular withdrawals and NSF (non-sufficient funds) cases.`,
+              ` <span class="font-semibold" > CIBIL & Credit scores –  </span> A score above   <span class="font-semibold underline underline-offset-2" > 700</span> increases approval chances.`,
+              ` <span class="font-semibold" > Past 3–5 years’ financial statements –  </span>Helps determine income stability.`,
+              ` <span class="font-semibold" > ITR filings –  </span> Consistent tax filings show financial discipline.`,
+              `  <span class="font-semibold" > Bank statements – </span> lenders check for irregular withdrawals and NSF (non-sufficient funds) cases.`,
             ],
           }}
           disc="list-disc"
@@ -251,10 +251,7 @@
     <div class="lg:hidden block">
       {#each ["Key financial metrics", "Evaluation by bank", "Actionable"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -262,7 +259,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -278,18 +275,18 @@
                       id: "1",
                       title: "Cash flow: the lifeblood of your business",
                       para: `<ul class="list-disc space-y-3 pl-5"> 
-              <li>	Lenders assess whether your business generates  <span class="font-FourthHead" > consistent cash flow  </span> to repay a loan. </li>
-               <li>	A healthy  <span class="font-FourthHead" > operating cash flow (OCF)  </span> ensures that you won’t struggle with EMI payments. </li>
-                <li>	Before applying, track cash inflows and outflows for at least  <span class="font-FourthHead" > 12–24 months  </span> to detect any inconsistencies. </li>
+              <li>	Lenders assess whether your business generates  <span class="font-semibold" > consistent cash flow  </span> to repay a loan. </li>
+               <li>	A healthy  <span class="font-semibold" > operating cash flow (OCF)  </span> ensures that you won’t struggle with EMI payments. </li>
+                <li>	Before applying, track cash inflows and outflows for at least  <span class="font-semibold" > 12–24 months  </span> to detect any inconsistencies. </li>
               </ul>`,
                     },
                     {
                       id: "2",
                       title: "Profitability and revenue trends",
                       para: `<ul class="list-disc space-y-3 pl-5">
-              <li> 	Look at your  <span class="font-FourthHead" > profit margins (gross and net)  </span> over the past few years.</li>
-              <li>Stable or increasing   <span class="font-FourthHead" > revenues  </span> strengthen your case for loan approval. </li>
-              <li> 	If your profits are inconsistent, opting for  <span class="font-FourthHead" > DoD over LAP  </span> might be better, as DoD provides flexible withdrawal options.</li>
+              <li> 	Look at your  <span class="font-semibold" > profit margins (gross and net)  </span> over the past few years.</li>
+              <li>Stable or increasing   <span class="font-semibold" > revenues  </span> strengthen your case for loan approval. </li>
+              <li> 	If your profits are inconsistent, opting for  <span class="font-semibold" > DoD over LAP  </span> might be better, as DoD provides flexible withdrawal options.</li>
               </ul>`,
                     },
                     {
@@ -297,7 +294,7 @@
                       title:
                         "Debt-to-income ratio (DTI) & existing liabilities",
                       para: `<ul class="list-disc space-y-3 pl-5">
-              <li>	Banks calculate your  <span class="font-FourthHead" >  DTI ratio  </span> to determine how much of your income is already committed to existing debt. </li>
+              <li>	Banks calculate your  <span class="font-semibold" >  DTI ratio  </span> to determine how much of your income is already committed to existing debt. </li>
               <li>	A lower DTI (<40%) indicates better financial health and higher loan approval chances. </li>
               <li>	Before applying, check if you have outstanding loans that might impact your repayment capacity. </li>
               </ul>`,
@@ -307,8 +304,8 @@
                       title:
                         "Asset valuation & property ownership (for LAP applicants)",
                       para: `<ul class="list-disc space-y-3 pl-5">
-              <li>	If applying for a LAP, ensure your property  <span class="font-FourthHead" > meets bank eligibility criteria  </span> (clear title, no legal disputes). </li>
-              <li>Get an updated  <span class="font-FourthHead" > property valuation  </span> to understand the maximum loan amount you can receive. </li>
+              <li>	If applying for a LAP, ensure your property  <span class="font-semibold" > meets bank eligibility criteria  </span> (clear title, no legal disputes). </li>
+              <li>Get an updated  <span class="font-semibold" > property valuation  </span> to understand the maximum loan amount you can receive. </li>
              
               </ul>`,
                     },
@@ -326,10 +323,10 @@
                     `Banks and NBFCs use the following methods to assess financial health:`,
                   ],
                   paraGraph: [
-                    ` <span class="font-FourthHead" > CIBIL & Credit scores –  </span> A score above   <span class="font-FourthHead underline underline-offset-2" > 700</span> increases approval chances.`,
-                    ` <span class="font-FourthHead" > Past 3–5 years’ financial statements –  </span>Helps determine income stability.`,
-                    ` <span class="font-FourthHead" > ITR filings –  </span> Consistent tax filings show financial discipline.`,
-                    `  <span class="font-FourthHead" > Bank statements – </span> lenders check for irregular withdrawals and NSF (non-sufficient funds) cases.`,
+                    ` <span class="font-semibold" > CIBIL & Credit scores –  </span> A score above   <span class="font-semibold underline underline-offset-2" > 700</span> increases approval chances.`,
+                    ` <span class="font-semibold" > Past 3–5 years’ financial statements –  </span>Helps determine income stability.`,
+                    ` <span class="font-semibold" > ITR filings –  </span> Consistent tax filings show financial discipline.`,
+                    `  <span class="font-semibold" > Bank statements – </span> lenders check for irregular withdrawals and NSF (non-sufficient funds) cases.`,
                   ],
                 }}
                 disc="list-disc"
@@ -399,12 +396,12 @@
       class="flex flex-col py-[2rem] lg:py-[4rem] px-[1rem] lg:px-[4rem] gap-[1rem]"
     >
       <h2
-        class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+        class="typography-h2 text-text-main"
       >
         Conclusion: Making the Right Financial Decision
       </h2>
 
-      <p class="font-Paragraph text-minParaFont">
+      <p class="typography-body-sm text-text-light">
         By assessing your business’s financial health beforehand, you improve
         your chances of securing a loan with favorable terms. Whether you choose
         LAP for long-term growth or DoD for short-term liquidity, understanding
@@ -454,10 +451,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

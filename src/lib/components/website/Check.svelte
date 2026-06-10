@@ -75,7 +75,7 @@ groupVal = groupVal.filter((item) => item !== value);
         <span><i class="fa-regular fa-square border-iconColor"></i></span>
       {/if}
 
-      <span class="ml-2 font-Paragraph text-subParaFont">{value}</span>
+      <span class="ml-2 typography-body-md text-text-light">{value}</span>
     </label>
   {/each}
 </div>

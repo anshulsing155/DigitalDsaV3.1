@@ -56,7 +56,7 @@ columnName: [
 ],
 rowData: [
 {
-"<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/riskFactor.svg' alt='risk icon'> Perceived Risk </span>":
+"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/riskFactor.svg' alt='risk icon'> Perceived Risk </span>":
 [
 "High due to recovery concerns",
 "High due to legal expertise",
@@ -64,7 +64,7 @@ rowData: [
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/coin.svg' alt='income icon'> Income Documentation </span>":
+"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/coin.svg' alt='income icon'> Income Documentation </span>":
 [
 "Multiple deductions, low visibility",
 "Cash-based, poor documentation",
@@ -72,7 +72,7 @@ rowData: [
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='recovery icon'> Recovery Ease </span>":
+"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='recovery icon'> Recovery Ease </span>":
 [
 "Sensitive, harassment risks",
 "Legal threats complicate recovery",
@@ -80,7 +80,7 @@ rowData: [
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/payment.svg' alt='credit icon'> Credit Awareness </span>":
+"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/payment.svg' alt='credit icon'> Credit Awareness </span>":
 [
 "Often low, frequent transfers",
 "Varies, but documentation issues",
@@ -259,7 +259,7 @@ window.removeEventListener("scroll", handleScroll);
         >
           <div class="">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+              class="grid mb-[4rem] typography-h2 text-text-main text-center"
             >
               <p>Lending Risks</p>
               <span
@@ -273,18 +273,18 @@ window.removeEventListener("scroll", handleScroll);
               <PaymentTable {tableData} />
             {/each}
           </div>
-          <p class="font-Paragraph text-subParaFont mt-14 text-center">
-            💡 <span class="font-FourthHead mr-2">Fun Fact :</span> Banks approve over 80% of loans for salaried professionals with stable income, but police and lawyers face higher scrutiny due to recovery risks.
+          <p class="typography-body-md text-text-light mt-14 text-center">
+            💡 <span class="font-semibold mr-2">Fun Fact :</span> Banks approve over 80% of loans for salaried professionals with stable income, but police and lawyers face higher scrutiny due to recovery risks.
           </p>
         </div>
 
         <div class="mt-[4rem]">
           <p
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center mb-[2rem]"
+            class="typography-h2 text-text-main text-center mb-[2rem]"
           >
             Real-Life Scenarios: What Happened to Others
             <br /><span
-              class="font-Paragraph text-subParaFont mt-14 text-center"
+              class="typography-body-md text-text-light mt-14 text-center"
               >Here’s how others navigated loan challenges</span
             >
           </p>
@@ -363,7 +363,7 @@ window.removeEventListener("scroll", handleScroll);
                 desc: `For large loans, provide assets like property or fixed deposits to reduce bank risk.`,
               },
             ],
-            listSecPara: `💡<span class="font-FourthHead mr-2">Pro Tip : </span>Work with a loan advisor like DigitalDSA to streamline documentation and improve approval odds.`,
+            listSecPara: `💡<span class="font-semibold mr-2">Pro Tip : </span>Work with a loan advisor like DigitalDSA to streamline documentation and improve approval odds.`,
           }}
         />
       </div>
@@ -409,10 +409,7 @@ window.removeEventListener("scroll", handleScroll);
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -420,7 +417,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -473,7 +470,7 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <div class="">
                   <h2
-                    class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                    class="grid mb-[4rem] typography-h2 text-text-main text-center"
                   >
                     <p>Lending Risks</p>
                     <span
@@ -487,18 +484,18 @@ window.removeEventListener("scroll", handleScroll);
                     <PaymentTable {tableData} />
                   {/each}
                 </div>
-                <p class="font-Paragraph text-subParaFont mt-14 text-center">
-                  💡 <span class="font-FourthHead mr-2">Fun Fact :</span> Banks approve over 80% of loans for salaried professionals with stable income, but police and lawyers face higher scrutiny due to recovery risks.
+                <p class="typography-body-md text-text-light mt-14 text-center">
+                  💡 <span class="font-semibold mr-2">Fun Fact :</span> Banks approve over 80% of loans for salaried professionals with stable income, but police and lawyers face higher scrutiny due to recovery risks.
                 </p>
               </div>
 
               <div class="mt-[4rem]">
                 <p
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center mb-[2rem]"
+                  class="typography-h2 text-text-main text-center mb-[2rem]"
                 >
                   Real-Life Scenarios: What Happened to Others
                   <br /><span
-                    class="font-Paragraph text-subParaFont mt-14 text-center"
+                    class="typography-body-md text-text-light mt-14 text-center"
                     >Here’s how others navigated loan challenges</span
                   >
                 </p>
@@ -567,7 +564,7 @@ window.removeEventListener("scroll", handleScroll);
                       desc: `For large loans, provide assets like property or fixed deposits to reduce bank risk.`,
                     },
                   ],
-                  listSecPara: `💡<span class="font-FourthHead mr-2">Pro Tip : </span>Work with a loan advisor like DigitalDSA to streamline documentation and improve approval odds.`,
+                  listSecPara: `💡<span class="font-semibold mr-2">Pro Tip : </span>Work with a loan advisor like DigitalDSA to streamline documentation and improve approval odds.`,
                 }}
               />
             </div>

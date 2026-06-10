@@ -248,9 +248,9 @@ window.removeEventListener("scroll", handleScroll);
                 desc: `We respect your privacy while offering you personalized solutions.`,
               },
             ],
-            listSecPara: `<p class="font-FourthHead text-miniSubHead">Here’s how to get started :</p>
+            listSecPara: `<p class="font-semibold text-miniSubHead">Here’s how to get started :</p>
         
-        <ul class="space-y-4 list-disc mt-4 ">
+        <ul class="space-y-4 list-disc mt-4">
         <p>✅ Use our Home Loan Eligibility Calculator to get an estimate.</p>
         <p>✅ Provide basic financial information like your income, expenses, and down payment savings.</p>
         <p>✅ Let our advisors guide you through the pre-approval process, ensuring everything is in place for when you find the perfect property.</p>
@@ -307,10 +307,7 @@ window.removeEventListener("scroll", handleScroll);
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -318,7 +315,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -407,9 +404,9 @@ window.removeEventListener("scroll", handleScroll);
                       desc: `We respect your privacy while offering you personalized solutions.`,
                     },
                   ],
-                  listSecPara: `<p class="font-FourthHead text-miniSubHead">Here’s how to get started :</p>
+                  listSecPara: `<p class="font-semibold text-miniSubHead">Here’s how to get started :</p>
         
-        <ul class="space-y-4 list-disc mt-4 ">
+        <ul class="space-y-4 list-disc mt-4">
         <p>✅ Use our Home Loan Eligibility Calculator to get an estimate.</p>
         <p>✅ Provide basic financial information like your income, expenses, and down payment savings.</p>
         <p>✅ Let our advisors guide you through the pre-approval process, ensuring everything is in place for when you find the perfect property.</p>

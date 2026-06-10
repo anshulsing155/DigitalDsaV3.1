@@ -29,11 +29,11 @@
 
     <!-- Sliding text -->
     <span
-      class=" font-FourthHead text-para whitespace-nowrap transform transition-all duration-300 ease-in-out"
+      class="typography-body-md font-semibold whitespace-nowrap transform transition-all duration-300 ease-in-out"
       class:opacity-100={isHovered}
       class:translate-x-0={isHovered}
       class:opacity-0={!isHovered}
-      class:-translate-x-2={!isHovered}
+      class:translate-x-2={!isHovered}
       class:w-0={!isHovered}
       class:overflow-hidden={!isHovered}
     >
@@ -53,7 +53,7 @@
 
   <!-- Tooltip -->
   <div
-    class="absolute bottom-full right-0 mb-2 px-3 py-2 bg-black/80 backdrop-blur-sm text-white rounded-lg border border-white/20 whitespace-nowrap transform transition-all duration-300 ease-in-out font-Paragraph text-leastPara"
+    class="absolute bottom-full right-0 mb-2 px-3 py-2 bg-black/80 backdrop-blur-sm text-white rounded-lg border border-white/20 whitespace-nowrap transform transition-all duration-300 ease-in-out typography-caption"
     class:opacity-100={isHovered}
     class:translate-y-0={isHovered}
     class:opacity-0={!isHovered}

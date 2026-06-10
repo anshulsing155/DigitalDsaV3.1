@@ -12,9 +12,7 @@
 
 </script>
 
-<!-- class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full {contents.borderBottom
-  ? 'lg:border-b'
-  : 'border-b-0'} border-borderColor" -->
+<!-- class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full {contents.borderBottom ? 'lg:border-b' : 'border-b-0'} border-borderColor" -->
 <section
   class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
 >
@@ -49,7 +47,7 @@
 
     {#if contents.list}
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-{listGridAboveLg} xl:grid-cols-{contents.xlGridCol} gap-4 "
+        class="grid md:grid-cols-2 lg:grid-cols-{listGridAboveLg} xl:grid-cols-{contents.xlGridCol} gap-4"
       >
         {#each contents.list as listItem}
           <div

@@ -111,11 +111,11 @@
         reverse={true}
       >
         <ul
-          class="grid gap-6 font-Paragraph text-subParaFont list-disc pl-5"
+          class="grid gap-6 typography-body-md text-text-light list-disc pl-5"
           slot="list"
         >
           <li>
-            <span class="font-FourthHead"
+            <span class="font-semibold"
               >Stuck with your loan application? –</span
             >
             <br /> Get
@@ -125,7 +125,7 @@
           </li>
 
           <li>
-            <span class="font-FourthHead">Feeling your EMI is too high? –</span>
+            <span class="font-semibold">Feeling your EMI is too high? –</span>
             <br /> Our
             <a
               href="/planners/flexible-emi-planner"
@@ -134,7 +134,7 @@
           </li>
 
           <li>
-            <span class="font-FourthHead"
+            <span class="font-semibold"
               >Curious if you’re getting the best home loan deal? –</span
             >
             <br /> Compare real,
@@ -145,7 +145,7 @@
           </li>
 
           <li>
-            <span class="font-FourthHead"
+            <span class="font-semibold"
               >Financial stress keeping you up at night? –</span
             >
             <br /> Explore
@@ -157,7 +157,7 @@
           </li>
 
           <li>
-            <span class="font-FourthHead"
+            <span class="font-semibold"
               >Thinking about prepaying your loan? –</span
             >
             <br /> See
@@ -180,30 +180,30 @@
         cardHeading="Your Security Comes First"
       >
         <div class="flex flex-col gap-5" slot="list">
-          <ul class="grid gap-4 font-Paragraph text-subParaFont list-disc pl-5">
+          <ul class="grid gap-4 typography-body-md text-text-light list-disc pl-5">
             <li>
-              <span class="font-FourthHead">Your Data Stays Private –</span> We
+              <span class="font-semibold">Your Data Stays Private –</span> We
               use <strong>ISO 27001-grade security</strong> to protect your information.
               No leaks, no unwanted calls—just secure access.
             </li>
             <li>
-              <span class="font-FourthHead">No Fishy Requests –</span> We never ask
+              <span class="font-semibold">No Fishy Requests –</span> We never ask
               for OTPs, PINs, or passwords. If someone does, they are not from DigitalDSA.
             </li>
             <li>
-              <span class="font-FourthHead">Safe Loan Applications –</span> Your
+              <span class="font-semibold">Safe Loan Applications –</span> Your
               documents are encrypted and stored securely, following
               <strong>ISO 27001 </strong>
               and <strong> DPDP Act compliance</strong>.
             </li>
             <li>
-              <span class="font-FourthHead">Beware of Fake Agents –</span>
+              <span class="font-semibold">Beware of Fake Agents –</span>
               DigitalDSA never asks for payments outside our platform. We follow
               <strong>RBI’s digital lending guidelines</strong> to ensure secure
               transactions.
             </li>
             <li>
-              <span class="font-FourthHead">Honest Loan Comparison –</span> No
+              <span class="font-semibold">Honest Loan Comparison –</span> No
               hidden fees, no misleading rates—just clear, transparent offers
               aligned with the <strong> Fair Practices Code (FPC)</strong>.
             </li>

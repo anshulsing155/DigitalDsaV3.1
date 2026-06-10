@@ -81,23 +81,23 @@ columnName: [
 ],
 rowData: [
 {
-"<span class='font-FourthHead flex gap-4 items-center'> Maharashtra </span>":
+"<span class='font-semibold flex gap-4 items-center'> Maharashtra </span>":
 ["5%", "1%"],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'>Delhi</span>":
+"<span class='font-semibold flex gap-4 items-center'>Delhi</span>":
 ["4%-6%", "1%"],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'>Karnataka</span>":
+"<span class='font-semibold flex gap-4 items-center'>Karnataka</span>":
 ["5%", "1%"],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'>Tamil Nadu </span>":
+"<span class='font-semibold flex gap-4 items-center'>Tamil Nadu </span>":
 ["7%", "1%"],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'>Uttar Pradesh</span>":
+"<span class='font-semibold flex gap-4 items-center'>Uttar Pradesh</span>":
 ["5%-7%", "1%"],
 },
 ],
@@ -200,7 +200,7 @@ window.removeEventListener("scroll", handleScroll);
         <StickyNavbar navList={subList} {activeSection}></StickyNavbar>
         <div>
           <div
-            class=" lg:px-[4rem] border-b border-borderColor"
+            class="lg:px-[4rem] border-b border-borderColor"
             id="laws"
             data-section="laws"
           >
@@ -210,19 +210,19 @@ window.removeEventListener("scroll", handleScroll);
                   "Understanding Legal Due Diligence Before Buying a Home",
                 subPara: [
                   `Before making any commitment, it's crucial to legally verify the property to ensure there are no hidden disputes or liabilities.`,
-                  ` <span class="font-FourthHead"> Key Legal Checks Before Purchase :</span>`,
+                  ` <span class="font-semibold"> Key Legal Checks Before Purchase :</span>`,
                 ],
                 paraGraph: [
-                  `<span class="font-FourthHead">Title Verification – </span>  Ensure the seller has a clear and marketable title to the property.`,
-                  ` <span class="font-FourthHead">Encumbrance Certificate (EC) – </span>  Confirms the property is free from any outstanding loans or legal claims.`,
-                  `<span class="font-FourthHead">Sale Agreement & Sale Deed – </span>  The agreement states the terms of the sale, while the deed officially transfers ownership.`,
-                  `<span class="font-FourthHead"> Property Tax Receipts –</span>  Check if the property has any pending tax dues.`,
-                  `<span class="font-FourthHead">RERA Registration – </span>  If it’s a new project, verify if it’s registered under RERA (Real Estate Regulatory Authority).`,
-                  `<span class="font-FourthHead">Approval from Local Authorities – </span>  Ensure the property has legal approvals from the municipal corporation and development authorities.`,
-                  `<span class="font-FourthHead"> Land Use & Zoning Clearance –</span>  Confirms whether the property is approved for residential purposes.`,
+                  `<span class="font-semibold">Title Verification – </span>  Ensure the seller has a clear and marketable title to the property.`,
+                  ` <span class="font-semibold">Encumbrance Certificate (EC) – </span>  Confirms the property is free from any outstanding loans or legal claims.`,
+                  `<span class="font-semibold">Sale Agreement & Sale Deed – </span>  The agreement states the terms of the sale, while the deed officially transfers ownership.`,
+                  `<span class="font-semibold"> Property Tax Receipts –</span>  Check if the property has any pending tax dues.`,
+                  `<span class="font-semibold">RERA Registration – </span>  If it’s a new project, verify if it’s registered under RERA (Real Estate Regulatory Authority).`,
+                  `<span class="font-semibold">Approval from Local Authorities – </span>  Ensure the property has legal approvals from the municipal corporation and development authorities.`,
+                  `<span class="font-semibold"> Land Use & Zoning Clearance –</span>  Confirms whether the property is approved for residential purposes.`,
                 ],
                 bottomPara: [
-                  `<span class="font-FourthHead"> 💡 Pro Tip:</span>  Always get a legal expert to verify property documents before making any payment.`,
+                  `<span class="font-semibold"> 💡 Pro Tip:</span>  Always get a legal expert to verify property documents before making any payment.`,
                 ],
               }}
               disc="list-disc"
@@ -268,8 +268,8 @@ window.removeEventListener("scroll", handleScroll);
                 ],
               }}
             >
-              <p class="font-Paragraph text-minParaFont">
-                <span class="font-FourthHead">💡 Pro Tip: </span> Keeping these documents
+              <p class="typography-body-sm text-text-light">
+                <span class="font-semibold">💡 Pro Tip: </span> Keeping these documents
                 ready can speed up the home loan approval process by 5-7 working
                 days!
               </p>
@@ -277,7 +277,7 @@ window.removeEventListener("scroll", handleScroll);
           </div>
 
           <div
-            class=" lg:px-[4rem] border-b border-borderColor"
+            class="lg:px-[4rem] border-b border-borderColor"
             id="charges"
             data-section="charges"
           >
@@ -287,14 +287,14 @@ window.removeEventListener("scroll", handleScroll);
               cardHeading="Stamp duty, registration & other charges"
             >
               <div
-                class="font-Paragraph text-subParaFont space-y-6"
+                class="typography-body-md text-text-light space-y-6"
                 slot="list"
               >
                 <p>
                   Apart from the property price and home loan, you also need to
                   pay stamp duty & registration charges, which vary by state.
                 </p>
-                <ul class="grid gap-[2rem] font-Paragraph text-subParaFont">
+                <ul class="grid gap-[2rem] typography-body-md text-text-light">
                   <div class="">
                     {#each firstTableData as tableData}
                       <PaymentTable {tableData} />
@@ -302,7 +302,7 @@ window.removeEventListener("scroll", handleScroll);
                   </div>
                 </ul>
                 <p>
-                  💡 <span class="font-FourthHead">Pro Tip: </span> If you register
+                  💡 <span class="font-semibold">Pro Tip: </span> If you register
                   the property in a woman’s name, many states offer a lower stamp
                   duty rate (1%-2% discount), helping you save lakhs!
                 </p>
@@ -311,7 +311,7 @@ window.removeEventListener("scroll", handleScroll);
           </div>
 
           <div
-            class=" lg:px-[4rem] border-b border-borderColor"
+            class="lg:px-[4rem] border-b border-borderColor"
             id="possession"
             data-section="possession"
           >
@@ -320,7 +320,7 @@ window.removeEventListener("scroll", handleScroll);
                 heading: "The Final Registration & Possession Process",
                 subPara: [
                   `Once your loan is approved and the payment is processed, you must register the property in your name at the local sub-registrar’s office.`,
-                  ` <span class="font-FourthHead"> Home Registration Process </span>`,
+                  ` <span class="font-semibold"> Home Registration Process </span>`,
                 ],
                 paraGraph: [
                   ` Step 1: Pay the stamp duty and registration fees.`,
@@ -329,7 +329,7 @@ window.removeEventListener("scroll", handleScroll);
                   ` Step 4: Collect the registered Sale Deed after processing (usually within a week).`,
                 ],
                 bottomPara: [
-                  ` <span class="font-FourthHead"> 💡 Pro Tip:</span> After registration, don’t forget to update property records in your name at the municipal office to avoid tax issues later.`,
+                  ` <span class="font-semibold"> 💡 Pro Tip:</span> After registration, don’t forget to update property records in your name at the municipal office to avoid tax issues later.`,
                 ],
               }}
               disc="list-disc"
@@ -343,39 +343,39 @@ window.removeEventListener("scroll", handleScroll);
                 cardHeading: "Step-by-Step process for Balance Transfer",
               }}
             >
-              <div class="font-Paragraph text-subParaFont space-y-6">
+              <div class="typography-body-md text-text-light space-y-6">
                 <p>
                   Even experienced buyers make mistakes when dealing with legal
                   and financial aspects of home buying. Here’s how you can avoid
                   them:
                 </p>
                 <div class="space-y-4">
-                  <h3 class="font-ThirdHead text-paraFont">
+                  <h3 class="typography-h3 font-semibold text-text-main">
                     Common Mistakes & Their Solutions
                   </h3>
                   <ul class="space-y-3 list-disc pl-5">
                     <li>
-                      <span class="font-FourthHead"
+                      <span class="font-semibold"
                         >Buying without title verification –
                       </span> Always check legal ownership history.
                     </li>
                     <li>
-                      <span class="font-FourthHead"
+                      <span class="font-semibold"
                         >Not checking hidden charges in builder agreements –
                       </span> Read every clause carefully.
                     </li>
                     <li>
-                      <span class="font-FourthHead">
+                      <span class="font-semibold">
                         Ignoring project approvals –</span
                       > Ensure the builder has received clearance from local authorities.
                     </li>
                     <li>
-                      <span class="font-FourthHead"
+                      <span class="font-semibold"
                         >Skipping RERA verification –
                       </span> Always buy from RERA-registered projects.
                     </li>
                     <li>
-                      <span class="font-FourthHead"
+                      <span class="font-semibold"
                         >Not calculating total costs (stamp duty, GST,
                         maintenance fees) –
                       </span> Budget for all costs upfront.
@@ -384,7 +384,7 @@ window.removeEventListener("scroll", handleScroll);
                 </div>
 
                 <p>
-                  💡 <span class="font-FourthHead">Pro Tip: </span> : If a deal looks
+                  💡 <span class="font-semibold">Pro Tip: </span> : If a deal looks
                   “too good to be true,” double-check the legal paperwork before
                   proceeding.
                 </p>
@@ -422,10 +422,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each ["Property Laws", "Essential Document", "Charges", "Possession process", "Legal pitfalls"] as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -435,7 +432,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -449,16 +446,16 @@ window.removeEventListener("scroll", handleScroll);
                       "Understanding Legal Due Diligence Before Buying a Home",
                     subPara: [
                       `Before making any commitment, it's crucial to legally verify the property to ensure there are no hidden disputes or liabilities.`,
-                      ` <span class="font-FourthHead"> Key Legal Checks Before Purchase :</span>`,
+                      ` <span class="font-semibold"> Key Legal Checks Before Purchase :</span>`,
                     ],
                     paraGraph: [
-                      `<span class="font-FourthHead">Title Verification – </span>  Ensure the seller has a clear and marketable title to the property.`,
-                      ` <span class="font-FourthHead">Encumbrance Certificate (EC) – </span>  Confirms the property is free from any outstanding loans or legal claims.`,
-                      `<span class="font-FourthHead">Sale Agreement & Sale Deed – </span>  The agreement states the terms of the sale, while the deed officially transfers ownership.`,
-                      `<span class="font-FourthHead"> Property Tax Receipts –</span>  Check if the property has any pending tax dues.`,
-                      `<span class="font-FourthHead">RERA Registration – </span>  If it’s a new project, verify if it’s registered under RERA (Real Estate Regulatory Authority).`,
-                      `<span class="font-FourthHead">Approval from Local Authorities – </span>  Ensure the property has legal approvals from the municipal corporation and development authorities.`,
-                      `<span class="font-FourthHead"> Land Use & Zoning Clearance –</span>  Confirms whether the property is approved for residential purposes.`,
+                      `<span class="font-semibold">Title Verification – </span>  Ensure the seller has a clear and marketable title to the property.`,
+                      ` <span class="font-semibold">Encumbrance Certificate (EC) – </span>  Confirms the property is free from any outstanding loans or legal claims.`,
+                      `<span class="font-semibold">Sale Agreement & Sale Deed – </span>  The agreement states the terms of the sale, while the deed officially transfers ownership.`,
+                      `<span class="font-semibold"> Property Tax Receipts –</span>  Check if the property has any pending tax dues.`,
+                      `<span class="font-semibold">RERA Registration – </span>  If it’s a new project, verify if it’s registered under RERA (Real Estate Regulatory Authority).`,
+                      `<span class="font-semibold">Approval from Local Authorities – </span>  Ensure the property has legal approvals from the municipal corporation and development authorities.`,
+                      `<span class="font-semibold"> Land Use & Zoning Clearance –</span>  Confirms whether the property is approved for residential purposes.`,
                     ],
                     bottomPara: [
                       `💡 Pro Tip: Always get a legal expert to verify property documents before making any payment.`,
@@ -509,8 +506,8 @@ window.removeEventListener("scroll", handleScroll);
                     ],
                   }}
                 >
-                  <p class="font-Paragraph text-minParaFont">
-                    <span class="font-FourthHead">💡 Pro Tip: </span> Keeping these
+                  <p class="typography-body-sm text-text-light">
+                    <span class="font-semibold">💡 Pro Tip: </span> Keeping these
                     documents ready can speed up the home loan approval process by
                     5-7 working days!
                   </p>
@@ -524,7 +521,7 @@ window.removeEventListener("scroll", handleScroll);
                   cardHeading="Stamp duty, registration & other charges"
                 >
                   <div
-                    class="font-Paragraph text-subParaFont space-y-6"
+                    class="typography-body-md text-text-light space-y-6"
                     slot="list"
                   >
                     <p>
@@ -532,7 +529,7 @@ window.removeEventListener("scroll", handleScroll);
                       to pay stamp duty & registration charges, which vary by
                       state.
                     </p>
-                    <ul class="grid gap-[2rem] font-Paragraph text-subParaFont">
+                    <ul class="grid gap-[2rem] typography-body-md text-text-light">
                       <div class="">
                         {#each firstTableData as tableData}
                           <PaymentTable {tableData} />
@@ -540,7 +537,7 @@ window.removeEventListener("scroll", handleScroll);
                       </div>
                     </ul>
                     <p>
-                      💡 <span class="font-FourthHead">Pro Tip: </span> If you register
+                      💡 <span class="font-semibold">Pro Tip: </span> If you register
                       the property in a woman’s name, many states offer a lower stamp
                       duty rate (1%-2% discount), helping you save lakhs!
                     </p>
@@ -554,7 +551,7 @@ window.removeEventListener("scroll", handleScroll);
                     heading: "The Final Registration & Possession Process",
                     subPara: [
                       `Once your loan is approved and the payment is processed, you must register the property in your name at the local sub-registrar’s office.`,
-                      ` <span class="font-FourthHead"> Home Registration Process </span>`,
+                      ` <span class="font-semibold"> Home Registration Process </span>`,
                     ],
                     paraGraph: [
                       ` Step 1: Pay the stamp duty and registration fees.`,
@@ -563,7 +560,7 @@ window.removeEventListener("scroll", handleScroll);
                       ` Step 4: Collect the registered Sale Deed after processing (usually within a week).`,
                     ],
                     bottomPara: [
-                      ` <span class="font-FourthHead"> 💡 Pro Tip:</span> After registration, don’t forget to update property records in your name at the municipal office to avoid tax issues later.`,
+                      ` <span class="font-semibold"> 💡 Pro Tip:</span> After registration, don’t forget to update property records in your name at the municipal office to avoid tax issues later.`,
                     ],
                   }}
                   disc="list-disc"
@@ -578,40 +575,40 @@ window.removeEventListener("scroll", handleScroll);
                     cardHeading: "Step-by-Step process for Balance Transfer",
                   }}
                 >
-                  <div class="font-Paragraph text-subParaFont space-y-6">
+                  <div class="typography-body-md text-text-light space-y-6">
                     <p>
                       Even experienced buyers make mistakes when dealing with
                       legal and financial aspects of home buying. Here’s how you
                       can avoid them:
                     </p>
                     <div class="space-y-4">
-                      <h3 class="font-ThirdHead text-paraFont">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         Common Mistakes & Their Solutions
                       </h3>
                       <ul class="space-y-3 list-disc pl-5">
                         <li>
-                          <span class="font-FourthHead"
+                          <span class="font-semibold"
                             >Buying without title verification –
                           </span> Always check legal ownership history.
                         </li>
                         <li>
-                          <span class="font-FourthHead"
+                          <span class="font-semibold"
                             >Not checking hidden charges in builder agreements –
                           </span> Read every clause carefully.
                         </li>
                         <li>
-                          <span class="font-FourthHead">
+                          <span class="font-semibold">
                             Ignoring project approvals –</span
                           > Ensure the builder has received clearance from local
                           authorities.
                         </li>
                         <li>
-                          <span class="font-FourthHead"
+                          <span class="font-semibold"
                             >Skipping RERA verification –
                           </span> Always buy from RERA-registered projects.
                         </li>
                         <li>
-                          <span class="font-FourthHead"
+                          <span class="font-semibold"
                             >Not calculating total costs (stamp duty, GST,
                             maintenance fees) –
                           </span> Budget for all costs upfront.
@@ -620,7 +617,7 @@ window.removeEventListener("scroll", handleScroll);
                     </div>
 
                     <p>
-                      💡 <span class="font-FourthHead">Pro Tip: </span> : If a deal
+                      💡 <span class="font-semibold">Pro Tip: </span> : If a deal
                       looks “too good to be true,” double-check the legal paperwork
                       before proceeding.
                     </p>
@@ -701,10 +698,10 @@ window.removeEventListener("scroll", handleScroll);
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

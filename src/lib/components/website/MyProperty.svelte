@@ -209,7 +209,7 @@
   <PageDesign {pageData}>
     <div class="relative w-full hidden lg:block">
       <StickyNavbar navList={subList} {activeSection}>
-        <div class="  flex gap-4 pr-4">
+        <div class="flex gap-4 pr-4">
           
                 <div>
                   <Button
@@ -230,7 +230,7 @@
             cardHeading="Smarter management of your home loan & property"
           >
             <div
-              class="grid gap-[2rem] font-Paragraph text-subParaFont"
+              class="grid gap-[2rem] typography-body-md text-text-light"
               slot="list"
             >
               <p>
@@ -241,7 +241,7 @@
                 for the future.
               </p>
               <ul
-                class="list-disc ml-5 font-Paragraph text-subParaFont space-y-3"
+                class="list-disc ml-5 typography-body-md text-text-light space-y-3"
               >
                 <li>
                   Monitor your home loan and property’s market performance
@@ -289,10 +289,7 @@
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-bgBtn dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-bgBtn dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-6 py-4"
@@ -316,7 +313,7 @@
                 cardHeading="Smarter management of your home loan & property"
               >
                 <div
-                  class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                  class="grid gap-[2rem] typography-body-md text-text-light"
                   slot="list"
                 >
                   <p>
@@ -327,7 +324,7 @@
                     options and plan for the future.
                   </p>
                   <ul
-                    class="list-disc ml-5 font-Paragraph text-subParaFont space-y-3"
+                    class="list-disc ml-5 typography-body-md text-text-light space-y-3"
                   >
                     <li>
                       Monitor your home loan and property’s market performance

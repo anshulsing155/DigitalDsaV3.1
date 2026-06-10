@@ -97,11 +97,11 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> ₹50 Lakh </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> ₹50 Lakh </span>":
             ["9.5%", "8.35%", "₹46,607", "₹42,669", "₹6.4 Lakh"],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>₹75 Lakh</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>₹75 Lakh</span>":
             ["9.5%", "8.35%", "₹69,911", "₹64,003", "₹9.6 Lakh"],
         },
       ],
@@ -198,47 +198,47 @@
             list: [
               {
                 heading: "When interest rates drop significantly",
-                topPara: `If your current loan has a <span class="font-FourthHead">high interest rate</span>, and a new lender is offering a much lower rate, <span class="font-FourthHead">switching can save you lakhs</span> over time.
+                topPara: `If your current loan has a <span class="font-semibold">high interest rate</span>, and a new lender is offering a much lower rate, <span class="font-semibold">switching can save you lakhs</span> over time.
                 <br><br>
-                <span class="font-FourthHead">💡Example:</span>`,
+                <span class="font-semibold">💡Example:</span>`,
                 desc: [
-                  `<span class="font-FourthHead">Existing loan:</span> ₹50 lakh at 9.5% interest for 20 years.`,
-                  `<span class="font-FourthHead">New offer:</span> 8.35% interest.`,
-                  `<span class="font-FourthHead">Savings:</span> Over ₹6 lakh in total interest!`,
+                  `<span class="font-semibold">Existing loan:</span> ₹50 lakh at 9.5% interest for 20 years.`,
+                  `<span class="font-semibold">New offer:</span> 8.35% interest.`,
+                  `<span class="font-semibold">Savings:</span> Over ₹6 lakh in total interest!`,
                 ],
                 icon: "/icons/interestIcon.svg",
                 altName: "interest-icon",
               },
               {
                 heading: "When your credit score has improved",
-                topPara: `If your <span class="font-FourthHead">credit score was low</span> when you took the loan, you probably got a <span class="font-FourthHead">higher interest rate</span>. But if you’ve built a <span class="font-FourthHead">stronger credit history</span>, you may now qualify for <span class="font-FourthHead">better loan terms</span> elsewhere.`,
-                para: `<span class="font-FourthHead">💡Pro Tip:</span> Check your<span class="font-FourthHead"> CIBIL score</span> before applying. <span class="font-FourthHead">750+ is ideal</span> for the best rates!`,
+                topPara: `If your <span class="font-semibold">credit score was low</span> when you took the loan, you probably got a <span class="font-semibold">higher interest rate</span>. But if you’ve built a <span class="font-semibold">stronger credit history</span>, you may now qualify for <span class="font-semibold">better loan terms</span> elsewhere.`,
+                para: `<span class="font-semibold">💡Pro Tip:</span> Check your<span class="font-semibold"> CIBIL score</span> before applying. <span class="font-semibold">750+ is ideal</span> for the best rates!`,
                 icon: "/icons/emiIcon.svg",
                 altName: "emi-icon",
               },
               {
                 heading: "When you want better loan features​",
-                topPara: `<span class="font-FourthHead">A new lender might offer:</span>`,
+                topPara: `<span class="font-semibold">A new lender might offer:</span>`,
                 desc: [
-                  `<span class="font-FourthHead">Lower or zero</span> processing fees.`,
-                  `<span class="font-FourthHead">Flexible prepayment</span> options without penalties.`,
-                  `<span class="font-FourthHead">Overdraft facilities</span> to reduce interest burden.`,
+                  `<span class="font-semibold">Lower or zero</span> processing fees.`,
+                  `<span class="font-semibold">Flexible prepayment</span> options without penalties.`,
+                  `<span class="font-semibold">Overdraft facilities</span> to reduce interest burden.`,
                 ],
-                para: `<span class="font-FourthHead">💡Pro Tip:</span> If your current bank charges high prepayment penalties, <span class="font-FourthHead">consider switching to one that allows free prepayments!</span>`,
+                para: `<span class="font-semibold">💡Pro Tip:</span> If your current bank charges high prepayment penalties, <span class="font-semibold">consider switching to one that allows free prepayments!</span>`,
                 icon: "/icons/personalLoan.svg",
                 altName: "loan-icon",
               },
               {
                 heading:
                   "If you need additional funds for renovation or other needs​",
-                topPara: `You can also <span class="font-FourthHead">combine a balance transfer with a top-up loan</span> to get <span class="font-FourthHead">extra money</span> for:
+                topPara: `You can also <span class="font-semibold">combine a balance transfer with a top-up loan</span> to get <span class="font-semibold">extra money</span> for:
                 <br><br>
                 ✅ Home renovation <br> ✅ Business expansion <br> ✅ Higher education
                 <br><br>
-                <span class="font-FourthHead">💡Example:</span>`,
+                <span class="font-semibold">💡Example:</span>`,
                 desc: [
                   `Outstanding loan: ₹40 lakh`,
-                  `New lender offers ₹45 lakh (₹5 lakh top-up) at <span class="font-FourthHead">same or lower interest rate Smart move? Absolutely! 🚀</span>`,
+                  `New lender offers ₹45 lakh (₹5 lakh top-up) at <span class="font-semibold">same or lower interest rate Smart move? Absolutely! 🚀</span>`,
                 ],
                 icon: "/icons/renovateHome.svg",
                 altName: "home-icon",
@@ -257,28 +257,28 @@
             list: [
               {
                 heading: "If You Are in the Last Few Years of Your Loan",
-                topPara: `Most of the interest is <span class="font-FourthHead">paid in the first few years</span> of a loan. If you’ve already <span class="font-FourthHead">paid 70-80% of the interest</span>, switching won’t save much.`,
-                para: `<span class="font-FourthHead">💡Better Option:</span> Instead of transferring, <span class="font-FourthHead">make part payments</span> to close the loan faster!`,
+                topPara: `Most of the interest is <span class="font-semibold">paid in the first few years</span> of a loan. If you’ve already <span class="font-semibold">paid 70-80% of the interest</span>, switching won’t save much.`,
+                para: `<span class="font-semibold">💡Better Option:</span> Instead of transferring, <span class="font-semibold">make part payments</span> to close the loan faster!`,
                 icon: "/icons/riskFactor.svg",
                 altName: "risk-icon",
               },
               {
                 heading: "If the Processing Fees & Charges Are Too High​",
-                topPara: `Some banks <span class="font-FourthHead">advertise lower interest rates</span> but charge:`,
+                topPara: `Some banks <span class="font-semibold">advertise lower interest rates</span> but charge:`,
                 desc: [
-                  `<span class="font-FourthHead">igh processing fees</span> 10,000 - ₹50,000!)`,
-                  `<span class="font-FourthHead">Legal & technical</span> verification fees`,
-                  `<span class="font-FourthHead">Hidden charges</span>.`,
+                  `<span class="font-semibold">igh processing fees</span> 10,000 - ₹50,000!)`,
+                  `<span class="font-semibold">Legal & technical</span> verification fees`,
+                  `<span class="font-semibold">Hidden charges</span>.`,
                 ],
-                para: `<span class="font-FourthHead">💡What to do:</span> Always calculate the net savings before switching.`,
+                para: `<span class="font-semibold">💡What to do:</span> Always calculate the net savings before switching.`,
                 icon: "/icons/features.svg",
                 altName: "emi-icon",
               },
               {
                 heading:
                   "If Your Loan Is Fixed-Rate & Prepayment Charges Are High​",
-                topPara: `Fixed-rate home loans often have <span class="font-FourthHead">steep penalties</span> for early closure. In such cases,<span class="font-FourthHead">transferring may not be beneficial</span>.`,
-                para: `<span class="font-FourthHead">💡Pro Tip:</span> Check the terms & conditions carefully before proceeding!`,
+                topPara: `Fixed-rate home loans often have <span class="font-semibold">steep penalties</span> for early closure. In such cases,<span class="font-semibold">transferring may not be beneficial</span>.`,
+                para: `<span class="font-semibold">💡Pro Tip:</span> Check the terms & conditions carefully before proceeding!`,
                 icon: "/icons/inte.svg",
                 altName: "interest-icon",
               },
@@ -293,24 +293,24 @@
             heading: `Step-by-Step Guide`,
             list: [
               {
-                heading: `<span class="font-FourthHead">Step 1: Compare Interest Rates & Savings</span>`,
+                heading: `<span class="font-semibold">Step 1: Compare Interest Rates & Savings</span>`,
                 desc: `✔️ Check the latest home loan rates from top lenders. <br> ✔️ Use a home loan balance transfer calculator (We can help! 😎). <br> ✔️ Ensure your savings outweigh the transfer costs. `,
               },
 
               {
-                heading: `<span class="font-FourthHead">Step 2: Get a Loan Closure Letter from Your Current Lender</span>`,
+                heading: `<span class="font-semibold">Step 2: Get a Loan Closure Letter from Your Current Lender</span>`,
                 desc: `Request a Foreclosure letter & LOD (List of Original Documents) from your existing lender.`,
               },
               {
-                heading: `<span class="font-FourthHead">Step 3: Apply for a New Loan With the New Lender</span>`,
+                heading: `<span class="font-semibold">Step 3: Apply for a New Loan With the New Lender</span>`,
                 desc: `Submit the following documents: <br> 📌 KYC (Aadhaar, PAN, etc.) <br> 📌 Income proof (Salary slips, Form-16 or ITR) <br> 📌 Property documents <br> 📌 Foreclosure Letter & LOD from current lender`,
               },
               {
-                heading: `<span class="font-FourthHead">Step 4: Approval & Loan Disbursement</span>`,
+                heading: `<span class="font-semibold">Step 4: Approval & Loan Disbursement</span>`,
                 desc: `✔️ Once approved, your new lender pays off the old loan directly. <br> ✔️ Your new loan starts with the new bank at a lower rate.`,
               },
               {
-                heading: `<span class="font-FourthHead">Step 5: Start Paying Your New EMI & Enjoy Savings</span>`,
+                heading: `<span class="font-semibold">Step 5: Start Paying Your New EMI & Enjoy Savings</span>`,
                 desc: `You’ll now pay lower EMIs or close the loan faster!`,
               },
             ],
@@ -322,7 +322,7 @@
         >
           <div class="">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont text-center"
+              class="grid mb-[4rem] typography-h3 font-semibold md:typography-h2-md text-center"
             >
               How Much Can You Save? Let's See With an Example!
             </h2>
@@ -364,7 +364,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Compare the best balance transfer offers.</span
                   > Help users choose the best interest rate and tenure.
                 </span>
@@ -376,7 +376,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-FourthHead">Calculate actual savings</span> after
+                  <span class="font-semibold">Calculate actual savings</span> after
                   all costs.
                 </span>
               </li>
@@ -387,7 +387,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Guide you through the process step by step.</span
                   >
                 </span>
@@ -399,7 +399,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Negotiate with lenders for better deals!</span
                   >
                 </span>
@@ -411,7 +411,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-FourthHead">Doorstep Services:</span> Highlight
+                  <span class="font-semibold">Doorstep Services:</span> Highlight
                   your convenience factor, like document collection and processing
                   from home.
                 </span>
@@ -526,10 +526,7 @@
     <div class="lg:hidden block">
       {#each ["When to consider", "When to avoid", "How to do it", "How we help", "Tools & Calculators"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer"
@@ -537,7 +534,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -553,47 +550,47 @@
                   list: [
                     {
                       heading: "When interest rates drop significantly",
-                      topPara: `If your current loan has a <span class="font-FourthHead">high interest rate</span>, and a new lender is offering a much lower rate, <span class="font-FourthHead">switching can save you lakhs</span> over time.
+                      topPara: `If your current loan has a <span class="font-semibold">high interest rate</span>, and a new lender is offering a much lower rate, <span class="font-semibold">switching can save you lakhs</span> over time.
                 <br><br>
-                <span class="font-FourthHead">💡Example:</span>`,
+                <span class="font-semibold">💡Example:</span>`,
                       desc: [
-                        `<span class="font-FourthHead">Existing loan:</span> ₹50 lakh at 9.5% interest for 20 years.`,
-                        `<span class="font-FourthHead">New offer:</span> 8.35% interest.`,
-                        `<span class="font-FourthHead">Savings:</span> Over ₹6 lakh in total interest!`,
+                        `<span class="font-semibold">Existing loan:</span> ₹50 lakh at 9.5% interest for 20 years.`,
+                        `<span class="font-semibold">New offer:</span> 8.35% interest.`,
+                        `<span class="font-semibold">Savings:</span> Over ₹6 lakh in total interest!`,
                       ],
                       icon: "/icons/interestIcon.svg",
                       altName: "interest-icon",
                     },
                     {
                       heading: "When your credit score has improved​​",
-                      topPara: `If your <span class="font-FourthHead">credit score was low</span> when you took the loan, you probably got a <span class="font-FourthHead">higher interest rate</span>. But if you’ve built a <span class="font-FourthHead">stronger credit history</span>, you may now qualify for <span class="font-FourthHead">better loan terms</span> elsewhere.`,
-                      para: `<span class="font-FourthHead">💡Pro Tip:</span> Check your<span class="font-FourthHead"> CIBIL score</span> before applying. <span class="font-FourthHead">750+ is ideal</span> for the best rates!`,
+                      topPara: `If your <span class="font-semibold">credit score was low</span> when you took the loan, you probably got a <span class="font-semibold">higher interest rate</span>. But if you’ve built a <span class="font-semibold">stronger credit history</span>, you may now qualify for <span class="font-semibold">better loan terms</span> elsewhere.`,
+                      para: `<span class="font-semibold">💡Pro Tip:</span> Check your<span class="font-semibold"> CIBIL score</span> before applying. <span class="font-semibold">750+ is ideal</span> for the best rates!`,
                       icon: "/icons/emiIcon.svg",
                       altName: "emi-icon",
                     },
                     {
                       heading: "When you want better loan features​",
-                      topPara: `<span class="font-FourthHead">A new lender might offer:</span>`,
+                      topPara: `<span class="font-semibold">A new lender might offer:</span>`,
                       desc: [
-                        `<span class="font-FourthHead">Lower or zero</span> processing fees.`,
-                        `<span class="font-FourthHead">Flexible prepayment</span> options without penalties.`,
-                        `<span class="font-FourthHead">Overdraft facilities</span> to reduce interest burden.`,
+                        `<span class="font-semibold">Lower or zero</span> processing fees.`,
+                        `<span class="font-semibold">Flexible prepayment</span> options without penalties.`,
+                        `<span class="font-semibold">Overdraft facilities</span> to reduce interest burden.`,
                       ],
-                      para: `<span class="font-FourthHead">💡Pro Tip:</span> If your current bank charges high prepayment penalties, <span class="font-FourthHead">consider switching to one that allows free prepayments!</span>`,
+                      para: `<span class="font-semibold">💡Pro Tip:</span> If your current bank charges high prepayment penalties, <span class="font-semibold">consider switching to one that allows free prepayments!</span>`,
                       icon: "/icons/personalLoan.svg",
                       altName: "loan-icon",
                     },
                     {
                       heading:
                         "If you need additional funds for renovation or other needs​",
-                      topPara: `You can also <span class="font-FourthHead">combine a balance transfer with a top-up loan</span> to get <span class="font-FourthHead">extra money</span> for:
+                      topPara: `You can also <span class="font-semibold">combine a balance transfer with a top-up loan</span> to get <span class="font-semibold">extra money</span> for:
                 <br><br>
                 ✅ Home renovation <br> ✅ Business expansion <br> ✅ Higher education
                 <br><br>
-                <span class="font-FourthHead">💡Example:</span>`,
+                <span class="font-semibold">💡Example:</span>`,
                       desc: [
                         `Outstanding loan: ₹40 lakh`,
-                        `New lender offers ₹45 lakh (₹5 lakh top-up) at <span class="font-FourthHead">same or lower interest rate Smart move? Absolutely! 🚀</span>`,
+                        `New lender offers ₹45 lakh (₹5 lakh top-up) at <span class="font-semibold">same or lower interest rate Smart move? Absolutely! 🚀</span>`,
                       ],
                       icon: "/icons/renovateHome.svg",
                       altName: "home-icon",
@@ -612,28 +609,28 @@
                   list: [
                     {
                       heading: "If You Are in the Last Few Years of Your Loan",
-                      topPara: `Most of the interest is <span class="font-FourthHead">paid in the first few years</span> of a loan. If you’ve already <span class="font-FourthHead">paid 70-80% of the interest</span>, switching won’t save much.`,
-                      para: `<span class="font-FourthHead">💡Better Option:</span> Instead of transferring, <span class="font-FourthHead">make part payments</span> to close the loan faster!`,
+                      topPara: `Most of the interest is <span class="font-semibold">paid in the first few years</span> of a loan. If you’ve already <span class="font-semibold">paid 70-80% of the interest</span>, switching won’t save much.`,
+                      para: `<span class="font-semibold">💡Better Option:</span> Instead of transferring, <span class="font-semibold">make part payments</span> to close the loan faster!`,
                       icon: "/icons/riskFactor.svg",
                       altName: "risk-icon",
                     },
                     {
                       heading: "If the Processing Fees & Charges Are Too High​",
-                      topPara: `Some banks <span class="font-FourthHead">advertise lower interest rates</span> but charge:`,
+                      topPara: `Some banks <span class="font-semibold">advertise lower interest rates</span> but charge:`,
                       desc: [
-                        `<span class="font-FourthHead">igh processing fees</span> 10,000 - ₹50,000!)`,
-                        `<span class="font-FourthHead">Legal & technical</span> verification fees`,
-                        `<span class="font-FourthHead">Hidden charges</span>.`,
+                        `<span class="font-semibold">igh processing fees</span> 10,000 - ₹50,000!)`,
+                        `<span class="font-semibold">Legal & technical</span> verification fees`,
+                        `<span class="font-semibold">Hidden charges</span>.`,
                       ],
-                      para: `<span class="font-FourthHead">💡What to do:</span> Always calculate the net savings before switching.`,
+                      para: `<span class="font-semibold">💡What to do:</span> Always calculate the net savings before switching.`,
                       icon: "/icons/features.svg",
                       altName: "emi-icon",
                     },
                     {
                       heading:
                         "If Your Loan Is Fixed-Rate & Prepayment Charges Are High​",
-                      topPara: `Fixed-rate home loans often have <span class="font-FourthHead">steep penalties</span> for early closure. In such cases,<span class="font-FourthHead">transferring may not be beneficial</span>.`,
-                      para: `<span class="font-FourthHead">💡Pro Tip:</span> Check the terms & conditions carefully before proceeding!`,
+                      topPara: `Fixed-rate home loans often have <span class="font-semibold">steep penalties</span> for early closure. In such cases,<span class="font-semibold">transferring may not be beneficial</span>.`,
+                      para: `<span class="font-semibold">💡Pro Tip:</span> Check the terms & conditions carefully before proceeding!`,
                       icon: "/icons/inte.svg",
                       altName: "interest-icon",
                     },
@@ -648,24 +645,24 @@
                   heading: `Step-by-Step Guide`,
                   list: [
                     {
-                      heading: `<span class="font-FourthHead">Step 1: Compare Interest Rates & Savings</span>`,
+                      heading: `<span class="font-semibold">Step 1: Compare Interest Rates & Savings</span>`,
                       desc: `✔️ Check the latest home loan rates from top lenders. <br> ✔️ Use a home loan balance transfer calculator (We can help! 😎). <br> ✔️ Ensure your savings outweigh the transfer costs. `,
                     },
 
                     {
-                      heading: `<span class="font-FourthHead">Step 2: Get a Loan Closure Letter from Your Current Lender</span>`,
+                      heading: `<span class="font-semibold">Step 2: Get a Loan Closure Letter from Your Current Lender</span>`,
                       desc: `Request a Foreclosure letter & LOD (List of Original Documents) from your existing lender.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Step 3: Apply for a New Loan With the New Lender</span>`,
+                      heading: `<span class="font-semibold">Step 3: Apply for a New Loan With the New Lender</span>`,
                       desc: `Submit the following documents: <br> 📌 KYC (Aadhaar, PAN, etc.) <br> 📌 Income proof (Salary slips, Form-16 or ITR) <br> 📌 Property documents <br> 📌 Foreclosure Letter & LOD from current lender`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Step 4: Approval & Loan Disbursement</span>`,
+                      heading: `<span class="font-semibold">Step 4: Approval & Loan Disbursement</span>`,
                       desc: `✔️ Once approved, your new lender pays off the old loan directly. <br> ✔️ Your new loan starts with the new bank at a lower rate.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Step 5: Start Paying Your New EMI & Enjoy Savings</span>`,
+                      heading: `<span class="font-semibold">Step 5: Start Paying Your New EMI & Enjoy Savings</span>`,
                       desc: `You’ll now pay lower EMIs or close the loan faster!`,
                     },
                   ],
@@ -677,7 +674,7 @@
               >
                 <div class="">
                   <h2
-                    class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                    class="grid mb-[4rem] typography-h2 text-text-main text-center"
                   >
                     How Much Can You Save? Let's See With an Example!
                   </h2>
@@ -719,7 +716,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Compare the best balance transfer offers.</span
                         > Help users choose the best interest rate and tenure.
                       </span>
@@ -731,7 +728,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Calculate actual savings</span
                         > after all costs.
                       </span>
@@ -743,7 +740,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Guide you through the process step by step.</span
                         >
                       </span>
@@ -755,7 +752,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Negotiate with lenders for better deals!</span
                         >
                       </span>
@@ -767,7 +764,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-FourthHead">Doorstep Services:</span> Highlight
+                        <span class="font-semibold">Doorstep Services:</span> Highlight
                         your convenience factor, like document collection and processing
                         from home.
                       </span>
@@ -949,10 +946,10 @@
         thinkKnow={{
           heading: "Things you should know",
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA acts as an independent loan facilitator, helping home loan borrowers explore balance transfer options with licensed banks and NBFCs. We do not provide loans directly and are not a financial institution.`,
-            `<span class="font-FourthHead">Balance Transfer Approval:</span> The approval of a home loan balance transfer depends entirely on the bank or NBFC where you apply. Digital DSA does not guarantee approval or influence the lender’s decision. All applications are subject to the lender’s credit assessment, eligibility criteria, interest rates, and applicable charges.`,
-            `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for delays, rejections, or any financial losses arising during the balance transfer process. The final decision made by the bank or NBFC is binding on both the borrower and Digital DSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> Digital DSA acts as an independent loan facilitator, helping home loan borrowers explore balance transfer options with licensed banks and NBFCs. We do not provide loans directly and are not a financial institution.`,
+            `<span class="font-semibold">Balance Transfer Approval:</span> The approval of a home loan balance transfer depends entirely on the bank or NBFC where you apply. Digital DSA does not guarantee approval or influence the lender’s decision. All applications are subject to the lender’s credit assessment, eligibility criteria, interest rates, and applicable charges.`,
+            `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for delays, rejections, or any financial losses arising during the balance transfer process. The final decision made by the bank or NBFC is binding on both the borrower and Digital DSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

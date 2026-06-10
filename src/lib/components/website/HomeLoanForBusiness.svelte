@@ -182,9 +182,9 @@
     heading: `How We Help Business </br> Owners Without Documents`,
     para: `For individuals like shopkeepers, small vendors, or repair workers with no financial records: </br>
     <ul class="list-disc pl-4 space-y-4 mt-4">
-      <li><span class="font-FourthHead">Cash Flow Assessment:</span> We evaluate your income using your bank deposits, expense patterns, and other financial behaviors. </li>
-      <li><span class="font-FourthHead">Alternate Documentation: </span> If you don’t have ITRs or financial statements, we help by submitting alternative proofs like rent agreements, utility bills, or sales invoices. </li>
-      <li><span class="font-FourthHead">Tailored Solutions: </span>Our wide network of lenders allows us to offer customized loan options for unorganized sector businesses. </li>
+      <li><span class="font-semibold">Cash Flow Assessment:</span> We evaluate your income using your bank deposits, expense patterns, and other financial behaviors. </li>
+      <li><span class="font-semibold">Alternate Documentation: </span> If you don’t have ITRs or financial statements, we help by submitting alternative proofs like rent agreements, utility bills, or sales invoices. </li>
+      <li><span class="font-semibold">Tailored Solutions: </span>Our wide network of lenders allows us to offer customized loan options for unorganized sector businesses. </li>
     </ul>
     `,
   };
@@ -193,10 +193,10 @@
     heading: `How to Get Started`,
     para: `For individuals like shopkeepers, small vendors, or repair workers with no financial records: </br>
     <ul class="list-disc pl-4 space-y-4 mt-4">
-      <li><span class="font-FourthHead">Step 1: First Time Free Consultation</span> </br> Speak with our Loan Specialists to discuss your needs and financial situation. </li>
-      <li><span class="font-FourthHead">Step 2: Check Your Eligibility </span> </br>Use our <a href="/calculators/eligibility-calculator" class="underline underline-offset-4">Home Loan Eligibility Calculator</a> or connect with us to get a quick estimate. </li>
-      <li><span class="font-FourthHead">Step 3: Submit Documents</span>Provide the necessary financial or alternate documents based on your business type. </li>
-      <li><span class="font-FourthHead">Step 4: Choose Your Loan</span>We’ll match you with the best lenders and guide you through the application process.</li>
+      <li><span class="font-semibold">Step 1: First Time Free Consultation</span> </br> Speak with our Loan Specialists to discuss your needs and financial situation. </li>
+      <li><span class="font-semibold">Step 2: Check Your Eligibility </span> </br>Use our <a href="/calculators/eligibility-calculator" class="underline underline-offset-4">Home Loan Eligibility Calculator</a> or connect with us to get a quick estimate. </li>
+      <li><span class="font-semibold">Step 3: Submit Documents</span>Provide the necessary financial or alternate documents based on your business type. </li>
+      <li><span class="font-semibold">Step 4: Choose Your Loan</span>We’ll match you with the best lenders and guide you through the application process.</li>
     </ul>
     `,
   };
@@ -264,10 +264,10 @@
   let thinkKnow = {
     heading: "Things you should know",
     paraGraph: [
-      `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA serves as an independent loan facilitator, helping business owners connect with licensed banks and NBFCs for home loan solutions. We do not provide loans directly and are not a financial institution.`,
-      `<span class="font-FourthHead">Loan Approval:</span> Home loan approval for business owners depends entirely on the respective bank or NBFC's assessment of financial stability, income consistency, and creditworthiness. Digital DSA does not guarantee approval, as decisions are based on the lender’s policies, terms, and conditions. Interest rates, repayment options, and processing fees may vary accordingly.`,
-      `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any delays, rejections, or financial losses encountered during the loan application process. The final approval decision rests with the bank or NBFC, and their terms will apply.`,
-      `<span class="font-FourthHead">Important Information:</span> The details shared on this page are for informational purposes only and may not be suitable for every business owner. Home loan eligibility and benefits depend on various factors, including income stability, business history, and lender requirements. Exclusive loan offers may be available through Digital DSA, subject to specific eligibility criteria.`,
+      `<span class="font-semibold">Independent Facilitator:</span> Digital DSA serves as an independent loan facilitator, helping business owners connect with licensed banks and NBFCs for home loan solutions. We do not provide loans directly and are not a financial institution.`,
+      `<span class="font-semibold">Loan Approval:</span> Home loan approval for business owners depends entirely on the respective bank or NBFC's assessment of financial stability, income consistency, and creditworthiness. Digital DSA does not guarantee approval, as decisions are based on the lender’s policies, terms, and conditions. Interest rates, repayment options, and processing fees may vary accordingly.`,
+      `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any delays, rejections, or financial losses encountered during the loan application process. The final approval decision rests with the bank or NBFC, and their terms will apply.`,
+      `<span class="font-semibold">Important Information:</span> The details shared on this page are for informational purposes only and may not be suitable for every business owner. Home loan eligibility and benefits depend on various factors, including income stability, business history, and lender requirements. Exclusive loan offers may be available through Digital DSA, subject to specific eligibility criteria.`,
     ],
   };
 
@@ -431,15 +431,15 @@
             <div class="flex flex-col gap-4">
               {#each documentsGuide as guide}
                 <div class="flex flex-col gap-2">
-                  <p class="font-Paragraph text-minParaFont">{guide.para}</p>
+                  <p class="typography-body-sm text-text-light">{guide.para}</p>
 
                   {#each guide.lists as list, index}
-                    <li class="list-none font-FourthHead text-subParaFont">
+                    <li class="list-none font-semibold typography-body-md">
                       {index + 1}. {list.heading}
                     </li>
                     <ul class="pl-4">
                       {#each list.subList as subList}
-                        <li class="list-disc font-Paragraph text-subParaFont">
+                        <li class="list-disc typography-body-md text-text-light">
                           {subList.list}
                         </li>
                       {/each}
@@ -463,13 +463,13 @@
               {#each contents.firstBox as content}
                 <div>
                   <h3
-                    class="mb-[1.5rem] md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="mb-[1.5rem] md:text-start typography-h2 text-text-main"
                   >
                     {content.heading}
                   </h3>
                   <ul class="space-y-2 mb-4">
                     {#each content.list as list}
-                      <li class="font-Paragraph text-minParaFont">
+                      <li class="typography-body-sm text-text-light">
                         {list}
                       </li>
                     {/each}
@@ -484,12 +484,12 @@
               {/each}
               {#each contents.secBox as content}
                 <div>
-                  <h3 class="mb-[1.5rem] font-ThirdHead text-minSubHead">
+                  <h3 class="mb-[1.5rem] typography-h3 font-semibold text-text-main">
                     {content.heading}
                   </h3>
                   <ul class="list-disc mt-[1.5rem] space-y-2 mb-4 pl-4">
                     {#each content.list as list}
-                      <li class="font-Paragraph text-minParaFont">
+                      <li class="typography-body-sm text-text-light">
                         {list}
                       </li>
                     {/each}
@@ -498,17 +498,17 @@
               {/each}
               {#each contents.thirdBox as content}
                 <div>
-                  <h3 class="mb-[1.5rem] font-ThirdHead text-minSubHead">
+                  <h3 class="mb-[1.5rem] typography-h3 font-semibold text-text-main">
                     {content.heading}
                   </h3>
                   <ul class="list-disc space-y-2 mb-4 pl-4">
                     {#each content.list as list}
-                      <li class="font-Paragraph text-minParaFont">
+                      <li class="typography-body-sm text-text-light">
                         {list}
                       </li>
                     {/each}
                   </ul>
-                  <p class="mb-[1.5rem] font-Paragraph text-subParaFont">
+                  <p class="mb-[1.5rem] typography-body-md text-text-light">
                     {content.para}
                   </p>
                 </div>
@@ -521,7 +521,7 @@
           {#each rates as rate}
             <div class="grid grid-cols-3 gap-[2rem]">
               <h2
-                class="mt-4 col-span-3 lg:col-span-1 font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="mt-4 col-span-3 lg:col-span-1 typography-h2 text-text-main"
               >
                 {rate.heading}
               </h2>
@@ -530,12 +530,12 @@
                 <div class="grid grid-cols-2 pt-4 gap-[2rem]">
                   {#each rate.left as content}
                     <div class="space-y-4">
-                      <h3 class="font-ThirdHead text-minSubHead">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {content.heading}
                       </h3>
                       <ul class="list-disc pl-4 marker:black space-y-2">
                         {#each content.lists as list}
-                          <li class="font-Paragraph text-minParaFont">
+                          <li class="typography-body-sm text-text-light">
                             {list}
                           </li>
                         {/each}
@@ -544,13 +544,13 @@
                   {/each}
                   {#each rate.right as content}
                     <div class="space-y-4">
-                      <h3 class="font-ThirdHead text-minSubHead">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {content.heading}
                       </h3>
 
                       <ul class="list-disc pl-4 marker:black space-y-2">
                         {#each content.lists as list}
-                          <li class="font-Paragraph text-minParaFont">
+                          <li class="typography-body-sm text-text-light">
                             {list}
                           </li>
                         {/each}
@@ -600,10 +600,7 @@
     <div class="lg:hidden block">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -611,7 +608,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -640,18 +637,18 @@
                 <div class="flex flex-col gap-4">
                   {#each documentsGuide as guide}
                     <div class="flex flex-col gap-2">
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-sm text-text-light">
                         {guide.para}
                       </p>
 
                       {#each guide.lists as list, index}
-                        <li class="list-none font-FourthHead text-subParaFont">
+                        <li class="list-none font-semibold typography-body-md">
                           {index + 1}. {list.heading}
                         </li>
                         <ul class="pl-4">
                           {#each list.subList as subList}
                             <li
-                              class="list-disc font-Paragraph text-subParaFont"
+                              class="list-disc typography-body-md text-text-light"
                             >
                               {subList.list}
                             </li>
@@ -672,13 +669,13 @@
                   {#each contents.firstBox as content}
                     <div>
                       <h3
-                        class="mb-[1.5rem] md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                        class="mb-[1.5rem] md:text-start typography-h2 text-text-main"
                       >
                         {content.heading}
                       </h3>
                       <ul class="space-y-2 mb-4">
                         {#each content.list as list}
-                          <li class="font-Paragraph text-minParaFont">
+                          <li class="typography-body-sm text-text-light">
                             {list}
                           </li>
                         {/each}
@@ -693,12 +690,12 @@
                   {/each}
                   {#each contents.secBox as content}
                     <div class="">
-                      <h3 class="mb-[1.5rem] font-ThirdHead text-minSubHead">
+                      <h3 class="mb-[1.5rem] typography-h3 font-semibold text-text-main">
                         {content.heading}
                       </h3>
                       <ul class="list-disc mt-[1.5rem] space-y-2 md:mb-4 pl-4">
                         {#each content.list as list}
-                          <li class="font-Paragraph text-minParaFont">
+                          <li class="typography-body-sm text-text-light">
                             {list}
                           </li>
                         {/each}
@@ -707,17 +704,17 @@
                   {/each}
                   {#each contents.thirdBox as content}
                     <div class="">
-                      <h3 class="mb-[1.5rem] font-ThirdHead text-minSubHead">
+                      <h3 class="mb-[1.5rem] typography-h3 font-semibold text-text-main">
                         {content.heading}
                       </h3>
                       <ul class="list-disc space-y-2 mb-4 pl-4">
                         {#each content.list as list}
-                          <li class="font-Paragraph text-minParaFont">
+                          <li class="typography-body-sm text-text-light">
                             {list}
                           </li>
                         {/each}
                       </ul>
-                      <p class="mb-[1.5rem] font-Paragraph text-subParaFont">
+                      <p class="mb-[1.5rem] typography-body-md text-text-light">
                         {content.para}
                       </p>
                     </div>
@@ -730,7 +727,7 @@
               {#each rates as rate}
                 <div class="grid grid-cols-3 gap-[2rem]">
                   <h2
-                    class="col-span-3 lg:col-span-1 font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="col-span-3 lg:col-span-1 typography-h2 text-text-main"
                   >
                     {rate.heading}
                   </h2>
@@ -739,12 +736,12 @@
                     <div class="grid md:grid-cols-2 gap-[2rem]">
                       {#each rate.left as content}
                         <div class="space-y-4">
-                          <h3 class="font-ThirdHead text-minSubHead">
+                          <h3 class="typography-h3 font-semibold text-text-main">
                             {content.heading}
                           </h3>
                           <ul class="list-disc pl-4 marker:black space-y-2">
                             {#each content.lists as list}
-                              <li class="font-Paragraph text-minParaFont">
+                              <li class="typography-body-sm text-text-light">
                                 {list}
                               </li>
                             {/each}
@@ -753,13 +750,13 @@
                       {/each}
                       {#each rate.right as content}
                         <div class="space-y-4">
-                          <h3 class="font-ThirdHead text-minSubHead">
+                          <h3 class="typography-h3 font-semibold text-text-main">
                             {content.heading}
                           </h3>
 
                           <ul class="list-disc pl-4 marker:black space-y-2">
                             {#each content.lists as list}
-                              <li class="font-Paragraph text-minParaFont">
+                              <li class="typography-body-sm text-text-light">
                                 {list}
                               </li>
                             {/each}
@@ -813,7 +810,7 @@
         cardAltName="housing-figure"
         cardHeading="Why Wait? Let Us Help You Own Your Dream Home!"
       >
-        <ul class="grid gap-[2rem] font-Paragraph text-subParaFont" slot="list">
+        <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
           <li>
             At Digital DSA, we’re committed to making the loan process easier
             for self-employed individuals and business owners from all walks of

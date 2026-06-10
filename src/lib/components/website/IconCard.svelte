@@ -33,7 +33,7 @@
     <h2 class="typography-body-lg !font-semibold text-black dark:text-white">{cardData.heading}</h2>
     <p class="typography-body-md text-[var(--form-text-secondary)]">{@html cardData.para}</p>
     {#if cardData.link}
-      <a href={cardData.link} class="text-linkColor underline font-Paragraph text-subParaFont">
+      <a href={cardData.link} class="text-linkColor underline typography-body-md text-text-light">
         {cardData.btnName}
       </a>
     {/if}

@@ -313,16 +313,16 @@ dispatch("pageData", pageData);
               list: [
                 {
                   heading: "Sell or retain your current home?",
-                  topPara: `• <span class="font-FourthHead">Sell before you buy :</span> This can free up funds for your next purchase and reduce financial strain.<br>
-                        • <span class="font-FourthHead">Keep your current home :</span> If you’re financially stable, your current property can become a rental income source.`,
+                  topPara: `• <span class="font-semibold">Sell before you buy :</span> This can free up funds for your next purchase and reduce financial strain.<br>
+                        • <span class="font-semibold">Keep your current home :</span> If you’re financially stable, your current property can become a rental income source.`,
                   icon: "/icons/sellingHome.svg",
                   altName: "sell-retain-icon",
                 },
                 {
                   heading: "Financing your next home",
-                  topPara: `• <span class="font-FourthHead">Leverage your home equity :</span> If you have a running home loan, you may consider a balance transfer or a top-up loan.<br>
-                        •<span class="font-FourthHead"> Down payment considerations :</span> If you’re selling your current home, ensure you align the timelines for sale proceeds and the next purchase.<br>
-                        •<span class="font-FourthHead"> Second home loan:</span> Understand the tax implications and benefits of owning multiple properties.`,
+                  topPara: `• <span class="font-semibold">Leverage your home equity :</span> If you have a running home loan, you may consider a balance transfer or a top-up loan.<br>
+                        •<span class="font-semibold"> Down payment considerations :</span> If you’re selling your current home, ensure you align the timelines for sale proceeds and the next purchase.<br>
+                        •<span class="font-semibold"> Second home loan:</span> Understand the tax implications and benefits of owning multiple properties.`,
                   icon: "/icons/personalLoan.svg",
                   altName: "financing-icon",
                 },
@@ -420,7 +420,7 @@ dispatch("pageData", pageData);
           >
             <div class="">
               <h2
-                class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont text-center"
+                class="grid mb-[4rem] typography-h3 font-semibold md:typography-h2-md text-center"
               >
                 Why choose resale or direct purchase from a builder?
               </h2>
@@ -490,17 +490,14 @@ dispatch("pageData", pageData);
       <div class="lg:hidden block">
         {#each ["Getting started", "Why buy?", "Why choose?", "Tools & calculators"] as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[1rem] py-[1.5rem]"
               onclick={(e) => toggleDropdown(e, index)}
             >
               <div
-                class="mx-auto flex w-full items-center justify-between gap-4 font-FourthHead text-subParaFont"
+                class="mx-auto flex w-full items-center justify-between gap-4 font-semibold typography-body-md"
               >
                 <h2 class="">{list}</h2>
                 <div class="icon-container justify-self-end">
@@ -592,16 +589,16 @@ dispatch("pageData", pageData);
                     list: [
                       {
                         heading: "Sell or retain your current home?",
-                        topPara: `• <span class="font-FourthHead">Sell before you buy :</span> This can free up funds for your next purchase and reduce financial strain.<br>
-                        • <span class="font-FourthHead">Keep your current home :</span> If you’re financially stable, your current property can become a rental income source.`,
+                        topPara: `• <span class="font-semibold">Sell before you buy :</span> This can free up funds for your next purchase and reduce financial strain.<br>
+                        • <span class="font-semibold">Keep your current home :</span> If you’re financially stable, your current property can become a rental income source.`,
                         icon: "/icons/sellingHome.svg",
                         altName: "sell-retain-icon",
                       },
                       {
                         heading: "Financing Your Next Home",
-                        topPara: `• <span class="font-FourthHead">Leverage your home equity :</span> If you have a running home loan, you may consider a balance transfer or a top-up loan.<br>
-                        •<span class="font-FourthHead"> Down payment considerations :</span> If you’re selling your current home, ensure you align the timelines for sale proceeds and the next purchase.<br>
-                        •<span class="font-FourthHead"> Second home loan:</span> Understand the tax implications and benefits of owning multiple properties.`,
+                        topPara: `• <span class="font-semibold">Leverage your home equity :</span> If you have a running home loan, you may consider a balance transfer or a top-up loan.<br>
+                        •<span class="font-semibold"> Down payment considerations :</span> If you’re selling your current home, ensure you align the timelines for sale proceeds and the next purchase.<br>
+                        •<span class="font-semibold"> Second home loan:</span> Understand the tax implications and benefits of owning multiple properties.`,
                         icon: "/icons/personalLoan.svg",
                         altName: "financing-icon",
                       },
@@ -699,7 +696,7 @@ dispatch("pageData", pageData);
                 >
                   <div class="">
                     <h2
-                      class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont text-center"
+                      class="grid mb-[4rem] typography-h3 font-semibold md:typography-h2-md text-center"
                     >
                       Why choose resale or direct purchase from a builder?
                     </h2>

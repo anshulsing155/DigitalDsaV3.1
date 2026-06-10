@@ -5,7 +5,7 @@
     coverImage: "/images/property-value-blog.jpg",
     coverAlt: "hero-cover",
     heading: "How to Use Your Property’s Value to Get extra funds",
-    para: `Knowing where to start can be the biggest hurdle. The right tools and support will get you movingYou must be familiar with financial products like <span class="font-FourthHead" > Top-Up Loans </span> and <span class="font-FourthHead" > Loans Against Property (LAP) </span>. These products allow you to unlock the value in your property and use it to borrow funds for various needs. <br> In simple terms, the value of your property can be used to secure a loan, giving you access to funds without having to sell or move out of your home.`,
+    para: `Knowing where to start can be the biggest hurdle. The right tools and support will get you movingYou must be familiar with financial products like <span class="font-semibold" > Top-Up Loans </span> and <span class="font-semibold" > Loans Against Property (LAP) </span>. These products allow you to unlock the value in your property and use it to borrow funds for various needs. <br> In simple terms, the value of your property can be used to secure a loan, giving you access to funds without having to sell or move out of your home.`,
     actionBtns: [
       {
         btnName: "Book appointment",
@@ -51,35 +51,35 @@ columnName: [
 ],
 rowData: [
 {
-"<span class='font-FourthHead flex gap-4 items-center'>Loan Amount </span>":
+"<span class='font-semibold flex gap-4 items-center'>Loan Amount </span>":
 [
 `Up to 80% of the property value minus outstanding loan`,
 `60-70% of the property’s market value`,
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'>Purpose</span>":
+"<span class='font-semibold flex gap-4 items-center'>Purpose</span>":
 [
 "For smaller needs like home improvement, education, or medical expenses",
 "For large-scale needs like business funding or purchasing another property",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'>Interest Rates</span>":
+"<span class='font-semibold flex gap-4 items-center'>Interest Rates</span>":
 [
 "Typically lower than personal loans",
 "Higher than Top-Up loans, but lower than personal loans",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'>Eligibility</span>":
+"<span class='font-semibold flex gap-4 items-center'>Eligibility</span>":
 [
 "Based on current home loan and property value",
 "Based on the value of the property and income",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'>Repayment Tenure</span>":
+"<span class='font-semibold flex gap-4 items-center'>Repayment Tenure</span>":
 [
 "Shorter tenures (5-10 years)",
 "Longer tenures (up to 15-20 years)",
@@ -241,7 +241,7 @@ dispatch("pageData", pageData);
             heading: "Understanding Home Equity",
             subPara: [
               `Home equity refers to the portion of your property that you own outright. It’s the difference between your home’s current market value and what you still owe on your mortgage.`,
-              `<span class="font-FourthHead"> For Example: </span>`,
+              `<span class="font-semibold"> For Example: </span>`,
             ],
             paraGraph: [
               `If your property is worth ₹50 lakh and you still owe ₹30 lakh on your home loan, your home equity is ₹20 lakh.`,
@@ -256,14 +256,14 @@ dispatch("pageData", pageData);
         <AboveTitleWithoutIconCard
           contents={{
             heading: `Top-Up Loan`,
-            para: `A <span class="font-FourthHead">Top-Up Loan  </span> allows you to borrow more money on top of your existing home loan. The loan amount is generally determined by the value of your property and the outstanding balance on your home loan.`,
+            para: `A <span class="font-semibold">Top-Up Loan  </span> allows you to borrow more money on top of your existing home loan. The loan amount is generally determined by the value of your property and the outstanding balance on your home loan.`,
             xlGridCol: 3,
             borderBottom: true,
             cards: [
               {
                 heading: "How Does it works",
-                para: `Banks typically offer up to <span class="font-FourthHead">  80% of the property’s market value</span>, minus the current outstanding balance on your home loan.
-              <br> <br> <span class="font-FourthHead">For Example: </span>​​ <br>
+                para: `Banks typically offer up to <span class="font-semibold">  80% of the property’s market value</span>, minus the current outstanding balance on your home loan.
+              <br> <br> <span class="font-semibold">For Example: </span>​​ <br>
               <ul class="pl-5 list-disc pt-4">
 <li> Your property’s market value is ₹50 lakh.</li>
 <li> You have an outstanding home loan of ₹30 lakh.</li>
@@ -276,9 +276,9 @@ dispatch("pageData", pageData);
                 heading: "Advantages of a Top-Up",
                 para: `
               <ul class="pl-5 list-disc space-y-4">
-<li>	<span class="font-FourthHead">  Low Interest Rates:</span> Top-Up loans typically have lower interest rates compared to personal loans. </li>
-<li>	<span class="font-FourthHead">Quick Approval Process: </span>  The process is quicker than applying for a fresh loan.</li>
-<li>	<span class="font-FourthHead"> Flexible Usage:</span>  You can use the loan amount for any purpose like home improvement, funding education, or paying for a wedding. </li>
+<li>	<span class="font-semibold">  Low Interest Rates:</span> Top-Up loans typically have lower interest rates compared to personal loans. </li>
+<li>	<span class="font-semibold">Quick Approval Process: </span>  The process is quicker than applying for a fresh loan.</li>
+<li>	<span class="font-semibold"> Flexible Usage:</span>  You can use the loan amount for any purpose like home improvement, funding education, or paying for a wedding. </li>
 
               </ul>
               
@@ -288,10 +288,10 @@ dispatch("pageData", pageData);
                 heading: "How to Apply for a Top-Up ",
                 para: `
               <ul class="pl-5 list-disc space-y-4">
-<li><span class="font-FourthHead"> Check Your Property’s Market Value: </span> Get a valuation to know the maximum loan amount you may be eligible for. </li>
-<li> <span class="font-FourthHead"> Eligibility Check: </span> Ensure you meet the eligibility requirements for a Top-Up Loan, which will typically include a good credit score and an income check. </li>
-<li><span class="font-FourthHead"> Submit Documents:</span>  Provide necessary documents like income proof, property papers, and the details of your existing home loan. </li>
-<li><span class="font-FourthHead">  Loan Disbursement:</span> Once approved, the loan amount is disbursed, and you can use it for your intended purpose. </li>
+<li><span class="font-semibold"> Check Your Property’s Market Value: </span> Get a valuation to know the maximum loan amount you may be eligible for. </li>
+<li> <span class="font-semibold"> Eligibility Check: </span> Ensure you meet the eligibility requirements for a Top-Up Loan, which will typically include a good credit score and an income check. </li>
+<li><span class="font-semibold"> Submit Documents:</span>  Provide necessary documents like income proof, property papers, and the details of your existing home loan. </li>
+<li><span class="font-semibold">  Loan Disbursement:</span> Once approved, the loan amount is disbursed, and you can use it for your intended purpose. </li>
               </ul>
               
               `,
@@ -342,7 +342,7 @@ dispatch("pageData", pageData);
         <AboveTitleWithoutIconCard
           contents={{
             heading: `Loan Against Property (LAP)`,
-            para: `A <span class="font-FourthHead">Loan Against Property (LAP) </span>  is another popular option for leveraging the value of your property to secure a loan. Unlike a Top-Up Loan, which is based on your existing home loan, LAP allows you to pledge your residential, commercial, or industrial property for funding.`,
+            para: `A <span class="font-semibold">Loan Against Property (LAP) </span>  is another popular option for leveraging the value of your property to secure a loan. Unlike a Top-Up Loan, which is based on your existing home loan, LAP allows you to pledge your residential, commercial, or industrial property for funding.`,
             xlGridCol: 3,
             borderBottom: true,
             cards: [
@@ -351,9 +351,9 @@ dispatch("pageData", pageData);
                 para: `
              
               <ul class="pl-5 list-disc space-y-4">
-<li><span class="font-FourthHead">Loan Amount: </span>  The amount you can borrow typically ranges from <span class="font-FourthHead">60-70% of the property’s market value </span> .</li>
-<li><span class="font-FourthHead">Interest Rates:  </span>	LAP interest rates tend to be higher than Top-Up Loans but lower than personal loans. </li>
-<li>	<span class="font-FourthHead">Loan Tenure: </span>  LAPs often come with longer repayment tenures, usually up to 15-20 years. </li>
+<li><span class="font-semibold">Loan Amount: </span>  The amount you can borrow typically ranges from <span class="font-semibold">60-70% of the property’s market value </span> .</li>
+<li><span class="font-semibold">Interest Rates:  </span>	LAP interest rates tend to be higher than Top-Up Loans but lower than personal loans. </li>
+<li>	<span class="font-semibold">Loan Tenure: </span>  LAPs often come with longer repayment tenures, usually up to 15-20 years. </li>
               </ul>
               This means, the more your property is worth, and the lesser you owe on your current loan, the higher your Top-Up Loan eligibility can be.
               `,
@@ -373,10 +373,10 @@ dispatch("pageData", pageData);
                 heading: "How to Apply for LAP",
                 para: `
               <ul class="pl-5 list-disc space-y-4">
-<li><span class="font-FourthHead"> Get Property Valuation:</span>	 You will need to get your property valued to understand how much loan you can avail.</li>
-<li>	<span class="font-FourthHead">Eligibility Check: </span> Banks will evaluate your repayment capacity based on your income, credit history, and the value of the property. </li>
-<li><span class="font-FourthHead"> Submit Documents:</span>	 Provide necessary documents such as property papers, income proof, and bank statements. </li>
-<li><span class="font-FourthHead"> Loan Disbursement:</span>	 After approval, funds are disbursed, and you can use them for your chosen purpose. </li>
+<li><span class="font-semibold"> Get Property Valuation:</span>	 You will need to get your property valued to understand how much loan you can avail.</li>
+<li>	<span class="font-semibold">Eligibility Check: </span> Banks will evaluate your repayment capacity based on your income, credit history, and the value of the property. </li>
+<li><span class="font-semibold"> Submit Documents:</span>	 Provide necessary documents such as property papers, income proof, and bank statements. </li>
+<li><span class="font-semibold"> Loan Disbursement:</span>	 After approval, funds are disbursed, and you can use them for your chosen purpose. </li>
               </ul>
               
               `,
@@ -394,9 +394,9 @@ dispatch("pageData", pageData);
         data-section="difference"
         class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
       >
-        <div class=" ">
+        <div class="">
           <h2
-            class=" font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center py-5"
+            class="typography-h2 text-text-main text-center py-5"
           >
             <p>
               <span class="underline">Top-Up Loan </span> vs
@@ -434,15 +434,15 @@ dispatch("pageData", pageData);
       </div>
 
       <div class="lg:px-[4rem]" id="apply" data-section="apply">
-        <div class=" border-b border-borderColor">
+        <div class="border-b border-borderColor">
           <ThingsYouShould
             thinkKnow={{
               heading: "How to Apply for a Top-Up Loan or LAP",
               paraGraph: [
-                `	<span class="font-FourthHead">Get a Property Valuation: </span>  The loan amount you are eligible for will depend on the value of your property.`,
-                `<span class="font-FourthHead">  Check Eligibility: </span>Speak with your bank or lender to confirm eligibility criteria for a Top-Up Loan or LAP.`,
-                `<span class="font-FourthHead"> Submit Required Documents:</span>  Provide property-related documents, income proof, and details of your current loan (if applicable).`,
-                `<span class="font-FourthHead"> Loan Approval and Disbursement:</span>  Once approved, you will receive the loan amount, which you can use for your planned purpose.`,
+                `	<span class="font-semibold">Get a Property Valuation: </span>  The loan amount you are eligible for will depend on the value of your property.`,
+                `<span class="font-semibold">  Check Eligibility: </span>Speak with your bank or lender to confirm eligibility criteria for a Top-Up Loan or LAP.`,
+                `<span class="font-semibold"> Submit Required Documents:</span>  Provide property-related documents, income proof, and details of your current loan (if applicable).`,
+                `<span class="font-semibold"> Loan Approval and Disbursement:</span>  Once approved, you will receive the loan amount, which you can use for your planned purpose.`,
               ],
             }}
             disc="list-disc"
@@ -464,10 +464,7 @@ dispatch("pageData", pageData);
     <div class="lg:hidden block">
       {#each ["What is equity?", "Top up", "Loan Against Property", "Top vs Lap", "How to use equity", "How to apply"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -475,7 +472,7 @@ dispatch("pageData", pageData);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -488,7 +485,7 @@ dispatch("pageData", pageData);
                   heading: "Understanding Home Equity",
                   subPara: [
                     `Home equity refers to the portion of your property that you own outright. It’s the difference between your home’s current market value and what you still owe on your mortgage.`,
-                    `<span class="font-FourthHead"> For Example: </span>`,
+                    `<span class="font-semibold"> For Example: </span>`,
                   ],
                   paraGraph: [
                     `If your property is worth ₹50 lakh and you still owe ₹30 lakh on your home loan, your home equity is ₹20 lakh.`,
@@ -499,18 +496,18 @@ dispatch("pageData", pageData);
               />
             </div>
           {:else if index == 1}
-            <div id="start" class=" bg-white text-black">
+            <div id="start" class="bg-white text-black">
               <AboveTitleWithoutIconCard
                 contents={{
                   heading: `Top-Up Loan`,
-                  para: `A <span class="font-FourthHead">Top-Up Loan  </span> allows you to borrow more money on top of your existing home loan. The loan amount is generally determined by the value of your property and the outstanding balance on your home loan.`,
+                  para: `A <span class="font-semibold">Top-Up Loan  </span> allows you to borrow more money on top of your existing home loan. The loan amount is generally determined by the value of your property and the outstanding balance on your home loan.`,
                   xlGridCol: 3,
                   borderBottom: true,
                   cards: [
                     {
                       heading: "How Does it works",
-                      para: `Banks typically offer up to <span class="font-FourthHead">  80% of the property’s market value</span>, minus the current outstanding balance on your home loan.
-              <br> <br> <span class="font-FourthHead">For Example: </span>​​ <br>
+                      para: `Banks typically offer up to <span class="font-semibold">  80% of the property’s market value</span>, minus the current outstanding balance on your home loan.
+              <br> <br> <span class="font-semibold">For Example: </span>​​ <br>
               <ul class="pl-5 list-disc pt-4">
 <li> Your property’s market value is ₹50 lakh.</li>
 <li> You have an outstanding home loan of ₹30 lakh.</li>
@@ -523,9 +520,9 @@ dispatch("pageData", pageData);
                       heading: "Advantages of a Top-Up",
                       para: `
               <ul class="pl-5 list-disc space-y-4">
-<li>	<span class="font-FourthHead">  Low Interest Rates:</span> Top-Up loans typically have lower interest rates compared to personal loans. </li>
-<li>	<span class="font-FourthHead">Quick Approval Process: </span>  The process is quicker than applying for a fresh loan.</li>
-<li>	<span class="font-FourthHead"> Flexible Usage:</span>  You can use the loan amount for any purpose like home improvement, funding education, or paying for a wedding. </li>
+<li>	<span class="font-semibold">  Low Interest Rates:</span> Top-Up loans typically have lower interest rates compared to personal loans. </li>
+<li>	<span class="font-semibold">Quick Approval Process: </span>  The process is quicker than applying for a fresh loan.</li>
+<li>	<span class="font-semibold"> Flexible Usage:</span>  You can use the loan amount for any purpose like home improvement, funding education, or paying for a wedding. </li>
 
               </ul>
               
@@ -535,10 +532,10 @@ dispatch("pageData", pageData);
                       heading: "How to Apply for a Top-Up ",
                       para: `
               <ul class="pl-5 list-disc space-y-4">
-<li><span class="font-FourthHead"> Check Your Property’s Market Value: </span> Get a valuation to know the maximum loan amount you may be eligible for. </li>
-<li> <span class="font-FourthHead"> Eligibility Check: </span> Ensure you meet the eligibility requirements for a Top-Up Loan, which will typically include a good credit score and an income check. </li>
-<li><span class="font-FourthHead"> Submit Documents:</span>  Provide necessary documents like income proof, property papers, and the details of your existing home loan. </li>
-<li><span class="font-FourthHead">  Loan Disbursement:</span> Once approved, the loan amount is disbursed, and you can use it for your intended purpose. </li>
+<li><span class="font-semibold"> Check Your Property’s Market Value: </span> Get a valuation to know the maximum loan amount you may be eligible for. </li>
+<li> <span class="font-semibold"> Eligibility Check: </span> Ensure you meet the eligibility requirements for a Top-Up Loan, which will typically include a good credit score and an income check. </li>
+<li><span class="font-semibold"> Submit Documents:</span>  Provide necessary documents like income proof, property papers, and the details of your existing home loan. </li>
+<li><span class="font-semibold">  Loan Disbursement:</span> Once approved, the loan amount is disbursed, and you can use it for your intended purpose. </li>
               </ul>
               
               `,
@@ -589,7 +586,7 @@ dispatch("pageData", pageData);
               <AboveTitleWithoutIconCard
                 contents={{
                   heading: `Loan Against Property (LAP)`,
-                  para: `A <span class="font-FourthHead">Loan Against Property (LAP) </span>  is another popular option for leveraging the value of your property to secure a loan. Unlike a Top-Up Loan, which is based on your existing home loan, LAP allows you to pledge your residential, commercial, or industrial property for funding.`,
+                  para: `A <span class="font-semibold">Loan Against Property (LAP) </span>  is another popular option for leveraging the value of your property to secure a loan. Unlike a Top-Up Loan, which is based on your existing home loan, LAP allows you to pledge your residential, commercial, or industrial property for funding.`,
                   xlGridCol: 3,
                   borderBottom: true,
                   cards: [
@@ -598,9 +595,9 @@ dispatch("pageData", pageData);
                       para: `
              
               <ul class="pl-5 list-disc space-y-4">
-<li><span class="font-FourthHead">Loan Amount: </span>  The amount you can borrow typically ranges from <span class="font-FourthHead">60-70% of the property’s market value </span> .</li>
-<li><span class="font-FourthHead">Interest Rates:  </span>	LAP interest rates tend to be higher than Top-Up Loans but lower than personal loans. </li>
-<li>	<span class="font-FourthHead">Loan Tenure: </span>  LAPs often come with longer repayment tenures, usually up to 15-20 years. </li>
+<li><span class="font-semibold">Loan Amount: </span>  The amount you can borrow typically ranges from <span class="font-semibold">60-70% of the property’s market value </span> .</li>
+<li><span class="font-semibold">Interest Rates:  </span>	LAP interest rates tend to be higher than Top-Up Loans but lower than personal loans. </li>
+<li>	<span class="font-semibold">Loan Tenure: </span>  LAPs often come with longer repayment tenures, usually up to 15-20 years. </li>
               </ul>
               This means, the more your property is worth, and the lesser you owe on your current loan, the higher your Top-Up Loan eligibility can be.
               `,
@@ -620,10 +617,10 @@ dispatch("pageData", pageData);
                       heading: "How to Apply for LAP",
                       para: `
               <ul class="pl-5 list-disc space-y-4">
-<li><span class="font-FourthHead"> Get Property Valuation:</span>	 You will need to get your property valued to understand how much loan you can avail.</li>
-<li>	<span class="font-FourthHead">Eligibility Check: </span> Banks will evaluate your repayment capacity based on your income, credit history, and the value of the property. </li>
-<li><span class="font-FourthHead"> Submit Documents:</span>	 Provide necessary documents such as property papers, income proof, and bank statements. </li>
-<li><span class="font-FourthHead"> Loan Disbursement:</span>	 After approval, funds are disbursed, and you can use them for your chosen purpose. </li>
+<li><span class="font-semibold"> Get Property Valuation:</span>	 You will need to get your property valued to understand how much loan you can avail.</li>
+<li>	<span class="font-semibold">Eligibility Check: </span> Banks will evaluate your repayment capacity based on your income, credit history, and the value of the property. </li>
+<li><span class="font-semibold"> Submit Documents:</span>	 Provide necessary documents such as property papers, income proof, and bank statements. </li>
+<li><span class="font-semibold"> Loan Disbursement:</span>	 After approval, funds are disbursed, and you can use them for your chosen purpose. </li>
               </ul>
               
               `,
@@ -640,9 +637,9 @@ dispatch("pageData", pageData);
               <div
                 class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
-                <div class=" ">
+                <div class="">
                   <h2
-                    class=" font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center py-5"
+                    class="typography-h2 text-text-main text-center py-5"
                   >
                     <p>
                       <span class="underline">Top-Up Loan </span> vs
@@ -692,10 +689,10 @@ dispatch("pageData", pageData);
                 thinkKnow={{
                   heading: "How to Apply for a Top-Up Loan or LAP",
                   paraGraph: [
-                    `	<span class="font-FourthHead">Get a Property Valuation: </span>  The loan amount you are eligible for will depend on the value of your property.`,
-                    `<span class="font-FourthHead">  Check Eligibility: </span>Speak with your bank or lender to confirm eligibility criteria for a Top-Up Loan or LAP.`,
-                    `<span class="font-FourthHead"> Submit Required Documents:</span>  Provide property-related documents, income proof, and details of your current loan (if applicable).`,
-                    `<span class="font-FourthHead"> Loan Approval and Disbursement:</span>  Once approved, you will receive the loan amount, which you can use for your planned purpose.`,
+                    `	<span class="font-semibold">Get a Property Valuation: </span>  The loan amount you are eligible for will depend on the value of your property.`,
+                    `<span class="font-semibold">  Check Eligibility: </span>Speak with your bank or lender to confirm eligibility criteria for a Top-Up Loan or LAP.`,
+                    `<span class="font-semibold"> Submit Required Documents:</span>  Provide property-related documents, income proof, and details of your current loan (if applicable).`,
+                    `<span class="font-semibold"> Loan Approval and Disbursement:</span>  Once approved, you will receive the loan amount, which you can use for your planned purpose.`,
                   ],
                 }}
                 disc="list-disc"
@@ -775,10 +772,10 @@ dispatch("pageData", pageData);
         thinkKnow={{
           heading: "Things you should know",
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

@@ -330,12 +330,12 @@ icon.classList.add("fa-angle-down");
   <PageDesign {pageData}>
     <div>
       <div
-        class="border flex justify-between items-center p-[2rem] font-FourthHead text-subParaFont gap-[2rem]"
+        class="border flex justify-between items-center p-[2rem] font-semibold typography-body-md gap-[2rem]"
       >
         <ul class="hidden lg:flex gap-[3rem]">
           {#each navList.slice(0, -1) as list}
             <!-- Exclude the last item -->
-            <!-- <div class="flex "> -->
+            <!-- <div class="flex"> -->
 
             <li>
               <a href={list.url}>{list.listName}</a>
@@ -365,7 +365,7 @@ icon.classList.add("fa-angle-down");
           <div id="repayment">
             <div class="py-[4rem] border-b border-borderColor">
               <h2
-                class="mb-[3rem] md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="mb-[3rem] md:text-start typography-h2 text-text-main"
               >
                 Repayment & redraw
               </h2>
@@ -373,14 +373,14 @@ icon.classList.add("fa-angle-down");
                 <div class="grid grid-cols-3 justify-between gap-4">
                   {#each steps.data1 as data1}
                     <div class="flex flex-col gap-[1.5rem]">
-                      <h3 class="font-ThirdHead text-minSubHead">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {data1.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-sm text-text-light">
                         {data1.para}
                       </p>
                       <div>
-                        <p class="mb-2 font-Paragraph text-subParaFont">
+                        <p class="mb-2 typography-body-md text-text-light">
                           {data1.listHeading}
                         </p>
                         <ul class="list-disc pl-4 flex flex-col gap-2">
@@ -391,7 +391,7 @@ icon.classList.add("fa-angle-down");
                       </div>
                       <a
                         href={data1.url}
-                        class="font-Paragraph text-subParaFont text-linkColor underline"
+                        class="typography-body-md text-text-light text-linkColor underline"
                         >{data1.link}</a
                       >
                       <div>
@@ -405,15 +405,15 @@ icon.classList.add("fa-angle-down");
                   {/each}
                   {#each steps.data2 as data2}
                     <div class="flex flex-col gap-[1.5rem]">
-                      <h3 class="font-ThirdHead text-minSubHead">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {data2.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-sm text-text-light">
                         {data2.para}
                       </p>
                       <a
                         href={data2.url}
-                        class="font-Paragraph text-subParaFont text-linkColor underline"
+                        class="typography-body-md text-text-light text-linkColor underline"
                         >{data2.link}</a
                       >
                       <div>
@@ -427,15 +427,15 @@ icon.classList.add("fa-angle-down");
                   {/each}
                   {#each steps.data3 as data3}
                     <div class="flex flex-col gap-[1.5rem]">
-                      <h3 class="font-ThirdHead text-minSubHead">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {data3.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-sm text-text-light">
                         {data3.para}
                       </p>
                       <a
                         href={data3.url}
-                        class="font-Paragraph text-subParaFont text-linkColor underline"
+                        class="typography-body-md text-text-light text-linkColor underline"
                         >{data3.link}</a
                       >
                     </div>
@@ -450,16 +450,16 @@ icon.classList.add("fa-angle-down");
             class="border-b border-borderColor py-[4rem] grid grid-cols-3 justify-between gap-[4rem]"
           >
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:col-span-1 lg:text-minHeadFont"
+              class="typography-h3 font-semibold md:typography-h2-md lg:col-span-1 lg:typography-h2"
             >
               Everyday Offset
             </h2>
             {#each offset.data as data}
               <div class="col-span-2 grid gap-4">
-                <p class="font-Paragraph text-minParaFont">{data.desc}</p>
+                <p class="typography-body-sm text-text-light">{data.desc}</p>
                 <a
                   href={data.url}
-                  class="font-Paragraph text-subParaFont text-linkColor underline"
+                  class="typography-body-md text-text-light text-linkColor underline"
                   >{data.linkName}</a
                 >
                 <div>
@@ -484,22 +484,22 @@ icon.classList.add("fa-angle-down");
           <div id="benefits">
             <div class="py-[4rem] border-b border-borderColor">
               <h2
-                class="mb-[3rem] md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="mb-[3rem] md:text-start typography-h2 text-text-main"
               >
                 Features & benefits
               </h2>
               <div class="grid grid-cols-4 justify-between gap-4">
                 {#each benefits as data}
                   <div class="flex flex-col gap-[1.5rem]">
-                    <h3 class="font-ThirdHead text-minSubHead">
+                    <h3 class="typography-h3 font-semibold text-text-main">
                       {data.heading}
                     </h3>
-                    <p class="font-Paragraph text-minParaFont">
+                    <p class="typography-body-sm text-text-light">
                       {data.para}
                     </p>
                     <a
                       href={data.url}
-                      class="font-Paragraph text-subParaFont text-linkColor underline"
+                      class="typography-body-md text-text-light text-linkColor underline"
                       >{data.link}</a
                     >
                   </div>
@@ -521,7 +521,7 @@ icon.classList.add("fa-angle-down");
               class="flex flex-col gap-[3rem] border-b border-borderColor py-[2rem] lg:gap-[3rem] lg:py-[4rem]"
             >
               <h2
-                class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="md:text-start typography-h2 text-text-main"
               >
                 Tools & support
               </h2>
@@ -529,7 +529,7 @@ icon.classList.add("fa-angle-down");
                 <div
                   class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor"
                 >
-                  <h3 class="font-ThirdHead text-minSubHead">
+                  <h3 class="typography-h3 font-semibold text-text-main">
                     {support.heading}
                   </h3>
                   <ul class="list-disc pl-4 flex flex-col gap-2">
@@ -537,7 +537,7 @@ icon.classList.add("fa-angle-down");
                       <li>
                         <a
                           href={item.link}
-                          class="font-Paragraph text-subParaFont underline underline-offset-4 hover:no-underline text-linkColor"
+                          class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline text-linkColor"
                           >{item.title}</a
                         >
                       </li>
@@ -545,19 +545,19 @@ icon.classList.add("fa-angle-down");
                   </ul>
                   <a
                     href={support.url}
-                    class="font-Paragraph text-subParaFont text-linkColor"
+                    class="typography-body-md text-text-light text-linkColor"
                     >{support.btnName}</a
                   >
                 </div>
                 <div
                   class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor"
                 >
-                  <h3 class="font-ThirdHead text-minSubHead">
+                  <h3 class="typography-h3 font-semibold text-text-main">
                     How is interest calculated on my home loan?
                   </h3>
                   <a
                     href="/"
-                    class="font-Paragraph text-subParaFont text-linkColor"
+                    class="typography-body-md text-text-light text-linkColor"
                     >Tell me more</a
                   >
                 </div>
@@ -574,7 +574,7 @@ icon.classList.add("fa-angle-down");
                         />
                       </div>
                       <div class="content-center p-2">
-                        <h4 class="text-paraFont font-ThirdHead">
+                        <h4 class="typography-body-md typography-h3 font-semibold">
                           {side.title}
                         </h4>
                       </div>
@@ -591,7 +591,7 @@ icon.classList.add("fa-angle-down");
               reverse
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>Making small changes now can save you time and money.</li>
@@ -604,7 +604,7 @@ icon.classList.add("fa-angle-down");
               cardHeading="Message us 24/7"
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>
@@ -624,7 +624,7 @@ icon.classList.add("fa-angle-down");
               class="grid grid-cols-3 justify-between gap-[4rem] py-[1.5rem] lg:py-[3rem]"
             >
               <h2
-                class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:col-span-1 lg:text-minHeadFont"
+                class="typography-h3 font-semibold md:typography-h2-md lg:col-span-1 lg:typography-h2"
               >
                 Home loan support
               </h2>
@@ -632,14 +632,14 @@ icon.classList.add("fa-angle-down");
                 {#each loanSupport.data as data}
                   <div class="grid gap-4">
                     {#if data.heading}
-                      <h3 class="font-ThirdHead text-minSubHead">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {data.heading}
                       </h3>
                     {/if}
-                    <p class="font-Paragraph text-minParaFont">{data.desc}</p>
+                    <p class="typography-body-sm text-text-light">{data.desc}</p>
                     <a
                       href={data.url}
-                      class="font-Paragraph text-subParaFont text-linkColor underline"
+                      class="typography-body-md text-text-light text-linkColor underline"
                       >{data.linkName}</a
                     >
                   </div>
@@ -652,10 +652,7 @@ icon.classList.add("fa-angle-down");
         <div class="lg:hidden block">
           {#each navBarMedium as list, index}
             <details
-              class="dropdown col-span-3 bg-darkColor text-white {index <
-              list.length - 1
-                ? 'border-b'
-                : ''} "
+              class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
             >
               <summary
                 class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -665,7 +662,7 @@ icon.classList.add("fa-angle-down");
                   class="mx-auto flex w-full items-center justify-between gap-4"
                 >
                   <h2 class="text-navFont">{list}</h2>
-                  <div class="icon-container justify-self-end text-mobSubHead">
+                  <div class="icon-container justify-self-end typography-h3">
                     <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                   </div>
                 </div>
@@ -680,7 +677,7 @@ icon.classList.add("fa-angle-down");
                     class="py-[4rem] border-0"
                   >
                     <h2
-                      class="mb-[3rem] md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="mb-[3rem] md:text-start typography-h2 text-text-main"
                     >
                       Repayment & redraw
                     </h2>
@@ -688,14 +685,14 @@ icon.classList.add("fa-angle-down");
                       <div class="grid md:grid-cols-3 justify-between md:gap-4 gap-[4rem]">
                         {#each steps.data1 as data1}
                           <div class="flex flex-col gap-[1.5rem]">
-                            <h3 class="font-ThirdHead text-minSubHead">
+                            <h3 class="typography-h3 font-semibold text-text-main">
                               {data1.heading}
                             </h3>
-                            <p class="font-Paragraph text-minParaFont">
+                            <p class="typography-body-sm text-text-light">
                               {data1.para}
                             </p>
                             <div>
-                              <p class="mb-2 font-Paragraph text-subParaFont">
+                              <p class="mb-2 typography-body-md text-text-light">
                                 {data1.listHeading}
                               </p>
                               <ul class="list-disc pl-4 flex flex-col gap-2">
@@ -706,7 +703,7 @@ icon.classList.add("fa-angle-down");
                             </div>
                             <a
                               href={data1.url}
-                              class="font-Paragraph text-subParaFont text-linkColor underline"
+                              class="typography-body-md text-text-light text-linkColor underline"
                               >{data1.link}</a
                             >
                             <div>
@@ -720,15 +717,15 @@ icon.classList.add("fa-angle-down");
                         {/each}
                         {#each steps.data2 as data2}
                           <div class="flex flex-col gap-[1.5rem]">
-                            <h3 class="font-ThirdHead text-minSubHead">
+                            <h3 class="typography-h3 font-semibold text-text-main">
                               {data2.heading}
                             </h3>
-                            <p class="font-Paragraph text-minParaFont">
+                            <p class="typography-body-sm text-text-light">
                               {data2.para}
                             </p>
                             <a
                               href={data2.url}
-                              class="font-Paragraph text-subParaFont text-linkColor underline"
+                              class="typography-body-md text-text-light text-linkColor underline"
                               >{data2.link}</a
                             >
                             <div>
@@ -742,15 +739,15 @@ icon.classList.add("fa-angle-down");
                         {/each}
                         {#each steps.data3 as data3}
                           <div class="flex flex-col gap-[1.5rem]">
-                            <h3 class="font-ThirdHead text-minSubHead">
+                            <h3 class="typography-h3 font-semibold text-text-main">
                               {data3.heading}
                             </h3>
-                            <p class="font-Paragraph text-minParaFont">
+                            <p class="typography-body-sm text-text-light">
                               {data3.para}
                             </p>
                             <a
                               href={data3.url}
-                              class="font-Paragraph text-subParaFont text-linkColor underline"
+                              class="typography-body-md text-text-light text-linkColor underline"
                               >{data3.link}</a
                             >
                           </div>
@@ -766,18 +763,18 @@ icon.classList.add("fa-angle-down");
                     class="py-[4rem] grid lg:grid-cols-3 justify-between gap-[3rem]"
                   >
                     <h2
-                      class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:col-span-1 lg:text-minHeadFont"
+                      class="typography-h3 font-semibold md:typography-h2-md lg:col-span-1 lg:typography-h2"
                     >
                       Everyday Offset
                     </h2>
                     {#each offset.data as data}
                       <div class="lg:col-span-2 grid gap-[1.5rem]">
-                        <p class="font-Paragraph text-minParaFont">
+                        <p class="typography-body-sm text-text-light">
                           {data.desc}
                         </p>
                         <a
                           href={data.url}
-                          class="font-Paragraph text-subParaFont text-linkColor underline"
+                          class="typography-body-md text-text-light text-linkColor underline"
                           >{data.linkName}</a
                         >
                         <div>
@@ -808,22 +805,22 @@ icon.classList.add("fa-angle-down");
                     class="py-[4rem]"
                   >
                     <h2
-                      class="mb-[3rem] md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="mb-[3rem] md:text-start typography-h2 text-text-main"
                     >
                       Features & benefits
                     </h2>
                     <div class="grid md:grid-cols-2 justify-between gap-[3rem]">
                       {#each benefits as data}
                         <div class="flex flex-col gap-4">
-                          <h3 class="font-ThirdHead text-minSubHead">
+                          <h3 class="typography-h3 font-semibold text-text-main">
                             {data.heading}
                           </h3>
-                          <p class="font-Paragraph text-minParaFont">
+                          <p class="typography-body-sm text-text-light">
                             {data.para}
                           </p>
                           <a
                             href={data.url}
-                            class="font-Paragraph text-subParaFont text-linkColor underline"
+                            class="typography-body-md text-text-light text-linkColor underline"
                             >{data.link}</a
                           >
                         </div>
@@ -851,7 +848,7 @@ icon.classList.add("fa-angle-down");
                     class="flex flex-col gap-[3rem] py-[2rem] lg:gap-[3rem] lg:py-[4rem]"
                   >
                     <h2
-                      class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="md:text-start typography-h2 text-text-main"
                     >
                       Tools & support
                     </h2>
@@ -859,7 +856,7 @@ icon.classList.add("fa-angle-down");
                       <div
                         class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor"
                       >
-                        <h3 class="font-ThirdHead text-minSubHead">
+                        <h3 class="typography-h3 font-semibold text-text-main">
                           {support.heading}
                         </h3>
                         <ul class="list-disc pl-4 flex flex-col gap-2">
@@ -867,7 +864,7 @@ icon.classList.add("fa-angle-down");
                             <li>
                               <a
                                 href={item.link}
-                                class="font-Paragraph text-subParaFont underline underline-offset-4 hover:no-underline text-linkColor"
+                                class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline text-linkColor"
                                 >{item.title}</a
                               >
                             </li>
@@ -875,19 +872,19 @@ icon.classList.add("fa-angle-down");
                         </ul>
                         <a
                           href={support.url}
-                          class="font-Paragraph text-subParaFont text-linkColor"
+                          class="typography-body-md text-text-light text-linkColor"
                           >{support.btnName}</a
                         >
                       </div>
                       <div
                         class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor"
                       >
-                        <h3 class="font-ThirdHead text-minSubHead">
+                        <h3 class="typography-h3 font-semibold text-text-main">
                           How is interest calculated on my home loan?
                         </h3>
                         <a
                           href="/"
-                          class="font-Paragraph text-subParaFont text-linkColor"
+                          class="typography-body-md text-text-light text-linkColor"
                           >Tell me more</a
                         >
                       </div>
@@ -904,7 +901,7 @@ icon.classList.add("fa-angle-down");
                               />
                             </div>
                             <div class="content-center p-2">
-                              <h4 class="text-paraFont font-ThirdHead">
+                              <h4 class="typography-body-md typography-h3 font-semibold">
                                 {side.title}
                               </h4>
                             </div>
@@ -921,7 +918,7 @@ icon.classList.add("fa-angle-down");
                     reverse
                   >
                     <ul
-                      class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                      class="grid gap-[2rem] typography-body-md text-text-light"
                       slot="list"
                     >
                       <li>
@@ -936,7 +933,7 @@ icon.classList.add("fa-angle-down");
                     cardHeading="Message us 24/7"
                   >
                     <ul
-                      class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                      class="grid gap-[2rem] typography-body-md text-text-light"
                       slot="list"
                     >
                       <li>
@@ -960,7 +957,7 @@ icon.classList.add("fa-angle-down");
                     class="grid gap-[3rem] py-[1.5rem] lg:py-[3rem]"
                   >
                     <h2
-                      class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:col-span-1 lg:text-minHeadFont"
+                      class="typography-h3 font-semibold md:typography-h2-md lg:col-span-1 lg:typography-h2"
                     >
                       Home loan support
                     </h2>
@@ -968,16 +965,16 @@ icon.classList.add("fa-angle-down");
                       {#each loanSupport.data as data}
                         <div class="grid gap-2">
                           {#if data.heading}
-                            <h3 class="font-ThirdHead text-minSubHead">
+                            <h3 class="typography-h3 font-semibold text-text-main">
                               {data.heading}
                             </h3>
                           {/if}
-                          <p class="font-Paragraph text-minParaFont">
+                          <p class="typography-body-sm text-text-light">
                             {data.desc}
                           </p>
                           <a
                             href={data.url}
-                            class="font-Paragraph text-subParaFont text-linkColor underline"
+                            class="typography-body-md text-text-light text-linkColor underline"
                             >{data.linkName}</a
                           >
                         </div>

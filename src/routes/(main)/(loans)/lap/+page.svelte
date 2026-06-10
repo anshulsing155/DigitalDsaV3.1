@@ -202,10 +202,10 @@
   keywords="Loan Against Property LAP Loan, Loan Against Property Online, Compare LAP Offers, Low-Interest LAP, Best LAP Deals, LAP Balance Transfer, Loan Against Property for Business, Dropline Overdraft Loan, Business Loan Against Property, Secured Loan for Business, Property Loan Calculator, Best LAP Interest Rates, Loan Against Property Top-Up, Fast Loan Approval"
 />
 
-<section class="xl:contianer mx-auto w-full bg-mainBg content">
+<section class="content">
   <NewPageLayout {pageData}  >
     <Sublist {subList} />
-    <div class="px-[0.5rem] lg:px-[4rem]">
+    <div class="px-4 lg:px-16">
       <div class="border-b border-[var(--form-border)]">
         <WhyChoose {facilities} />
       </div>
@@ -247,7 +247,7 @@
           cardHeading={cardHead1}
           reverse={true}
         >
-          <ul class="grid gap-4 font-Paragraph text-subParaFont" slot="list">
+          <ul class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]" slot="list">
             <li>
               Before applying for a Loan Against Property (LAP) or a Dropline
               Overdraft (DOD), assessing your business’s financial health is
@@ -258,7 +258,7 @@
             </li>
             <li>
               <a
-                class=" underline underline-offset-4 hover:no-underline"
+                class="underline underline-offset-4 hover:no-underline"
                 href="/lap/business-financial-health"
               >
                 Learn more about assessing your business's financial health
@@ -275,7 +275,7 @@
           cardHeading={cardHead2}
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
             slot="list"
           >
             <li>
@@ -341,10 +341,10 @@
         thinkKnow={{
           heading: "Things you should know",
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

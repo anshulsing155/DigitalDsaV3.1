@@ -255,7 +255,7 @@ window.removeEventListener("scroll", handleScroll);
     <div>
       <div class="hidden lg:block">
         <StickyNavbar navList={subList} {activeSection}>
-          <div class="  flex gap-4 pr-4">
+          <div class="flex gap-4 pr-4">
             {#each navList as lastItem}
               {#if lastItem.actionBtn}
                 {#each lastItem.actionBtn as action}
@@ -301,23 +301,23 @@ window.removeEventListener("scroll", handleScroll);
               class="flex flex-col gap-[2rem] lg:gap-[1rem] lg:grid lg:grid-cols-5 py-[2rem] border-b border-borderColor"
             >
               <h2
-                class="font-ThirdHead text-mobSubHead col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h3 font-semibold col-span-2 md:typography-h2-md lg:typography-h2"
               >
               How to calculate equity
               </h2>
 
               <div class="col-span-3">
-                <p class="font-Paragraph text-subParaFont pb-[1rem]">
+                <p class="typography-body-md text-text-light pb-[1rem]">
                     Equity calculation example:
                 </p>
                 {#each calcList as list}
                   <div class="flex flex-col pb-[1rem] gap-4">
                     <div class="grid grid-cols-10 gap-2">
                       <span
-                        class=" col-span-1 flex items-center justify-center text-white bg-darkColor rounded-full w-[2rem] h-[2rem]"
+                        class="col-span-1 flex items-center justify-center text-white bg-darkColor rounded-full w-[2rem] h-[2rem]"
                         >{list.num}</span
                       >
-                      <p class="col-span-9 font-Paragraph text-subParaFont">
+                      <p class="col-span-9 typography-body-md text-text-light">
                         {list.text}
                       </p>
                     </div>
@@ -336,10 +336,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -349,7 +346,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont leading-6">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -379,13 +376,13 @@ window.removeEventListener("scroll", handleScroll);
               class="flex flex-col gap-[2rem] py-[2rem] border-b border-borderColor"
             >
               <h2
-                class="font-ThirdHead text-mobSubHead col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h3 font-semibold col-span-2 md:typography-h2-md lg:typography-h2"
               >
               How to calculate equity
               </h2>
 
               <div class="col-span-3">
-                <p class="font-Paragraph text-subParaFont pb-[1rem]">
+                <p class="typography-body-md text-text-light pb-[1rem]">
                     Equity calculation example:
                 </p>
                 {#each calcList as list}
@@ -395,7 +392,7 @@ window.removeEventListener("scroll", handleScroll);
                         class="col-span-1 xs:col-span-1 flex items-center justify-center text-white bg-darkColor rounded-full w-[2rem] h-[2rem]"
                         >{list.num}</span
                       >
-                      <p class="col-span-7 xs:col-span-9 font-Paragraph text-subParaFont">
+                      <p class="col-span-7 xs:col-span-9 typography-body-md text-text-light">
                         {list.text}
                       </p>
                     </div>
@@ -419,7 +416,7 @@ window.removeEventListener("scroll", handleScroll);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-[2rem] typography-body-md text-text-light"
             slot="list"
           >
             <li>

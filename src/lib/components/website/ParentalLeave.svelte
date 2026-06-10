@@ -49,7 +49,7 @@
       id: 4,
       subHeading: `4. Fix your rate`,
       subPara: [
-        `With a <a class="underline text-linkColor underline-offset-4 "> Fixed Rate home loan </a> you’ll know exactly what your repayments will be, giving you confidence to budget and plan ahead with certainty. If you’re not sure a fixed rate is right for you, you can <a class="underline text-linkColor underline-offset-4"> find out more about the benefits and things to consider</a>  before making the switch.`,
+        `With a <a class="underline text-linkColor underline-offset-4"> Fixed Rate home loan </a> you’ll know exactly what your repayments will be, giving you confidence to budget and plan ahead with certainty. If you’re not sure a fixed rate is right for you, you can <a class="underline text-linkColor underline-offset-4"> find out more about the benefits and things to consider</a>  before making the switch.`,
         `To change your home loan to a fixed rate, simply log on to NetBank or the undefined app and choose the loan you’d like to fix. You can also    <a class="underline text-linkColor underline-offset-4">split your home loan </a>  and enjoy the best of fixed and variable. <a class="underline text-linkColor underline-offset-4"> Contact us</a>  to chat through your options.
 `,
       ],
@@ -169,7 +169,7 @@
 
         <div class="grid lg:grid-cols-5 border-b">
           <h2
-            class="col-span-full lg:col-span-2 pt-[2rem] font-ThirdHead text-mobSubHead md:col-span-2 md:text-miniHeadFont lg:text-minHeadFont"
+            class="col-span-full lg:col-span-2 pt-[2rem] typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2"
           >
             Tips for managing your home loan while you’re on parental leave
           </h2>
@@ -177,9 +177,7 @@
           <div class="col-span-full lg:col-span-3">
             {#each manageHomeLoan as item, i (item.id)}
               <div
-                class="{manageHomeLoan.length - 1 > i
-                  ? 'border-b border-borderColor'
-                  : ''} "
+                class="{manageHomeLoan.length - 1 > i ? 'border-b border-borderColor' : ''}"
               >
                 <ThingsYouShould thinkKnow={item} colSpan="5" />
               </div>
@@ -203,7 +201,7 @@
             cardHeading="Message us 24/7"
           >
             <div
-              class="grid gap-[2rem] font-Paragraph text-subParaFont"
+              class="grid gap-[2rem] typography-body-md text-text-light"
               slot="list"
             >
               <p>

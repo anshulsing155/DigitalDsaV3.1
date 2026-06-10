@@ -55,35 +55,35 @@ columnName: [
 ],
 rowData: [
 {
-"<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='monthly cost icon'> Monthly Cost </span>":
+"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='monthly cost icon'> Monthly Cost </span>":
 [
 "Fixed rent, often lower than EMIs",
 "EMIs, but equity builds over time",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='flexibility icon'> Flexibility </span>":
+"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='flexibility icon'> Flexibility </span>":
 [
 "Move anytime, no strings attached",
 "Long-term commitment to a location",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='upfront costs icon'> Upfront Costs </span>":
+"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='upfront costs icon'> Upfront Costs </span>":
 [
 "Just a security deposit",
 "Down payment, registration, stamp duty",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='ownership icon'> Ownership </span>":
+"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='ownership icon'> Ownership </span>":
 [
 "No ownership, no asset building",
 "You own the property, build equity",
 ],
 },
 {
-"<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='maintenance icon'> Maintenance </span>":
+"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='maintenance icon'> Maintenance </span>":
 ["Covered by the landlord", "Out of pocket (repairs, renovations)"],
 },
 ],
@@ -261,7 +261,7 @@ window.removeEventListener("scroll", handleScroll);
         >
           <div class="">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+              class="grid mb-[4rem] typography-h2 text-text-main text-center"
             >
               <p>Renting vs Buying</p>
               <span
@@ -275,8 +275,8 @@ window.removeEventListener("scroll", handleScroll);
               <PaymentTable {tableData} />
             {/each}
           </div>
-          <p class="font-Paragraph text-subParaFont mt-14 text-center">
-            💡 <span class="font-FourthHead mr-2">Fun Fact :</span> Did you know
+          <p class="typography-body-md text-text-light mt-14 text-center">
+            💡 <span class="font-semibold mr-2">Fun Fact :</span> Did you know
             the cost of renting may seem lower upfront but adds up over years without
             offering ownership benefits?
           </p>
@@ -284,11 +284,11 @@ window.removeEventListener("scroll", handleScroll);
 
         <div class="mt-[4rem]">
           <p
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center mb-[2rem]"
+            class="typography-h2 text-text-main text-center mb-[2rem]"
           >
             Real-Life Scenarios: What Worked for Others
             <br /><span
-              class="font-Paragraph text-subParaFont mt-14 text-center"
+              class="typography-body-md text-text-light mt-14 text-center"
               >Here’s what people like you did and why</span
             >
           </p>
@@ -360,20 +360,20 @@ window.removeEventListener("scroll", handleScroll);
               {
                 heading: `Renting Costs`,
                 desc: `<ul class="list-disc list-inside mb-2 mt-2">
-                            <li><span class="font-FourthHead mr-1">Monthly Rent :</span> Depends on location, property size, and amenities—calculate based on your budget.</li>
-                            <li><span class="font-FourthHead mr-1">Security Deposit :</span> Typically 1-3 months' rent, varying by landlord and city.</li>
+                            <li><span class="font-semibold mr-1">Monthly Rent :</span> Depends on location, property size, and amenities—calculate based on your budget.</li>
+                            <li><span class="font-semibold mr-1">Security Deposit :</span> Typically 1-3 months' rent, varying by landlord and city.</li>
                         </ul>`,
               },
               {
                 heading: `Buying Costs`,
                 desc: `<ul class="list-disc list-inside mb-2 mt-2">
-                            <li><span class="font-FourthHead mr-1">Down Payment :</span> 10-20% of the property value</li>
-                            <li><span class="font-FourthHead mr-1">Registration and Stamp Duty :</span> Varies by state</li>
-                            <li><span class="font-FourthHead mr-1">Maintenance :</span> Annual upkeep and repairs</li>
+                            <li><span class="font-semibold mr-1">Down Payment :</span> 10-20% of the property value</li>
+                            <li><span class="font-semibold mr-1">Registration and Stamp Duty :</span> Varies by state</li>
+                            <li><span class="font-semibold mr-1">Maintenance :</span> Annual upkeep and repairs</li>
                         </ul>`,
               },
             ],
-            listSecPara: `💡<span class="font-FourthHead mr-2">Pro Tip : </span>Buying has higher upfront costs, but over time, it can save you money and build wealth.`,
+            listSecPara: `💡<span class="font-semibold mr-2">Pro Tip : </span>Buying has higher upfront costs, but over time, it can save you money and build wealth.`,
           }}
         />
       </div>
@@ -386,11 +386,11 @@ window.removeEventListener("scroll", handleScroll);
 
                     <div class="grid md:grid-cols-2">
                     <!-- Renting Section -->
-                    <div class="p-5 ">
-                    <h3 class="mb-4 font-FourthHead text-paraFont">🏠 Renting</h3>
+                    <div class="p-5">
+                    <h3 class="mb-4 font-semibold typography-body-md">🏠 Renting</h3>
                     <div class="space-y-2">
                         <p class="text-green-600 pb-2">✅ Pros:</p>
-                        <ul class="list-disc pl-5  space-y-1">
+                        <ul class="list-disc pl-5 space-y-1">
                         <li>Flexibility to move anytime.</li>
                         <li>Lower upfront costs.</li>
                         <li>No responsibility for repairs.</li>
@@ -406,11 +406,11 @@ window.removeEventListener("scroll", handleScroll);
                     </div>
 
                     <!-- Buying Section -->
-                    <div class="p-5 ">
-                    <h3 class="mb-4 font-FourthHead text-paraFont">🏡 Buying</h3>
+                    <div class="p-5">
+                    <h3 class="mb-4 font-semibold typography-body-md">🏡 Buying</h3>
                     <div class="space-y-2 pb-2">
                         <p class="text-green-600">✅ Pros:</p>
-                        <ul class="list-disc pl-5  space-y-1">
+                        <ul class="list-disc pl-5 space-y-1">
                         <li>You own your home no landlord hassles.</li>
                         <li>Equity growth and investment potential.</li>
                         <li>Freedom to renovate or customize.</li>
@@ -418,7 +418,7 @@ window.removeEventListener("scroll", handleScroll);
                     </div>
                     <div class="mt-4 space-y-2">
                         <p class="text-red-600">❌ Cons:</p>
-                        <ul class="list-disc pl-5  space-y-1">
+                        <ul class="list-disc pl-5 space-y-1">
                         <li>High upfront costs (down payment, taxes).</li>
                         <li>Less flexibility—harder to move quickly.</li>
                         </ul>
@@ -447,7 +447,7 @@ window.removeEventListener("scroll", handleScroll);
 
             listSecPara: `<div>💡 Want help figuring it out? Explore our tools and guides to make an informed decision! <br>
                 
-               <p class="mt-8"> <a class="rounded-full border px-[2rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 w-fit text-black bg-btnBg " href="/appointment">Contact Us</a></p>
+               <p class="mt-8"> <a class="rounded-full border px-[2rem] py-3 typography-body-md text-text-light hover:opacity-90 w-fit text-black bg-btnBg" href="/appointment">Contact Us</a></p>
                 
                 
                 
@@ -496,10 +496,7 @@ window.removeEventListener("scroll", handleScroll);
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -507,7 +504,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -563,7 +560,7 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <div class="">
                   <h2
-                    class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                    class="grid mb-[4rem] typography-h2 text-text-main text-center"
                   >
                     <p>Renting vs Buying</p>
                     <span
@@ -577,8 +574,8 @@ window.removeEventListener("scroll", handleScroll);
                     <PaymentTable {tableData} />
                   {/each}
                 </div>
-                <p class="font-Paragraph text-subParaFont mt-14 text-center">
-                  💡 <span class="font-FourthHead mr-2">Fun Fact :</span> Did you
+                <p class="typography-body-md text-text-light mt-14 text-center">
+                  💡 <span class="font-semibold mr-2">Fun Fact :</span> Did you
                   know the cost of renting may seem lower upfront but adds up over
                   years without offering ownership benefits?
                 </p>
@@ -586,11 +583,11 @@ window.removeEventListener("scroll", handleScroll);
 
               <div class="mt-[4rem]">
                 <p
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center mb-[2rem]"
+                  class="typography-h2 text-text-main text-center mb-[2rem]"
                 >
                   Real-Life Scenarios: What Worked for Others
                   <br /><span
-                    class="font-Paragraph text-subParaFont mt-14 text-center"
+                    class="typography-body-md text-text-light mt-14 text-center"
                     >Here’s what people like you did and why</span
                   >
                 </p>
@@ -648,20 +645,20 @@ window.removeEventListener("scroll", handleScroll);
                     {
                       heading: `Renting Costs`,
                       desc: `<ul class="list-disc list-inside mb-2 mt-2">
-                                    <li><span class="font-FourthHead mr-1">Monthly Rent :</span> Depends on location, property size, and amenities—calculate based on your budget.</li>
-                                    <li><span class="font-FourthHead mr-1">Security Deposit :</span> Typically 1-3 months' rent, varying by landlord and city.</li>
+                                    <li><span class="font-semibold mr-1">Monthly Rent :</span> Depends on location, property size, and amenities—calculate based on your budget.</li>
+                                    <li><span class="font-semibold mr-1">Security Deposit :</span> Typically 1-3 months' rent, varying by landlord and city.</li>
                                 </ul>`,
                     },
                     {
                       heading: `Buying Costs`,
                       desc: `<ul class="list-disc list-inside mb-2 mt-2">
-                                    <li><span class="font-FourthHead mr-1">Down Payment :</span> 10-20% of the property value</li>
-                                    <li><span class="font-FourthHead mr-1">Registration and Stamp Duty :</span> Varies by state</li>
-                                    <li><span class="font-FourthHead mr-1">Maintenance :</span> Annual upkeep and repairs</li>
+                                    <li><span class="font-semibold mr-1">Down Payment :</span> 10-20% of the property value</li>
+                                    <li><span class="font-semibold mr-1">Registration and Stamp Duty :</span> Varies by state</li>
+                                    <li><span class="font-semibold mr-1">Maintenance :</span> Annual upkeep and repairs</li>
                                 </ul>`,
                     },
                   ],
-                  listSecPara: `💡<span class="font-FourthHead mr-2">Pro Tip : </span>Buying has higher upfront costs, but over time, it can save you money and build wealth.`,
+                  listSecPara: `💡<span class="font-semibold mr-2">Pro Tip : </span>Buying has higher upfront costs, but over time, it can save you money and build wealth.`,
                 }}
               />
             </div>
@@ -678,10 +675,10 @@ window.removeEventListener("scroll", handleScroll);
                                             <div class="grid md:grid-cols-2">
                                             <!-- Renting Section -->
                                             <div class="">
-                                            <h3 class="mb-4 font-FourthHead text-paraFont">🏠 Renting</h3>
+                                            <h3 class="mb-4 font-semibold typography-body-md">🏠 Renting</h3>
                                             <div class="space-y-2">
                                                 <p class="text-green-600 pb-2">✅ Pros:</p>
-                                                <ul class="list-disc pl-5  space-y-1">
+                                                <ul class="list-disc pl-5 space-y-1">
                                                 <li>Flexibility to move anytime.</li>
                                                 <li>Lower upfront costs.</li>
                                                 <li>No responsibility for repairs.</li>
@@ -698,10 +695,10 @@ window.removeEventListener("scroll", handleScroll);
                         
                                             <!-- Buying Section -->
                                             <div class="">
-                                            <h3 class="my-4 font-FourthHead text-paraFont">🏡 Buying</h3>
+                                            <h3 class="my-4 font-semibold typography-body-md">🏡 Buying</h3>
                                             <div class="space-y-2 pb-2">
                                                 <p class="text-green-600">✅ Pros:</p>
-                                                <ul class="list-disc pl-5  space-y-1">
+                                                <ul class="list-disc pl-5 space-y-1">
                                                 <li>You own your home no landlord hassles.</li>
                                                 <li>Equity growth and investment potential.</li>
                                                 <li>Freedom to renovate or customize.</li>
@@ -709,7 +706,7 @@ window.removeEventListener("scroll", handleScroll);
                                             </div>
                                             <div class="mt-4 space-y-2">
                                                 <p class="text-red-600">❌ Cons:</p>
-                                                <ul class="list-disc pl-5  space-y-1">
+                                                <ul class="list-disc pl-5 space-y-1">
                                                 <li>High upfront costs (down payment, taxes).</li>
                                                 <li>Less flexibility—harder to move quickly.</li>
                                                 </ul>
@@ -738,7 +735,7 @@ window.removeEventListener("scroll", handleScroll);
 
                   listSecPara: `<div>💡 Want help figuring it out? Explore our tools and guides to make an informed decision! <br>
                         
-                       <p class="mt-8"> <a class="rounded-full border px-[2rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 w-fit text-black bg-btnBg " href="/appointment">Contact Us</a></p>
+                       <p class="mt-8"> <a class="rounded-full border px-[2rem] py-3 typography-body-md text-text-light hover:opacity-90 w-fit text-black bg-btnBg" href="/appointment">Contact Us</a></p>
                         
                         
                         

@@ -118,7 +118,7 @@
 `,
     }}
   >
-    <div class=" w-full hidden lg:block">
+    <div class="w-full hidden lg:block">
       <StickyNavbar
         navList={{
           items: [
@@ -137,8 +137,8 @@
         {activeSection}
       />
 
-      <div class="px-[2rem] pt-5 lg:px-[4rem]">
-        <div class="pb-[2rem]" id="makeComplaint" data-section="makeComplaint">
+      <div class="px-4 pt-5 lg:px-16">
+        <div class="pb-8" id="makeComplaint" data-section="makeComplaint">
           <div class="border-b border-dividerColor">
             <TwoColumn
               cardImage="/images/raise-a-complaint.jpg"
@@ -147,7 +147,7 @@
               reverse
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>
@@ -162,7 +162,7 @@
                     onclick={() => {
                       $feedbackYes = 2;
                       scrollToFeedback("feedForm");}}
-                    class="w-full rounded-full border px-[2rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 md:w-auto bg-btnBg"
+                    class="btn btn-primary typography-button text-black w-full md:w-auto"
                   >
                     Make a complaint
                   </button>
@@ -172,7 +172,7 @@
           </div>
         </div>
 
-        <div class="pb-[2rem]" id="giveComplaint" data-section="giveComplaint">
+        <div class="pb-8" id="giveComplaint" data-section="giveComplaint">
           <div class="border-b border-dividerColor">
             <TwoColumn
               cardImage="/images/compliment-to-DigitalDSA.jpg"
@@ -180,7 +180,7 @@
               cardHeading="Tell us about your compliment"
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>
@@ -196,7 +196,7 @@
                     onclick={() => {
                       $feedbackYes = 5;
                       scrollToFeedback("feedForm");}}
-                    class="w-full rounded-full border px-[2rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 md:w-auto bg-btnBg"
+                    class="btn btn-primary typography-button text-black w-full md:w-auto"
                   >
                     Give a compliment
                   </button>
@@ -210,24 +210,23 @@
     <div class="lg:hidden">
       {#each ["Make a complaint", "Give a compliment"] as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
-            class="list-none px-[1rem] py-[1.5rem]"
-            onclick={(e) => { e.preventDefault(); ((e) => toggleDropdown(e, index))(e); }}
+            class="col-span-3 list-none px-[1rem] py-[1.5rem]"
+            onclick={(e) => { e.preventDefault(); toggleDropdown(e, index); }}
           >
-            <div class="flex justify-between items-center">
-              <h2>{list}</h2>
-              <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+            <div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
+              <h2 class="">{list}</h2>
+              <div class="icon-container justify-self-end typography-h3">
+                <span><i class="fa-solid fa-angle-down faq-icon text-darkColor-contrast transition-transform duration-300"></i></span>
+              </div>
             </div>
           </summary>
 
           {#if index == 0}
             <div
-              class="pb-[2rem] px-[0.5rem] bg-white text-black"
+              class="pb-8 px-4 bg-white text-black"
               id="makeComplaint"
             >
               <div class="border-b border-dividerColor">
@@ -237,7 +236,7 @@
                   cardHeading="Raise a Concern"
                 >
                   <ul
-                    class="grid gap-4 md:gap-[2rem] font-Paragraph text-subParaFont"
+                    class="grid gap-4 md:gap-[2rem] typography-body-md text-text-light"
                     slot="list"
                   >
                     <li>
@@ -253,7 +252,7 @@
                         onclick={() => {
                           $feedbackYes = 2;
                           scrollToFeedback("feedback");}}
-                        class=" rounded-full border px-[2rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 md:w-auto bg-btnBg"
+                        class="btn btn-primary typography-button text-black w-full md:w-auto"
                       >
                         Make a complaint
                       </button>
@@ -264,7 +263,7 @@
             </div>
           {:else if index == 1}
             <div
-              class="pb-[2rem] bg-white text-black px-[0.5rem]"
+              class="pb-8 bg-white text-black px-4"
               id="giveComplaint"
             >
               <div>
@@ -274,7 +273,7 @@
                   cardHeading="Tell us about your compliment"
                 >
                   <ul
-                    class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                    class="grid gap-[2rem] typography-body-md text-text-light"
                     slot="list"
                   >
                     <li>
@@ -291,7 +290,7 @@
                           onclick={() => {
                             $feedbackYes = 5;
                             scrollToFeedback("feedback");}}
-                          class=" rounded-full border px-[2rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 md:w-auto bg-btnBg"
+                          class="btn btn-primary typography-button text-black w-full md:w-auto"
                         >
                           Give a compliment
                         </button>
@@ -305,7 +304,7 @@
         </details>
       {/each}
     </div>
-    <div id="feedback" data-section="feedback" class="bg-white text-black px-[0.5rem]">
+    <div id="feedback" data-section="feedback" class="bg-white text-black px-4">
       <div
         class="flex flex-col gap-[3rem] bg-white pt-[4rem] pb-[8rem]"
         id="loans"

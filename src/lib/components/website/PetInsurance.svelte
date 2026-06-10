@@ -312,11 +312,11 @@
         <div class="grid grid-cols-3 gap-[1rem]">
           <div class="">
             <h2
-              class=" font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont col-span-3 lg:col-span-1"
+              class="typography-h2 text-text-main col-span-3 lg:col-span-1"
             >
               Compare pet insurance
             </h2>
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-sm text-text-light">
               Take a closer look at the inclusions in the <span
                 class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"
               >Product Disclosure Statement (PDS).</span> 
@@ -326,8 +326,8 @@
           <div
             class="border p-[1rem] sm:p-[2rem] flex flex-col justify-between gap-[1rem]"
           >
-            <div class="font-Paragraph text-subParaFont flex flex-col gap-3">
-              <h2 class="font-FifthHead text-miniSubHead">
+            <div class="typography-body-md text-text-light flex flex-col gap-3">
+              <h2 class="font-semibold text-miniSubHead">
                 Get started with $0 brokerage
               </h2>
               <p>
@@ -356,8 +356,8 @@
           <div
             class="border p-[1rem] sm:p-[2rem] flex flex-col justify-between gap-[1rem]"
           >
-            <div class="font-Paragraph text-subParaFont flex flex-col gap-3">
-              <h2 class="font-FifthHead text-miniSubHead">
+            <div class="typography-body-md text-text-light flex flex-col gap-3">
+              <h2 class="font-semibold text-miniSubHead">
                 undefined Yello Homeowner investing benefit
               </h2>
               <p>
@@ -399,7 +399,7 @@
               cardHeading={cardHead2}
             >
               <div
-                class="grid gap-[1rem] font-SubPara text-subParaFont"
+                class="grid gap-[1rem] typography-body-sm typography-body-md"
                 slot="list"
               >
                 <p>
@@ -430,14 +430,14 @@
         <div id="investment" data-section="investment" class="py-[2rem]">
           <div class="space-y-5">
             <h2
-              class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="md:text-start typography-h2 text-text-main"
             >
               More on those investment options
             </h2>
-            <h4 class=" font-ThirdHead text-paraFont">
+            <h4 class="typography-h3 font-semibold text-text-main">
               Invest in a broad range of ETFs to suit your preferences
             </h4>
-            <p class="font-subPara text-subParaFont">
+            <p class="font-subPara typography-body-md">
               Ten themed <span
                 class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"
               >
@@ -454,7 +454,7 @@
             class="flex flex-col gap-[1rem] border-b border-borderColor py-[2rem]"
           >
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               Investing learning hub
             </h2>
@@ -472,7 +472,7 @@
                       class="aspect-square h-[6rem] object-cover"
                     />
                   </div>
-                  <div class="text-center content-center font-FifthHead">
+                  <div class="text-center content-center font-semibold">
                     <h2>{side.title}</h2>
                   </div>
                 </div>
@@ -482,13 +482,10 @@
         </div>
       </div>
     </div>
-    <div class=" lg:hidden">
+    <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-bgBtn dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-bgBtn dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-6 py-4"
@@ -504,7 +501,7 @@
             <div
               id="benefitFeature"
               data-section="benefitFeature"
-              class=" bg-white px-[2rem] py-[2rem] text-black"
+              class="bg-white px-[2rem] py-[2rem] text-black"
             >
               <WhyChoose facilities={benefitFeature} gridCol={4} />
             </div>
@@ -512,7 +509,7 @@
             <div
               id="whatETF"
               data-section="whatETF"
-              class=" bg-white px-[2rem] py-[2rem] text-black"
+              class="bg-white px-[2rem] py-[2rem] text-black"
             >
               <TwoColumn
                 cardImage={cardImg2}
@@ -520,7 +517,7 @@
                 cardHeading={cardHead2}
               >
                 <div
-                  class="grid gap-[1rem] font-SubPara text-subParaFont"
+                  class="grid gap-[1rem] typography-body-sm typography-body-md"
                   slot="list"
                 >
                   <p>
@@ -553,18 +550,18 @@
             <div
               id="investment"
               data-section="investment"
-              class=" bg-white px-[2rem] py-[2rem] text-black"
+              class="bg-white px-[2rem] py-[2rem] text-black"
             >
               <div class="space-y-5">
                 <h2
-                  class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="md:text-start typography-h2 text-text-main"
                 >
                   More on those investment options
                 </h2>
-                <h4 class=" font-ThirdHead text-paraFont">
+                <h4 class="typography-h3 font-semibold text-text-main">
                   Invest in a broad range of ETFs to suit your preferences
                 </h4>
-                <p class="font-subPara text-subParaFont">
+                <p class="font-subPara typography-body-md">
                   Ten themed <span
                     class="underline underline-offset-4 hover:no-underline text-linkColor cursor-pointer"
                   >
@@ -578,14 +575,14 @@
             <div
               id="learn"
               data-section="learn"
-              class=" bg-white px-[2rem] py-[2rem] text-black"
+              class="bg-white px-[2rem] py-[2rem] text-black"
             >
               <Ways ways={learnMore} />
               <div
                 class="flex flex-col gap-[1rem] border-b border-borderColor py-[2rem]"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   Investing learning hub
                 </h2>
@@ -603,7 +600,7 @@
                           class="aspect-square h-[6rem] object-cover"
                         />
                       </div>
-                      <div class="text-center content-center font-FifthHead">
+                      <div class="text-center content-center font-semibold">
                         <h2>{side.title}</h2>
                       </div>
                     </div>
@@ -622,15 +619,15 @@
         data-section="getStarted"
       >
         <div
-          class=" font-Paragraph text-subParaFont flex flex-col gap-2 justify-center w-full order-2 lg:order-first"
+          class="typography-body-md text-text-light flex flex-col gap-2 justify-center w-full order-2 lg:order-first"
         >
           <h2
-            class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="md:text-start typography-h2 text-text-main"
           >
             Get started
           </h2>
 
-          <h4 class="font-FifthHead">
+          <h4 class="font-semibold">
             Experience a streamlined new sign-up process, all in the undefined
             app.
           </h4>
@@ -649,7 +646,7 @@
         class="grid lg:grid-cols-3 py-[2rem] border-y border-borderColor gap-[1rem]"
       >
         <h2
-          class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+          class="typography-h2 text-text-main"
         >
           FAQs
         </h2>
@@ -657,16 +654,16 @@
           <details class="border-y border-borderColor py-4 cursor-pointer">
             <summary class="list-none">
               <div class="flex items-center justify-between gap-4">
-                <h2 class="text-subParaFont font-ThirdHead">
+                <h2 class="typography-body-md typography-h3 font-semibold">
                   What CommSec accounts can I access in the undefined app
                   investing experience?
                 </h2>
-                <div class="icon-container text-mobSubHead">
+                <div class="icon-container typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
             </summary>
-            <div class="grid gap-4 pt-[2rem] font-Paragraph text-subParaFont">
+            <div class="grid gap-4 pt-[2rem] typography-body-md text-text-light">
               <p>
                 The investing experience features and functionality in the
                 undefined app is only available for CommSec Pocket and individual <span
@@ -680,16 +677,16 @@
           <details class="border-y border-borderColor py-4 cursor-pointer">
             <summary class="list-none">
               <div class="flex items-center justify-between gap-4">
-                <h2 class="text-subParaFont font-ThirdHead">
+                <h2 class="typography-body-md typography-h3 font-semibold">
                   Are there eligibility criteria to open a CommSec Pocket or
                   CommSec Australian Shares account?
                 </h2>
-                <div class="icon-container text-mobSubHead">
+                <div class="icon-container typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
             </summary>
-            <div class="grid gap-4 pt-[2rem] font-Paragraph text-subParaFont">
+            <div class="grid gap-4 pt-[2rem] typography-body-md text-text-light">
               <p>
                 Yes, the same eligibility criteria that currently exists for
                 CommSec Pocket and CommSec Australian Shares will exist for the
@@ -721,15 +718,15 @@
           <details class="border-y border-borderColor py-4 cursor-pointer">
             <summary class="list-none">
               <div class="flex items-center justify-between gap-4">
-                <h2 class="text-subParaFont font-ThirdHead">
+                <h2 class="typography-body-md typography-h3 font-semibold">
                   Can I still use the CommSec app?
                 </h2>
-                <div class="icon-container text-mobSubHead">
+                <div class="icon-container typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
             </summary>
-            <div class="grid gap-4 pt-[2rem] font-Paragraph text-subParaFont">
+            <div class="grid gap-4 pt-[2rem] typography-body-md text-text-light">
               <p>
                 Yes, you can use both the CommSec app and the undefined app to
                 manage your CommSec Pocket and/or Australian Shares account.

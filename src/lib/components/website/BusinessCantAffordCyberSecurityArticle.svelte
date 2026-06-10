@@ -186,7 +186,7 @@
 
   let digital = {
     heading: `Digital DSA’s Commitment to Cyber Security`,
-    para: `At <span class="font-FifthHead">Digital DSA</span>, we recognize that
+    para: `At <span class="font-semibold">Digital DSA</span>, we recognize that
     security is the foundation of trust in financial services. As a leading loan
     comparison platform, we are dedicated to:`,
     listItems: [
@@ -212,11 +212,11 @@
     heading: ` Final Thoughts: Stay One Step Ahead of Cyber Criminals`,
     para: `Cyber threats are evolving rapidly. Businesses that proactively strengthen
     their cyber security measures today will be better positioned to face the
-    challenges of tomorrow. Don't wait for an attack to take action. <br><br> <span class="font-FifthHead"
+    challenges of tomorrow. Don't wait for an attack to take action. <br><br> <span class="font-semibold"
       >Stay secure, stay vigilant, and let's build a cyber-resilient India
       together!</span
     ><br><br> For more insights and expert tips on protecting your business, follow <span
-      class="font-FifthHead">Digital DSA</span
+      class="font-semibold">Digital DSA</span
     > and stay informed.`,
   };
 
@@ -265,11 +265,11 @@
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {cyberThreats.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-md text-text-light">
             {@html cyberThreats.para}
           </p>
         </div>
@@ -279,19 +279,19 @@
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               {trueCost.heading}
             </h2>
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-md text-text-light">
               {trueCost.para}
             </p>
           </div>
           <ul class="space-y-6">
             {#each trueCost.listItems as list}
               <li class="space-y-2">
-                <h3 class="font-FourthHead text-paraFont">{list.heading}</h3>
-                <p class="font-Paragraph text-minParaFont">{@html list.desc}</p>
+                <h3 class="typography-h3 font-semibold text-text-main">{list.heading}</h3>
+                <p class="typography-body-md text-text-light">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -304,7 +304,7 @@
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               {realLife.heading}
             </h2>
@@ -312,8 +312,8 @@
           <ul class="space-y-6">
             {#each realLife.listItems as list}
               <li class="space-y-2">
-                <h3 class="font-FourthHead text-paraFont">{list.heading}</h3>
-                <p class="font-Paragraph text-minParaFont">{@html list.desc}</p>
+                <h3 class="typography-h3 font-semibold text-text-main">{list.heading}</h3>
+                <p class="typography-body-md text-text-light">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -326,19 +326,19 @@
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               {howToMake.heading}
             </h2>
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-md text-text-light">
               {trueCost.para}
             </p>
           </div>
           <ul class="space-y-6">
             {#each howToMake.listItems as list}
               <li class="space-y-2">
-                <h3 class="font-FourthHead text-paraFont">{list.heading}</h3>
-                <p class="font-Paragraph text-minParaFont">{@html list.desc}</p>
+                <h3 class="typography-h3 font-semibold text-text-main">{list.heading}</h3>
+                <p class="typography-body-md text-text-light">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -351,19 +351,19 @@
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               {digital.heading}
             </h2>
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-md text-text-light">
               {@html trueCost.para}
             </p>
           </div>
           <ul class="space-y-6">
             {#each digital.listItems as list}
               <li class="space-y-2">
-                <h3 class="font-FourthHead text-paraFont">{list.heading}</h3>
-                <p class="font-Paragraph text-minParaFont">{@html list.desc}</p>
+                <h3 class="typography-h3 font-semibold text-text-main">{list.heading}</h3>
+                <p class="typography-body-md text-text-light">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -375,11 +375,11 @@
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {finalThoughts.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-md text-text-light">
             {@html finalThoughts.para}
           </p>
         </div>
@@ -389,10 +389,7 @@
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -400,7 +397,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -411,11 +408,11 @@
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {cyberThreats.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-md text-text-light">
                   {@html cyberThreats.para}
                 </p>
               </div>
@@ -425,21 +422,21 @@
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     {trueCost.heading}
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-md text-text-light">
                     {trueCost.para}
                   </p>
                 </div>
                 <ul class="space-y-6">
                   {#each trueCost.listItems as list}
                     <li class="space-y-2">
-                      <h3 class="font-FourthHead text-paraFont">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {list.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-md text-text-light">
                         {@html list.desc}
                       </p>
                     </li>
@@ -454,7 +451,7 @@
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     {realLife.heading}
                   </h2>
@@ -462,10 +459,10 @@
                 <ul class="space-y-6">
                   {#each realLife.listItems as list}
                     <li class="space-y-2">
-                      <h3 class="font-FourthHead text-paraFont">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {list.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-md text-text-light">
                         {@html list.desc}
                       </p>
                     </li>
@@ -480,21 +477,21 @@
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     {howToMake.heading}
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-md text-text-light">
                     {trueCost.para}
                   </p>
                 </div>
                 <ul class="space-y-6">
                   {#each howToMake.listItems as list}
                     <li class="space-y-2">
-                      <h3 class="font-FourthHead text-paraFont">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {list.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-md text-text-light">
                         {@html list.desc}
                       </p>
                     </li>
@@ -509,21 +506,21 @@
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     {digital.heading}
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-md text-text-light">
                     {@html trueCost.para}
                   </p>
                 </div>
                 <ul class="space-y-6">
                   {#each digital.listItems as list}
                     <li class="space-y-2">
-                      <h3 class="font-FourthHead text-paraFont">
+                      <h3 class="typography-h3 font-semibold text-text-main">
                         {list.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-md text-text-light">
                         {@html list.desc}
                       </p>
                     </li>
@@ -537,11 +534,11 @@
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {finalThoughts.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-md text-text-light">
                   {@html finalThoughts.para}
                 </p>
               </div>
@@ -592,10 +589,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

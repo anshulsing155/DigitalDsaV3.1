@@ -308,7 +308,7 @@ window.removeEventListener("scroll", handleScroll);
     <div>
       <div class="hidden lg:block">
         <StickyNavbar navList={subList} {activeSection}>
-          <div class="  flex gap-4 pr-4">
+          <div class="flex gap-4 pr-4">
             {#each navList as lastItem}
               {#if lastItem.actionBtn}
                 {#each lastItem.actionBtn as action}
@@ -337,7 +337,7 @@ window.removeEventListener("scroll", handleScroll);
             class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2 section"
           >
             <h2
-              class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="md:text-start typography-h2 text-text-main"
             >
               Benefits of redraw
             </h2>
@@ -362,7 +362,7 @@ window.removeEventListener("scroll", handleScroll);
             class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2 section"
           >
             <h2
-              class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="md:text-start typography-h2 text-text-main"
             >
               How redraw works
             </h2>
@@ -392,10 +392,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -405,7 +402,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont leading-6">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -419,7 +416,7 @@ window.removeEventListener("scroll", handleScroll);
               <div id="benefits" class="bg-white text-black px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
                   <h2
-                    class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="md:text-start typography-h2 text-text-main"
                   >
                     Benefits of redraw
                   </h2>
@@ -440,7 +437,7 @@ window.removeEventListener("scroll", handleScroll);
               <div id="works" class="bg-white text-black px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
                   <h2
-                    class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="md:text-start typography-h2 text-text-main"
                   >
                     How redraw works
                   </h2>
@@ -473,7 +470,7 @@ window.removeEventListener("scroll", handleScroll);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-[2rem] typography-body-md text-text-light"
             slot="list"
           >
             <li>

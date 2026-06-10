@@ -261,12 +261,12 @@ dispatch("pageData", pageData);
       >
         <div>
           <h2
-            class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="md:text-start typography-h2 text-text-main"
           >
             Protect yourself from scams
           </h2>
-          <p class="font-Paragraph text-subParaFont py-[1rem]">
-            Remember three simple steps: <br><span class="font-FourthHead">
+          <p class="typography-body-md text-text-light py-[1rem]">
+            Remember three simple steps: <br><span class="font-semibold">
                Stop.   Check.  Reject.
             </span>
           </p>
@@ -283,7 +283,7 @@ dispatch("pageData", pageData);
               </p>
               <div class="col-span-11">
                 <p>
-                  <span class="font-FourthHead">
+                  <span class="font-semibold">
                     {item.title}-
                   </span>
                   {item.para}
@@ -306,7 +306,7 @@ dispatch("pageData", pageData);
               reverse: true,
             }}
           >
-            <p class="font-FourthHead text-paraFont">
+            <p class="font-semibold typography-body-md">
               Stay one step ahead of scams
             </p>
             <p>
@@ -325,7 +325,7 @@ dispatch("pageData", pageData);
           class="pt-[4rem] pb-[8rem] border-b px-[0.5rem] lg:px-[4rem] space-y-6"
         >
           <h2
-            class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="md:text-start typography-h2 text-text-main"
           >
             4 ways to safeguard your business
           </h2>
@@ -352,7 +352,7 @@ dispatch("pageData", pageData);
               reverse: true,
             }}
           >
-            <p class="font-FourthHead text-paraFont">
+            <p class="font-semibold typography-body-md">
               Stay one step ahead of scams
             </p>
             <p>
@@ -370,24 +370,21 @@ dispatch("pageData", pageData);
         class="flex flex-col lg:grid lg:grid-cols-3 px-[0.5rem] lg:px-[4rem] pt-[4rem] pb-[6rem] border-b gap-[2rem]"
       >
         <h2
-          class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+          class="md:text-start typography-h2 text-text-main"
         >
           More resources for your business
         </h2>
         <div class="col-span-2">
           {#each moreResources as itemObj, index}
             <div
-              class="flex flex-col md:flex-row gap-[2rem] {moreResources.length >
-              index + 1
-                ? 'border-b'
-                : ''}  py-[2rem]"
+              class="flex flex-col md:flex-row gap-[2rem] {moreResources.length > index + 1 ? 'border-b' : ''} py-[2rem]"
             >
               <img src={itemObj.image} alt={itemObj.alt} class="h-[8rem]" />
               <div class="flex flex-col gap-[2rem]">
-                <h2 class="font-FourthHead text-minSubHead">
+                <h2 class="font-semibold typography-h3">
                   {itemObj.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {itemObj.para}
                 </p>
                 <Anchor
@@ -406,10 +403,7 @@ dispatch("pageData", pageData);
     <div class="lg:hidden block">
       {#each ["How to protect you", "Protect your business", "Resources"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -417,7 +411,7 @@ dispatch("pageData", pageData);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -426,22 +420,22 @@ dispatch("pageData", pageData);
           {#if index == 0}
             <div id="howProtect" class="bg-white text-black">
               <div
-                class="flex flex-col lg:grid lg:grid-cols-3  px-[0.5rem]  gap-[2rem] py-[4rem] border-b"
+                class="flex flex-col lg:grid lg:grid-cols-3 px-[0.5rem] gap-[2rem] py-[4rem] border-b"
               >
                 <div class="space-y-[2rem]">
                   <h2
-                    class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="md:text-start typography-h2 text-text-main"
                   >
                     Protect your business from scams
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
-                    Remember three simple <span class="font-FourthHead">
+                  <p class="typography-body-sm text-text-light">
+                    Remember three simple <span class="font-semibold">
                       steps: Stop. Check. Reject.
                     </span>
                   </p>
                 </div>
                 <div class="col-span-2 space-y-4">
-                  <h2 class="font-ThirdHead">Stop. Check. Reject.</h2>
+                  <h2 class="typography-h3 font-semibold">Stop. Check. Reject.</h2>
 
                   {#each stopCheckReject as item, index}
                     <div class="grid grid-cols-12">
@@ -452,7 +446,7 @@ dispatch("pageData", pageData);
                       </p>
                       <div class="col-span-11">
                         <p>
-                          <span class="font-FourthHead">
+                          <span class="font-semibold">
                             {item.title}-
                           </span>
                           {item.para}
@@ -464,7 +458,7 @@ dispatch("pageData", pageData);
               </div>
             </div>
           {:else if index == 1}
-            <div id="protectbusiness" class=" bg-white text-black">
+            <div id="protectbusiness" class="bg-white text-black">
               <div>
                 <TwoColumnWithImage
                   contents={{
@@ -476,7 +470,7 @@ dispatch("pageData", pageData);
                     reverse: true,
                   }}
                 >
-                  <p class="font-FourthHead text-paraFont">
+                  <p class="font-semibold typography-body-md">
                     Stay one step ahead of scams
                   </p>
                   <p>
@@ -493,10 +487,10 @@ dispatch("pageData", pageData);
                 </TwoColumnWithImage>
               </div>
               <div
-                class="py-[4rem]  px-[0.5rem] space-y-6"
+                class="py-[4rem] px-[0.5rem] space-y-6"
               >
                 <h2
-                  class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="md:text-start typography-h2 text-text-main"
                 >
                   4 ways to safeguard your business
                 </h2>
@@ -521,20 +515,17 @@ dispatch("pageData", pageData);
           {:else if index == 2}
             <div id="resources" class="bg-white text-black">
               <div
-                class="flex flex-col px-[0.5rem]  py-[4rem]  gap-[2rem]"
+                class="flex flex-col px-[0.5rem] py-[4rem] gap-[2rem]"
               >
                 <h2
-                  class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="md:text-start typography-h2 text-text-main"
                 >
                   More resources for your business
                 </h2>
                 <div class="col-span-2">
                   {#each moreResources as itemObj, index}
                     <div
-                      class="flex flex-col md:flex-row gap-[2rem] {moreResources.length >
-                      index + 1
-                        ? 'border-b'
-                        : ''}  py-[2rem]"
+                      class="flex flex-col md:flex-row gap-[2rem] {moreResources.length > index + 1 ? 'border-b' : ''} py-[2rem]"
                     >
                       <img
                         src={itemObj.image}
@@ -542,10 +533,10 @@ dispatch("pageData", pageData);
                         class="h-[8rem]"
                       />
                       <div class="flex flex-col gap-[2rem]">
-                        <h2 class="font-FourthHead text-minSubHead">
+                        <h2 class="font-semibold typography-h3">
                           {itemObj.heading}
                         </h2>
-                        <p class="font-Paragraph text-minParaFont">
+                        <p class="typography-body-sm text-text-light">
                           {itemObj.para}
                         </p>
                         <Anchor
@@ -628,17 +619,17 @@ dispatch("pageData", pageData);
   thinkKnow={{
     heading: "Things You Should Know",
     paraGraph: [
-      `<span class="font-FourthHead">DigitalDSA Will Never Request Sensitive Information:</span> DigitalDSA will never ask you to transfer funds, share your screen, reveal your passwords, or provide sensitive personal details over phone, email, or messages. Be cautious of any such requests claiming to be from us.`,
+      `<span class="font-semibold">DigitalDSA Will Never Request Sensitive Information:</span> DigitalDSA will never ask you to transfer funds, share your screen, reveal your passwords, or provide sensitive personal details over phone, email, or messages. Be cautious of any such requests claiming to be from us.`,
       
-      `<span class="font-FourthHead">Beware of Fraudulent Communications:</span> Cybercriminals may impersonate DigitalDSA, banks, or financial institutions via emails, phone calls, or messages to trick you into making payments or sharing personal information. Always verify the authenticity of any request before responding.`,
+      `<span class="font-semibold">Beware of Fraudulent Communications:</span> Cybercriminals may impersonate DigitalDSA, banks, or financial institutions via emails, phone calls, or messages to trick you into making payments or sharing personal information. Always verify the authenticity of any request before responding.`,
       
-      `<span class="font-FourthHead">Protect Your Business & Personal Accounts:</span> Set up strong, unique passwords for all your accounts, enable multi-factor authentication, and avoid clicking on suspicious links or attachments. Always verify payment requests directly through a trusted contact method before transferring funds.`,
+      `<span class="font-semibold">Protect Your Business & Personal Accounts:</span> Set up strong, unique passwords for all your accounts, enable multi-factor authentication, and avoid clicking on suspicious links or attachments. Always verify payment requests directly through a trusted contact method before transferring funds.`,
       
-      `<span class="font-FourthHead">Recognizing & Preventing Scams:</span> Common scams include business email compromise (BEC), remote access fraud, and impersonation scams. If you receive unexpected requests for payments, changes in account details, or threats of legal action, pause, verify, and report immediately.`,
+      `<span class="font-semibold">Recognizing & Preventing Scams:</span> Common scams include business email compromise (BEC), remote access fraud, and impersonation scams. If you receive unexpected requests for payments, changes in account details, or threats of legal action, pause, verify, and report immediately.`,
       
-      `<span class="font-FourthHead">Report Suspected Cyber Fraud:</span> If you suspect a scam or fraudulent activity, report it immediately to the <a href="https://www.cybercrime.gov.in/" target="_blank" rel="noopener noreferrer" class="text-blue-500">National Cyber Crime Reporting Portal</a> or call the Government of India’s Cybercrime Helpline at <strong>1930</strong>. Prompt action can help prevent financial loss and safeguard your business.`,
+      `<span class="font-semibold">Report Suspected Cyber Fraud:</span> If you suspect a scam or fraudulent activity, report it immediately to the <a href="https://www.cybercrime.gov.in/" target="_blank" rel="noopener noreferrer" class="text-blue-500">National Cyber Crime Reporting Portal</a> or call the Government of India’s Cybercrime Helpline at <strong>1930</strong>. Prompt action can help prevent financial loss and safeguard your business.`,
       
-      `<span class="font-FourthHead">DigitalDSA’s Limited Liability:</span> DigitalDSA is not liable for any financial loss, unauthorized transactions, or damages resulting from cyber fraud or third-party scams. Users are responsible for securing their accounts and verifying all communications independently.`,
+      `<span class="font-semibold">DigitalDSA’s Limited Liability:</span> DigitalDSA is not liable for any financial loss, unauthorized transactions, or damages resulting from cyber fraud or third-party scams. Users are responsible for securing their accounts and verifying all communications independently.`,
     ],
   }}
   disc="list-decimal"

@@ -31,7 +31,7 @@
 	} = $props();
 </script>
 
-<div class="mt-4 flex items-start gap-4 pr-4 ">
+<div class="mt-4 flex items-start gap-4 pr-4">
 	{#if cardData.icon}
 		<img
 			src={cardData.icon}
@@ -42,7 +42,7 @@
 
 	<div class="flex flex-col gap-4">
 		{#if cardData.heading}
-			<h2 class="typography-body-lg !font-semibold text-black dark:text-white ">
+			<h2 class="typography-body-lg !font-semibold text-black dark:text-white">
 				{@html cardData.heading}
 			</h2>
 		{/if}

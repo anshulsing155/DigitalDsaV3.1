@@ -311,7 +311,7 @@ window.removeEventListener("scroll", handleScroll);
     <div>
       <div class="hidden lg:block">
         <StickyNavbar navList={subList} {activeSection}>
-          <div class="  flex gap-4 pr-4">
+          <div class="flex gap-4 pr-4">
             {#each navList as lastItem}
               {#if lastItem.actionBtn}
                 {#each lastItem.actionBtn as action}
@@ -337,7 +337,7 @@ window.removeEventListener("scroll", handleScroll);
           </div>
           <div id="toolsSupport" data-section="toolsSupport" class="py-[2rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-black dark:text-white"
             >
               Tools & support
             </h2>
@@ -371,7 +371,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             {#if benefits.length > 0}
               <h2
-                class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="md:text-start typography-h2 text-black dark:text-white"
               >
                 Features & benefits
               </h2>
@@ -384,7 +384,7 @@ window.removeEventListener("scroll", handleScroll);
             <Ways ways={propertyPurchase} />
             <div class="pt-[4rem]">
               <h3
-                class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="md:text-start typography-h3 text-black dark:text-white"
               >
                 {IconCardHeading}
               </h3>
@@ -400,7 +400,7 @@ window.removeEventListener("scroll", handleScroll);
               cardHeading="Message us 24/7"
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
                 <li>
@@ -427,10 +427,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -440,7 +437,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end text-black dark:text-white">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -456,7 +453,7 @@ window.removeEventListener("scroll", handleScroll);
             {:else if index == 1}
             <div id="toolsSupport"  class="py-[1rem] bg-white text-black px-[2rem]">
               <h2
-                class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h2 text-black dark:text-white"
               >
                 Tools & support
               </h2>
@@ -492,7 +489,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             {#if benefits.length > 0}
               <h2
-                class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="md:text-start typography-h2 text-black dark:text-white"
               >
                 Features & benefits
               </h2>
@@ -505,7 +502,7 @@ window.removeEventListener("scroll", handleScroll);
             <Ways ways={propertyPurchase} />
             <div class="pt-[4rem]">
               <h3
-                class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="md:text-start typography-h3 text-black dark:text-white"
               >
                 {IconCardHeading}
               </h3>
@@ -521,7 +518,7 @@ window.removeEventListener("scroll", handleScroll);
               cardHeading="Message us 24/7"
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
                 <li>

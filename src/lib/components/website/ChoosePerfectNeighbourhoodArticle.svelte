@@ -53,20 +53,20 @@
           >
 
           <h2
-            class="text-minSubHead font-ThirdHead text-gray-900 border-l-4 border-btnBg pl-3"
+            class="typography-h3 font-semibold text-gray-900 border-l-4 border-btnBg pl-3"
           >
             Imagine Your Future Here
           </h2>
         </div>
         <p
-          class="text-paraFont font-Paragraph text-gray-700 leading-relaxed ml-10"
+          class="typography-body-md text-gray-700 leading-relaxed ml-10"
         >
           When you step into a new neighborhood, think about this : <strong
             >Can I truly call this place home?</strong
           >
         </p>
         <p
-          class="text-paraFont font-Paragraph text-gray-700 leading-relaxed ml-10"
+          class="typography-body-md text-gray-700 leading-relaxed ml-10"
         >
           From schools to shops, parks to public transport every detail matters
           when building the life you dream of.
@@ -89,19 +89,19 @@
             ></path><circle cx="12" cy="10" r="3"></circle></svg
           >
           <h2
-            class="text-minSubHead font-ThirdHead text-gray-900 border-l-4 border-btnBg pl-3"
+            class="typography-h3 font-semibold text-gray-900 border-l-4 border-btnBg pl-3"
           >
             Define What Matters to You
           </h2>
         </div>
         <p
-          class="text-paraFont font-Paragraph text-gray-700 leading-relaxed ml-10"
+          class="typography-body-md text-gray-700 leading-relaxed ml-10"
         >
           Your priorities are unique focus on what makes your life easier and
           happier.
         </p>
         <ul
-          class="list-disc pl-5 space-y-3 text-subParaFont font-Paragraph text-gray-700 mt-3 ml-10"
+          class="list-disc pl-5 space-y-3 typography-body-md text-gray-700 mt-3 ml-10"
         >
           <li>
             <strong class="mr-1">Proximity to Essentials :</strong> Schools, offices,
@@ -135,18 +135,18 @@
             ></polygon></svg
           >
           <h2
-            class="text-minSubHead font-ThirdHead text-gray-900 border-l-4 border-btnBg pl-3"
+            class="typography-h3 font-semibold text-gray-900 border-l-4 border-btnBg pl-3"
           >
             Test the Neighborhood
           </h2>
         </div>
         <p
-          class="text-paraFont font-Paragraph text-gray-700 leading-relaxed ml-10"
+          class="typography-body-md text-gray-700 leading-relaxed ml-10"
         >
           Sometimes, you need to experience the area before making a decision.
         </p>
         <ul
-          class="list-disc pl-5 space-y-3 text-subParaFont font-Paragraph text-gray-700 mt-3 ml-10"
+          class="list-disc pl-5 space-y-3 typography-body-md text-gray-700 mt-3 ml-10"
         >
           <li>
             <strong class="mr-1">Visit at Different Times :</strong> A calm morning
@@ -176,19 +176,19 @@
             ></path></svg
           >
           <h2
-            class="text-minSubHead font-ThirdHead text-gray-900 border-l-4 border-btnBg pl-3"
+            class="typography-h3 font-semibold text-gray-900 border-l-4 border-btnBg pl-3"
           >
             Keep Future Growth in Mind
           </h2>
         </div>
         <p
-          class="text-paraFont font-Paragraph text-gray-700 leading-relaxed ml-10"
+          class="typography-body-md text-gray-700 leading-relaxed ml-10"
         >
           Neighborhoods evolve—make sure you’re investing in one that grows with
           you.
         </p>
         <ul
-          class="list-disc pl-5 space-y-3 text-subParaFont font-Paragraph text-gray-700 mt-3 ml-10"
+          class="list-disc pl-5 space-y-3 typography-body-md text-gray-700 mt-3 ml-10"
         >
           <li>
             <strong class="mr-1">Upcoming Infrastructure :</strong> Metro stations,
@@ -218,18 +218,18 @@
             ></path></svg
           >
           <h2
-            class="text-minSubHead font-ThirdHead text-gray-900 border-l-4 border-btnBg pl-3"
+            class="typography-h3 font-semibold text-gray-900 border-l-4 border-btnBg pl-3"
           >
             Know Your Budget, Know Your Area
           </h2>
         </div>
         <p
-          class="text-paraFont font-Paragraph text-gray-700 leading-relaxed ml-10"
+          class="typography-body-md text-gray-700 leading-relaxed ml-10"
         >
           What’s affordable now may not be the best long-term choice.
         </p>
         <ul
-          class="list-disc pl-5 space-y-3 text-subParaFont font-Paragraph text-gray-700 mt-3 ml-10"
+          class="list-disc pl-5 space-y-3 typography-body-md text-gray-700 mt-3 ml-10"
         >
           <li>
             <strong class="mr-1">Affordability Zone :</strong> Match your budget
@@ -259,19 +259,19 @@
             ></path></svg
           >
           <h2
-            class="text-minSubHead font-ThirdHead text-gray-900 border-l-4 border-btnBg pl-3"
+            class="typography-h3 font-semibold text-gray-900 border-l-4 border-btnBg pl-3"
           >
             The Emotional Test
           </h2>
         </div>
         <p
-          class="text-paraFont font-Paragraph text-gray-700 leading-relaxed ml-10"
+          class="typography-body-md text-gray-700 leading-relaxed ml-10"
         >
           Beyond logic, listen to your heart. Does the neighborhood feel like
           home?
         </p>
         <ul
-          class="list-disc pl-5 space-y-3 text-subParaFont font-Paragraph text-gray-700 mt-3 ml-10"
+          class="list-disc pl-5 space-y-3 typography-body-md text-gray-700 mt-3 ml-10"
         >
           <li>Can you imagine celebrating festivals here?</li>
           <li>Does the view from your future home bring you peace?</li>
@@ -295,19 +295,19 @@
             ></path></svg
           >
           <h2
-            class="text-minSubHead font-ThirdHead text-gray-900 border-l-4 border-btnBg pl-3"
+            class="typography-h3 font-semibold text-gray-900 border-l-4 border-btnBg pl-3"
           >
             Take the Leap
           </h2>
         </div>
         <p
-          class="text-paraFont font-Paragraph text-gray-700 leading-relaxed ml-10"
+          class="typography-body-md text-gray-700 leading-relaxed ml-10"
         >
           Choosing a neighborhood isn’t just a financial decision it’s about
           finding where you truly belong.
         </p>
         <p
-          class="text-paraFont font-Paragraph text-gray-700 bg-gray-100 p-5 border-l-4 border-btnBg mt-3 leading-relaxed ml-10"
+          class="typography-body-md text-gray-700 bg-gray-100 p-5 border-l-4 border-btnBg mt-3 leading-relaxed ml-10"
         >
           🎯 Start with your property consultant to explore neighborhoods that
           match your preferences.
@@ -317,11 +317,11 @@
 
     <div slot="secondary" class="">
       <div class="px-[0.5rem] py-[3rem] lg:py-0">
-        <h2 class="text-minSubHead font-FourthHead mb-2">
+        <h2 class="typography-h3 font-semibold mb-2">
           Did this resonate with you?
         </h2>
         <p
-          class="mb-8 text-paraFont font-Paragraph text-gray-700 leading-relaxed"
+          class="mb-8 typography-body-md text-gray-700 leading-relaxed"
         >
           If so, you may also want to explore:
         </p>
@@ -393,25 +393,25 @@
       <ThingsYouKnow contents={{ heading: `Things you should know` }}>
         <ul class="list-disc pl-4 flex flex-col gap-4 px-2">
           <li>
-            <span class="font-FourthHead">Accessibility & Safety: </span>
+            <span class="font-semibold">Accessibility & Safety: </span>
             Ensure essentials like schools, hospitals, and markets are nearby, with
             well-lit and secure surroundings.
           </li>
           <li>
-            <span class="font-FourthHead">Lifestyle & Convenience: </span>
+            <span class="font-semibold">Lifestyle & Convenience: </span>
             Parks, gyms, and entertainment hubs contribute to a better quality of
             life.
           </li>
           <li>
-            <span class="font-FourthHead">Experience Before Deciding: </span>
+            <span class="font-semibold">Experience Before Deciding: </span>
             Visit at different times and talk to locals for real-life insights.
           </li>
           <li>
-            <span class="font-FourthHead">Future Growth & Resale Value: </span>
+            <span class="font-semibold">Future Growth & Resale Value: </span>
             Upcoming infrastructure can boost property value and ensure better returns.
           </li>
           <li>
-            <span class="font-FourthHead">Budget & Emotional Fit: </span>
+            <span class="font-semibold">Budget & Emotional Fit: </span>
             Consider hidden costs and choose a neighborhood that feels like home.
           </li>
         </ul>

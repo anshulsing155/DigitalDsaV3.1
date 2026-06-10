@@ -255,7 +255,7 @@
 
         <div class="flex items-center gap-2">
           <!-- Mobile filter toggle -->
-          <div class="block sm:hidden font-Paragraph text-subParaFont">
+          <div class="block sm:hidden typography-body-md">
             <button
               type="button"
               class="text-white bg-btnBg w-8 h-8"
@@ -306,7 +306,7 @@
                   />
                 {/if}
                 <span
-                  class="absolute bottom-0 right-0 font-SubPara text-leastMiniFont text-white bg-black p-1"
+                  class="absolute bottom-0 right-0 typography-body-sm text-leastMiniFont text-white bg-black p-1"
                 >
                   {blog.categoryType}
                 </span>
@@ -326,9 +326,7 @@
                   {blog.description}
                 </p>
                 <span
-                  class="{blog.path
-                    ? 'text-linkColor'
-                    : 'text-dangerColor'} typography-body-sm underline group-hover:no-underline group-hover:opacity-90"
+                  class="{blog.path ? 'text-linkColor' : 'text-dangerColor'} typography-body-sm underline group-hover:no-underline group-hover:opacity-90"
                 >
                   Know more
                 </span>
@@ -345,10 +343,7 @@
 
         <!-- Pagination -->
         <div
-          class="items-center justify-center gap-4 mt-4 font-FourthHead text-subParaFont {paginatedBlogs.length ===
-          0
-            ? 'hidden'
-            : 'flex'}"
+          class="items-center justify-center gap-4 mt-4 typography-body-md {paginatedBlogs.length === 0 ? 'hidden' : 'flex'}"
         >
           <button
             type="button"
@@ -459,9 +454,7 @@
   <!-- Mobile category sidebar -->
   <div class="sm:hidden block w-full">
     <div
-      class="fixed top-0 left-0 w-full h-full z-50 bg-[var(--landing-bg)] text-black dark:text-white transition-transform duration-300 ease-in-out {mobileCategoryBar
-        ? 'translate-x-0'
-        : '-translate-x-full'}"
+      class="fixed top-0 left-0 w-full h-full z-50 bg-[var(--landing-bg)] text-black dark:text-white transition-transform duration-300 ease-in-out {mobileCategoryBar ? 'translate-x-0' : '-translate-x-full'}"
     >
       <!-- Close button -->
       <div

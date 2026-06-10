@@ -206,18 +206,18 @@ dispatch("pageData", pageData);
             originalSource:"https://www.freepik.com/free-photo/exhausted-businessman-holding-his-head-pain-while-working-desktop-pc-office_26346604.htm"
           }}
         >
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             Business email compromise scams target businesses of all sizes. They
             involve emails from a compromised email address, or emails made to
             look like they are from someone you know, such as:
           </p>
-          <ul class="font-Paragraph text-subParaFont list-disc pl-5">
+          <ul class="typography-body-md text-[var(--form-text-secondary)] list-disc pl-5">
             <li>Your boss</li>
             <li>Your supplier</li>
             <li>Your customer</li>
             <li>Your lawyer</li>
           </ul>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             These scams involve emails sent to you or your business with a
             request to make payment to a new account. This new account may be
             under the scammer's control, and your money could be lost. If you
@@ -240,7 +240,7 @@ dispatch("pageData", pageData);
             sourceName="Freepik"
             originalSource="https://www.freepik.com/free-photo/young-woman-sitting-cafe-with-her-laptop-stressful-wor_1025751.htm"
           >
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               Remote access scams begin as a phone impersonation scam, then the
               scammer gains access to your all Bank account using your own
               computer, through the use of remote access software.
@@ -253,27 +253,27 @@ dispatch("pageData", pageData);
             </p>
 
             <div class="space-y-3">
-              <h2 class="font-FourthHead">How It Works</h2>
-              <ul class=" space-y-3 font-Paragraph text-subParaFont">
+              <h2 class="font-semibold">How It Works</h2>
+              <ul class="space-y-3 typography-body-md text-[var(--form-text-secondary)]">
                 <li>
-                  🚫 Scammers contact victims via <span class="font-FourthHead">
+                  🚫 Scammers contact victims via <span class="font-semibold">
                     video calls, emails, or phone calls
                   </span> , claiming to be from the police or government.
                 </li>
                 <li>
-                  🚫They use <span class="font-FourthHead">
+                  🚫They use <span class="font-semibold">
                     fake ID cards, badges, and office backgrounds
                   </span> to appear legitimate.
                 </li>
                 <li>
                   🚫 Victims are falsely accused of <span
-                    class="font-FourthHead"
+                    class="font-semibold"
                   >
                     money laundering, cybercrimes, or tax fraud
                   </span> .
                 </li>
                 <li>
-                  🚫Scammers demand <span class="font-FourthHead">
+                  🚫Scammers demand <span class="font-semibold">
                     immediate payment
                   </span> to "clear the charges" and avoid arrest.
                 </li>
@@ -289,20 +289,20 @@ dispatch("pageData", pageData);
               {
                 heading: " Warning Signs",
 
-                para: `<ul class=" space-y-6 "> 
+                para: `<ul class="space-y-6"> 
                   <li> ⚠️ Unexpected calls claiming you're under investigation.</li>
-                   <li>  ⚠️Threats of <span class="font-FourthHead"> immediate arrest or legal action </span> . </li>
-                    <li> ⚠️ Requests for <span class="font-FourthHead"> payments via cryptocurrency, gift cards, or wire transfers </span> .  </li>
-                     <li> ⚠️ Pressure to keep the conversation <span class="font-FourthHead"> secret</span>  from family or the bank.  </li>
+                   <li>  ⚠️Threats of <span class="font-semibold"> immediate arrest or legal action </span> . </li>
+                    <li> ⚠️ Requests for <span class="font-semibold"> payments via cryptocurrency, gift cards, or wire transfers </span> .  </li>
+                     <li> ⚠️ Pressure to keep the conversation <span class="font-semibold"> secret</span>  from family or the bank.  </li>
               </ul> `,
               },
               {
                 heading: "What to Do",
-                para: `<ul class=" space-y-6 "> 
-               <li> ✅   <span class="font-FourthHead"> Stay Calm</span>  – Real police don’t demand instant payments.</li>
-                  <li > ✅ <span class="font-FourthHead"> Hang Up & Verify</span>  – Call official government or law enforcement numbers.</li>
-                   <li>  ✅ <span class="font-FourthHead"> Never Pay</span>  – Authorities never ask for money over the phone.</li>
-                    <li> ✅ <span class="font-FourthHead"> Report the Scam</span>  – Notify law enforcement or cybersecurity agencies. </li>
+                para: `<ul class="space-y-6"> 
+               <li> ✅   <span class="font-semibold"> Stay Calm</span>  – Real police don’t demand instant payments.</li>
+                  <li > ✅ <span class="font-semibold"> Hang Up & Verify</span>  – Call official government or law enforcement numbers.</li>
+                   <li>  ✅ <span class="font-semibold"> Never Pay</span>  – Authorities never ask for money over the phone.</li>
+                    <li> ✅ <span class="font-semibold"> Report the Scam</span>  – Notify law enforcement or cybersecurity agencies. </li>
                     
               </ul> `,
               },
@@ -319,7 +319,7 @@ dispatch("pageData", pageData);
             reverse: false,
           }}
         >
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             The Government of India has set up a dedicated National Cybercrime
             Helpline at 1930, where victims can seek assistance and take action
             against cybercriminals. Reporting fraud promptly increases the
@@ -334,10 +334,7 @@ dispatch("pageData", pageData);
     <div class="lg:hidden block">
       {#each ["Prevent scams", "Email scams", "Remote access scams", "Help-line"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -345,7 +342,7 @@ dispatch("pageData", pageData);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end text-black dark:text-white">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -388,7 +385,7 @@ dispatch("pageData", pageData);
               />
             </div>
           {:else if index == 1}
-            <div class=" bg-white text-black">
+            <div class="bg-white text-black">
               <TwoColumnWithImage
                 contents={{
                   reverse: false,
@@ -399,19 +396,19 @@ dispatch("pageData", pageData);
                   originalSource:"https://www.freepik.com/free-photo/exhausted-businessman-holding-his-head-pain-while-working-desktop-pc-office_26346604.htm"
                 }}
               >
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   Business email compromise scams target businesses of all
                   sizes. They involve emails from a compromised email address,
                   or emails made to look like they are from someone you know,
                   such as:
                 </p>
-                <ul class="font-Paragraph text-subParaFont list-disc pl-5">
+                <ul class="typography-body-md text-[var(--form-text-secondary)] list-disc pl-5">
                   <li>Your boss</li>
                   <li>Your supplier</li>
                   <li>Your customer</li>
                   <li>Your lawyer</li>
                 </ul>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   These scams involve emails sent to you or your business with a
                   request to make payment to a new account. This new account may
                   be under the scammer's control, and your money could be lost.
@@ -433,7 +430,7 @@ dispatch("pageData", pageData);
                   sourceName="Freepik"
                   originalSource="https://www.freepik.com/free-photo/young-woman-sitting-cafe-with-her-laptop-stressful-wor_1025751.htm"
                 >
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
                     Remote access scams begin as a phone impersonation scam,
                     then the scammer gains access to your all Bank account using
                     your own computer, through the use of remote access
@@ -447,29 +444,29 @@ dispatch("pageData", pageData);
                   </p>
 
                   <div class="space-y-3">
-                    <h2 class="font-FourthHead">How It Works</h2>
-                    <ul class=" space-y-3 font-Paragraph text-subParaFont">
+                    <h2 class="font-semibold">How It Works</h2>
+                    <ul class="space-y-3 typography-body-md text-[var(--form-text-secondary)]">
                       <li>
                         🚫 Scammers contact victims via <span
-                          class="font-FourthHead"
+                          class="font-semibold"
                         >
                           video calls, emails, or phone calls
                         </span> , claiming to be from the police or government.
                       </li>
                       <li>
-                        🚫They use <span class="font-FourthHead">
+                        🚫They use <span class="font-semibold">
                           fake ID cards, badges, and office backgrounds
                         </span> to appear legitimate.
                       </li>
                       <li>
                         🚫 Victims are falsely accused of <span
-                          class="font-FourthHead"
+                          class="font-semibold"
                         >
                           money laundering, cybercrimes, or tax fraud
                         </span> .
                       </li>
                       <li>
-                        🚫Scammers demand <span class="font-FourthHead">
+                        🚫Scammers demand <span class="font-semibold">
                           immediate payment
                         </span> to "clear the charges" and avoid arrest.
                       </li>
@@ -485,20 +482,20 @@ dispatch("pageData", pageData);
                     {
                       heading: " Warning Signs",
 
-                      para: `<ul class=" space-y-6 "> 
+                      para: `<ul class="space-y-6"> 
                         <li> ⚠️ Unexpected calls claiming you're under investigation.</li>
-                         <li>  ⚠️Threats of <span class="font-FourthHead"> immediate arrest or legal action </span> . </li>
-                          <li> ⚠️ Requests for <span class="font-FourthHead"> payments via cryptocurrency, gift cards, or wire transfers </span> .  </li>
-                           <li> ⚠️ Pressure to keep the conversation <span class="font-FourthHead"> secret</span>  from family or the bank.  </li>
+                         <li>  ⚠️Threats of <span class="font-semibold"> immediate arrest or legal action </span> . </li>
+                          <li> ⚠️ Requests for <span class="font-semibold"> payments via cryptocurrency, gift cards, or wire transfers </span> .  </li>
+                           <li> ⚠️ Pressure to keep the conversation <span class="font-semibold"> secret</span>  from family or the bank.  </li>
                     </ul> `,
                     },
                     {
                       heading: "What to Do",
-                      para: `<ul class=" space-y-6 "> 
-                     <li> ✅   <span class="font-FourthHead"> Stay Calm</span>  – Real police don’t demand instant payments.</li>
-                        <li > ✅ <span class="font-FourthHead"> Hang Up & Verify</span>  – Call official government or law enforcement numbers.</li>
-                         <li>  ✅ <span class="font-FourthHead"> Never Pay</span>  – Authorities never ask for money over the phone.</li>
-                          <li> ✅ <span class="font-FourthHead"> Report the Scam</span>  – Notify law enforcement or cybersecurity agencies. </li>
+                      para: `<ul class="space-y-6"> 
+                     <li> ✅   <span class="font-semibold"> Stay Calm</span>  – Real police don’t demand instant payments.</li>
+                        <li > ✅ <span class="font-semibold"> Hang Up & Verify</span>  – Call official government or law enforcement numbers.</li>
+                         <li>  ✅ <span class="font-semibold"> Never Pay</span>  – Authorities never ask for money over the phone.</li>
+                          <li> ✅ <span class="font-semibold"> Report the Scam</span>  – Notify law enforcement or cybersecurity agencies. </li>
                           
                     </ul> `,
                     },
@@ -516,7 +513,7 @@ dispatch("pageData", pageData);
                   reverse: false,
                 }}
               >
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   The Government of India has set up a dedicated National
                   Cybercrime Helpline at 1930, where victims can seek assistance
                   and take action against cybercriminals. Reporting fraud
@@ -573,17 +570,17 @@ dispatch("pageData", pageData);
         thinkKnow={{
           heading: "Things You Should Know",
           paraGraph: [
-            `<span class="font-FourthHead">DigitalDSA’s Role:</span> DigitalDSA is an independent loan facilitator and web aggregator, connecting users with licensed banks and NBFCs. We do not provide loans directly and do not guarantee approval. All loan terms, conditions, and decisions are solely at the discretion of the respective lender.`,
+            `<span class="font-semibold">DigitalDSA’s Role:</span> DigitalDSA is an independent loan facilitator and web aggregator, connecting users with licensed banks and NBFCs. We do not provide loans directly and do not guarantee approval. All loan terms, conditions, and decisions are solely at the discretion of the respective lender.`,
 
-            `<span class="font-FourthHead">Beware of Fraud & Scams:</span> DigitalDSA does not ask for payments, OTPs, or banking credentials at any stage. If you receive such requests claiming to be from DigitalDSA, do not respond and report them immediately.`,
+            `<span class="font-semibold">Beware of Fraud & Scams:</span> DigitalDSA does not ask for payments, OTPs, or banking credentials at any stage. If you receive such requests claiming to be from DigitalDSA, do not respond and report them immediately.`,
 
-            `<span class="font-FourthHead">Fake Loan Offers & Business Email Scams:</span> Scammers may impersonate banks, financial institutions, or DigitalDSA representatives to trick users into making payments or sharing confidential details. Always verify loan offers directly with the lender through official contact details. DigitalDSA is not responsible for financial losses due to third-party fraud.`,
+            `<span class="font-semibold">Fake Loan Offers & Business Email Scams:</span> Scammers may impersonate banks, financial institutions, or DigitalDSA representatives to trick users into making payments or sharing confidential details. Always verify loan offers directly with the lender through official contact details. DigitalDSA is not responsible for financial losses due to third-party fraud.`,
 
-            `<span class="font-FourthHead">Remote Access & Digital Arrest Scams:</span> Fraudsters may pretend to be law enforcement or financial regulators, falsely accusing users of financial crimes and demanding payments. DigitalDSA or its partners will never ask for payments through cryptocurrency, gift cards, or wire transfers. If you receive such threats, **hang up and verify through official channels.**`,
+            `<span class="font-semibold">Remote Access & Digital Arrest Scams:</span> Fraudsters may pretend to be law enforcement or financial regulators, falsely accusing users of financial crimes and demanding payments. DigitalDSA or its partners will never ask for payments through cryptocurrency, gift cards, or wire transfers. If you receive such threats, **hang up and verify through official channels.**`,
 
-            `<span class="font-FourthHead">User Responsibility & Security:</span> Users are responsible for verifying the authenticity of any loan-related communication. Protect your personal and financial information by using strong passwords, enabling two-factor authentication, and verifying any payment requests before proceeding. DigitalDSA is not liable for losses due to phishing, scams, or user negligence.`,
+            `<span class="font-semibold">User Responsibility & Security:</span> Users are responsible for verifying the authenticity of any loan-related communication. Protect your personal and financial information by using strong passwords, enabling two-factor authentication, and verifying any payment requests before proceeding. DigitalDSA is not liable for losses due to phishing, scams, or user negligence.`,
 
-            `<span class="font-FourthHead">Report Fraud:</span> If you suspect a scam, report it immediately. The Government of India’s **National Cybercrime Helpline (1930)** provides assistance to victims of cyber fraud. Reporting scams early improves the chances of recovery and prevents further fraud.`,
+            `<span class="font-semibold">Report Fraud:</span> If you suspect a scam, report it immediately. The Government of India’s **National Cybercrime Helpline (1930)** provides assistance to victims of cyber fraud. Reporting scams early improves the chances of recovery and prevents further fraud.`,
           ],
         }}
         disc="list-decimal"

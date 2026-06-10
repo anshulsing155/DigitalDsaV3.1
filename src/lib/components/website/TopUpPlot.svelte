@@ -22,7 +22,7 @@
     coverAlt: "hero-cover",
     classStyle: "object-cover xl:h-[90svh] 3xl:max-h-[70svh]",
     heading: "LAP  Top-up on an Existing Running Loan",
-    para: `A <span class="font-FourthHead"> LAP Top-up </span> is an additional loan amount sanctioned over your existing <span class="font-FourthHead"> Loan Against Property </span> without transferring it to another lender. You continue with the same bank, but with extra funds based on your eligibility.`,
+    para: `A <span class="font-semibold"> LAP Top-up </span> is an additional loan amount sanctioned over your existing <span class="font-semibold"> Loan Against Property </span> without transferring it to another lender. You continue with the same bank, but with extra funds based on your eligibility.`,
     actionBtns: [
 {
 btnName: "Book appointment",
@@ -115,10 +115,10 @@ link: "/contact",
   let thinkKnow = {
     heading: "Things you should know",
     paraGraph: [
-`<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-`<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-`<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-`<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+`<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+`<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+`<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+`<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
     ],
   };
   const toggleDropdown = (event, index) => {
@@ -251,10 +251,10 @@ window.removeEventListener("scroll", handleScroll);
             thinkKnow={{
               heading: "Key Benefits",
               paraGraph: [
-                `<span class="font-FourthHead"> Higher Loan Amount – </span> Based on property valuation & repayment history.`,
-                `<span class="font-FourthHead"> Lower Processing Time – </span> Faster than taking a fresh LAP.`,
-                `<span class="font-FourthHead"> Affordable EMIs – </span> Spread repayment over a long tenure.`,
-                `<span class="font-FourthHead"> Flexible Repayment – </span> Prepayment & foreclosure options available.`,
+                `<span class="font-semibold"> Higher Loan Amount – </span> Based on property valuation & repayment history.`,
+                `<span class="font-semibold"> Lower Processing Time – </span> Faster than taking a fresh LAP.`,
+                `<span class="font-semibold"> Affordable EMIs – </span> Spread repayment over a long tenure.`,
+                `<span class="font-semibold"> Flexible Repayment – </span> Prepayment & foreclosure options available.`,
               ],
             }}
             disc="list-disc"
@@ -317,10 +317,10 @@ window.removeEventListener("scroll", handleScroll);
                   title: "Documents Required",
                   para: `
                 <ul class="list-disc flex flex-col gap-2 pl-4">
-                  <li><span class="font-FourthHead">Loan Statement:</span> Existing loan statement & outstanding balance proof.</li>
-                  <li><span class="font-FourthHead">KYC documents :</span> PAN, Aadhaar, passport, voter ID.</li>
-                  <li><span class="font-FourthHead">Latest income proof :</span> salary slips, ITR, bank statements.</li>
-                  <li><span class="font-FourthHead">Property valuation report :</span> if required by the bank</li>
+                  <li><span class="font-semibold">Loan Statement:</span> Existing loan statement & outstanding balance proof.</li>
+                  <li><span class="font-semibold">KYC documents :</span> PAN, Aadhaar, passport, voter ID.</li>
+                  <li><span class="font-semibold">Latest income proof :</span> salary slips, ITR, bank statements.</li>
+                  <li><span class="font-semibold">Property valuation report :</span> if required by the bank</li>
                 </ul>
                 `,
                 },
@@ -342,14 +342,14 @@ window.removeEventListener("scroll", handleScroll);
             reverse
           >
             <div slot="list" class="flex flex-col gap-4">
-              <ul class=" space-y-4 font-Paragraph text-subParaFont">
+              <ul class="space-y-4 typography-body-md text-text-light">
                 <li class="flex items-start gap-1">
                   <img
                     src="/icons/circle-check.svg"
                     alt="circle icon"
                     class="h-4 mt-1"
                   />
-                  <span class="font-FourthHead">Step 1 :</span> Apply with your existing
+                  <span class="font-semibold">Step 1 :</span> Apply with your existing
                   bank/NBFC.
                 </li>
                 <li class="flex items-start gap-1">
@@ -358,7 +358,7 @@ window.removeEventListener("scroll", handleScroll);
                     alt="circle icon"
                     class="h-4 mt-1"
                   />
-                  <span class="font-FourthHead">Step 2 :</span> Submit income documents
+                  <span class="font-semibold">Step 2 :</span> Submit income documents
                   & loan track record.
                 </li>
                 <li class="flex items-start gap-1">
@@ -367,7 +367,7 @@ window.removeEventListener("scroll", handleScroll);
                     alt="circle icon"
                     class="h-4 mt-1"
                   />
-                  <span class="font-FourthHead">Step 3 :</span> Bank evaluates property
+                  <span class="font-semibold">Step 3 :</span> Bank evaluates property
                   & financial standing.
                 </li>
                 <li class="flex items-start gap-1">
@@ -376,7 +376,7 @@ window.removeEventListener("scroll", handleScroll);
                     alt="circle icon"
                     class="h-4 mt-1"
                   />
-                  <span class="font-FourthHead">Step 4 :</span> Approval & disbursement
+                  <span class="font-semibold">Step 4 :</span> Approval & disbursement
                   of top-up amount.
                 </li>
               </ul>
@@ -427,10 +427,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each ["Requirement", "Benefits", "Eligibility", "Process", "Consider"] as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -440,7 +437,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -487,10 +484,10 @@ window.removeEventListener("scroll", handleScroll);
                     thinkKnow={{
                       heading: "Key Benefits",
                       paraGraph: [
-                        `<span class="font-FourthHead"> Higher Loan Amount – </span> Based on property valuation & repayment history.`,
-                        `<span class="font-FourthHead"> Lower Processing Time – </span> Faster than taking a fresh LAP.`,
-                        `<span class="font-FourthHead"> Affordable EMIs – </span> Spread repayment over a long tenure.`,
-                        `<span class="font-FourthHead"> Flexible Repayment – </span> Prepayment & foreclosure options available.`,
+                        `<span class="font-semibold"> Higher Loan Amount – </span> Based on property valuation & repayment history.`,
+                        `<span class="font-semibold"> Lower Processing Time – </span> Faster than taking a fresh LAP.`,
+                        `<span class="font-semibold"> Affordable EMIs – </span> Spread repayment over a long tenure.`,
+                        `<span class="font-semibold"> Flexible Repayment – </span> Prepayment & foreclosure options available.`,
                       ],
                     }}
                     disc="list-disc"
@@ -555,10 +552,10 @@ window.removeEventListener("scroll", handleScroll);
                         title: "Documents Required",
                         para: `
                 <ul class="list-disc flex flex-col gap-2 pl-4">
-                  <li><span class="font-FourthHead">Loan Statement:</span> Existing loan statement & outstanding balance proof.</li>
-                  <li><span class="font-FourthHead">KYC documents :</span> PAN, Aadhaar, passport, voter ID.</li>
-                  <li><span class="font-FourthHead">Latest income proof :</span> salary slips, ITR, bank statements.</li>
-                  <li><span class="font-FourthHead">Property valuation report :</span> if required by the bank</li>
+                  <li><span class="font-semibold">Loan Statement:</span> Existing loan statement & outstanding balance proof.</li>
+                  <li><span class="font-semibold">KYC documents :</span> PAN, Aadhaar, passport, voter ID.</li>
+                  <li><span class="font-semibold">Latest income proof :</span> salary slips, ITR, bank statements.</li>
+                  <li><span class="font-semibold">Property valuation report :</span> if required by the bank</li>
                 </ul>
                 `,
                       },
@@ -575,14 +572,14 @@ window.removeEventListener("scroll", handleScroll);
                   reverse
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <ul class=" space-y-4 font-Paragraph text-subParaFont">
+                    <ul class="space-y-4 typography-body-md text-text-light">
                       <li class="flex items-start gap-1">
                         <img
                           src="/icons/circle-check.svg"
                           alt="circle icon"
                           class="h-4 mt-1"
                         />
-                        <span class="font-FourthHead">Step 1 :</span> Apply with
+                        <span class="font-semibold">Step 1 :</span> Apply with
                         your existing bank/NBFC.
                       </li>
                       <li class="flex items-start gap-1">
@@ -591,7 +588,7 @@ window.removeEventListener("scroll", handleScroll);
                           alt="circle icon"
                           class="h-4 mt-1"
                         />
-                        <span class="font-FourthHead">Step 2 :</span> Submit income
+                        <span class="font-semibold">Step 2 :</span> Submit income
                         documents & loan track record.
                       </li>
                       <li class="flex items-start gap-1">
@@ -600,7 +597,7 @@ window.removeEventListener("scroll", handleScroll);
                           alt="circle icon"
                           class="h-4 mt-1"
                         />
-                        <span class="font-FourthHead">Step 3 :</span> Bank evaluates
+                        <span class="font-semibold">Step 3 :</span> Bank evaluates
                         property & financial standing.
                       </li>
                       <li class="flex items-start gap-1">
@@ -609,7 +606,7 @@ window.removeEventListener("scroll", handleScroll);
                           alt="circle icon"
                           class="h-4 mt-1"
                         />
-                        <span class="font-FourthHead">Step 4 :</span> Approval &
+                        <span class="font-semibold">Step 4 :</span> Approval &
                         disbursement of top-up amount.
                       </li>
                     </ul>
@@ -668,7 +665,7 @@ window.removeEventListener("scroll", handleScroll);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-[2rem] typography-body-md text-text-light"
             slot="list"
           >
             <li>

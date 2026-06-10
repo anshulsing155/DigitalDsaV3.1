@@ -92,63 +92,63 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Purpose </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Purpose </span>":
             [
               "Purchase of residential plots",
               "Purchase or construction of a house/apartment",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>Construction Requirement</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>Construction Requirement</span>":
             [
-              "Construction usually required within <span class='font-FourthHead'>2-5 years</span>",
+              "Construction usually required within <span class='font-semibold'>2-5 years</span>",
               "No such requirement",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Property Eligibility	</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Property Eligibility	</span>":
             [
-              "Only for <span class='font-FourthHead'>government-approved layouts or RERA-approved private plots</span>",
+              "Only for <span class='font-semibold'>government-approved layouts or RERA-approved private plots</span>",
               "Ready-built houses, under-construction properties, resale homes",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='home icon'>Loan-to-Value (LTV) Ratio</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='home icon'>Loan-to-Value (LTV) Ratio</span>":
             [
-              "<span class='font-FourthHead'>Up to 70%</span> of the plot value",
-              "<span class='font-FourthHead'>Up to 80-90%</span> of the property value",
+              "<span class='font-semibold'>Up to 70%</span> of the plot value",
+              "<span class='font-semibold'>Up to 80-90%</span> of the property value",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/tenure.svg' alt='home icon'>Loan Tenure</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/tenure.svg' alt='home icon'>Loan Tenure</span>":
             [
-              "Shorter tenure: <span class='font-FourthHead'>10-15 years</span>",
-              "Longer tenure: <span class='font-FourthHead'>Up to 30 years</span>",
+              "Shorter tenure: <span class='font-semibold'>10-15 years</span>",
+              "Longer tenure: <span class='font-semibold'>Up to 30 years</span>",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Tax Benefits</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Tax Benefits</span>":
             [
-              "<span class='font-FourthHead'>No tax benefits</span> on plot purchase; available only if construction starts",
-              "Tax benefits on <span class='font-FourthHead'>principal (80C)</span> and <span class='font-FourthHead'>interest (24b)</span>",
+              "<span class='font-semibold'>No tax benefits</span> on plot purchase; available only if construction starts",
+              "Tax benefits on <span class='font-semibold'>principal (80C)</span> and <span class='font-semibold'>interest (24b)</span>",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/interestRate.svg' alt='home icon'>Interest Rates</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/interestRate.svg' alt='home icon'>Interest Rates</span>":
             [
-              "Slightly <span class='font-FourthHead'>higher</span> than home loans",
-              "Generally <span class='font-FourthHead'>lower</span> interest rates",
+              "Slightly <span class='font-semibold'>higher</span> than home loans",
+              "Generally <span class='font-semibold'>lower</span> interest rates",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Availability</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Availability</span>":
             [
-              "Limited banks/NBFCs offer it; only for <span class='font-FourthHead'>residential plots</span>",
+              "Limited banks/NBFCs offer it; only for <span class='font-semibold'>residential plots</span>",
               "Widely available from most banks/NBFCs",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='home icon'>Best for?</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='home icon'>Best for?</span>":
             [
               "Buying land now and constructing later",
               "Buying a ready-to-move or under-construction house",
@@ -169,7 +169,7 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/plotOnlyloan.svg' alt='plot icon'> Plot-Only Loan </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/plotOnlyloan.svg' alt='plot icon'> Plot-Only Loan </span>":
             [
               "❌ No",
               `- Resident Indians aged 18-70 years 
@@ -187,7 +187,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='construction icon'> Construction Loan </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='construction icon'> Construction Loan </span>":
             [
               "✅ Yes",
               `- Existing home construction loan 
@@ -207,7 +207,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/renovateHome.svg' alt='home icon'> Plot + Construction Loan </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/renovateHome.svg' alt='home icon'> Plot + Construction Loan </span>":
             [
               "✅ Yes",
               `- Resident Indians aged 18-70 years 
@@ -230,7 +230,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Plot + Equity Loan </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Plot + Equity Loan </span>":
             [
               "❌ No",
               `- Typically not offered as a combined product 
@@ -258,7 +258,7 @@
   keywords="Plot Loan, Buy Residential Plot, Construction Loan, Plot Financing, Balance Transfer, Plot Loan vs Home Loan, RERA Approved Plots, Low-Interest Plot Loans, Digital DSA Loan, Loan for Land Purchase, Property Investment Loan, Plot Loan Calculator, Transfer Plot Loan, Land Conversion, Secure Home Financing"
 />
 {#if !loaderValue}
-  <section class="xl:contianer mx-auto w-full bg-mainBg content">
+  <section class="content">
     <NewPageLayout {pageData}>
       <Sublist {subList} />
 
@@ -289,15 +289,15 @@
 
       <!-- diff b/w plot & home -->
       <div
-        class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
+        class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
       >
         <div class="">
           <h2
-            class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+            class="typography-h2 text-center mb-8 text-black dark:text-white"
           >
-            Plot Loan <br /> vs <br /> Home Loan:
+            Plot Loan vs Home Loan:
             <span
-              class="underline decoration-4 underline-offset-4 decoration-btnBg italic"
+              class="underline decoration-btnBg italic"
               >Key Differences</span
             >
           </h2>
@@ -360,11 +360,11 @@
       <!-- balance transfer -->
       <div id="bt">
         <div
-          class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
+          class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
         >
           <div class="">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+              class="typography-h2 text-center mb-8 text-black dark:text-white"
             >
               Balance Transfer for Plot Loans
             </h2>
@@ -385,32 +385,32 @@
               {
                 heading: "Processing Fee",
                 topPara: `Charged by the new lender (typically 0.5% to 2% of the loan amount).`,
-                para: `<span class="font-FourthHead">💡 Tip:</span> Negotiate with the lender or look for promotional offers with waived processing fees.`,
+                para: `<span class="font-semibold">💡 Tip:</span> Negotiate with the lender or look for promotional offers with waived processing fees.`,
               },
               {
                 heading: "Foreclosure Charges",
                 topPara: `Some lenders may charge 2-5% of the outstanding loan for early closure.`,
-                para: `<span class="font-FourthHead">💡 Tip:</span> Check if your existing lender offers zero foreclosure charges, especially if you have a floating interest rate.`,
+                para: `<span class="font-semibold">💡 Tip:</span> Check if your existing lender offers zero foreclosure charges, especially if you have a floating interest rate.`,
               },
               {
                 heading: "Legal & Valuation Fees",
                 topPara: `Costs for property verification and legal checks, which vary by lender.`,
-                para: `<span class="font-FourthHead">💡 Tip:</span> Choose a lender that covers valuation and legal charges as part of the loan transfer process.`,
+                para: `<span class="font-semibold">💡 Tip:</span> Choose a lender that covers valuation and legal charges as part of the loan transfer process.`,
               },
               {
                 heading: "Stamp Duty",
                 topPara: `Some states may require a nominal stamp duty for the loan agreement.`,
-                para: `<span class="font-FourthHead">💡 Tip:</span> Verify with the lender if stamp duty is applicable in your state and factor it into cost calculations.`,
+                para: `<span class="font-semibold">💡 Tip:</span> Verify with the lender if stamp duty is applicable in your state and factor it into cost calculations.`,
               },
               {
                 heading: "Administrative Charges",
                 topPara: `Some lenders impose additional service or administrative fees.`,
-                para: `<span class="font-FourthHead">💡 Tip:</span> Ask for a detailed fee breakdown upfront to avoid hidden costs.`,
+                para: `<span class="font-semibold">💡 Tip:</span> Ask for a detailed fee breakdown upfront to avoid hidden costs.`,
               },
               {
                 heading: "Insurance Charges",
                 topPara: `If the new lender requires a loan protection plan, this could add extra costs.`,
-                para: `<span class="font-FourthHead">💡 Tip:</span> Check if existing insurance policies are transferable or compare third-party options for lower premiums.`,
+                para: `<span class="font-semibold">💡 Tip:</span> Check if existing insurance policies are transferable or compare third-party options for lower premiums.`,
               },
             ],
           }}
@@ -558,7 +558,7 @@
           reverse: true,
         }}
       >
-        <p>
+        <p class="typography-body-md text-[var(--form-text-secondary)]">
           Thinking of transforming your agricultural land into a residential
           property? The process involves legal approvals, zoning regulations,
           and compliance with local laws. Understanding the right steps can help
@@ -592,7 +592,7 @@
           reverse: false
         }}
       >
-        <p>
+        <p class="typography-body-md text-[var(--form-text-secondary)]">
           Feel free to message us anytime for expert assistance with your loan
           needs. Our team is here to provide professional advice, guide you
           through the loan process, and help you find the best options. No
@@ -649,10 +649,10 @@
           thinkKnow={{
             heading: `Things you should know`,
             paraGraph: [
-              `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-              `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-              `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-              `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+              `<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+              `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+              `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+              `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
             ],
           }}
           disc="list-decimal"

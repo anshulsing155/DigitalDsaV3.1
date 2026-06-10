@@ -56,7 +56,7 @@ export const content = {
 			{
 				btnName: 'Compare rates',
 				btnLink: '/get-started/how-can-we-help',
-				btnClass: 'btn-primary text-white dark:text-black'
+				btnClass: 'btn-primary text-black'
 			}
 		]
 	},
@@ -149,7 +149,7 @@ export const content = {
 			heading: 'See our home loan options',
 			btnName: 'Explore now',
 			btnLink: '/home-loan',
-			btnClass: 'btn-primary text-white dark:text-black'
+			btnClass: 'btn-primary text-black'
 		}
 	},
 	calculators: {

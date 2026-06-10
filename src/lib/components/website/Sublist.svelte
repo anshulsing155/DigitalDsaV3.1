@@ -8,9 +8,7 @@
 </script>
 
 <div
-  class="{subList
-    ? 'lg:flex grid'
-    : 'hidden'} grid-cols-2 md:grid-cols-3 lg:justify-between place-items-center gap-[2rem] py-[3rem] bg-white  md:p-[3rem] lg:gap-4"
+  class="{subList ? 'lg:flex grid' : 'hidden'} grid-cols-2 md:grid-cols-3 lg:justify-between place-items-center gap-[2rem] py-[3rem] bg-white md:p-[3rem] lg:gap-4"
 >
   {#each subList as list}
     <a
@@ -23,7 +21,7 @@
         class="h-10 transition-transform duration-300 group-hover:scale-110"
       />
 
-      <p class="mt-2 text-center font-Paragraph text-subParaFont {list.linkNameClass}">
+      <p class="mt-2 text-center typography-body-md text-text-light {list.linkNameClass}">
         {list.linkName}
       </p>
     </a>

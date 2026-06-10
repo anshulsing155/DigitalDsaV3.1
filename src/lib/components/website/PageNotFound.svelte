@@ -36,7 +36,7 @@
     </div>
   </div>
 
-  <p class="font-FourthHead text-minSubHead sm:text-subHeadFont">
+  <p class="font-semibold typography-h3 sm:text-subHeadFont">
     {errorMessage}
   </p>
 </div>

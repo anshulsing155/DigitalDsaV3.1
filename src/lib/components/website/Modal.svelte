@@ -61,7 +61,7 @@
       aria-label="Close"
       onclick={closeModal}
     >
-      <i class="fa-solid fa-xmark text-subParaFont lg:text-minHeadFont"></i>
+      <i class="fa-solid fa-xmark typography-body-md lg:typography-h2"></i>
     </button>
     {@render children?.()}
   </div>

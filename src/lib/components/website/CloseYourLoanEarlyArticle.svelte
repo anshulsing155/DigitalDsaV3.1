@@ -34,34 +34,34 @@
       class="mt-[4rem] border-b border-borderColor pb-[7rem] lg:px-0 px-[0.5rem]"
     >
       <h1
-        class="text-center font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont mb-[5rem]"
+        class="text-center typography-h2 text-text-main mb-[5rem]"
       >
         Why Close Your Loan Early?
       </h1>
       <div class="flex justify-center items-center">
         <div class="flex gap-10">
           <div class="bg-white p-8 shadow-lg text-center max-w-xs">
-            <h2 class="text-darkColor text-minSubHead font-ThirdHead pb-5">
+            <h2 class="text-darkColor typography-h3 font-semibold pb-5">
               Save on Interest
             </h2>
-            <p class="text-iconColor text-paraFont">
+            <p class="text-iconColor typography-body-md">
               The sooner you close your loan, the less you’ll pay in interest
               over time.
             </p>
           </div>
           <div class="bg-white p-8 shadow-lg text-center max-w-xs">
-            <h2 class="text-darkColor text-minSubHead font-ThirdHead pb-5">
+            <h2 class="text-darkColor typography-h3 font-semibold pb-5">
               Financial Freedom
             </h2>
-            <p class="text-iconColor text-paraFont">
+            <p class="text-iconColor typography-body-md">
               Free yourself from EMIs and enjoy a stress-free life.
             </p>
           </div>
           <div class="bg-white p-8 shadow-lg text-center max-w-xs">
-            <h2 class="text-darkColor text-minSubHead font-ThirdHead pb-5">
+            <h2 class="text-darkColor typography-h3 font-semibold pb-5">
               Increase Equity
             </h2>
-            <p class="text-iconColor text-paraFont">
+            <p class="text-iconColor typography-body-md">
               Own your home outright and use it as an asset for future financial
               goals.
             </p>
@@ -82,7 +82,7 @@
             heading: `Use bonuses, tax refunds, or other unexpected income to reduce your principal.`,
           },
         ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">Pro Tip :</span> Use our <a href="/planners/part-payment-planner" class="underline cursor-pointer hover:no-underline">Part Payment Planner</a> to see how even small contributions can help.</p>`,
+        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Pro Tip :</span> Use our <a href="/planners/part-payment-planner" class="underline cursor-pointer hover:no-underline">Part Payment Planner</a> to see how even small contributions can help.</p>`,
       }}
     />
 
@@ -98,7 +98,7 @@
             heading: `Higher EMIs chip away at the principal amount faster, reducing tenure.`,
           },
         ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead"> Quick Tool:</span> Try our <a href="/planners/flexible-emi-planner" class="underline cursor-pointer hover:no-underline">Flexible EMI Planner</a> to calculate how higher EMIs impact your loan.</p>`,
+        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold"> Quick Tool:</span> Try our <a href="/planners/flexible-emi-planner" class="underline cursor-pointer hover:no-underline">Flexible EMI Planner</a> to calculate how higher EMIs impact your loan.</p>`,
       }}
     />
 
@@ -129,7 +129,7 @@
             heading: `Allocate these savings toward your loan.`,
           },
         ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead">Tip:</span> Use budgeting apps to identify areas for savings.</p>`,
+        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Tip:</span> Use budgeting apps to identify areas for savings.</p>`,
       }}
     />
 
@@ -145,7 +145,7 @@
             heading: `Reassess tenure options to maximize savings.`,
           },
         ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-FourthHead"> Check out:</span> Our <a href="/calculators/balance-transfer-calculator" class="underline cursor-pointer hover:no-underline">Balance Transfer Calculator</a> to compare and save.</p>`,
+        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold"> Check out:</span> Our <a href="/calculators/balance-transfer-calculator" class="underline cursor-pointer hover:no-underline">Balance Transfer Calculator</a> to compare and save.</p>`,
       }}
     />
 
@@ -166,7 +166,7 @@
 
     <div class="mt-[4rem]">
       <p
-        class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center mb-[2rem]"
+        class="typography-h2 text-text-main text-center mb-[2rem]"
       >
         <span class="decoration-btnBg underline underline-offset-4">
           Inspiration:</span
@@ -179,7 +179,7 @@
           cardHeading: "Neha’s Journey:",
         }}
       >
-        <div class=" mt-4">
+        <div class="mt-4">
           <p class="relative text-gray-800">
             Neha closed her 20-year loan in 12 years by increasing her EMI by
             10% every year and using bonuses for part-payments. She also made
@@ -260,26 +260,26 @@
       <ThingsYouKnow contents={{ heading: `Things you should know` }}>
         <ul class="list-disc pl-4 flex flex-col gap-4 px-2">
           <li>
-            <span class="font-FourthHead">Save on Interest: </span>
+            <span class="font-semibold">Save on Interest: </span>
             Closing your loan early reduces total interest costs significantly.
           </li>
           <li>
-            <span class="font-FourthHead">Strategic Payments: </span>
+            <span class="font-semibold">Strategic Payments: </span>
             Small part-payments, higher EMIs, and lump sums from bonuses or tax refunds
             can shorten your loan tenure.
           </li>
           <li>
-            <span class="font-FourthHead">Balance Transfers: </span>
+            <span class="font-semibold">Balance Transfers: </span>
             Switching to a lender with lower interest rates can save you a substantial
             amount.
           </li>
           <li>
-            <span class="font-FourthHead">Smart Budgeting: </span>
+            <span class="font-semibold">Smart Budgeting: </span>
             Cutting unnecessary expenses and reallocating savings can boost loan
             repayment.
           </li>
           <li>
-            <span class="font-FourthHead">Financial Tools & Guidance: </span>
+            <span class="font-semibold">Financial Tools & Guidance: </span>
             Using calculators and expert advice can help you plan and close your
             loan faster.
           </li>

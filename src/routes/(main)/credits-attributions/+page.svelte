@@ -152,18 +152,18 @@
         {activeSection}
       />
 
-      <div class="grid px-[4rem]">
+      <div class="grid px-16">
         <div
           data-section="attribution"
           id="attribution"
-          class="flex flex-col gap-[2.5rem] border-b border-[var(--form-border)] py-[3rem] text-black dark:text-white"
+          class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 text-black dark:text-white"
         >
           <p
-            class="mt-[1rem] font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+            class="mt-4 typography-h3 text-black dark:text-white"
           >
             Understanding Our Attribution Practices
           </p>
-          <div class="grid gap-4 font-Paragraph text-subParaFont">
+          <div class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]">
             <p>
               At DigitalDSA, we are committed to respecting intellectual
               property rights and adhering to licensing agreements for all
@@ -184,7 +184,7 @@
             reverse={true}
           >
             <ul
-              class="grid gap-[2rem] font-Paragraph text-subParaFont"
+              class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
               slot="list"
             >
               <div class="grid gap-5">
@@ -195,15 +195,15 @@
                 </li>
                 <li class="p-4 my-7 bg-grayColor border-l-4 border-btnBg">
                   <p>
-                    <span class="font-FourthHead text-paraFont"
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Attribution :
                     </span>
                     <span class="pt-2">
                       Images and graphics used on this website are sourced from <span
-                        class="font-FourthHead">Freepik</span
+                        class="typography-body-lg !font-semibold text-black dark:text-white">Freepik</span
                       >,
-                      <span class="font-FourthHead">Pexels</span>, <span class="font-FourthHead">Unsplash</span>, and
-                      <span class="font-FourthHead">FlatIcons</span>. All rights
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white">Pexels</span>, <span class="typography-body-lg !font-semibold text-black dark:text-white">Unsplash</span>, and
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white">FlatIcons</span>. All rights
                       to these assets remain with their original creators.
                     </span>
                   </p>
@@ -320,22 +320,22 @@
             heading: `Compliance & Fair Use`,
 
             secPara: `<div class="">
-                                        <p class="font-FourthHead text-minSubHead pb-6">At DigitalDSA, we:</p>
-                                        <ul class="list-none space-y-2 bg-[var(--landing-bg-card)] p-4">
-                                            <li class="flex items-center font-Paragraph text-subParaFont">
+                                        <p class="typography-label pb-6">At DigitalDSA, we:</p>
+                                        <ul class="list-none space-y-2 bg-[var(--landing-bg-card)] p-4 rounded-xl">
+                                            <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
                                                 <span class="text-green-500 mr-2 self-start">✔</span> 
                                                 Ensure proper licensing and fair use of all third-party assets.
                                             </li>
-                                            <li class="flex items-center font-Paragraph text-subParaFont">
+                                            <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
                                                 <span class="text-green-500 items-top mr-2 self-start">✔</span> 
                                                 Do not modify or alter trademarks or copyrighted materials without authorization.
                                             </li>
-                                            <li class="flex items-center font-Paragraph text-subParaFont">
+                                            <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
                                                 <span class="text-green-500 mr-2 self-start">✔</span> 
                                                 Comply with all copyright laws, licensing agreements, and fair use policies.
                                             </li>
                                         </ul>
-                                        <p class="font-Paragraph text-subParaFont pt-8">If any content owner or company has concerns about attribution, licensing, or usage, they can request modifications, credits, or removal by <a class="underline underline-offset-4 hover:no-underline" href="/contact">reaching out to us.</a></p>
+                                        <p class="typography-body-md text-[var(--form-text-secondary)] pt-8">If any content owner or company has concerns about attribution, licensing, or usage, they can request modifications, credits, or removal by <a class="underline underline-offset-4 hover:no-underline" href="/contact">reaching out to us.</a></p>
                                   </div>`,
           }}
         />
@@ -347,19 +347,16 @@
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-[var(--form-bg)] text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
-            onclick={(e) => { e.preventDefault(); ((e) => toggleDropdown(e, index))(e); }}
+            onclick={(e) => { e.preventDefault(); toggleDropdown(e, index); }}
           >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
-                <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+            <div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
+              <h2 class="">{list}</h2>
+              <div class="icon-container justify-self-end text-lg text-[var(--form-text-secondary)]">
+                <span><i class="fa-solid fa-angle-down faq-icon transition-transform duration-300"></i></span>
               </div>
             </div>
           </summary>
@@ -372,14 +369,14 @@
               {#if index == 0}
                 <div
                   id="attribution"
-                  class="flex flex-col gap-[2.5rem] border-b border-[var(--form-border)] bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] py-[3rem]"
+                  class="flex flex-col gap-8 border-b border-[var(--form-border)] bg-[var(--landing-bg)] text-black dark:text-white px-4 py-12"
                 >
                   <p
-                    class="mt-[1rem] font-ThirdHead text-mobSubHead md:text-start md:text-miniHeadFont lg:text-minHeadFont"
+                    class="mt-4 typography-h3 text-black dark:text-white"
                   >
                     Understanding Our Attribution Practices
                   </p>
-                  <div class="grid gap-4 font-Paragraph text-subParaFont">
+                  <div class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]">
                     <p>
                       At DigitalDSA, we are committed to respecting intellectual
                       property rights and adhering to licensing agreements for
@@ -400,7 +397,7 @@
                     reverse={true}
                   >
                     <ul
-                      class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                      class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
                       slot="list"
                     >
                       <div class="grid gap-5">
@@ -413,16 +410,16 @@
                           class="p-4 my-7 bg-grayColor border-l-4 border-btnBg"
                         >
                           <p>
-                            <span class="font-FourthHead text-paraFont"
+                            <span class="typography-body-lg !font-semibold text-black dark:text-white"
                               >Attribution :
                             </span>
                             <span class="">
                               Images and graphics used on this website are
-                              sourced from <span class="font-FourthHead"
+                              sourced from <span class="typography-body-lg !font-semibold text-black dark:text-white"
                                 >Freepik</span
                               >,
-                              <span class="font-FourthHead">Pexels</span>, <span class="font-FourthHead">Unsplash</span>, and
-                              <span class="font-FourthHead">FlatIcons</span>.
+                              <span class="typography-body-lg !font-semibold text-black dark:text-white">Pexels</span>, <span class="typography-body-lg !font-semibold text-black dark:text-white">Unsplash</span>, and
+                              <span class="typography-body-lg !font-semibold text-black dark:text-white">FlatIcons</span>.
                               All rights to these assets remain with their
                               original creators.
                             </span>
@@ -540,22 +537,22 @@
                       heading: `Compliance & Fair Use`,
 
                       secPara: `<div class="">
-                                    <p class="font-FourthHead text-minSubHead pb-6">At DigitalDSA, we:</p>
-                                    <ul class="list-none space-y-2 bg-[var(--landing-bg-card)] p-4">
-                                        <li class="flex items-center font-Paragraph text-subParaFont">
+                                    <p class="typography-label pb-6">At DigitalDSA, we:</p>
+                                    <ul class="list-none space-y-2 bg-[var(--landing-bg-card)] p-4 rounded-xl">
+                                        <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
                                             <span class="text-green-500 mr-2 self-start">✔</span> 
                                             Ensure proper licensing and fair use of all third-party assets.
                                         </li>
-                                        <li class="flex items-center font-Paragraph text-subParaFont">
+                                        <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
                                             <span class="text-green-500 items-top mr-2 self-start">✔</span> 
                                             Do not modify or alter trademarks or copyrighted materials without authorization.
                                         </li>
-                                        <li class="flex items-center font-Paragraph text-subParaFont">
+                                        <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
                                             <span class="text-green-500 mr-2 self-start">✔</span> 
                                             Comply with all copyright laws, licensing agreements, and fair use policies.
                                         </li>
                                     </ul>
-                                    <p class="font-Paragraph text-subParaFont pt-8">If any content owner or company has concerns about attribution, licensing, or usage, they can request modifications, credits, or removal by <a class="underline underline-offset-4 hover:no-underline" href="/contact">reaching out to us.</a></p>
+                                    <p class="typography-body-md text-[var(--form-text-secondary)] pt-8">If any content owner or company has concerns about attribution, licensing, or usage, they can request modifications, credits, or removal by <a class="underline underline-offset-4 hover:no-underline" href="/contact">reaching out to us.</a></p>
                                     </div>`,
                     }}
                   />

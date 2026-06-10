@@ -321,7 +321,7 @@ window.removeEventListener("scroll", handleScroll);
     <div>
       <div class="hidden lg:block">
         <StickyNavbar navList={subList} {activeSection}>
-          <div class="  flex gap-4 pr-4">
+          <div class="flex gap-4 pr-4">
             {#each navList as lastItem}
               {#if lastItem.actionBtn}
                 {#each lastItem.actionBtn as action}
@@ -343,11 +343,11 @@ window.removeEventListener("scroll", handleScroll);
             <div class="grid gap-[2rem] border-b border-borderColor py-[4rem]">
               <div class="grid gap-6">
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   Getting started
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   Unlike a home, buying the right investment property is a
                   financial decision. So, it’s important to understand the goals
                   and strategies behind a successful property investment.
@@ -402,7 +402,7 @@ window.removeEventListener("scroll", handleScroll);
             cardHeading="Investing in property guide"
           >
             <ul
-              class="grid gap-[2rem] font-Paragraph text-subParaFont"
+              class="grid gap-[2rem] typography-body-md text-text-light"
               slot="list"
             >
               <li>
@@ -411,7 +411,7 @@ window.removeEventListener("scroll", handleScroll);
 
               <a
                   href="/"
-                  class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                   >Download PDF guide</a
                 >
             </ul>
@@ -426,7 +426,7 @@ window.removeEventListener("scroll", handleScroll);
               reverse
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>
@@ -435,7 +435,7 @@ window.removeEventListener("scroll", handleScroll);
 
                 <a
                 href="/"
-                class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                 >Discover the reports
                 </a
               >
@@ -446,7 +446,7 @@ window.removeEventListener("scroll", handleScroll);
           <div id="tools" data-section="tools" class="section">
             <div class="border-b grid gap-4 md:grid-cols-3">
                 <h2
-                  class="col-span-1 py-[3rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="col-span-1 py-[3rem] typography-h2 text-text-main"
                 >
                   Tools & calculators
                 </h2>
@@ -461,10 +461,7 @@ window.removeEventListener("scroll", handleScroll);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -474,7 +471,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -485,11 +482,11 @@ window.removeEventListener("scroll", handleScroll);
                 <div class="grid gap-[2rem] border-b border-borderColor py-[4rem]">
                     <div class="grid gap-6">
                       <h2
-                        class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                        class="typography-h2 text-text-main"
                       >
                         Getting started
                       </h2>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-sm text-text-light">
                         Unlike a home, buying the right investment property is a
                         financial decision. So, it’s important to understand the goals
                         and strategies behind a successful property investment.
@@ -544,7 +541,7 @@ window.removeEventListener("scroll", handleScroll);
                 cardHeading="Investing in property guide"
               >
                 <ul
-                  class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                  class="grid gap-[2rem] typography-body-md text-text-light"
                   slot="list"
                 >
                   <li>
@@ -553,7 +550,7 @@ window.removeEventListener("scroll", handleScroll);
     
                   <a
                       href="/"
-                      class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                       >Download PDF guide</a
                     >
                 </ul>
@@ -568,7 +565,7 @@ window.removeEventListener("scroll", handleScroll);
               reverse
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>
@@ -577,7 +574,7 @@ window.removeEventListener("scroll", handleScroll);
 
                 <a
                 href="/"
-                class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                 >Discover the reports
                 </a
               >
@@ -586,9 +583,9 @@ window.removeEventListener("scroll", handleScroll);
               </div>
             {:else if index == 4}
               <div id="tools" class="bg-white text-black px-[2rem]">
-                <div class="border-b grid gap-4 py-[3rem] ">
+                <div class="border-b grid gap-4 py-[3rem]">
                     <h2
-                      class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="typography-h2 text-text-main"
                     >
                       Tools & calculators
                     </h2>
@@ -609,7 +606,7 @@ window.removeEventListener("scroll", handleScroll);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-[2rem] typography-body-md text-text-light"
             slot="list"
           >
             <li>

@@ -8,7 +8,7 @@
       heading: "Set Clear Financial Goals",
       subHeading: `🎯 Your budget is a tool to help you reach your dreams, so start by defining them. `,
       subPara: [
-        `<span class="font-ThirdHead bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
       ],
       paraGraph: [
         "Short-Term Goals: Save for a vacation, clear a credit card bill, or create an emergency fund.",
@@ -16,14 +16,14 @@
         "Break your goals into actionable steps and assign deadlines.",
       ],
       bottomPara: [
-        `💡 <span class="font-FourthHead">Pro Tip: </span>  Write down your goals and visualize them—it’s a great motivator!`,
+        `💡 <span class="font-semibold">Pro Tip: </span>  Write down your goals and visualize them—it’s a great motivator!`,
       ],
     },
     {
       heading: "Track Every Penny ",
       subHeading: `🪙 You can’t manage what you don’t measure. Keeping track of every rupee you earn and spend is essential. `,
       subPara: [
-        `<span class="font-ThirdHead bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
       ],
 
       paraGraph: [
@@ -31,14 +31,14 @@
         "Review your spending habits weekly.",
       ],
       bottomPara: [
-        `💡 <span class="font-FourthHead">Pro Tip: </span>  Small purchases add up quickly—don’t overlook them!`,
+        `💡 <span class="font-semibold">Pro Tip: </span>  Small purchases add up quickly—don’t overlook them!`,
       ],
     },
     {
       heading: "Follow the 50/30/20 Rule ",
       subHeading: ` 📊 This simple budgeting formula is a great way to manage your income.`,
       subPara: [
-        `<span class="font-ThirdHead bg-btnBg p-[.5rem]">How It Works : </span> `,
+        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How It Works : </span> `,
       ],
       paraGraph: [
         "50% Needs: Essentials like rent, groceries, utilities.",
@@ -46,14 +46,14 @@
         "20% Savings/Debt Repayment: Build your emergency fund or pay down loans.",
       ],
       bottomPara: [
-        `💡 <span class="font-FourthHead">Pro Tip: </span>  If you’re in debt, allocate more than 20% to repayment for faster results.`,
+        `💡 <span class="font-semibold">Pro Tip: </span>  If you’re in debt, allocate more than 20% to repayment for faster results.`,
       ],
     },
     {
       heading: "Automate Your Savings ",
       subHeading: `🏦 Saving doesn’t have to be a chore. Automate it to make the process effortless.`,
       subPara: [
-        `<span class="font-ThirdHead bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
       ],
       paraGraph: [
         "Set up automatic transfers to a savings account on payday.",
@@ -61,14 +61,14 @@
         "Invest in SIPs (Systematic Investment Plans) for wealth creation.",
       ],
       bottomPara: [
-        `💡 <span class="font-FourthHead">Pro Tip: </span> "Pay yourself first" by saving before you spend.`,
+        `💡 <span class="font-semibold">Pro Tip: </span> "Pay yourself first" by saving before you spend.`,
       ],
     },
     {
       heading: "Plan for the Unexpected ",
       subHeading: `🌧️ Life is unpredictable, but your finances don’t have to be.`,
       subPara: [
-        `<span class="font-ThirdHead bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
       ],
       paraGraph: [
         "Build an emergency fund with 3-6 months of living expenses.",
@@ -76,14 +76,14 @@
         "Get adequate insurance coverage for health, life, and assets.",
       ],
       bottomPara: [
-        `💡 <span class="font-FourthHead">Pro Tip: </span> Start small—even saving ₹1000 a month for emergencies adds up over time.`,
+        `💡 <span class="font-semibold">Pro Tip: </span> Start small—even saving ₹1000 a month for emergencies adds up over time.`,
       ],
     },
     {
       heading: "Regularly Review and Adjust Your Budget ",
       subHeading: ` 🔄 Your financial situation evolves, and your budget should too.`,
       subPara: [
-        `<span class="font-ThirdHead bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
       ],
       paraGraph: [
         "Review your budget monthly to see what’s working and what’s not.",
@@ -91,7 +91,7 @@
         "Celebrate milestones to stay motivated!",
       ],
       bottomPara: [
-        `💡 <span class="font-FourthHead">Pro Tip: </span> Treat your budget as a living document—it’s okay to make changes!`,
+        `💡 <span class="font-semibold">Pro Tip: </span> Treat your budget as a living document—it’s okay to make changes!`,
       ],
     },
   ];
@@ -105,7 +105,7 @@
   keywords="Budgeting tips, Financial planning, Money management, Smart saving tips, Personal finance tips, Budgeting for beginners, Monthly budgeting, How to save money, 50/30/20 rule, Emergency fund planning"
 />
 
-<section class=" py-12">
+<section class="py-12">
   <NewPageLayout
     pageData={{
       coverImage: "/images/financial-success-blog.jpg",
@@ -129,11 +129,11 @@
       class="flex flex-col py-[2rem] lg:py-[4rem] px-[0.5rem] lg:px-[4rem] gap-[1rem]"
     >
       <h2
-        class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+        class="typography-h2 text-text-main"
       >
         💡 Final Thoughts
       </h2>
-      <p class="font-Paragraph text-minParaFont">
+      <p class="typography-body-md text-text-light">
         Budgeting is a powerful tool for achieving financial success. Start
         small, stay consistent, and don’t be afraid to tweak your approach as
         you go. With these 6 tips, you’ll be well on your way to a financially

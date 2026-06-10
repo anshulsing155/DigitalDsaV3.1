@@ -143,7 +143,7 @@
               {
                 heading: "Q. What is the recruitment process at DigitalDSA?",
                 subHeading: `Find the right opportunity for you `,
-                para: `<p class=" mb-2">Ans. <span class="font-FifthHead" >Our hiring process is designed to be simple and efficient:</span></p> 
+                para: `<p class="mb-2">Ans. <span class="font-semibold" >Our hiring process is designed to be simple and efficient:</span></p> 
                 <ul class="list-decimal pl-4">
       <li>Application Review – Our Talent Acquisition team reviews your application.</li>
       <li>Initial Screening – If shortlisted, you'll be invited for a virtual/phone screening.</li>
@@ -154,7 +154,7 @@
               },
               {
                 heading: "Q. How long does the hiring process take?​​",
-                para: `Ans. Typically, the process takes <span class="font-FourthHead" 2-4 weeks  from application submission to offer.`,
+                para: `Ans. Typically, the process takes <span class="font-semibold" 2-4 weeks  from application submission to offer.`,
               },
               {
                 heading:
@@ -168,7 +168,7 @@
               {
                 heading:
                   "Q. I’m having trouble submitting my application. What should I do?​",
-                para: `Ans. If you face issues, email <span class="font-FifthHead"> careers@digitaldsa.com </span>  for assistance `,
+                para: `Ans. If you face issues, email <span class="font-semibold"> careers@digitaldsa.com </span>  for assistance `,
               },
             ],
           }}
@@ -217,7 +217,7 @@
               {
                 heading: "Q. What should I expect in the interview?",
                 subHeading: `Find the right opportunity for you `,
-                para: `<p class="font-FifthHead mb-2">Ans. Our interviews are role-specific and may include:</p> <ul class="list-decimal pl-4">
+                para: `<p class="font-semibold mb-2">Ans. Our interviews are role-specific and may include:</p> <ul class="list-decimal pl-4">
       <li> A conversation about your experience & skills</li>
       <li> A technical or case-study discussion (for Product/IT roles)</li>
       <li> A problem-solving or sales scenario (for Sales/Marketing roles)</li>
@@ -281,7 +281,7 @@
               {
                 heading:
                   "Q. I have a disability. Can I get support during the hiring process?",
-                para: `Ans. Yes! Please email  <span class="font-FifthHead"> careers@digitaldsa.com </span>   if you need accommodations.`,
+                para: `Ans. Yes! Please email  <span class="font-semibold"> careers@digitaldsa.com </span>   if you need accommodations.`,
               },
             ],
           }}
@@ -292,10 +292,7 @@
     <div class="lg:hidden">
       {#each ["Hiring process", "Job opening", "Interview process", "Background checks", "Other FAQs"] as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-2 py-4"
@@ -319,7 +316,7 @@
                       heading:
                         "Q. What is the recruitment process at DigitalDSA?",
                       subHeading: `Find the right opportunity for you `,
-                      para: `<p class="font-FifthHead mb-2">Ans. Our hiring process is designed to be simple and efficient:</p> 
+                      para: `<p class="font-semibold mb-2">Ans. Our hiring process is designed to be simple and efficient:</p> 
                       <ul class="list-decimal pl-4">
             <li>Application Review – Our Talent Acquisition team reviews your application.</li>
             <li>Initial Screening – If shortlisted, you'll be invited for a virtual/phone screening.</li>
@@ -330,7 +327,7 @@
                     },
                     {
                       heading: "Q. How long does the hiring process take?​​",
-                      para: `Ans. Typically, the process takes <span class="font-FourthHead" 2-4 weeks  from application submission to offer.`,
+                      para: `Ans. Typically, the process takes <span class="font-semibold" 2-4 weeks  from application submission to offer.`,
                     },
                     {
                       heading:
@@ -344,7 +341,7 @@
                     {
                       heading:
                         "Q. I’m having trouble submitting my application. What should I do?​",
-                      para: `Ans. If you face issues, email <span class="font-FifthHead"> careers@digitaldsa.com </span>  for assistance `,
+                      para: `Ans. If you face issues, email <span class="font-semibold"> careers@digitaldsa.com </span>  for assistance `,
                     },
                   ],
                 }}
@@ -395,7 +392,7 @@
                     {
                       heading: "Q. What should I expect in the interview?",
                       subHeading: `Find the right opportunity for you `,
-                      para: `<p class="font-FifthHead mb-2">Ans. Our interviews are role-specific and may include:</p> <ul class="list-decimal pl-4">
+                      para: `<p class="font-semibold mb-2">Ans. Our interviews are role-specific and may include:</p> <ul class="list-decimal pl-4">
             <li> A conversation about your experience & skills</li>
             <li> A technical or case-study discussion (for Product/IT roles)</li>
             <li> A problem-solving or sales scenario (for Sales/Marketing roles)</li>
@@ -461,7 +458,7 @@
                     {
                       heading:
                         "Q. I have a disability. Can I get support during the hiring process?",
-                      para: `Ans. Yes! Please email  <span class="font-FifthHead"> careers@digitaldsa.com </span>   if you need accommodations.`,
+                      para: `Ans. Yes! Please email  <span class="font-semibold"> careers@digitaldsa.com </span>   if you need accommodations.`,
                     },
                   ],
                 }}
@@ -472,17 +469,17 @@
       {/each}
     </div>
     <div
-      class=" px-[0.5rem] py-[2rem] lg:px-[4rem] text-subParaFont lg:py-[4rem] space-y-2 lg:text-center"
+      class="px-[0.5rem] py-[2rem] lg:px-[4rem] typography-body-md lg:py-[4rem] space-y-2 lg:text-center"
     >
       <h4>
         If you have more questions, reach out to us at <span
-          class="font-FourthHead"
+          class="font-semibold"
         >
           careers@digitaldsa.com</span
         > .
       </h4>
       <h4>
-        We’re excited to have you join <span class="font-FourthHead"
+        We’re excited to have you join <span class="font-semibold"
           >DigitalDSA – A Fintech Revolution! 🚀
         </span>
       </h4>

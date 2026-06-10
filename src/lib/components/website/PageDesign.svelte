@@ -92,7 +92,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
             {#if pageData.heroList && pageData.heroList.length > 0}
               <ul class="flex flex-col gap-4">
                 {#each pageData.heroList as item}
-                  <li class="grid gap-4 font-Paragraph text-subParaFont">
+                  <li class="grid gap-4 typography-body-md text-text-light">
                     {#if typeof item.text === "object"}
                       {#if item.text.subText}
                         <span>{@html item.text.subText}</span>
@@ -138,16 +138,14 @@ window.removeEventListener("resize", updateSize); // Cleanup
             {/if}
             {#if pageData.actionBtn}
               <div
-                class="flex flex-col gap-4 font-Paragraph text-minParaFont sm:flex-row md:text-subParaFont"
+                class="flex flex-col gap-4 typography-body-sm text-text-light sm:flex-row md:typography-body-md"
               >
                 {#each pageData.actionBtn as actionBtn}
                   <a href={actionBtn.link} class="text-black">
                     <button
                       type="button"
                       onclick={onClick}
-                      class="w-full rounded-full border px-[2rem] py-3 md:w-auto {actionBtn.animation
-                        ? 'animate-scaleLoop'
-                        : ''}"
+                      class="w-full rounded-full border px-[2rem] py-3 md:w-auto {actionBtn.animation ? 'animate-scaleLoop' : ''}"
                       style={`background-color: ${actionBtn.btnColor}; border-color: #4F4C4D;`}
                     >
                       {actionBtn.firstBtn}
@@ -171,9 +169,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
 
         {#if subList.length > 0}
           <div
-            class="{subList
-              ? 'lg:flex grid'
-              : 'hidden'} grid-cols-2 md:grid-cols-3 lg:justify-between place-items-center gap-[3rem] border border-[var(--landing-border)] bg-[var(--landing-bg-card)] p-[3rem] lg:gap-4"
+            class="{subList ? 'lg:flex grid' : 'hidden'} grid-cols-2 md:grid-cols-3 lg:justify-between place-items-center gap-[3rem] border border-[var(--landing-border)] bg-[var(--landing-bg-card)] p-[3rem] lg:gap-4"
           >
             {#each subList as item, index}
               <a

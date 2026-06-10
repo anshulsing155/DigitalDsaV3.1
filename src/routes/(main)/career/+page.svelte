@@ -18,7 +18,7 @@
 
   let cardImg3 = "/images/woman-with-tablet.jpg";
   let cardAlt3 = "CardCover";
-  let cardHead3 = `Commitment to Creating Self-Dependent Financial Advisors <br>  <span class = "font-SubPara text-subParaFont italic">(For those who are interested)</span> `;
+  let cardHead3 = `Commitment to Creating Self-Dependent Financial Advisors <br>  <span class = "typography-body-md text-[var(--form-text-secondary)] italic font-semibold">(For those who are interested)</span> `;
 
   let cardImg4 = "/images/young-woman-working-as-part-timer.jpg";
   let cardAlt4 = "photo of an intern working from home at DigitalDSA";
@@ -178,7 +178,7 @@
       />
     </div>
 
-    <div class="px-[.5rem] lg:px-[4rem]">
+    <div class="px-4 lg:px-16">
       <div class="hidden lg:block">
         <div id="businessArea" data-section="businessArea" class="pb-[2rem]">
           <div class="border-b border-dividerColor">
@@ -188,7 +188,7 @@
               cardHeading={cardHead1}
             >
               <ul
-                class="grid gap-4 font-Paragraph text-subParaFont"
+                class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
                 <li class="grid gap-4">
@@ -204,8 +204,8 @@
                       class="h-[1.2rem] mt-2"
                     />
 
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Entrepreneurial Growth –
                       </span> Take charge of your career in a performance-driven
                       culture.
@@ -219,8 +219,8 @@
                       class="h-[1.2rem] mt-2"
                     />
 
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Continuous Learning -
                       </span> Stay ahead with hands-on experience and skill development.
                     </p>
@@ -233,8 +233,8 @@
                       class="h-[1.2rem] mt-2"
                     />
 
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Flexibility & Autonomy –</span
                       > Work with freedom while making a real impact.
                     </p>
@@ -247,8 +247,8 @@
                       class="h-[1.2rem] mt-2"
                     />
 
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Innovation in Finance –
                       </span> Be part of a fintech revolution simplifying loans &
                       investments.
@@ -264,11 +264,11 @@
           >
             <div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
               <h2
-                class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="typography-h2 text-black dark:text-white"
               >
                 Our Work Areas
               </h2>
-              <p class="font-SubPara text-subParaFont">
+              <p class="typography-body-md text-[var(--form-text-secondary)]">
                 We specialize in a wide range of technologies and services and offering
                 roles in:
               </p>
@@ -279,40 +279,40 @@
              <div
                 class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
-                <p class="font-FourthHead text-subParaFont">Software Development</p>
+                <p class="typography-h4 text-black dark:text-white">Software Development</p>
               </div>
               <div
                 class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
-                <p class="font-FourthHead text-subParaFont">Loan Services</p>
+                <p class="typography-h4 text-black dark:text-white">Loan Services</p>
               </div>
 
              
               <div
                 class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
-                <p class="font-FourthHead text-subParaFont">
+                <p class="typography-h4 text-black dark:text-white">
                   Investment Advisory
                 </p>
               </div>
               <div
                 class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
-                <p class="font-FourthHead text-subParaFont">
+                <p class="typography-h4 text-black dark:text-white">
                   Operations & Administartion
                 </p>
               </div>
               <div
                 class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
-                <p class="font-FourthHead text-subParaFont">
+                <p class="typography-h4 text-black dark:text-white">
                   Sales & Business Development
                 </p>
               </div>
               <div
                 class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
               >
-                <p class="font-FourthHead text-subParaFont">
+                <p class="typography-h4 text-black dark:text-white">
                   Digital Marketing
                 </p>
               </div>
@@ -328,34 +328,34 @@
               cardHeading={cardHead2}
             >
               <ul
-                class="font-Paragraph text-subParaFont flex flex-col gap-4"
+                class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-4"
                 slot="list"
               >
                 <p>We recognize talent and reward excellence with:</p>
                 <div class="flex flex-col space-y-10">
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead"
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Performance-based incentives –
                     </span>The harder you work, the more you earn!
                   </p>
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead"
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Training & Development –
                     </span>Get trained by experts and stay ahead in the finance
                     sector.
                   </p>
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead"
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Growth Opportunities -
                     </span>Clear career progression for top performers.
                   </p>
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead"
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Recognition Programs –
                     </span>Be celebrated for your contributions.
                   </p>
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead"
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Work-Life Balance –
                     </span>Flexible work policies for personal & professional
                     growth.
@@ -375,28 +375,28 @@
               reverse={true}
             >
               <ul
-                class="grid gap-4 font-Paragraph text-subParaFont"
+                class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
                 <p>We empower our team with:</p>
                 <div class="flex flex-col space-y-10">
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead"
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Complete Business Support –
                     </span>Marketing, technology & operational assistance.
                   </p>
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead"
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Exclusive Training Programs –
                     </span>Upskill with real-world financial expertise.
                   </p>
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead"
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Zero Investment, High Returns –
                     </span>Earn commissions without any upfront costs.
                   </p>
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead">Be Your Own Boss – </span>Work
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white">Be Your Own Boss – </span>Work
                     at your pace & build your financial advisory business.
                   </p>
                 </div>
@@ -413,21 +413,21 @@
               cardHeading={cardHead4}
             >
               <ul
-                class="grid gap-4 font-Paragraph text-subParaFont"
+                class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
                 <p>Kickstart your career in fintech with us!</p>
                 <div class="flex flex-col space-y-10">
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead">Internships – </span>Gain
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white">Internships – </span>Gain
                     hands-on experience in finance, sales, and operations.
                   </p>
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead">Analyst Programs – </span>Work
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white">Analyst Programs – </span>Work
                     on real-world data-driven financial solutions.
                   </p>
-                  <p class="font-SubPara text-subParaFont">
-                    <span class="font-FourthHead"
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
                       >Graduate Opportunities –
                     </span>Get mentored by industry leaders & build expertise.
                   </p>
@@ -442,18 +442,18 @@
             <Payments supportHeading="Awards and recognition">
               <div slot="para">Our commitment to excellence has earned us:</div>
               <div class="col-span-2 grid space-y-10">
-                <p class="font-SubPara text-subParaFont italic">
-                  <span class="font-FourthHead not-italic"
+                <p class="typography-body-md text-[var(--form-text-secondary)] italic">
+                  <span class="typography-body-lg !font-semibold text-black dark:text-white not-italic"
                     >Fintech Innovator of the Year
                   </span>(Recognized for simplifying financial solutions)
                 </p>
-                <p class="font-SubPara text-subParaFont italic">
-                  <span class="font-FourthHead not-italic"
+                <p class="typography-body-md text-[var(--form-text-secondary)] italic">
+                  <span class="typography-body-lg !font-semibold text-black dark:text-white not-italic"
                     >Best Loan Assistance Platform
                   </span>(Helping thousands secure hassle-free loans)
                 </p>
-                <p class="font-SubPara text-subParaFont italic">
-                  <span class="font-FourthHead not-italic"
+                <p class="typography-body-md text-[var(--form-text-secondary)] italic">
+                  <span class="typography-body-lg !font-semibold text-black dark:text-white not-italic"
                     >Top Workplace for Sales Professionals
                   </span>(Creating high-rewarding careers)
                 </p>
@@ -478,18 +478,15 @@
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-darkColor-contrast {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-[var(--form-bg)] text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
             onclick={(e) => toggleDropdown(e, index)}
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <h2 class="typography-h3 text-black dark:text-white">{list}</h2>
+              <div class="icon-container justify-self-end text-[var(--form-text-secondary)] text-lg">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -507,7 +504,7 @@
                   cardHeading={cardHead1}
                 >
                   <ul
-                    class="grid gap-4 font-Paragraph text-subParaFont"
+                    class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]"
                     slot="list"
                   >
                     <li class="grid gap-4">
@@ -523,8 +520,8 @@
                           class="h-[1.2rem] mt-2"
                         />
 
-                        <p class="font-SubPara text-subParaFont">
-                          <span class="font-FourthHead"
+                        <p class="typography-body-md text-[var(--form-text-secondary)]">
+                          <span class="typography-body-lg !font-semibold text-black dark:text-white"
                             >Entrepreneurial Growth –
                           </span> Take charge of your career in a performance-driven
                           culture.
@@ -538,8 +535,8 @@
                           class="h-[1.2rem] mt-2"
                         />
 
-                        <p class="font-SubPara text-subParaFont">
-                          <span class="font-FourthHead"
+                        <p class="typography-body-md text-[var(--form-text-secondary)]">
+                          <span class="typography-body-lg !font-semibold text-black dark:text-white"
                             >Continuous Learning -
                           </span> Stay ahead with hands-on experience and skill development.
                         </p>
@@ -552,8 +549,8 @@
                           class="h-[1.2rem] mt-2"
                         />
 
-                        <p class="font-SubPara text-subParaFont">
-                          <span class="font-FourthHead"
+                        <p class="typography-body-md text-[var(--form-text-secondary)]">
+                          <span class="typography-body-lg !font-semibold text-black dark:text-white"
                             >Flexibility & Autonomy –</span
                           > Work with freedom while making a real impact.
                         </p>
@@ -566,8 +563,8 @@
                           class="h-[1.2rem] mt-2"
                         />
 
-                        <p class="font-SubPara text-subParaFont">
-                          <span class="font-FourthHead"
+                        <p class="typography-body-md text-[var(--form-text-secondary)]">
+                          <span class="typography-body-lg !font-semibold text-black dark:text-white"
                             >Innovation in Finance –
                           </span> Be part of a fintech revolution simplifying loans
                           & investments.
@@ -582,11 +579,11 @@
               >
                 <div class="lg:col-span-4 flex flex-col gap-4">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-black dark:text-white"
                   >
                     Our Business Areas
                   </h2>
-                  <p class="font-SubPara text-subParaFont">
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
                     We specialize in a wide range of financial services,
                     offering roles in:
                   </p>
@@ -597,7 +594,7 @@
                   <div
                     class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
-                    <p class="font-FourthHead text-subParaFont">
+                    <p class="typography-h4 text-black dark:text-white">
                       Loan Services
                     </p>
                   </div>
@@ -605,33 +602,33 @@
                   <div
                     class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
-                    <p class="font-FourthHead text-subParaFont">Insurance</p>
+                    <p class="typography-h4 text-black dark:text-white">Insurance</p>
                   </div>
                   <div
                     class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
-                    <p class="font-FourthHead text-subParaFont">
+                    <p class="typography-h4 text-black dark:text-white">
                       Investment Advisory
                     </p>
                   </div>
                   <div
                     class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
-                    <p class="font-FourthHead text-subParaFont">
+                    <p class="typography-h4 text-black dark:text-white">
                       Operations & Risk Management
                     </p>
                   </div>
                   <div
                     class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
-                    <p class="font-FourthHead text-subParaFont">
+                    <p class="typography-h4 text-black dark:text-white">
                       Sales & Business Development
                     </p>
                   </div>
                    <div
                     class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                   >
-                    <p class="font-FourthHead text-subParaFont">
+                    <p class="typography-h4 text-black dark:text-white">
                       Digital Marketing
                     </p>
                   </div>
@@ -646,34 +643,34 @@
                 cardHeading={cardHead2}
               >
                 <ul
-                  class="font-Paragraph text-subParaFont flex flex-col gap-4"
+                  class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-4"
                   slot="list"
                 >
                   <p>We recognize talent and reward excellence with:</p>
                   <div class="flex flex-col">
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Performance-based incentives –
                       </span>The harder you work, the more you earn!
                     </p>
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Training & Development –
                       </span>Get trained by experts and stay ahead in the
                       finance sector.
                     </p>
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Growth Opportunities -
                       </span>Clear career progression for top performers.
                     </p>
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Recognition Programs –
                       </span>Be celebrated for your contributions.
                     </p>
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Work-Life Balance –
                       </span>Flexible work policies for personal & professional
                       growth.
@@ -694,28 +691,28 @@
                 reverse={true}
               >
                 <ul
-                  class="grid gap-4 font-Paragraph text-subParaFont"
+                  class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]"
                   slot="list"
                 >
                   <p>We empower financial advisors with:</p>
                   <div class="flex flex-col">
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Complete Business Support –
                       </span>Marketing, technology & operational assistance.
                     </p>
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Exclusive Training Programs –
                       </span>Upskill with real-world financial expertise.
                     </p>
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Zero Investment, High Returns –
                       </span>Earn commissions without any upfront costs.
                     </p>
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Be Your Own Boss –
                       </span>Work at your pace & build your financial advisory
                       business.
@@ -735,22 +732,22 @@
                 cardHeading={cardHead4}
               >
                 <ul
-                  class="grid gap-4 font-Paragraph text-subParaFont"
+                  class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]"
                   slot="list"
                 >
                   <p>Kickstart your career in fintech with us!</p>
                   <div class="flex flex-col">
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead">Internships – </span>Gain
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white">Internships – </span>Gain
                       hands-on experience in finance, sales, and operations.
                     </p>
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Analyst Programs –
                       </span>Work on real-world data-driven financial solutions.
                     </p>
-                    <p class="font-SubPara text-subParaFont">
-                      <span class="font-FourthHead"
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
                         >Graduate Opportunities –
                       </span>Get mentored by industry leaders & build expertise.
                     </p>
@@ -765,18 +762,18 @@
                   Our commitment to excellence has earned us:
                 </div>
                 <div class="grid">
-                  <p class="font-SubPara text-subParaFont italic">
-                    <span class="font-FourthHead not-italic"
+                  <p class="typography-body-md text-[var(--form-text-secondary)] italic">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white not-italic"
                       >Fintech Innovator of the Year
                     </span>(Recognized for simplifying financial solutions)
                   </p>
-                  <p class="font-SubPara text-subParaFont italic">
-                    <span class="font-FourthHead not-italic"
+                  <p class="typography-body-md text-[var(--form-text-secondary)] italic">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white not-italic"
                       >Best Loan Assistance Platform
                     </span>(Helping thousands secure hassle-free loans)
                   </p>
-                  <p class="font-SubPara text-subParaFont italic">
-                    <span class="font-FourthHead not-italic"
+                  <p class="typography-body-md text-[var(--form-text-secondary)] italic">
+                    <span class="typography-body-lg !font-semibold text-black dark:text-white not-italic"
                       >Top Workplace for Sales Professionals
                     </span>(Creating high-rewarding careers)
                   </p>

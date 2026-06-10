@@ -238,13 +238,13 @@ dispatch("pageData", pageData);
               {#each steps as step, index}
                 <div class="grid grid-cols-6 md:grid-cols-10 items-start gap-4">
                   <div
-                    class="w-8 h-8 rounded-full bg-black flex justify-center items-center text-white text-paraFont font-FifthHead col-span-1"
+                    class="w-8 h-8 rounded-full bg-black flex justify-center items-center text-white typography-label col-span-1"
                   >
                     {step.id}
                   </div>
                   <div class="flex flex-col gap-4 col-span-5 md:col-span-9">
-                    <h2 class="font-ThirdHead text-parafont">{step.title}</h2>
-                    <p class="text-subParaFont font-Paragraph">{step.desc}</p>
+                    <h2 class="typography-h3 text-black dark:text-white">{step.title}</h2>
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">{step.desc}</p>
                   </div>
                 </div>
               {/each}
@@ -261,29 +261,29 @@ dispatch("pageData", pageData);
             cards: [
               {
                 heading: "Fraudulent SMS & Emails",
-                subHeading: `Be cautious of fraudulent messages claiming to be from banks.<span class="font-FourthHead"> A legitimate bank will never send an SMS or email that: </span>`,
-                para: `<ul class=" space-y-3 "> 
-                    <li> 🚫 Asks for your <span class="font-FourthHead">bank account details </span> </li>
-                     <li>  🚫 Requests your <span class="font-FourthHead">customer ID or password </span></li>
-                      <li> 🚫 Asks you to <span class="font-FourthHead"> share an OTP  </span> </li>
-                       <li> 🚫 Contains a <span class="font-FourthHead"> direct login link </span> </li>
+                subHeading: `Be cautious of fraudulent messages claiming to be from banks.<span class="font-semibold"> A legitimate bank will never send an SMS or email that: </span>`,
+                para: `<ul class="space-y-3"> 
+                    <li> 🚫 Asks for your <span class="font-semibold">bank account details </span> </li>
+                     <li>  🚫 Requests your <span class="font-semibold">customer ID or password </span></li>
+                      <li> 🚫 Asks you to <span class="font-semibold"> share an OTP  </span> </li>
+                       <li> 🚫 Contains a <span class="font-semibold"> direct login link </span> </li>
                 </ul> 
                 <br>
-                <p class="font-FourthHead">For secure banking, always visit the bank’s official website by typing the URL in your browser or using the bank’s verified mobile app </p>`,
+                <p class="font-semibold">For secure banking, always visit the bank’s official website by typing the URL in your browser or using the bank’s verified mobile app </p>`,
               },
               {
                 heading: "How to Spot a Scam",
                 subHeading: `Scammers mimic banks with urgent requests, fake links, and unusual emails to steal information.`,
-                para: `<ul class=" space-y-3 "> 
-                    <li> ⚠️ Messages or emails with <span class="font-FourthHead"> spelling errors or poor grammar</span> </li>
+                para: `<ul class="space-y-3"> 
+                    <li> ⚠️ Messages or emails with <span class="font-semibold"> spelling errors or poor grammar</span> </li>
                      <li>  ⚠️ Unusual email addresses or URLs that look similar but aren’t quite right </li>
-                      <li> ⚠️ Urgent requests, such as <span class="font-FourthHead">  "unlock your account" </span> or  <span class="font-FourthHead">"verify your identity" </span>   </li>
-                       <li> ⚠️ Unexpected claims of <span class="font-FourthHead">winning prizes  </span>   or <span class="font-FourthHead">cash rewards </span>  </li>
+                      <li> ⚠️ Urgent requests, such as <span class="font-semibold">  "unlock your account" </span> or  <span class="font-semibold">"verify your identity" </span>   </li>
+                       <li> ⚠️ Unexpected claims of <span class="font-semibold">winning prizes  </span>   or <span class="font-semibold">cash rewards </span>  </li>
                 </ul> `,
               },
               {
                 heading: "What to Do",
-                para: `<ul class=" space-y-3 "> 
+                para: `<ul class="space-y-3"> 
                  <li> ✅   Do not click on any links in suspicious messages </li>
                     <li > ✅ Avoid opening unexpected attachments, especially from unknown senders</li>
                      <li>  ✅ Inspect links carefully—hover over them on a computer or press and hold on mobile to check the actual URL</li>
@@ -306,7 +306,7 @@ dispatch("pageData", pageData);
             subPara: [
               `We work closely with law enforcement agencies and regulatory authorities in India to swiftly take down fraudulent or malicious websites. Additionally, we support initiatives like the Cyber Crime Awareness Program to help protect users from financial scams.`,
               `To learn more about safeguarding your online security, visit the <a href="https://i4c.mha.gov.in/"> Indian Cyber Crime Coordination Centre (I4C)</a> .`,
-              `In case of Cyber Frauds call <span class="text-miniHeadFont text-red-600">1930 </span> 
+              `In case of Cyber Frauds call <span class="typography-h2-md text-red-600">1930 </span> 
 `,
             ],
           }}
@@ -318,10 +318,7 @@ dispatch("pageData", pageData);
     <div class="lg:hidden block">
       {#each ["Types of scams", "Protecting yourself", "More information"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -329,7 +326,7 @@ dispatch("pageData", pageData);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end text-black dark:text-white">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -411,17 +408,17 @@ dispatch("pageData", pageData);
                         class="grid grid-cols-6 md:grid-cols-10 items-start gap-4"
                       >
                         <div
-                          class="w-8 h-8 rounded-full bg-black flex justify-center items-center text-white text-paraFont font-FifthHead col-span-1"
+                          class="w-8 h-8 rounded-full bg-black flex justify-center items-center text-white typography-label col-span-1"
                         >
                           {step.id}
                         </div>
                         <div
                           class="flex flex-col gap-4 col-span-5 md:col-span-9"
                         >
-                          <h2 class="font-ThirdHead text-parafont">
+                          <h2 class="typography-h3 text-black dark:text-white">
                             {step.title}
                           </h2>
-                          <p class="text-subParaFont font-Paragraph">
+                          <p class="typography-body-md text-[var(--form-text-secondary)]">
                             {step.desc}
                           </p>
                         </div>
@@ -432,7 +429,7 @@ dispatch("pageData", pageData);
               </div>
             </div>
           {:else if index == 1}
-            <div class=" bg-white text-black">
+            <div class="bg-white text-black">
               <AboveTitleWithoutIconCard
                 contents={{
                   heading: `Protecting yourself from scams`,
@@ -440,29 +437,29 @@ dispatch("pageData", pageData);
                   cards: [
                     {
                       heading: "Fraudulent SMS & Emails",
-                      subHeading: `Be cautious of fraudulent messages claiming to be from banks.<span class="font-FourthHead"> A legitimate bank will never send an SMS or email that: </span>`,
-                      para: `<ul class=" space-y-3 "> 
-                        <li> 🚫 Asks for your <span class="font-FourthHead">bank account details </span> </li>
-                         <li>  🚫 Requests your <span class="font-FourthHead">customer ID or password </span></li>
-                          <li> 🚫 Asks you to <span class="font-FourthHead"> share an OTP  </span> </li>
-                           <li> 🚫 Contains a <span class="font-FourthHead"> direct login link </span> </li>
+                      subHeading: `Be cautious of fraudulent messages claiming to be from banks.<span class="font-semibold"> A legitimate bank will never send an SMS or email that: </span>`,
+                      para: `<ul class="space-y-3"> 
+                        <li> 🚫 Asks for your <span class="font-semibold">bank account details </span> </li>
+                         <li>  🚫 Requests your <span class="font-semibold">customer ID or password </span></li>
+                          <li> 🚫 Asks you to <span class="font-semibold"> share an OTP  </span> </li>
+                           <li> 🚫 Contains a <span class="font-semibold"> direct login link </span> </li>
                     </ul> 
                     <br>
-                    <p class="font-FourthHead">For secure banking, always visit the bank’s official website by typing the URL in your browser or using the bank’s verified mobile app </p>`,
+                    <p class="font-semibold">For secure banking, always visit the bank’s official website by typing the URL in your browser or using the bank’s verified mobile app </p>`,
                     },
                     {
                       heading: "How to Spot a Scam",
                       subHeading: `Scammers mimic banks with urgent requests, fake links, and unusual emails to steal information.`,
-                      para: `<ul class=" space-y-3 "> 
-                        <li> ⚠️ Messages or emails with <span class="font-FourthHead"> spelling errors or poor grammar</span> </li>
+                      para: `<ul class="space-y-3"> 
+                        <li> ⚠️ Messages or emails with <span class="font-semibold"> spelling errors or poor grammar</span> </li>
                          <li>  ⚠️ Unusual email addresses or URLs that look similar but aren’t quite right </li>
-                          <li> ⚠️ Urgent requests, such as <span class="font-FourthHead">  "unlock your account" </span> or  <span class="font-FourthHead">"verify your identity" </span>   </li>
-                           <li> ⚠️ Unexpected claims of <span class="font-FourthHead">winning prizes  </span>   or <span class="font-FourthHead">cash rewards </span>  </li>
+                          <li> ⚠️ Urgent requests, such as <span class="font-semibold">  "unlock your account" </span> or  <span class="font-semibold">"verify your identity" </span>   </li>
+                           <li> ⚠️ Unexpected claims of <span class="font-semibold">winning prizes  </span>   or <span class="font-semibold">cash rewards </span>  </li>
                     </ul> `,
                     },
                     {
                       heading: "What to Do",
-                      para: `<ul class=" space-y-3 "> 
+                      para: `<ul class="space-y-3"> 
                      <li> ✅   Do not click on any links in suspicious messages </li>
                         <li > ✅ Avoid opening unexpected attachments, especially from unknown senders</li>
                          <li>  ✅ Inspect links carefully—hover over them on a computer or press and hold on mobile to check the actual URL</li>
@@ -482,7 +479,7 @@ dispatch("pageData", pageData);
                   subPara: [
                     `We work closely with law enforcement agencies and regulatory authorities in India to swiftly take down fraudulent or malicious websites. Additionally, we support initiatives like the Cyber Crime Awareness Program to help protect users from financial scams.`,
                     `To learn more about safeguarding your online security, visit the <a href="https://i4c.mha.gov.in/"> Indian Cyber Crime Coordination Centre (I4C)</a> .`,
-                    `In case of Cyber Frauds call <span class="text-miniHeadFont text-red-600">1930 </span> 
+                    `In case of Cyber Frauds call <span class="typography-h2-md text-red-600">1930 </span> 
     `,
                   ],
                 }}
@@ -554,10 +551,10 @@ dispatch("pageData", pageData);
         thinkKnow={{
           heading: "Things you should know",
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

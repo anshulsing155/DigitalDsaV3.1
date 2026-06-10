@@ -198,7 +198,7 @@
               },
               {
                 heading: "Empowerment  ​​",
-                para: `Giving users the tools and knowledge to make informed financial choices <span class="font-FourthHead" without pressure or spam calls.</span>`,
+                para: `Giving users the tools and knowledge to make informed financial choices <span class="font-semibold" without pressure or spam calls.</span>`,
                 icon: "/icons/apply.svg",
                 altName: "icons-apply",
               },
@@ -216,13 +216,13 @@
         <div
           class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
-          <div class=" flex flex-col gap-[1rem] mb-[1rem]">
+          <div class="flex flex-col gap-[1rem] mb-[1rem]">
             <h2
-              class=" font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               Our People Promise
             </h2>
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-sm text-text-light">
               We don’t just build financial solutions—we build careers that
               matter. You can expect an environment where you’ll be challenged,
               supported, and empowered to do your best work.
@@ -230,7 +230,7 @@
           </div>
           <div class="overflow-x-auto">
             <table
-              class="w-full border border-gray-300 rounded-lg shadow-lg text-left font-FifthHead text-minParaFont"
+              class="w-full border border-gray-300 rounded-lg shadow-lg text-left font-semibold typography-body-sm"
             >
               <thead>
                 <tr
@@ -245,11 +245,7 @@
               <tbody>
                 {#each tableData as item, i}
                   <tr
-                    class="border-b border-black grid grid-cols-2 divide-x {i %
-                      2 ===
-                    0
-                      ? 'bg-[#e5e5e5]'
-                      : 'bg-[#f8f9fa]'}"
+                    class="border-b border-black grid grid-cols-2 divide-x {i % 2 === 0 ? 'bg-[#e5e5e5]' : 'bg-[#f8f9fa]'}"
                   >
                     {#each item as val}
                       <td class="py-4 px-4 border-black">{val}</td>
@@ -334,10 +330,7 @@
     <div class="lg:hidden">
       {#each ["Our purpose", "Our core", "First Philosophy", "Our People", "Our Code ", "Leadership "] as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-2 py-4"
@@ -411,7 +404,7 @@
                     },
                     {
                       heading: "Empowerment  ​​",
-                      para: `Giving users the tools and knowledge to make informed financial choices <span class="font-FourthHead" without pressure or spam calls.</span>`,
+                      para: `Giving users the tools and knowledge to make informed financial choices <span class="font-semibold" without pressure or spam calls.</span>`,
                       icon: "/icons/apply.svg",
                       altName: "icons-apply",
                     },
@@ -430,13 +423,13 @@
               <div
                 class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
-                <div class=" flex flex-col gap-[1rem] mb-[1rem]">
+                <div class="flex flex-col gap-[1rem] mb-[1rem]">
                   <h2
-                    class=" font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     Our People Promise
                   </h2>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-sm text-text-light">
                     We don’t just build financial solutions—we build careers
                     that matter. You can expect an environment where you’ll be
                     challenged, supported, and empowered to do your best work.
@@ -444,7 +437,7 @@
                 </div>
                 <div class="overflow-x-auto">
                   <table
-                    class="w-full border border-gray-300 rounded-lg shadow-lg text-left font-FifthHead text-minParaFont"
+                    class="w-full border border-gray-300 rounded-lg shadow-lg text-left font-semibold typography-body-sm"
                   >
                     <thead>
                       <tr
@@ -459,11 +452,7 @@
                     <tbody>
                       {#each tableData as item, i}
                         <tr
-                          class="border-b border-black grid grid-cols-2 divide-x {i %
-                            2 ===
-                          0
-                            ? 'bg-[#e5e5e5]'
-                            : 'bg-[#f8f9fa]'}"
+                          class="border-b border-black grid grid-cols-2 divide-x {i % 2 === 0 ? 'bg-[#e5e5e5]' : 'bg-[#f8f9fa]'}"
                         >
                           {#each item as val}
                             <td class="py-4 px-4 border-black">{val}</td>
@@ -482,7 +471,7 @@
                   heading: "Our Code of Trust",
                   subHeading: "Doing What’s Right, Always!",
                   subPara: [
-                    `Our Code of Trust guides every decision we make. It ensures we uphold the highest ethical standards, prioritize customer-first solutions, and navigate challenges with integrity. When in doubt, we ask ourselves <span class="font-FifthHead"> “Is this truly in the best interest of our users?” </span> If the answer isn’t a clear <span class="font-FifthHead">yes </span> , we go back to the drawing board.`,
+                    `Our Code of Trust guides every decision we make. It ensures we uphold the highest ethical standards, prioritize customer-first solutions, and navigate challenges with integrity. When in doubt, we ask ourselves <span class="font-semibold"> “Is this truly in the best interest of our users?” </span> If the answer isn’t a clear <span class="font-semibold">yes </span> , we go back to the drawing board.`,
                   ],
                 }}
               />
@@ -498,7 +487,7 @@
                     {
                       heading: "Customer-First Obsession ",
 
-                      para: `<ul class="list-disc  pl-4 space-y-2">
+                      para: `<ul class="list-disc pl-4 space-y-2">
         <li> Put customers at the heart of every decision.</li>
         <li> Continuously improve their experience.</li>
         <li> Anticipate needs and create solutions before they ask.</li>
@@ -547,13 +536,13 @@
       {/each}
     </div>
     <div
-      class="px-[0.5rem] py-[2rem] lg:px-[4rem] text-subParaFont lg:py-[4rem] space-y-2 lg:text-center"
+      class="px-[0.5rem] py-[2rem] lg:px-[4rem] typography-body-md lg:py-[4rem] space-y-2 lg:text-center"
     >
       <h3 class="">
         We’re not just offering a job—we’re inviting you to be part of a
-        <span class="font-FourthHead">fintech revolution</span>.
+        <span class="font-semibold">fintech revolution</span>.
         <br /> Are you ready to shape the future of
-        <span class="font-FourthHead"> finance with us? </span> 🚀
+        <span class="font-semibold"> finance with us? </span> 🚀
       </h3>
     </div>
   </NewPageLayout>

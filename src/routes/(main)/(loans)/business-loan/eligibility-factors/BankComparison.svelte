@@ -93,7 +93,7 @@
   });
 </script>
 
-<section class="py-16 " aria-labelledby="bank-comparison">
+<section class="py-16" aria-labelledby="bank-comparison">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <h2 id="bank-comparison" class="text-4xl sm:text-5xl font-extrabold text-center text-black dark:text-white mb-6 tracking-tight">
       Compare Banks for Business Loans
@@ -138,7 +138,7 @@
                     <img
                       src={bank.logo}
                       alt={`${bank.name} logo`}
-                      class="w-20 h-10  object-contain"
+                      class="w-20 h-10 object-contain"
                       loading="lazy"
                     />
                     <!-- <span class="font-medium text-gray-900">{bank.name}</span> -->

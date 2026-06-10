@@ -17,12 +17,12 @@
 >
   <div class="flex flex-col gap-10">
     <h2
-      class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+      class="typography-h2 text-text-main"
     >
       {homeLoanCalculator.heading}
     </h2>
     {#if homeLoanCalculator.subHeading}
-      <p class="font-Paragraph text-minParaFont">
+      <p class="typography-body-sm text-text-light">
         {@html homeLoanCalculator.subHeading}
       </p>
     {/if}
@@ -32,16 +32,16 @@
   >
     <!-- justify-between -->
     {#each homeLoanCalculator.data as item, index}
-      <div class=" flex flex-col gap-4 items-start pb-[3rem] md:pb-0  w-11/12 {index < homeLoanCalculator.data.length-1 ? "border-b md:border-b-0 " : ""}">
-        <div class="space-y-5 ">
-          <h3 class="font-ThirdHead text-miniSubHead">{@html item.Heading}</h3>
+      <div class="flex flex-col gap-4 items-start pb-[3rem] md:pb-0 w-11/12 {index < homeLoanCalculator.data.length - 1 ? 'border-b md:border-b-0' : ''}">
+        <div class="space-y-5">
+          <h3 class="typography-h3 font-semibold text-miniSubHead">{@html item.Heading}</h3>
           {#if item.paragraph}
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-sm text-text-light">
               {@html item.paragraph}
             </p>
           {/if}
           {#if item.paragraphAfterChange}
-            <p class="font-Paragraph text-minParaFont">
+            <p class="typography-body-sm text-text-light">
               {@html item.paragraphAfterChange}
             </p>
           {/if}
@@ -50,7 +50,7 @@
         {#if item.btnBorder}
           <div class="w-full">
             <button
-              class="w-full rounded-full border px-[3rem] py-3 font-Paragraph text-subParaFont hover:opacity-90 md:w-auto"
+              class="w-full rounded-full border px-[3rem] py-3 typography-body-md text-text-light hover:opacity-90 md:w-auto"
               style={`border-color: ${item.btnBorder};`}
             >
               <a href={item.url}>{item.btnText}</a>
@@ -61,12 +61,12 @@
             href={item.url}
             class:text-linkColor={item.url !== ""}
             class:text-dangerColor={!item.url}
-            class=" font-Paragraph text-subParaFont underline underline-offset-4 hover:no-underline"
+            class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline"
             >{item.btnText}</a
           >
         {:else if item.btnChangeAfter}
           <span
-            class="font-Paragraph text-subParaFont text-underline underline-black underline-offset-4"
+            class="typography-body-md text-text-light text-underline underline-black underline-offset-4"
             >{item.btnChangeAfter}</span
           >
         {:else if item.btn}
@@ -80,7 +80,7 @@
         {#if item.list}
           <div class="flex flex-col justify-start gap-2">
             {#each item.list as list}
-              <li class="font-Paragraph text-minParaFont">
+              <li class="typography-body-sm text-text-light">
                 <a
                   class="text-linkColor underline underline-offset-4 hover:no-underline"
                   href={list.link}>{@html list.btnText}</a

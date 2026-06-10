@@ -36,8 +36,8 @@
     </div>
     <div class="flex flex-col justify-between h-full gap-4 p-4">
       <div class="flex flex-col gap-4">
-        <h3 class="font-FourthHead text-cardHeading">{@html blog.heading}</h3>
-        <p class="font-SubPara text-subPara">{@html blog.para}</p>
+        <h3 class="font-semibold text-cardHeading">{@html blog.heading}</h3>
+        <p class="typography-body-sm text-subPara">{@html blog.para}</p>
       </div>
 
       {#if blog.linkName}

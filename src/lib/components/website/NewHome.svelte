@@ -49,7 +49,7 @@
               href={step.url}
               class:text-linkColor={step.url !== ""}
               class:text-deActiveLinkColor={step.url == ""}
-              class="font-Paragraph text-subParaFont text-linkColor underline hover:no-underline"
+              class="typography-body-md text-text-light text-linkColor underline hover:no-underline"
               >{step.link}</a
             >
           {/if}

@@ -37,8 +37,8 @@
   let costOfLiving = {
     heading: "What is cost of living?",
     subPara: [
-      `The cost of living refers to the total amount of  <span class="font-FourthHead"> money required to maintain a basic standard of living </span> in a specific location. It includes essential expenses like housing, food, transportation, healthcare, education, utilities, and discretionary spending such as entertainment.`,
-      `It varies significantly due to factors like location (metro vs. non-metro), lifestyle choices, family size, and inflation. While urban areas like <span class="font-FourthHead">  Mumbai, Delhi, and Bangalore </span> have a high cost of living, smaller towns and villages offer a more affordable lifestyle.`,
+      `The cost of living refers to the total amount of  <span class="font-semibold"> money required to maintain a basic standard of living </span> in a specific location. It includes essential expenses like housing, food, transportation, healthcare, education, utilities, and discretionary spending such as entertainment.`,
+      `It varies significantly due to factors like location (metro vs. non-metro), lifestyle choices, family size, and inflation. While urban areas like <span class="font-semibold">  Mumbai, Delhi, and Bangalore </span> have a high cost of living, smaller towns and villages offer a more affordable lifestyle.`,
     ],
   };
 
@@ -333,7 +333,7 @@
         </div>
 
         <div
-          class=" pb-[2rem] border-b border-borderColor section"
+          class="pb-[2rem] border-b border-borderColor section"
           id="offerDeals"
           data-section="offerDeals"
         >
@@ -348,13 +348,13 @@
             <div slot="list">
               <div class="flex flex-col gap-5 pb-[2rem]">
                 <h2
-                  class="font-FourthHead text-minSubHead flex items-end gap-2 border-b border-borderColor pb-[.3rem]"
+                  class="font-semibold typography-h3 flex items-end gap-2 border-b border-borderColor pb-[.3rem]"
                 >
                   <img src="/icons/no-fee.svg" alt="no-fee-icon" class="h-16" />
                   With Maximum Benefits!
                 </h2>
 
-                <ul class=" font-Paragraph text-subParaFont">
+                <ul class="typography-body-md text-text-light">
                   <li class="flex items-center gap-2">
                     <span
                       ><img
@@ -403,7 +403,7 @@
                   👉
                   <a
                     href="/get-started/how-can-we-help"
-                    class="font-Paragraph text-subParaFont text-linkColor underline"
+                    class="typography-body-md text-text-light text-linkColor underline"
                   >
                     Get Started</a
                   >
@@ -412,15 +412,15 @@
 
               <div class="flex flex-col gap-5 pt-[2rem]">
                 <h2
-                  class="font-FourthHead text-minSubHead flex gap-6 items-end border-b border-borderColor pb-[.3rem]"
+                  class="font-semibold typography-h3 flex gap-6 items-end border-b border-borderColor pb-[.3rem]"
                 >
                   <img src="/icons/referral.svg" alt="" class="h-16" /> Spread the
                   Word
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   Earn Rewards by Referring! Your friends win, and so do you!
                 </p>
-                <ul class="font-Paragraph text-minParaFont">
+                <ul class="typography-body-sm text-text-light">
                   {#each spreadWord as item}
                     <li class="flex items-center gap-2">
                       <span
@@ -438,7 +438,7 @@
                   👉
                   <a
                     href="/refer-&-earn"
-                    class="font-Paragraph text-subParaFont text-linkColor underline"
+                    class="typography-body-md text-text-light text-linkColor underline"
                   >
                     Refer Now & Start Earning</a
                   >
@@ -454,7 +454,7 @@
             class="grid md:grid-cols-3 border-b border-divideColor gap-[1.5rem]"
           >
             <h2
-              class="md:col-span-1 pt-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="md:col-span-1 pt-[4rem] typography-h2 text-text-main"
             >
               Latest articles & insights
             </h2>
@@ -471,10 +471,10 @@
               reverse
             >
               <ul
-                class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   Feel free to message us anytime for expert assistance with
                   your loan needs. Our team is here to provide professional
                   advice, guide you through the loan process, and help you find
@@ -499,10 +499,7 @@
     <div class="block lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -510,18 +507,18 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
           </summary>
 
           {#if index == 0}
-            <div id="costOfLiving" class=" text-black bg-white">
+            <div id="costOfLiving" class="text-black bg-white">
               <ThingsYouShould thinkKnow={costOfLiving} />
             </div>
           {:else if index == 1}
-            <div id="affectingFactors" class=" px-[0.5rem] text-black bg-white">
+            <div id="affectingFactors" class="px-[0.5rem] text-black bg-white">
               <WhyChoose facilities={keyfactors} />
             </div>
           {:else if index == 2}
@@ -548,21 +545,21 @@
               >
                 <div slot="list">
                   <div class="flex flex-col gap-5 pb-[2rem]">
-                    <!-- <h2 class="font-FourthHead text-minSubHead">
+                    <!-- <h2 class="font-semibold typography-h3">
                   Exclusive Cashback Offers
                 </h2> -->
                     <h2
-                      class="font-FourthHead text-minSubHead flex items-end gap-2 border-b border-borderColor pb-[.3rem]"
+                      class="font-semibold typography-h3 flex items-end gap-2 border-b border-borderColor pb-[.3rem]"
                     >
                       <img src="/icons/no-fee.svg" alt="" class="h-10" /> With Maximum
                       Benefits!
                     </h2>
                     <!-- <a
                     href=""
-                    class="font-Paragraph text-subParaFont text-linkColor underline"
+                    class="typography-body-md text-text-light text-linkColor underline"
                     >Get more</a
                   > -->
-                    <ul class=" font-Paragraph text-subParaFont">
+                    <ul class="typography-body-md text-text-light">
                       <li class="flex items-center gap-2">
                         <span
                           ><img
@@ -611,7 +608,7 @@
                       👉
                       <a
                         href="/get-started/how-can-we-help"
-                        class="font-Paragraph text-subParaFont text-linkColor underline"
+                        class="typography-body-md text-text-light text-linkColor underline"
                       >
                         Get Started</a
                       >
@@ -620,16 +617,16 @@
 
                   <div class="flex flex-col gap-5 pt-[2rem]">
                     <h2
-                      class="font-FourthHead text-minSubHead flex gap-6 items-end border-b border-borderColor pb-[.3rem]"
+                      class="font-semibold typography-h3 flex gap-6 items-end border-b border-borderColor pb-[.3rem]"
                     >
                       <img src="/icons/referral.svg" alt="" class="h-10" /> Spread
                       the Word
                     </h2>
-                    <p class="font-Paragraph text-minParaFont">
+                    <p class="typography-body-sm text-text-light">
                       Earn Rewards by Referring! Your friends win, and so do
                       you!
                     </p>
-                    <ul class="font-Paragraph text-minParaFont">
+                    <ul class="typography-body-sm text-text-light">
                       {#each spreadWord as item}
                         <li class="flex items-center gap-2">
                           <span
@@ -647,7 +644,7 @@
                       👉
                       <a
                         href="/refer-&-earn"
-                        class="font-Paragraph text-subParaFont text-linkColor underline"
+                        class="typography-body-md text-text-light text-linkColor underline"
                       >
                         Refer Now & Start Earning</a
                       >
@@ -661,7 +658,7 @@
               <!-- <FactSheet keyFact={resources} /> -->
               <!-- <div class="grid md:grid-cols-3 md:border-b border-dividerColor">
                 <h2
-                  class="col-span-1 py-[1rem] sm:py-[4rem] font-ThirdHead text-minSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="col-span-1 py-[1rem] sm:py-[4rem] typography-h3 font-semibold text-text-main md:typography-h2-md lg:typography-h2"
                 >
                   Latest articles & insights
                 </h2>
@@ -670,17 +667,17 @@
                 </div>
               </div> -->
 
-              <div class=" pb-[2rem]">
+              <div class="pb-[2rem]">
                 <TwoColumn
                   cardImage={cardImg2}
                   cardAltName={cardAlt2}
                   cardHeading={cardHead2}
                 >
                   <ul
-                    class="grid gap-[2rem] font-Paragraph text-subParaFont"
+                    class="grid gap-[2rem] typography-body-md text-text-light"
                     slot="list"
                   >
-                    <p class="font-Paragraph text-minParaFont">
+                    <p class="typography-body-sm text-text-light">
                       Feel free to message us anytime for expert assistance with
                       your loan needs. Our team is here to provide professional
                       advice, guide you through the loan process, and help you

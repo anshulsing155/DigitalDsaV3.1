@@ -106,7 +106,7 @@
 				{
 					btnName: 'Compare rates',
 					btnLink: '/get-started/how-can-we-help',
-					btnClass: 'btn-primary text-white dark:text-black',
+					btnClass: 'btn-primary text-black',
 					animation: true
 				}
 			]
@@ -152,10 +152,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index (list)}
 				<details
-					class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index <
-					list.length - 1
-						? 'border-b border-[var(--form-border)]'
-						: ''} "
+					class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
 				>
 					<summary
 						class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -163,7 +160,7 @@
 					>
 						<div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="">{list}</h2>
-							<div class="icon-container justify-self-end text-mobSubHead">
+							<div class="icon-container justify-self-end typography-h3">
 								<span><i class="fa-solid fa-angle-down faq-icon text-darkColor-contrast transition-transform duration-300"></i></span>
 							</div>
 						</div>
@@ -176,7 +173,7 @@
 							/>
 						</div>
 					{:else if index == 1}
-						<div id="start" class=" bg-white text-black">
+						<div id="start" class="bg-white text-black">
 							<AboveTitleWithLeftIconCard
 								contents={content.start.contents}
 							/>

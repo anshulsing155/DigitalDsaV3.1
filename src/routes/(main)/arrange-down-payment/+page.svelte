@@ -223,7 +223,7 @@
       <!-- your savings -->
       <div data-section="first" id="first" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
         >
           <h2
             class="typography-h2 text-black dark:text-white"
@@ -236,7 +236,7 @@
         </div>
         <!-- planning -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -342,11 +342,11 @@
                 icon: "/icons/FD.svg",
                 altName: "fd-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Invest:</span> Open an FD or RD account with a bank or post office. Choose a tenure and deposit amount.`,
-                  `<span class="font-FourthHead">Duration:</span> 6 months to 5 years`,
-                  `<span class="font-FourthHead">Returns:</span> 5-7% per annum`,
-                  `<span class="font-FourthHead">Risk:</span> Low (returns are guaranteed)`,
-                  `<span class="font-FourthHead">Best for:</span> Those looking for safe investments with predictable returns.`,
+                  `<span class="font-semibold">How to Invest:</span> Open an FD or RD account with a bank or post office. Choose a tenure and deposit amount.`,
+                  `<span class="font-semibold">Duration:</span> 6 months to 5 years`,
+                  `<span class="font-semibold">Returns:</span> 5-7% per annum`,
+                  `<span class="font-semibold">Risk:</span> Low (returns are guaranteed)`,
+                  `<span class="font-semibold">Best for:</span> Those looking for safe investments with predictable returns.`,
                 ],
               },
               {
@@ -354,11 +354,11 @@
                 icon: "/icons/mutualFund.svg",
                 altName: "fund-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Invest:</span> Invest through a Systematic Investment Plan (SIP) or a lump sum via platforms like mutual fund websites or brokerage apps.`,
-                  `<span class="font-FourthHead">Duration:</span> 3-5 years for equity funds, 1-3 years for debt funds`,
-                  `<span class="font-FourthHead">Returns:</span> 10-15% per annum (historical average for equity funds)`,
-                  `<span class="font-FourthHead">Risk:</span> Medium to High (market fluctuations affect returns)`,
-                  `<span class="font-FourthHead">Best for:</span> Investors willing to take moderate risks for higher returns.`,
+                  `<span class="font-semibold">How to Invest:</span> Invest through a Systematic Investment Plan (SIP) or a lump sum via platforms like mutual fund websites or brokerage apps.`,
+                  `<span class="font-semibold">Duration:</span> 3-5 years for equity funds, 1-3 years for debt funds`,
+                  `<span class="font-semibold">Returns:</span> 10-15% per annum (historical average for equity funds)`,
+                  `<span class="font-semibold">Risk:</span> Medium to High (market fluctuations affect returns)`,
+                  `<span class="font-semibold">Best for:</span> Investors willing to take moderate risks for higher returns.`,
                 ],
               },
               {
@@ -366,11 +366,11 @@
                 icon: "/icons/stocks.svg",
                 altName: "stocks-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Invest:</span> Open a Demat and trading account, research companies, and invest in shares.`,
-                  `<span class="font-FourthHead">Duration:</span> 3+ years for stable returns`,
-                  `<span class="font-FourthHead">Returns:</span> 12-20% per annum (historically, but varies)`,
-                  `<span class="font-FourthHead">Risk:</span> High (stock market volatility)`,
-                  `<span class="font-FourthHead">Best for:</span> Those who can analyze the market and take calculated risks.`,
+                  `<span class="font-semibold">How to Invest:</span> Open a Demat and trading account, research companies, and invest in shares.`,
+                  `<span class="font-semibold">Duration:</span> 3+ years for stable returns`,
+                  `<span class="font-semibold">Returns:</span> 12-20% per annum (historically, but varies)`,
+                  `<span class="font-semibold">Risk:</span> High (stock market volatility)`,
+                  `<span class="font-semibold">Best for:</span> Those who can analyze the market and take calculated risks.`,
                 ],
               },
               {
@@ -378,11 +378,11 @@
                 icon: "/icons/financialProfile.svg",
                 altName: "profile-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Invest:</span> Buy undervalued properties and sell when prices appreciate.`,
-                  `<span class="font-FourthHead">Duration:</span> 2-5 years for decent appreciation`,
-                  `<span class="font-FourthHead">Returns:</span> 8-15% (depending on location and market conditions)`,
-                  `<span class="font-FourthHead">Risk:</span> Medium to High (depends on market trends and liquidity)`,
-                  `<span class="font-FourthHead">Best for:</span> Those with higher capital and a longer investment horizon.`,
+                  `<span class="font-semibold">How to Invest:</span> Buy undervalued properties and sell when prices appreciate.`,
+                  `<span class="font-semibold">Duration:</span> 2-5 years for decent appreciation`,
+                  `<span class="font-semibold">Returns:</span> 8-15% (depending on location and market conditions)`,
+                  `<span class="font-semibold">Risk:</span> Medium to High (depends on market trends and liquidity)`,
+                  `<span class="font-semibold">Best for:</span> Those with higher capital and a longer investment horizon.`,
                 ],
               },
               {
@@ -390,11 +390,11 @@
                 icon: "/icons/goldLoan.svg",
                 altName: "gold-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Invest:</span> Buy physical gold/silver, ETFs, or digital gold.`,
-                  `<span class="font-FourthHead">Duration:</span> 1-3 years`,
-                  `<span class="font-FourthHead">Returns:</span> 8-12% historically`,
-                  `<span class="font-FourthHead">Risk:</span> Medium (gold prices fluctuate)`,
-                  `<span class="font-FourthHead">Best for:</span> Those looking for a hedge against inflation.`,
+                  `<span class="font-semibold">How to Invest:</span> Buy physical gold/silver, ETFs, or digital gold.`,
+                  `<span class="font-semibold">Duration:</span> 1-3 years`,
+                  `<span class="font-semibold">Returns:</span> 8-12% historically`,
+                  `<span class="font-semibold">Risk:</span> Medium (gold prices fluctuate)`,
+                  `<span class="font-semibold">Best for:</span> Those looking for a hedge against inflation.`,
                 ],
               },
               {
@@ -402,11 +402,11 @@
                 icon: "/icons/apply.svg",
                 altName: "apply-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Invest:</span> Buy bonds through banks, stock exchanges, or bond platforms.`,
-                  `<span class="font-FourthHead">Duration:</span> 3-10 years`,
-                  `<span class="font-FourthHead">Returns:</span> 6-10% per annum`,
-                  `<span class="font-FourthHead">Risk:</span> Low to Medium (government bonds are safer than corporate bonds)`,
-                  `<span class="font-FourthHead">Best for:</span> Conservative investors seeking stable returns.`,
+                  `<span class="font-semibold">How to Invest:</span> Buy bonds through banks, stock exchanges, or bond platforms.`,
+                  `<span class="font-semibold">Duration:</span> 3-10 years`,
+                  `<span class="font-semibold">Returns:</span> 6-10% per annum`,
+                  `<span class="font-semibold">Risk:</span> Low to Medium (government bonds are safer than corporate bonds)`,
+                  `<span class="font-semibold">Best for:</span> Conservative investors seeking stable returns.`,
                 ],
               },
               {
@@ -414,11 +414,11 @@
                 icon: "/icons/crypto.svg",
                 altName: "crypto-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Invest:</span> Buy through cryptocurrency exchanges and hold for price appreciation.`,
-                  `<span class="font-FourthHead">Duration:</span> 1-5 years`,
-                  `<span class="font-FourthHead">Returns:</span> Unpredictable (potential for high gains or losses)`,
-                  `<span class="font-FourthHead">Risk:</span> Very High (extreme market fluctuations)`,
-                  `<span class="font-FourthHead">Best for:</span> Risk-tolerant investors willing to gamble for high returns.`,
+                  `<span class="font-semibold">How to Invest:</span> Buy through cryptocurrency exchanges and hold for price appreciation.`,
+                  `<span class="font-semibold">Duration:</span> 1-5 years`,
+                  `<span class="font-semibold">Returns:</span> Unpredictable (potential for high gains or losses)`,
+                  `<span class="font-semibold">Risk:</span> Very High (extreme market fluctuations)`,
+                  `<span class="font-semibold">Best for:</span> Risk-tolerant investors willing to gamble for high returns.`,
                 ],
               },
               {
@@ -426,11 +426,11 @@
                 icon: "/icons/clock.svg",
                 altName: "clock-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Invest:</span> Lend money through P2P platforms and earn interest.`,
-                  `<span class="font-FourthHead">Duration:</span> 1-3 years`,
-                  `<span class="font-FourthHead">Returns:</span> 10-15%`,
-                  `<span class="font-FourthHead">Risk:</span> Medium to High (borrower defaults can occur)`,
-                  `<span class="font-FourthHead">Best for:</span> Those looking for high returns outside traditional investments.`,
+                  `<span class="font-semibold">How to Invest:</span> Lend money through P2P platforms and earn interest.`,
+                  `<span class="font-semibold">Duration:</span> 1-3 years`,
+                  `<span class="font-semibold">Returns:</span> 10-15%`,
+                  `<span class="font-semibold">Risk:</span> Medium to High (borrower defaults can occur)`,
+                  `<span class="font-semibold">Best for:</span> Those looking for high returns outside traditional investments.`,
                 ],
               },
               {
@@ -438,11 +438,11 @@
                 icon: "/icons/personalLoan.svg",
                 altName: "loan-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Invest:</span> Open an account with a high-interest savings bank.`,
-                  `<span class="font-FourthHead">Duration:</span> No fixed duration (funds are liquid)`,
-                  `<span class="font-FourthHead">Returns:</span> 3-5%`,
-                  `<span class="font-FourthHead">Risk:</span> Low (safe and insured by banks)`,
-                  `<span class="font-FourthHead">Best for:</span> Keeping money safe while earning small returns.`,
+                  `<span class="font-semibold">How to Invest:</span> Open an account with a high-interest savings bank.`,
+                  `<span class="font-semibold">Duration:</span> No fixed duration (funds are liquid)`,
+                  `<span class="font-semibold">Returns:</span> 3-5%`,
+                  `<span class="font-semibold">Risk:</span> Low (safe and insured by banks)`,
+                  `<span class="font-semibold">Best for:</span> Keeping money safe while earning small returns.`,
                 ],
               },
               {
@@ -450,11 +450,11 @@
                 icon: "/icons/negotiate.svg",
                 altName: "negotiate-icon",
                 desc: [
-                  `<span class="font-FourthHead">How to Borrow:</span> Ask close family or friends for a loan with clear repayment terms.`,
-                  `<span class="font-FourthHead">Duration:</span> Flexible, depending on the agreement`,
-                  `<span class="font-FourthHead">Pay back:</span> Usually low or no interest`,
-                  `<span class="font-FourthHead">Risk:</span> Low (but could strain relationships if not repaid)`,
-                  `<span class="font-FourthHead">Best for:</span> Those needing quick access to funds without high-interest bank loans.`,
+                  `<span class="font-semibold">How to Borrow:</span> Ask close family or friends for a loan with clear repayment terms.`,
+                  `<span class="font-semibold">Duration:</span> Flexible, depending on the agreement`,
+                  `<span class="font-semibold">Pay back:</span> Usually low or no interest`,
+                  `<span class="font-semibold">Risk:</span> Low (but could strain relationships if not repaid)`,
+                  `<span class="font-semibold">Best for:</span> Those needing quick access to funds without high-interest bank loans.`,
                 ],
               },
             ],
@@ -465,7 +465,7 @@
       <!-- take loan -->
       <div data-section="loan" id="loan" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -494,10 +494,7 @@
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -505,7 +502,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -513,7 +510,7 @@
           {#if index == 0}
             <div id="first" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-black dark:text-white"
@@ -525,7 +522,7 @@
                 </p>
               </div>
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -540,10 +537,10 @@
                 <ul class="space-y-6">
                   {#each planning.listItems as list}
                     <li class="space-y-2">
-                      <h3 class="font-FourthHead text-paraFont">
+                      <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">{list.desc}</p>
+                      <p class="typography-body-sm text-text-light">{list.desc}</p>
                     </li>
                   {/each}
                 </ul>
@@ -631,11 +628,11 @@
                       icon: "/icons/FD.svg",
                       altName: "fd-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Invest:</span> Open an FD or RD account with a bank or post office. Choose a tenure and deposit amount.`,
-                        `<span class="font-FourthHead">Duration:</span> 6 months to 5 years`,
-                        `<span class="font-FourthHead">Returns:</span> 5-7% per annum`,
-                        `<span class="font-FourthHead">Risk:</span> Low (returns are guaranteed)`,
-                        `<span class="font-FourthHead">Best for:</span> Those looking for safe investments with predictable returns.`,
+                        `<span class="font-semibold">How to Invest:</span> Open an FD or RD account with a bank or post office. Choose a tenure and deposit amount.`,
+                        `<span class="font-semibold">Duration:</span> 6 months to 5 years`,
+                        `<span class="font-semibold">Returns:</span> 5-7% per annum`,
+                        `<span class="font-semibold">Risk:</span> Low (returns are guaranteed)`,
+                        `<span class="font-semibold">Best for:</span> Those looking for safe investments with predictable returns.`,
                       ],
                     },
                     {
@@ -643,11 +640,11 @@
                       icon: "/icons/mutualFund.svg",
                       altName: "fund-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Invest:</span> Invest through a Systematic Investment Plan (SIP) or a lump sum via platforms like mutual fund websites or brokerage apps.`,
-                        `<span class="font-FourthHead">Duration:</span> 3-5 years for equity funds, 1-3 years for debt funds`,
-                        `<span class="font-FourthHead">Returns:</span> 10-15% per annum (historical average for equity funds)`,
-                        `<span class="font-FourthHead">Risk:</span> Medium to High (market fluctuations affect returns)`,
-                        `<span class="font-FourthHead">Best for:</span> Investors willing to take moderate risks for higher returns.`,
+                        `<span class="font-semibold">How to Invest:</span> Invest through a Systematic Investment Plan (SIP) or a lump sum via platforms like mutual fund websites or brokerage apps.`,
+                        `<span class="font-semibold">Duration:</span> 3-5 years for equity funds, 1-3 years for debt funds`,
+                        `<span class="font-semibold">Returns:</span> 10-15% per annum (historical average for equity funds)`,
+                        `<span class="font-semibold">Risk:</span> Medium to High (market fluctuations affect returns)`,
+                        `<span class="font-semibold">Best for:</span> Investors willing to take moderate risks for higher returns.`,
                       ],
                     },
                     {
@@ -655,11 +652,11 @@
                       icon: "/icons/stocks.svg",
                       altName: "stocks-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Invest:</span> Open a Demat and trading account, research companies, and invest in shares.`,
-                        `<span class="font-FourthHead">Duration:</span> 3+ years for stable returns`,
-                        `<span class="font-FourthHead">Returns:</span> 12-20% per annum (historically, but varies)`,
-                        `<span class="font-FourthHead">Risk:</span> High (stock market volatility)`,
-                        `<span class="font-FourthHead">Best for:</span> Those who can analyze the market and take calculated risks.`,
+                        `<span class="font-semibold">How to Invest:</span> Open a Demat and trading account, research companies, and invest in shares.`,
+                        `<span class="font-semibold">Duration:</span> 3+ years for stable returns`,
+                        `<span class="font-semibold">Returns:</span> 12-20% per annum (historically, but varies)`,
+                        `<span class="font-semibold">Risk:</span> High (stock market volatility)`,
+                        `<span class="font-semibold">Best for:</span> Those who can analyze the market and take calculated risks.`,
                       ],
                     },
                     {
@@ -667,11 +664,11 @@
                       icon: "/icons/financialProfile.svg",
                       altName: "profile-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Invest:</span> Buy undervalued properties and sell when prices appreciate.`,
-                        `<span class="font-FourthHead">Duration:</span> 2-5 years for decent appreciation`,
-                        `<span class="font-FourthHead">Returns:</span> 8-15% (depending on location and market conditions)`,
-                        `<span class="font-FourthHead">Risk:</span> Medium to High (depends on market trends and liquidity)`,
-                        `<span class="font-FourthHead">Best for:</span> Those with higher capital and a longer investment horizon.`,
+                        `<span class="font-semibold">How to Invest:</span> Buy undervalued properties and sell when prices appreciate.`,
+                        `<span class="font-semibold">Duration:</span> 2-5 years for decent appreciation`,
+                        `<span class="font-semibold">Returns:</span> 8-15% (depending on location and market conditions)`,
+                        `<span class="font-semibold">Risk:</span> Medium to High (depends on market trends and liquidity)`,
+                        `<span class="font-semibold">Best for:</span> Those with higher capital and a longer investment horizon.`,
                       ],
                     },
                     {
@@ -679,11 +676,11 @@
                       icon: "/icons/goldLoan.svg",
                       altName: "gold-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Invest:</span> Buy physical gold/silver, ETFs, or digital gold.`,
-                        `<span class="font-FourthHead">Duration:</span> 1-3 years`,
-                        `<span class="font-FourthHead">Returns:</span> 8-12% historically`,
-                        `<span class="font-FourthHead">Risk:</span> Medium (gold prices fluctuate)`,
-                        `<span class="font-FourthHead">Best for:</span> Those looking for a hedge against inflation.`,
+                        `<span class="font-semibold">How to Invest:</span> Buy physical gold/silver, ETFs, or digital gold.`,
+                        `<span class="font-semibold">Duration:</span> 1-3 years`,
+                        `<span class="font-semibold">Returns:</span> 8-12% historically`,
+                        `<span class="font-semibold">Risk:</span> Medium (gold prices fluctuate)`,
+                        `<span class="font-semibold">Best for:</span> Those looking for a hedge against inflation.`,
                       ],
                     },
                     {
@@ -691,11 +688,11 @@
                       icon: "/icons/apply.svg",
                       altName: "apply-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Invest:</span> Buy bonds through banks, stock exchanges, or bond platforms.`,
-                        `<span class="font-FourthHead">Duration:</span> 3-10 years`,
-                        `<span class="font-FourthHead">Returns:</span> 6-10% per annum`,
-                        `<span class="font-FourthHead">Risk:</span> Low to Medium (government bonds are safer than corporate bonds)`,
-                        `<span class="font-FourthHead">Best for:</span> Conservative investors seeking stable returns.`,
+                        `<span class="font-semibold">How to Invest:</span> Buy bonds through banks, stock exchanges, or bond platforms.`,
+                        `<span class="font-semibold">Duration:</span> 3-10 years`,
+                        `<span class="font-semibold">Returns:</span> 6-10% per annum`,
+                        `<span class="font-semibold">Risk:</span> Low to Medium (government bonds are safer than corporate bonds)`,
+                        `<span class="font-semibold">Best for:</span> Conservative investors seeking stable returns.`,
                       ],
                     },
                     {
@@ -703,11 +700,11 @@
                       icon: "/icons/crypto.svg",
                       altName: "crypto-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Invest:</span> Buy through cryptocurrency exchanges and hold for price appreciation.`,
-                        `<span class="font-FourthHead">Duration:</span> 1-5 years`,
-                        `<span class="font-FourthHead">Returns:</span> Unpredictable (potential for high gains or losses)`,
-                        `<span class="font-FourthHead">Risk:</span> Very High (extreme market fluctuations)`,
-                        `<span class="font-FourthHead">Best for:</span> Risk-tolerant investors willing to gamble for high returns.`,
+                        `<span class="font-semibold">How to Invest:</span> Buy through cryptocurrency exchanges and hold for price appreciation.`,
+                        `<span class="font-semibold">Duration:</span> 1-5 years`,
+                        `<span class="font-semibold">Returns:</span> Unpredictable (potential for high gains or losses)`,
+                        `<span class="font-semibold">Risk:</span> Very High (extreme market fluctuations)`,
+                        `<span class="font-semibold">Best for:</span> Risk-tolerant investors willing to gamble for high returns.`,
                       ],
                     },
                     {
@@ -715,11 +712,11 @@
                       icon: "/icons/clock.svg",
                       altName: "clock-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Invest:</span> Lend money through P2P platforms and earn interest.`,
-                        `<span class="font-FourthHead">Duration:</span> 1-3 years`,
-                        `<span class="font-FourthHead">Returns:</span> 10-15%`,
-                        `<span class="font-FourthHead">Risk:</span> Medium to High (borrower defaults can occur)`,
-                        `<span class="font-FourthHead">Best for:</span> Those looking for high returns outside traditional investments.`,
+                        `<span class="font-semibold">How to Invest:</span> Lend money through P2P platforms and earn interest.`,
+                        `<span class="font-semibold">Duration:</span> 1-3 years`,
+                        `<span class="font-semibold">Returns:</span> 10-15%`,
+                        `<span class="font-semibold">Risk:</span> Medium to High (borrower defaults can occur)`,
+                        `<span class="font-semibold">Best for:</span> Those looking for high returns outside traditional investments.`,
                       ],
                     },
                     {
@@ -727,11 +724,11 @@
                       icon: "/icons/personalLoan.svg",
                       altName: "loan-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Invest:</span> Open an account with a high-interest savings bank.`,
-                        `<span class="font-FourthHead">Duration:</span> No fixed duration (funds are liquid)`,
-                        `<span class="font-FourthHead">Returns:</span> 3-5%`,
-                        `<span class="font-FourthHead">Risk:</span> Low (safe and insured by banks)`,
-                        `<span class="font-FourthHead">Best for:</span> Keeping money safe while earning small returns.`,
+                        `<span class="font-semibold">How to Invest:</span> Open an account with a high-interest savings bank.`,
+                        `<span class="font-semibold">Duration:</span> No fixed duration (funds are liquid)`,
+                        `<span class="font-semibold">Returns:</span> 3-5%`,
+                        `<span class="font-semibold">Risk:</span> Low (safe and insured by banks)`,
+                        `<span class="font-semibold">Best for:</span> Keeping money safe while earning small returns.`,
                       ],
                     },
                     {
@@ -739,11 +736,11 @@
                       icon: "/icons/negotiate.svg",
                       altName: "negotiate-icon",
                       desc: [
-                        `<span class="font-FourthHead">How to Borrow:</span> Ask close family or friends for a loan with clear repayment terms.`,
-                        `<span class="font-FourthHead">Duration:</span> Flexible, depending on the agreement`,
-                        `<span class="font-FourthHead">Pay back:</span> Usually low or no interest`,
-                        `<span class="font-FourthHead">Risk:</span> Low (but could strain relationships if not repaid)`,
-                        `<span class="font-FourthHead">Best for:</span> Those needing quick access to funds without high-interest bank loans.`,
+                        `<span class="font-semibold">How to Borrow:</span> Ask close family or friends for a loan with clear repayment terms.`,
+                        `<span class="font-semibold">Duration:</span> Flexible, depending on the agreement`,
+                        `<span class="font-semibold">Pay back:</span> Usually low or no interest`,
+                        `<span class="font-semibold">Risk:</span> Low (but could strain relationships if not repaid)`,
+                        `<span class="font-semibold">Best for:</span> Those needing quick access to funds without high-interest bank loans.`,
                       ],
                     },
                   ],
@@ -754,7 +751,7 @@
           {:else if index == 4}
             <div id="loan" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -769,10 +766,10 @@
                 <ul class="space-y-6">
                   {#each loan.listItems as list}
                     <li class="space-y-2">
-                      <h3 class="font-FourthHead text-paraFont">
+                      <h3 class="font-semibold typography-body-md">
                         {@html list.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-sm text-text-light">
                         {@html list.desc}
                       </p>
                     </li>
@@ -830,10 +827,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

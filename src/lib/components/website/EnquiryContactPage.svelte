@@ -427,7 +427,7 @@ notificationStore.set(null);
 
   <div class="grid md:grid-cols-2">
     <div class="flex flex-col gap-5 md:col-span-1">
-      <h2 class="font-ThirdHead text-mobSubHead md:text-miniHeadFont">
+      <h2 class="typography-h3 font-semibold md:typography-h2-md">
         {heading}
       </h2>
 
@@ -472,25 +472,25 @@ notificationStore.set(null);
                     }
                   }}
                   id="message"
-                  class="border-1 peer block w-full appearance-none border border-[#0000003A] bg-white py-[0.6rem] pl-[3rem] pr-4 font-Paragraph text-minParaFont md:text-paraFont resize-none text-black outline-none focus:border-btnBg focus:ring-0"
+                  class="border-1 peer block w-full appearance-none border border-[#0000003A] bg-white py-[0.6rem] pl-[3rem] pr-4 typography-body-sm text-text-light md:typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
                   placeholder="Describe your query atleast in 20 characters and 5 words."
                   rows="6"
                 ></textarea>
                 <label
                   for="message"
-                  class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 font-Paragraph text-paraFont text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                  class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
                 >
                   Describe your query
                 </label>
                 <div
-                  class="absolute top-0 left-0 flex h-full w-11 items-center justify-center px-2 font-FifthHead text-black"
+                  class="absolute top-0 left-0 flex h-full w-11 items-center justify-center px-2 font-semibold text-black"
                 >
                   <img src="/icons/mail-icon.png" alt="mail-icon" class="h-5" />
                 </div>
               </div>
               {#if errors.feedbackMsg}
                 <p
-                  class="text-dangerColor font-SubPara text-minParaFont text-start"
+                  class="text-dangerColor typography-body-sm text-start"
                 >
                   {errors.feedbackMsg._errors[0]}
                 </p>
@@ -509,7 +509,7 @@ notificationStore.set(null);
               />
               {#if errors.userName}
                 <p
-                  class="text-dangerColor font-SubPara text-minParaFont text-start"
+                  class="text-dangerColor typography-body-sm text-start"
                 >
                   {errors.userName._errors[0]}
                 </p>
@@ -530,7 +530,7 @@ notificationStore.set(null);
               />
               {#if errors.userMobile}
                 <p
-                  class="text-dangerColor font-SubPara text-minParaFont text-start"
+                  class="text-dangerColor typography-body-sm text-start"
                 >
                   {errors.userMobile._errors[0]}
                 </p>
@@ -538,7 +538,7 @@ notificationStore.set(null);
             </div>
 
             <div
-              class="flex flex-col font-SubPara text-minParaFont text-gray-500"
+              class="flex flex-col typography-body-sm text-gray-500"
             >
               <p>We'll contact you.</p>
               <p>Our respective representative will call you on this number.</p>
@@ -551,10 +551,10 @@ notificationStore.set(null);
                   class="h-[45%] flex flex-col justify-center items-center"
                   in:fly={{ x: 100, duration: 400 }}
                 >
-                  <h1 class="font-FourthHead text-minSubHead">
+                  <h1 class="font-semibold typography-h3">
                     OTP Verification
                   </h1>
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-sm text-text-light">
                     Enter the OTP you received at <br /><span
                       class="font-HeadingBold">{feedbackData.userMobile}</span
                     >
@@ -566,7 +566,7 @@ notificationStore.set(null);
                       {#each otp as digit, index}
                         <input
                           id={`otp-input-${index}`}
-                          class="h-12 w-12 rounded border border-[#0000003A] bg-white text-center font-Paragraph text-paraFont text-black outline-none focus:border-btnBg"
+                          class="h-12 w-12 rounded border border-[#0000003A] bg-white text-center typography-body-md text-black outline-none focus:border-btnBg"
                           type="number"
                           maxlength="1"
                           bind:value={otp[index]}
@@ -583,7 +583,7 @@ notificationStore.set(null);
                         type="button"
                         onclick={() => retryOTP()}
                         onkeydown={(e) => handleEnter(e, retryOTP)}
-                        class="font-FifthHead text-miniSubHead text-[#006EBE]"
+                        class="font-semibold text-miniSubHead text-[#006EBE]"
                         disabled={isResendDisabled}
                         >{isResendDisabled
                           ? `Resend OTP in ${countdown}s`
@@ -596,7 +596,7 @@ notificationStore.set(null);
                       {#if isWaiting}
                         <button
                           type="button"
-                          class="w-full rounded-full px-[2rem] py-3 font-Paragraph text-subParaFont hover:opacity-90"
+                          class="w-full rounded-full px-[2rem] py-3 typography-body-md text-text-light hover:opacity-90"
                           aria-label="Verifying OTP"
                           ><div class="flex text-center">
                             <div class="loader"></div>
@@ -608,7 +608,7 @@ notificationStore.set(null);
                           onclick={() => {
                             verifyOTP();}}
                           onkeydown={(e) => handleEnter(e, verifyOTP)}
-                          class="w-full rounded bg-btnBg py-[0.7rem] font-Paragraph text-subParaFont hover:opacity-90"
+                          class="w-full rounded bg-btnBg py-[0.7rem] typography-body-md text-text-light hover:opacity-90"
                           >Verify OTP <span
                             ><i class="fa-regular fa-paper-plane"></i></span
                           ></button
@@ -616,7 +616,7 @@ notificationStore.set(null);
                       {/if}
                       {#if $notificationStore}
                         <p
-                          class="font-SubPara text-leastMiniFont {$notificationStore.color ||
+                          class="typography-body-sm text-leastMiniFont {$notificationStore.color ||
                             'text-green-500'}"
                         >
                           {$notificationStore.message}
@@ -628,8 +628,8 @@ notificationStore.set(null);
               </NewPopUp>
             {/if}
 
-            <div class=" my-5 w-full mx-auto space-y-6">
-              <div class=" grid place-content-end">
+            <div class="my-5 w-full mx-auto space-y-6">
+              <div class="grid place-content-end">
                 <ReCaptcha
                   ontoken={handleToken}
                   bind:this={recaptchaComponent}
@@ -639,7 +639,7 @@ notificationStore.set(null);
               {#if isWaiting}
                 <button
                   type="button"
-                  class="text-white bg-gray-200 font-Paragraph focus:outline-none text-minParaFont md:text-subParaFont w-full px-5 py-2.5 text-center cursor-not-allowed"
+                  class="text-white bg-gray-200 typography-body-md focus:outline-none typography-body-sm md:typography-body-md w-full px-5 py-2.5 text-center cursor-not-allowed"
                   disabled
                   aria-label="Submitting query"
                 >
@@ -650,8 +650,7 @@ notificationStore.set(null);
               {:else}
                 <button
                   type="submit"
-                  class="text-white focus:outline-none font-Paragraph text-minParaFont md:text-subParaFont w-full px-5 py-2.5 text-center
-                  {hasErrors ||
+                  class="text-white focus:outline-none typography-body-sm text-text-light md:typography-body-md w-full px-5 py-2.5 text-center {hasErrors ||
                   !recaptchaToken ||
                   !feedbackData.userMobile ||
                   !feedbackData.feedbackMsg ||
@@ -669,7 +668,7 @@ notificationStore.set(null);
               {/if}
               {#if errors.recaptcha}
                 <p
-                  class="text-dangerColor font-SubPara text-minParaFont text-center"
+                  class="text-dangerColor typography-body-sm text-center"
                 >
                   {errors.recaptcha._errors[0]}
                 </p>

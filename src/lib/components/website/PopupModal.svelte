@@ -41,8 +41,8 @@
 
         <!-- Dynamic Text Section -->
         <div class="flex flex-col gap-4 text-center">
-          <h2 class="font-FourthHead text-mobSubHead">{@html content.title}</h2>
-          <p class="font-SubPara text-minParaFont md:text-subParaFont">
+          <h2 class="typography-h3 text-black">{@html content.title}</h2>
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             {@html content.subTitle}
           </p>
           <div>
@@ -56,7 +56,7 @@
             <button
               onclick={onClose}
               type="button"
-              class="w-full py-2 font-FifthHead text-paraFont bg-btnBg"
+              class="w-full py-2 typography-button bg-btnBg text-black rounded-lg"
             >
               OK
             </button>

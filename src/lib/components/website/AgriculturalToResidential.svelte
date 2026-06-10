@@ -97,11 +97,11 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/agriZone.svg' alt='purpose icon'>Agricultural Zone </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/agriZone.svg' alt='purpose icon'>Agricultural Zone </span>":
             ["Green", "Only farm-related structures", "10%–15% of total area"],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/residential.svg' alt='residential icon'>Residential Zone</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/residential.svg' alt='residential icon'>Residential Zone</span>":
             [
               "Yellow",
               "Houses, apartments, small commercial units",
@@ -109,7 +109,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/bt-2.svg' alt='commercial icon'>Commercial Zone	</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/bt-2.svg' alt='commercial icon'>Commercial Zone	</span>":
             [
               "Blue",
               "Shops, offices, hotels, business spaces	",
@@ -117,7 +117,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='construction icon'>Industrial Zone</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='construction icon'>Industrial Zone</span>":
             [
               "Purple",
               "Factories, warehouses, and industrial units",
@@ -125,7 +125,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/problem.svg' alt='problem icon'>Restricted Zone</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/problem.svg' alt='problem icon'>Restricted Zone</span>":
             ["Red", "No construction allowed", "Not Applicable"],
         },
       ],
@@ -236,7 +236,7 @@
         >
           <div class="space-y-[3rem]">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+              class="grid mb-[4rem] typography-h2 text-center text-text-main"
             >
               Key Factors to Consider Before <br />
               <span
@@ -248,10 +248,10 @@
             <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <li>
                 <div class="space-y-3">
-                  <h3 class="font-ThirdHead text-minSubHead">
+                  <h3 class="typography-h3 font-semibold text-text-main">
                     1. Zoning & Land Use Regulations
                   </h3>
-                  <ul class="list-disc font-para text-subParaFont ml-[2rem]">
+                  <ul class="list-disc typography-body-md text-text-light ml-[2rem]">
                     <li>
                       Check local zoning laws to see if the land is designated
                       for agricultural use only.
@@ -262,10 +262,10 @@
               </li>
               <li>
                 <div class="space-y-3">
-                  <h3 class="font-ThirdHead text-minSubHead">
+                  <h3 class="typography-h3 font-semibold text-text-main">
                     2. Land Conversion Process
                   </h3>
-                  <ul class="list-disc font-para text-subParaFont ml-[2rem]">
+                  <ul class="list-disc typography-body-md text-text-light ml-[2rem]">
                     <li>
                       Research the legal requirements to convert agricultural
                       land to residential or commercial use.
@@ -276,10 +276,10 @@
               </li>
               <li>
                 <div class="space-y-3">
-                  <h3 class="font-ThirdHead text-minSubHead">
+                  <h3 class="typography-h3 font-semibold text-text-main">
                     3. Environmental Impact & Restrictions
                   </h3>
-                  <ul class="list-disc font-para text-subParaFont ml-[2rem]">
+                  <ul class="list-disc typography-body-md text-text-light ml-[2rem]">
                     <li>Check for protected ecosystems or wildlife zones.</li>
                     <li>Ensure compliance with environmental regulations.</li>
                   </ul>
@@ -287,10 +287,10 @@
               </li>
               <li>
                 <div class="space-y-3">
-                  <h3 class="font-ThirdHead text-minSubHead">
+                  <h3 class="typography-h3 font-semibold text-text-main">
                     4. Infrastructure & Accessibility
                   </h3>
-                  <ul class="list-disc font-para text-subParaFont ml-[2rem]">
+                  <ul class="list-disc typography-body-md text-text-light ml-[2rem]">
                     <li>
                       Assess road access and proximity to essential services.
                     </li>
@@ -300,10 +300,10 @@
               </li>
               <li>
                 <div class="space-y-3">
-                  <h3 class="font-ThirdHead text-minSubHead">
+                  <h3 class="typography-h3 font-semibold text-text-main">
                     5. Community & Legal Challenges
                   </h3>
-                  <ul class="list-disc font-para text-subParaFont ml-[2rem]">
+                  <ul class="list-disc typography-body-md text-text-light ml-[2rem]">
                     <li>
                       Be aware of objections from local communities or
                       authorities.
@@ -332,12 +332,12 @@
             cardHeading: "Land conversion process",
           }}
         >
-          <div class="font-Paragraph text-minParaFont">
+          <div class="typography-body-md text-text-light">
             <ul class="list-disc space-y-4">
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
-                <p class="font-para text-subParaFont">
-                  <span class="font-FourthHead">Check Zoning Regulations –</span
+                <p class="typography-body-md text-text-light">
+                  <span class="font-semibold">Check Zoning Regulations –</span
                   > Before initiating the conversion process, verify the land’s zoning
                   status in the revenue records. The local development authority
                   or municipal corporation determines land use based on master plans.
@@ -345,35 +345,35 @@
               </li>
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
-                <p class="font-para text-subParaFont">
-                  <span class="font-FourthHead"
+                <p class="typography-body-md text-text-light">
+                  <span class="font-semibold"
                     >Obtain No Objection Certificate (NOC) –</span
                   >A No Objection Certificate (NOC) may be required from various
                   departments, including:
                   <br />
-                  <span class="font-FourthHead">Revenue Department – </span>To
+                  <span class="font-semibold">Revenue Department – </span>To
                   confirm ownership and land classification.
                   <br />
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Agricultural Department –
                   </span>To verify if the land can be converted.
                   <br />
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Local Municipality or Panchayat –
                   </span>To ensure alignment with development plans.
                 </p>
               </li>
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
-                <p class="font-para text-subParaFont">
-                  <span class="font-FourthHead"
+                <p class="typography-body-md text-text-light">
+                  <span class="font-semibold"
                     >Apply for Land Conversion –
                   </span>
                   Submit an application to the local revenue authority (e.g., Tehsildar,
                   District Collector, or Town Planning Department) along with the
                   necessary documents:
                   <br />
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Title deed of the land, <br /> Sale deed (if applicable),
                     <br />
                     Land records and tax receipts, <br /> Copy of zoning
@@ -383,8 +383,8 @@
               </li>
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
-                <p class="font-para text-subParaFont">
-                  <span class="font-FourthHead">Pay Conversion Fees – </span> The
+                <p class="typography-body-md text-text-light">
+                  <span class="font-semibold">Pay Conversion Fees – </span> The
                   state government charges a land conversion fee, which varies by
                   state and location. Fees are based on the land area and the difference
                   in land use categories.
@@ -392,8 +392,8 @@
               </li>
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
-                <p class="font-para text-subParaFont">
-                  <span class="font-FourthHead"
+                <p class="typography-body-md text-text-light">
+                  <span class="font-semibold"
                     >Inspection and Verification –
                   </span> Government officials inspect the land to ensure that conversion
                   aligns with local zoning laws and that there are no environmental
@@ -402,29 +402,29 @@
               </li>
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
-                <p class="font-para text-subParaFont">
-                  <span class="font-FourthHead"
+                <p class="typography-body-md text-text-light">
+                  <span class="font-semibold"
                     >Issuance of Conversion Order –
                   </span>
                   Once approved, the revenue authority issues an official
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Land Conversion Certificate</span
                   >
                   or
-                  <span class="font-FourthHead"
+                  <span class="font-semibold"
                     >Change of Land Use (CLU) certificate</span
                   >, legally reclassifying the land.
                 </p>
               </li>
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
-                <p class="font-para text-subParaFont">
-                  <span class="font-FourthHead">Update Land Records – </span>
+                <p class="typography-body-md text-text-light">
+                  <span class="font-semibold">Update Land Records – </span>
                   After conversion, update the records at the revenue office to reflect
                   the new land use in official documents like the
-                  <span class="font-FourthHead">Record of Rights (ROR)</span>
+                  <span class="font-semibold">Record of Rights (ROR)</span>
                   and
-                  <span class="font-FourthHead">mutation records</span>.
+                  <span class="font-semibold">mutation records</span>.
                 </p>
               </li>
             </ul>
@@ -678,10 +678,7 @@
     <div class="lg:hidden block">
       {#each ["Importance & benefits", "Land conversion process", "Challenges & finances", "Tools & calculators"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -689,7 +686,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -726,7 +723,7 @@
               >
                 <div class="space-y-[3rem]">
                   <h2
-                    class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                    class="grid mb-[4rem] typography-h2 text-center text-text-main"
                   >
                     Key Factors to Consider Before <br />
                     <span
@@ -738,11 +735,11 @@
                   <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <li>
                       <div class="space-y-3">
-                        <h3 class="font-ThirdHead text-minSubHead">
+                        <h3 class="typography-h3 font-semibold text-text-main">
                           1. Zoning & Land Use Regulations
                         </h3>
                         <ul
-                          class="list-disc font-para text-subParaFont ml-[2rem]"
+                          class="list-disc typography-body-md text-text-light ml-[2rem]"
                         >
                           <li>
                             Check local zoning laws to see if the land is
@@ -756,11 +753,11 @@
                     </li>
                     <li>
                       <div class="space-y-3">
-                        <h3 class="font-ThirdHead text-minSubHead">
+                        <h3 class="typography-h3 font-semibold text-text-main">
                           2. Land Conversion Process
                         </h3>
                         <ul
-                          class="list-disc font-para text-subParaFont ml-[2rem]"
+                          class="list-disc typography-body-md text-text-light ml-[2rem]"
                         >
                           <li>
                             Research the legal requirements to convert
@@ -774,11 +771,11 @@
                     </li>
                     <li>
                       <div class="space-y-3">
-                        <h3 class="font-ThirdHead text-minSubHead">
+                        <h3 class="typography-h3 font-semibold text-text-main">
                           3. Environmental Impact & Restrictions
                         </h3>
                         <ul
-                          class="list-disc font-para text-subParaFont ml-[2rem]"
+                          class="list-disc typography-body-md text-text-light ml-[2rem]"
                         >
                           <li>
                             Check for protected ecosystems or wildlife zones.
@@ -791,11 +788,11 @@
                     </li>
                     <li>
                       <div class="space-y-3">
-                        <h3 class="font-ThirdHead text-minSubHead">
+                        <h3 class="typography-h3 font-semibold text-text-main">
                           4. Infrastructure & Accessibility
                         </h3>
                         <ul
-                          class="list-disc font-para text-subParaFont ml-[2rem]"
+                          class="list-disc typography-body-md text-text-light ml-[2rem]"
                         >
                           <li>
                             Assess road access and proximity to essential
@@ -809,11 +806,11 @@
                     </li>
                     <li>
                       <div class="space-y-3">
-                        <h3 class="font-ThirdHead text-minSubHead">
+                        <h3 class="typography-h3 font-semibold text-text-main">
                           5. Community & Legal Challenges
                         </h3>
                         <ul
-                          class="list-disc font-para text-subParaFont ml-[2rem]"
+                          class="list-disc typography-body-md text-text-light ml-[2rem]"
                         >
                           <li>
                             Be aware of objections from local communities or
@@ -844,7 +841,7 @@
                   cardHeading: "Land conversion process",
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-md text-text-light">
                   <ul class="list-disc space-y-4">
                     <li class="flex items-start gap-1">
                       <img
@@ -852,8 +849,8 @@
                         alt="circle-check-icon"
                         class="h-4 mt-1"
                       />
-                      <p class="font-para text-subParaFont">
-                        <span class="font-FourthHead"
+                      <p class="typography-body-md text-text-light">
+                        <span class="font-semibold"
                           >Check Zoning Regulations –</span
                         > Before initiating the conversion process, verify the land’s
                         zoning status in the revenue records. The local development
@@ -867,21 +864,21 @@
                         alt="circle-check-icon"
                         class="h-4 mt-1"
                       />
-                      <p class="font-para text-subParaFont">
-                        <span class="font-FourthHead"
+                      <p class="typography-body-md text-text-light">
+                        <span class="font-semibold"
                           >Obtain No Objection Certificate (NOC) –</span
                         >A No Objection Certificate (NOC) may be required from
                         various departments, including:
                         <br />
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Revenue Department –
                         </span>To confirm ownership and land classification.
                         <br />
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Agricultural Department –
                         </span>To verify if the land can be converted.
                         <br />
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Local Municipality or Panchayat –
                         </span>To ensure alignment with development plans.
                       </p>
@@ -892,15 +889,15 @@
                         alt="circle-check-icon"
                         class="h-4 mt-1"
                       />
-                      <p class="font-para text-subParaFont">
-                        <span class="font-FourthHead"
+                      <p class="typography-body-md text-text-light">
+                        <span class="font-semibold"
                           >Apply for Land Conversion –
                         </span>
                         Submit an application to the local revenue authority (e.g.,
                         Tehsildar, District Collector, or Town Planning Department)
                         along with the necessary documents:
                         <br />
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Title deed of the land, <br /> Sale deed (if
                           applicable),
                           <br />
@@ -916,8 +913,8 @@
                         alt="circle-check-icon"
                         class="h-4 mt-1"
                       />
-                      <p class="font-para text-subParaFont">
-                        <span class="font-FourthHead"
+                      <p class="typography-body-md text-text-light">
+                        <span class="font-semibold"
                           >Pay Conversion Fees –
                         </span> The state government charges a land conversion fee,
                         which varies by state and location. Fees are based on the
@@ -930,8 +927,8 @@
                         alt="circle-check-icon"
                         class="h-4 mt-1"
                       />
-                      <p class="font-para text-subParaFont">
-                        <span class="font-FourthHead"
+                      <p class="typography-body-md text-text-light">
+                        <span class="font-semibold"
                           >Inspection and Verification –
                         </span> Government officials inspect the land to ensure that
                         conversion aligns with local zoning laws and that there are
@@ -944,16 +941,16 @@
                         alt="circle-check-icon"
                         class="h-4 mt-1"
                       />
-                      <p class="font-para text-subParaFont">
-                        <span class="font-FourthHead"
+                      <p class="typography-body-md text-text-light">
+                        <span class="font-semibold"
                           >Issuance of Conversion Order –
                         </span>
                         Once approved, the revenue authority issues an official
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Land Conversion Certificate</span
                         >
                         or
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Change of Land Use (CLU) certificate</span
                         >, legally reclassifying the land.
                       </p>
@@ -964,17 +961,17 @@
                         alt="circle-check-icon"
                         class="h-4 mt-1"
                       />
-                      <p class="font-para text-subParaFont">
-                        <span class="font-FourthHead"
+                      <p class="typography-body-md text-text-light">
+                        <span class="font-semibold"
                           >Update Land Records –
                         </span>
                         After conversion, update the records at the revenue office
                         to reflect the new land use in official documents like the
-                        <span class="font-FourthHead"
+                        <span class="font-semibold"
                           >Record of Rights (ROR)</span
                         >
                         and
-                        <span class="font-FourthHead">mutation records</span>.
+                        <span class="font-semibold">mutation records</span>.
                       </p>
                     </li>
                   </ul>
@@ -1289,10 +1286,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

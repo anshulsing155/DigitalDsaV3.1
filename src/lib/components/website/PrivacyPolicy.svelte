@@ -189,7 +189,7 @@
   <PageFullTextDesign {pageData}>
     <div class="hidden lg:block">
       <StickyNavbar navList={subList} {activeSection} />
-      <div class=" lg:px-[4rem]">
+      <div class="lg:px-[4rem]">
         <div
           class="border-b border-dividerColor"
           id="aboutPrivacy"
@@ -239,13 +239,10 @@
         </div>
       </div>
     </div>
-    <div class=" lg:hidden">
+    <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-[1rem] py-[1.5rem]"
@@ -258,11 +255,11 @@
           </summary>
 
           {#if index == 0}
-            <div class=" bg-white text-black" id="aboutPrivacy">
+            <div class="bg-white text-black" id="aboutPrivacy">
               <ThingsYouShould thinkKnow={aboutPrivacy} />
             </div>
           {:else if index == 1}
-            <div id="dataProcessing" class=" bg-white text-black">
+            <div id="dataProcessing" class="bg-white text-black">
               <div class="border-b border-dividerColor">
                 <ThingsYouShould thinkKnow={dataProcessing} disc="list-disc" />
               </div>
@@ -274,19 +271,19 @@
               </div>
             </div>
           {:else if index == 2}
-            <div class=" bg-white text-black" id="usage">
+            <div class="bg-white text-black" id="usage">
               <ThingsYouShould thinkKnow={usageInformation} disc="list-disc" />
             </div>
           {:else if index == 3}
-            <div class=" bg-white text-black" id="disclosure">
+            <div class="bg-white text-black" id="disclosure">
               <ThingsYouShould thinkKnow={disclosure} disc="list-disc" />
             </div>
           {:else if index == 4}
-            <div class=" bg-white text-black" id="right">
+            <div class="bg-white text-black" id="right">
               <ThingsYouShould thinkKnow={privacyRight} disc="list-disc" />
             </div>
           {:else if index == 5}
-            <div id="navigation" class=" bg-white text-black">
+            <div id="navigation" class="bg-white text-black">
               <div class="border-b border-dividerColor">
                 <ThingsYouShould
                   thinkKnow={navigatingBeyond}

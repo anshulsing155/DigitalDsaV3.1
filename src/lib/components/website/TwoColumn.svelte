@@ -33,7 +33,7 @@
       <img
         src={cardImage}
         alt={cardAltName}
-        class=" w-full object-cover object-top h-[35svh] lg:h-full"
+        class="w-full object-cover object-top h-[35svh] lg:h-full"
         style="aspect-ratio: 5 / {imageHeight};"
       />
     </div>

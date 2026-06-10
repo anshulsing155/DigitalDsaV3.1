@@ -100,7 +100,7 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> NBFCs (Non-Banking Financial Companies) </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> NBFCs (Non-Banking Financial Companies) </span>":
             [
               "⭐⭐⭐",
               "Moderate to High",
@@ -112,7 +112,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>HFCs (Housing Finance Companies)</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>HFCs (Housing Finance Companies)</span>":
             [
               "⭐⭐",
               "Moderate",
@@ -124,7 +124,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Loan Against Property (LAP)</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Loan Against Property (LAP)</span>":
             [
               "⭐⭐",
               "Low to Moderate",
@@ -136,7 +136,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Gold Loan</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Gold Loan</span>":
             [
               "⭐⭐⭐⭐",
               "Low to Moderate",
@@ -148,7 +148,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Credit Unions & Cooperative Societies</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Credit Unions & Cooperative Societies</span>":
             [
               "⭐⭐",
               "Low to Moderate",
@@ -160,7 +160,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='home icon'>Friends & Family Loan</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='home icon'>Friends & Family Loan</span>":
             [
               "⭐⭐⭐⭐",
               "None to Low",
@@ -181,47 +181,47 @@
       {
         heading: "Limited availability",
         topPara: `Plot loans are less common than home loans, limiting options for borrowers.`,
-        para: `<span class="font-FourthHead">💡Solution:</span> Plot loans are less common than home loans, limiting options for borrowers.`,
+        para: `<span class="font-semibold">💡Solution:</span> Plot loans are less common than home loans, limiting options for borrowers.`,
       },
       {
         heading: "Location restrictions",
         topPara: `Lenders favor plots in developed areas, making some locations ineligible for financing.`,
-        para: `<span class="font-FourthHead">💡Solution:</span> Choose a well-established area that meets lender criteria. Consult a real estate agent or financial advisor for insights.`,
+        para: `<span class="font-semibold">💡Solution:</span> Choose a well-established area that meets lender criteria. Consult a real estate agent or financial advisor for insights.`,
       },
       {
         heading: "High down payment",
         topPara: `Plot-only loans often require 20-30% down, making them a financial burden.`,
-        para: `<span class="font-FourthHead">💡Solution:</span> Save more or seek lenders with flexible terms and lower LTV ratios.`,
+        para: `<span class="font-semibold">💡Solution:</span> Save more or seek lenders with flexible terms and lower LTV ratios.`,
       },
       {
         heading: "Higher interest rates",
         topPara: `Plot-only loans have higher interest rates due to increased risk and lack of collateral.`,
-        para: `<span class="font-FourthHead">💡Solution:</span> Compare rates, negotiate, or improve your credit score.`,
+        para: `<span class="font-semibold">💡Solution:</span> Compare rates, negotiate, or improve your credit score.`,
       },
       {
         heading: "Shorter loan tenure",
         topPara: `Plot loans typically have 5-10 year terms, leading to higher monthly payments.`,
-        para: `<span class="font-FourthHead">💡Solution:</span> Assess affordability and explore longer tenure options or alternative financing.`,
+        para: `<span class="font-semibold">💡Solution:</span> Assess affordability and explore longer tenure options or alternative financing.`,
       },
       {
         heading: "Mandatory construction clause",
         topPara: `Some plot loans require construction to start within a set timeframe. Failure to comply may lead to penalties or loan cancellation.`,
-        para: `<span class="font-FourthHead">💡Solution:</span> Plan ahead, secure approvals, and stay on schedule to avoid issues.`,
+        para: `<span class="font-semibold">💡Solution:</span> Plan ahead, secure approvals, and stay on schedule to avoid issues.`,
       },
       {
         heading: "Strict eligibility criteria",
         topPara: `Lenders require a high credit score, specific income levels, and strong repayment ability.`,
-        para: `<span class="font-FourthHead">💡Solution:</span> Improve your credit score or get a co-signer to boost approval chances.`,
+        para: `<span class="font-semibold">💡Solution:</span> Improve your credit score or get a co-signer to boost approval chances.`,
       },
       {
         heading: "Legal & title issues",
         topPara: `Unclear titles and legal complications can hinder plot loan approval. Lenders require a dispute-free title.`,
-        para: `<span class="font-FourthHead">💡Solution:</span> Conduct a title search and resolve issues beforehand. Consult a legal expert to ensure a clear title.`,
+        para: `<span class="font-semibold">💡Solution:</span> Conduct a title search and resolve issues beforehand. Consult a legal expert to ensure a clear title.`,
       },
       {
         heading: "Prepayment & foreclosure charges",
         topPara: `Plot loans often have penalties for early repayment or foreclosure, limiting financial flexibility.`,
-        para: `<span class="font-FourthHead">💡Solution:</span> Review loan terms for such clauses, negotiate lower penalties, or opt for a lender with flexible terms.`,
+        para: `<span class="font-semibold">💡Solution:</span> Review loan terms for such clauses, negotiate lower penalties, or opt for a lender with flexible terms.`,
       },
     ],
   };
@@ -338,7 +338,7 @@
         >
           <div class="flex flex-col gap-[2rem] lg:gap-[4rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               {@html challenges.heading}
             </h2>
@@ -350,14 +350,14 @@
                   class="grid grid-rows-8 gap-4 rounded shadow-[10px_10px_10px_rgba(0,0,0,0.15)]"
                 >
                   <!-- shadow-[10px_10px_25px_rgba(0,0,0,0.2)] -->
-                  <h2 class="row-span-2 font-ThirdHead text-minSubHead p-4">
+                  <h2 class="row-span-2 typography-h3 font-semibold text-text-main p-4">
                     {@html listItem.heading}
                   </h2>
-                  <p class="row-span-3 font-Paragraph text-subParaFont p-4">
+                  <p class="row-span-3 typography-body-md text-text-light p-4">
                     {@html listItem.topPara}
                   </p>
                   <p
-                    class="row-span-3 font-Paragraph text-subParaFont bg-black text-white p-4 rounded-b-lg"
+                    class="row-span-3 typography-body-md text-text-light bg-black text-white p-4 rounded-b-lg"
                   >
                     {@html listItem.para}
                   </p>
@@ -449,7 +449,7 @@
         >
           <div class="">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+              class="grid mb-[4rem] typography-h2 text-text-main text-center"
             >
               Comparison of Alternative Financing Options for Buying a Plot
             </h2>
@@ -481,18 +481,18 @@
               {
                 heading: "Lack of regulatory oversight",
 
-                topPara: `⚠️<span class="font-FourthHead">Risk:</span> Alternative financing methods may lack regulatory scrutiny, increasing the risk of fraud or unclear terms.`,
-                para: `💡<span class="font-FourthHead">How to Avoid:</span> Research the lender’s credentials, ensure they are licensed, and review the loan contract for hidden fees or unfair clauses.`,
+                topPara: `⚠️<span class="font-semibold">Risk:</span> Alternative financing methods may lack regulatory scrutiny, increasing the risk of fraud or unclear terms.`,
+                para: `💡<span class="font-semibold">How to Avoid:</span> Research the lender’s credentials, ensure they are licensed, and review the loan contract for hidden fees or unfair clauses.`,
               },
               {
                 heading: "High-interest rates and hidden fees",
-                topPara: `⚠️<span class="font-FourthHead">Risk:</span> Alternative lenders may charge higher interest rates and hidden fees, leading to unmanageable debt.`,
-                para: `💡<span class="font-FourthHead">How to Avoid:</span> Compare rates, fees, and terms, and ensure all costs are disclosed upfront. Calculate the total repayment amount to ensure it fits your budget.`,
+                topPara: `⚠️<span class="font-semibold">Risk:</span> Alternative lenders may charge higher interest rates and hidden fees, leading to unmanageable debt.`,
+                para: `💡<span class="font-semibold">How to Avoid:</span> Compare rates, fees, and terms, and ensure all costs are disclosed upfront. Calculate the total repayment amount to ensure it fits your budget.`,
               },
               {
                 heading: "Uncertain or Unfavorable Loan Terms",
-                topPara: `⚠️<span class="font-FourthHead">Risk:</span> Alternative financing may have unclear terms, like short repayment periods or variable interest rates, leading to financial strain.`,
-                para: `💡<span class="font-FourthHead">How to Avoid:</span> Get professional advice, negotiate clearer terms, and ensure the repayment schedule is realistic and manageable.`,
+                topPara: `⚠️<span class="font-semibold">Risk:</span> Alternative financing may have unclear terms, like short repayment periods or variable interest rates, leading to financial strain.`,
+                para: `💡<span class="font-semibold">How to Avoid:</span> Get professional advice, negotiate clearer terms, and ensure the repayment schedule is realistic and manageable.`,
               },
             ],
           }}
@@ -600,10 +600,7 @@
     <div class="lg:hidden block">
       {#each ["Plot search", "Key challenges", "Improve chances", "Alternate financing", "Tools & calculators"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -611,7 +608,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -654,7 +651,7 @@
               >
                 <div class="flex flex-col gap-[2rem] lg:gap-[4rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     {@html challenges.heading}
                   </h2>
@@ -667,17 +664,17 @@
                       >
                         <!-- shadow-[10px_10px_25px_rgba(0,0,0,0.2)] -->
                         <h2
-                          class="row-span-2 font-ThirdHead text-minSubHead p-4"
+                          class="row-span-2 typography-h3 font-semibold text-text-main p-4"
                         >
                           {@html listItem.heading}
                         </h2>
                         <p
-                          class="row-span-3 font-Paragraph text-subParaFont p-4"
+                          class="row-span-3 typography-body-md text-text-light p-4"
                         >
                           {@html listItem.topPara}
                         </p>
                         <p
-                          class="row-span-3 font-Paragraph text-subParaFont bg-black text-white p-4 rounded-b-lg"
+                          class="row-span-3 typography-body-md text-text-light bg-black text-white p-4 rounded-b-lg"
                         >
                           {@html listItem.para}
                         </p>
@@ -772,7 +769,7 @@
               >
                 <div class="">
                   <h2
-                    class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                    class="grid mb-[4rem] typography-h2 text-text-main text-center"
                   >
                     Comparison of Alternative Financing Options for Buying a
                     Plot
@@ -805,18 +802,18 @@
                     {
                       heading: "Lack of regulatory oversight",
 
-                      topPara: `⚠️<span class="font-FourthHead">Risk:</span> Alternative financing methods may lack regulatory scrutiny, increasing the risk of fraud or unclear terms.`,
-                      para: `💡<span class="font-FourthHead">How to Avoid:</span> Research the lender’s credentials, ensure they are licensed, and review the loan contract for hidden fees or unfair clauses.`,
+                      topPara: `⚠️<span class="font-semibold">Risk:</span> Alternative financing methods may lack regulatory scrutiny, increasing the risk of fraud or unclear terms.`,
+                      para: `💡<span class="font-semibold">How to Avoid:</span> Research the lender’s credentials, ensure they are licensed, and review the loan contract for hidden fees or unfair clauses.`,
                     },
                     {
                       heading: "High-interest rates and hidden fees",
-                      topPara: `⚠️<span class="font-FourthHead">Risk:</span> Alternative lenders may charge higher interest rates and hidden fees, leading to unmanageable debt.`,
-                      para: `💡<span class="font-FourthHead">How to Avoid:</span> Compare rates, fees, and terms, and ensure all costs are disclosed upfront. Calculate the total repayment amount to ensure it fits your budget.`,
+                      topPara: `⚠️<span class="font-semibold">Risk:</span> Alternative lenders may charge higher interest rates and hidden fees, leading to unmanageable debt.`,
+                      para: `💡<span class="font-semibold">How to Avoid:</span> Compare rates, fees, and terms, and ensure all costs are disclosed upfront. Calculate the total repayment amount to ensure it fits your budget.`,
                     },
                     {
                       heading: "Uncertain or Unfavorable Loan Terms",
-                      topPara: `⚠️<span class="font-FourthHead">Risk:</span> Alternative financing may have unclear terms, like short repayment periods or variable interest rates, leading to financial strain.`,
-                      para: `💡<span class="font-FourthHead">How to Avoid:</span> Get professional advice, negotiate clearer terms, and ensure the repayment schedule is realistic and manageable.`,
+                      topPara: `⚠️<span class="font-semibold">Risk:</span> Alternative financing may have unclear terms, like short repayment periods or variable interest rates, leading to financial strain.`,
+                      para: `💡<span class="font-semibold">How to Avoid:</span> Get professional advice, negotiate clearer terms, and ensure the repayment schedule is realistic and manageable.`,
                     },
                   ],
                 }}
@@ -987,10 +984,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

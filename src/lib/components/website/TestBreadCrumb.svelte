@@ -43,12 +43,12 @@
           {/if}
           {#if i === $breadcrumbs.length - 1}
             <!-- Last breadcrumb (active page) -->
-            <span class="font-Paragraph text-minParaFont">{crumb.name}</span>
+            <span class="typography-body-sm text-text-light">{crumb.name}</span>
           {:else}
             <!-- Previous breadcrumbs (links) -->
             <a
               href={crumb.path}
-              class="text-black underline hover:no-underline underline-offset-4 font-Paragraph text-minParaFont"
+              class="text-black underline hover:no-underline underline-offset-4 typography-body-sm text-text-light"
             >
               {crumb.name}
             </a>

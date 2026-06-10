@@ -131,14 +131,14 @@ handleSendMessage();
             <img src="/logo/logoWhite.svg" alt="logo-ddsa" class="h-6" />
           </div>
           <div>
-            <h3 class=" font-FourthHead text-para text-gray-800">
+            <h3 class="font-semibold text-para text-gray-800">
               Ask Digital DSA
             </h3>
             <div class="flex items-center gap-1">
               <div
                 class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
               ></div>
-              <span class=" font-Paragraph text-leastPara text-gray-600"
+              <span class="typography-caption text-text-light text-gray-600"
                 >Online</span
               >
             </div>
@@ -195,9 +195,9 @@ handleSendMessage();
                   class:bg-gray-100={message.sender === "bot"}
                   class:text-gray-800={message.sender === "bot"}
                 >
-                  <p class="font-Paragraph text-leastPara">{message.text}</p>
+                  <p class="typography-caption text-text-light">{message.text}</p>
                 </div>
-                <p class="font-Paragraph text-leastPara text-gray-500 mt-1">
+                <p class="typography-caption text-text-light text-gray-500 mt-1">
                   {message.timestamp.toLocaleTimeString([], {
                     hour: "2-digit",
                     minute: "2-digit",
@@ -243,7 +243,7 @@ handleSendMessage();
               bind:value={inputText}
               onkeypress={handleKeyPress}
               placeholder="Type your message..."
-              class="flex-1 px-4 py-2 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-btnBg focus:border-transparent transition-all duration-200 font-Paragraph text-leastPara"
+              class="flex-1 px-4 py-2 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-btnBg focus:border-transparent transition-all duration-200 typography-caption text-text-light"
             />
             <button
               onclick={handleSendMessage}

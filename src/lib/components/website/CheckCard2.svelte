@@ -30,8 +30,8 @@
       {contents.para}
     </p>
     <div class="flex flex-col text-end">
-      <h2 class="font-FourthHead">{contents.userName}</h2>
-      <p class="font-SubPara text-subPara">{contents.profileName}</p>
+      <h2 class="font-semibold">{contents.userName}</h2>
+      <p class="typography-body-sm text-subPara">{contents.profileName}</p>
     </div>
   </div>
 </div>

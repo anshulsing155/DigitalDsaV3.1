@@ -114,7 +114,7 @@
         desc: `Cyber criminals infiltrate systems, encrypt files, and demand a ransom for
     their release. Paying the ransom does not guarantee data recovery.`,
         story: `
-      <span class="font-FourthHead italic">Real Story:</span> In November 2022,
+      <span class="font-semibold italic">Real Story:</span> In November 2022,
     the All India Institute of Medical Sciences (AIIMS) in Delhi suffered a
     ransomware attack that corrupted their systems, wiping outpatient and
     research data from primary and backup servers. This incident disrupted
@@ -129,7 +129,7 @@
         desc: `Hackers impersonate a CEO, manager, or vendor to trick employees into
     transferring money or sharing sensitive data.`,
         story: `
-    <span class="font-FourthHead italic">Real Story:</span> A Khar-based
+    <span class="font-semibold italic">Real Story:</span> A Khar-based
     chemicals trading firm in Mumbai was defrauded of ₹10 lakh after cyber
     criminals spoofed the email ID of one of the company's raw material
     suppliers. The accounts department, believing the email to be legitimate,
@@ -145,7 +145,7 @@
     service providers, or even colleagues). Clicking on malicious links can
     install malware or steal login credentials.`,
         story: `
-    <span class="font-FourthHead italic">Real Story:</span> Cybersecurity
+    <span class="font-semibold italic">Real Story:</span> Cybersecurity
     researchers have uncovered phishing scams where attackers pretend to be
     victims' bosses, urging them to transfer funds or share confidential
     information. Such incidents have been reported across various Indian
@@ -242,7 +242,7 @@
         <div
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             Imagine waking up to find that your business bank account is wiped
             clean, or that your customers' personal data is leaked online.
             Unfortunately, this is the reality for thousands of Indian
@@ -257,12 +257,12 @@
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {threatReal.heading}
           </h2>
-          <h3 class="font-FourthHead text-paraFont">{threatReal.subHead}</h3>
-          <p class="font-Paragraph text-minParaFont">
+          <h3 class="font-semibold typography-body-md">{threatReal.subHead}</h3>
+          <p class="typography-body-sm text-text-light">
             {@html threatReal.para}
           </p>
         </div>
@@ -274,7 +274,7 @@
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+              class="typography-h2 text-text-main"
             >
               {common.heading}
             </h2>
@@ -282,9 +282,9 @@
           <ul class="space-y-6">
             {#each common.listItems as list}
               <li class="space-y-4">
-                <h3 class="font-FourthHead text-paraFont">{list.heading}</h3>
-                <p class="font-Paragraph text-minParaFont">{@html list.desc}</p>
-                <p class="font-Paragraph text-minParaFont">
+                <h3 class="font-semibold typography-body-md">{list.heading}</h3>
+                <p class="typography-body-sm text-text-light">{@html list.desc}</p>
+                <p class="typography-body-sm text-text-light">
                   {@html list.story}
                 </p>
               </li>
@@ -298,15 +298,15 @@
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {plan.heading}
           </h2>
           {#each plan.listItems as list}
-            <h3 class="font-FourthHead text-paraFont">{list.subHead}</h3>
+            <h3 class="font-semibold typography-body-md">{list.subHead}</h3>
             <ul class="space-y-2 pl-5">
               {#each list.lists as item}
-                <li class="list-disc font-Paragraph text-minParaFont space-y-2">
+                <li class="list-disc typography-body-sm text-text-light space-y-2">
                   {item}
                 </li>
               {/each}
@@ -320,11 +320,11 @@
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
         >
           <h2
-            class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+            class="typography-h2 text-text-main"
           >
             {final.heading}
           </h2>
-          <p class="font-Paragraph text-minParaFont">
+          <p class="typography-body-sm text-text-light">
             {@html final.para}
           </p>
         </div>
@@ -333,10 +333,7 @@
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -344,7 +341,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -354,7 +351,7 @@
               <div
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   Imagine waking up to find that your business bank account is
                   wiped clean, or that your customers' personal data is leaked
                   online. Unfortunately, this is the reality for thousands of
@@ -369,14 +366,14 @@
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {threatReal.heading}
                 </h2>
-                <h3 class="font-FourthHead text-paraFont">
+                <h3 class="font-semibold typography-body-md">
                   {threatReal.subHead}
                 </h3>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html threatReal.para}
                 </p>
               </div>
@@ -389,7 +386,7 @@
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="typography-h2 text-text-main"
                   >
                     {common.heading}
                   </h2>
@@ -397,13 +394,13 @@
                 <ul class="space-y-6">
                   {#each common.listItems as list}
                     <li class="space-y-4">
-                      <h3 class="font-FourthHead text-paraFont">
+                      <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-sm text-text-light">
                         {@html list.desc}
                       </p>
-                      <p class="font-Paragraph text-minParaFont">
+                      <p class="typography-body-sm text-text-light">
                         {@html list.story}
                       </p>
                     </li>
@@ -418,16 +415,16 @@
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {plan.heading}
                 </h2>
                 {#each plan.listItems as list}
-                  <h3 class="font-FourthHead text-paraFont">{list.subHead}</h3>
+                  <h3 class="font-semibold typography-body-md">{list.subHead}</h3>
                   <ul class="space-y-2 pl-5">
                     {#each list.lists as item}
                       <li
-                        class="list-disc font-Paragraph text-minParaFont space-y-2"
+                        class="list-disc typography-body-sm text-text-light space-y-2"
                       >
                         {item}
                       </li>
@@ -443,11 +440,11 @@
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
               >
                 <h2
-                  class="font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="typography-h2 text-text-main"
                 >
                   {final.heading}
                 </h2>
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   {@html final.para}
                 </p>
               </div>
@@ -498,10 +495,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

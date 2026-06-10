@@ -85,14 +85,14 @@
       {
         id: 1,
         title: " Compare Loans from Multiple Banks​",
-        desc: `Compare  <span class="font-FourthHead">50+ banks</span>  in one place and find the best interest rates, loan amounts, and eligibility criteria without visiting multiple lenders.`,
+        desc: `Compare  <span class="font-semibold">50+ banks</span>  in one place and find the best interest rates, loan amounts, and eligibility criteria without visiting multiple lenders.`,
         icon: "/icons/balanceTransferTopup.svg",
         altName: "compare-icon",
       },
       {
         id: 2,
         title: "Hassle-Free Online Application​​",
-        desc: `Apply online with a <span class="font-FourthHead">100% digital process </span> —no paperwork, no long queues. Just enter details, upload documents, and submit in minutes.`,
+        desc: `Apply online with a <span class="font-semibold">100% digital process </span> —no paperwork, no long queues. Just enter details, upload documents, and submit in minutes.`,
         icon: "/icons/apply.svg",
         altName: "apply-icon",
       },
@@ -100,7 +100,7 @@
       {
         id: 3,
         title: "No Hidden Costs – Clear Terms & Conditions​",
-        desc: `We ensure 100% transparency, displaying interest rates, fees, and terms upfront— <span class="font-FifthHead"> no hidden charges or surprises</span>, just clear loan details.`,
+        desc: `We ensure 100% transparency, displaying interest rates, fees, and terms upfront— <span class="font-semibold"> no hidden charges or surprises</span>, just clear loan details.`,
         icon: "/icons/no-fee.svg",
         altName: "fee-icon",
       },
@@ -113,14 +113,14 @@
       {
         id: 1,
         title: " Lower Interest & EMI​",
-        desc: ` Switching to a lender with a lower interest rate <span class="font-FourthHead" >reduces monthly EMI </span>,  making loan repayment easier and  <span class="font-FourthHead" > saving significantly on interest costs </span> over time. `,
+        desc: ` Switching to a lender with a lower interest rate <span class="font-semibold" >reduces monthly EMI </span>,  making loan repayment easier and  <span class="font-semibold" > saving significantly on interest costs </span> over time. `,
         icon: "/icons/interestIcon.svg",
         altName: "interest-icon",
       },
       {
         id: 2,
         title: " Access Additional Funds ​​",
-        desc: `A <span class='font-FourthHead'>top-up loan </span>  provides extra financing without the need for a new loan application. Use it for <span class='font-FourthHead'>office expansion, new technology, hiring staff, or upgrading equipment </span> .`,
+        desc: `A <span class='font-semibold'>top-up loan </span>  provides extra financing without the need for a new loan application. Use it for <span class='font-semibold'>office expansion, new technology, hiring staff, or upgrading equipment </span> .`,
         icon: "/icons/negotiate.svg",
         altName: "negotiate-icon",
       },
@@ -128,28 +128,28 @@
       {
         id: 3,
         title: "Boost Credit Score​",
-        desc: `A balance transfer helps in maintaining or improving your <span class="font-FourthHead"> credit score </span> by lowering EMI amounts, ensuring timely repayments, and keeping debt under control.`,
+        desc: `A balance transfer helps in maintaining or improving your <span class="font-semibold"> credit score </span> by lowering EMI amounts, ensuring timely repayments, and keeping debt under control.`,
         icon: "/icons/emiIcon.svg",
         altName: "emi-icon",
       },
       {
         id: 4,
         title: "Minimal Documentation​",
-        desc: `Since you're already an existing borrower, a <span class="font-FourthHead"> balance transfer with a top-up requires less paperwork </span> compared to applying for a new professional loan.`,
+        desc: `Since you're already an existing borrower, a <span class="font-semibold"> balance transfer with a top-up requires less paperwork </span> compared to applying for a new professional loan.`,
         icon: "/icons/apply.svg",
         altName: "apply-icon",
       },
       {
         id: 5,
         title: "Flexible Repayment Options​",
-        desc: `Choose a <span class="font-FourthHead">repayment tenure that fits your financial goals</span> opt for a shorter tenure to clear debt quickly or a longer tenure to reduce EMI burden.`,
+        desc: `Choose a <span class="font-semibold">repayment tenure that fits your financial goals</span> opt for a shorter tenure to clear debt quickly or a longer tenure to reduce EMI burden.`,
         icon: "/icons/personalLoan.svg",
         altName: "loan-icon",
       },
       {
         id: 5,
         title: "Debt Consolidation ​",
-        desc: ` If you have multiple loans, a balance transfer with a top-up can <span class="font-FourthHead" >combine them into a single loan </span> ,simplifying repayments and reducing the stress of managing multiple EMIs.`,
+        desc: ` If you have multiple loans, a balance transfer with a top-up can <span class="font-semibold" >combine them into a single loan </span> ,simplifying repayments and reducing the stress of managing multiple EMIs.`,
         icon: "/icons/riskFactor.svg",
         altName: "risk-icon",
       },
@@ -161,21 +161,21 @@
       {
         id: 1,
         title: " Doctor Loan",
-        desc: `Designed for   doctors, dentists, and medical practitioners, this loan helps finance <span class="font-FourthHead"> clinic setup, medical equipment purchases, staff hiring, and technology upgrades </span>. With a <span class="font-FourthHead"> high loan amount and flexible repayment tenure </span>, healthcare professionals can expand their practice without financial stress.`,
+        desc: `Designed for   doctors, dentists, and medical practitioners, this loan helps finance <span class="font-semibold"> clinic setup, medical equipment purchases, staff hiring, and technology upgrades </span>. With a <span class="font-semibold"> high loan amount and flexible repayment tenure </span>, healthcare professionals can expand their practice without financial stress.`,
         icon: "/icons/emergencyLoan.svg",
         altName: "icons-emergencyLoan",
       },
       {
         id: 2,
         title: "Chartered Accountant (CA) Loan​​",
-        desc: `Exclusively for chartered accountants, auditors, and tax consultants, this loan supports <span class="font-FourthHead">office expansion, investment in accounting software, working capital management, and business growth </span> . It offers minimal paperwork and quick processing , ensuring seamless financial support.`,
+        desc: `Exclusively for chartered accountants, auditors, and tax consultants, this loan supports <span class="font-semibold">office expansion, investment in accounting software, working capital management, and business growth </span> . It offers minimal paperwork and quick processing , ensuring seamless financial support.`,
         icon: "/icons/educationLoan.svg",
         altName: "icons-educationLoan",
       },
       {
         id: 3,
         title: "Architect Loan",
-        desc: `Designed for architects, this loan helps finance <span class="font-FourthHead">design software, drafting tools, technology upgrades, and workspace setup </span> . With quick disbursal and competitive rates, it supports seamless project execution and innovation.`,
+        desc: `Designed for architects, this loan helps finance <span class="font-semibold">design software, drafting tools, technology upgrades, and workspace setup </span> . With quick disbursal and competitive rates, it supports seamless project execution and innovation.`,
         icon: "/icons/renovateHome.svg",
         altName: "icons-renovateHome",
       },
@@ -187,7 +187,7 @@
     actionBtnsRequired :"",
     coverAlt: "hero-cover",
     heading: "Professional loans",
-    para: `A professional loan is an<a  href="#securedUnsecured" class="cursor-pointer text-black"><span class="font-FourthHead "> unsecured loan <sup class="text-red-700 text-[.9rem]">*</sup> </span> </a> for self-employed professionals like doctors, CAs and architects. It funds expenses such as clinic setup, equipment purchase, technology upgrades, hiring staff, or business expansion.`,
+    para: `A professional loan is an<a  href="#securedUnsecured" class="cursor-pointer text-black"><span class="font-semibold"> unsecured loan <sup class="text-red-700 text-[.9rem]">*</sup> </span> </a> for self-employed professionals like doctors, CAs and architects. It funds expenses such as clinic setup, equipment purchase, technology upgrades, hiring staff, or business expansion.`,
     actionBtn: [
       {
         btnName: "Explore loan offers",
@@ -212,42 +212,42 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Collateral </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Collateral </span>":
             [
               `Requires collateral (property, gold, vehicle, etc.)`,
               `No collateral needed ❌`,
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Risk for Borrower</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Risk for Borrower</span>":
             [
               "Risk of losing assets if unpaid ⚠️",
               "No asset risk, but impacts credit score 📉",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/problem.svg' alt='home icon'>Loan Amount</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/problem.svg' alt='home icon'>Loan Amount</span>":
             [
               "Higher amounts due to security 📈",
               "Lower amounts compared to secured loans 📉",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Approval Time</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Approval Time</span>":
             [
               "Longer due to collateral verification ⏳",
               "Faster approval and disbursal ⚡",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Eligibility</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Eligibility</span>":
             [
               "Based on asset value and income 🏠📊",
               "Based on credit score and income 📊💳",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/tenure.svg' alt='home icon'>Examples</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/tenure.svg' alt='home icon'>Examples</span>":
             [
               "Home loan 🏠, Car loan 🚗, Gold loan 🏅",
               "Personal loan 👤🪙, Credit card loan 💳, Education loan 🎓",
@@ -277,11 +277,11 @@
 <section class="content">
   <NewPageLayout {pageData}>
     <Sublist {subList} />
-    <div class=" divide-y">
-      <div id="type" class="px-[0.5rem] lg:px-[4rem]">
+    <div class="divide-y">
+      <div id="type" class="px-4 lg:px-16">
         <WhyChoose facilities={professionalLoanType} />
       </div>
-      <div class="px-[0.5rem] lg:px-[4rem]" id="balanceTransfer">
+      <div class="px-4 lg:px-16" id="balanceTransfer">
         <WhyChoose facilities={balanceTransferTopup} />
       </div>
       <ButtonBanner
@@ -301,13 +301,13 @@
             cardData: [
               {
                 title: "Estimate Your EMI Before You Borrow!",
-                para: `A Professional Loan EMI Calculator helps you determine your <span class="font-FourthHead">monthly installment (EMI) </span>  based on the loan amount, interest rate, and tenure. Plan your finances efficiently before securing a loan.`,
+                para: `A Professional Loan EMI Calculator helps you determine your <span class="font-semibold">monthly installment (EMI) </span>  based on the loan amount, interest rate, and tenure. Plan your finances efficiently before securing a loan.`,
                 linkName: "Check your EMI now",
                 url: "/calculators/emi-calculator",
               },
               {
                 title: "Know Your Maximum Loan Eligibility Now",
-                para: `A Professional Loan Eligibility Calculator helps assess how much loan you qualify for based on your <span class="font-FourthHead">income, expenses, and existing financial commitments. </span> `,
+                para: `A Professional Loan Eligibility Calculator helps assess how much loan you qualify for based on your <span class="font-semibold">income, expenses, and existing financial commitments. </span> `,
                 linkName: "Find your maximum loan amount",
                 url: "/calculators/eligibility-calculator?loanValue=Professional Loan",
               },
@@ -316,7 +316,7 @@
         />
       </div>
 
-      <div id="repayment" class="px-[0.5rem] lg:px-[4rem]">
+      <div id="repayment" class="px-4 lg:px-16">
         <TwoColumn
           cardImage={cardImg1}
           cardAltName={cardAlt1}
@@ -324,11 +324,11 @@
           reverse={true}
         >
           <div class="flex flex-col gap-2">
-            <p class="font-FifthHead text-subParaFont">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               Get an estimated repayment amount based on your loan amount,
               tenure, interest rate, and loan type.
             </p>
-            <ul class="font-Paragraph space-y-2 text-subParaFont">
+            <ul class="typography-body-md space-y-2 text-[var(--form-text-secondary)]">
               <li class="flex gap-2 items-start">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-2" />
                 Planning a new loan? Use this calculator to estimate your monthly
@@ -355,10 +355,10 @@
           cardData: [
             {
               title: "Investment Helps Beat Inflation",
-              para: `If you only focus on <span class="font-FourthHead">paying EMIs and  keeping money in a savings account </span> , your funds lose value over time due to <span class="font-FourthHead">inflation </span>. Investing ensures your savings grow and retain their <span class="font-FourthHead"> purchasing power </span> . <br> <br> 💡 <span class="font-FourthHead">Example: </span> 
-      <ul class="list-disc pl-5 space-y-3 mt-2 text-subParaFont">
+              para: `If you only focus on <span class="font-semibold">paying EMIs and  keeping money in a savings account </span> , your funds lose value over time due to <span class="font-semibold">inflation </span>. Investing ensures your savings grow and retain their <span class="font-semibold"> purchasing power </span> . <br> <br> 💡 <span class="font-semibold">Example: </span> 
+      <ul class="list-disc pl-5 space-y-3 mt-2 typography-body-md">
    
-      <li>Suppose you want to accumulate <span class="font-FourthHead">₹10 lakh </span>  and can invest <span class="font-FourthHead"> ₹5,000 per month </span>. If you invest in a <span class="font-FourthHead">SIP with 12% returns </span> , you can reach your goal in 10 years. </li>
+      <li>Suppose you want to accumulate <span class="font-semibold">₹10 lakh </span>  and can invest <span class="font-semibold"> ₹5,000 per month </span>. If you invest in a <span class="font-semibold">SIP with 12% returns </span> , you can reach your goal in 10 years. </li>
       </ul>
       `,
               linkName: "Calculate Your Investment Tenure",
@@ -367,16 +367,16 @@
             {
               title: "Emergency Fund is Crucial",
               para: `While repaying a loan, unexpected financial emergencies like: <br> 
-      <ul class="list-disc pl-5 font-FifthHead space-y-2 mt-2"> 
+      <ul class="list-disc pl-5 font-semibold space-y-2 mt-2"> 
       <li>Job loss </li>
       <li>Medical expenses </li>
       <li> Business losses</li>
       <li>Additional expenses (children’s education, home repairs, etc.) </li>
-      </ul> <br> <p> can arise at any time. If you <span class="font-FourthHead">maintain an emergency fund </span> , you can <span class="font-FourthHead">continue your loan repayments stress-free </span>  while managing urgent expenses. </p> <p class="mt-5">💡 Best Investment Options for Emergency Fund: </p> 
+      </ul> <br> <p> can arise at any time. If you <span class="font-semibold">maintain an emergency fund </span> , you can <span class="font-semibold">continue your loan repayments stress-free </span>  while managing urgent expenses. </p> <p class="mt-5">💡 Best Investment Options for Emergency Fund: </p> 
       <ul class="list-disc pl-5 space-y-3 mt-2">
-      <li><span class="font-FourthHead">Recurring Deposit (RD) </span> </li>
-        <li><span class="font-FourthHead">Fixed Deposit (FD) </span>  </li>
-        <li><span class="font-FourthHead">Systematic Investment plan (SIP) </span>  </li>
+      <li><span class="font-semibold">Recurring Deposit (RD) </span> </li>
+        <li><span class="font-semibold">Fixed Deposit (FD) </span>  </li>
+        <li><span class="font-semibold">Systematic Investment plan (SIP) </span>  </li>
          
            
       </ul>`,
@@ -387,17 +387,15 @@
         }}
       />
       <div
-      id="securedUnsecured"
-        class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
+        id="securedUnsecured"
+        class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
       >
-        <div class=" ">
+        <div class="">
           <h2
-            class=" font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center py-5"
+            class="typography-h2 text-center py-5 text-black dark:text-white"
           >
-            <p>
-              <span class="underline"> Secured </span> vs
-              <span class="underline"> Unsecured Loans</span>
-            </p>
+            <span class="underline"> Secured </span> vs
+            <span class="underline"> Unsecured Loans</span>
           </h2>
         </div>
         <div class="">
@@ -416,10 +414,10 @@
         title: "Eligibility Criteria",
         para: `
         <ul class="list-disc flex flex-col gap-2 pl-4">
-          <li><span class="font-FourthHead">Who can apply:</span> Self-employed professionals like doctors, CAs,  architects.</li>
-          <li><span class="font-FourthHead">Experience :</span> Minimum 2-3 years of practice or business operations.</li>
-          <li><span class="font-FourthHead">Income & credit score :</span>Stable income with a CIBIL score of 700+ for better approval chances.</li>
-          <li><span class="font-FourthHead"> Loan purpose :</span> Business expansion, equipment purchase, or working capital.</li>
+          <li><span class="font-semibold">Who can apply:</span> Self-employed professionals like doctors, CAs,  architects.</li>
+          <li><span class="font-semibold">Experience :</span> Minimum 2-3 years of practice or business operations.</li>
+          <li><span class="font-semibold">Income & credit score :</span>Stable income with a CIBIL score of 700+ for better approval chances.</li>
+          <li><span class="font-semibold"> Loan purpose :</span> Business expansion, equipment purchase, or working capital.</li>
         </ul>
       `,
       },
@@ -428,10 +426,10 @@
         title: "Documents Required",
         para: ` 
         <ul class="list-disc flex flex-col gap-2 pl-4">
-          <li><span class="font-FourthHead"> Identity & address proof </span> Aadhaar, PAN, Passport ,  Utility Bills.</li>
-          <li><span class="font-FourthHead">Professional proof :</span>  Degree certificate, practice license, or registration.</li>
-          <li><span class="font-FourthHead">Income proof : </span>Bank statements (6-12 months), ITR, or Form 16 (if no audited financial).</li>
-          <li><span class="font-FourthHead">Business proof :</span> GST registration, business certificate, or continuity proof.</li>
+          <li><span class="font-semibold"> Identity & address proof </span> Aadhaar, PAN, Passport ,  Utility Bills.</li>
+          <li><span class="font-semibold">Professional proof :</span>  Degree certificate, practice license, or registration.</li>
+          <li><span class="font-semibold">Income proof : </span>Bank statements (6-12 months), ITR, or Form 16 (if no audited financial).</li>
+          <li><span class="font-semibold">Business proof :</span> GST registration, business certificate, or continuity proof.</li>
         </ul>
         
       `,
@@ -442,7 +440,7 @@
 </div>
       
       
-      <div class="px-[0.5rem] lg:px-[4rem]">
+      <div class="px-4 lg:px-16">
         <WhyChoose facilities={whyChooseUs} />
       </div>
 
@@ -467,14 +465,14 @@
         }}
       />
 
-      <div class="px-[0.5rem] lg:px-[4rem]">
+      <div class="px-4 lg:px-16">
         <TwoColumn
           cardImage={cardImg2}
           cardAltName={cardAlt2}
           cardHeading={cardHead2}
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
             slot="list"
           >
             <li>
@@ -496,7 +494,7 @@
         </TwoColumn>
       </div>
 
-      <div class="px-[0.5rem] lg:px-[4rem]">
+      <div class="px-4 lg:px-16">
         <Information />
       </div>
     </div>
@@ -512,10 +510,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

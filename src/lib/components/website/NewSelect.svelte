@@ -155,18 +155,14 @@
           onblur={handleBlur}
           onchange={onChange}
           bind:value={selectedValue}
-          class="border-1 peer block w-full border py-[0.6rem] pl-[3rem] pr-4 font-Paragraph text-para text-black outline-none focus:border-btnBg focus:ring-0 {disabled
-            ? 'cursor-not-allowed bg-gray-100'
-            : 'cursor-pointer border-[#0000003A] bg-white'}"
+          class="border-1 peer block w-full border py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-black outline-none focus:border-btnBg focus:ring-0 {disabled ? 'cursor-not-allowed bg-gray-100' : 'cursor-pointer border-[#0000003A] bg-white'}"
           bind:this={inputRef}
           {disabled}
         />
 
         <label
           for={selectId}
-          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 font-Paragraph text-paraFont {disabled
-            ? 'bg-gray-100 text-black'
-            : 'bg-white text-gray-500'} duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-btnBg"
+          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 typography-body-md {disabled ? 'bg-gray-100 text-black' : 'bg-white text-gray-500'} duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-btnBg"
         >
           {placeholder}
         </label>
@@ -180,7 +176,7 @@
         </span>
 
         <div
-          class="absolute top-0 left-0 flex h-full w-11 items-center justify-center font-FifthHead text-black {iconBg}"
+          class="absolute top-0 left-0 flex h-full w-11 items-center justify-center font-semibold text-black {iconBg}"
         >
           <img src={icon} alt="icon" class="h-5 w-5" />
         </div>
@@ -195,18 +191,14 @@
           onblur={handleBlur}
           onchange={onChange}
           bind:value={selectedTitle}
-          class="border-1 peer block w-full border border-[#0000003A] py-[0.6rem] pl-[3rem] pr-4 font-Paragraph text-para text-black focus:border-btnBg outline-none focus:ring-0 {disabled
-            ? 'cursor-not-allowed bg-gray-100'
-            : 'cursor-pointer border-[#0000003A] bg-white'}"
+          class="border-1 peer block w-full border border-[#0000003A] py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-black focus:border-btnBg outline-none focus:ring-0 {disabled ? 'cursor-not-allowed bg-gray-100' : 'cursor-pointer bg-white'}"
           bind:this={inputRef}
           {disabled}
         />
 
         <label
           for={selectId}
-          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none {disabled
-            ? 'bg-gradient-to-t from-gray-100 via-gray-100 to-white text-black'
-            : 'bg-white text-gray-500'} px-2 font-Paragraph text-paraFont duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-btnBg"
+          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none {disabled ? 'bg-gradient-to-t from-gray-100 via-gray-100 to-white text-black' : 'bg-white text-gray-500'} px-2 typography-body-md duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-btnBg"
         >
           {placeholder}
         </label>
@@ -220,7 +212,7 @@
         </span>
 
         <div
-          class="absolute top-0 left-0 flex h-full w-11 items-center justify-center font-FifthHead text-black {iconBg}"
+          class="absolute top-0 left-0 flex h-full w-11 items-center justify-center font-semibold text-black {iconBg}"
         >
           <img src={icon} alt="icon" class="h-5 w-5" />
         </div>
@@ -229,15 +221,13 @@
 
     {#if showOptions}
       <ul
-        class="absolute -top-[17svh] border md:top-full md:border-t-0 md:border-x md:border-b {showOptionsHeight} w-full bg-white text-black shadow-md cursor-pointer z-50 rounded-b max-h-[40svh] overflow-auto font-Paragraph text-para {optionClass}"
+        class="absolute -top-[17svh] border md:top-full md:border-t-0 md:border-x md:border-b {showOptionsHeight} w-full bg-white text-black shadow-md cursor-pointer z-50 rounded-b max-h-[40svh] overflow-auto typography-body-md text-para {optionClass}"
         bind:this={dropdownRef}
       >
         {#if Array.isArray(options) && options.length}
           {#each options as option, index}
             <li
-              class="{optionListClass} py-2 px-4 {index < options.length - 1
-                ? 'border-b'
-                : ''} border-gray-200 transition-all ease-in-out duration-200"
+              class="{optionListClass} py-2 px-4 {index < options.length - 1 ? 'border-b' : ''} border-gray-200 transition-all ease-in-out duration-200"
               role="option"
               tabindex="0"
               aria-selected={isSelected(option)}
@@ -251,10 +241,7 @@
         {:else if Array.isArray(nestedOptions) && nestedOptions.length}
           {#each nestedOptions as option, index}
             <li
-              class="hover:bg-btnBg hover:text-black {index <
-              nestedOptions.length - 1
-                ? 'border-b'
-                : ''} border-gray-200 p-3 transition-all ease-in-out duration-200"
+              class="hover:bg-btnBg hover:text-black {index < nestedOptions.length - 1 ? 'border-b' : ''} border-gray-200 p-3 transition-all ease-in-out duration-200"
               role="option"
               tabindex="0"
               aria-selected={option.value === selectedValue}
@@ -270,7 +257,7 @@
     {/if}
   </div>
   {#if error}
-    <p class="font-Paragraph text-leastMiniFont text-dangerColor">{error}</p>
+    <p class="typography-body-md text-leastMiniFont text-dangerColor">{error}</p>
   {/if}
 </div>
 

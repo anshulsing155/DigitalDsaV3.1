@@ -12,13 +12,13 @@
   <details class="border-y border-borderColor py-[1.5rem] cursor-pointer">
     <summary class="list-none">
       <div class="flex items-center justify-between gap-4">
-        <h2 class="text-subParaFont font-ThirdHead">{heading}</h2>
-        <div class="icon-container text-mobSubHead">
+        <h2 class="typography-body-md typography-h3 font-semibold">{heading}</h2>
+        <div class="icon-container typography-h3">
           <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
         </div>
       </div>
     </summary>
-    <div class="grid gap-4 pt-[2rem] font-Paragraph text-subParaFont">
+    <div class="grid gap-4 pt-[2rem] typography-body-md text-text-light">
       {@render children?.()}
     </div>
   </details>

@@ -20,7 +20,7 @@
     <div class="flex flex-col gap-4">
       <div class="relative">
         <img src="/quotes-left.png" alt="" class="absolute left-0 top-0 h-4" />
-        <h2 class="font-FourthHead pl-6 pr-2">
+        <h2 class="font-semibold pl-6 pr-2">
           {contents.quotes}
         </h2>
         <img
@@ -34,8 +34,8 @@
       </p>
     </div>
     <div class="flex flex-col text-end">
-      <h2 class="font-FourthHead">{contents.userName}</h2>
-      <p class="font-SubPara text-subPara">{contents.profileName}</p>
+      <h2 class="font-semibold">{contents.userName}</h2>
+      <p class="typography-body-sm text-subPara">{contents.profileName}</p>
     </div>
   </div>
 </div>

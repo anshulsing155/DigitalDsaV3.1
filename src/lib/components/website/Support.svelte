@@ -14,7 +14,7 @@
 
 </script>
 
-<section class=" flex flex-col gap-[2rem] lg:pt-[4rem] lg:pb-[8rem] text-black dark:text-white">
+<section class="flex flex-col gap-[2rem] lg:pt-[4rem] lg:pb-[8rem] text-black dark:text-white">
   {#if supportHeading}
     <p
       class="typography-h2 text-black dark:text-white"

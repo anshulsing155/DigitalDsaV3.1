@@ -22,7 +22,7 @@
     {heading}
   </h2>
   <div
-    class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{gridCol} gap-2 md:gap-5 divide-x-0 divide-y-{divideY} sm:divide-x-{divideX} sm:divide-y-0"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{gridCol} gap-2 md:gap-5 divide-x-0 divide-y-{divideY} sm:divide-x-{divideX} sm:divide-y-0"
   >
     {#each help as item}
       <a href={item.link} class="text-black dark:text-white">

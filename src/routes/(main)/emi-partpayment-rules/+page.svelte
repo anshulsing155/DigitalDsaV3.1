@@ -24,7 +24,7 @@
     heroList: [
       {
         id: 1,
-        text: `<p> When taking a loan, most borrowers focus on getting the best interest rate and tenure. However, understanding how <span class="font-FourthHead">EMI increment </span>  and  <span class="font-FourthHead">part-payments </span>  work can help you manage your loan better and even save lakhs in interest! In this blog, we break down these concepts and how they apply to different loan types in India.  </p>`,
+        text: `<p> When taking a loan, most borrowers focus on getting the best interest rate and tenure. However, understanding how <span class="font-semibold">EMI increment </span>  and  <span class="font-semibold">part-payments </span>  work can help you manage your loan better and even save lakhs in interest! In this blog, we break down these concepts and how they apply to different loan types in India.  </p>`,
       },
     ],
     actionBtns: [
@@ -49,11 +49,11 @@
   let whenToIncreaseEmi = {
     heading: " When to raise EMI? ",
     paraGraph: [
-      `<span class="font-FourthHead">Increase in Income</span> – If your salary grows, you can request a higher EMI.`,
-      `<span class="font-FourthHead">Step-up EMI Loans</span> – Some banks offer step-up loans where EMIs gradually increase.`,
-      `<span class="font-FourthHead">Rising Interest Rates</span> – If your loan is on a floating interest rate, EMI may increase.`,
-      `<span class="font-FourthHead">Loan Restructuring</span> – Banks allow EMI increments to reduce tenure and total interest.`,
-      `<span class="font-FourthHead">Prepayment Considerations</span> – Some banks allow EMI increments instead of bulk prepayments.`,
+      `<span class="font-semibold">Increase in Income</span> – If your salary grows, you can request a higher EMI.`,
+      `<span class="font-semibold">Step-up EMI Loans</span> – Some banks offer step-up loans where EMIs gradually increase.`,
+      `<span class="font-semibold">Rising Interest Rates</span> – If your loan is on a floating interest rate, EMI may increase.`,
+      `<span class="font-semibold">Loan Restructuring</span> – Banks allow EMI increments to reduce tenure and total interest.`,
+      `<span class="font-semibold">Prepayment Considerations</span> – Some banks allow EMI increments instead of bulk prepayments.`,
     ],
   };
 
@@ -94,9 +94,9 @@
     heading: "Part-Payment Rules in Indian Banks",
     subPara: [
       "Most banks allow part-payments, but they come with conditions:",
-      `<span class="font-FourthHead">1. Lock-in Period</span> – Some banks require you to complete 6-12 months before making part-payments.`,
-      `<span class="font-FourthHead">2.     Minimum Part-Payment Amount</span> – Generally, at least 1-2 EMIs worth.`,
-      `<span class="font-FourthHead">3. Prepayment Charges –</span>`,
+      `<span class="font-semibold">1. Lock-in Period</span> – Some banks require you to complete 6-12 months before making part-payments.`,
+      `<span class="font-semibold">2.     Minimum Part-Payment Amount</span> – Generally, at least 1-2 EMIs worth.`,
+      `<span class="font-semibold">3. Prepayment Charges –</span>`,
     ],
     paraGraph: [
       `Floating Rate Loans → No prepayment charges (RBI rule).`,
@@ -107,10 +107,10 @@
   let smartBorrowerTips = {
     heading: "Smart Borrower Tips for Loan Management",
     paraGraph: [
-      `<span class="font-FourthHead">Opt for Floating Rate Loans</span> – No prepayment charges as per RBI guidelines.`,
-      `<span class="font-FourthHead">Negotiate EMI Increments</span> – Helps close your loan faster with lower interest.`,
-      `<span class="font-FourthHead">Plan Part-Payments Strategically</span> – Avoid breaking FD or investments if part-payment charges are high.`,
-      `<span class="font-FourthHead">Use Bonuses & Windfalls for Prepayments</span> – Annual bonuses, tax refunds, or unexpected income can reduce your loan burden.`,
+      `<span class="font-semibold">Opt for Floating Rate Loans</span> – No prepayment charges as per RBI guidelines.`,
+      `<span class="font-semibold">Negotiate EMI Increments</span> – Helps close your loan faster with lower interest.`,
+      `<span class="font-semibold">Plan Part-Payments Strategically</span> – Avoid breaking FD or investments if part-payment charges are high.`,
+      `<span class="font-semibold">Use Bonuses & Windfalls for Prepayments</span> – Annual bonuses, tax refunds, or unexpected income can reduce your loan burden.`,
     ],
   };
   let finalThought = {
@@ -130,28 +130,28 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='home icon'> Home Loan </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='home icon'> Home Loan </span>":
             [
               "Purchase of residential plots",
               "Purchase or construction of a house/apartment",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>Construction Requirement</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>Construction Requirement</span>":
             [
               "20-25% per year in some banks.",
               "Prepayment allowed after 12 months.",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>LAP (Loan Against Property)	</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>LAP (Loan Against Property)	</span>":
             [
               "Up to 25% per year in many banks.",
               "Prepayment charges may apply.",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='home icon'>Business Loan</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='home icon'>Business Loan</span>":
             [
               "Restrictions apply based on lender.",
               "Full pre-closure may be required.",
@@ -170,36 +170,36 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>SBI </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>SBI </span>":
             ["No max limit for floating-rate loans.", "No prepayment charges."],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>HDFC</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>HDFC</span>":
             ["Max 25% per year.", "Charges 2–4% on fixed-rate loans."],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>ICICI	</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>ICICI	</span>":
             [
               "Max 25% per year for LAP & personal loans.",
               "Allowed after 12 months.",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>Axis Bank</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>Axis Bank</span>":
             [
               "Max 25% per year for home loans.",
               "2% charge on fixed-rate loans.",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>Kotak</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>Kotak</span>":
             [
               "Allowed, but charges apply for fixed-rate loans.",
               "Only after 12 months.",
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>Bajaj Finserv</span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/FD.svg' alt='bank icon'>Bajaj Finserv</span>":
             [
               "20% per year for personal loans.",
               "₹1,000-₹2,000 charges apply.",
@@ -330,7 +330,7 @@
   keywords="EMI increment rules India, part-payment rules Indian banks, home loan prepayment tips, reduce loan interest India, floating vs fixed rate loan, EMI management tips, SBI HDFC ICICI EMI rules, smart borrower guide India, how to save on home loan interest, loan repayment strategy India"
 />
 
-<section class=" mx-auto w-full">
+<section class="mx-auto w-full">
   <NewPageLayout {pageData}>
     <div class="hidden lg:block">
       <StickyNavbar
@@ -394,7 +394,7 @@
           <div
             class="flex flex-col xl:grid grid-cols-5 gap-[3rem] pt-[4rem] pb-[8rem] border-b border-[var(--form-border)] text-black dark:text-white"
           >
-            <div class=" col-span-2">
+            <div class="col-span-2">
               <h2
                 class="grid mb-[1.5rem] typography-h2 text-black dark:text-white"
               >
@@ -437,10 +437,7 @@
     <div class="lg:hidden block">
       {#each navBarMedium as list, index}
         <details
-          class="border-bgBtn dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="border-bgBtn dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="list-none px-[1rem] py-[1.5rem]"
@@ -496,7 +493,7 @@
               <div
                 class="flex flex-col xl:grid grid-cols-5 gap-[1rem] py-[4rem] px-[0.5rem] border-b border-[var(--form-border)]"
               >
-                <div class=" col-span-2">
+                <div class="col-span-2">
                   <h2
                     class="grid typography-h2 text-black dark:text-white"
                   >

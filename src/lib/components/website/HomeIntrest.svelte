@@ -19,7 +19,7 @@
 <section
 	class="grid items-center justify-center gap-[2rem] border-b border-borderColor py-[4rem] md:grid-cols-3"
 >
-	<p class="text-center font-ThirdHead text-miniHeadFont md:col-span-2">
+	<p class="text-center typography-h3 font-semibold typography-h2-md md:col-span-2">
 		{@html homeInterest}
 	</p>
 

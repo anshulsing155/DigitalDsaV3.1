@@ -69,10 +69,10 @@ link: "/contact",
   let thinkKnow = {
     heading: "Things You Should Know",
     paraGraph: [
-`<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA acts as an independent loan facilitator and aggregator, connecting borrowers with licensed banks and NBFCs. We are not a financial institution and do not directly provide loans.`,
-`<span class="font-FourthHead">Loan Approval:</span> Loan approval or rejection is solely at the discretion of the respective bank or NBFC. Digital DSA does not guarantee approval or offer assurances from any specific lender. All loans are subject to credit evaluation and applicable terms, conditions, fees, and charges.`,
-`<span class="font-FourthHead">Liability:</span> Digital DSA is not liable for any loss, damage, or disruptions encountered by users during loan processing. The final decision made by the bank or NBFC is binding for both the user and Digital DSA.`,
-`<span class="font-FourthHead">Important Information:</span> The provided details do not consider individual financial objectives, situations, or needs. Users should assess the suitability of the information before making any decisions. Exclusive offers apply only when loans are availed through Digital DSA under specified conditions.`,
+`<span class="font-semibold">Independent Facilitator:</span> Digital DSA acts as an independent loan facilitator and aggregator, connecting borrowers with licensed banks and NBFCs. We are not a financial institution and do not directly provide loans.`,
+`<span class="font-semibold">Loan Approval:</span> Loan approval or rejection is solely at the discretion of the respective bank or NBFC. Digital DSA does not guarantee approval or offer assurances from any specific lender. All loans are subject to credit evaluation and applicable terms, conditions, fees, and charges.`,
+`<span class="font-semibold">Liability:</span> Digital DSA is not liable for any loss, damage, or disruptions encountered by users during loan processing. The final decision made by the bank or NBFC is binding for both the user and Digital DSA.`,
+`<span class="font-semibold">Important Information:</span> The provided details do not consider individual financial objectives, situations, or needs. Users should assess the suitability of the information before making any decisions. Exclusive offers apply only when loans are availed through Digital DSA under specified conditions.`,
     ],
   };
 
@@ -163,7 +163,7 @@ window.removeEventListener("scroll", handleScroll);
       coverImage: "/images/lap-new-loan-blog.jpg",
       coverAlt: "hero-cover",
       heading: "Loan Against Property",
-      para: `<span class="font-FourthHead">Unlock the Power of Your Property!<br>Get a Loan Against Property at Competitive Rates with Zero Hassles!</span>`,
+      para: `<span class="font-semibold">Unlock the Power of Your Property!<br>Get a Loan Against Property at Competitive Rates with Zero Hassles!</span>`,
     }}
     actionBtns={[
       {
@@ -236,7 +236,7 @@ window.removeEventListener("scroll", handleScroll);
             <li>Paying for higher education</li>
             <li>Medical emergencies</li>
           
-            <li><a href="/lap/what-is-debt-consolidation" class="underline underline-offset-4 text-{linkColor} hover:no-underline font-Paragraph text-subParaFont cursor-pointer">Debt consolidation</a></li>
+            <li><a href="/lap/what-is-debt-consolidation" class="underline underline-offset-4 text-{linkColor} hover:no-underline typography-body-md text-text-light cursor-pointer">Debt consolidation</a></li>
             <li>Funding big events like weddings or travel</li>
             <li>Unexpected expenses or business losses</li>
           </ul>
@@ -264,10 +264,10 @@ window.removeEventListener("scroll", handleScroll);
             heading: "Benefits",
             secPara: `
       <ul class="list-disc flex flex-col gap-2 pl-2">
-        <li>Lower Interest Rates: <span class="font-FourthHead">9% to 12% p.a.</span></li>
+        <li>Lower Interest Rates: <span class="font-semibold">9% to 12% p.a.</span></li>
         <li>No Restrictions on Usage</li>
-        <li>Higher Loan Amounts: <span class="font-FourthHead">Up to 60-70% of the property's market value.</span></li>
-        <li>Flexible Repayment Options: <span class="font-FourthHead">Loan repayment terms from 5 to 15 years.</span></li>
+        <li>Higher Loan Amounts: <span class="font-semibold">Up to 60-70% of the property's market value.</span></li>
+        <li>Flexible Repayment Options: <span class="font-semibold">Loan repayment terms from 5 to 15 years.</span></li>
       </ul>
     `,
             btnName: "Explore loan options",
@@ -287,10 +287,10 @@ window.removeEventListener("scroll", handleScroll);
                 title: "Eligibility Criteria",
                 para: `
                 <ul class="list-disc flex flex-col gap-2 pl-4">
-                  <li><span class="font-FourthHead">Who can apply:</span> Salaried individuals, Self-employed professionals & Business owners.</li>
-                  <li><span class="font-FourthHead">Property ownership:</span> The property must be legally owned by the borrower.</li>
-                  <li><span class="font-FourthHead">Income proof:</span> Lenders evaluate the borrower's income stability to assess repayment capacity.</li>
-                  <li><span class="font-FourthHead">CIBIL score:</span> A good credit score (typically above 750) increases the chances of approval and better interest rates.</li>
+                  <li><span class="font-semibold">Who can apply:</span> Salaried individuals, Self-employed professionals & Business owners.</li>
+                  <li><span class="font-semibold">Property ownership:</span> The property must be legally owned by the borrower.</li>
+                  <li><span class="font-semibold">Income proof:</span> Lenders evaluate the borrower's income stability to assess repayment capacity.</li>
+                  <li><span class="font-semibold">CIBIL score:</span> A good credit score (typically above 750) increases the chances of approval and better interest rates.</li>
                 </ul>
               `,
               },
@@ -299,10 +299,10 @@ window.removeEventListener("scroll", handleScroll);
                 title: "Documents Required",
                 para: `
                 <ul class="list-disc flex flex-col gap-2 pl-4">
-                  <li><span class="font-FourthHead">Identity proof:</span> Aadhaar, PAN, Passport.</li>
-                  <li><span class="font-FourthHead">Address proof:</span> Aadhaar, Passport, Utility Bills.</li>
-                  <li><span class="font-FourthHead">Income proof:</span> Salary Slips, Bank Statement, ITR, Audited financials.</li>
-                  <li><span class="font-FourthHead">Property documents:</span> Title Deeds, Property Chain documents.</li>
+                  <li><span class="font-semibold">Identity proof:</span> Aadhaar, PAN, Passport.</li>
+                  <li><span class="font-semibold">Address proof:</span> Aadhaar, Passport, Utility Bills.</li>
+                  <li><span class="font-semibold">Income proof:</span> Salary Slips, Bank Statement, ITR, Audited financials.</li>
+                  <li><span class="font-semibold">Property documents:</span> Title Deeds, Property Chain documents.</li>
                 </ul>
                 
               `,
@@ -319,7 +319,7 @@ window.removeEventListener("scroll", handleScroll);
             reverse: true,
           }}
         >
-          <div class="font-Paragraph text-minParaFont">
+          <div class="typography-body-sm text-text-light">
             <ul class="list-disc pl-2 space-y-4">
               <li class="flex items-start gap-1">
                 <img
@@ -407,7 +407,7 @@ window.removeEventListener("scroll", handleScroll);
         <ul class="list-disc flex flex-col gap-2 pl-4">
           <li>Failure to repay a Loan Against Property can put your property at risk. Use our expert tools to ensure a well-planned and manageable repayment strategy.</li>
           <li>The approval process may take longer than unsecured loans due to property verification and appraisal.</li>
-          <li>EMIs can impact monthly finances, especially during financial stress. If you're unsure about immediate fund usage, consider an <span class="font-FourthHead">Overdraft Facility</span> for flexible withdrawals.</li>
+          <li>EMIs can impact monthly finances, especially during financial stress. If you're unsure about immediate fund usage, consider an <span class="font-semibold">Overdraft Facility</span> for flexible withdrawals.</li>
         </ul>
         `,
               },
@@ -417,8 +417,8 @@ window.removeEventListener("scroll", handleScroll);
                 para: `
         When you seek our support, we assess your situation to provide the best possible assistance. To do this, we may require:
         <ul class="list-disc flex flex-col gap-2 pl-4">
-          <li><span class="font-FourthHead">Details</span> about your profession, income, and expenses.</li>
-          <li><span class="font-FourthHead">Documents</span> to verify your income and property ownership.</li>
+          <li><span class="font-semibold">Details</span> about your profession, income, and expenses.</li>
+          <li><span class="font-semibold">Documents</span> to verify your income and property ownership.</li>
         </ul>
         <br>
       
@@ -485,8 +485,8 @@ window.removeEventListener("scroll", handleScroll);
                 {
                   question: "What is the difference between LAP and DOD?",
                   answer: `
-          <span class="font-FourthHead">LAP (Loan Against Property)</span> is a term loan where you get a lump sum amount and repay in fixed EMIs, ideal for long-term needs. 
-          <span class="font-FourthHead">DOD (Drop-Line Overdraft)</span> is a flexible credit line where you withdraw as needed, pay interest only on the used amount, and the limit reduces over time.
+          <span class="font-semibold">LAP (Loan Against Property)</span> is a term loan where you get a lump sum amount and repay in fixed EMIs, ideal for long-term needs. 
+          <span class="font-semibold">DOD (Drop-Line Overdraft)</span> is a flexible credit line where you withdraw as needed, pay interest only on the used amount, and the limit reduces over time.
           <a href="#" class="text-blue-600 hover:underline">Read more about LAP vs. DOD.</a>
         `,
                 },
@@ -499,10 +499,7 @@ window.removeEventListener("scroll", handleScroll);
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -510,7 +507,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -543,7 +540,7 @@ window.removeEventListener("scroll", handleScroll);
             <li>Paying for higher education</li>
             <li>Medical emergencies</li>
           
-            <li><a href="/lap/what-is-debt-consolidation" class="underline underline-offset-4 text-{linkColor} hover:no-underline font-Paragraph text-subParaFont cursor-pointer">Debt consolidation</a></li>
+            <li><a href="/lap/what-is-debt-consolidation" class="underline underline-offset-4 text-{linkColor} hover:no-underline typography-body-md text-text-light cursor-pointer">Debt consolidation</a></li>
             <li>Funding big events like weddings or travel</li>
             <li>Unexpected expenses or business losses</li>
           </ul>
@@ -570,11 +567,11 @@ window.removeEventListener("scroll", handleScroll);
                 contents={{
                   heading: `Benefits`,
                   secPara: `<ul class="list-disc flex flex-col gap-2 pl-2">
-                 <li>Lower Interest Rates : <span class="font-FourthHead">9% to 12% p.a..</span>
+                 <li>Lower Interest Rates : <span class="font-semibold">9% to 12% p.a..</span>
                  <li>No Restrictions on Usage 
                  
-                 <li>Higher Loan Amounts : <span class="font-FourthHead">Up to 60-70% of the property's market value.</span>
-                 <li>Flexible Repayment Options : <span class="font-FourthHead">Loan repayment terms from 5 to 15 years.</span></li>`,
+                 <li>Higher Loan Amounts : <span class="font-semibold">Up to 60-70% of the property's market value.</span>
+                 <li>Flexible Repayment Options : <span class="font-semibold">Loan repayment terms from 5 to 15 years.</span></li>`,
                   btnName: "Explore loan options",
                   btnColor: "#ffcc00",
                   btnBorder: "#4F4C4D",
@@ -595,20 +592,20 @@ window.removeEventListener("scroll", handleScroll);
                       para: `
   
              <ul class="list-disc flex flex-col gap-2 pl-4">
-             <li><span class="font-FourthHead">Who can apply:</span> Salaried individuals, Self-employed professionals & Business owners
+             <li><span class="font-semibold">Who can apply:</span> Salaried individuals, Self-employed professionals & Business owners
   .
-             <li><span class="font-FourthHead">Property ownership:</span> The property must be legally owned by the borrower.
-             <li><span class="font-FourthHead">Income proof:</span> Lenders evaluate the borrower's income stability to assess repayment capacity.
-             <li><span class="font-FourthHead">CIBIL score:</span> A good credit score (typically above 750) increases the chances of approval and better interest rates.</li>`,
+             <li><span class="font-semibold">Property ownership:</span> The property must be legally owned by the borrower.
+             <li><span class="font-semibold">Income proof:</span> Lenders evaluate the borrower's income stability to assess repayment capacity.
+             <li><span class="font-semibold">CIBIL score:</span> A good credit score (typically above 750) increases the chances of approval and better interest rates.</li>`,
                     },
                     {
                       id: "2",
                       title: "Documents Required",
                       para: `
             <ul class="list-disc flex flex-col gap-2 pl-4">
-            <li> <span class="font-FourthHead">Identity proof:</span> Aadhaar, PAN, Passport.
-            <li> <span class="font-FourthHead">Address proof:</span> Aadhaar, Passport, Utility Bills.
-            <li> <span class="font-FourthHead">Income proof:</span> Salary Slips, Bank Statement, ITR, Audited financials.
+            <li> <span class="font-semibold">Identity proof:</span> Aadhaar, PAN, Passport.
+            <li> <span class="font-semibold">Address proof:</span> Aadhaar, Passport, Utility Bills.
+            <li> <span class="font-semibold">Income proof:</span> Salary Slips, Bank Statement, ITR, Audited financials.
             `,
                       // linkName:
                       //       "Tell me more about documents required",
@@ -627,7 +624,7 @@ window.removeEventListener("scroll", handleScroll);
                   reverse: true,
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <ul class="list-disc pl-2 space-y-4">
                     <li class="flex items-start gap-1">
                       <img
@@ -715,7 +712,7 @@ window.removeEventListener("scroll", handleScroll);
         <ul class="list-disc flex flex-col gap-2 pl-4">
           <li>Failure to repay a Loan Against Property can put your property at risk. Use our expert tools to ensure a well-planned and manageable repayment strategy.</li>
           <li>The approval process may take longer than unsecured loans due to property verification and appraisal.</li>
-          <li>EMIs can impact monthly finances, especially during financial stress. If you're unsure about immediate fund usage, consider an <span class="font-FourthHead">Overdraft Facility</span> for flexible withdrawals.</li>
+          <li>EMIs can impact monthly finances, especially during financial stress. If you're unsure about immediate fund usage, consider an <span class="font-semibold">Overdraft Facility</span> for flexible withdrawals.</li>
         </ul>
         `,
                     },
@@ -725,8 +722,8 @@ window.removeEventListener("scroll", handleScroll);
                       para: `
         When you seek our support, we assess your situation to provide the best possible assistance. To do this, we may require:
         <ul class="list-disc flex flex-col gap-2 pl-4">
-          <li><span class="font-FourthHead">Details</span> about your profession, income, and expenses.</li>
-          <li><span class="font-FourthHead">Documents</span> to verify your income and property ownership.</li>
+          <li><span class="font-semibold">Details</span> about your profession, income, and expenses.</li>
+          <li><span class="font-semibold">Documents</span> to verify your income and property ownership.</li>
         </ul>
         <br>
       
@@ -792,8 +789,8 @@ window.removeEventListener("scroll", handleScroll);
                       {
                         question: "What is the difference between LAP and DOD?",
                         answer: `
-          <span class="font-FourthHead">LAP (Loan Against Property)</span> is a term loan where you get a lump sum amount and repay in fixed EMIs, ideal for long-term needs. 
-          <span class="font-FourthHead">DOD (Drop-Line Overdraft)</span> is a flexible credit line where you withdraw as needed, pay interest only on the used amount, and the limit reduces over time.
+          <span class="font-semibold">LAP (Loan Against Property)</span> is a term loan where you get a lump sum amount and repay in fixed EMIs, ideal for long-term needs. 
+          <span class="font-semibold">DOD (Drop-Line Overdraft)</span> is a flexible credit line where you withdraw as needed, pay interest only on the used amount, and the limit reduces over time.
           <a href="#" class="text-blue-600 hover:underline">Read more about LAP vs. DOD.</a>
         `,
                       },
@@ -851,10 +848,10 @@ window.removeEventListener("scroll", handleScroll);
         thinkKnow={{
           heading: "Things you should know",
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"

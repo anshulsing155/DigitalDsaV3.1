@@ -48,19 +48,19 @@
         listTopPara: `Dropline Overdraft (DOD) offers several features that make it an attractive financing option for businesses:`,
         list: [
           {
-            heading: `✅ Decreasing Credit Limit : <span class="font-Paragraph">The facility works on a decreasing credit limit, where the available amount reduces as the business repays the borrowed funds.</span>`,
+            heading: `✅ Decreasing Credit Limit : <span class="typography-body-md">The facility works on a decreasing credit limit, where the available amount reduces as the business repays the borrowed funds.</span>`,
           },
           {
-            heading: `✅ Only Pay for What You Use :<span class="font-Paragraph"> Interest is paid only on the utilized portion, helping save costs.</span>`,
+            heading: `✅ Only Pay for What You Use :<span class="typography-body-md"> Interest is paid only on the utilized portion, helping save costs.</span>`,
           },
           {
-            heading: `✅ Short-Term Financing : <span class="font-Paragraph">This facility is typically designed for short-term needs, making it ideal for businesses requiring working capital.</span>`,
+            heading: `✅ Short-Term Financing : <span class="typography-body-md">This facility is typically designed for short-term needs, making it ideal for businesses requiring working capital.</span>`,
           },
           {
-            heading: `✅ Quick Access to Funds : <span class="font-Paragraph">Businesses can access funds quickly when needed, making it easier to manage cash flow.</span>`,
+            heading: `✅ Quick Access to Funds : <span class="typography-body-md">Businesses can access funds quickly when needed, making it easier to manage cash flow.</span>`,
           },
           {
-            heading: `✅ Flexibility in Usage : <span class="font-Paragraph">Businesses can use the funds for any legitimate purpose, from managing operational expenses to addressing unexpected financial challenges.</span>`,
+            heading: `✅ Flexibility in Usage : <span class="typography-body-md">Businesses can use the funds for any legitimate purpose, from managing operational expenses to addressing unexpected financial challenges.</span>`,
           },
         ],
       }}
@@ -92,7 +92,7 @@
         reverse: true,
       }}
     >
-      <p class="font-Paragraph text-minParaFont">
+      <p class="typography-body-sm text-text-light">
         Reach out to us anytime for expert guidance on your loan needs. Our team
         is ready to offer professional advice, assist you through the loan
         process, and help you find the best solutions. No matter when you need

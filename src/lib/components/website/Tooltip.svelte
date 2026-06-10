@@ -28,7 +28,7 @@ console.error("Failed to copy:", err);
   onmouseover={() => (isHovered = true)}
   onmouseleave={() => (isHovered = false)}
 >
-  <div class="text-center text-xs ">
+  <div class="text-center text-xs">
     {#if linkName.includes("undefined")}
       <p class="text-black invisible">Source: Freepik</p>
       {:else}

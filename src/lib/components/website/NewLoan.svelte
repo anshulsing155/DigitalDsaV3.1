@@ -258,10 +258,10 @@ link: "/contact",
   let thinkKnow = {
     heading: "Things you should know",
     paraGraph: [
-`<span class="font-FourthHead">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-`<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-`<span class="font-FourthHead">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-`<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
+`<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+`<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+`<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
+`<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
     ],
   };
 
@@ -365,7 +365,7 @@ dispatch("textExtracted", text);
     <div>
       <div class="hidden lg:block">
         <StickyNavbar navList={subList} {activeSection}>
-          <div class="  flex gap-4 pr-4">
+          <div class="flex gap-4 pr-4">
             {#each navList as lastItem}
               {#if lastItem.actionBtn}
                 {#each lastItem.actionBtn as action}
@@ -395,7 +395,7 @@ dispatch("textExtracted", text);
             {#if cardDataList.length > 0}
               <div class="pt-[4rem]">
                 <h3
-                  class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="md:text-start typography-h2 text-text-main"
                 >
                   {IconCardHeading}
                 </h3>
@@ -414,12 +414,12 @@ dispatch("textExtracted", text);
               reverse
             >
               <div slot="list" class="flex flex-col gap-4">
-                <p class="font-Paragraph text-minParaFont">
+                <p class="typography-body-sm text-text-light">
                   Get an estimate of how much you may be able to borrow.
                 </p>
                 <a
                   href="/calculators/emi-calculator"
-                  class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                   >Use calculator</a
                 >
               </div>
@@ -433,7 +433,7 @@ dispatch("textExtracted", text);
           >
             {#if forHome.length > 0}
               <h2
-                class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="md:text-start typography-h2 text-text-main"
               >
                 Looking for a home
               </h2>
@@ -455,13 +455,13 @@ dispatch("textExtracted", text);
                 cardHeading="Home Guarantee Scheme"
               >
                 <div slot="list" class="flex flex-col gap-4">
-                  <p class="font-Paragraph text-minParaFont">
+                  <p class="typography-body-sm text-text-light">
                     You may be able to buy your first home sooner with a smaller
                     deposit.
                   </p>
                   <a
                     href="/finance-support"
-                    class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                    class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                     >Discover the Scheme</a
                   >
                 </div>
@@ -471,7 +471,7 @@ dispatch("textExtracted", text);
             <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
               {#if whatNext.length > 0}
                 <h2
-                  class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                  class="md:text-start typography-h2 text-text-main"
                 >
                   What's next?
                 </h2>
@@ -496,7 +496,7 @@ dispatch("textExtracted", text);
           <div data-section="calculators" id="calculators" class="section">
             <div class="border-b grid gap-4 md:grid-cols-3">
               <h2
-                class="col-span-1 py-[3rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                class="col-span-1 py-[3rem] typography-h2 text-text-main"
               >
                 Tools & calculators
               </h2>
@@ -510,10 +510,7 @@ dispatch("textExtracted", text);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index <
-            list.length - 1
-              ? 'border-b'
-              : ''} "
+            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
           >
             <summary
               class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
@@ -523,7 +520,7 @@ dispatch("textExtracted", text);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-mobSubHead">
+                <div class="icon-container justify-self-end typography-h3">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -540,7 +537,7 @@ dispatch("textExtracted", text);
                 {#if cardDataList.length > 0}
                   <div class="pt-[2rem]">
                     <h3
-                      class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="md:text-start typography-h2 text-text-main"
                     >
                       {IconCardHeading}
                     </h3>
@@ -558,12 +555,12 @@ dispatch("textExtracted", text);
                   reverse
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <p class="font-Paragraph text-minParaFont">
+                    <p class="typography-body-sm text-text-light">
                       Get an estimate of how much you may be able to borrow.
                     </p>
                     <a
                       href="/calculators/emi-calculator"
-                      class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                       >Use calculator</a
                     >
                   </div>
@@ -576,7 +573,7 @@ dispatch("textExtracted", text);
               >
                 {#if forHome.length > 0}
                   <h2
-                    class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="md:text-start typography-h2 text-text-main"
                   >
                     Looking for a home
                   </h2>
@@ -597,13 +594,13 @@ dispatch("textExtracted", text);
                   cardHeading="Home Guarantee Scheme"
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <p class="font-Paragraph text-minParaFont">
+                    <p class="typography-body-sm text-text-light">
                       You may be able to buy your first home sooner with a
                       smaller deposit.
                     </p>
                     <a
                       href="/finance-support"
-                      class="underline underline-offset-4 hover:no-underline text-linkColor font-Paragraph text-subParaFont"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
                       >Discover the Scheme</a
                     >
                   </div>
@@ -612,7 +609,7 @@ dispatch("textExtracted", text);
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
                   {#if whatNext.length > 0}
                     <h2
-                      class="md:text-start font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                      class="md:text-start typography-h2 text-text-main"
                     >
                       What's next?
                     </h2>
@@ -639,7 +636,7 @@ dispatch("textExtracted", text);
               >
                 <div class="grid lg:grid-cols-3">
                   <h2
-                    class="lg:col-span-1 pt-[3rem] lg:pb-[3rem] pb-0 font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont"
+                    class="lg:col-span-1 pt-[3rem] lg:pb-[3rem] pb-0 typography-h2 text-text-main"
                   >
                     Tools & calculators
                   </h2>
@@ -660,7 +657,7 @@ dispatch("textExtracted", text);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] font-Paragraph text-subParaFont"
+            class="grid gap-[2rem] typography-body-md text-text-light"
             slot="list"
           >
             <li>

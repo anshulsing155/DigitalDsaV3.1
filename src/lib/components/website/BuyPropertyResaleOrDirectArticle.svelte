@@ -7,8 +7,8 @@
     heading: "Buying a Property Through Resale or Direct Purchase",
     para: `When it comes to buying a home most buyers opt for one of two preferred methods:
             <ul class="list-decimal list-inside mb-2 mt-2">
-            <li class="mb-2"><span class="font-FourthHead">Resale Transactions</span> (pre-owned properties)</li>
-            <li><span class="font-FourthHead">Direct Purchase from Builders</span> (new properties)</li>
+            <li class="mb-2"><span class="font-semibold">Resale Transactions</span> (pre-owned properties)</li>
+            <li><span class="font-semibold">Direct Purchase from Builders</span> (new properties)</li>
             </ul>
             These methods cater to the diverse needs of homebuyers and involve different processes and costs. Here’s a quick overview to help you navigate these types of property purchases.`,
   }
@@ -42,39 +42,39 @@
         heading: "Resale Transactions",
         para: `A resale transaction refers to buying a property from an individual owner rather than directly from the builder.`,
         secPara: `<div>
-                                <p class="text-miniSubHead font-FifthHead text-gray-800 mb-8">Why Choose Resale Transactions?</p>
+                                <p class="text-miniSubHead font-semibold text-gray-800 mb-8">Why Choose Resale Transactions?</p>
                                 <div class="space-y-4">
                                     <div class="flex items-start space-x-4 p-4 bg-grayColor rounded-lg shadow-sm">
                                     <svg class="text-iconColor w-6 h-6 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                                     <div>
-                                        <p class=" font-FourthHead text-darkColor">Immediate Possession</p>
+                                        <p class="font-semibold text-darkColor">Immediate Possession</p>
                                         <p class="text-darkColor">Especially with registered properties, you can move in or rent them out right away.</p>
                                     </div>
                                     </div>
                                     <div class="flex items-start space-x-4 p-4 bg-grayColor rounded-lg shadow-sm">
                                     <svg class="text-iconColor w-6 h-6 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                                     <div>
-                                        <p class="font-FourthHead text-darkColor">Negotiation Opportunities</p>
+                                        <p class="font-semibold text-darkColor">Negotiation Opportunities</p>
                                         <p class="text-darkColor">Prices are usually negotiable based on the property's condition and market value.</p>
                                     </div>
                                     </div>
                                     <div class="flex items-start space-x-4 p-4 bg-grayColor rounded-lg shadow-sm">
                                     <svg class="text-iconColor w-6 h-6 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                                     <div>
-                                        <p class="font-FourthHead text-darkColor">Well-Developed Infrastructure</p>
+                                        <p class="font-semibold text-darkColor">Well-Developed Infrastructure</p>
                                         <p class="text-darkColor">These properties are often in established neighborhoods with existing amenities.</p>
                                     </div>
                                     </div>
                                 </div>
                                 <div class="mt-10">
-                                    <p class="text-miniSubHead font-FifthHead text-darkColor mb-4">These properties can be:</p>
+                                    <p class="text-miniSubHead font-semibold text-darkColor mb-4">These properties can be:</p>
                                     <ul class="list-disc list-inside space-y-2 mt-2 text-darkColor">
                                     <li>
-                                        <span class="font-FourthHead text-darkColor">Under construction:</span>
+                                        <span class="font-semibold text-darkColor">Under construction:</span>
                                         <span class="ml-2">Unregistered but in the resale market, where the original buyer wishes to transfer ownership before possession.</span>
                                     </li>
                                     <li>
-                                        <span class="font-FourthHead text-darkColor">Registered properties:</span>
+                                        <span class="font-semibold text-darkColor">Registered properties:</span>
                                         <span class="ml-2">Pre-owned properties where the sale deed is already executed, and ownership is legally transferred.</span>
                                     </li>
                                     </ul>
@@ -136,7 +136,7 @@
         heading: "What Works for You?",
 
         secPara: `<div class="">
-                                    <p class="text-miniSubHead font-FifthHead text-gray-800 mb-8">Making the Right Choice:</p>
+                                    <p class="text-miniSubHead font-semibold text-gray-800 mb-8">Making the Right Choice:</p>
                                     <ul class="space-y-4 mt-2">
 
                                     <li class="flex items-start space-x-4 p-4 bg-grayColor rounded-lg shadow-sm">
@@ -197,7 +197,7 @@
         reverse: true,
       }}
     >
-      <p class="font-Paragraph text-minParaFont">
+      <p class="typography-body-sm text-text-light">
         Feel free to message us anytime for expert assistance with your loan
         needs. Our team is here to provide professional advice, guide you
         through the loan process, and help you find the best options. No matter

@@ -35,7 +35,7 @@
 />
 
 {#if !loaderValue}
-  <section class="xl:contianer mx-auto w-full bg-mainBg content">
+  <section class="content">
     <NewPageLayout
       pageData={{
          actionBtnsRequired :"",
@@ -183,7 +183,7 @@
         />
       </div>
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-3 gap-[3rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b"
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)]"
       >
         <NewBlogCard
           blogLists={[
@@ -293,7 +293,7 @@
       />
 
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem] xl:gap-[3rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b"
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)]"
       >
         <NewBlogCard
           blogLists={[
@@ -386,7 +386,7 @@
           reverse: false,
         }}
       >
-        <p>
+        <p class="typography-body-md text-[var(--form-text-secondary)]">
           Feel free to message us anytime for expert assistance with your loan
           needs. Our team is here to provide professional advice, guide you
           through the loan process, and help you find the best options. No
@@ -498,10 +498,10 @@
           thinkKnow={{
             heading: `Things you should know`,
             paraGraph: [
-              `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-              `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-              `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-              `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+              `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+              `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+              `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+              `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
             ],
           }}
           disc="list-decimal"

@@ -39,7 +39,7 @@
   });
 </script>
 
-<nav aria-label="breadcrumb" class="font-SubPara text-minParaFont">
+<nav aria-label="breadcrumb" class="typography-body-sm">
   {#if links.length > 1}
     {#each links as { name, path }, index (path)}
       <span>

@@ -99,7 +99,7 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/plotOnlyloan.svg' alt='plot icon'> Only Plot Purchase Loan </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/plotOnlyloan.svg' alt='plot icon'> Only Plot Purchase Loan </span>":
             [
               "To buy a plot",
               `Up to 20 years`,
@@ -109,7 +109,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='purpose icon'> Plot + Construction Loan </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='purpose icon'> Plot + Construction Loan </span>":
             [
               "To buy a plot and construct a house",
               `Up to 30 years`,
@@ -119,7 +119,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/lap.svg' alt='home icon'> Plot + Equity Loan </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/lap.svg' alt='home icon'> Plot + Equity Loan </span>":
             [
               "To buy a plot & get additional cash",
               `Up to 15 years`,
@@ -129,7 +129,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/ownership.svg' alt='owner icon'> Only Plot Equity Loan (for an already purchased plot) </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/ownership.svg' alt='owner icon'> Only Plot Equity Loan (for an already purchased plot) </span>":
             [
               "Loan against an already purchased plot",
               `Up to 15 years`,
@@ -139,7 +139,7 @@
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/renovateHome.svg' alt='home icon'> Only Construction Loan (for an already purchased plot) </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/renovateHome.svg' alt='home icon'> Only Construction Loan (for an already purchased plot) </span>":
             [
               "To construct a house on an existing plot",
               "Up to 30 years",
@@ -160,33 +160,33 @@
       ],
       rowData: [
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/financialProfile.svg' alt='profile icon'> Who Can Apply? </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/financialProfile.svg' alt='profile icon'> Who Can Apply? </span>":
             ["Buyers purchasing a new plot", `Owners of an already purchased`],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/interestIcon.svg' alt='interest icon'> Loan Amount </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/interestIcon.svg' alt='interest icon'> Loan Amount </span>":
             [
               "Higher (Up to 70% of market value)",
               `Lower (Up to 50% of market value)`,
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/renovateHome.svg' alt='purpose icon'> Usage of Funds </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/renovateHome.svg' alt='purpose icon'> Usage of Funds </span>":
             [
               "Part goes to seller, part to buyer",
               `Entire amount goes to borrower`,
             ],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/inte.svg' alt='inte icon'> Interest Rate </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/inte.svg' alt='inte icon'> Interest Rate </span>":
             ["Up to 1% higher than normal plot loan", `LAP Interest Rate`],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/firstHome.svg' alt='tenure icon'> Loan Tenure </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/firstHome.svg' alt='tenure icon'> Loan Tenure </span>":
             ["15 years", "15 years"],
         },
         {
-          "<span class='font-FourthHead flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Best For </span>":
+          "<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> Best For </span>":
             [
               "Buyers who need extra funds to cover deal costs",
               "Existing plot owners needing funds",
@@ -282,11 +282,11 @@
             listTopPara: `A Plot & Equity Loan bridges the gap when a plot’s market value exceeds its registered value.  <br> It's a rare offering, available from select banks due to higher risks and the absence of immediate construction plans.`,
             list: [
               {
-                heading: `<span class="font-FourthHead">This loan bridges the gap by dividing the loan into two parts:</span>`,
+                heading: `<span class="font-semibold">This loan bridges the gap by dividing the loan into two parts:</span>`,
                 desc: `
-                <span class="font-FourthHead">1. Plot Purchase Loan –</span>This is the amount the bank pays directly to the seller, covering up to 80% of the registered value of the plot.
+                <span class="font-semibold">1. Plot Purchase Loan –</span>This is the amount the bank pays directly to the seller, covering up to 80% of the registered value of the plot.
                 <br> <br>
-                 <span class="font-FourthHead">2. Plot Equity Loan –</span>This is the amount given to the buyer, which is the difference between the total approved loan and the Plot Purchase Loan. It helps the buyer manage the remaining cost.
+                 <span class="font-semibold">2. Plot Equity Loan –</span>This is the amount given to the buyer, which is the difference between the total approved loan and the Plot Purchase Loan. It helps the buyer manage the remaining cost.
                      `,
               },
             ],
@@ -302,24 +302,24 @@
             secHeading: `Example calculation`,
             list: [
               {
-                heading: `<span class="font-FourthHead">Key Property & Loan Details:</span>`,
+                heading: `<span class="font-semibold">Key Property & Loan Details:</span>`,
                 desc: `<ul class="ml-3 space-y-4">
-                <li><span class="font-FourthHead">1. Market Value –</span>₹1 Crore.</li>
-                 <li><span class="font-FourthHead">2. Registered Value –</span>₹50 Lakh.</li>
-                 <li><span class="font-FourthHead">3. Loan Eligibility –</span>The buyer qualifies for a loan amount exceeding ₹1 Crore</li>
-                 <li><span class="font-FourthHead">4. LTV Ratio –</span>Bank offers 70% of ₹1 Crore, approving a ₹70 Lakh loan.</li>
-                 <li><span class="font-FourthHead">5. Sanctioned Loan –</span>₹70 Lakh.</li>
+                <li><span class="font-semibold">1. Market Value –</span>₹1 Crore.</li>
+                 <li><span class="font-semibold">2. Registered Value –</span>₹50 Lakh.</li>
+                 <li><span class="font-semibold">3. Loan Eligibility –</span>The buyer qualifies for a loan amount exceeding ₹1 Crore</li>
+                 <li><span class="font-semibold">4. LTV Ratio –</span>Bank offers 70% of ₹1 Crore, approving a ₹70 Lakh loan.</li>
+                 <li><span class="font-semibold">5. Sanctioned Loan –</span>₹70 Lakh.</li>
                  </ul>`,
               },
               {
-                heading: `<span class="font-FourthHead">Loan Breakdown (The ₹70 Lakh loan is split into two parts):</span>`,
+                heading: `<span class="font-semibold">Loan Breakdown (The ₹70 Lakh loan is split into two parts):</span>`,
                 desc: `<ul class="ml-3 space-y-4">
-                 <li><span class="font-FourthHead">1. Plot Purchase Loan –</span>₹40 Lakh (80% of ₹50 Lakh) paid to the seller via cheque.</li>
-                 <li><span class="font-FourthHead">2. Plot Equity Loan –</span>₹30 Lakh provided to the buyer to cover additional costs beyond the registered value.</li>
+                 <li><span class="font-semibold">1. Plot Purchase Loan –</span>₹40 Lakh (80% of ₹50 Lakh) paid to the seller via cheque.</li>
+                 <li><span class="font-semibold">2. Plot Equity Loan –</span>₹30 Lakh provided to the buyer to cover additional costs beyond the registered value.</li>
                  </ul>`,
               },
               {
-                heading: `<span class="font-FourthHead">At the time of registry, both the cheques (one to the seller and one to the buyer) are disbursed. The buyer can use the Plot Equity Loan for additional payments, construction, or any other personal purpose.</span>`,
+                heading: `<span class="font-semibold">At the time of registry, both the cheques (one to the seller and one to the buyer) are disbursed. The buyer can use the Plot Equity Loan for additional payments, construction, or any other personal purpose.</span>`,
               },
             ],
           }}
@@ -339,7 +339,7 @@
         >
           <div class="">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+              class="grid mb-[4rem] typography-h2 text-text-main text-center"
             >
               Comparison of Different Plot Loan Types
             </h2>
@@ -358,23 +358,23 @@
             heading: `Key benefits`,
             list: [
               {
-                heading: `<span class="font-FourthHead">Higher Loan Amount –</span>`,
+                heading: `<span class="font-semibold">Higher Loan Amount –</span>`,
                 desc: `Combines a plot purchase loan with an equity component, increasing overall funding.`,
               },
               {
-                heading: `<span class="font-FourthHead">Covers Additional Costs –</span>`,
+                heading: `<span class="font-semibold">Covers Additional Costs –</span>`,
                 desc: `Helps manage extra expenses like seller’s premium, registration charges, or initial construction costs.`,
               },
               {
-                heading: `<span class="font-FourthHead">Flexible Usage –</span>`,
+                heading: `<span class="font-semibold">Flexible Usage –</span>`,
                 desc: `The equity portion can be used for any financial needs, such as home construction, renovation, or personal expenses.`,
               },
               {
-                heading: `<span class="font-FourthHead">Improved Loan Eligibility –</span>`,
+                heading: `<span class="font-semibold">Improved Loan Eligibility –</span>`,
                 desc: `Combining both components may improve eligibility and approval chances.`,
               },
               {
-                heading: `<span class="font-FourthHead">Leverages Property Value –</span>`,
+                heading: `<span class="font-semibold">Leverages Property Value –</span>`,
                 desc: `Unlocks the potential of the plot’s market value for financial support.`,
               },
             ],
@@ -431,7 +431,7 @@
         >
           <div class="">
             <h2
-              class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+              class="grid mb-[4rem] typography-h2 text-text-main text-center"
             >
               Plot + Equity Loan vs. Only Plot Equity Loan
             </h2>
@@ -453,7 +453,7 @@
             reverse: true,
           }}
         >
-          <div class="font-Paragraph text-minParaFont">
+          <div class="typography-body-sm text-text-light">
             <ul class="list-disc space-y-4">
               <li class="flex items-start gap-1">
                 <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
@@ -589,10 +589,7 @@
     <div class="lg:hidden block">
       {#each ["Plot + Equity", "Key benefits", "Plot+Equity vs Plot Equity", "How Digital DSA helps", "Tools & calculators"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index <
-          list.length - 1
-            ? 'border-b'
-            : ''} "
+          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -600,7 +597,7 @@
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
+              <div class="icon-container justify-self-end typography-h3">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -614,11 +611,11 @@
                   listTopPara: `A Plot & Equity Loan bridges the gap when a plot’s market value exceeds its registered value.  <br> It's a rare offering, available from select banks due to higher risks and the absence of immediate construction plans.`,
                   list: [
                     {
-                      heading: `<span class="font-FourthHead">This loan bridges the gap by dividing the loan into two parts:</span>`,
+                      heading: `<span class="font-semibold">This loan bridges the gap by dividing the loan into two parts:</span>`,
                       desc: `
-                <span class="font-FourthHead">1. Plot Purchase Loan –</span>This is the amount the bank pays directly to the seller, covering up to 80% of the registered value of the plot.
+                <span class="font-semibold">1. Plot Purchase Loan –</span>This is the amount the bank pays directly to the seller, covering up to 80% of the registered value of the plot.
                 <br> <br>
-                 <span class="font-FourthHead">2. Plot Equity Loan –</span>This is the amount given to the buyer, which is the difference between the total approved loan and the Plot Purchase Loan. It helps the buyer manage the remaining cost.
+                 <span class="font-semibold">2. Plot Equity Loan –</span>This is the amount given to the buyer, which is the difference between the total approved loan and the Plot Purchase Loan. It helps the buyer manage the remaining cost.
                      `,
                     },
                   ],
@@ -634,24 +631,24 @@
                   secHeading: `Example calculation`,
                   list: [
                     {
-                      heading: `<span class="font-FourthHead">Key Property & Loan Details:</span>`,
+                      heading: `<span class="font-semibold">Key Property & Loan Details:</span>`,
                       desc: `<ul class="ml-3 space-y-4">
-                <li><span class="font-FourthHead">1. Market Value –</span>₹1 Crore.</li>
-                 <li><span class="font-FourthHead">2. Registered Value –</span>₹50 Lakh.</li>
-                 <li><span class="font-FourthHead">3. Loan Eligibility –</span>The buyer qualifies for a loan amount exceeding ₹1 Crore</li>
-                 <li><span class="font-FourthHead">4. LTV Ratio –</span>Bank offers 70% of ₹1 Crore, approving a ₹70 Lakh loan.</li>
-                 <li><span class="font-FourthHead">5. Sanctioned Loan –</span>₹70 Lakh.</li>
+                <li><span class="font-semibold">1. Market Value –</span>₹1 Crore.</li>
+                 <li><span class="font-semibold">2. Registered Value –</span>₹50 Lakh.</li>
+                 <li><span class="font-semibold">3. Loan Eligibility –</span>The buyer qualifies for a loan amount exceeding ₹1 Crore</li>
+                 <li><span class="font-semibold">4. LTV Ratio –</span>Bank offers 70% of ₹1 Crore, approving a ₹70 Lakh loan.</li>
+                 <li><span class="font-semibold">5. Sanctioned Loan –</span>₹70 Lakh.</li>
                  </ul>`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Loan Breakdown (The ₹70 Lakh loan is split into two parts):</span>`,
+                      heading: `<span class="font-semibold">Loan Breakdown (The ₹70 Lakh loan is split into two parts):</span>`,
                       desc: `<ul class="ml-3 space-y-4">
-                 <li><span class="font-FourthHead">1. Plot Purchase Loan –</span>₹40 Lakh (80% of ₹50 Lakh) paid to the seller via cheque.</li>
-                 <li><span class="font-FourthHead">2. Plot Equity Loan –</span>₹30 Lakh provided to the buyer to cover additional costs beyond the registered value.</li>
+                 <li><span class="font-semibold">1. Plot Purchase Loan –</span>₹40 Lakh (80% of ₹50 Lakh) paid to the seller via cheque.</li>
+                 <li><span class="font-semibold">2. Plot Equity Loan –</span>₹30 Lakh provided to the buyer to cover additional costs beyond the registered value.</li>
                  </ul>`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">At the time of registry, both the cheques (one to the seller and one to the buyer) are disbursed. The buyer can use the Plot Equity Loan for additional payments, construction, or any other personal purpose.</span>`,
+                      heading: `<span class="font-semibold">At the time of registry, both the cheques (one to the seller and one to the buyer) are disbursed. The buyer can use the Plot Equity Loan for additional payments, construction, or any other personal purpose.</span>`,
                     },
                   ],
                 }}
@@ -671,7 +668,7 @@
               >
                 <div class="">
                   <h2
-                    class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                    class="grid mb-[4rem] typography-h2 text-text-main text-center"
                   >
                     Comparison of Different Plot Loan Types
                   </h2>
@@ -690,23 +687,23 @@
                   heading: `Key benefits`,
                   list: [
                     {
-                      heading: `<span class="font-FourthHead">Higher Loan Amount –</span>`,
+                      heading: `<span class="font-semibold">Higher Loan Amount –</span>`,
                       desc: `Combines a plot purchase loan with an equity component, increasing overall funding.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Covers Additional Costs –</span>`,
+                      heading: `<span class="font-semibold">Covers Additional Costs –</span>`,
                       desc: `Helps manage extra expenses like seller’s premium, registration charges, or initial construction costs.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Flexible Usage –</span>`,
+                      heading: `<span class="font-semibold">Flexible Usage –</span>`,
                       desc: `The equity portion can be used for any financial needs, such as home construction, renovation, or personal expenses.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Improved Loan Eligibility –</span>`,
+                      heading: `<span class="font-semibold">Improved Loan Eligibility –</span>`,
                       desc: `Combining both components may improve eligibility and approval chances.`,
                     },
                     {
-                      heading: `<span class="font-FourthHead">Leverages Property Value –</span>`,
+                      heading: `<span class="font-semibold">Leverages Property Value –</span>`,
                       desc: `Unlocks the potential of the plot’s market value for financial support.`,
                     },
                   ],
@@ -763,7 +760,7 @@
               >
                 <div class="">
                   <h2
-                    class="grid mb-[4rem] font-ThirdHead text-mobSubHead md:text-miniHeadFont lg:text-minHeadFont text-center"
+                    class="grid mb-[4rem] typography-h2 text-text-main text-center"
                   >
                     Plot + Equity Loan vs. Only Plot Equity Loan
                   </h2>
@@ -785,7 +782,7 @@
                   reverse: true,
                 }}
               >
-                <div class="font-Paragraph text-minParaFont">
+                <div class="typography-body-sm text-text-light">
                   <ul class="list-disc space-y-4">
                     <li class="flex items-start gap-1">
                       <img
@@ -1004,10 +1001,10 @@
         thinkKnow={{
           heading: `Things you should know`,
           paraGraph: [
-            `<span class="font-FourthHead">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-FourthHead">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-FourthHead">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-FourthHead">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
+            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
+            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
+            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
+            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
           ],
         }}
         disc="list-decimal"
