@@ -341,7 +341,7 @@
         > -->
 
         <div
-          class="flex justify-center items-center gap-2 lg:py-[34px] cursor-pointer bg-btnBg w-[182px]"
+          class="flex justify-center items-center gap-2 lg:py-[34px] cursor-pointer bg-primary w-[182px]"
         >
           <div class="flex items-center gap-2">
             {#if page.data.user?.image}
@@ -409,7 +409,7 @@
       {:else}
         <a
           href="/login"
-          class="flex gap-4 items-center font-semibold text-navFont bg-btnBg p-5 sm:py-11 text-black"
+          class="flex gap-4 items-center font-semibold text-navFont bg-primary p-5 sm:py-11 text-black"
         >
           <img src="/icons/lock.svg" alt="lock-svg" class="h-[.9rem]" />
           <p>Login</p>
@@ -591,7 +591,7 @@
         <!-- svelte-ignore a11y_click_events_have_key_events -->
         <!-- svelte-ignore a11y_no_static_element_interactions -->
         <div
-          class="w-full pt-3"
+          class="w-full pt-3 "
           onclick={() => (mobileProfileIsOpen = !mobileProfileIsOpen)}
         >
           {#if page.data.user?.name}
