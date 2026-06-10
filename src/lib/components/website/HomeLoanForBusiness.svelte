@@ -332,34 +332,34 @@
 		<div class="lg:hidden block">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-darkColor text-white {index < content.mobileNavbarTitle.length - 1 ? 'border-b' : ''}"
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
 				>
 					<summary
-						class="col-span-3 list-none px-[1rem] py-[1.5rem]"
+						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-navFont">{list}</h2>
+							<h2 class="typography-label text-black dark:text-white">{list}</h2>
 							<div class="icon-container justify-self-end typography-h3">
-								<span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+								<span><i class="fa-solid fa-angle-down faq-icon text-black dark:text-white transition-transform duration-300"></i></span>
 							</div>
 						</div>
 					</summary>
 
 					{#if index == 0}
-						<div id="started" class="bg-white text-black px-[0.5rem]">
+						<div id="started" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
 							<Journey journey={content.journey} />
 						</div>
 					{:else if index == 1}
-						<div id="choose" class="bg-white text-black px-[0.5rem]">
+						<div id="choose" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
 							<WhyChoose facilities={content.facilities} gridCol={4} />
 						</div>
 					{:else if index == 2}
-						<div id="loanOptions" class="bg-white text-black px-[0.5rem]">
+						<div id="loanOptions" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
 							<WhyChoose facilities={content.homeLoanOptions} gridCol={3} />
 						</div>
 					{:else if index == 3}
-						<div class="bg-white text-black px-[0.5rem]" id="whatDocs">
+						<div class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4" id="whatDocs">
 							<TwoColumn
 								cardImage={cardImg1}
 								cardAltName={cardAlt1}
@@ -393,7 +393,7 @@
 							<Guides guide={content.guide} />
 						</div>
 					{:else if index == 4}
-						<div id="process" class="bg-white text-black px-[0.5rem] py-[4rem]">
+						<div id="process" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] py-[4rem]">
 							<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
 								<div>
 									<h3 class="mb-[1.5rem] md:text-start typography-h2 text-text-main">
@@ -420,7 +420,7 @@
 										You may be eligible if:
 									</h3>
 									<ul class="list-disc mt-[1.5rem] space-y-2 md:mb-4 pl-4">
-										<li class="typography-body-sm text-text-light">You’re self-employed</li>
+										<li class="typography-body-sm text-text-light">You're self-employed</li>
 										<li class="typography-body-sm text-text-light">You pay yourself a regular salary from your business</li>
 									</ul>
 								</div>
@@ -439,44 +439,42 @@
 							</div>
 						</div>
 					{:else if index == 5}
-						<div id="fees" class="bg-white text-black px-[0.5rem] py-[4rem]">
-							<div class="grid grid-cols-3 gap-[2rem]">
-								<h2 class="col-span-3 lg:col-span-1 typography-h2 text-text-main">
+						<div id="fees" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] py-[4rem]">
+							<div class="grid grid-cols-1 gap-[2rem]">
+								<h2 class="typography-h2 text-text-main">
 									{content.rates.heading}
 								</h2>
 
-								<div class="col-span-3 lg:col-span-2">
-									<div class="grid md:grid-cols-2 gap-[2rem]">
-										<div class="space-y-4">
-											<h3 class="typography-h3 font-semibold text-text-main">
-												Interest Rates ({roiResult.roi || '8.10'}% PA)
-											</h3>
-											<ul class="list-disc pl-4 marker:black space-y-2">
-												{#each content.rates.left[0].lists as list}
-													<li class="typography-body-sm text-text-light">
-														{list}
-													</li>
-												{/each}
-											</ul>
-										</div>
-										<div class="space-y-4">
-											<h3 class="typography-h3 font-semibold text-text-main">
-												{content.rates.right[0].heading}
-											</h3>
-											<ul class="list-disc pl-4 marker:black space-y-2">
-												{#each content.rates.right[0].lists as list}
-													<li class="typography-body-sm text-text-light">
-														{list}
-													</li>
-												{/each}
-											</ul>
-										</div>
+								<div class="grid md:grid-cols-2 gap-[2rem]">
+									<div class="space-y-4">
+										<h3 class="typography-h3 font-semibold text-text-main">
+											Interest Rates ({roiResult.roi || '8.10'}% PA)
+										</h3>
+										<ul class="list-disc pl-4 marker:black space-y-2">
+											{#each content.rates.left[0].lists as list}
+												<li class="typography-body-sm text-text-light">
+													{list}
+												</li>
+											{/each}
+										</ul>
+									</div>
+									<div class="space-y-4">
+										<h3 class="typography-h3 font-semibold text-text-main">
+											{content.rates.right[0].heading}
+										</h3>
+										<ul class="list-disc pl-4 marker:black space-y-2">
+											{#each content.rates.right[0].lists as list}
+												<li class="typography-body-sm text-text-light">
+													{list}
+												</li>
+											{/each}
+										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
 					{:else if index == 6}
-						<div id="support" class="bg-white text-black px-[0.5rem]">
+						<div id="support" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
 							<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
 							<Guides guide={content.getStart} />
 						</div>
