@@ -11,7 +11,7 @@
 	import HelpList from './HelpList.svelte';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import Seo from './Seo.svelte';
-	import { content } from '$lib/data/buyingFirstHomeHL.js';
+	import content from '$lib/data/website/buyingFirstHomeHL.json';
 
 	interface ButtonProps {
 		btnName: string;

@@ -1,0 +1,232 @@
+{
+	"mobileNavbarTitle": [
+		"Get started",
+		"Why Digital DSA",
+		"Home loan options",
+		"What documents do you need",
+		"Verification process",
+		"Rates & fees",
+		"Tools & support"
+	],
+	"pageData": {
+		"coverImage": "/images/business-owners.jpg",
+		"coverAlt": "photo of two business owners",
+		"classStyle": "object-cover xl:h-[60svh] 3xl:max-h-[70svh]",
+		"heroHeading": "Home loans for business owners",
+		"heroParagraph": "Are you self-employed, a shopkeeper, or running a small business?<br>At Digital DSA, we specialize in helping self-employed individuals and business owners from all sectors—organized or unorganized—secure the perfect home loan solution, no matter how complex your income verification might seem."
+	},
+	"navList": {
+		"items": [
+			{
+				"name": "Get started",
+				"targetId": "started"
+			},
+			{
+				"name": "Why Digital DSA",
+				"targetId": "choose"
+			},
+			{
+				"name": "Home loan options",
+				"targetId": "loanOptions"
+			},
+			{
+				"name": "What documents do you need",
+				"targetId": "whatDocs"
+			},
+			{
+				"name": "Verification process",
+				"targetId": "process"
+			},
+			{
+				"name": "Rates & fees",
+				"targetId": "fees"
+			},
+			{
+				"name": "Tools & support",
+				"targetId": "support"
+			}
+		]
+	},
+	"journey": {
+		"heading": "Get started",
+		"items": [
+			{
+				"id": 1,
+				"title": "Just need a home loan?",
+				"desc": "Talk to our Home Loan Assistant about finding the right home loan for you.",
+				"btnName": "Book appointment",
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary"
+			},
+			{
+				"id": 2,
+				"title": "Looking for a home & business loan?",
+				"desc": "Talk to our specialists about financing your home and business loan together.",
+				"premiumBtnName": "Book appointment",
+				"premiumBtnLink": "/appointment",
+				"premiumBtnClass": "btn-primary text-white dark:text-black"
+			}
+		]
+	},
+	"facilities": {
+		"heading": "Why Digital DSA?",
+		"items": [
+			{
+				"id": 1,
+				"title": "Custom Solutions for All Business Owners",
+				"desc": "Whether you’re a shopkeeper, mechanic, electrician, food joint owner, or running any other small business, we offer personalized loan solutions.",
+				"icon": "/icons/uniqueLink.svg",
+				"altName": "unique-icon"
+			},
+			{
+				"id": 2,
+				"title": "No Strict Financial History Required",
+				"desc": "Don’t have three years of financial records? Don’t worry! We can assist even if you have only 2 years, 1 year, or no financial records at all.",
+				"icon": "/icons/apply-pen.svg",
+				"altName": "pen-icon"
+			},
+			{
+				"id": 3,
+				"title": "Access to Multiple Lenders",
+				"desc": "With partnerships across banks, NBFCs, and financial institutions, we match you with the best home loan options available for your unique situation.",
+				"icon": "/icons/FD.svg",
+				"altName": "fd-icon"
+			},
+			{
+				"id": 4,
+				"title": "Competitive Interest Rates",
+				"desc": "Get affordable interest rates and repayment options, whether you have formal income proof or not.",
+				"icon": "/icons/interestIcon.svg",
+				"altName": "interest-icon"
+			},
+			{
+				"id": 5,
+				"title": "Dedicated Support",
+				"desc": "Our specialists will guide you through the entire process, ensuring a seamless experience.",
+				"icon": "/icons/negotiate.svg",
+				"altName": "hands-icon"
+			},
+			{
+				"id": 6,
+				"title": "Flexible Appointments",
+				"desc": "We’re available to assist you in person, over the phone, or online, at a time that works for you.",
+				"icon": "/icons/appointment.svg",
+				"altName": "appoint-icon"
+			}
+		]
+	},
+	"homeLoanOptions": {
+		"heading": "Home Loan Options for <br> Business Owners",
+		"items": [
+			{
+				"id": 1,
+				"title": "For Established Business Owners with Financial Records",
+				"desc": "Provide ITRs, computation of income, and other financial documents for the last 2–3 years to get the best loan options tailored to your needs."
+			},
+			{
+				"id": 2,
+				"title": "For New Business Owners (1 Year or Less)",
+				"desc": "Even if your business has been running for just one year, we can help you secure a loan by evaluating your current income and projections."
+			},
+			{
+				"id": 3,
+				"title": "For Small Vendors and Unorganized Businesses",
+				"desc": "No formal financial records? No problem! We specialize in finding solutions for small vendors, shopkeepers, mechanics, electricians, and others in the unorganized sector."
+			}
+		]
+	},
+	"guide": {
+		"heading": "How We Help Business <br> Owners Without Documents",
+		"para": "For individuals like shopkeepers, small vendors, or repair workers with no financial records:<br><ul class=\"list-disc pl-4 space-y-4 mt-4\"><li><span class=\"font-semibold\">Cash Flow Assessment:</span> We evaluate your income using your bank deposits, expense patterns, and other financial behaviors.</li><li><span class=\"font-semibold\">Alternate Documentation:</span> If you don’t have ITRs or financial statements, we help by submitting alternative proofs like rent agreements, utility bills, or sales invoices.</li><li><span class=\"font-semibold\">Tailored Solutions:</span> Our wide network of lenders allows us to offer customized loan options for unorganized sector businesses.</li></ul>"
+	},
+	"getStart": {
+		"heading": "How to Get Started",
+		"para": "For individuals like shopkeepers, small vendors, or repair workers with no financial records:<br><ul class=\"list-disc pl-4 space-y-4 mt-4\"><li><span class=\"font-semibold\">Step 1: First Time Free Consultation</span><br>Speak with our Loan Specialists to discuss your needs and financial situation.</li><li><span class=\"font-semibold\">Step 2: Check Your Eligibility</span><br>Use our <a href=\"/calculators/eligibility-calculator\" class=\"underline underline-offset-4\">Home Loan Eligibility Calculator</a> or connect with us to get a quick estimate.</li><li><span class=\"font-semibold\">Step 3: Submit Documents</span> Provide the necessary financial or alternate documents based on your business type.</li><li><span class=\"font-semibold\">Step 4: Choose Your Loan</span> We’ll match you with the best lenders and guide you through the application process.</li></ul>"
+	},
+	"documentsGuide": [
+		{
+			"para": "Depending on your business profile, you may need:",
+			"lists": [
+				{
+					"heading": "For Organized Sector Business Owners",
+					"subList": [
+						{
+							"list": "ITR (Income Tax Returns) for the last 2–3 years (if available)."
+						},
+						{
+							"list": "Computation of income and profit & loss statements."
+						},
+						{
+							"list": "Bank statements for the last 6–12 months."
+						}
+					]
+				},
+				{
+					"heading": "For New or Unorganized Business Owners",
+					"subList": [
+						{
+							"list": "Bank statements for 6–12 months to assess cash flow."
+						},
+						{
+							"list": "Any business-related documents like a GST certificate, shop registration, or invoices."
+						},
+						{
+							"list": "A declaration of your income (self-declared income affidavit)."
+						}
+					]
+				}
+			]
+		}
+	],
+	"rates": {
+		"heading": "Rate & fees",
+		"left": [
+			{
+				"heading": "Interest Rates PA",
+				"lists": [
+					"Starting from 8.10% p.a. for new home loans.",
+					"Flexible financing options with Loan-to-Value (LTV) ratios up to 80%–90%, depending on the lender."
+				]
+			}
+		],
+		"right": [
+			{
+				"heading": "Fees (10-15k)",
+				"lists": [
+					"Processing Fee: ₹10,000–₹15,000 (varies by lender, often negotiable).",
+					"Service Charges: Detailed in your loan agreement based on the loan type and lender."
+				]
+			}
+		]
+	},
+	"thinkKnow": {
+		"heading": "Things you should know",
+		"paraGraph": [
+			"<span class=\"font-semibold\">Independent Facilitator:</span> Digital DSA serves as an independent loan facilitator, helping business owners connect with licensed banks and NBFCs for home loan solutions. We do not provide loans directly and are not a financial institution.",
+			"<span class=\"font-semibold\">Loan Approval:</span> Home loan approval for business owners depends entirely on the respective bank or NBFC's assessment of financial stability, income consistency, and creditworthiness. Digital DSA does not guarantee approval, as decisions are based on the lender’s policies, terms, and conditions. Interest rates, repayment options, and processing fees may vary accordingly.",
+			"<span class=\"font-semibold\">Liability:</span> Digital DSA is not responsible for any delays, rejections, or financial losses encountered during the loan application process. The final approval decision rests with the bank or NBFC, and their terms will apply.",
+			"<span class=\"font-semibold\">Important Information:</span> The details shared on this page are for informational purposes only and may not be suitable for every business owner. Home loan eligibility and benefits depend on various factors, including income stability, business history, and lender requirements. Exclusive loan offers may be available through Digital DSA, subject to specific eligibility criteria."
+		]
+	},
+	"frequentlyAskedQuestions": {
+		"heading": "Frequently asked questions",
+		"accordions": [
+			{
+				"question": "What if I don’t have ITRs or profit & loss statements?",
+				"answer": "We can work with alternative documentation, such as:<br><ul class=\"list-disc pl-4\"><li>Bank statements showing cash flow.</li><li>Self-declared income affidavits.</li><li>Business-related certificates or invoices.</li></ul>"
+			},
+			{
+				"question": "Can I still apply if my business is less than a year old?",
+				"answer": "Yes! We have solutions tailored for new businesses based on current income and growth potential."
+			},
+			{
+				"question": "What’s the maximum loan amount I can get?",
+				"answer": "Loan amounts depend on factors like your business cash flow, property value, and lender policies. Our Loan Specialists will help you estimate your eligibility."
+			},
+			{
+				"question": "Can I combine my home loan with financing for my business?",
+				"answer": "Absolutely! We can help you explore options to combine your home and business loan financing for better management and savings."
+			}
+		]
+	}
+}

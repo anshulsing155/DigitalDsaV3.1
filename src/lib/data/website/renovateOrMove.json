@@ -1,0 +1,269 @@
+{
+	"mobileNavbarTitle": [
+		"Home Renovation",
+		"Buying a New Home",
+		"The Ultimate Comparison",
+		"Best Option for You"
+	],
+	"pageData": {
+		"coverImage": "/images/renovate-or-move-blog.jpg",
+		"coverAlt": "hero-cover",
+		"heading": "Should You Renovate Your Home or Move to a New One?",
+		"para": "<p>As a second-time homebuyer, you might be thinking about whether it’s time to upgrade to a new home that offers better features and amenities. But before you make the decision to sell and move, consider this: Renovating your existing home could be a smarter, more cost-effective alternative.<br>Let’s explore both options — <strong>Home Renovation vs. Buying a New Home</strong> and see what might be best for you in terms of cost, emotional value, and long-term impact.</p>",
+		"actionBtns": [
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment"
+			},
+			{
+				"btnName": "Compare all offers",
+				"btnLink": "/get-started/how-can-we-help",
+				"btnColor": "#ffcc00",
+				"animation": true
+			}
+		]
+	},
+	"navList": {
+		"items": [
+			{
+				"name": "Home Renovation",
+				"targetId": "renovation"
+			},
+			{
+				"name": "Buying a New Home",
+				"targetId": "buying"
+			},
+			{
+				"name": "The Ultimate Comparison",
+				"targetId": "comparision"
+			},
+			{
+				"name": "Best Option for You",
+				"targetId": "option"
+			}
+		],
+		"actionBtns": [
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
+			},
+			{
+				"btnName": "Compare all offers",
+				"btnLink": "/get-started/how-can-we-help",
+				"btnClass": "btn-primary text-black"
+			}
+		]
+	},
+	"renovation": {
+		"contents": {
+			"heading": "Home Renovation:<br> <span class=\"underline decoration-btnBg underline-offset-4\">The Smart Upgrade</span>",
+			"listTopPara": "<p>Renovating your existing home can give it a fresh new feel without the hassle of moving. You can add new features, modernize spaces, and create the dream home you’ve always wanted right where you are. <br><br>Here are some benefits of home renovation:</p>",
+			"list": [
+				{
+					"heading": "<span class=\"typography-body-md\">Cost-Effective</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\">Personalized Upgrades</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\">Save on Moving Costs</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\">Increased Property Value</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\">Stay in a Familiar Environment</span>"
+				}
+			]
+		}
+	},
+	"buying": {
+		"contents": {
+			"heading": "Buying a New Home: <br><span class=\"underline decoration-btnBg underline-offset-4\">The Fresh Start</span>",
+			"listTopPara": "<p>On the other hand, buying a new home allows you to start afresh, with the amenities and features you’ve always dreamed of. Whether it’s more space, better location, or modern designs, moving can provide a whole new lifestyle.<br><br> Here’s why buying a new home could be the better option for some:</p>",
+			"list": [
+				{
+					"heading": "<span class=\"typography-body-md\">Modern Features and Amenities</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\">No Renovation Hassles</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\">Better Location or Neighborhood</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\">Increased Energy Efficiency</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\">No Need for Future Renovations</span>"
+				}
+			]
+		}
+	},
+	"comparison": {
+		"firstTableData": [
+			{
+				"columnName": [
+					"Feature",
+					"Home Renovation",
+					"New Home Purchase"
+				],
+				"rowData": [
+					{
+						"Cost": [
+							"Lower, ₹5-15 lakh for major work.",
+							"Higher, ₹30 lakh to ₹1 crore+."
+						]
+					},
+					{
+						"Time": [
+							"Longer, several months.",
+							"Faster, move-in ready."
+						]
+					},
+					{
+						"Emotional Value": [
+							"Retain attachment to your home/neighborhood.",
+							"Fresh start, but leaving old memories."
+						]
+					},
+					{
+						"Customization": [
+							"Fully tailored to your needs.",
+							"Limited, unless it’s a new build."
+						]
+					},
+					{
+						"Resale Value": [
+							"Boosts value if done well.",
+							"Higher resale, but costly to sell later."
+						]
+					},
+					{
+						"Stress Level": [
+							"High—living through disruptions.",
+							"Lower—ready to move in."
+						]
+					},
+					{
+						"Location": [
+							"Stay in your current community.",
+							"Freedom to choose a new, ideal location."
+						]
+					},
+					{
+						"Energy Efficiency": [
+							"Upgrade as needed.",
+							"Likely pre-equipped with modern systems."
+						]
+					}
+				]
+			}
+		],
+		"buttonBanner": {
+			"heading": "Compare all bank offers <span class=\"underline decoration-btnBg underline-offset-4\">instantly</span>",
+			"btnName": "Compare Here",
+			"btnBorder": "#4F4C4D",
+			"btnLink": "/get-started/how-can-we-help"
+		}
+	},
+	"option": {
+		"contents1": {
+			"heading": "Best Option for You",
+			"listTopPara": "<p>Choosing between Home Renovation and Buying a New Home depends on:</p>",
+			"list": [
+				{
+					"heading": "<span class=\"typography-body-md\"><strong>Budget:</strong> Renovating is cost-effective, while buying offers modern features with less effort.</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\"><strong>Preferences:</strong> Renovate if you love your current home and neighborhood; buy if you want a fresh start.</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\"><strong>Long-Term Goals:</strong> Stay longer? Renovate to add value. Relocating soon? Buying might be better.</span>"
+				}
+			]
+		},
+		"contents2": {
+			"heading": "Which One Suits Your <span class=\"underline decoration-btnBg underline-offset-4\">Goals?</span>",
+			"listTopPara": "<p>The choice ultimately comes down to your budget, personal priorities, and long-term plans.</p>",
+			"list": [
+				{
+					"heading": "<span class=\"typography-body-md\"><strong>Renovation:</strong> Keeps the comfort of your current home and community intact, while allowing you to customize and upgrade. It’s ideal if you value familiarity and have a limited budget.</span>"
+				},
+				{
+					"heading": "<span class=\"typography-body-md\"><strong>Buying a New Home:</strong> Offers fresh opportunities with modern amenities, better energy efficiency, and a potential lifestyle shift. It’s the way to go if you’re ready for change and can manage higher upfront costs.</span>"
+				}
+			]
+		}
+	},
+	"messageUs": {
+		"contents": {
+			"cardImage": "/images/message.jpg",
+			"cardAltName": "housing-figure",
+			"cardHeading": "Message us 24/7",
+			"sourceName": "DigitalDSA.com",
+			"originalSource": "www.digitaldsa.com",
+			"reverse": true
+		},
+		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"button": {
+			"link": "/contact",
+			"btnName": "Message us",
+			"btnClass": "btn-primary text-white dark:text-black"
+		}
+	},
+	"common_components": {
+		"helpList": {
+			"contents": {
+				"heading": "We're here to help",
+				"xlGridCol": 4,
+				"borderBottom": false,
+				"cards": [
+					{
+						"heading": "Know your borrowing power",
+						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+						"icon": "/icons/appointment.svg",
+						"altName": "appointment Icon",
+						"url": "/appointment"
+					},
+					{
+						"heading": "Check loan offers",
+						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"icon": "/icons/manageLoan2.svg",
+						"altName": "Alert Icon",
+						"url": "/get-started/how-can-we-help"
+					},
+					{
+						"heading": "Contact us",
+						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+						"icon": "/icons/contact.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					},
+					{
+						"heading": "Message us",
+						"para": "Get instant help from our online assistants or chat to a specialist.",
+						"icon": "/icons/msg.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					}
+				]
+			}
+		},
+		"thinkYouShouldKnow": {
+			"contents": {
+				"heading": "Things you should know",
+				"paraGraph": [
+					"Renovating can be more cost-effective but may involve living through disruptions.",
+					"Buying a new home offers modern amenities but comes with higher upfront costs.",
+					"Consider your budget, emotional attachment to your current home, and long-term goals when deciding.",
+					"Use our comparison tools to weigh the pros and cons of each option.",
+					"Consult with our specialists for personalized advice tailored to your situation.",
+					"Explore our detailed guides to make an informed decision about renovating or buying."
+				]
+			},
+			"disc": "list-decimal"
+		}
+	}
+}
