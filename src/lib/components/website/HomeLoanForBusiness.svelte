@@ -65,6 +65,7 @@
         desc: "Talk to our Home Loan Assistant about finding the right home loan for you.",
         btnName: "Book appointment",
         btnLink: "/appointment",
+        btnClass: 'btn-secondary'
       },
       {
         id: 2,
@@ -72,6 +73,7 @@
         desc: "Talk to our specialists about financing your home and business loan together.",
         premiumBtnName: "Book appointment",
         premiumBtnLink: "/appointment",
+        premiumBtnClass: "btn-primary text-white dark:text-black"
       },
     ],
   };
@@ -404,13 +406,13 @@
         <div
           id="choose"
           data-section="choose"
-          class="border-b border-borderColor"
+          class="border-b border-[var(--form-border)]"
         >
           <WhyChoose {facilities} gridCol="3" />
         </div>
 
         <div
-          class="border-b border-borderColor"
+          class="border-b border-[var(--form-border)]"
           id="loanOptions"
           data-section="loanOptions"
         >
@@ -418,7 +420,7 @@
         </div>
 
         <div
-          class="border-b border-borderColor"
+          class="border-b border-[var(--form-border)]"
           id="whatDocs"
           data-section="whatDocs"
         >
@@ -454,7 +456,7 @@
         </div>
 
         <div
-          class="py-[4rem] border-b border-borderColor"
+          class="py-[4rem] border-b border-[var(--form-border)]"
           id="process"
           data-section="process"
         >
@@ -478,6 +480,7 @@
                     <PremiumButton
                       premiumBtnName="Book appointment"
                       premiumBtnLink="/appointment"
+                       premiumBtnClass= "btn-primary text-white dark:text-black"
                     />
                   </div>
                 </div>
@@ -684,6 +687,7 @@
                         <PremiumButton
                           premiumBtnName="Book appointment"
                           premiumBtnLink="/appointment"
+                           premiumBtnClass= "btn-primary text-white dark:text-black"
                         />
                       </div>
                     </div>

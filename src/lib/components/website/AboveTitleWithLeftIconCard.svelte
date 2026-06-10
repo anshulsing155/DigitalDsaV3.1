@@ -13,7 +13,9 @@
 >
 	<div class="flex w-full flex-col gap-8">
 		<h2
-			class="typography-h2-md text-black dark:text-red-500"
+			class="
+				typography-h2-md text-black dark:text-white
+			"
 		>
 			{@html contents.heading}
 		</h2>

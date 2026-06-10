@@ -36,7 +36,11 @@
 			type="button"
 			onclick={onClick}
 			style={`${btnColor ? `background-color: ${btnColor};` : ''}${btnBorder ? `border-color: ${btnBorder}; border-width: 1px; border-style: solid;` : ''}`}
-			class={`typography-button w-full cursor-pointer rounded-full px-8 py-3 transition-all duration-300 hover:opacity-90 md:w-auto ${btnClass} ${btnAnimation ? 'animate-scaleLoop' : ''}`}
+			class={`typography-button w-full cursor-pointer rounded-full
+				px-8 py-3 transition-all
+				duration-300 hover:opacity-90 md:w-auto
+				${btnClass}
+				${btnAnimation ? 'animate-scaleLoop' : ''}`}
 		>
 			<span class="flex items-center justify-center gap-2">
 				{btnName}
@@ -54,7 +58,11 @@
 		type="button"
 		onclick={onClick}
 		style={`${btnColor ? `background-color: ${btnColor};` : ''}${btnBorder ? `border-color: ${btnBorder}; border-width: 1px; border-style: solid;` : ''}`}
-		class={`typography-button w-full cursor-pointer rounded-full px-8 py-3 transition-all duration-300 hover:opacity-90 md:w-auto ${btnClass} ${btnAnimation ? 'animate-scaleLoop' : ''}`}
+		class={`typography-button w-full cursor-pointer rounded-full
+			px-8 py-3 transition-all
+			duration-300 hover:opacity-90 md:w-auto
+			${btnClass}
+			${btnAnimation ? 'animate-scaleLoop' : ''}`}
 	>
 		<span class="flex items-center justify-center gap-2">
 			{btnName}
