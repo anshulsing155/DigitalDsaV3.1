@@ -22,11 +22,15 @@
 	};
 
 	type Props = {
-		navList?: NavList;
+		navList?: NavList | NavItem[];
 		activeSection?: string;
+		children?: import('svelte').Snippet;
 	};
 
-	const { navList = {}, activeSection = '' }: Props = $props();
+	const { navList = {}, activeSection = '', children }: Props = $props();
+
+	const itemsList = $derived(Array.isArray(navList) ? navList : (navList?.items || []));
+	const actionBtnsList = $derived(Array.isArray(navList) ? [] : (navList?.actionBtns || []));
 
 	let isFixed = $state(false);
 	let originalOffsetTop = 0;
@@ -74,10 +78,10 @@
 		class:fixedNavbar={isFixed}
 		class:shadow-xl={isFixed}
 	>
-		{#if navList.items?.length}
+		{#if itemsList.length}
 			<div class="mx-auto flex w-full justify-between">
 				<div class="flex">
-					{#each navList.items as nav}
+					{#each itemsList as nav}
 						<div class="flex flex-col">
 							<a
 								href={`#${nav.targetId}`}
@@ -97,9 +101,9 @@
 					{/each}
 				</div>
 
-				{#if navList.actionBtns?.length}
-					<div class="flex items-center gap-4 pr-4" class:hidden={navList.items.length > 6}>
-						{#each navList.actionBtns as btn}
+				{#if actionBtnsList.length}
+					<div class="flex items-center gap-4 pr-4" class:hidden={itemsList.length > 6}>
+						{#each actionBtnsList as btn}
 							<Button
 								btnName={btn.btnName}
 								link={btn.btnLink}
@@ -110,6 +114,8 @@
 							/>
 						{/each}
 					</div>
+				{:else if children}
+					{@render children()}
 				{/if}
 			</div>
 		{/if}

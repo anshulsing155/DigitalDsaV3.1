@@ -1,0 +1,175 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "How to Make a Budget: Simple Steps for Financial Success",
+    "image": "/images/howtomakebudget.jpg",
+    "description": "Learn how to budget effectively with simple steps, goal setting, and smart expense tracking to improve your financial well-being today!",
+    "keywords": "Budgeting tips, How to make a budget, Personal finance planning, Money management, Budget planner, Expense tracking, Financial goals, 50/30/20 rule, Smart budgeting, Monthly budget plan, Saving money tips, Budgeting for beginners"
+  },
+  "pageData": {
+    "coverImage": "/images/howtomakebudget.jpg",
+    "coverAlt": "photo of an indian couple making budget for expenses with the help of DigitalDSA budget planner",
+    "heading": "How to Make a Budget",
+    "sourceName": "pexels",
+    "originalSource": "www.pexels.com",
+    "actionBtns": [
+      {
+        "btnName": "Connect with us",
+        "btnLink": "/appointment",
+        "btnColor": ""
+      },
+      {
+        "btnName": "Compare loans",
+        "btnLink": "/get-started/how-can-we-help",
+        "btnColor": "#ffcc00"
+      }
+    ],
+    "para": "Budgeting doesn’t have to be <strong>complicated! </strong> <br> Here are some simple and practical steps to get you started."
+  },
+  "subList": {
+    "items": [
+      {
+        "name": "What is Budget",
+        "targetId": "what"
+      },
+      {
+        "name": "Process",
+        "targetId": "process"
+      },
+      {
+        "name": "Set financial goals",
+        "targetId": "setGoals"
+      },
+      {
+        "name": "Things to consider",
+        "targetId": "things"
+      },
+      {
+        "name": "Start today",
+        "targetId": "startToday"
+      }
+    ],
+    "actionBtns": [
+      {
+        "btnName": "Connect with us",
+        "btnLink": "/appointment",
+        "btnColor": ""
+      },
+      {
+        "btnName": "Compare loans",
+        "btnLink": "/get-started/how-can-we-help",
+        "btnColor": "#ffcc00"
+      }
+    ]
+  },
+  "navBarMedium": [
+    "What is Budget",
+    "Process",
+    "Set financial goals",
+    "Things to consider",
+    "Start today"
+  ],
+  "whatIsBudgeting": {
+    "heading": "What is Budgeting ?",
+    "secPara": "Budgeting looks different for everyone, depending on individual needs and priorities.<br><br> Our research shows that taking the time to create and follow a budget can significantly improve your <a class=\"underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer\" href=\"/financial-wellbeing\"> financial well-being</a>.<br><br>Already confident in budgeting but need help with the numbers? <br> Check out our <a class=\"underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer\" href=\"/planners/budget-planner\"> Budget Planner</a>. <br>If you're just getting started and need some practical tips, keep reading!"
+  },
+  "understandingIncomeExpenses": {
+    "heading": "Understanding Your Income & Expenses",
+    "secPara": "Budgeting doesn’t mean giving up fun! It’s just about making sure your money isn’t <span class=\"underline\">disappearing faster than golgappas at a wedding.</span><br><br>The first step is to track every rupee, like <strong>a missing Tupperware lid</strong>—you know it’s somewhere, but where? <br> <br>You need to figure out where your money comes from and where it goes. <br>More often, you’ll find it vanishing into <strong>Zomato orders</strong> and <strong>impulse shopping</strong> during sales.<br><br>Small, unnecessary expenses add up quickly like - <br><ul class=\"list-disc ml-8\"><li><strong>Gym membership</strong> you never use,<br></li><li><strong>OTT subscriptions</strong> you got for just one show,<br></li><li><strong>Chai/ Coffee stops</strong> that seem harmless but pile up.</li></ul><br>  The bottom line? <strong>Knowledge is power</strong>. <br> And in this case, it’s the power to stop your bank balance from looking like \"a prepaid mobile recharge at the end of the month\"."
+  },
+  "trackingIncome": {
+    "cardImage": "/images/budget-page-screen.jpg",
+    "cardAltName": "housing-figure",
+    "cardHeading": "Tracking Your Income",
+    "sourceName": "DigitalDSA",
+    "originalSource": "www.DigitalDSA.com",
+    "reverse": true,
+    "text": "Income isn’t just your salary—it includes any sources of money you regularly receive. This could be freelance earnings, interest from savings, or investments, side gigs, or even alimony."
+  },
+  "categorizingExpenses": {
+    "cardImage": "/images/housing.jpg",
+    "cardAltName": "housing-figure",
+    "cardHeading": "Categorizing Your Expenses",
+    "text": "Expenses are typically broken down into:<br /><br /><span class=\"font-semibold\">Fixed Expenses:</span> Bills you pay monthly, like rent, utilities, loans, and subscriptions.<br /><span class=\"font-semibold\">Variable Expenses:</span> Costs that can fluctuate month-to-month, like groceries, entertainment, and shopping.<br /><span class=\"font-semibold\">Discretionary Expenses:</span> Non-essential spending, like dining out, hobbies, and vacations.<br />"
+  },
+  "financialGoals": {
+    "heading": "Set financial goals",
+    "xlGridCol": 2,
+    "cards": [
+      {
+        "heading": "Plan SMART goals",
+        "para": "<ul class=\"list-disc flex flex-col gap-2 list-inside\"><li><span class=\"font-semibold\">S</span>pecific, <li><span class=\"font-semibold\">M</span>easurable, <li><span class=\"font-semibold\">A</span>chievable, <li><span class=\"font-semibold\">R</span>ealistic, and <li><span class=\"font-semibold\">T</span>ime-bound goals help you stay on track.<br><br> You may set a <span class=\"font-semibold\">SMART</span> goal like:<br>\"Save ₹5,000 per month for the next 6 months for my emergency fund.\""
+      },
+      {
+        "heading": "Prioritize your Goals",
+        "para": "It’s important to differentiate between <span class=\"font-semibold\"> short-term</span> goals (1 year or less) and <span class=\"font-semibold\">long-term</span> goals (3-5 years or more).<br><br><span class=\"font-semibold\">Tips:</span><li>List your goals, then prioritize them based on urgency and importance.</li><li>Create a timeline for achieving each goal.</li>"
+      }
+    ]
+  },
+  "categorizeSpending": {
+    "heading": "Categorize Your Spending",
+    "xlGridCol": 2,
+    "cards": [
+      {
+        "heading": "Essentials vs. Non-Essentials",
+        "para": "When you categorize your expenses, you take control of your spending. It helps you see where you’re spending too much, so you can adjust accordingly. Categorization makes budgeting more precise and efficient."
+      },
+      {
+        "heading": "How to Categorize Your Expenses",
+        "para": "<li><span class=\"font-semibold\">Essentials:</span>Rent, bills, groceries, transportation. <li><span class=\"font-semibold\">Non-Essentials:</span>Dining out, shopping, entertainment. <li><span class=\"font-semibold\">Savings & Investments:</span>Emergency funds, retirement savings, mutual funds."
+      },
+      {
+        "heading": "Benefits of Categorization",
+        "para": "<li><span class=\"font-semibold\">Tracking:</span>It becomes easier to see where your money goes. <li><span class=\"font-semibold\">Cut Back:</span>: You can identify areas where you’re overspending and make adjustments.<li><span class=\"font-semibold\">Flexibility:</span>Reassign funds to essential categories if needed, especially during uncertain times."
+      }
+    ]
+  },
+  "fiftyThirtyTwenty": {
+    "cardImage": "/images/home-scheme.jpg",
+    "cardAltName": "parent-figure",
+    "cardHeading": "50/30/20 Rule",
+    "reverse": true
+  },
+  "startBudgeting": {
+    "heading": "Start Budgeting Today",
+    "secPara": "Creating a budget doesn’t have to be overwhelming. With these simple steps, you can begin to take control of your financial life, achieve your goals, and gain peace of mind. <br><br><br><span class=\"font-semibold\">Read more</span></br><ul class=\"list-disc pl-4 space-y-2\"><li><a class=\"underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer\" href=\"/finance-support/budgeting-tips\">6 budgeting tips for a financially successful year</a></li><li><a class=\"underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer\" href=\"/finance-support/behavioral-science-behind-budgeting\">Would you like to learn about the behavioral science behind budgeting? Read this article to dive deeper into how psychology impacts your financial choices.</a></li><li><a class=\"underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer\" href=\"/finance-support/adjust-your-budget\">How to Adjust Your Budget When You Need To</a></li></ul>"
+  },
+  "help": [
+    {
+      "Heading": "Book an  appointment",
+      "paragraph": "Book instantly to speak to a loan specialist at a time that suits you",
+      "icon": "/icons/appointment.svg",
+      "altTitle": "appointment Icon",
+      "link": "/appointment"
+    },
+    {
+      "Heading": "Check loan offers",
+      "paragraph": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+      "icon": "/icons/manageLoan2.svg",
+      "altTitle": "Alert Icon",
+      "link": "/get-started/how-can-we-help"
+    },
+    {
+      "Heading": "Contact us",
+      "paragraph": "Fast-track your call and connect with a specialist in the Digital DSA.",
+      "icon": "/icons/contact.svg",
+      "altTitle": "Alert Icon",
+      "link": "/contact"
+    },
+    {
+      "Heading": "Message us",
+      "paragraph": "Get instant help from our online assistants  or chat to a specialist.",
+      "icon": "/icons/msg.svg",
+      "altTitle": "Alert Icon",
+      "link": "/contact"
+    }
+  ],
+  "thinkKnow": {
+    "heading": "Things you should know",
+    "paraGraph": [
+      "This article is for general educational purposes only and does not consider your specific financial situation or needs.",
+      "It should not be taken as financial advice.",
+      "Terms and conditions apply to our financial well-being features."
+    ]
+  }
+}

@@ -179,7 +179,7 @@
               <div
                 class="{manageHomeLoan.length - 1 > i ? 'border-b border-borderColor' : ''}"
               >
-                <ThingsYouShould thinkKnow={item} colSpan="5" />
+                <ThingsYouShould thinkKnow={item} colSpan={5} />
               </div>
             {/each}
           </div>

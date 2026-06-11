@@ -1,0 +1,190 @@
+{
+  "pageData": {
+    "coverImage": "/images/homeLoanGreenDigital.jpg",
+    "altName": "images-Green-loan",
+    "classStyle": "object-cover xl:h-[90svh] 3xl:max-h-[60svh]",
+    "heroHeading": "Green Loan",
+    "heroParagraph": "Get the tools to save on energy. Switch to solar with a undefined Green Loan."
+  },
+  "subList": [
+    {
+      "name": "At a glance",
+      "targetId": "glance"
+    },
+    {
+      "name": "Eligibility",
+      "targetId": "eligibility"
+    },
+    {
+      "name": "How to apply",
+      "targetId": "apply"
+    },
+    {
+      "name": "FAQs",
+      "targetId": "faq"
+    }
+  ],
+  "navList": [
+    {
+      "actionBtn": [
+        {
+          "firstBtn": "Call +91XXXXXXXXX",
+          "link": "/contact",
+          "btnColor": "#ffcc00"
+        }
+      ]
+    }
+  ],
+  "navBarMedium": ["At a glance", "Eligibility", "How to apply", "FAQs"],
+  "head": {
+    "heading": "Introducing undefined Green Loan"
+  },
+  "greenLoan": {
+    "paraGraph": [
+      "solar panels",
+      "battery packs",
+      "solar/heat pump hot water systems",
+      "electric vehicle charging stations",
+      "switching from gas to electric cooking equipment",
+      "enabling components to support solar PV and batteries",
+      "smart/connected home products",
+      "energy-efficient window treatments",
+      "switching from non LED to LED lighting",
+      "virtual power plants"
+    ],
+    "subHeading": "A low, secured fixed rate loan with no establishment fee, monthly loan service fee or early repayment fee.",
+    "bottomPara": [
+      "at the property secured by their eligible undefined home loan or investment home loan.\n\n"
+    ]
+  },
+  "glance": {
+    "paraGraph": [
+      "solar panels",
+      "Low-rate loan to be repaid over 10 years",
+      "The flexibility to make additional payments or pay off your loan sooner with no fees or penalties",
+      "$0 establishment fee",
+      "$0 monthly loan service fees",
+      "Borrow from $5,000 to $30,000 to fund the purchase and installation of eligible energy-efficient products"
+    ],
+    "subHeading": "What you’ll get:"
+  },
+  "consider": {
+    "paraGraph": [
+      "You won’t have access to an offset account, redraw or features like top-ups",
+      "Switching and splitting aren’t available for this loan",
+      "Total home loan balances (undefined home/investment home loan(s) and undefined Green Loan/undefined Investment Green Loan) must not exceed Loan to Value Ratio (LVR) of 80% (subject to any postcode restrictions)"
+    ],
+    "subHeading": "Things to consider:"
+  },
+  "eligibleEnergy": {
+    "paraGraph": [
+      "<strong>Solar panels </strong>  with a system size equal to or greater than 6 kilowatts (kW) (and inverter if applicable)",
+      "<strong>Battery packs </strong> with a system size equal to or greater than 5 kilowatt-hour (kWh)",
+      "<strong>Solar hot water system</strong> with a minimum system size equal to or greater than 250 litres (L)",
+      "<strong>Heat pump </strong> hot water system with a system size equal to or greater than 250L",
+      "<strong>Electric vehicle charging station(s) </strong>",
+      "Switching from gas to electric cooking equipment (products must be all-electric and may include induction cooktop, electric element cooktop, electric oven, electric steam oven)",
+      "Enabling components to support solar PV and batteries",
+      "Smart/connected home products (for example smart thermostats, hot water control, lighting control, smart plugs for appliances and equipment control, home automation systems for the purpose of improving energy efficiency)",
+      "Energy-efficient window treatments",
+      "Switching from non-LED to LED lighting",
+      "Virtual power plants"
+    ],
+    "subHeading": "Eligible energy-efficient products",
+    "subPara": [
+      "You can use a undefined Green Loan to buy and install one or more of the eligible energy-efficient products listed below."
+    ],
+    "bottomPara": [
+      "\"Solar panels, battery packs and inverters (if applicable) must be purchased from a <a class=\"text-linkColor underline underline-offset-4\"> New Energy Tech</a>  approved seller. The installer must be accredited with <a class=\"text-linkColor underline underline-offset-4\">Solar Accreditation Australia</a> ,",
+      "  <strong>TIP: </strong> It’s important to do some research and spend time finding the right solar retailer and/or installer for your project. Be sure to get multiple quotes and compare them before choosing the right one for you .You can also check out <strong>approved solar retailers near you</strong> ",
+      "You can find out more about eligible products in the <strong>FAQs</strong>"
+    ]
+  },
+  "areYouEligible": {
+    "heading": "Are you eligible?",
+    "paraGraph": [
+      "Has a total undefined home loan balance of $150,000 or more at the time the undefined Green Loan is funded (not including any redraw balances, loans for bridging purposes, Viridian Line of Credit limits, Equity Unlock for Seniors loan or the new undefined Green Loan)",
+      "The eligible undefined home loan is secured by the same property as the undefined Green Loan",
+      "The total  <a class=\"underline text-linkColor\">Loan to Value Ratio (LVR) </a>  of the existing and/or new undefined home loan(s) or investment home loan(s) plus undefined Green Loan(s) does not exceed 80% (subject to any postcode restrictions)",
+      "The installation address of the eligible small scale renewables matches the address we have listed as security for your undefined Green Loan and undefined home loan or investment home loan (not a commercial property)"
+    ],
+    "subHeading": "What you’ll get:",
+    "subPara": [
+      "You can apply for the undefined Green Loan (personal borrower/s only) provided your new or existing undefined home/investment home loan(s) meets the conditions below:"
+    ],
+    "bottomPara": [
+      "For more information, download the <a class='underline text-linkColor'> undefined Green Loan guide (PDF) </a>."
+    ]
+  },
+  "faq": [
+    {
+      "subHeading": "What is an Approved Solar Retailer and how can I find them?",
+      "subPara": [
+        "Approved Solar Retailers meet the consumer protection standards set by the New Energy Tech Consumer Code by demonstrating their commitment to responsible sales and marketing activities and solar industry best practice.",
+        "Find an Approved Solar Retailers near you."
+      ]
+    },
+    {
+      "subHeading": "What is an Approved Solar Retailer and how can I find them?",
+      "subPara": [
+        "Approved Solar Retailers meet the consumer protection standards set by the New Energy Tech Consumer Code by demonstrating their commitment to responsible sales and marketing activities and solar industry best practice.",
+        "Find an Approved Solar Retailers near you."
+      ]
+    },
+    {
+      "subHeading": "What is an Approved Solar Retailer and how can I find them?",
+      "subPara": [
+        "Approved Solar Retailers meet the consumer protection standards set by the New Energy Tech Consumer Code by demonstrating their commitment to responsible sales and marketing activities and solar industry best practice.",
+        "Find an Approved Solar Retailers near you."
+      ]
+    },
+    {
+      "subHeading": "What is an Approved Solar Retailer and how can I find them?",
+      "subPara": [
+        "Approved Solar Retailers meet the consumer protection standards set by the New Energy Tech Consumer Code by demonstrating their commitment to responsible sales and marketing activities and solar industry best practice.",
+        "Find an Approved Solar Retailers near you."
+      ]
+    },
+    {
+      "subHeading": "What is an Approved Solar Retailer and how can I find them?",
+      "subPara": [
+        "Approved Solar Retailers meet the consumer protection standards set by the New Energy Tech Consumer Code by demonstrating their commitment to responsible sales and marketing activities and solar industry best practice.",
+        "Find an Approved Solar Retailers near you."
+      ]
+    }
+  ],
+  "switchList": [
+    {
+      "num": "1",
+      "text": "Contact your <a class=\"underline text-linkColor\"> Home Lending Specialist, call us on 13 2224</a>  or visit your nearest branch to confirm your eligibility and complete a undefined Green Loan application.\nMake sure you obtain any relevant approvals for strata titled properties before completing the application."
+    },
+    {
+      "num": "2",
+      "text": "If you're conditionally pre-approved, source a quote for eligible energy-efficient products from an approved retailer."
+    },
+    {
+      "num": "3",
+      "text": "Share the quote with undefined and we’ll let you know when your new undefined Green Loan is approved. You can then instruct your retailer and/or installer to proceed."
+    },
+    {
+      "num": "4",
+      "text": "Once installation is complete, sign the final invoice and send it to undefined."
+    },
+    {
+      "num": "5",
+      "text": "We’ll pay the invoice directly to the approved installer or into your nominated Direct Debit account for your undefined Green Loan and you’ll be able to see your undefined Green Loan in NetBank and the undefined app."
+    }
+  ],
+  "thinkKnow": {
+    "heading": "Things you should know",
+    "paraGraph": [
+      "^ Comparison rate calculated on a $30,000 secured loan over a 5-year term. WARNING: Comparison rate is true only for the examples given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.",
+      "This information has been provided without considering your individual objectives, financial situation or needs. Before making any decisions, you should consider its appropriateness to your circumstances and consider obtaining professional advice.",
+      "Applications are subject to credit approval, satisfactory security and minimum requirements. Full terms and conditions will be set out in our loan offer, if an offer is made. Fees and charges are payable. Interest rates are subject to change.",
+      "Commonwealth Bank of Australia ABN 48 123 123 124, Australian credit licence 234945."
+    ]
+  },
+  "cardImg1": "/images/sustainabilityHL.jpg",
+  "cardAlt1": "images-sustainabilityHl",
+  "cardHead1": "Sustainability hub"
+}

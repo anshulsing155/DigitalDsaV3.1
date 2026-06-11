@@ -17,8 +17,14 @@
 		originalSource = "",
 		url = "",
 		onClick = () => {},
+		btnClick = undefined,
 		children = undefined
 	} = $props();
+
+	function handleOnClick(e) {
+		const handler = btnClick || onClick;
+		if (handler) handler(e);
+	}
 
 
   import Tooltip from "./Tooltip.svelte";
@@ -79,7 +85,7 @@
       <div class="flex w-full h-full items-end justify-start text-start">
         <a
           href={url}
-          onclick={onClick}
+          onclick={handleOnClick}
           class={`block w-full rounded-full typography-body-md hover:no-underline hover:opacity-90 md:w-auto`}
           class:text-linkColor={url !== ""}
           class:text-dangerColor={url == ""}
@@ -96,6 +102,7 @@
         {#if btnColor}
           <button
             type="button"
+            onclick={handleOnClick}
             class="w-full typography-button btn text-black md:w-auto"
             style={`background: ${btnColor}; border: 1px solid ${btnBorder || 'transparent'};`}
           >
@@ -104,6 +111,7 @@
         {:else}
           <button
             type="button"
+            onclick={handleOnClick}
             class="w-full typography-button btn btn-secondary md:w-auto"
           >
             <a href={link} class="block w-full">{btnName}</a>

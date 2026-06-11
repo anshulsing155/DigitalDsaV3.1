@@ -1,0 +1,197 @@
+{
+  "pageData": {
+    "coverImage": "/images/houseRoadCar.jpg",
+    "altName": "images-houseRoadCar",
+    "classStyle": "object-cover xl:h-[70svh] 3xl:h-[70svh]",
+    "heroHeading": "Property Value: Reports & Insights",
+    "heroParagraph": "Thinking about buying or selling a home? undefined's property report provides the latest information on new listings, auctions, recent sales, suburb profiles. Obtain a property estimate and make more informed property decisions before placing an offer."
+  },
+  "subList": [
+    {
+      "name": "Know your property",
+      "targetId": "knowProperty"
+    },
+    {
+      "name": "Tools & support",
+      "targetId": "toolsSupport"
+    },
+    {
+      "name": "Property search",
+      "targetId": "propertySearch"
+    },
+    {
+      "name": "Features and benefits",
+      "targetId": "benefit"
+    }
+  ],
+  "navList": [
+    {
+      "actionBtn": [
+        {
+          "firstBtn": "Book appointment",
+          "link": "/appointment",
+          "btnColor": "#ffcc00"
+        }
+      ]
+    }
+  ],
+  "navBarMedium": [
+    "Know your property",
+    "Tools & support",
+    "Property search",
+    "Features and benefits"
+  ],
+  "thinkKnow": {
+    "heading": "Know your property & the market",
+    "subPara": [
+      "^ Conditional pre-approval provides an estimate of the amount you can borrow based on the information you provide. The loan attributes, as well as interest rate changes, may result in changes to the amount you can borrow. The amount you can borrow is also subject to verification of your financial position, satisfactory security and to the Bank’s normal credit approval. It shouldn’t be considered an approval for a loan or a loan offer. Full terms and conditions (including fees and charges payable) will be included in the Bank’s offer documents, if an offer is made."
+    ]
+  },
+  "benefits": [
+    {
+      "heading": "Estimated price",
+      "para": "Find out what the property is worth based on recent comparable sales."
+    },
+    {
+      "heading": "On the market",
+      "para": "Our reports provide in-depth information on properties for sale in the neighbourhood, including listing dates, agents and lot plan details."
+    },
+    {
+      "heading": "Suburb insights",
+      "para": "Get median sale prices, value of sales, rental and demographic profiles."
+    },
+    {
+      "heading": "Rental information",
+      "para": "Interested in an investment property? See comparative rental properties including weekly rental prices, rental yield and capital growth."
+    },
+    {
+      "heading": "Radius search",
+      "para": "Our lenders can perform a radius search for you that targets a particular property as a starting point and look for comparable properties in the surrounding area."
+    },
+    {
+      "heading": "Territory builder",
+      "para": "Want to be close to a certain school, your parent’s home, or workplace? Our lenders can build your own 'territories' using an interactive map that will return all the homes in this area that meet your criteria."
+    }
+  ],
+  "help": [
+    {
+      "Heading": "Book an appointment",
+      "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+      "icon": "/icons/appointment.svg",
+      "altTitle": "icons",
+      "link": "/appointment"
+    },
+    {
+      "Heading": "Manage your loan online",
+      "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+      "icon": "/icons/manageLoan2.svg",
+      "altTitle": "icons",
+      "link": "/home-loan/top-up-only"
+    },
+    {
+      "Heading": "Contact us",
+      "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+      "icon": "/icons/contact.svg",
+      "altTitle": "icons",
+      "link": "/contact"
+    },
+    {
+      "Heading": "Message us",
+      "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+      "icon": "/icons/msg.svg",
+      "altTitle": "icons",
+      "link": "/contact"
+    }
+  ],
+  "IconCardHeading": "Start your home buying journey with us today",
+  "cardDataList": [
+    {
+      "heading": "Know your borrowing power",
+      "para": "Get the confidence to act quickly when the right property comes along",
+      "icon": "/icons/checklist.svg",
+      "iconAltName": "Message Icon",
+      "link": "/calculators/emi-calculator",
+      "btnName": "Check condition approval"
+    },
+    {
+      "heading": "Apply for a loan",
+      "para": "When you've found a property or want to refinance with undefined.",
+      "icon": "/icons/apply-pen.svg",
+      "iconAltName": "Alert Icon",
+      "link": "/get-started/how-can-we-help",
+      "btnName": "Apply for a home loan"
+    },
+    {
+      "heading": "Ask a Lending expert",
+      "para": "Talk on the phone or in person – whatever works best for you.",
+      "icon": "/icons/contact.svg",
+      "iconAltName": "Alert Icon",
+      "link": "/appointment",
+      "btnName": "Book an appointment"
+    },
+    {
+      "heading": "Make informed property decisions with Home Hub",
+      "para": "Get access to all the property tools and guidance you need in one place in <a class=\"underline text-linkColor\">Home Hub </a>  within the undefined app.",
+      "icon": "/icons/home.svg",
+      "iconAltName": "Alert Icon",
+      "link": "/get-started/how-can-we-help",
+      "btnName": "Check out Home Hub"
+    }
+  ],
+  "knowMarket": {
+    "heading": "Know your property & the market",
+    "subPara": [
+      "Using the most up-to-date information from CoreLogic, Australia’s leading property data, information, analytics and service provider, our Property and Suburb Reports provide a comprehensive snapshot of a property and its neighbourhood.",
+      "<a href=\"\" class=\"underline hover:no-underline underline-offset-4\">See sample Property Report </a>",
+      "<a href=\"\" class=\"underline hover:no-underline underline-offset-4\">See sample Subhurb Report </a>"
+    ]
+  },
+  "propertySearch": {
+    "heading": "Property search",
+    "para": "Existing undefined customer? Log onto NetBank and find your perfect property sooner  with market estimates and affordability snapshots.",
+    "btnName": "Log on",
+    "btnLink": "",
+    "btnColor": "#ffcc00"
+  },
+  "propertyPurchase": {
+    "heading": "Simplify your property purchase with Home-in",
+    "para": "undefined has partnered with Home-in, your personal home buying concierge, simplifying complex processes and helping you in every step of your home buying journey.",
+    "btnName": "Get started",
+    "btnBorder": "#706d6e",
+    "btnLink": ""
+  },
+  "blogs": [
+    {
+      "icon": "/images/getReport.jpg",
+      "altName": "images-getReport",
+      "title": "Get the report",
+      "paragraph": "Following an appointment with one of our Home Lending Specialists, access an unlimited number of reports and get all the insights to the property you may be interested in buying or selling, as well as compare it against similar properties on the market.",
+      "btnName": "Book appointment",
+      "btnColor": "#ffcc00",
+      "link": "/appointment"
+    },
+    {
+      "icon": "/images/homeHub.jpg",
+      "altName": "images-homeHUb",
+      "title": "Home Hub",
+      "paragraph": "Get access to all the property reports, tools and guidance you need in one place in Home Hub within the undefined app.",
+      "linkName": "Find out more",
+      "url": "/home-loan/Home-Hub"
+    },
+    {
+      "icon": "/images/borrowingPower.jfif",
+      "altName": "images-borrowingPower",
+      "title": "Know your borrowing power",
+      "paragraph": "Get the confidence to act quickly when the right property comes along. Calculate your income and expenses to estimate how much you may be able to borrow for a home loan. Check conditional pre-approval.",
+      "btnName": "Check now",
+      "btnBorder": "#4F4C4D",
+      "link": "/calculators/emi-calculator"
+    }
+  ],
+  "messageUs": {
+    "cardImage": "/images/message.jpg",
+    "cardAltName": "housing-figure",
+    "cardHeading": "Message us 24/7",
+    "text": "Get help from the undefined app or connect with a specialist who can message you back. You’ll need undefined app notifications turned on so you know when you’ve received a reply."
+  }
+}

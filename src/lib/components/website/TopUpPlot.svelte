@@ -175,7 +175,7 @@
             cardImage={content.process.cardImage}
             cardAltName={content.process.cardAltName}
             cardHeading={content.process.cardHeading}
-            imageHeight={content.process.imageHeight}
+            imageHeight={Number(content.process.imageHeight)}
             reverse
           >
             <div slot="list" class="flex flex-col gap-4">

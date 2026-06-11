@@ -3,8 +3,8 @@
 		homeInterest,
 		btnName,
 		btnColor = "",
-		btnBorder,
-		btnLink
+		btnBorder = "",
+		btnLink = ""
 	} = $props();
 
 
