@@ -84,7 +84,18 @@
 		// Close all dropdowns except the clicked one
 		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
 			const otherIcon = otherDetails.querySelector('.faq-icon');
+		// Close all dropdowns except the clicked one
+		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
+			const otherIcon = otherDetails.querySelector('.faq-icon');
 
+			if (idx !== index) {
+				otherDetails.removeAttribute('open');
+				if (otherIcon) {
+					otherIcon.classList.remove('fa-angle-up');
+					otherIcon.classList.add('fa-angle-down');
+				}
+			}
+		});
 			if (idx !== index) {
 				otherDetails.removeAttribute('open');
 				if (otherIcon) {
@@ -115,9 +126,37 @@
 			}
 		}, 100);
 	};
+		// Toggle current dropdown open/close state
+		const isOpen = detailsElement.hasAttribute('open');
+		if (isOpen) {
+			detailsElement.removeAttribute('open');
+			if (icon) {
+				icon.classList.remove('fa-angle-up');
+				icon.classList.add('fa-angle-down');
+			}
+		} else {
+			detailsElement.setAttribute('open', 'true');
+			if (icon) {
+				icon.classList.remove('fa-angle-down');
+				icon.classList.add('fa-angle-up');
+			}
+		}
+		setTimeout(() => {
+			if (detailsElement) {
+				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		}, 100);
+	};
 
 	let activeSection = $state('');
+	let activeSection = $state('');
 
+	const initializeActiveSection = () => {
+		const firstSection = document.querySelector('[data-section]');
+		if (firstSection) {
+			activeSection = firstSection.id;
+		}
+	};
 	const initializeActiveSection = () => {
 		const firstSection = document.querySelector('[data-section]');
 		if (firstSection) {
@@ -128,7 +167,16 @@
 	const handleScroll = () => {
 		const sections = document.querySelectorAll('[data-section]');
 		let currentSection = '';
+	const handleScroll = () => {
+		const sections = document.querySelectorAll('[data-section]');
+		let currentSection = '';
 
+		sections.forEach((section) => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top <= 200 && rect.bottom >= 200) {
+				currentSection = section.id;
+			}
+		});
 		sections.forEach((section) => {
 			const rect = section.getBoundingClientRect();
 			if (rect.top <= 200 && rect.bottom >= 200) {
@@ -140,11 +188,22 @@
 			activeSection = currentSection;
 		}
 	};
+		if (currentSection) {
+			activeSection = currentSection;
+		}
+	};
 
 	onMount(() => {
 		initializeActiveSection();
 		window.addEventListener('scroll', handleScroll);
+	onMount(() => {
+		initializeActiveSection();
+		window.addEventListener('scroll', handleScroll);
 
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};

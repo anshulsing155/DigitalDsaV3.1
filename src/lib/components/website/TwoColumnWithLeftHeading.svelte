@@ -20,7 +20,7 @@
     <!-- left-heading  -->
     <div class="lg:col-span-4 flex flex-col gap-4">
       {#if contents.heading}
-        <p class="typography-h2 text-black dark:text-white">
+        <p class="typography-h2-md text-black dark:text-white">
           {@html contents.heading}
         </p>
       {/if}
@@ -48,7 +48,7 @@
         <Button
           btnName={contents.btnName}
           link={contents.btnLink}
-          btnColor={contents.btnColor}
+          btnClass={contents.btnClass}
           btnBorder={contents.btnBorder}
           onClick={contents.btnClick}
         />
@@ -61,7 +61,7 @@
       {#if contents.links}
         <div class="flex flex-col gap-2">
           {#each contents.links as link}
-            <ul class="grid list-disc pl-5 marker:text-black dark:marker:text-white">
+            <ul class="grid list-disc pl-5">
               <li>
                 <Anchor link={link.secUrl} linkName={link.secLinkName} />
               </li>
@@ -85,12 +85,12 @@
               <li class="typography-body-md text-[var(--form-text-secondary)]">
                 <div class="flex flex-col gap-2">
                   {#if listItem.heading}
-                    <span class="typography-body-lg !font-semibold text-black dark:text-white">
+                    <span class="typography-body-lg !font-semibold">
                       {@html listItem.heading}
                     </span>
                   {/if}
                   {#if listItem.desc}
-                    <p class="typography-body-md text-[var(--form-text-secondary)]">
+                    <p class="typography-body-md">
                       {@html listItem.desc}
                     </p>
                   {/if}

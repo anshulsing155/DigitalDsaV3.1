@@ -341,7 +341,7 @@
         > -->
 
         <div
-          class="flex justify-center items-center gap-2 lg:py-[34px] cursor-pointer bg-primary w-[182px]"
+          class="flex justify-center items-center gap-2 lg:py-[34px] cursor-pointer btn-primary w-[182px]"
         >
           <div class="flex items-center gap-2">
             {#if page.data.user?.image}
@@ -378,7 +378,7 @@
               {#each profileDropDown as item}
                 {@const IconComponent = item.icon}
                 <li
-                  class="w-full flex gap-2 items-center px-2 py-2 hover:bg-btnBg hover:text-black "
+                  class="w-full flex gap-2 items-center px-2 py-2  hover:text-black "
                 >
                   <div class="flex items-start justify-start">
                     {#if typeof item.icon === "string"}
@@ -409,7 +409,7 @@
       {:else}
         <a
           href="/login"
-          class="flex gap-4 items-center font-semibold text-navFont bg-primary p-5 sm:py-11 text-black"
+          class="flex gap-4 items-center font-semibold text-navFont btn-primary p-5 sm:py-11 text-black"
         >
           <img src="/icons/lock.svg" alt="lock-svg" class="h-[.9rem]" />
           <p>Login</p>

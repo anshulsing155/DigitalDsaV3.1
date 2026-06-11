@@ -1,22 +1,17 @@
 {
-	"mobileNavbarTitle": [
-		"Getting started",
-		"Why buy?",
-		"Why choose?",
-		"Tools & calculators"
-	],
+	"mobileNavbarTitle": ["Getting started", "Why buy?", "Why choose?", "Tools & calculators"],
 	"pageData": {
 		"coverImage": "/images/buyingNextHome.jpg",
 		"coverAlt": "photo of a happy indian family with two young kids planning to move in new home with the help of DigitalDSA services",
-		"heading": "Buying your next home",
-		"para": "Thinking about upsizing or a tree or sea change? Things may be a little different the second time around. We’ve got the tools and support to help you sell and get moving into your next home.",
+		"heading": "Help Clients Finance Their Next Home with the Right Loan Solution",
+		"para": "<p>For many homeowners, the next property purchase is bigger than buying a first home. Whether your client wants a larger house, an investment property, a retirement home, or a better location, identifying the right lender and loan product can significantly improve approval chances. Use DigitalDSA to compare multiple lender offers and help borrowers move confidently toward their next property purchase.</p>",
 		"actionBtns": [
 			{
-				"btnName": "Connect with us",
+				"btnName": "Speak with a Loan Expert",
 				"btnLink": "/appointment"
 			},
 			{
-				"btnName": "Check latest offers",
+				"btnName": "Compare Loan Offers",
 				"btnLink": "/get-started/how-can-we-help",
 				"btnColor": "#ffcc00",
 				"animation": true
@@ -26,19 +21,19 @@
 	"navList": {
 		"items": [
 			{
-				"name": "Getting started",
+				"name": "Lead Preparation",
 				"targetId": "started"
 			},
 			{
-				"name": "Why buy?",
+				"name": "Why Clients Buy Again",
 				"targetId": "whybuy"
 			},
 			{
-				"name": "Why choose?",
+				"name": "Property Selection Guide",
 				"targetId": "whychoose"
 			},
 			{
-				"name": "Tools & calculators",
+				"name": "Loan Tools & Calculators",
 				"targetId": "calculators"
 			}
 		],
@@ -57,33 +52,33 @@
 	},
 	"started": {
 		"contents": {
-			"heading": "Getting ready to buy",
+			"heading": "Prepare Borrowers for Their Next Property Purchase",
 			"cardData": [
 				{
 					"id": "1",
-					"title": "Renovate or move?",
-					"para": "If you like where you live, you may want to consider renovating instead of finding a new home.",
+					"title": "Renovation Loan or New Property?",
+					"para": "Help clients evaluate whether upgrading their current property or purchasing a new home creates better financial value.",
 					"linkName": "Read more",
 					"url": "/home-loan/renovate-or-move"
 				},
 				{
 					"id": "2",
-					"title": "Turning your home into an investment",
-					"para": "Depending on your circumstances, you could consider turning your current home into an investment property.",
+					"title": "Convert Existing Property into an Investment Asset",
+					"para": "Guide borrowers on leveraging their current property for rental income while purchasing their next home.",
 					"linkName": "Tell me more",
 					"url": "/home-loan/turning-your-home-into-investment"
 				},
 				{
 					"id": "3",
-					"title": "How to choose the perfect neighborhood",
-					"para": "Finding the right neighborhood is just as important as finding the right home",
+					"title": "Finding the Right Location",
+					"para": "Help clients identify neighborhoods that align with lifestyle, appreciation potential, and investment goals.",
 					"linkName": "Tell me more",
 					"url": "/home-loan/choose-perfect-neighbourhood"
 				},
 				{
 					"id": "4",
-					"title": "Buying a property through resale or direct purchase",
-					"para": "Explore the pros and cons of buying a property through resale or direct purchase to make an informed decision that suits your needs and budget.",
+					"title": "Resale Property vs Builder Property",
+					"para": "Understand which option better suits your client's budget, financing profile, and long-term objectives.",
 					"linkName": "Tell me more",
 					"url": "/home-loan/buy-property-resale"
 				}
@@ -92,76 +87,68 @@
 	},
 	"whybuy": {
 		"contents": {
-			"heading": "Why buy your next home?",
+			"heading": "Why Borrowers Purchase Their Next Home",
 			"xlGridCol": 2,
 			"borderBottom": true,
 			"list": [
 				{
-					"heading": "Lifestyle upgrade",
-					"topPara": "Need more space for your growing family? Or perhaps a home closer to work, schools, or amenities?",
-					"icon": "/icons/uniqueLink.svg",
-					"altName": "unique-icon"
+					"heading": "Lifestyle Upgrade",
+					"topPara": "Growing families often require larger homes, improved amenities, and better living environments."
 				},
 				{
-					"heading": "Investment opportunity",
-					"topPara": "A second property can serve as a rental income source or an asset for future financial security.",
-					"icon": "/icons/features.svg",
-					"altName": "investment-icon"
+					"heading": "Investment Growth",
+					"topPara": "Additional properties can create rental income opportunities and long-term wealth creation."
 				},
 				{
-					"heading": "Vacation home",
-					"topPara": "A dream getaway in the hills, by the beach, or in a serene township.",
-					"icon": "/icons/ownership.svg",
-					"altName": "vacation-icon"
+					"heading": "Holiday or Second Residence",
+					"topPara": "Many borrowers seek vacation homes or secondary residences in premium destinations."
 				},
 				{
-					"heading": "Relocation or retirement",
-					"topPara": "Planning a move to a quieter city or a retirement-friendly location?",
-					"icon": "/icons/offers.svg",
-					"altName": "relocation-icon"
+					"heading": "Relocation Planning",
+					"topPara": "Career growth, retirement planning, or lifestyle changes often drive property purchases in new locations."
 				}
 			]
 		}
 	},
 	"considerations": {
 		"contents": {
-			"heading": "Key considerations for next-home buyers",
+			"heading": "Key Areas Every DSA Should Discuss with Borrowers",
 			"xlGridCol": 1,
 			"borderBottom": true,
 			"list": [
 				{
-					"heading": "Sell or retain your current home?",
-					"topPara": "• <span class=\"font-semibold\">Sell before you buy:</span> This can free up funds for your next purchase and reduce financial strain.<br>• <span class=\"font-semibold\">Keep your current home:</span> If you’re financially stable, your current property can become a rental income source.",
+					"heading": "Sell or Retain Existing Property?",
+					"topPara": "Evaluate whether selling the current property improves liquidity or whether retaining it can generate rental income.",
 					"icon": "/icons/sellingHome.svg",
 					"altName": "sell-retain-icon"
 				},
 				{
-					"heading": "Financing your next home",
-					"topPara": "• <span class=\"font-semibold\">Leverage your home equity:</span> If you have a running home loan, you may consider a balance transfer or a top-up loan.<br>• <span class=\"font-semibold\">Down payment considerations:</span> If you’re selling your current home, ensure you align the timelines for sale proceeds and the next purchase.<br>• <span class=\"font-semibold\">Second home loan:</span> Understand the tax implications and benefits of owning multiple properties.",
+					"heading": "Financing Strategy",
+					"topPara": "Assess existing loans, available home equity, down payment capacity, and eligibility for a second home loan.",
 					"icon": "/icons/personalLoan.svg",
 					"altName": "financing-icon"
 				},
 				{
-					"heading": "Property type and purpose",
-					"topPara": "• Are you buying for self-use or investment?<br>• Consider if you're looking for a resale property, a new home from a builder, or a vacation home in a prime location.",
+					"heading": "Property Purpose",
+					"topPara": "Understand whether the property is for self-occupation, rental income, retirement, or long-term investment.",
 					"icon": "/icons/inte.svg",
 					"altName": "property-type-icon"
 				},
 				{
-					"heading": "Stamp duty & registration",
-					"topPara": "• Be aware that stamp duty and registration charges differ for second-home buyers and may not come with first-time buyer concessions.",
+					"heading": "Registration & Transaction Costs",
+					"topPara": "Help borrowers estimate registration charges, stamp duty, taxes, and additional acquisition expenses.",
 					"icon": "/icons/interestIcon.svg",
 					"altName": "stamp-duty-icon"
 				},
 				{
-					"heading": "Maintenance costs",
-					"topPara": "• Owning multiple properties comes with additional maintenance costs such as property taxes, utilities, and society fees.",
+					"heading": "Ownership Costs",
+					"topPara": "Factor in maintenance expenses, society charges, taxes, and long-term property upkeep.",
 					"icon": "/icons/mutualFund.svg",
 					"altName": "maintenance-icon"
 				},
 				{
-					"heading": "Rental income opportunities",
-					"topPara": "• If you're investing in a second property, assess the rental demand and expected income in the locality.",
+					"heading": "Rental Yield Potential",
+					"topPara": "For investment-focused borrowers, evaluate expected rental demand and income potential before purchase.",
 					"icon": "/icons/FD.svg",
 					"altName": "rental-income-icon"
 				}
@@ -170,52 +157,52 @@
 	},
 	"benefits": {
 		"contents": {
-			"heading": "Benefits of buying your next home",
+			"heading": "Benefits of Financing a Next Home",
 			"xlGridCol": 1,
 			"borderBottom": true,
 			"list": [
 				{
-					"heading": "Tax benefits",
-					"topPara": "Interest paid on a second home loan is eligible for tax deductions under certain conditions."
+					"heading": "Portfolio Expansion",
+					"topPara": "Property ownership helps diversify financial assets and strengthen long-term wealth creation."
 				},
 				{
-					"heading": "Asset diversification",
-					"topPara": "Investing in real estate strengthens your portfolio."
+					"heading": "Future Appreciation",
+					"topPara": "Well-selected properties can generate significant capital appreciation over time."
 				},
 				{
-					"heading": "Long-term appreciation",
-					"topPara": "Property values in prime locations tend to grow steadily over time."
+					"heading": "Additional Income Streams",
+					"topPara": "Rental properties can create recurring monthly income and improve financial stability."
 				}
 			]
 		}
 	},
 	"steps": {
 		"contents": {
-			"heading": "Steps to make your next purchase seamless",
+			"heading": "Steps DSAs Can Follow to Improve Loan Approvals",
 			"xlGridCol": 2,
 			"borderBottom": true,
 			"list": [
 				{
-					"heading": "Evaluate your financial position",
-					"topPara": "Assess your existing home loan, EMIs, and disposable income.",
+					"heading": "Review Financial Eligibility",
+					"topPara": "Analyze existing obligations, income stability, and repayment capacity before lender selection.",
 					"icon": "/icons/coinHouse.svg",
 					"altName": "financial-position-icon"
 				},
 				{
-					"heading": "Research the market",
-					"topPara": "Look for properties in areas with good appreciation potential, rental demand, or lifestyle value.",
+					"heading": "Evaluate Property Opportunities",
+					"topPara": "Compare locations, builder reputation, resale potential, and market demand.",
 					"icon": "/icons/stocks.svg",
 					"altName": "research-market-icon"
 				},
 				{
-					"heading": "Get pre-approved",
-					"topPara": "This will give you a clear idea of your borrowing power and make negotiations smoother.",
+					"heading": "Get Loan Eligibility Assessed",
+					"topPara": "Pre-qualification helps borrowers understand their borrowing capacity and improves conversion rates.",
 					"icon": "/icons/educationLoan.svg",
 					"altName": "pre-approved-icon"
 				},
 				{
-					"heading": "Seek professional advice",
-					"topPara": "Hire a reliable real estate agent or property consultant to explore the best options.",
+					"heading": "Compare Multiple Lenders",
+					"topPara": "Identify lenders offering better rates, flexible eligibility criteria, and faster approvals.",
 					"icon": "/icons/phoneConnection.svg",
 					"altName": "professional-advice-icon"
 				}
@@ -223,7 +210,7 @@
 		}
 	},
 	"whychoose": {
-		"heading": "Why choose resale or direct purchase from a builder?",
+		"heading": "Resale Property vs Builder Property: Which Creates Better Opportunities?",
 		"tableData": [
 			{
 				"columnName": [
@@ -278,13 +265,13 @@
 			}
 		],
 		"makeHomeCount": {
-			"heading": "Make your next home count",
-			"secPara": "<p>💡Your second or next home is more than just a property it’s a lifestyle upgrade, a step toward financial growth, or a dream fulfilled. By evaluating your needs, financial goals, and property options, you can ensure your next home is everything you’ve envisioned.</p><p>Whether you’re buying for self-use or investment, plan ahead, and don’t hesitate to seek expert guidance to make an informed decision.</p>"
+			"heading": "Turn Every Next-Home Inquiry into a Loan Opportunity",
+			"secPara": "<p>Every next-home buyer represents a valuable financing opportunity for DSAs. Whether the borrower is upgrading, relocating, investing, or purchasing a retirement property, matching them with the right lender improves customer satisfaction and increases approval success.</p><p>DigitalDSA helps you compare multiple lenders, identify suitable loan products, and support borrowers throughout the entire property financing journey.</p>"
 		},
 		"buttonBanner": {
-			"heading": "Compare home loan offers online",
-			"para": "Looking to transfer your home loan? Explore and compare the best offers to secure better terms and maximize your savings.",
-			"btnName": "Compare rates",
+			"heading": "Compare Multiple Home Loan Offers for Your Clients",
+			"para": "Access lender programs, interest rates, eligibility criteria, and financing options from multiple banks and NBFCs through a single platform.",
+			"btnName": "Compare Loan Offers",
 			"btnBorder": "#4F4C4D",
 			"btnColor": "#ffcc00",
 			"btnLink": "/get-started/how-can-we-help"
@@ -297,25 +284,25 @@
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "How much can I borrow?",
+					"heading": "Check Borrowing Eligibility",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icon-calc",
 					"url": "/calculators/affordability-calculator"
 				},
 				{
-					"heading": "Home loan repayments calculator",
+					"heading": "Estimate EMI Repayments",
 					"icon": "/icons/lap.svg",
 					"iconAltName": "loan-icon",
 					"url": "/planners/part-payment-planner"
 				},
 				{
-					"heading": "Stamp duty calculator",
+					"heading": "Calculate Stamp Duty Costs",
 					"icon": "/icons/apply.svg",
 					"iconAltName": "icons-apply",
 					"url": "/calculators/stamp-duty-calculator"
 				},
 				{
-					"heading": "Calculators & tools?",
+					"heading": "Explore More Loan Tools",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icons-calc",
 					"url": "/home-loan/home-loan-tools-calculator"
@@ -327,15 +314,15 @@
 		"contents": {
 			"cardImage": "/images/message.jpg",
 			"cardAltName": "photo of a laptop screen showing contact page of DigitalDSA",
-			"cardHeading": "Message us 24/7",
+			"cardHeading": "Get DSA Support 24/7",
 			"sourceName": "DigitalDSA.com",
 			"originalSource": "www.digitaldsa.com",
 			"reverse": true
 		},
-		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"para": "Need help selecting the right lender, improving eligibility, or structuring a next-home financing solution? Our experts are available to assist with borrower profiling, lender matching, and loan processing support.",
 		"button": {
 			"link": "/contact",
-			"btnName": "Message us",
+			"btnName": "Talk to an Expert",
 			"btnClass": "btn-primary text-white dark:text-black"
 		}
 	},
@@ -347,29 +334,29 @@
 				"borderBottom": true,
 				"cards": [
 					{
-						"heading": "Book an </br> appointment",
-						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+						"heading": "Assess Loan Eligibility",
+						"para": "Understand how much financing your client may qualify for.",
 						"icon": "/icons/appointment.svg",
 						"altName": "appointment Icon",
 						"url": "/appointment"
 					},
 					{
-						"heading": "Check loan offers",
-						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"heading": "Compare Loan Offers",
+						"para": "View lender-specific offers based on borrower profiles.",
 						"icon": "/icons/manageLoan2.svg",
 						"altName": "Alert Icon",
 						"url": "/get-started/how-can-we-help"
 					},
 					{
-						"heading": "Contact us",
-						"para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+						"heading": "Connect with Specialists",
+						"para": "Receive guidance on complex next-home financing scenarios.",
 						"icon": "/icons/contact.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
 					},
 					{
-						"heading": "Message us",
-						"para": "Get instant help from our online assistants or chat to a specialist.",
+						"heading": "Instant Support",
+						"para": "Get assistance throughout the customer acquisition and loan filing process.",
 						"icon": "/icons/msg.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
@@ -381,10 +368,12 @@
 			"contents": {
 				"heading": "Things you should know",
 				"paraGraph": [
-					"Independent Facilitator: DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
-					"Loan Approval: The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
-					"Liability: DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.",
-					"Important Information: This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions."
+					"Next-home buyers often have different eligibility criteria compared to first-time borrowers.",
+					"Existing property ownership can improve financing opportunities through home equity leverage.",
+					"Resale and builder properties have different documentation and approval requirements.",
+					"Comparing multiple lenders can significantly improve approval and pricing outcomes.",
+					"Rental income potential should be evaluated for investment-focused purchases.",
+					"DigitalDSA helps DSAs identify suitable lenders and faster financing opportunities."
 				]
 			},
 			"disc": "list-decimal"
