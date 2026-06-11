@@ -1,0 +1,290 @@
+{
+  "pageData": {
+    "coverImage": "/images/homeLoanOffSet.jpg",
+    "altName": "hero-cover",
+    "classStyle": "object-cover xl:h-[70svh] 3xl:max-h-[70svh]",
+    "heroHeading": "Everyday Offset Account",
+    "heroParagraph": "Make your money work harder by saving on interest and paying off your home loan sooner with multiple offsets with no set-up fee."
+  },
+  "subList": [
+    {
+      "name": "Offset & redraw",
+      "targetId": "redraw"
+    },
+    {
+      "name": "How to switch",
+      "targetId": "switch"
+    },
+    {
+      "name": "Features & benefits",
+      "targetId": "benefits"
+    },
+    {
+      "name": "Home loans with offset",
+      "targetId": "offset"
+    },
+    {
+      "name": "Tools & support",
+      "targetId": "support"
+    }
+  ],
+  "navList": [
+    {
+      "actionBtn": [
+        {
+          "firstBtn": "Manage my offset",
+          "link": "",
+          "btnColor": "#ffcc00"
+        },
+        {
+          "firstBtn": "Apply for new loan",
+          "link": "/get-started/how-can-we-help"
+        }
+      ]
+    }
+  ],
+  "offset": {
+    "heading": "Understanding offset",
+    "subPara": [
+      "An Everyday Offset is a transaction account linked to your eligible <a href=\"/home-loan/variable-rates\" class=\"underline hover:no-underline text-linkColor\">Standard Variable Rate</a> home loan. Any money you put into your Everyday Offset reduces the balance on which we charge interest. This means you’ll only be paying interest on the difference."
+    ]
+  },
+  "redraw": {
+    "heading": "Offer details",
+    "subHeading": "What's the difference between an offset account and a redraw facility?",
+    "linkName": "Tell me more about redraw vs offset",
+    "url": "",
+    "subPara": [
+      "Your Everyday Offset is a separate account linked to your eligible <a href=\"/home-loan/variable-rates\" class=\"underline hover:no-underline text-linkColor\">Standard Variable Rate</a> home loan, while <a href=\"/home-loan/home-loan-redraw\" class=\"underline hover:no-underline text-linkColor\">redraw</a> is a feature available for some eligible variable rate home loans. Both can help:"
+    ],
+    "paraGraph": [
+      "reduce the amount of interest you pay on your home loan",
+      "pay off your home loan sooner."
+    ],
+    "bottomPara": [
+      "Redraw allows you to withdraw money you've contributed towards your home loan over and above your minimum required repayment. The money in your redraw account may reduce over the life of your loan so that, by the end of your agreed loan term, both your loan balance and the available redraw will be zero.",
+      "If you’re currently using a redraw facility to deposit money that you plan on using later, an Everyday Offset may be more suitable if you plan on using the money more regularly."
+    ]
+  },
+  "switchList": [
+    {
+      "lists": [
+        {
+          "heading": "If you don’t already have an existing eligible transaction account, you’ll need to open an Everyday Account Smart Access first:",
+          "listItems": [
+            {
+              "num": "1",
+              "text": "Log on to <a href=\"\" class=\"underline hover:no-underline text-linkColor\">NetBank</a>"
+            },
+            {
+              "num": "2",
+              "text": "Click on ‘Accounts’ tab and follow instructions to open an ‘Everyday Account Smart Access’"
+            },
+            {
+              "num": "3",
+              "text": "Switch your transaction account to an Everyday Offset using the instructions below"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lists": [
+        {
+          "heading": "How to switch an eligible transaction account to an Everyday Offset account online:",
+          "listItems": [
+            {
+              "num": "1",
+              "text": "Log on to <a href=\"\" class=\"underline hover:no-underline text-linkColor\">NetBank</a>"
+            },
+            {
+              "num": "2",
+              "text": "Select your eligible Standard Variable Rate home loan account for an Everyday Offset account to be linked to"
+            },
+            {
+              "num": "3",
+              "text": "Under the Manage my Loan section, select the ‘Redraw and Offset’ tab"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "benefits": [
+    {
+      "heading": "100% offset",
+      "para": "100% of the money in your Everyday Offset will be deducted from your home loan balance before interest is charged. "
+    },
+    {
+      "heading": "Save on interest charges",
+      "para": "The more money you have in your Everyday Offset, the less interest you’ll pay on your home loan."
+    },
+    {
+      "heading": "Pay your loan off sooner",
+      "para": "Paying less interest over time could also reduce the time it takes to pay off your loan, as a larger portion of your repayments will go towards paying off the principal."
+    },
+    {
+      "heading": "Link multiple offset accounts",
+      "para": "Maximise the benefits by linking multiple offsets to an eligible Digital DSA home loan. Link up to 99 offset accounts."
+    },
+    {
+      "heading": "Access your money anytime",
+      "para": "You can access your money using your Digital DSA keycard or Debit Mastercard®, in branch or online in <a href=\"\" class=\"underline hover:no-underline text-linkColor\">NetBank</a> and the <a href=\"\" class=\"underline hover:no-underline text-linkColor\">Digital DSA app</a>."
+    },
+    {
+      "heading": "No minimum balance ",
+      "para": "There’s no minimum balance needed for the offset to be applied to your home loan."
+    }
+  ],
+  "offsetAccount": [
+    {
+      "btnName": "Explore more loan features",
+      "btnBorder": "#706d6e",
+      "btnLink": "/home-loan",
+      "heading": "Standard Variable Rate",
+      "para": "A variable rate with discounts tailored to you, plus access to offset and an extensive range of features."
+    },
+    {
+      "btnName": "Book now",
+      "btnColor": "#ffcc00",
+      "btnLink": "/appointment",
+      "heading": "Book time with a lender instantly",
+      "para": "Get the most from your home loan application process and book time with a <a href=\"\" class=\"underline hover:no-underline text-linkColor\">Home Lending Specialist</a> at a time and place that suits you."
+    },
+    {
+      "btnName": "Apply online",
+      "btnColor": "#ffcc00",
+      "btnLink": "/get-started/how-can-we-help",
+      "heading": "Apply for a home loan, conditional pre-approval or refinance",
+      "para": "Start your home loan or refinance application online and if eligible receive a conditional approval in minutes."
+    }
+  ],
+  "contents": [
+    {
+      "id": 1,
+      "title": "Calculators",
+      "links": [
+        {
+          "id": 1,
+          "name": "How much can I borrow?",
+          "url": "/calculators/emi-calculator"
+        },
+        {
+          "id": 2,
+          "name": "What would my repayments be?",
+          "url": "/calculators/emi-calculator"
+        },
+        {
+          "id": 3,
+          "name": "What would my upfront costs be?",
+          "url": "/calculators/emi-calculator"
+        },
+        {
+          "id": 4,
+          "name": "Refinance calculator",
+          "url": "/calculators/emi-calculator"
+        },
+        {
+          "name": "Show me more",
+          "url": "/calculators/emi-calculator"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Manage your home loan",
+      "links": [
+        {
+          "id": 1,
+          "name": "Manage home loan",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Guides",
+      "links": [
+        {
+          "id": 1,
+          "name": "What is an offset account?",
+          "url": "/home-loan/new-loan"
+        },
+        {
+          "id": 2,
+          "name": "3 ways to pay off your home loan faster",
+          "url": "/home-loan/new-loan"
+        },
+        {
+          "id": 3,
+          "name": "Show me more",
+          "url": "/home-loan/new-loan"
+        }
+      ]
+    }
+  ],
+  "messageUs": {
+    "cardImage": "/images/message.jpg",
+    "cardAltName": "housing-figure",
+    "cardHeading": "Message us 24/7",
+    "text": "Get instant help from  the Digital DSA app or connect with a specialist who can message you back. You’ll need Digital DSA app notifications turned on so you know when you’ve received a reply.",
+    "button": {
+      "link": "/contact",
+      "btnBorder": "#4F4C4D",
+      "btnName": "Message us"
+    }
+  },
+  "mobileNavbarTitle": [
+    "Offset & redraw",
+    "How to switch",
+    "Features & benefits",
+    "Home loans with offset",
+    "Tools & support"
+  ],
+  "common_components": {
+    "helpList": {
+      "contents": {
+        "heading": "We're here to help",
+        "cards": [
+          {
+            "Heading": "Book an appointment",
+            "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+            "icon": "/icons/appointment.svg",
+            "altTitle": "icons",
+            "link": "/appointment"
+          },
+          {
+            "Heading": "Manage your loan online",
+            "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+            "icon": "/icons/manageLoan2.svg",
+            "altTitle": "icons",
+            "link": "/home-loan/top-up-only"
+          },
+          {
+            "Heading": "Contact us",
+            "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+            "icon": "/icons/contact.svg",
+            "altTitle": "icons",
+            "link": "/contact"
+          },
+          {
+            "Heading": "Message us",
+            "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+            "icon": "/icons/msg.svg",
+            "altTitle": "icons",
+            "link": "/contact"
+          }
+        ]
+      }
+    },
+    "thinkYouShouldKnow": {
+      "heading": "Things you should know",
+      "paraGraph": [
+        "<span class=\"font-semibold\">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
+        "<span class=\"font-semibold\">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
+        "<span class=\"font-semibold\">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.",
+        "<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions."
+      ]
+    }
+  }
+}

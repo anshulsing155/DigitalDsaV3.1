@@ -1,0 +1,281 @@
+{
+  "pageData": {
+    "coverImage": "/images/home-cover.jpg",
+    "altName": "hero-cover",
+    "classStyle": "object-cover xl:h-[90svh] 3xl:max-h-[70svh]",
+    "heroHeading": "Transfer Home Loan with Top-up",
+    "heroParagraph": "Knowing where to start can be the biggest hurdle. The right tools and support will get you moving with confidence."
+  },
+  "subList": [
+    {
+      "name": "Getting ready",
+      "targetId": "ready"
+    },
+    {
+      "name": "Find a home",
+      "targetId": "find"
+    },
+    {
+      "name": "What's next?",
+      "targetId": "next"
+    },
+    {
+      "name": "Tools & calculators",
+      "targetId": "calculators"
+    }
+  ],
+  "navList": [
+    {
+      "actionBtn": [
+        {
+          "firstBtn": "Book appointment",
+          "link": "/appointment",
+          "btnColor": "#ffcc00"
+        },
+        {
+          "firstBtn": "Apply online",
+          "link": "/get-started/how-can-we-help"
+        }
+      ]
+    }
+  ],
+  "getStart": [
+    {
+      "heading": "Getting ready to buy",
+      "data": [
+        {
+          "id": "1",
+          "title": "Home buying made easy",
+          "desc": "Your step-by-step guide to buying property, whether it's a home to live in or an investment for your future.",
+          "link": "Read home buying guide (PDF)",
+          "url": "/"
+        },
+        {
+          "id": "2",
+          "title": "Saving for a deposit ",
+          "desc": "Get some tips to help you start saving for your house deposit.",
+          "link": "Tell me more about saving for a deposit",
+          "url": ""
+        },
+        {
+          "id": "3",
+          "title": "Should you get conditional pre-approval?",
+          "desc": "Having conditional pre-approval can help show that you're serious about buying.",
+          "link": "Keep reading about conditional pre-approval",
+          "url": ""
+        },
+        {
+          "id": "4",
+          "title": "Understand the costs",
+          "desc": "There are a number of costs you'll need to factor into your home buying budget.",
+          "link": "Find out more about home buying costs",
+          "url": ""
+        }
+      ]
+    }
+  ],
+  "cardDataList": [
+    {
+      "heading": "Know your borrowing power",
+      "para": "Get the confidence to act quickly when the right property comes along",
+      "icon": "/icons/checklist.svg",
+      "iconAltName": "Message Icon",
+      "link": "/calculators/emi-calculator",
+      "btnName": "Check condition approval"
+    },
+    {
+      "heading": "Apply for a loan",
+      "para": "When you've found a property or want to refinance with undefined.",
+      "icon": "/icons/apply-pen.svg",
+      "iconAltName": "Alert Icon",
+      "link": "/get-started/how-can-we-help",
+      "btnName": "Apply for a home loan"
+    },
+    {
+      "heading": "Ask a Lending expert",
+      "para": "Talk on the phone or in person – whatever works best for you.",
+      "icon": "/icons/contact.svg",
+      "iconAltName": "Alert Icon",
+      "link": "/appointment",
+      "btnName": "Book an appointment"
+    },
+    {
+      "heading": "Make informed property decisions with Home Hub",
+      "para": "Get access to all the property tools and guidance you need in one place in ",
+      "icon": "/icons/home.svg",
+      "iconAltName": "Alert Icon",
+      "link": "/get-started/how-can-we-help",
+      "btnName": "Check out Home Hub"
+    }
+  ],
+  "forHome": [
+    {
+      "heading": "Property report ",
+      "para": "Make informed property decisions and understand the market.",
+      "link": "/finance-support",
+      "linkName": "Get Property Report"
+    },
+    {
+      "heading": "Simplify your property purchase with Home-in",
+      "para": "Digital DSA has partnered with Home-in, your personal home buying concierge to help simplify your first home buying journey. Helping you at every step, from pre-approval to shortlisting homes, conveyancing and settling on your new property.",
+      "link": "/finance-support",
+      "linkName": "Get started with Home-in"
+    },
+    {
+      "heading": "Watch our webinars for more guidance",
+      "para": "We've created a four-part webinar series to support you as you get started on your property journey, whether you're looking for a place to live in or invest.",
+      "link": "/finance-support",
+      "linkName": "Watch webinars"
+    }
+  ],
+  "whatNext": [
+    {
+      "heading": "Understanding the home loan process",
+      "para": "Our step-by-step guide from applying for your home loan to settlement.",
+      "link": "/offers",
+      "linkName": "Tell me more"
+    },
+    {
+      "heading": "Making an offer",
+      "para": "Here's what you need to know about the final steps to owning a home.",
+      "link": "/offers",
+      "linkName": "Keep reading"
+    },
+    {
+      "heading": "Offset accounts",
+      "para": "Offsetting your interest could shave thousands off your home loan.",
+      "link": "/offers",
+      "linkName": "Keep reading"
+    }
+  ],
+  "IconCardHeading": "Start your home buying journey with us today",
+  "contents": [
+    {
+      "id": 1,
+      "title": "Calculators",
+      "links": [
+        {
+          "id": 1,
+          "name": "How much can I borrow?",
+          "url": "/calculators/emi-calculator"
+        },
+        {
+          "id": 2,
+          "name": "What would my repayments be?",
+          "url": "/calculators/emi-calculator"
+        },
+        {
+          "id": 3,
+          "name": "What would my upfront costs be?",
+          "url": "/calculators/emi-calculator"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Tools",
+      "links": [
+        {
+          "id": 1,
+          "name": "Compare our home loans",
+          "url": "/calculators/emi-calculator"
+        },
+        {
+          "id": 2,
+          "name": "Budget planner",
+          "url": "/calculators/emi-calculator"
+        },
+        {
+          "id": 3,
+          "name": "Search for a property",
+          "url": "/calculators/emi-calculator"
+        }
+      ]
+    }
+  ],
+  "borrow": {
+    "cardImage": "/images/housing.jpg",
+    "cardAltName": "housing-figure",
+    "cardHeading": "How much can I borrow?",
+    "text": "Get an estimate of how much you may be able to borrow.",
+    "link": "/calculators/emi-calculator",
+    "linkText": "Use calculator"
+  },
+  "guaranteeScheme": {
+    "cardImage": "/images/home-scheme.jpg",
+    "cardAltName": "parent-figure",
+    "cardHeading": "Home Guarantee Scheme",
+    "text": "You may be able to buy your first home sooner with a smaller deposit.",
+    "link": "/finance-support",
+    "linkText": "Discover the Scheme"
+  },
+  "homeInterest": {
+    "homeInterest": "See our home loan options",
+    "btnName": "Explore now",
+    "btnBorder": "#4F4C4D",
+    "btnLink": "/home-loan"
+  },
+  "messageUs": {
+    "cardImage": "/images/message.jpg",
+    "cardAltName": "housing-figure",
+    "cardHeading": "Message us 24/7",
+    "text": "Get instant help from  the Digital DSA app or connect with a specialist who can message you back. You’ll need Digital DSA app notifications turned on so you know when you’ve received a reply.",
+    "button": {
+      "link": "/contact",
+      "btnBorder": "#4F4C4D",
+      "btnName": "Message us"
+    }
+  },
+  "mobileNavbarTitle": [
+    "Getting ready",
+    "Find a home",
+    "What's next?",
+    "Tools & calculators"
+  ],
+  "common_components": {
+    "helpList": {
+      "contents": {
+        "heading": "We're here to help",
+        "cards": [
+          {
+            "Heading": "Book an appointment",
+            "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+            "icon": "/icons/appointment.svg",
+            "altTitle": "icons",
+            "link": "/appointment"
+          },
+          {
+            "Heading": "Manage your loan online",
+            "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+            "icon": "/icons/manageLoan2.svg",
+            "altTitle": "icons",
+            "link": "/home-loan/top-up-only"
+          },
+          {
+            "Heading": "Contact us",
+            "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+            "icon": "/icons/contact.svg",
+            "altTitle": "icons",
+            "link": "/contact"
+          },
+          {
+            "Heading": "Message us",
+            "paragraph": "Book instantly to speak to a home loan specialist at a time that suits you",
+            "icon": "/icons/msg.svg",
+            "altTitle": "icons",
+            "link": "/contact"
+          }
+        ]
+      }
+    },
+    "thinkYouShouldKnow": {
+      "heading": "Things you should know",
+      "paraGraph": [
+        "<span class=\"font-semibold\">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
+        "<span class=\"font-semibold\">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
+        "<span class=\"font-semibold\">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.",
+        "<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions."
+      ]
+    }
+  }
+}

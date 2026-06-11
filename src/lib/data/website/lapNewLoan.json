@@ -1,0 +1,247 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Loan Against Property – High Loan Amount & Low Interest",
+    "image": "/images/lap-new-loan-blog.jpg",
+    "description": "Get a Loan Against Property at low interest rates. Unlock up to 70% of property value with flexible terms & easy approval. Apply online now!",
+    "keywords": "Loan Against Property, LAP Loan, Mortgage Loan, Property Loan, Home Equity Loan, Secured Loan, Loan Against Property Interest Rates, LAP Eligibility, Best LAP Offers, Loan Against Property Online, LAP Loan EMI Calculator, Mortgage Loan for Business, Loan Against Property for Self-Employed, Property Loan Process, Compare LAP Loan Offers"
+  },
+  "pageData": {
+    "coverImage": "/images/lap-new-loan-blog.jpg",
+    "coverAlt": "hero-cover",
+    "heading": "Loan Against Property",
+    "para": "<span class=\"font-semibold\">Unlock the Power of Your Property!<br>Get a Loan Against Property at Competitive Rates with Zero Hassles!</span>",
+    "actionBtns": [
+      {
+        "btnName": "Book Appointment",
+        "btnLink": "/appointment",
+        "btnColor": ""
+      },
+      {
+        "btnName": "Compare loan offers",
+        "btnLink": "/get-started/how-can-we-help",
+        "btnColor": "#ffcc00",
+        "animation": true
+      }
+    ]
+  },
+  "navList": {
+    "items": [
+      { "name": "What is LAP", "targetId": "what" },
+      { "name": "Benefits", "targetId": "benefits" },
+      { "name": "Who can apply", "targetId": "whoCanApply" },
+      { "name": "Things to consider", "targetId": "things" },
+      { "name": "Tools & calculators", "targetId": "calculators" }
+    ],
+    "actionBtns": [
+      {
+        "btnName": "Book Appointment",
+        "btnLink": "/appointment",
+        "btnColor": ""
+      },
+      {
+        "btnName": "Compare loan offers",
+        "btnLink": "/get-started/how-can-we-help",
+        "btnColor": "#ffcc00"
+      }
+    ]
+  },
+  "features": {
+    "heading": "What is LAP",
+    "cardData": [
+      {
+        "id": "1",
+        "title": "Secured Loan",
+        "para": "A loan where you pledge your property as collateral to borrow funds. It allows individuals or businesses to unlock the value of their owned property without selling it."
+      },
+      {
+        "id": "2",
+        "title": "High Loan Amount",
+        "para": "Get a loan of up to 60-70% of the market value of the property, depending on the lender's policies."
+      },
+      {
+        "id": "3",
+        "title": "Usage Flexibility",
+        "para": "The borrowed amount can be used for various purposes, such as:</br></br><ul class=\"list-disc flex flex-col gap-1 pl-4\"><li>Expanding a business</li><li>Paying for higher education</li><li>Medical emergencies</li><li><a href=\"/lap/what-is-debt-consolidation\" class=\"underline underline-offset-4 text-{linkColor} hover:no-underline typography-body-md text-text-light cursor-pointer\">Debt consolidation</a></li><li>Funding big events like weddings or travel</li><li>Unexpected expenses or business losses</li></ul>"
+      },
+      {
+        "id": "4",
+        "title": "Competitive Interest Rates",
+        "para": "Generally lower than personal loans or credit card debts, making it a cost-effective borrowing option.",
+        "btnName": "Compare LAP Offers",
+        "btnLink": "/get-started/how-can-we-help",
+        "btnColor": "#ffcc00"
+      }
+    ]
+  },
+  "benefits": {
+    "heading": "Benefits",
+    "secPara": "<ul class=\"list-disc flex flex-col gap-2 pl-2\"><li>Lower Interest Rates: <span class=\"font-semibold\">9% to 12% p.a.</span></li><li>No Restrictions on Usage</li><li>Higher Loan Amounts: <span class=\"font-semibold\">Up to 60-70% of the property's market value.</span></li><li>Flexible Repayment Options: <span class=\"font-semibold\">Loan repayment terms from 5 to 15 years.</span></li></ul>",
+    "btnName": "Explore loan options",
+    "btnColor": "#ffcc00",
+    "btnBorder": "#4F4C4D",
+    "btnLink": "/get-started/how-can-we-help"
+  },
+  "eligibility": {
+    "contents": {
+      "heading": "Eligibility & Documents Required",
+      "cardData": [
+        {
+          "id": "1",
+          "title": "Eligibility Criteria",
+          "para": "<ul class=\"list-disc flex flex-col gap-2 pl-4\"><li><span class=\"font-semibold\">Who can apply:</span> Salaried individuals, Self-employed professionals & Business owners.</li><li><span class=\"font-semibold\">Property ownership:</span> The property must be legally owned by the borrower.</li><li><span class=\"font-semibold\">Income proof:</span> Lenders evaluate the borrower's income stability to assess repayment capacity.</li><li><span class=\"font-semibold\">CIBIL score:</span> A good credit score (typically above 750) increases the chances of approval and better interest rates.</li></ul>"
+        },
+        {
+          "id": "2",
+          "title": "Documents Required",
+          "para": "<ul class=\"list-disc flex flex-col gap-2 pl-4\"><li><span class=\"font-semibold\">Identity proof:</span> Aadhaar, PAN, Passport.</li><li><span class=\"font-semibold\">Address proof:</span> Aadhaar, Passport, Utility Bills.</li><li><span class=\"font-semibold\">Income proof:</span> Salary Slips, Bank Statement, ITR, Audited financials.</li><li><span class=\"font-semibold\">Property documents:</span> Title Deeds, Property Chain documents.</li></ul>"
+        }
+      ]
+    },
+    "whatWeProvide": {
+      "contents": {
+        "cardImage": "/images/housing.jpg",
+        "cardAltName": "housing-figure",
+        "cardHeading": "What we provide",
+        "reverse": true
+      },
+      "list": [
+        {
+          "bold": "Compare offers from multiple banks/NBFCs:",
+          "text": "Help users choose the best interest rate and tenure."
+        },
+        {
+          "bold": "Transparency & zero spam policy:",
+          "text": "No contact required upfront; no spam calls."
+        },
+        {
+          "bold": "Easy-to-Use tools:",
+          "text": "Use our calculators to determine your eligibility, affordability, and EMI for LAP."
+        },
+        {
+          "bold": "Assured cashback offers:",
+          "text": "Mention any ongoing cashback promotions or benefits for applying via your platform."
+        },
+        {
+          "bold": "Doorstep services:",
+          "text": "Highlight your convenience factor, like document collection and processing from home."
+        }
+      ]
+    },
+    "buttonBanner": {
+      "heading": "Unlock the Value of Your Property!",
+      "btnName": "Compare & Apply Now",
+      "btnLink": "/get-started/how-can-we-help",
+      "btnColor": "#ffcc00",
+      "btnBorder": "#4F4C4D"
+    }
+  },
+  "things": {
+    "heading": "Important Considerations Before Applying",
+    "cardData": [
+      {
+        "id": "1",
+        "title": "Points to Consider",
+        "para": "<ul class=\"list-disc flex flex-col gap-2 pl-4\"><li>Failure to repay a Loan Against Property can put your property at risk. Use our expert tools to ensure a well-planned and manageable repayment strategy.</li><li>The approval process may take longer than unsecured loans due to property verification and appraisal.</li><li>EMIs can impact monthly finances, especially during financial stress. If you're unsure about immediate fund usage, consider an <span class=\"font-semibold\">Overdraft Facility</span> for flexible withdrawals.</li></ul>"
+      },
+      {
+        "id": "2",
+        "title": "What to Expect",
+        "para": "When you seek our support, we assess your situation to provide the best possible assistance. To do this, we may require:<ul class=\"list-disc flex flex-col gap-2 pl-4\"><li><span class=\"font-semibold\">Details</span> about your profession, income, and expenses.</li><li><span class=\"font-semibold\">Documents</span> to verify your income and property ownership.</li></ul><br>"
+      }
+    ]
+  },
+  "tools": {
+    "moneyMap": {
+      "heading": "Tools & Calculators",
+      "cardData": [
+        {
+          "id": "1",
+          "title": "Tools",
+          "para": "<ul class=\"list-disc flex flex-col gap-1 pl-4\"><li><a href=\"/get-started/how-can-we-help\" class=\"hover:no-underline underline\">Check bank offers</a></li><li><a href=\"/planners/budget-planner\" class=\"hover:no-underline underline\">Budget Planner</a></li><li><a href=\"/calculators/eligibility-calculator\" class=\"hover:no-underline underline\">How much I can borrow</a></li></ul>"
+        },
+        {
+          "id": "2",
+          "title": "Calculators",
+          "para": "<ul class=\"list-disc flex flex-col gap-1 pl-4\"><li><a href=\"/planners/part-payment-planner\" class=\"hover:no-underline underline\">Part-payment Calculator</a></li><li><a href=\"/calculators/emi-calculator\" class=\"hover:no-underline underline\">How much EMI I can pay</a></li><li><a href=\"/planners/flexible-emi-planner\" class=\"hover:no-underline underline\">Optimize my loan tenure</a></li></ul>"
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "accordions": [
+        {
+          "question": "What is the maximum loan amount I can get against my property?",
+          "answer": "You can get up to 60-70% of your property’s market value, depending on the lender."
+        },
+        {
+          "question": "How is my property valued?",
+          "answer": "Lenders conduct a thorough valuation based on current market trends and location."
+        },
+        {
+          "question": "Can I apply for LAP if my property is under a loan?",
+          "answer": "Yes, lenders may offer LAP with a balance transfer of the existing loan."
+        },
+        {
+          "question": "What is the difference between LAP and DOD?",
+          "answer": "<span class=\"font-semibold\">LAP (Loan Against Property)</span> is a term loan where you get a lump sum amount and repay in fixed EMIs, ideal for long-term needs. <span class=\"font-semibold\">DOD (Drop-Line Overdraft)</span> is a flexible credit line where you withdraw as needed, pay interest only on the used amount, and the limit reduces over time. <a href=\"#\" class=\"text-blue-600 hover:underline\">Read more about LAP vs. DOD.</a>"
+        }
+      ]
+    }
+  },
+  "mobileNavbarTitle": [
+    "What is LAP",
+    "Benefits",
+    "Who Can Apply",
+    "Things to Consider",
+    "Tools & Calculators"
+  ],
+  "common_components": {
+    "helpList": {
+      "contents": {
+        "heading": "We're here to help",
+        "xlGridCol": 4,
+        "borderBottom": true,
+        "cards": [
+          {
+            "heading": "Book an </br> appointment",
+            "para": "Book instantly to speak to a LAP specialist at a time that suits you",
+            "icon": "/icons/appointment.svg",
+            "altName": "appointment Icon",
+            "url": "/appointment"
+          },
+          {
+            "heading": "Check loan offers",
+            "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+            "icon": "/icons/manageLoan2.svg",
+            "altName": "Alert Icon",
+            "url": "/get-started/how-can-we-help"
+          },
+          {
+            "heading": "Contact us",
+            "para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+            "icon": "/icons/contact.svg",
+            "altName": "Alert Icon",
+            "url": "/contact"
+          },
+          {
+            "heading": "Message us",
+            "para": "Get instant help from our online assistants  or chat to a specialist.",
+            "icon": "/icons/msg.svg",
+            "altName": "Alert Icon",
+            "url": "/contact"
+          }
+        ]
+      }
+    },
+    "thinkYouShouldKnow": {
+      "heading": "Things you should know",
+      "paraGraph": [
+        "<span class=\"font-semibold\">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
+        "<span class=\"font-semibold\">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
+        "<span class=\"font-semibold\">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.",
+        "<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions."
+      ]
+    }
+  }
+}
