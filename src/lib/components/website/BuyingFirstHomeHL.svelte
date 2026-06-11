@@ -38,8 +38,8 @@
 			sourceName: 'Freepik',
 			originalSource:
 				'https://www.freepik.com/free-photo/people-recording-their-house-tour_129835217.htm',
-			heading: 'First home buyers - Guide to buying your first home',
-			para: 'Knowing where to start can be the biggest hurdle. The right tools and support will get you moving with confidence.',
+			heading: 'First Home Buyers : <br> A DSA Guide to Helping Customers Buy Their First Home',
+			para: 'Buying a first home can feel overwhelming for borrowers. From saving for a down payment to understanding eligibility and comparing lenders, customers need guidance at every stage. As a DSA, helping first-time buyers navigate the process creates trust, improves conversions, and increases successful loan disbursements.',
 			actionBtns: [
 				{
 					btnName: 'Book appointment',
