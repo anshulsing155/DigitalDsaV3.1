@@ -83,7 +83,17 @@
 
 						{#if pageData.actionBtn && pageData.hasOwnProperty('actionBtnsRequired')}
 							<div class="mx-auto flex w-[85%] flex-col gap-4 sm:flex-row md:w-full">
-								<!-- keep existing button code -->
+								{#if pageData.actionBtn?.length}
+									{#each pageData.actionBtn as btn}
+										<Button
+											btnName={btn.btnName}
+											btnClass={btn.btnClass}
+											link={btn.btnLink}
+											onClick={btn.btnClick}
+											btnAnimation={btn.animation}
+										/>
+									{/each}
+								{/if}
 							</div>
 						{/if}
 

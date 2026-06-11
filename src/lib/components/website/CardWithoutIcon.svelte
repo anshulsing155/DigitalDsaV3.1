@@ -37,7 +37,7 @@
       <Button
         btnName={cardData.btnName}
         link={cardData.btnLink}
-        btnColor={cardData.btnColor}
+        btnClass={cardData.btnClass}
         btnBorder={cardData.btnBorder}
       />
     {/if}

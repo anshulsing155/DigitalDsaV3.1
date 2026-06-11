@@ -38,19 +38,19 @@
   <section class="content">
     <NewPageLayout
       pageData={{
-         actionBtnsRequired :"",
+         actionBtnsRequired :"Yes",
         coverImage: "/images/home-cover.jpg",
         classStyle: "object-cover xl:h-[90svh] 3xl:max-h-[60svh]",
         heading: "Find the Right Home Loan for You",
         sourceName: "Digital DSA",
         originalSource:
           "https://assets.undefined.com.au/is/image/undefined/family-new-home?$Responsive_Align_Center_Top$&fit=constrain&wid=978&dpr=off",
-        para: `Looking to buy, refinance, or invest in a property? Our tools, guides, and expert insights help you navigate every step of the journey with confidence. Let’s make homeownership simple and stress-free.`,
+        para: `Looking to buy, refinance, or invest in a property? Our tools, guides, and expert insights help you navigate every step of the journey with confidence. Let’s make home ownership simple and stress-free.`,
         actionBtn: [
           {
             btnName: `Download Guide`,
             btnLink: "#",
-            btnColor: "#ffcc00",
+            btnClass: 'btn-primary',
             animation: true,
             onClick: openDownloadModal,
           }
@@ -194,6 +194,7 @@
               para: "Set clear savings goals, automate contributions, cut unnecessary expenses, and invest wisely to build your dream home fund!",
               btnLink: "/home-loan/saving-for-deposit",
               btnName: "Tell me more",
+              btnClass: 'btn-secondary',
               sourceName: "",
               originalSource: "",
             },
@@ -205,6 +206,7 @@
               para: "Are you self-employed? Our lending specialists can help you secure the right home loan for your property goals.",
               btnLink: "/home-loan/home-loan-for-business",
               btnName: "Learn more",
+              btnClass: 'btn-secondary',
               sourceName: "",
               originalSource: "",
             },
@@ -215,6 +217,7 @@
               para: "Buying offers equity and long-term stability, while renting provides flexibility and lower upfront costs. Choose what fits your lifestyle and finances.",
               btnLink: "/home-loan/buy-or-rent",
               btnName: "Let me decide",
+              btnClass: 'btn-secondary',
               sourceName: "",
               originalSource: "",
             },
@@ -227,7 +230,7 @@
           heading: "Smart Ways to Pay Off Your Home Loan Faster",
           para: "Simple financial tweaks today can lead to significant savings on your home loan in the long run.",
           btnName: "Find out how",
-          btnBorder: "#4F4C4D",
+          btnClass: 'btn-secondary',
           btnLink: "/planners/part-payment-planner",
         }}
       />
@@ -241,21 +244,21 @@
               heading: "Buying Your First Home",
               para: "Getting started can feel overwhelming, but with the right tools and support, you’ll be on your way with confidence.",
               btnName: "Tell me more",
-              border: "#4F4C4D",
+              btnClass: 'btn-secondary',
               btnLink: "/home-loan/buying-first-home",
             },
             {
               heading: "Buying Your Next Home",
               para: "Thinking about upsizing or a lifestyle change? The process may be different the second time around, but we have the resources to help you sell and move with ease.",
               btnName: "Know more",
-              border: "#4F4C4D",
+              btnClass: 'btn-secondary',
               btnLink: "/home-loan/buying-next-home",
             },
             {
               heading: "Need Help with Home & Business Banking?",
               para: "Our specialists can assist you in managing both your home loan and business banking needs in one place.",
               btnName: "Talk to us",
-              border: "#4F4C4D",
+              btnClass: 'btn-secondary',
               btnLink: "/appointment",
             },
           ],
@@ -265,8 +268,7 @@
         contents={{
           heading: `Need a Home Loan but Your ITR Shows <span class="underline decoration-btnBg underline-offset-4">Low Profit</span>?`,
           btnName: "Get Help",
-          BtnBorder: "#4F4C4D",
-          btnColor: "#ffcc00",
+          btnClass: 'btn-primary',
           btnLink: "/appointment",
         }}
       />
@@ -280,13 +282,16 @@
               para: "Begin your home loan or balance transfer application online and, if eligible, receive a conditional approval.",
               btnName: "Compare Bank Offers",
               btnLink: "/get-started/how-can-we-help",
-              btnColor: "#ffcc00",
+              btnClass: 'btn-primary ',
+              
             },
             {
               title: "Secure the Best Home Loan Deal",
               para: "Maximize your home loan benefits by booking a session with our Home Lending Specialist at your convenience.",
               btnName: "Book an Appointment",
               btnLink: "/appointment",
+              btnClass: 'btn-primary ',
+              btnClass: 'btn-secondary',
             },
           ],
         }}
@@ -304,6 +309,7 @@
               para: "Explore the pros and cons of buying a property through resale or direct purchase to make an informed decision that fits your needs and budget.",
               btnName: "Learn More",
               btnLink: "/home-loan/buy-property-resale",
+              btnClass: 'btn-secondary',
               sourceName: "",
               originalSource: "",
             },
@@ -315,6 +321,7 @@
               para: "Discover effective strategies to pay off your home loan faster, reduce interest payments, and achieve financial freedom sooner.",
               btnName: "Learn More",
               btnLink: "/home-loan/close-your-loan-early",
+              btnClass: 'btn-secondary',
               sourceName: "",
               originalSource: "",
             },
@@ -360,8 +367,7 @@
         contents={{
           heading: "Compare all home loan interest rates",
           btnName: "Compare rates",
-          BtnBorder: "#4F4C4D",
-          btnColor: "#ffcc00",
+          btnClass: 'btn-primary',
           btnLink: "/get-started/how-can-we-help",
         }}
       />
@@ -394,7 +400,7 @@
           respond promptly.
         </p>
         <div class="w-full lg:w-auto">
-          <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
+          <Button link="/contact"  btnClass='btn-secondary' btnName="Message us" />
         </div>
       </TwoColumnWithImage>
 
@@ -403,7 +409,7 @@
           heading: `Get the home loans Key Facts Sheet`,
           para: `To generate a Key Facts Sheet for our home loans, please visit our Repayments Calculator.`,
           btnName: "Get Key Fact Sheet",
-          btnBorder: "#4F4C4D",
+          btnClass: 'btn-secondary',
           btnLink: "/planners/flexible-emi-planner",
         }}
       />

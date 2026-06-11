@@ -47,7 +47,7 @@
       {#if blog.btnName}
         <Button
           btnName={blog.btnName}
-          btnColor={blog.btnColor}
+          btnClass={blog.btnClass}
           link={blog.btnLink}
           btnBorder={blog.btnBorder}
         />
