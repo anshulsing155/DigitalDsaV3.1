@@ -285,8 +285,7 @@
 			"heading": "Compare home loan offers online",
 			"para": "Looking to transfer your home loan? Explore and compare the best offers to secure better terms and maximize your savings.",
 			"btnName": "Compare rates",
-			"btnBorder": "#4F4C4D",
-			"btnColor": "#ffcc00",
+			"btnClass": "btn-primary ",
 			"btnLink": "/get-started/how-can-we-help"
 		}
 	},
@@ -336,7 +335,7 @@
 		"button": {
 			"link": "/contact",
 			"btnName": "Message us",
-			"btnClass": "btn-primary text-white dark:text-black"
+			"btnClass": "btn-secondary"
 		}
 	},
 	"common_components": {

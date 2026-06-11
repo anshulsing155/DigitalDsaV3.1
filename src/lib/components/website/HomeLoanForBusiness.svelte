@@ -14,6 +14,7 @@
 	import HelpList from './HelpList.svelte';
 	import { banks } from '$lib/data/bankEligibilityData';
 	import content from '$lib/data/website/homeLoanForBusiness.json';
+	import ThingsYouKnow from './ThingsYouKnow.svelte';
 
 	interface ButtonProps {
 		btnName: string;
@@ -46,9 +47,7 @@
 	const roiKey = '(HL/Construction/Plot+Construction/Plot) ROI as per CIBIL / 800+';
 	const roiResult = findLowestROIWithBank(banks, roiKey);
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	let cardImg1 = '/images/beautiful-drawing-room.jpg';
 	let cardAlt1 = 'images-HLGreenDigital';
@@ -135,39 +134,39 @@
 
 	// JSON-LD Structured Data Schema for Breadcrumbs and FAQ Rich Snippets
 	const breadcrumbSchema = {
-		"@context": "https://schema.org",
-		"@type": "BreadcrumbList",
-		"itemListElement": [
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
 			{
-				"@type": "ListItem",
-				"position": 1,
-				"name": "Home",
-				"item": "https://www.digitaldsa.com"
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
-				"@type": "ListItem",
-				"position": 2,
-				"name": "Home Loan",
-				"item": "https://www.digitaldsa.com/home-loan"
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
-				"@type": "ListItem",
-				"position": 3,
-				"name": "Business Owner Home Loan Guide",
-				"item": "https://www.digitaldsa.com/home-loan/home-loan-for-business"
+				'@type': 'ListItem',
+				position: 3,
+				name: 'Business Owner Home Loan Guide',
+				item: 'https://www.digitaldsa.com/home-loan/home-loan-for-business'
 			}
 		]
 	};
 
 	const faqSchema = {
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		"mainEntity": content.frequentlyAskedQuestions.accordions.map(acc => ({
-			"@type": "Question",
-			"name": acc.question,
-			"acceptedAnswer": {
-				"@type": "Answer",
-				"text": acc.answer
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: content.frequentlyAskedQuestions.accordions.map((acc) => ({
+			'@type': 'Question',
+			name: acc.question,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: acc.answer
 			}
 		}))
 	};
@@ -196,15 +195,27 @@
 					<Journey journey={content.journey} />
 				</section>
 
-				<section id="choose" data-section="choose" class="border-b border-[var(--form-border)] section">
+				<section
+					id="choose"
+					data-section="choose"
+					class="section border-b border-[var(--form-border)]"
+				>
 					<WhyChoose facilities={content.facilities} gridCol={3} />
 				</section>
 
-				<section id="loanOptions" data-section="loanOptions" class="border-b border-[var(--form-border)] section">
+				<section
+					id="loanOptions"
+					data-section="loanOptions"
+					class="section border-b border-[var(--form-border)]"
+				>
 					<WhyChoose facilities={content.homeLoanOptions} gridCol={3} />
 				</section>
 
-				<section id="whatDocs" data-section="whatDocs" class="border-b border-[var(--form-border)] section">
+				<section
+					id="whatDocs"
+					data-section="whatDocs"
+					class="section border-b border-[var(--form-border)]"
+				>
 					<TwoColumn
 						cardImage={cardImg1}
 						cardAltName={cardAlt1}
@@ -217,12 +228,14 @@
 									<p class="typography-body-md text-[var(--form-text-secondary)]">{guide.para}</p>
 
 									{#each guide.lists as list, index}
-										<li class="list-none !font-semibold typography-body-md text-[var(--form-text-secondary)]">
+										<li
+											class="typography-body-md list-none !font-semibold text-[var(--form-text-secondary)]"
+										>
 											{index + 1}. {list.heading}
 										</li>
 										<ul class="pl-4">
 											{#each list.subList as subList}
-												<li class="list-disc typography-body-md text-[var(--form-text-secondary)]">
+												<li class="typography-body-md list-disc text-[var(--form-text-secondary)]">
 													{subList.list}
 												</li>
 											{/each}
@@ -236,18 +249,25 @@
 					<Guides guide={content.guide} />
 				</section>
 
-				<section id="process" data-section="process" class="py-[4rem] border-b border-[var(--form-border)] section">
+				<section
+					id="process"
+					data-section="process"
+					class="section border-b border-[var(--form-border)] py-[4rem]"
+				>
 					{#each [content.journey] as _}
 						<div class="grid grid-cols-3 gap-[2rem]">
 							<div>
-								<h3 class="mb-[1.5rem] md:text-start typography-body-lg !font-semibold text-black dark:text-white">
+								<h3
+									class="typography-body-lg mb-[1.5rem] !font-semibold text-black md:text-start dark:text-white"
+								>
 									Our simplified verification process
 								</h3>
-								<ul class="space-y-2 mb-4">
-									<li class="typography-body-md text-[var(--form-text-secondary)] ">
-										A simple application process for business owners with less documents to prove your income.
+								<ul class="mb-4 space-y-2">
+									<li class="typography-body-md text-[var(--form-text-secondary)]">
+										A simple application process for business owners with less documents to prove
+										your income.
 									</li>
-									<li class="typography-body-md text-[var(--form-text-secondary)] ">
+									<li class="typography-body-md text-[var(--form-text-secondary)]">
 										Get in touch with our Home Lending Specialists to discuss your options.
 									</li>
 								</ul>
@@ -260,43 +280,57 @@
 								</div>
 							</div>
 							<div>
-								<h3 class="mb-[1.5rem] md:text-start typography-body-lg !font-semibold text-black dark:text-white">
+								<h3
+									class="typography-body-lg mb-[1.5rem] !font-semibold text-black md:text-start dark:text-white"
+								>
 									You may be eligible if:
 								</h3>
-								<ul class="list-disc mt-[1.5rem] space-y-2 mb-4 pl-4">
-									<li class="typography-body-md text-[var(--form-text-secondary)]">You’re self-employed</li>
-									<li class="typography-body-md text-[var(--form-text-secondary)]">You pay yourself a regular salary from your business</li>
+								<ul class="mt-[1.5rem] mb-4 list-disc space-y-2 pl-4">
+									<li class="typography-body-md text-[var(--form-text-secondary)]">
+										You’re self-employed
+									</li>
+									<li class="typography-body-md text-[var(--form-text-secondary)]">
+										You pay yourself a regular salary from your business
+									</li>
 								</ul>
 							</div>
 							<div>
-								<h3 class="mb-[1.5rem] md:text-start typography-body-lg !font-semibold text-black dark:text-white">
+								<h3
+									class="typography-body-lg mb-[1.5rem] !font-semibold text-black md:text-start dark:text-white"
+								>
 									If eligible, you'll need:
 								</h3>
-								<ul class="list-disc space-y-2 mb-4 pl-4">
-									<li class="typography-body-md text-[var(--form-text-secondary)]">Six months of salary credits in an account</li>
-									<li class="typography-body-md text-[var(--form-text-secondary)]">Financial records showing profit and loss for the last two years, with a profit each year</li>
+								<ul class="mb-4 list-disc space-y-2 pl-4">
+									<li class="typography-body-md text-[var(--form-text-secondary)]">
+										Six months of salary credits in an account
+									</li>
+									<li class="typography-body-md text-[var(--form-text-secondary)]">
+										Financial records showing profit and loss for the last two years, with a profit
+										each year
+									</li>
 								</ul>
-								<p class="mb-[1.5rem] typography-body-md text-[var(--form-text-secondary)]">
-									In some instances, we may need more information. Our Home Lending Specialists will let you know.
+								<p class="typography-body-md mb-[1.5rem] text-[var(--form-text-secondary)]">
+									In some instances, we may need more information. Our Home Lending Specialists will
+									let you know.
 								</p>
 							</div>
 						</div>
 					{/each}
 				</section>
 
-				<section id="fees" data-section="fees" class="py-[4rem] section">
+				<section id="fees" data-section="fees" class="section py-[4rem]">
 					<div class="grid grid-cols-3 gap-[2rem]">
-						<h2 class="mt-4 col-span-3 lg:col-span-1 typography-h2-md text-black dark:text-white">
+						<h2 class="typography-h2-md col-span-3 mt-4 text-black lg:col-span-1 dark:text-white">
 							{content.rates.heading}
 						</h2>
 
 						<div class="col-span-3 lg:col-span-2">
-							<div class="grid grid-cols-2 pt-4 gap-[2rem]">
+							<div class="grid grid-cols-2 gap-[2rem] pt-4">
 								<div class="space-y-4">
 									<h3 class="typography-body-lg !font-semibold text-black dark:text-white">
 										Interest Rates ({roiResult.roi || '8.10'}% PA)
 									</h3>
-									<ul class="list-disc pl-4 marker:black space-y-2">
+									<ul class="marker:black list-disc space-y-2 pl-4">
 										{#each content.rates.left[0].lists as list}
 											<li class="typography-body-md text-[var(--form-text-secondary)]">
 												{list}
@@ -308,7 +342,7 @@
 									<h3 class="typography-body-lg !font-semibold text-black dark:text-white">
 										{content.rates.right[0].heading}
 									</h3>
-									<ul class="list-disc pl-4 marker:black space-y-2">
+									<ul class="marker:black list-disc space-y-2 pl-4">
 										{#each content.rates.right[0].lists as list}
 											<li class="typography-body-md text-[var(--form-text-secondary)]">
 												{list}
@@ -324,42 +358,67 @@
 				<section id="support" data-section="support" class="section">
 					<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
 					<Guides guide={content.getStart} />
+					<!-- <HelpList contents={content.}></HelpList> -->
+
+					<ThingsYouShould
+						thinkKnow={content.thinkKnow}
+						disc="list-decimal"
+					></ThingsYouShould>
 				</section>
 			</div>
 		</div>
 
 		<!-- mobile view -->
-		<div class="lg:hidden block">
+		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					content.mobileNavbarTitle.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="typography-label text-black dark:text-white">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
-								<span><i class="fa-solid fa-angle-down faq-icon text-black dark:text-white transition-transform duration-300"></i></span>
+							<div class="icon-container typography-h3 justify-self-end">
+								<span
+									><i
+										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
+									></i></span
+								>
 							</div>
 						</div>
 					</summary>
 
 					{#if index == 0}
-						<div id="started" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+						<div
+							id="started"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
 							<Journey journey={content.journey} />
 						</div>
 					{:else if index == 1}
-						<div id="choose" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+						<div
+							id="choose"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
 							<WhyChoose facilities={content.facilities} gridCol={4} />
 						</div>
 					{:else if index == 2}
-						<div id="loanOptions" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+						<div
+							id="loanOptions"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
 							<WhyChoose facilities={content.homeLoanOptions} gridCol={3} />
 						</div>
 					{:else if index == 3}
-						<div class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4" id="whatDocs">
+						<div
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							id="whatDocs"
+						>
 							<TwoColumn
 								cardImage={cardImg1}
 								cardAltName={cardAlt1}
@@ -374,12 +433,12 @@
 											</p>
 
 											{#each guide.lists as list, index}
-												<li class="list-none font-semibold typography-body-md">
+												<li class="typography-body-md list-none font-semibold">
 													{index + 1}. {list.heading}
 												</li>
 												<ul class="pl-4">
 													{#each list.subList as subList}
-														<li class="list-disc typography-body-md text-text-light">
+														<li class="typography-body-md list-disc text-text-light">
 															{subList.list}
 														</li>
 													{/each}
@@ -393,15 +452,19 @@
 							<Guides guide={content.guide} />
 						</div>
 					{:else if index == 4}
-						<div id="process" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] py-[4rem]">
-							<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
+						<div
+							id="process"
+							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-black dark:text-white"
+						>
+							<div class="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3">
 								<div>
-									<h3 class="mb-[1.5rem] md:text-start typography-h2 text-text-main">
+									<h3 class="typography-h2 mb-[1.5rem] text-text-main md:text-start">
 										Our simplified verification process
 									</h3>
-									<ul class="space-y-2 mb-4">
+									<ul class="mb-4 space-y-2">
 										<li class="typography-body-sm text-text-light">
-											A simple application process for business owners with less documents to prove your income.
+											A simple application process for business owners with less documents to prove
+											your income.
 										</li>
 										<li class="typography-body-sm text-text-light">
 											Get in touch with our Home Lending Specialists to discuss your options.
@@ -416,41 +479,52 @@
 									</div>
 								</div>
 								<div>
-									<h3 class="mb-[1.5rem] typography-h3 font-semibold text-text-main">
+									<h3 class="typography-h3 mb-[1.5rem] font-semibold text-text-main">
 										You may be eligible if:
 									</h3>
-									<ul class="list-disc mt-[1.5rem] space-y-2 md:mb-4 pl-4">
+									<ul class="mt-[1.5rem] list-disc space-y-2 pl-4 md:mb-4">
 										<li class="typography-body-sm text-text-light">You're self-employed</li>
-										<li class="typography-body-sm text-text-light">You pay yourself a regular salary from your business</li>
+										<li class="typography-body-sm text-text-light">
+											You pay yourself a regular salary from your business
+										</li>
 									</ul>
 								</div>
 								<div>
-									<h3 class="mb-[1.5rem] typography-h3 font-semibold text-text-main">
+									<h3 class="typography-h3 mb-[1.5rem] font-semibold text-text-main">
 										If eligible, you'll need:
 									</h3>
-									<ul class="list-disc space-y-2 mb-4 pl-4">
-										<li class="typography-body-sm text-text-light">Six months of salary credits in an account</li>
-										<li class="typography-body-sm text-text-light">Financial records showing profit and loss for the last two years, with a profit each year</li>
+									<ul class="mb-4 list-disc space-y-2 pl-4">
+										<li class="typography-body-sm text-text-light">
+											Six months of salary credits in an account
+										</li>
+										<li class="typography-body-sm text-text-light">
+											Financial records showing profit and loss for the last two years, with a
+											profit each year
+										</li>
 									</ul>
-									<p class="mb-[1.5rem] typography-body-md text-text-light">
-										In some instances, we may need more information. Our Home Lending Specialists will let you know.
+									<p class="typography-body-md mb-[1.5rem] text-text-light">
+										In some instances, we may need more information. Our Home Lending Specialists
+										will let you know.
 									</p>
 								</div>
 							</div>
 						</div>
 					{:else if index == 5}
-						<div id="fees" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] py-[4rem]">
+						<div
+							id="fees"
+							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-black dark:text-white"
+						>
 							<div class="grid grid-cols-1 gap-[2rem]">
 								<h2 class="typography-h2 text-text-main">
 									{content.rates.heading}
 								</h2>
 
-								<div class="grid md:grid-cols-2 gap-[2rem]">
+								<div class="grid gap-[2rem] md:grid-cols-2">
 									<div class="space-y-4">
 										<h3 class="typography-h3 font-semibold text-text-main">
 											Interest Rates ({roiResult.roi || '8.10'}% PA)
 										</h3>
-										<ul class="list-disc pl-4 marker:black space-y-2">
+										<ul class="marker:black list-disc space-y-2 pl-4">
 											{#each content.rates.left[0].lists as list}
 												<li class="typography-body-sm text-text-light">
 													{list}
@@ -462,7 +536,7 @@
 										<h3 class="typography-h3 font-semibold text-text-main">
 											{content.rates.right[0].heading}
 										</h3>
-										<ul class="list-disc pl-4 marker:black space-y-2">
+										<ul class="marker:black list-disc space-y-2 pl-4">
 											{#each content.rates.right[0].lists as list}
 												<li class="typography-body-sm text-text-light">
 													{list}
@@ -474,7 +548,10 @@
 							</div>
 						</div>
 					{:else if index == 6}
-						<div id="support" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+						<div
+							id="support"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
 							<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
 							<Guides guide={content.getStart} />
 						</div>
