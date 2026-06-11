@@ -12,6 +12,7 @@
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/buyingFirstHomeHL.json';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
