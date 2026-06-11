@@ -1,0 +1,290 @@
+{
+	"seo": {
+		"type": "WebPage",
+		"title": "Low-Interest Construction Loan – Build Your Dream Home",
+		"image": "/images/construction-loan-blog.jpg",
+		"description": "Get a low-interest construction loan with phased disbursement, tax benefits & flexible repayment. Compare offers & secure the best deal today!",
+		"keywords": "Construction loan, Home construction loan, Low-interest construction loan, Build your dream home, Construction loan eligibility, Construction loan process, Construction loan calculator, Balance transfer for construction loan, Top-up loan on construction loan, Best construction loan offers, Home loan for construction, Loan for house construction, Construction loan interest rates"
+	},
+	"mobileNavbarTitle": [
+		"Loan features",
+		"Key benefits",
+		"Know your eligibility",
+		"Step-by-step guide",
+		"Tools & calculators"
+	],
+	"pageData": {
+		"coverImage": "/images/construction-loan-blog.jpg",
+		"coverAlt": "hero-cover",
+		"classStyle": "object-cover xl:h-[90svh] 3xl:max-h-[60svh]",
+		"heading": "Construction loan: Build your dream property",
+		"para": "Build your dream home with a low-interest construction loan. Get funds in stages, pay interest only on what’s used, and enjoy flexible repayment options.",
+		"actionBtns": [
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment"
+			},
+			{
+				"btnName": "get best offers",
+				"btnLink": "/get-started/how-can-we-help",
+				"btnColor": "#ffcc00",
+				"animation": true
+			}
+		]
+	},
+	"navList": {
+		"items": [
+			{ "name": "Loan features", "targetId": "features" },
+			{ "name": "Key benefits", "targetId": "benefits" },
+			{ "name": "Know your eligibility", "targetId": "eligibility" },
+			{ "name": "Step-by-step guide", "targetId": "steps" },
+			{ "name": "Tools & calculators", "targetId": "tools" }
+		],
+		"actionBtns": [
+			{ "btnName": "Book appointment", "btnLink": "/appointment" },
+			{
+				"btnName": "get best offers",
+				"btnLink": "/get-started/how-can-we-help",
+				"btnColor": "#ffcc00"
+			}
+		]
+	},
+	"features": {
+		"heading": "Loan features",
+		"list": [
+			{
+				"heading": "<span class=\"font-semibold\">Loan Disbursement in Phases–</span>",
+				"desc": "The bank releases funds after verifying the completion of specific construction."
+			},
+			{
+				"heading": "<span class=\"font-semibold\">Loan Tenure–</span>",
+				"desc": "Typically, 10 to 30 years, depending on the bank and your profile."
+			},
+			{
+				"heading": "<span class=\"font-semibold\">Loan-to-Value (LTV) Ratio–</span>",
+				"desc": "Banks finance 75% to 90% of construction costs while borrowers fund the rest. LTV is based on construction cost not land value."
+			},
+			{
+				"heading": "<span class=\"font-semibold\">Property as Collateral–</span>",
+				"desc": "The land and the under-construction property are typically mortgaged until repayment."
+			},
+			{
+				"heading": "<span class=\"font-semibold\">Monitoring & Inspections–</span>",
+				"desc": "Banks conduct regular site inspections to verify construction progress before disbursing the next installment."
+			},
+			{
+				"heading": "<span class=\"font-semibold\">Tax Benefits–</span>",
+				"desc": "Similar to home loans, tax benefits are available under Section 80C (principal repayment) and Section 24(b) (interest paid), but only after construction is complete."
+			}
+		]
+	},
+	"benefits": {
+		"heading": "Key benefits",
+		"list": [
+			{
+				"heading": "<span class=\"font-semibold\">Custom-Built Home–</span>",
+				"desc": "Enables you to build your <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-btnBg\">dream home</span> according to your preferences rather than buying a pre-built property."
+			},
+			{
+				"heading": "<span class=\"font-semibold\">Preserve Your Savings–</span>",
+				"desc": "You don’t have to exhaust your savings instead, you can use loan funds for smooth cash flow management."
+			},
+			{
+				"heading": "<span class=\"font-semibold\">Higher Loan Amount–</span>",
+				"desc": "Compared to personal loans, construction loans offer higher funding based on project cost and your eligibility."
+			},
+			{
+				"heading": "<span class=\"font-semibold\">Flexible Repayment Options–</span>",
+				"desc": "During construction, banks may require only Pre-EMI (interest). Full EMI starts after full disbursement or project completion."
+			},
+			{
+				"heading": "<span class=\"font-semibold\">Unlock the value–</span>",
+				"desc": "Once the house is complete, you will be eligible for a top-up loan for further expenses (like expansion of business, medical emergencies, higher education, weddings, foreign travel etc)."
+			}
+		]
+	},
+	"willApprove": {
+		"heading": "Will your loan get approved?",
+		"para": "Understanding your eligibility today can help you secure better loan terms and reduce repayment burdens in the future.",
+		"btnName": "Check eligibility",
+		"btnBorder": "#4F4C4D",
+		"btnLink": "/calculators/eligibility-calculator"
+	},
+	"eligibility": {
+		"contents": {
+			"heading": "Eligibility criteria",
+			"xlGridCol": 3,
+			"borderBottom": true,
+			"list": [
+				{
+					"icon": "/icons/financialProfile.svg",
+					"altName": "profile-icon",
+					"heading": "Applicant's Financial Profile",
+					"desc": [
+						"<span class=\"font-semibold\">Income Stability –</span> Banks assess salary slips or business financials.",
+						"<span class=\"font-semibold\">Credit Score –</span> A 700+ CIBIL score boosts approval chances.",
+						"<span class=\"font-semibold\">Debt-to-Income Ratio –</span> Lower existing loans for better eligibility."
+					],
+					"para": "<span class=\"font-semibold\">Tip:</span> <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-btnBg\">Maintain good credit history & reduce debts before applying.</span>"
+				},
+				{
+					"icon": "/icons/personalLoan.svg",
+					"altName": "money-pouch-icon",
+					"heading": "Property & Loan-to-Value (LTV) Ratio",
+					"desc": [
+						"<span class=\"font-semibold\">Land Ownership –</span> Must own the plot or have a valid sale agreement.",
+						"<span class=\"font-semibold\">LTV Ratio –</span> Banks fund up to 80%, requiring a 20% down payment.",
+						"<span class=\"font-semibold\">Location & Approval –</span> Plot must be in a lender-approved area with all permits."
+					],
+					"para": "<span class=\"font-semibold\">Tip:</span> <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-btnBg\">Ensure clear land titles & approvals to avoid loan rejection.</span>"
+				},
+				{
+					"icon": "/icons/apply-pen.svg",
+					"altName": "document-icon",
+					"heading": "Documentation & Legal Compliance",
+					"desc": [
+						"<span class=\"font-semibold\">KYC Documents –</span> PAN, Aadhaar, and address proof.",
+						"<span class=\"font-semibold\">Income Proof –</span> Salary slips & ITRs (salaried) / Business financials (self-employed).",
+						"<span class=\"font-semibold\">Construction Plan & Cost Estimate –</span> Architect-certified plan & cost estimate."
+					],
+					"para": "<span class=\"font-semibold\">Tip:</span> <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-btnBg\">Keep all documents updated for faster approval.</span>"
+				}
+			]
+		}
+	},
+	"bt": {
+		"contents": {
+			"heading": "Balance Transfer of Construction-Only Loan",
+			"list": [
+				{
+					"heading": "<span class=\"font-semibold\">Eligibility for Balance Transfer–</span>",
+					"desc": "Good repayment history on the current loan.<br>Credit score 750+ for better rates.<br>Construction progress proof required.<br>Stable income proof (salaried/self-employed).<br>Legally clear property with no disputes."
+				},
+				{
+					"heading": "<span class=\"font-semibold\">Benefits of Balance Transfer–</span>",
+					"desc": "Lower Interest Rates<br>Extended Loan Tenure<br>Top-Up Loan Option<br>Flexible Repayment Plans"
+				},
+				{
+					"heading": "<span class=\"font-semibold\">Steps to Transfer a Construction Loan–</span>",
+					"desc": "<span class=\"font-semibold\">Compare Lenders –</span> Check interest rates, fees, and repayment terms.<br><span class=\"font-semibold\">Apply for Balance Transfer –</span> Submit required documents (loan statement, income proof, property papers).<br><span class=\"font-semibold\">Loan Approval & Processing –</span> The new lender will assess eligibility and approve the transfer.<br><span class=\"font-semibold\">Foreclosure of Existing Loan –</span> Your current lender will close the loan, and the new lender will take over.<br><span class=\"font-semibold\">New Loan Agreement –</span> You start repayment with the new lender under better terms."
+				}
+			]
+		}
+	},
+	"topUp": {
+		"heading": "Top-Up Loan in Construction",
+		"para": "A top-up loan is extra money you can borrow on top of your existing construction loan. It helps cover additional costs like construction extras, interior work, or unexpected expenses. These loans usually come with low interest rates but require a good repayment history."
+	},
+	"visionBanner": {
+		"contents": {
+			"heading": "Turn Your vision into reality",
+			"cardData": [
+				{
+					"title": "Fund Your Construction or Refinance Smartly",
+					"para": "Compare interest rates and explore the latest construction loan and balance transfer offers. Get the best deal with flexible terms and expert guidance.",
+					"btnName": "Secure best offer",
+					"btnLink": "/get-started/how-can-we-help",
+					"btnColor": "#ffcc00"
+				},
+				{
+					"title": "Still confused?",
+					"para": "If you need expert guidance, you can book an appointment for personalized advice. Get the right solutions tailored to your financial needs with a quick consultation.",
+					"btnName": "Book an appointment",
+					"btnLink": "/appointment",
+					"btnBorder": "#4F4C4D"
+				}
+			]
+		}
+	},
+	"steps": {
+		"contents": {
+			"cardImage": "/images/buildingHome-cover.jpg",
+			"cardAltName": "housing-figure",
+			"cardHeading": "Step-by-step guide"
+		},
+		"list": [
+			{
+				"bold": "Application Submission –",
+				"text": " Submit your loan application online or visit the bank with necessary details like income proof, property documents, and personal information."
+			},
+			{
+				"bold": "Loan Approval & Sanction –",
+				"text": "The bank reviews your financial profile, credit score, and property documents before approving the loan amount and issuing a sanction letter."
+			},
+			{
+				"bold": "Disbursement in Phases – ",
+				"text": " Funds are released in stages based on construction milestones (e.g., foundation, walls, roof) to ensure proper utilization of the loan amount."
+			},
+			{
+				"bold": "Final Disbursement & Full EMI Start –",
+				"text": " Once construction is completed and verified, the remaining loan amount is disbursed, and full EMI payments begin."
+			}
+		]
+	},
+	"tools": {
+		"moneyMap": {
+			"heading": "Smart savings calculators – Plan your future with confidence",
+			"xlGridCol": 4,
+			"borderBottom": true,
+			"cards": [
+				{ "heading": "Know How Long Your Savings Will Last", "para": "Determine how many years your savings can support your lifestyle.", "icon": "/icons/clock.svg", "altName": "clock-icon", "linkName": "Check Your Savings Longevity", "url": "/money-map/how-long-will-your-savings-support-you" },
+				{ "heading": "Track Your Progress Towards Your Goal​", "para": "Estimate the time required to reach your financial milestones.", "icon": "/icons/phoneConnection.svg", "altName": "phoneConnection-icon", "linkName": "Plan Your Savings Journey", "url": "/money-map/how-long-will-it-take-to-save" },
+				{ "heading": "Set a Target for Retirement Savings​​", "para": "Calculate the amount needed for a secure and comfortable retirement.", "icon": "/icons/negotiate.svg", "altName": "negotiate-icon", "linkName": "Plan Your Retirement Fund", "url": "/money-map/how-much-to-save-by-retirement" },
+				{ "heading": "Grow Your Savings with Consistency​", "para": "See how regular contributions can maximize your savings over time.", "icon": "/icons/coinHouse.svg", "altName": "coinHouse-icon", "linkName": "Calculate Your Future Savings", "url": "/money-map/how-much-can-i-save-with-regular-contributions" }
+			]
+		},
+		"calculators": {
+			"heading": "Plot loan calculator",
+			"xlGridCol": 4,
+			"borderBottom": true,
+			"cards": [
+				{ "heading": "How much can I borrow?", "icon": "/icons/calc.svg", "iconAltName": "icon-calc", "url": "/calculators/eligibility-calculator" },
+				{ "heading": "Plot loan repayments calculator", "icon": "/icons/lap.svg", "iconAltName": "loan-icon", "url": "/planners/part-payment-planner" },
+				{ "heading": "Stamp duty calculator", "icon": "/icons/apply.svg", "iconAltName": "icons-apply", "url": "/calculators/stamp-duty-calculator" },
+				{ "heading": "Balance transfer calculator", "icon": "/icons/calc.svg", "iconAltName": "icons-calc", "url": "/calculators/balance-transfer-calculator" }
+			]
+		},
+		"buttonBanner": {
+			"heading": "Ways to pay off your construction loan faster",
+			"para": "Small changes now can mean big differences later to how much of your construction loan you end up repaying.",
+			"btnName": "Find out how",
+			"btnBorder": "#4F4C4D",
+			"btnLink": "/planners/both"
+		}
+	},
+	"messageUs": {
+		"contents": {
+			"cardImage": "/images/message.jpg",
+			"cardAltName": "CardCover",
+			"cardHeading": "Message us 24/7",
+			"sourceName": "DigitalDSA",
+			"originalSource": "www.digitaldsa.com"
+		},
+		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we've got you covered! Message us anytime, and we'll respond promptly.",
+		"button": { "link": "/contact", "btnBorder": "#4F4C4D", "btnName": "Message us" }
+	},
+	"common_components": {
+		"helpList": {
+			"contents": {
+				"heading": "We're here to help",
+				"xlGridCol": 4,
+				"borderBottom": true,
+				"cards": [
+					{ "heading": "Book an </br> appointment", "para": "Book instantly to speak to a plot loan specialist at a time that suits you", "icon": "/icons/appointment.svg", "altName": "appointment Icon", "url": "/appointment" },
+					{ "heading": "Check loan offers", "para": "In as little as 10 minutes and tailored exactly as per your financial profile.", "icon": "/icons/manageLoan2.svg", "altName": "Alert Icon", "url": "/get-started/how-can-we-help" },
+					{ "heading": "Contact us", "para": "Fast-track your call and connect with a specialist in the DigitalDSA.", "icon": "/icons/contact.svg", "altName": "Alert Icon", "url": "/contact" },
+					{ "heading": "Message us", "para": "Get instant help from our online assistants or chat to a specialist.", "icon": "/icons/msg.svg", "altName": "Alert Icon", "url": "/contact" }
+				]
+			}
+		},
+		"thinkYouShouldKnow": {
+			"heading": "Things you should know",
+			"paraGraph": [
+				"<span class=\"font-semibold\">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
+				"<span class=\"font-semibold\">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
+				"<span class=\"font-semibold\">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user's end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.",
+				"<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions."
+			]
+		}
+	}
+}

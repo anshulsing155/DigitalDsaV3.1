@@ -1,278 +1,293 @@
-<script>
+<script lang="ts">
+	import NewPageLayout from './NewPageLayout.svelte';
+	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';
+	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
+	import StickyNavbar from './StickyNavbar.svelte';
+	import { onMount } from 'svelte';
+	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
+	import Button from './Button.svelte';
+	import HelpList from './HelpList.svelte';
+	import ThingsYouKnow from './ThingsYouKnow.svelte';
+	import Seo from './Seo.svelte';
+	import { applicationData } from '$lib/stores/stores';
+	import content from '$lib/data/website/buyPropertyResaleOrDirectArticle.json';
+
+	interface ButtonProps {
+		btnName: string;
+		btnLink: string;
+		btnClass?: string;
+		animation?: boolean;
+	}
+
+	interface PageDataProps {
+		coverImage: string;
+		coverAlt?: string;
+		altName?: string;
+		heading: string;
+		para: string;
+		actionBtns: ButtonProps[];
+	}
+
 	let {
-		pageData = {
-    coverImage: "/images/TheSharmaFamilyStory.jpg",
-    coverAlt:
-      "couple planning to purchase  new home with savings and resale of exisiting house",
-    heading: "Buying a Property Through Resale or Direct Purchase",
-    para: `When it comes to buying a home most buyers opt for one of two preferred methods:
-            <ul class="list-decimal list-inside mb-2 mt-2">
-            <li class="mb-2"><span class="font-semibold">Resale Transactions</span> (pre-owned properties)</li>
-            <li><span class="font-semibold">Direct Purchase from Builders</span> (new properties)</li>
-            </ul>
-            These methods cater to the diverse needs of homebuyers and involve different processes and costs. Here’s a quick overview to help you navigate these types of property purchases.`,
-  }
-	} = $props();
+		pageData = content.pageData
+	}: { pageData?: PageDataProps } = $props();
 
+	// Inject store update callbacks dynamically for get-started actions
+	const pageDataWithClicks = $derived({
+		...pageData,
+		coverAlt: pageData.coverAlt || pageData.altName || '',
+		actionBtns: pageData.actionBtns.map((btn) => {
+			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Compare rates') {
+				return {
+					...btn,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Home Loan';
+							return data;
+						});
+					}
+				};
+			}
+			return btn;
+		})
+	});
 
-  import NewPageLayout from "./NewPageLayout.svelte";
-  import TwoColumnWithLeftHeading from "./TwoColumnWithLeftHeading.svelte";
-  import TwoColumnWithImage from "./TwoColumnWithImage.svelte";
-  import HelpList from "./HelpList.svelte";
-  import ThingsYouKnow from "./ThingsYouKnow.svelte";
-  import AboveTitleWithBlackCard from "./AboveTitleWithBlackCard.svelte";
-  import Button from "./Button.svelte";
-  import Seo from "./Seo.svelte";
+	const navListWithClicks = $derived({
+		...content.navList,
+		actionBtns: content.navList.actionBtns.map((btn) => {
+			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Compare rates') {
+				return {
+					...btn,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Home Loan';
+							return data;
+						});
+					}
+				};
+			}
+			return btn;
+		})
+	});
 
-;
+	let activeSection = $state('');
+
+	const initializeActiveSection = () => {
+		const firstSection = document.querySelector('[data-section]');
+		if (firstSection) {
+			activeSection = firstSection.id;
+		}
+	};
+
+	const handleScroll = () => {
+		const sections = document.querySelectorAll('[data-section]');
+		let currentSection = '';
+
+		sections.forEach((section) => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top <= 100 && rect.bottom >= 200) {
+				currentSection = section.id;
+			}
+		});
+
+		if (currentSection) {
+			activeSection = currentSection;
+		}
+	};
+
+	onMount(() => {
+		initializeActiveSection();
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
+
+	const toggleDropdown = (event: Event, index: number) => {
+		event.preventDefault();
+		const summaryElement = event.currentTarget as HTMLElement;
+		const icon = summaryElement.querySelector('.faq-icon');
+		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
+
+		// Close all dropdowns except the clicked one
+		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
+			const otherIcon = otherDetails.querySelector('.faq-icon');
+
+			if (idx !== index) {
+				otherDetails.removeAttribute('open');
+				if (otherIcon) {
+					otherIcon.classList.remove('fa-angle-up');
+					otherIcon.classList.add('fa-angle-down');
+				}
+			}
+		});
+
+		// Toggle current dropdown open/close state
+		const isOpen = detailsElement.hasAttribute('open');
+		if (isOpen) {
+			detailsElement.removeAttribute('open');
+			if (icon) {
+				icon.classList.remove('fa-angle-up');
+				icon.classList.add('fa-angle-down');
+			}
+		} else {
+			detailsElement.setAttribute('open', 'true');
+			if (icon) {
+				icon.classList.remove('fa-angle-down');
+				icon.classList.add('fa-angle-up');
+			}
+		}
+		setTimeout(() => {
+			if (detailsElement) {
+				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		}, 100);
+	};
+
+	// JSON-LD Structured Data Schema for Breadcrumbs
+	const breadcrumbSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		'itemListElement': [
+			{
+				'@type': 'ListItem',
+				'position': 1,
+				'name': 'Home',
+				'item': 'https://www.digitaldsa.com'
+			},
+			{
+				'@type': 'ListItem',
+				'position': 2,
+				'name': 'Home Loan',
+				'item': 'https://www.digitaldsa.com/home-loan'
+			},
+			{
+				'@type': 'ListItem',
+				'position': 3,
+				'name': 'Resale vs Builder Purchase',
+				'item': 'https://www.digitaldsa.com/home-loan/buy-property-resale'
+			}
+		]
+	};
 </script>
 
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
+</svelte:head>
+
 <Seo
-  type="WebPage"
-  title="Resale vs. Direct Purchase: Choose the Best Property Option"
-  image={pageData.coverImage}
-  description="Compare resale vs. direct property purchases. Learn costs, benefits, and key considerations to make an informed home-buying decision."
-  keywords="Resale vs direct purchase, Buying a resale home, New property vs resale, Resale property benefits, Home buying guide, Real estate purchase tips, Property investment advice, Direct purchase from builder, Home loan calculator, Stamp duty charges"
+	type="WebPage"
+	title="Resale vs. Direct Purchase: Choose the Best Property Option"
+	image={pageData.coverImage}
+	description="Compare resale vs. direct property purchases. Learn costs, benefits, and key considerations to make an informed home-buying decision."
+	keywords="Resale vs direct purchase, Buying a resale home, New property vs resale, Resale property benefits, Home buying guide, Real estate purchase tips, Property investment advice, Direct purchase from builder, Home loan calculator, Stamp duty charges"
 />
 
 <section class="content">
-  <NewPageLayout {pageData}>
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Resale Transactions",
-        para: `A resale transaction refers to buying a property from an individual owner rather than directly from the builder.`,
-        secPara: `<div>
-                                <p class="text-miniSubHead font-semibold text-gray-800 mb-8">Why Choose Resale Transactions?</p>
-                                <div class="space-y-4">
-                                    <div class="flex items-start space-x-4 p-4 bg-grayColor rounded-lg shadow-sm">
-                                    <svg class="text-iconColor w-6 h-6 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-                                    <div>
-                                        <p class="font-semibold text-darkColor">Immediate Possession</p>
-                                        <p class="text-darkColor">Especially with registered properties, you can move in or rent them out right away.</p>
-                                    </div>
-                                    </div>
-                                    <div class="flex items-start space-x-4 p-4 bg-grayColor rounded-lg shadow-sm">
-                                    <svg class="text-iconColor w-6 h-6 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-                                    <div>
-                                        <p class="font-semibold text-darkColor">Negotiation Opportunities</p>
-                                        <p class="text-darkColor">Prices are usually negotiable based on the property's condition and market value.</p>
-                                    </div>
-                                    </div>
-                                    <div class="flex items-start space-x-4 p-4 bg-grayColor rounded-lg shadow-sm">
-                                    <svg class="text-iconColor w-6 h-6 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-                                    <div>
-                                        <p class="font-semibold text-darkColor">Well-Developed Infrastructure</p>
-                                        <p class="text-darkColor">These properties are often in established neighborhoods with existing amenities.</p>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="mt-10">
-                                    <p class="text-miniSubHead font-semibold text-darkColor mb-4">These properties can be:</p>
-                                    <ul class="list-disc list-inside space-y-2 mt-2 text-darkColor">
-                                    <li>
-                                        <span class="font-semibold text-darkColor">Under construction:</span>
-                                        <span class="ml-2">Unregistered but in the resale market, where the original buyer wishes to transfer ownership before possession.</span>
-                                    </li>
-                                    <li>
-                                        <span class="font-semibold text-darkColor">Registered properties:</span>
-                                        <span class="ml-2">Pre-owned properties where the sale deed is already executed, and ownership is legally transferred.</span>
-                                    </li>
-                                    </ul>
-                                </div>
-                                </div>
-                                `,
-      }}
-    />
+	<NewPageLayout pageData={pageDataWithClicks}>
+		<!-- desktop view -->
+		<div class="hidden lg:block">
+			<div>
+				<StickyNavbar navList={navListWithClicks} {activeSection} />
+			</div>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Direct Purchase from Builders",
-        para: `A direct purchase involves buying a fresh, newly constructed property directly from a developer or builder. These properties are often in new residential projects or township developments.`,
-        listTopPara: "Why Choose Direct Purchase?",
-        list: [
-          {
-            heading: `Customization Options:`,
-            desc: `Buyers can select layouts, finishes, or even floors in under-construction properties.`,
-          },
-          {
-            heading: `No Previous Ownership:`,
-            desc: `You’ll be the first owner, and everything from fittings to interiors will be brand new.`,
-          },
-          {
-            heading: `Builder Discounts & Offers:`,
-            desc: `Builders often provide festival discounts, subvention schemes, or reduced interest rates.`,
-          },
-        ],
-      }}
-    />
+			<div id="resale" data-section="resale" class="section">
+				<TwoColumnWithLeftHeading contents={content.resale.contents} />
+			</div>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Key Considerations for Buyers",
-        listTopPara: `Whether you're buying through resale or directly from a builder, keep these factors in mind:`,
-        list: [
-          {
-            heading: `Property Registration Status:`,
-            desc: `Ensure the property is either registered or has clear ownership documents.`,
-          },
-          {
-            heading: `Legal Due Diligence:`,
-            desc: `Verify the title deed, encumbrance certificate, and applicable approvals.`,
-          },
-          {
-            heading: `Stamp Duty & Registration Charges:`,
-            desc: `Factor in these costs for registered properties.`,
-          },
-          {
-            heading: `Builder Reputation:`,
-            desc: `When purchasing directly, research the builder's past projects, delivery timelines, and reviews.`,
-          },
-        ],
-      }}
-    />
+			<div id="direct" data-section="direct" class="section">
+				<TwoColumnWithLeftHeading contents={content.direct.contents} />
+			</div>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "What Works for You?",
+			<div id="considerations" data-section="considerations" class="section">
+				<TwoColumnWithLeftHeading contents={content.considerations.contents} />
+			</div>
 
-        secPara: `<div class="">
-                                    <p class="text-miniSubHead font-semibold text-gray-800 mb-8">Making the Right Choice:</p>
-                                    <ul class="space-y-4 mt-2">
+			<div id="whatWorks" data-section="whatWorks" class="section">
+				<TwoColumnWithLeftHeading contents={content.whatWorks.contents} />
+			</div>
 
-                                    <li class="flex items-start space-x-4 p-4 bg-grayColor rounded-lg shadow-sm">
-                                        <svg class="text-iconColor w-6 h-6 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-                                        <p class="text-darkColor">If you want immediate possession or a property in an established locality, a resale transaction may be the better choice.</p>
-                                    </li>
-                                    <li class="flex items-start space-x-4 p-4 bg-grayColor rounded-lg shadow-sm">
-                                        <svg class="text-iconColor w-6 h-6 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-                                        <p class="text-darkColor">If you’re looking for new construction, customization options, or modern amenities, a direct purchase from a builder is ideal.</p>
-                                    </li>
-                                    </ul>
-                                    <p class="mt-8 text-darkColor">By understanding the nuances of these transaction types, you can make a more informed decision on your journey to becoming a homeowner.</p>
-                                </div>`,
-      }}
-    />
+			<div id="calculators" data-section="calculators" class="section">
+				<AboveTitleWithBlackCard contents={content.tools.contents} />
+			</div>
+		</div>
 
-    <div data-section="calculators" id="calculators" class="section">
-      <AboveTitleWithBlackCard
-        contents={{
-          heading: "Home loan calculator",
-          xlGridCol: 4,
-          borderBottom: true,
-          cards: [
-            {
-              heading: " How much can I borrow?",
-              icon: "/icons/calc.svg",
-              iconcoverAlt: "icon-calc",
-              url: "/calculators/affordability-calculator",
-            },
-            {
-              heading: " Home loan repayments calculator",
-              icon: "/icons/lap.svg",
-              iconcoverAlt: "loan-icon",
-              url: "/planners/part-payment-planner",
-            },
-            {
-              heading: "  Stamp duty calculator",
-              icon: "/icons/apply.svg",
-              iconcoverAlt: "icons-apply",
-              url: "/calculators/stamp-duty-calculator",
-            },
-            {
-              heading: "Calculators & tools?",
-              icon: "/icons/calc.svg",
-              iconcoverAlt: "icons-calc",
-              url: "/home-loan/home-loan-tools-calculator",
-            },
-          ],
-        }}
-      />
-    </div>
+		<!-- mobile view -->
+		<div class="block lg:hidden">
+			{#each content.mobileNavbarTitle as list, index}
+				<details
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					content.mobileNavbarTitle.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
+				>
+					<summary
+						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="text-black dark:text-white typography-label">{list}</h2>
+							<div class="icon-container justify-self-end typography-h3">
+								<span
+									><i
+										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
+									></i></span
+								>
+							</div>
+						</div>
+					</summary>
 
-    <TwoColumnWithImage
-      contents={{
-        cardImage: "/images/message.jpg",
-        cardcoverAlt: "housing-figure",
-        cardHeading: "Message us 24/7",
-        reverse: true,
-      }}
-    >
-      <p class="typography-body-sm text-text-light">
-        Feel free to message us anytime for expert assistance with your loan
-        needs. Our team is here to provide professional advice, guide you
-        through the loan process, and help you find the best options. No matter
-        the time, we’ve got you covered! Message us anytime, and we’ll respond
-        promptly.
-      </p>
-      <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
-    </TwoColumnWithImage>
-    <div slot="secondary" class="">
-      <HelpList
-        contents={{
-          heading: `We're here to help`,
-          xlGridCol: 4,
-          borderBottom: false,
-          cards: [
-            {
-              heading: "Know your borrowing power",
-              para: "Book instantly to speak to a home loan specialist at a time that suits you",
-              icon: "/icons/appointment.svg",
-              coverAlt: "appointment Icon",
-              url: "/appointment",
-            },
-            {
-              heading: "Check loan offers",
-              para: "In as little as 10 minutes and tailored exactly as per your financial profile.",
-              icon: "/icons/manageLoan2.svg",
-              coverAlt: "Alert Icon",
-              url: "/get-started/how-can-we-help",
-            },
-            {
-              heading: "Contact us",
-              para: "Fast-track your call and connect with a specialist in the DigitalDSA.",
-              icon: "/icons/contact.svg",
-              coverAlt: "Alert Icon",
-              url: "/contact",
-            },
-            {
-              heading: "Message us",
-              para: `Get instant help from our online assistants  or chat to a specialist.`,
-              icon: "/icons/msg.svg",
-              coverAlt: "Alert Icon",
-              url: "/contact",
-            },
-          ],
-        }}
-      />
+					{#if index === 0}
+						<div id="resale" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<TwoColumnWithLeftHeading contents={content.resale.contents} />
+						</div>
+					{:else if index === 1}
+						<div id="direct" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<TwoColumnWithLeftHeading contents={content.direct.contents} />
+						</div>
+					{:else if index === 2}
+						<div id="considerations" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<TwoColumnWithLeftHeading contents={content.considerations.contents} />
+						</div>
+					{:else if index === 3}
+						<div id="whatWorks" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<TwoColumnWithLeftHeading contents={content.whatWorks.contents} />
+						</div>
+					{:else if index === 4}
+						<div id="calculators" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<AboveTitleWithBlackCard contents={content.tools.contents} />
+						</div>
+					{/if}
+				</details>
+			{/each}
+		</div>
 
-      <ThingsYouKnow contents={{ heading: `Things you should know` }}>
-        <ul class="list-decimal pl-4 flex flex-col gap-4 px-2">
-          <li>
-            Resale properties may offer immediate possession and established
-            infrastructure.
-          </li>
-          <li>
-            Direct purchases from builders provide customization options and new
-            amenities.
-          </li>
-          <li>
-            Consider your financial situation, lifestyle preferences, and
-            long-term goals when deciding between resale and direct purchase.
-          </li>
-          <li>
-            Ensure legal due diligence and verify property documents before
-            making a decision.
-          </li>
-          <li>
-            Contact our specialists for personalized advice and support in
-            making your decision.
-          </li>
-          <li>
-            Explore our guides to understand the pros and cons of each option in
-            detail.
-          </li>
-        </ul>
-      </ThingsYouKnow>
-    </div>
-  </NewPageLayout>
+		<TwoColumnWithImage contents={content.messageUs.contents}>
+			<p>{content.messageUs.para}</p>
+			<Button
+				link={content.messageUs.button.link}
+				btnBorder={content.messageUs.button.btnBorder}
+				btnName={content.messageUs.button.btnName}
+			/>
+		</TwoColumnWithImage>
+
+		<div slot="secondary" class="px-2">
+			<HelpList contents={content.common_components.helpList.contents} />
+
+			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
+				<ul class="px-2 pl-4 flex flex-col gap-4 list-decimal">
+					{#each content.common_components.thinkYouShouldKnow.bullets as bullet}
+						<li>{@html bullet}</li>
+					{/each}
+				</ul>
+			</ThingsYouKnow>
+		</div>
+	</NewPageLayout>
 </section>
+
+<style>
+	.section {
+		scroll-margin-top: 5rem;
+	}
+</style>

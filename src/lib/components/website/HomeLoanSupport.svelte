@@ -1,763 +1,354 @@
-<script>
+<script lang="ts">
+	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
+	import Button from '$lib/components/website/Button.svelte';
+	import StickyNavbar from '$lib/components/website/StickyNavbar.svelte';
+	import { onMount } from 'svelte';
+	import NewPageLayout from './NewPageLayout.svelte';
+	import { applicationData } from '$lib/stores/stores';
+	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';
+	import AboveTitleWithoutIconCard from './AboveTitleWithoutIconCard.svelte';
+	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
+	import ButtonBanner from './ButtonBanner.svelte';
+	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
+	import FeedbackCheck from './FeedbackCheck.svelte';
+	import HelpList from './HelpList.svelte';
+	import Seo from './Seo.svelte';
+	import content from '$lib/data/website/homeLoanSupport.json';
+
+	interface ButtonProps {
+		btnName: string;
+		btnLink: string;
+		btnClass?: string;
+		animation?: boolean;
+	}
+
+	interface PageDataProps {
+		coverImage: string;
+		coverAlt: string;
+		classStyle?: string;
+		heading: string;
+		para: string;
+		actionBtns: ButtonProps[];
+	}
+
 	let {
-		pageData = {
-    coverImage: "/images/bridgingFinance-cover.jpg",
-    coverAlt: "hero-cover",
-    classStyle: "object-cover xl:h-[60svh] 3xl:max-h-[60svh]",
-    heading: "Make Your Home Loan Journey Simple",
-    para: `Need guidance on your home loan? Our expert team is here to assist with loan approvals, refinancing, balance transfers, and legal queries. Get personalized support and make informed decisions with ease.`,
-    actionBtns: [
-      {
-        btnName: "Book appointment",
-        btnLink: "/appointment",
-      },
-      {
-        btnName: "Compare rates",
-        btnLink: "/get-started/how-can-we-help",
-        btnColor: "#ffcc00",
-        animation: true,
-        btnClick: () => {
-          $applicationData.LoanName = "Home Loan";
-        },
-      },
-    ],
-  }
-	} = $props();
+		pageData = content.pageData
+	}: { pageData?: PageDataProps } = $props();
 
+	// Inject store update callbacks dynamically for get-started actions
+	const pageDataWithClicks = $derived({
+		...pageData,
+		actionBtns: pageData.actionBtns.map((btn) => {
+			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Check lowest rates' || btn.btnName === 'Compare rates') {
+				return {
+					...btn,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Home Loan';
+							return data;
+						});
+					}
+				};
+			}
+			return btn;
+		})
+	});
 
-  import ThingsYouShould from "$lib/components/website/ThingsYouShould.svelte";
-  import Button from "$lib/components/website/Button.svelte";
-  import StickyNavbar from "$lib/components/website/StickyNavbar.svelte";
-  import { onMount } from "svelte";
-  import NewPageLayout from "./NewPageLayout.svelte";
-  import { applicationData } from "$lib/stores/stores";
-  import TwoColumnWithLeftHeading from "./TwoColumnWithLeftHeading.svelte";
-  import AboveTitleWithoutIconCard from "./AboveTitleWithoutIconCard.svelte";
-  import TwoColumnWithImage from "./TwoColumnWithImage.svelte";
-  import ButtonBanner from "./ButtonBanner.svelte";
-  import AboveTitleWithBlackCard from "./AboveTitleWithBlackCard.svelte";
-  import FeedbackCheck from "./FeedbackCheck.svelte";
-  import HelpList from "./HelpList.svelte";
-  import Seo from "./Seo.svelte";
+	const navListWithClicks = $derived({
+		...content.navList,
+		actionBtns: content.navList.actionBtns.map((btn) => {
+			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Check lowest rates' || btn.btnName === 'Compare rates') {
+				return {
+					...btn,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Home Loan';
+							return data;
+						});
+					}
+				};
+			}
+			return btn;
+		})
+	});
 
-  let navBarMedium = [
-    "Loan types",
-    "Why choose us",
-    "Challenges",
-    "Essential steps",
-    "Tools & calculator",
-  ];
+	// For financial assistance cards, handle click/navigation dynamically
+	const assistanceWithClicks = $derived({
+		...content.steps.assistance,
+		cards: content.steps.assistance.cards.map((card) => {
+			if (card.url === '/get-started/how-can-we-help') {
+				return {
+					...card,
+					onClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Home Loan';
+							return data;
+						});
+					}
+				};
+			}
+			return card;
+		})
+	});
 
-  let activeSection = $state("");
+	let activeSection = $state('');
 
-  // This function sets the first section as active on initial load
-  const initializeActiveSection = () => {
-    const firstSection = document.querySelector("[data-section]");
-    if (firstSection) {
-activeSection = firstSection.id;
-    }
-  };
+	const initializeActiveSection = () => {
+		const firstSection = document.querySelector('[data-section]');
+		if (firstSection) {
+			activeSection = firstSection.id;
+		}
+	};
 
-  // Handle scroll event to dynamically update the active section
-  const handleScroll = () => {
-    const sections = document.querySelectorAll("[data-section]");
-    let currentSection = "";
+	const handleScroll = () => {
+		const sections = document.querySelectorAll('[data-section]');
+		let currentSection = '';
 
-    sections.forEach((section) => {
-const rect = section.getBoundingClientRect();
-if (rect.top <= 200 && rect.bottom >= 200) {
-currentSection = section.id;
-}
-    });
+		sections.forEach((section) => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top <= 200 && rect.bottom >= 200) {
+				currentSection = section.id;
+			}
+		});
 
-    if (currentSection) {
-activeSection = currentSection;
-    }
-  };
+		if (currentSection) {
+			activeSection = currentSection;
+		}
+	};
 
-  onMount(() => {
-    initializeActiveSection();
-    window.addEventListener("scroll", handleScroll);
+	onMount(() => {
+		initializeActiveSection();
+		window.addEventListener('scroll', handleScroll);
 
-    return () => {
-window.removeEventListener("scroll", handleScroll);
-    };
-  });
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 
-  const toggleDropdown = (event, index) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement;
+	const toggleDropdown = (event: Event, index: number) => {
+		event.preventDefault();
+		const summaryElement = event.currentTarget as HTMLElement;
+		const icon = summaryElement.querySelector('.faq-icon');
+		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
 
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-const otherIcon = otherDetails.querySelector(".faq-icon");
+		// Close all dropdowns except the clicked one
+		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
+			const otherIcon = otherDetails.querySelector('.faq-icon');
 
-if (idx !== index) {
-otherDetails.removeAttribute("open");
-if (otherIcon) {
-otherIcon.classList.remove("fa-angle-up");
-otherIcon.classList.add("fa-angle-down");
-}
-}
-    });
+			if (idx !== index) {
+				otherDetails.removeAttribute('open');
+				if (otherIcon) {
+					otherIcon.classList.remove('fa-angle-up');
+					otherIcon.classList.add('fa-angle-down');
+				}
+			}
+		});
 
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-detailsElement.removeAttribute("open");
-icon.classList.remove("fa-angle-up");
-icon.classList.add("fa-angle-down");
-    } else {
-detailsElement.setAttribute("open", "true");
-icon.classList.remove("fa-angle-down");
-icon.classList.add("fa-angle-up");
-    }
-    setTimeout(() => {
-detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  };
+		// Toggle current dropdown open/close state
+		const isOpen = detailsElement.hasAttribute('open');
+		if (isOpen) {
+			detailsElement.removeAttribute('open');
+			if (icon) {
+				icon.classList.remove('fa-angle-up');
+				icon.classList.add('fa-angle-down');
+			}
+		} else {
+			detailsElement.setAttribute('open', 'true');
+			if (icon) {
+				icon.classList.remove('fa-angle-down');
+				icon.classList.add('fa-angle-up');
+			}
+		}
+		setTimeout(() => {
+			if (detailsElement) {
+				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		}, 100);
+	};
 
-;
+	// JSON-LD Structured Data Schema for Breadcrumbs
+	const breadcrumbSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		'itemListElement': [
+			{
+				'@type': 'ListItem',
+				'position': 1,
+				'name': 'Home',
+				'item': 'https://www.digitaldsa.com'
+			},
+			{
+				'@type': 'ListItem',
+				'position': 2,
+				'name': 'Home Loan',
+				'item': 'https://www.digitaldsa.com/home-loan'
+			},
+			{
+				'@type': 'ListItem',
+				'position': 3,
+				'name': 'Home Loan Support',
+				'item': 'https://www.digitaldsa.com/home-loan/home-loan-support'
+			}
+		]
+	};
 </script>
 
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
+</svelte:head>
+
 <Seo
-  type="WebPage"
-  title="Simple & Smart Home Loan Solutions | Compare & Apply Today"
-  description="Get expert home loan guidance, compare rates, check eligibility & apply easily. Secure the best deal with quick approvals & 100% transparency."
-  image={pageData.coverImage}
-  keywords="Home loan, Home loan eligibility, Best home loan rates, Home loan approval, Compare home loans, Home loan refinancing, Balance transfer loan, Affordable home loan, Housing loan guide, Home loan process, Loan for home purchase, Home loan EMI calculator, Home renovation loan, Top-up home loan, Down payment assistance"
+	type="WebPage"
+	title="Simple & Smart Home Loan Solutions | Compare & Apply Today"
+	description="Get expert home loan guidance, compare rates, check eligibility & apply easily. Secure the best deal with quick approvals & 100% transparency."
+	image={pageData.coverImage}
+	keywords="Home loan, Home loan eligibility, Best home loan rates, Home loan approval, Compare home loans, Home loan refinancing, Balance transfer loan, Affordable home loan, Housing loan guide, Home loan process, Loan for home purchase, Home loan EMI calculator, Home renovation loan, Top-up home loan, Down payment assistance"
 />
-<section class="xl:contianer mx-auto w-full bg-mainBg">
-  <NewPageLayout {pageData}>
-    <div class="hidden lg:block">
-      <StickyNavbar
-        navList={{
-          items: [
-            {
-              name: "Loan types",
-              targetId: `types`,
-            },
-            {
-              name: "Why choose us",
-              targetId: `why`,
-            },
 
-            {
-              name: "Challenges",
-              targetId: `challenges`,
-            },
-            {
-              name: "Essential steps",
-              targetId: `steps`,
-            },
-            {
-              name: "Tools & calculator",
-              targetId: `tools`,
-            },
-          ],
-          actionBtns: [
-            {
-              btnName: "Book appointment",
-              btnLink: "/appointment",
-            },
-            {
-              btnName: "Compare rates",
-              btnLink: "/get-started/how-can-we-help",
-              btnColor: "#ffcc00",
-              btnClick: () => {
-                $applicationData.LoanName = "Home Loan";
-                // console.log($applicationData.LoanName, "ayayy");
-              },
-            },
-          ],
-        }}
-        {activeSection}
-      />
+<section class="mx-auto w-full bg-mainBg xl:container">
+	<NewPageLayout pageData={pageDataWithClicks}>
+		<!-- desktop view -->
+		<div class="hidden lg:block">
+			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
-      <div id="types" data-section="types">
-        <TwoColumnWithLeftHeading
-          contents={{
-            heading: `Types of Home Loans`,
-            list: [
-              {
-                heading: `Home Purchase Loan`,
-                desc: `Ideal for buying a new or resale property, subject to income verification, credit assessment, and property valuation.`,
-              },
-              {
-                heading: `Home Construction Loan`,
-                desc: `Designed for individuals constructing a house on their own land, with disbursement in phases as the construction progresses.`,
-              },
+			<div id="types" data-section="types">
+				<TwoColumnWithLeftHeading contents={content.types.contents} />
+			</div>
 
-              {
-                heading: `Home Renovation Loan`,
-                desc: `Funds home improvements, repairs, and remodeling projects.`,
-              },
-              {
-                heading: `Home Loan Balance Transfer`,
-                desc: `Allows you to switch your existing loan to another lender for lower interest rates and better repayment terms.`,
-              },
-              {
-                heading: `Top-Up Home Loan`,
-                desc: `Provides extra funds over your existing home loan for personal needs or property enhancements.`,
-              },
-            ],
-          }}
-        />
-      </div>
+			<div id="why" data-section="why">
+				<AboveTitleWithoutIconCard contents={content.why.contents} />
+			</div>
 
-      <div id="why" data-section="why">
-        <AboveTitleWithoutIconCard
-          contents={{
-            heading: `Why Choose Us?`,
-            xlGridCol: 3,
-            borderBottom: true,
-            cards: [
-              {
-                heading: `Best Loan Deals from Multiple Lenders `,
-                para: `Compare interest rates, loan terms, and repayment options from top banks and NBFCs to secure the most affordable home loan.`,
-                linkName: "Check your affordability",
-                url: "/calculators/affordability-calculator",
-              },
-              {
-                heading: `Seamless & Hassle-Free Process`,
-                para: `From application to approval, we simplify the process with minimal paperwork, quick verification, and expert support at every step.`,
-              },
-              {
-                heading: `100% Transparency & Trust`,
-                para: `No hidden fees, no spam calls—just honest guidance and clear loan terms to help you make the right financial decision.`,
-              },
-            ],
-          }}
-        />
-      </div>
+			<div id="challenges" data-section="challenges">
+				<TwoColumnWithLeftHeading contents={content.challenges.contents} />
+			</div>
 
-      <div id="challenges" data-section="challenges">
-        <TwoColumnWithLeftHeading
-          contents={{
-            heading: `Challenges`,
-            list: [
-              {
-                heading: `Title & Ownership Concerns`,
-                desc: `Verify the property's legal
-              history and ensure there are no disputes over ownership.`,
-              },
-              {
-                heading: `Outstanding Liabilities`,
-                desc: `Conduct an encumbrance check
-              to confirm there are no unpaid dues, mortgages, or legal claims on
-              the property.`,
-              },
+			<div id="steps" data-section="steps">
+				<TwoColumnWithImage contents={content.steps.contents}>
+					<div class="typography-body-sm text-text-light">
+						<ul class="list-disc space-y-4">
+							{#each content.steps.list as item}
+								<li class="flex items-start gap-1">
+									<img src="/icons/circle-check.svg" alt="circle-check" class="mt-1 h-4" />
+									<span>
+										<strong>{item.bold}</strong>
+										{item.text}
+									</span>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				</TwoColumnWithImage>
 
-              {
-                heading: `Hidden Expenses`,
-                desc: ` Factor in additional costs like registration
-              fees, property taxes, and maintenance charges to avoid budget surprises.`,
-              },
-              {
-                heading: `Project Delays`,
-                desc: `Developers may face financial or legal
-              setbacks, causing possession delays. Always check RERA registration
-              before investing.`,
-              },
-              {
-                heading: `Loan Approval Challenges`,
-                desc: `Highlight your convenience
-              factor, like document collection and processing from home.`,
-              },
-            ],
-          }}
-        />
-      </div>
+				<ButtonBanner contents={content.steps.buttonBanner} />
+				<AboveTitleWithoutIconCard contents={assistanceWithClicks} />
+			</div>
 
-      <div id="steps" data-section="steps">
-        <TwoColumnWithImage
-          contents={{
-            cardImage: "/images/employees.jpg",
-            cardAltName: "employees-figure",
-            cardHeading: "Essential Steps Before Buying a Home",
-          }}
-        >
-          <div class="typography-body-sm text-text-light">
-            <ul class="list-disc space-y-4">
-              <li class="flex items-start gap-1">
-                <img
-                  src="/icons/circle-check.svg"
-                  alt="circle-check"
-                  class="h-4 mt-1"
-                />
-                <span>
-                  <strong>Verify Legal Ownership:</strong> Check government records
-                  to confirm the seller’s ownership.
-                </span>
-              </li>
-              <li class="flex items-start gap-1">
-                <img
-                  src="/icons/circle-check.svg"
-                  alt="circle-check"
-                  class="h-4 mt-1"
-                />
-                <span>
-                  <strong> Review Important Documents:</strong> Examine sale agreements,
-                  approvals, and historical records before proceeding.
-                </span>
-              </li>
-              <li class="flex items-start gap-1">
-                <img
-                  src="/icons/circle-check.svg"
-                  alt="circle-check"
-                  class="h-4 mt-1"
-                />
-                <span>
-                  <strong>Check Regulatory Clearances:</strong> Ensure compliance
-                  with zoning laws, environmental regulations, and land use approvals.
-                </span>
-              </li>
-              <li class="flex items-start gap-1">
-                <img
-                  src="/icons/circle-check.svg"
-                  alt="circle-check"
-                  class="h-4 mt-1"
-                />
-                <span>
-                  <strong>Work with Verified Builders & Brokers:</strong> Choose
-                  trusted real estate agents and developers to avoid fraudulent deals.
-                </span>
-              </li>
-              <li class="flex items-start gap-1">
-                <img
-                  src="/icons/circle-check.svg"
-                  alt="circle-check"
-                  class="h-4 mt-1"
-                />
-                <span>
-                  <strong>Loan Approval Challenges:</strong> Highlight your convenience
-                  factor, like document collection and processing from home.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </TwoColumnWithImage>
+			<div id="tools" data-section="tools">
+				<AboveTitleWithBlackCard contents={content.tools.contents} />
+			</div>
+		</div>
 
-        <ButtonBanner
-          contents={{
-            heading: `Smart loan planning`,
-            btnName: `Get Started`,
-            btnBorder: `#4F4C4D`,
-            btnLink: "/get-started/how-can-we-help",
-          }}
-        />
+		<!-- mobile view -->
+		<div class="block lg:hidden">
+			{#each content.mobileNavbarTitle as list, index (list)}
+				<details
+					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					content.mobileNavbarTitle.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
+				>
+					<summary
+						class="list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="flex items-center justify-between font-semibold typography-body-md">
+							<h2 class="text-black dark:text-white">{list}</h2>
+							<span
+								><i
+									class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
+								></i></span
+							>
+						</div>
+					</summary>
 
-        <AboveTitleWithoutIconCard
-          contents={{
-            heading: `Financial Assistance for Your Home Loan`,
-            xlGridCol: 3,
-            borderBottom: true,
-            cards: [
-              {
-                heading: "Need Help with the Down Payment?",
-                para: `We connect you with financing options to ease your initial payment burden.​​`,
-                linkName: "Get Down Payment Support",
-                url: "/arrange-down-payment",
-              },
-              {
-                heading: "Struggling with EMI Payments?",
-                para: `Our customized repayment plans help you manage EMIs smoothly.`,
-                linkName: "Explore Repayment Plans",
-                url: "/planners/flexible-emi-planner",
-              },
-              {
-                heading:
-                  "Looking for Additional Funding for Home Improvements?",
-                para: `Get access to quick approvals and minimal paperwork for renovation or expansion loans.`,
-                linkName: `Apply for Additional Funding `,
-                url: "/get-started/how-can-we-help",
-                onClick: ($applicationData.LoanName = "Home Loan"),
-              },
-            ],
-          }}
-        />
-      </div>
+					{#if index == 0}
+						<div
+							id="types"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
+							<TwoColumnWithLeftHeading contents={content.types.contents} />
+						</div>
+					{:else if index == 1}
+						<div id="why" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<AboveTitleWithoutIconCard contents={content.why.contents} />
+						</div>
+					{:else if index == 2}
+						<div
+							id="challenges"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
+							<TwoColumnWithLeftHeading contents={content.challenges.contents} />
+						</div>
+					{:else if index == 3}
+						<div
+							id="steps"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
+							<TwoColumnWithImage contents={content.steps.contents}>
+								<div class="typography-body-sm text-text-light">
+									<ul class="list-disc space-y-4">
+										{#each content.steps.list as item}
+											<li class="flex items-start gap-1">
+												<img src="/icons/circle-check.svg" alt="circle-check" class="mt-1 h-4" />
+												<span>
+													<strong>{item.bold}</strong>
+													{item.text}
+												</span>
+											</li>
+										{/each}
+									</ul>
+								</div>
+							</TwoColumnWithImage>
 
-      <div id="tools" data-section="tools">
-        <AboveTitleWithBlackCard
-          contents={{
-            heading: "Smart Home Loan & Savings Tools",
-            xlGridCol: 4,
-            borderBottom: true,
-            cards: [
-              {
-                heading: "How much can I borrow?",
-                icon: "/icons/calc.svg",
-                iconAltName: "icon-calc",
-                url: "/calculators/eligibility-calculator",
-              },
-              {
-                heading: "Part payment planner",
-                icon: "/icons/lap.svg",
-                iconAltName: "loan-icon",
-                url: "/planners/part-payment-planner",
-              },
-              {
-                heading: "Stamp duty calculator",
-                icon: "/icons/apply.svg",
-                iconAltName: "icons-apply",
-                url: "/calculators/stamp-duty-calculator",
-              },
-              {
-                heading: "Balance transfer calculator",
-                icon: "/icons/calc.svg",
-                iconAltName: "icons-calc",
-                url: "/calculators/balance-transfer-calculator",
-              },
-            ],
-          }}
-        />
-      </div>
-    </div>
+							<div class="w-full">
+								<ButtonBanner contents={content.steps.buttonBanner} />
+							</div>
 
-    <div class="lg:hidden block">
-      {#each navBarMedium as navBar, index}
-        <details
-          class="border-bgBtn dropdown col-span-3 bg-darkColor text-white {index < navBar.length - 1 ? 'border-b' : ''}"
-        >
-          <summary
-            class="list-none px-[1rem] py-[1.5rem]"
-            onclick={(e) => { e.preventDefault(); ((e) => toggleDropdown(e, index))(e); }}
-          >
-            <div
-              class="flex justify-between items-center font-semibold typography-body-md"
-            >
-              <h2>{navBar}</h2>
-              <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
-            </div>
-          </summary>
+							<AboveTitleWithoutIconCard contents={assistanceWithClicks} />
+						</div>
+					{:else if index == 4}
+						<div
+							id="tools"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
+							<AboveTitleWithBlackCard contents={content.tools.contents} />
+						</div>
+					{/if}
+				</details>
+			{/each}
+		</div>
 
-          {#if index == 0}
-            <div id="types" class="bg-white text-black">
-              <TwoColumnWithLeftHeading
-                contents={{
-                  heading: `Types of Home Loans`,
-                  list: [
-                    {
-                      heading: `Home Purchase Loan`,
-                      desc: `Ideal for buying a new or resale property, subject to income verification, credit assessment, and property valuation.`,
-                    },
-                    {
-                      heading: `Home Construction Loan`,
-                      desc: `Designed for individuals constructing a house on their own land, with disbursement in phases as the construction progresses.`,
-                    },
+		<!-- message us -->
+		<TwoColumnWithImage contents={content.messageUs.contents}>
+			<p>{content.messageUs.para}</p>
+			<div class="w-auto">
+				<Button
+					link={content.messageUs.button.link}
+					btnBorder={content.messageUs.button.btnBorder}
+					btnName={content.messageUs.button.btnName}
+				/>
+			</div>
+		</TwoColumnWithImage>
 
-                    {
-                      heading: `Home Renovation Loan`,
-                      desc: `Funds home improvements, repairs, and remodeling projects.`,
-                    },
-                    {
-                      heading: `Home Loan Balance Transfer`,
-                      desc: `Allows you to switch your existing loan to another lender for lower interest rates and better repayment terms.`,
-                    },
-                    {
-                      heading: `Top-Up Home Loan`,
-                      desc: `Provides extra funds over your existing home loan for personal needs or property enhancements.`,
-                    },
-                  ],
-                }}
-              />
-            </div>
-          {:else if index == 1}
-            <div id="why" class="bg-white text-black">
-              <AboveTitleWithoutIconCard
-                contents={{
-                  heading: `Why Choose Us?`,
-                  xlGridCol: 3,
-                  borderBottom: true,
-                  cards: [
-                    {
-                      heading: `Best Loan Deals from Multiple Lenders `,
-                      para: `Compare interest rates, loan terms, and repayment options from top banks and NBFCs to secure the most affordable home loan.`,
-                      linkName: "Check your affordability",
-                      url: "/calculators/affordability-calculator",
-                    },
-                    {
-                      heading: `Seamless & Hassle-Free Process`,
-                      para: `From application to approval, we simplify the process with minimal paperwork, quick verification, and expert support at every step.`,
-                    },
-                    {
-                      heading: `100% Transparency & Trust`,
-                      para: `No hidden fees, no spam calls—just honest guidance and clear loan terms to help you make the right financial decision.`,
-                    },
-                  ],
-                }}
-              />
-            </div>
-          {:else if index == 2}
-            <div id="challenges" class="bg-white text-black">
-              <TwoColumnWithLeftHeading
-                contents={{
-                  heading: `Challenges`,
-                  list: [
-                    {
-                      heading: `Title & Ownership Concerns`,
-                      desc: `Verify the property's legal
-                history and ensure there are no disputes over ownership.`,
-                    },
-                    {
-                      heading: `Outstanding Liabilities`,
-                      desc: `Conduct an encumbrance check
-                to confirm there are no unpaid dues, mortgages, or legal claims on
-                the property.`,
-                    },
+		<FeedbackCheck />
 
-                    {
-                      heading: `Hidden Expenses`,
-                      desc: ` Factor in additional costs like registration
-                fees, property taxes, and maintenance charges to avoid budget surprises.`,
-                    },
-                    {
-                      heading: `Project Delays`,
-                      desc: `Developers may face financial or legal
-                setbacks, causing possession delays. Always check RERA registration
-                before investing.`,
-                    },
-                    {
-                      heading: `Loan Approval Challenges`,
-                      desc: `Highlight your convenience
-                factor, like document collection and processing from home.`,
-                    },
-                  ],
-                }}
-              />
-            </div>
-          {:else if index == 3}
-            <div id="steps" class="bg-white text-black">
-              <TwoColumnWithImage
-                contents={{
-                  cardImage: "/images/employees.jpg",
-                  cardAltName: "employees-figure",
-                  cardHeading: "Essential Steps Before Buying a Home",
-                }}
-              >
-                <div class="typography-body-sm text-text-light">
-                  <ul class="list-disc space-y-4">
-                    <li class="flex items-start gap-1">
-                      <img
-                        src="/icons/circle-check.svg"
-                        alt="circle-check"
-                        class="h-4 mt-1"
-                      />
-                      <span>
-                        <strong>Verify Legal Ownership:</strong> Check government
-                        records to confirm the seller’s ownership.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-1">
-                      <img
-                        src="/icons/circle-check.svg"
-                        alt="circle-check"
-                        class="h-4 mt-1"
-                      />
-                      <span>
-                        <strong> Review Important Documents:</strong> Examine sale
-                        agreements, approvals, and historical records before proceeding.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-1">
-                      <img
-                        src="/icons/circle-check.svg"
-                        alt="circle-check"
-                        class="h-4 mt-1"
-                      />
-                      <span>
-                        <strong>Check Regulatory Clearances:</strong> Ensure compliance
-                        with zoning laws, environmental regulations, and land use
-                        approvals.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-1">
-                      <img
-                        src="/icons/circle-check.svg"
-                        alt="circle-check"
-                        class="h-4 mt-1"
-                      />
-                      <span>
-                        <strong>Work with Verified Builders & Brokers:</strong> Choose
-                        trusted real estate agents and developers to avoid fraudulent
-                        deals.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-1">
-                      <img
-                        src="/icons/circle-check.svg"
-                        alt="circle-check"
-                        class="h-4 mt-1"
-                      />
-                      <span>
-                        <strong>Loan Approval Challenges:</strong> Highlight your
-                        convenience factor, like document collection and processing
-                        from home.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </TwoColumnWithImage>
-
-              <div class="w-full">
-                <ButtonBanner
-                  contents={{
-                    heading: `Smart loan planning`,
-                    btnName: `Get Started`,
-                    btnBorder: `#4F4C4D`,
-                    btnLink: "/get-started/how-can-we-help",
-                  }}
-                />
-              </div>
-
-              <AboveTitleWithoutIconCard
-                contents={{
-                  heading: `Financial Assistance for Your Home Loan`,
-                  xlGridCol: 3,
-                  borderBottom: true,
-                  cards: [
-                    {
-                      heading: "Need Help with the Down Payment?",
-                      para: `We connect you with financing options to ease your initial payment burden.​​`,
-                      linkName: "Get Down Payment Support",
-                      url: "/arrange-down-payment",
-                    },
-                    {
-                      heading: "Struggling with EMI Payments?",
-                      para: `Our customized repayment plans help you manage EMIs smoothly.`,
-                      linkName: "Explore Repayment Plans",
-                      url: "/planners/flexible-emi-planner",
-                    },
-                    {
-                      heading:
-                        "Looking for Additional Funding for Home Improvements?",
-                      para: `Get access to quick approvals and minimal paperwork for renovation or expansion loans.`,
-                      linkName: `Apply for Additional Funding `,
-                      url: "/get-started/how-can-we-help",
-                      onClick: ($applicationData.LoanName = "Home Loan"),
-                    },
-                  ],
-                }}
-              />
-            </div>
-          {:else if index == 4}
-            <div id="tools" class="bg-white text-black">
-              <AboveTitleWithBlackCard
-                contents={{
-                  heading: "Smart Home Loan & Savings Tools",
-                  xlGridCol: 4,
-                  borderBottom: true,
-                  cards: [
-                    {
-                      heading: "How much can I borrow?",
-                      icon: "/icons/calc.svg",
-                      iconAltName: "icon-calc",
-                      url: "/calculators/eligibility-calculator",
-                    },
-                    {
-                      heading: "Part payment planner",
-                      icon: "/icons/lap.svg",
-                      iconAltName: "loan-icon",
-                      url: "/planners/part-payment-planner",
-                    },
-                    {
-                      heading: "Stamp duty calculator",
-                      icon: "/icons/apply.svg",
-                      iconAltName: "icons-apply",
-                      url: "/calculators/stamp-duty-calculator",
-                    },
-                    {
-                      heading: "Balance transfer calculator",
-                      icon: "/icons/calc.svg",
-                      iconAltName: "icons-calc",
-                      url: "/calculators/balance-transfer-calculator",
-                    },
-                  ],
-                }}
-              />
-            </div>
-          {/if}
-        </details>
-      {/each}
-    </div>
-    <TwoColumnWithImage
-      contents={{
-        cardImage: `/images/message.jpg`,
-        cardAltName: `CardCover`,
-        cardHeading: `Message us 24/7`,
-        sourceName: "DigitalDSA",
-        originalSource: "www.digitaldsa.com",
-      }}
-    >
-      <p>
-        Feel free to message us anytime for expert assistance with your loan
-        needs. Our team is here to provide professional advice, guide you
-        through the loan process, and help you find the best options. No matter
-        the time, we’ve got you covered! Message us anytime, and we’ll respond
-        promptly.
-      </p>
-      <div class="w-auto">
-        <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
-      </div>
-    </TwoColumnWithImage>
-
-    <FeedbackCheck />
-
-    <div slot="secondary">
-      <HelpList
-        contents={{
-          heading: `We're here to help`,
-          xlGridCol: 4,
-          borderBottom: true,
-          cards: [
-            {
-              heading: "Book an </br> appointment",
-              para: "Book instantly to speak to a home loan specialist at a time that suits you",
-              icon: "/icons/appointment.svg",
-              altName: "appointment Icon",
-              url: "/appointment",
-            },
-            {
-              heading: "Check loan offers",
-              para: "In as little as 10 minutes and tailored exactly as per your financial profile.",
-              icon: "/icons/manageLoan2.svg",
-              altName: "Alert Icon",
-              url: "/get-started/how-can-we-help",
-            },
-            {
-              heading: "Contact us",
-              para: "Fast-track your call and connect with a specialist in the Digital DSA.",
-              icon: "/icons/contact.svg",
-              altName: "Alert Icon",
-              url: "/contact",
-            },
-            {
-              heading: "Message us",
-              para: `Get instant help from our online assistants  or chat to a specialist.`,
-              icon: "/icons/msg.svg",
-              altName: "Alert Icon",
-              url: "/contact",
-            },
-          ],
-        }}
-      />
-      <ThingsYouShould
-        thinkKnow={{
-          heading: `Things you should know`,
-          paraGraph: [
-            `<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
-          ],
-        }}
-        disc="list-decimal"
-      ></ThingsYouShould>
-    </div>
-  </NewPageLayout>
+		<div slot="secondary">
+			<HelpList contents={content.common_components.helpList.contents} />
+			<ThingsYouShould
+				thinkKnow={content.common_components.thinkYouShouldKnow.thinkKnow}
+				disc={content.common_components.thinkYouShouldKnow.disc}
+			/>
+		</div>
+	</NewPageLayout>
 </section>
-
-

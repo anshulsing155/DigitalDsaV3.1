@@ -510,24 +510,24 @@ dispatch("textExtracted", text);
       <div class="lg:hidden block">
         {#each navBarMedium as list, index}
           <details
-            class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
+            class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
           >
             <summary
-              class="col-span-3 list-none px-[2.5rem] py-[1.5rem]"
+              class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
               onclick={(e) => toggleDropdown(e, index)}
             >
               <div
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
-                <h2 class="text-navFont">{list}</h2>
+                <h2 class="typography-label text-black dark:text-white">{list}</h2>
                 <div class="icon-container justify-self-end typography-h3">
-                  <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+                  <span><i class="fa-solid fa-angle-down faq-icon text-black dark:text-white transition-transform duration-300"></i></span>
                 </div>
               </div>
             </summary>
 
             {#if index == 0}
-              <div id="ready" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="ready" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
                 {#each getStart as steps}
                   <div class="">
                     <NewHome {steps} />
@@ -569,7 +569,7 @@ dispatch("textExtracted", text);
             {:else if index == 1}
               <div
                 id="find"
-                class="py-[4rem] flex flex-col bg-white text-black px-[2rem]"
+                class="py-[4rem] flex flex-col bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4"
               >
                 {#if forHome.length > 0}
                   <h2
@@ -587,7 +587,7 @@ dispatch("textExtracted", text);
                 {/if}
               </div>
             {:else if index == 2}
-              <div id="next" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="next" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
                 <TwoColumn
                   cardImage="/images/home-scheme.jpg"
                   cardAltName="parent-figure"
@@ -632,7 +632,7 @@ dispatch("textExtracted", text);
             {:else if index == 3}
               <div
                 id="calculators"
-                class="bg-white text-black px-[2rem] py-[1rem]"
+                class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4"
               >
                 <div class="grid lg:grid-cols-3">
                   <h2

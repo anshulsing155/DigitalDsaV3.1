@@ -401,6 +401,7 @@ export interface ApplicationData {
 	allApplicantDetails: any[];
 	allExistingApplicantDetails: any[];
 	approvedBankForSelectedByUser: any[];
+	LoanName?: string;
 }
 
 export interface ToastMessage {

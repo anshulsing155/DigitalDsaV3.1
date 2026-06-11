@@ -1,0 +1,334 @@
+{
+	"mobileNavbarTitle": [
+		"Introduction",
+		"Understand spending",
+		"Start saving",
+		"Guidance"
+	],
+	"pageData": {
+		"coverImage": "/images/investInProperty-cover.jpg",
+		"coverAlt": "photo of a couple investing for downpayment of home loan",
+		"heading": "Saving for a Down Payment",
+		"para": "Saving for a down payment may seem challenging, but with the right plan, it’s completely doable. Small changes in your spending, a smart budget, and consistent savings can bring you closer to your dream home. Plus, with the right guidance and support, the journey becomes much easier. <br><br> Start today, and step by step, you’ll get there!",
+		"actionBtns": [
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment"
+			},
+			{
+				"btnName": "Compare offers",
+				"btnLink": "/get-started/how-can-we-help",
+				"btnColor": "#ffcc00",
+				"animation": true
+			}
+		]
+	},
+	"navList": {
+		"items": [
+			{
+				"name": "Introduction",
+				"targetId": "intro"
+			},
+			{
+				"name": "Understand spending",
+				"targetId": "understand-spending"
+			},
+			{
+				"name": "Start saving",
+				"targetId": "start-saving"
+			},
+			{
+				"name": "Guidance",
+				"targetId": "guidance"
+			}
+		],
+		"actionBtns": [
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment"
+			},
+			{
+				"btnName": "Compare offers",
+				"btnLink": "/get-started/how-can-we-help",
+				"btnColor": "#ffcc00"
+			}
+		]
+	},
+	"intro": {
+		"heading": "Ways to Save for a Down Payment",
+		"secPara": "<p class=\"typography-body-md text-miniSubHead mb-8\">Turning your dream of owning your first home into reality starts here.✨</p><p class=\"mb-4\">Owning your first home is a major milestone—but we know it can also feel overwhelming, especially when you’re navigating the world of <a href=\"/finance-support/financial-hardship\" class=\"underline\">financial planning</a> and <a href=\"/home-loan\" class=\"underline\">home loans</a> for the first time. That’s where we come in. At Digital DSA, we’re not just advisors; we’re partners in your journey, here to ensure you feel informed, confident, and supported every step of the way.</p><p>🚀 Let’s start with some practical steps to help you save for your down payment.</p>"
+	},
+	"understandSpending": {
+		"habits": {
+			"listTopPara": "<p>Before creating a savings plan, it’s essential to have a clear picture of your finances.</p>",
+			"heading": "Understand Your Current Spending Habits ",
+			"list": [
+				{
+					"heading": "Track your spending :",
+					"desc": "List your monthly income and expenses to identify areas where your money is going."
+				},
+				{
+					"heading": "Analyze habits :",
+					"desc": "Are there subscriptions you’re not using? Could you reduce discretionary spending on eating out or entertainment?"
+				}
+			],
+			"listSecPara": "<p>✅ By understanding your spending patterns, you can pinpoint where to make changes.</p>"
+		},
+		"budget": {
+			"listTopPara": "<p>Saving for a down payment isn’t about drastic sacrifices—it’s about consistency.</p>",
+			"heading": "Create a Realistic Budget",
+			"list": [
+				{
+					"heading": "Start with small changes :",
+					"desc": "Cutting out daily coffees might save ₹2,000 a month, but bigger changes like reducing rent costs or sharing a living space temporarily could save significantly more."
+				},
+				{
+					"heading": "Simulate your future home loan :",
+					"desc": "Start saving an amount similar to your expected loan EMI. This will not only help you build a down payment but also prepare you for managing repayments later."
+				}
+			],
+			"listSecPara": "<p><span class=\"font-semibold\">💡Remember :</span> Slow and steady wins the race. Aim for a sustainable budget you can stick to over the long term.</p>"
+		},
+		"debts": {
+			"listTopPara": "<p>Banks favor borrowers with minimal or manageable debts. If you’re juggling multiple loans or credit cards:</p>",
+			"heading": "Tackle Your Debts",
+			"list": [
+				{
+					"heading": "Consolidate your debts :",
+					"desc": "Consider combining debts into one with a lower interest rate to reduce payments."
+				},
+				{
+					"heading": "Clear smaller debts first :",
+					"desc": "The fewer liabilities you have, the better your financial profile will look to lenders."
+				}
+			]
+		}
+	},
+	"startSaving": {
+		"strategic": {
+			"listTopPara": "<p>The more you save, the less you’ll need to borrow—and that means lower interest payments over time.</p>",
+			"heading": "Start Saving Strategically",
+			"list": [
+				{
+					"heading": "Automate savings :",
+					"desc": "Set up an auto-transfer to a dedicated savings account each payday."
+				},
+				{
+					"heading": "Explore savings tools :",
+					"desc": "Look for high-yield savings accounts or term deposits to grow your down payment faster."
+				},
+				{
+					"heading": "Plan for additional costs :",
+					"desc": "Beyond the down payment, remember to budget for upfront costs like <span class=\"font-semibold\">stamp duty</span>, <span class=\"font-semibold\">registration charges</span>, or <span class=\"font-semibold\">legal fees.</span>"
+				}
+			]
+		},
+		"assistance": {
+			"listTopPara": "<p>As a first-time homebuyer, you may be eligible for support programs:</p>",
+			"heading": "Leverage Available Assistance",
+			"list": [
+				{
+					"heading": "Home Guarantee Schemes :",
+					"desc": "Many state or national programs allow you to buy with as little as 5% down payment, saving years of effort."
+				},
+				{
+					"heading": "Family Assistance :",
+					"desc": "Explore if a family member could help with a financial gift or offer to co-sign your loan."
+				},
+				{
+					"heading": "First Home Buyer Grants :",
+					"desc": "Check if your state offers incentives or subsidies for first-time buyers."
+				}
+			]
+		},
+		"education": {
+			"listTopPara": "<p>Navigating financial jargon, choosing the right property, and understanding loan options can feel intimidating. Our Home Loan Resources Hub is designed to simplify the process with tools like:</p>",
+			"heading": "Educate Yourself on Home Loans",
+			"list": [
+				{
+					"heading": "Affordability Calculators :",
+					"desc": "Find out how much you can comfortably borrow. <a href=\"/calculators/affordability-calculator\">🔍(Check Here)</a>"
+				},
+				{
+					"heading": "Step-by-Step Loan Guidance :",
+					"desc": "We walk you through everything, from choosing the right loan to understanding repayment options."
+				},
+				{
+					"heading": "Loan Planners :",
+					"desc": "Learn how part payments or rate changes impact your finances. <a href=\"/planners/part-payment-planner\">🔍(Check Here)</a>"
+				}
+			]
+		}
+	},
+	"guidance": {
+		"advisors": {
+			"listTopPara": "<p>At Digital DSA, we know that first-time buyers often face challenges like dealing with brokers, builders, and complex financial terms. That’s why we offer:</p>",
+			"heading": "Secure Guidance from Trusted Advisors",
+			"list": [
+				{
+					"heading": "Personalized support :",
+					"desc": "Our team doesn’t just assist; we educate you on every detail of the process."
+				},
+				{
+					"heading": "Transparency :",
+					"desc": "No hidden fees, no unnecessary calls—just honest advice."
+				},
+				{
+					"heading": "Tools to empower you :",
+					"desc": "Use our <a href=\"/calculators/emi-calculator\" class=\"font-semibold underline\">Calculators</a> and <a href=\"/planners/part-payment-planner\" class=\"font-semibold underline\">Planners</a> to make informed decisions."
+				}
+			]
+		},
+		"steps": {
+			"listTopPara": "<p>Saving for a down payment  is just the beginning of your journey. With proper planning and the right guidance, your dream of homeownership is closer than you think.</p>",
+			"heading": "Take Small, Confident Steps Toward Your Goal",
+			"list": [
+				{
+					"heading": "Set clear goals :",
+					"desc": "Define how much you need to save and set a timeline to keep yourself on track."
+				},
+				{
+					"heading": "Monitor progress :",
+					"desc": "Regularly review your savings and adjust your plan as needed to stay on course."
+				},
+				{
+					"heading": "Stay motivated :",
+					"desc": "Celebrate small milestones along the way to keep your spirits high."
+				}
+			]
+		},
+		"finalThoughts": {
+			"heading": "Final Thoughts",
+			"para": "At Digital DSA, we’ll help you navigate every aspect of buying your first home, from saving for a down payment to securing the best loan offers. Our platform is your one-stop solution to feel secure, informed and ready to take on this exciting milestone."
+		}
+	},
+	"verticalBlog": {
+		"heading": "Explore More Resources 📖",
+		"sub": "Related Articles:",
+		"blogLists": [
+			{
+				"icon": "/images/TheSharmaFamilyStory.jpg",
+				"altName": "photo of a family saving money and selling the existing house for new home purchase",
+				"heading": "Buying a Property Through Resale or Direct Purchase",
+				"url": "/home-loan/buy-property-resale"
+			},
+			{
+				"icon": "/images/couple-looking-at-dream-home.jpg",
+				"altName": "couple looking at dream home",
+				"heading": "Should You Get Home Loan Conditional Pre-Approval?",
+				"url": "/home-loan/conditional-pre-approval"
+			},
+			{
+				"icon": "/images/SmartWaystoCloseYourHOmeLOanEarly.jpg",
+				"altName": "photo of a couple looking for smart ways to close loan early",
+				"heading": "Smart Ways to Close Your Loan Early",
+				"url": "/home-loan/close-your-loan-early"
+			}
+		]
+	},
+	"tools": {
+		"heading": "Tools & calculators",
+		"cardData": [
+			{
+				"id": "1",
+				"title": "Calculators",
+				"links": [
+					{
+						"id": 1,
+						"secLinkName": "How much can I borrow?",
+						"secUrl": "/calculators/eligibility-calculator"
+					},
+					{
+						"id": 2,
+						"secLinkName": "What would my repayments be?",
+						"secUrl": "/planners/part-payment-planner"
+					},
+					{
+						"id": 3,
+						"secLinkName": "What would my upfront costs be?",
+						"secUrl": "/calculators/balance-transfer-calculator"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Tools",
+				"links": [
+					{
+						"id": 1,
+						"secLinkName": "Compare our home loans",
+						"secUrl": "/get-started/how-can-we-help"
+					},
+					{
+						"id": 2,
+						"secLinkName": "Budget planner",
+						"secUrl": "/planners/budget-planner"
+					}
+				]
+			}
+		]
+	},
+	"messageUs": {
+		"contents": {
+			"cardImage": "/images/message.jpg",
+			"cardAltName": "housing-figure",
+			"cardHeading": "Message us 24/7",
+			"reverse": true
+		},
+		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"button": {
+			"link": "/contact",
+			"btnBorder": "#4F4C4D",
+			"btnName": "Message us"
+		}
+	},
+	"common_components": {
+		"helpList": {
+			"contents": {
+				"heading": "We're here to help",
+				"xlGridCol": 4,
+				"borderBottom": false,
+				"cards": [
+					{
+						"heading": "Know your borrowing power",
+						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+						"icon": "/icons/appointment.svg",
+						"altName": "appointment Icon",
+						"url": "/appointment"
+					},
+					{
+						"heading": "Check loan offers",
+						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"icon": "/icons/manageLoan2.svg",
+						"altName": "Alert Icon",
+						"url": "/get-started/how-can-we-help"
+					},
+					{
+						"heading": "Contact us",
+						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+						"icon": "/icons/contact.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					},
+					{
+						"heading": "Message us",
+						"para": "Get instant help from our online assistants  or chat to a specialist.",
+						"icon": "/icons/msg.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					}
+				]
+			}
+		},
+		"thinkYouShouldKnow": {
+			"bullets": [
+				"Saving for a house down payment requires disciplined financial planning, budgeting, and reducing discretionary expenses.",
+				"Home loan eligibility depends on factors like credit score, income, employment history, and existing debts.",
+				"Interest rates and loan terms vary across lenders, so comparing options can help secure better deals.",
+				"Additional costs like stamp duty, legal fees, insurance, and registration should be factored into your budget.",
+				"Automating monthly savings and using high-yield savings accounts or fixed deposits can help grow your down payment faster.",
+				"Government schemes, first-time buyer grants, and family assistance can reduce your upfront financial burden."
+			]
+		}
+	}
+}

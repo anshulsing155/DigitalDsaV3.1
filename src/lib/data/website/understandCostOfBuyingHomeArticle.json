@@ -1,0 +1,323 @@
+{
+	"mobileNavbarTitle": [
+		"Taxes & Fees",
+		"Inspections",
+		"Setup Cost & Subsidy",
+		"Guidance"
+	],
+	"pageData": {
+		"coverImage": "/images/cost-of-buying-home-blog.jpg",
+		"coverAlt": "photo of a indian couple understanding all the factors about buying a new home from the DigitalDSA portal",
+		"heading": "Understanding the Costs of Buying a Home",
+		"para": "Buying your first home is an exciting milestone, but it’s essential to prepare for all the associated costs beyond your down payment and loan repayments. Awareness of these costs can help you plan better and avoid unexpected financial stress. Here's a guide tailored for first-time homebuyers in India.",
+		"actionBtns": [
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment"
+			},
+			{
+				"btnName": "Compare rates",
+				"btnLink": "/get-started/how-can-we-help",
+				"btnColor": "#ffcc00",
+				"animation": true
+			}
+		]
+	},
+	"navList": {
+		"items": [
+			{
+				"name": "Taxes & Fees",
+				"targetId": "taxes-fees"
+			},
+			{
+				"name": "Inspections",
+				"targetId": "inspections"
+			},
+			{
+				"name": "Setup Cost & Subsidy",
+				"targetId": "setup-cost"
+			},
+			{
+				"name": "Guidance",
+				"targetId": "guidance"
+			}
+		],
+		"actionBtns": [
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment"
+			},
+			{
+				"btnName": "Compare rates",
+				"btnLink": "/get-started/how-can-we-help",
+				"btnColor": "#ffcc00"
+			}
+		]
+	},
+	"taxesFees": {
+		"contents": {
+			"heading": "Taxes & Government Fees",
+			"listTopPara": "When buying a home in India, you’ll need to account for various taxes and fees, including:",
+			"list": [
+				{
+					"heading": "Stamp Duty: ",
+					"desc": "<p class=\"mb-2\">Stamp duty is one of the biggest additional expenses when buying a home. This state government tax is calculated based on the property’s market value or purchase price, whichever is higher. It varies from state to state, typically ranging from 5% to 7% of the property’s value.</p><p><span class=\"font-semibold mr-2\">💡 Tip:</span> First-time homebuyers in some states may be eligible for concessions or rebates on stamp duty. Check with your state government for specific benefits.</p><p><span class=\"font-semibold mr-2\">💡 Payment Deadline:</span> It’s usually paid before property registration.</p>"
+				},
+				{
+					"heading": "Property Registration Charges: ",
+					"desc": "<p class=\"mb-2\">In addition to stamp duty, registration fees (around 1% of the property’s value) are payable to register the property in your name with the state’s Land Registration Department.</p>"
+				},
+				{
+					"heading": "Goods and Services Tax (GST): ",
+					"desc": "<p class=\"mb-2\">If you’re purchasing a new under-construction property, GST applies at a rate of:</p><ul class=\"list-disc list-inside\"><li>1% for affordable housing.</li><li>5% for non-affordable housing.</li></ul><p class=\"mt-4\">✅ Completed or ready-to-move properties are exempt from GST.</p>"
+				}
+			]
+		}
+	},
+	"inspections": {
+		"contents": {
+			"heading": "Inspections & Valuation",
+			"listTopPara": "Before finalizing your home purchase, it’s crucial to conduct thorough inspections and valuations to ensure you’re making a sound investment. Here are the key steps to consider:",
+			"list": [
+				{
+					"heading": "Legal & Technical Verification: ",
+					"desc": "<p class=\"mb-2\">Before buying, ensure the property has a clear title and all necessary approvals. A lawyer or real estate consultant can help verify the documents, including sale deed, encumbrance certificate, and RERA registration.</p><p><span class=\"font-semibold mr-2\">🪙 Cost Range :</span> ₹10,000–₹25,000 depending on the complexity of the verification.</p>"
+				},
+				{
+					"heading": "Home Valuation: ",
+					"desc": "<p class=\"mb-2\">A professional valuation ensures that the property’s market value aligns with the purchase price, which is especially important if you’re applying for a home loan.</p><p><span class=\"font-semibold mr-2\">🪙 Cost Range :</span>  ₹3,000–₹7,000.</p>"
+				}
+			]
+		}
+	},
+	"setupCost": {
+		"insurance": {
+			"heading": "Insurance Costs",
+			"listTopPara": "Protecting your home and finances is essential when buying a property. Here are the key insurance costs to consider:",
+			"list": [
+				{
+					"heading": "Home Loan Insurance: ",
+					"desc": "Home loan insurance (also called loan protection insurance) is a policy that covers your outstanding home loan in case of death, disability, or job loss. If something unfortunate happens to you, the insurance company repays your home loan, so your family doesn’t have to worry about EMI payments."
+				},
+				{
+					"heading": "Home Insurance: ",
+					"desc": "Also know as Property Insurance. After buying your home, protecting it from risks like fire, theft, and natural disasters is essential. Home insurance policies typically cover the structure and its contents."
+				}
+			]
+		},
+		"legal": {
+			"heading": "Legal & Professional Fees",
+			"listTopPara": "You’ll need professional help to handle the legal and administrative aspects of your property purchase:",
+			"list": [
+				{
+					"heading": "Conveyancing Fees: ",
+					"desc": "To transfer ownership and prepare legal documents."
+				},
+				{
+					"heading": "Legal Fees: ",
+					"desc": "For contract reviews and advice."
+				},
+				{
+					"heading": "Cost Estimate: ",
+					"desc": "₹10,000–₹30,000 depending on the location and complexity of the transaction."
+				}
+			]
+		},
+		"moving": {
+			"heading": "Moving & Setup Costs",
+			"listTopPara": "Once you’ve finalized the purchase, you’ll need to factor in the costs of moving into your new home or preparing it for use:",
+			"list": [
+				{
+					"heading": "Movers or Packers Charges: ",
+					"desc": "₹10,000–₹30,000 depending on the distance and volume of items."
+				},
+				{
+					"heading": "Utility Connections: ",
+					"desc": "Initial costs for setting up electricity, water, gas, DTH, and broadband services."
+				},
+				{
+					"heading": "Municipal Taxes & Maintenance Charges: ",
+					"desc": "These include property taxes, society maintenance, and possible parking fees in gated communities."
+				},
+				{
+					"heading": "Interior Setup: ",
+					"desc": "If your home is unfurnished, budget for furniture, appliances, and décor."
+				}
+			]
+		},
+		"loanCosts": {
+			"heading": "Home Loan Costs",
+			"listTopPara": "When taking a home loan, there are additional costs beyond your monthly EMI:",
+			"list": [
+				{
+					"heading": "Loan Processing Fee: ",
+					"desc": "Typically 0.25% to 1% of the loan amount."
+				},
+				{
+					"heading": "Pre-EMI Interest: ",
+					"desc": "If your loan disbursement happens in stages (common for under-construction properties), you’ll need to pay interest on the amount disbursed until the entire loan is released."
+				},
+				{
+					"heading": "Miscellaneous Charges: ",
+					"desc": "These include legal fees, valuation charges, and administrative fees by the lender."
+				}
+			],
+			"listSecPara": "<span class=\"typography-h3 font-semibold mr-2\">💡 Tip : </span>  Use Digital DSA’s tools like the Home Loan Affordability Calculator and EMI Planner to get a clear understanding of your loan costs and manage your finances effectively."
+		},
+		"subsidy": {
+			"heading": "Government Subsidy for First-Time Buyers",
+			"secHeading": "🏡 Pradhan Mantri Awas Yojana (PMAY)",
+			"secPara": "Under the Pradhan Mantri Awas Yojana (PMAY) scheme, eligible first-time homebuyers can avail of interest subsidies of up to ₹2.67 lakh on home loans for affordable housing. <p>✅ Ensure you check your eligibility and apply through your lender.</p>"
+		}
+	},
+	"guidance": {
+		"help": {
+			"heading": "How Digital DSA Can Help First-Time Buyers",
+			"listTopPara": "At Digital DSA, we understand the unique needs of first-time homebuyers in India and aim to make the journey as smooth as possible.<p>Here’s how we can assist:</p>",
+			"list": [
+				{
+					"heading": "Transparency : ",
+					"desc": "Get a clear breakdown of all costs and charges before making a commitment."
+				},
+				{
+					"heading": "Customized Calculators: ",
+					"desc": "Plan your home loan with our <a href=\"/calculators/affordability-calculator\" class=\"underline\">Affordability Calculator</a> and see how part-payments or EMI changes can reduce your burden."
+				},
+				{
+					"heading": "Expert Guidance: ",
+					"desc": "Our team is here to simplify legal processes and help you access government benefits like <span class=\"font-semibold\" >PMAY.</span>"
+				}
+			]
+		}
+	},
+	"verticalBlog": {
+		"sub": "Related Articles:",
+		"blogLists": [
+			{
+				"icon": "/images/investInProperty-cover.jpg",
+				"altName": "a married couple is being shown saving regular amount in this photo  for the DownPayment of a planned home loan from DigitalDSA",
+				"heading": "Saving for a Down Payment",
+				"url": "/home-loan/saving-for-deposit"
+			},
+			{
+				"icon": "/images/woman-offering-food-neighbor.jpg",
+				"altName": "photo of a young indian woman visiting her elderly neighbour with smiling gesture",
+				"heading": "How to Choose the Perfect Neighborhood",
+				"url": "/home-loan/choose-perfect-neighbourhood"
+			},
+			{
+				"icon": "/images/TheSharmaFamilyStory.jpg",
+				"altName": "photo of an elderly couple planning to purchase a bigger home with selling exisiting property and adding some saving",
+				"heading": "Buying a Property Through Resale or Direct Purchase",
+				"url": "/home-loan/buy-property-resale"
+			}
+		]
+	},
+	"tools": {
+		"heading": "Tools & calculators",
+		"cardData": [
+			{
+				"id": "1",
+				"title": "Calculators",
+				"links": [
+					{
+						"id": 1,
+						"secLinkName": "How much can I borrow?",
+						"secUrl": "/calculators/emi-calculator"
+					},
+					{
+						"id": 2,
+						"secLinkName": "What would my repayments be?",
+						"secUrl": "/calculators/eligibility-calculator"
+					},
+					{
+						"id": 3,
+						"secLinkName": "What would my upfront costs be?",
+						"secUrl": "/calculators/balance-transfer-calculator"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Tools",
+				"links": [
+					{
+						"id": 1,
+						"secLinkName": "Compare our home loans",
+						"secUrl": "/get-started/how-can-we-help"
+					},
+					{
+						"id": 2,
+						"secLinkName": "Budget planner",
+						"secUrl": "/planners/budget-planner"
+					}
+				]
+			}
+		]
+	},
+	"messageUs": {
+		"contents": {
+			"cardImage": "/images/message.jpg",
+			"cardAltName": "housing-figure",
+			"cardHeading": "Message us 24/7",
+			"reverse": true
+		},
+		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"button": {
+			"link": "/contact",
+			"btnBorder": "#4F4C4D",
+			"btnName": "Message us"
+		}
+	},
+	"common_components": {
+		"helpList": {
+			"contents": {
+				"heading": "We're here to help",
+				"xlGridCol": 4,
+				"borderBottom": false,
+				"cards": [
+					{
+						"heading": "Know your borrowing power",
+						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+						"icon": "/icons/appointment.svg",
+						"altName": "appointment Icon",
+						"url": "/appointment"
+					},
+					{
+						"heading": "Check loan offers",
+						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"icon": "/icons/manageLoan2.svg",
+						"altName": "Alert Icon",
+						"url": "/get-started/how-can-we-help"
+					},
+					{
+						"heading": "Contact us",
+						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+						"icon": "/icons/contact.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					},
+					{
+						"heading": "Message us",
+						"para": "Get instant help from our online assistants  or chat to a specialist.",
+						"icon": "/icons/msg.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					}
+				]
+			}
+		},
+		"thinkYouShouldKnow": {
+			"bullets": [
+				"Stamp duty is a significant expense when buying a home, varying from state to state, typically ranging from 5% to 7% of the property’s value.",
+				"Registration fees, around 1% of the property’s value, are payable to register the property in your name.",
+				"GST applies to new under-construction properties at a rate of 1% for affordable housing and 5% for non-affordable housing.",
+				"Legal and technical verification of the property is crucial to ensure a clear title and necessary approvals.",
+				"Home valuation ensures the property’s market value aligns with the purchase price, important for home loan applications.",
+				"Lenders’ Mortgage Insurance (LMI) may be required if your down payment is less than 20% of the property value.",
+				"Home insurance policies typically cover the structure and its contents, protecting against risks like fire, theft, and natural disasters.",
+				"Government schemes like the Pradhan Mantri Awas Yojana (PMAY) offer interest subsidies for eligible first-time homebuyers."
+			]
+		}
+	}
+}

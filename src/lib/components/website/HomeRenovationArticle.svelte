@@ -1,285 +1,285 @@
-<script>
+<script lang="ts">
+	import NewPageLayout from './NewPageLayout.svelte';
+	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';
+	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
+	import StickyNavbar from './StickyNavbar.svelte';
+	import { onMount } from 'svelte';
+	import Button from './Button.svelte';
+	import HelpList from './HelpList.svelte';
+	import ThingsYouKnow from './ThingsYouKnow.svelte';
+	import Seo from './Seo.svelte';
+	import { applicationData } from '$lib/stores/stores';
+	import content from '$lib/data/website/homeRenovationArticle.json';
+
+	interface ButtonProps {
+		btnName: string;
+		btnLink: string;
+		btnClass?: string;
+		animation?: boolean;
+	}
+
+	interface PageDataProps {
+		coverImage: string;
+		coverAlt?: string;
+		altName?: string;
+		heading: string;
+		para: string;
+		actionBtns: ButtonProps[];
+	}
+
 	let {
-		pageData = {
-    coverImage: "/images/home-renovation-blog.jpg",
-    // sourceName: "Freepik",
-    // originalSource:
-    //   "https://www.freepik.com/search?format=search&img=1&last_filter=query&last_value=story+of+loan+cpmplette+early+girl&query=story+of+loan+cpmplette+early+girl",
-    coverAlt: "hero-cover",
-    heading: "Home Renovation: Smart Upgrades That Add Value",
-    para: `<p class="p-[1rem] bg-gray-100">Home renovation isn’t just about aesthetics it’s about enhancing comfort, increasing functionality, and boosting your property’s value. Whether you’re upgrading for personal enjoyment or preparing to sell your home at a higher price, smart renovations can give you the best return on investment (ROI).
-                       <br><br> <strong>But here’s the catch :</strong> Not all renovations are worth the money! Some upgrades significantly increase resale value, while others are just expensive mistakes.
-                       <br><br> Let’s dive into the smartest home upgrades that add value and how to finance them wisely.
-                   </p>`,
-  }
-	} = $props();
+		pageData = content.pageData
+	}: { pageData?: PageDataProps } = $props();
 
+	// Inject store update callbacks dynamically for get-started actions
+	const pageDataWithClicks = $derived({
+		...pageData,
+		coverAlt: pageData.coverAlt || pageData.altName || '',
+		actionBtns: pageData.actionBtns.map((btn) => {
+			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Compare rates') {
+				return {
+					...btn,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Home Loan';
+							return data;
+						});
+					}
+				};
+			}
+			return btn;
+		})
+	});
 
-  import HelpList from "./HelpList.svelte";
-  import NewPageLayout from "./NewPageLayout.svelte";
-  import Seo from "./Seo.svelte";
-  import ThingsYouShould from "./ThingsYouShould.svelte";
-  import TwoColumnWithLeftHeading from "./TwoColumnWithLeftHeading.svelte";
+	const navListWithClicks = $derived({
+		...content.navList,
+		actionBtns: content.navList.actionBtns.map((btn) => {
+			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Compare rates') {
+				return {
+					...btn,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Home Loan';
+							return data;
+						});
+					}
+				};
+			}
+			return btn;
+		})
+	});
 
-;
+	let activeSection = $state('');
+
+	const initializeActiveSection = () => {
+		const firstSection = document.querySelector('[data-section]');
+		if (firstSection) {
+			activeSection = firstSection.id;
+		}
+	};
+
+	const handleScroll = () => {
+		const sections = document.querySelectorAll('[data-section]');
+		let currentSection = '';
+
+		sections.forEach((section) => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top <= 100 && rect.bottom >= 200) {
+				currentSection = section.id;
+			}
+		});
+
+		if (currentSection) {
+			activeSection = currentSection;
+		}
+	};
+
+	onMount(() => {
+		initializeActiveSection();
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
+
+	const toggleDropdown = (event: Event, index: number) => {
+		event.preventDefault();
+		const summaryElement = event.currentTarget as HTMLElement;
+		const icon = summaryElement.querySelector('.faq-icon');
+		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
+
+		// Close all dropdowns except the clicked one
+		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
+			const otherIcon = otherDetails.querySelector('.faq-icon');
+
+			if (idx !== index) {
+				otherDetails.removeAttribute('open');
+				if (otherIcon) {
+					otherIcon.classList.remove('fa-angle-up');
+					otherIcon.classList.add('fa-angle-down');
+				}
+			}
+		});
+
+		// Toggle current dropdown open/close state
+		const isOpen = detailsElement.hasAttribute('open');
+		if (isOpen) {
+			detailsElement.removeAttribute('open');
+			if (icon) {
+				icon.classList.remove('fa-angle-up');
+				icon.classList.add('fa-angle-down');
+			}
+		} else {
+			detailsElement.setAttribute('open', 'true');
+			if (icon) {
+				icon.classList.remove('fa-angle-down');
+				icon.classList.add('fa-angle-up');
+			}
+		}
+		setTimeout(() => {
+			if (detailsElement) {
+				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		}, 100);
+	};
+
+	// JSON-LD Structured Data Schema for Breadcrumbs
+	const breadcrumbSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		'itemListElement': [
+			{
+				'@type': 'ListItem',
+				'position': 1,
+				'name': 'Home',
+				'item': 'https://www.digitaldsa.com'
+			},
+			{
+				'@type': 'ListItem',
+				'position': 2,
+				'name': 'Home Loan',
+				'item': 'https://www.digitaldsa.com/home-loan'
+			},
+			{
+				'@type': 'ListItem',
+				'position': 3,
+				'name': 'Home Renovation Upgrades',
+				'item': 'https://www.digitaldsa.com/home-loan/home-renovation'
+			}
+		]
+	};
 </script>
 
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
+</svelte:head>
+
 <Seo
-  type="WebPage"
-  title="Smart Home Upgrades That Add Value | Best Renovation Tips"
-  image={pageData.coverImage}
-  description="Discover smart home upgrades that boost value & comfort. Learn renovation tips & financing options to make the most of your investment!"
-  keywords="home renovation, home improvement, increase home value, smart upgrades, home renovation loan, kitchen remodel, bathroom makeover, flooring upgrade, painting tips, structural repairs, smart home automation, energy-efficient upgrades, financing home renovation, top home upgrades, resale value improvements"
+	type="WebPage"
+	title="Smart Home Upgrades That Add Value | Best Renovation Tips"
+	image={pageData.coverImage}
+	description="Discover smart home upgrades that boost value & comfort. Learn renovation tips & financing options to make the most of your investment!"
+	keywords="home renovation, home improvement, increase home value, smart upgrades, home renovation loan, kitchen remodel, bathroom makeover, flooring upgrade, painting tips, structural repairs, smart home automation, energy-efficient upgrades, financing home renovation, top home upgrades, resale value improvements"
 />
 
-<section>
-  <NewPageLayout {pageData}>
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Kitchen Upgrades: <br>The Heart of Your Home",
-        listTopPara: `A modern, functional kitchen is a major selling point for buyers. Even if you’re not selling, upgrading your kitchen makes daily life more enjoyable.`,
-        list: [
-          {
-            heading: `✅ Modular kitchen – <span class="typography-body-md">Smart storage & sleek finishes.</span>`,
-          },
-          {
-            heading: `✅ Quartz/Granite countertops – <span class="typography-body-md">Durable & elegant.</span>`,
-          },
-          {
-            heading: `✅ Energy-efficient appliances – <span class="typography-body-md">Reduce electricity bills.</span>`,
-          },
-          {
-            heading: `✅ Soft-close cabinets & drawers – <span class="typography-body-md">Adds a premium feel.</span>`,
-          },
-          {
-            heading: `❌ Avoid : <span class="typography-body-md">Over the top luxury kitchen designs buyers won’t pay extra for them!</span>`,
-          },
-        ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Financing Tip :</span> A home renovation loan can cover major kitchen remodels.</p>`,
-      }}
-    />
+<section class="content">
+	<NewPageLayout pageData={pageDataWithClicks}>
+		<!-- desktop view -->
+		<div class="hidden lg:block">
+			<div>
+				<StickyNavbar navList={navListWithClicks} {activeSection} />
+			</div>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Bathroom Makeover: Luxury & Functionality 🚿",
-        listTopPara: `A clean, modern bathroom instantly increases your home’s value.`,
-        list: [
-          {
-            heading: `✅ Rain shower & glass partition – <span class="typography-body-md">Looks premium & prevents water spills.</span>`,
-          },
-          {
-            heading: `✅ Anti-skid flooring – <span class="typography-body-md">Safety + durability.</span>`,
-          },
-          {
-            heading: `✅ Wall-mounted storage – <span class="typography-body-md">Maximizes space.</span>`,
-          },
-          {
-            heading: `✅ Smart toilets & sensor taps – <span class="typography-body-md">Adds a touch of luxury.</span>`,
-          },
-          {
-            heading: `❌ Avoid: <span class="typography-body-md">Overspending on fancy bathtubs they rarely get used!</span>`,
-          },
-        ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Where We Can Help :</span> Need financial assistance for bathroom renovations? We can guide you on affordable home improvement loans.</p>`,
-      }}
-    />
+			<div id="interior" data-section="interior" class="section">
+				<TwoColumnWithLeftHeading contents={content.interior.kitchen} />
+				<TwoColumnWithLeftHeading contents={content.interior.bathroom} />
+				<TwoColumnWithLeftHeading contents={content.interior.flooring} />
+			</div>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Flooring: The Game Changer 🏠",
-        listTopPara: `Flooring completely transforms the look and feel of your home.`,
-        list: [
-          {
-            heading: `✅ Vitrified tiles – <span class="typography-body-md">Durable & low-maintenance.</span>`,
-          },
-          {
-            heading: `✅ Wooden flooring (engineered wood) –<span class="typography-body-md"> Gives a premium look.</span>`,
-          },
-          {
-            heading: `✅ Marble/Granite – <span class="typography-body-md">Expensive but long-lasting.</span>`,
-          },
-          {
-            heading: `❌ Avoid: Going for cheap laminate flooring it looks great initially but wears out fast!`,
-          },
-        ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Where We Can Help :</span> We can help you estimate the cost vs. benefit of different flooring options.</p>`,
-      }}
-    />
+			<div id="aesthetics" data-section="aesthetics" class="section">
+				<TwoColumnWithLeftHeading contents={content.aesthetics.painting} />
+				<TwoColumnWithLeftHeading contents={content.aesthetics.balcony} />
+			</div>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Painting & Wall Finishes: Instant Makeover 🎨",
-        listTopPara: `A fresh coat of paint can revive any home without a huge expense.`,
-        list: [
-          {
-            heading: `✅ Neutral tones (Beige, Greige, Pastels) – <span class="typography-body-md">Timeless & elegant.</span>`,
-          },
-          {
-            heading: `✅ Earthy greens & blues – <span class="typography-body-md">Creates a calming effect.</span>`,
-          },
-          {
-            heading: `✅ Textured wall panels – <span class="typography-body-md">Adds depth & character.</span>`,
-          },
-          {
-            heading: `❌ Avoid: Bright or experimental colors buyers prefer neutral tones.`,
-          },
-        ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Financing Tip :</span> If you’re low on budget, start with one room at a time.</p>`,
-      }}
-    />
+			<div id="structure" data-section="structure" class="section">
+				<TwoColumnWithLeftHeading contents={content.structure.repairs} />
+				<TwoColumnWithLeftHeading contents={content.structure.smartHome} />
+			</div>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Structural Repairs & Waterproofing: Essential Maintenance 🚧",
-        listTopPara: `Before cosmetic upgrades, fix the basics!`,
-        list: [
-          {
-            heading: `✅ Leak-proofing & damp-proofing – <span class="typography-body-md">Avoid future damage.</span>`,
-          },
-          {
-            heading: `✅ Crack repairs – <span class="typography-body-md">Prevents structural issues.</span>`,
-          },
-          {
-            heading: `✅ Roof repairs & insulation – <span class="typography-body-md">Keeps your home energy-efficient.</span>`,
-          },
-          {
-            heading: `❌ Avoid: Ignoring hidden problems small leaks now can lead to big expenses later!`,
-          },
-        ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Where We Can Help :</span> Need funds for essential repairs? We can guide you on home renovation loans.</p>`,
-      }}
-    />
+			<div id="financing" data-section="financing" class="section">
+				<TwoColumnWithLeftHeading contents={content.financing.methods} />
+				<TwoColumnWithLeftHeading contents={content.financing.final} />
+			</div>
+		</div>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Adding a Balcony or Outdoor Space 🌿",
-        listTopPara: `If you have space, a small balcony or deck can significantly boost property value.`,
-        list: [
-          {
-            heading: `✅ French windows or sliding doors – <span class="typography-body-md">Brings in natural light.</span>`,
-          },
-          {
-            heading: `✅ Balcony garden – <span class="typography-body-md">Increases aesthetic appeal.</span>`,
-          },
-          {
-            heading: `✅ Wooden deck or patio – <span class="typography-body-md">Great for relaxation & resale value.</span>`,
-          },
-          {
-            heading: `❌ Avoid: Over-building make sure your structure can support additional weight.`,
-          },
-        ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Where We Can Help :</span> Need loan assistance for bigger renovations? We can help with financial planning.</p>`,
-      }}
-    />
+		<!-- mobile view -->
+		<div class="block lg:hidden">
+			{#each content.mobileNavbarTitle as list, index}
+				<details
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					content.mobileNavbarTitle.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
+				>
+					<summary
+						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="text-black dark:text-white typography-label">{list}</h2>
+							<div class="icon-container justify-self-end typography-h3">
+								<span
+									><i
+										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
+									></i></span
+								>
+							</div>
+						</div>
+					</summary>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Smart Home Upgrades: The Future of Living 💡",
-        listTopPara: `Home automation is no longer a luxury it’s becoming a necessity.`,
-        list: [
-          {
-            heading: `✅ Smart locks & security cameras – <span class="typography-body-md">Enhances safety.</span>`,
-          },
-          {
-            heading: `✅ Motion-sensor lights – <span class="typography-body-md">Saves electricity.</span>`,
-          },
-          {
-            heading: `✅ Smart thermostats & AC controls – <span class="typography-body-md">Increases energy efficiency.</span>`,
-          },
-          {
-            heading: `✅ Solar panels – <span class="typography-body-md">Cuts down power bills.</span>`,
-          },
-        ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Pro Tip :</span> A small investment in automation can give you big savings in the long run.</p>`,
-      }}
-    />
+					{#if index === 0}
+						<div id="interior" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<TwoColumnWithLeftHeading contents={content.interior.kitchen} />
+							<TwoColumnWithLeftHeading contents={content.interior.bathroom} />
+							<TwoColumnWithLeftHeading contents={content.interior.flooring} />
+						</div>
+					{:else if index === 1}
+						<div id="aesthetics" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<TwoColumnWithLeftHeading contents={content.aesthetics.painting} />
+							<TwoColumnWithLeftHeading contents={content.aesthetics.balcony} />
+						</div>
+					{:else if index === 2}
+						<div id="structure" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<TwoColumnWithLeftHeading contents={content.structure.repairs} />
+							<TwoColumnWithLeftHeading contents={content.structure.smartHome} />
+						</div>
+					{:else if index === 3}
+						<div id="financing" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<TwoColumnWithLeftHeading contents={content.financing.methods} />
+							<TwoColumnWithLeftHeading contents={content.financing.final} />
+						</div>
+					{/if}
+				</details>
+			{/each}
+		</div>
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "How to Finance Home Renovation? 🏦",
-        listTopPara: `Home improvements can be expensive, but there are smart ways to manage costs.`,
-        list: [
-          {
-            heading: `🪙 Home Renovation Loan – <span class="typography-body-md">Low interest, flexible repayment.</span>`,
-          },
-          {
-            heading: `🏦 Top-Up Loan on Home Loan – <span class="typography-body-md">If you have an existing home loan, get extra funds.</span>`,
-          },
-          {
-            heading: `💳 Personal Loan – <span class="typography-body-md">Quick disbursal but higher interest.</span>`,
-          },
-          {
-            heading: `⭐ Using Savings – <span class="typography-body-md">Ideal for small upgrades.</span>`,
-          },
-        ],
-        listSecPara: `<p class="p-4 bg-gray-100 border-l-4 border-btnBg"><span class="mr-2 font-semibold">Where We Can Help :</span> We can guide you on cost-effective financing options tailored to your needs.</p>`,
-      }}
-    />
+		<div slot="secondary" class="px-2">
+			<HelpList contents={content.common_components.helpList.contents} />
 
-    <TwoColumnWithLeftHeading
-      contents={{
-        heading: "Final Thought:<br> Is Home Renovation Worth It?",
-        listTopPara: `Whatever your goal, renovate wisely & invest where it truly matters!`,
-        list: [
-          {
-            heading: `✅ <span class="typography-body-md">If you’re staying long-term, renovate for comfort & functionality.</span>`,
-          },
-          {
-            heading: `✅ <span class="typography-body-md">If you’re planning to sell, focus on high-ROI renovations that boost resale value.</span>`,
-          },
-        ],
-      }}
-    />
-    <div slot="secondary">
-      <HelpList
-        contents={{
-          heading: `We're here to help`,
-          xlGridCol: 4,
-          borderBottom: true,
-          cards: [
-            {
-              heading: "Book an </br> appointment",
-              para: "Book instantly to speak to a home loan specialist at a time that suits you",
-              icon: "/icons/appointment.svg",
-              iconAltName: "appointment Icon",
-              url: "/appointment",
-            },
-            {
-              heading: "Check loan offers",
-              para: "In as little as 10 minutes and tailored exactly as per your financial profile.",
-              icon: "/icons/manageLoan2.svg",
-              iconAltName: "Alert Icon",
-              url: "/get-started/how-can-we-help",
-            },
-            {
-              heading: "Contact us",
-              para: "Fast-track your call and connect with a specialist in the Digital DSA.",
-              icon: "/icons/contact.svg",
-              iconAltName: "Alert Icon",
-              url: "/contact",
-            },
-            {
-              heading: "Message us",
-              para: `Get instant help from our online assistants  or chat to a specialist.`,
-              icon: "/icons/msg.svg",
-              iconAltName: "Alert Icon",
-              url: "/contact",
-            },
-          ],
-        }}
-      />
-      <ThingsYouShould
-        thinkKnow={{
-          heading: `Things you should know`,
-          paraGraph: [
-            `<span class="font-semibold">Not All Renovations Add Value:</span> While some upgrades like kitchen and bathroom remodels offer high ROI, over-the-top luxury features may not justify the cost. Prioritize essential and functional improvements.`,
-            `<span class="font-semibold">Focus on Essential Repairs First:</span> Structural repairs, waterproofing, and insulation should come before cosmetic changes to avoid bigger expenses down the line.`,
-            `<span class="font-semibold">Smart Upgrades Increase Efficiency:</span> Energy-efficient appliances, smart home automation, and solar panels not only enhance comfort but also reduce utility bills in the long run.`,
-            `<span class="font-semibold">Plan Based on Your Goals:</span> If you're staying long-term, prioritize comfort and functionality. If you're selling, focus on upgrades that appeal to buyers and offer better resale value.`,
-          ],
-        }}
-        disc="list-decimal"
-      ></ThingsYouShould>
-    </div>
-  </NewPageLayout>
+			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
+				<ul class="px-2 pl-4 flex flex-col gap-4 list-decimal">
+					{#each content.common_components.thinkYouShouldKnow.bullets as bullet}
+						<li>{@html bullet}</li>
+					{/each}
+				</ul>
+			</ThingsYouKnow>
+		</div>
+	</NewPageLayout>
 </section>
+
+<style>
+	.section {
+		scroll-margin-top: 5rem;
+	}
+</style>
