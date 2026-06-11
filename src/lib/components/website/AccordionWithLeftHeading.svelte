@@ -22,7 +22,7 @@
   <div class="lg:col-span-4 flex flex-col gap-4">
     {#if contents.heading}
       <p
-        class="typography-h2 text-black dark:text-white"
+        class="typography-h2-md text-black dark:text-white"
       >
         {@html contents.heading}
       </p>

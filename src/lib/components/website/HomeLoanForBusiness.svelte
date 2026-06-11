@@ -214,15 +214,15 @@
 						<div class="flex flex-col gap-4">
 							{#each content.documentsGuide as guide}
 								<div class="flex flex-col gap-2">
-									<p class="typography-body-sm text-text-light">{guide.para}</p>
+									<p class="typography-body-md text-[var(--form-text-secondary)]">{guide.para}</p>
 
 									{#each guide.lists as list, index}
-										<li class="list-none font-semibold typography-body-md">
+										<li class="list-none !font-semibold typography-body-md text-[var(--form-text-secondary)]">
 											{index + 1}. {list.heading}
 										</li>
 										<ul class="pl-4">
 											{#each list.subList as subList}
-												<li class="list-disc typography-body-md text-text-light">
+												<li class="list-disc typography-body-md text-[var(--form-text-secondary)]">
 													{subList.list}
 												</li>
 											{/each}
@@ -240,14 +240,14 @@
 					{#each [content.journey] as _}
 						<div class="grid grid-cols-3 gap-[2rem]">
 							<div>
-								<h3 class="mb-[1.5rem] md:text-start typography-h2 text-text-main">
+								<h3 class="mb-[1.5rem] md:text-start typography-body-lg !font-semibold text-black dark:text-white">
 									Our simplified verification process
 								</h3>
 								<ul class="space-y-2 mb-4">
-									<li class="typography-body-sm text-text-light">
+									<li class="typography-body-md text-[var(--form-text-secondary)] ">
 										A simple application process for business owners with less documents to prove your income.
 									</li>
-									<li class="typography-body-sm text-text-light">
+									<li class="typography-body-md text-[var(--form-text-secondary)] ">
 										Get in touch with our Home Lending Specialists to discuss your options.
 									</li>
 								</ul>
@@ -260,23 +260,23 @@
 								</div>
 							</div>
 							<div>
-								<h3 class="mb-[1.5rem] typography-h3 font-semibold text-text-main">
+								<h3 class="mb-[1.5rem] md:text-start typography-body-lg !font-semibold text-black dark:text-white">
 									You may be eligible if:
 								</h3>
 								<ul class="list-disc mt-[1.5rem] space-y-2 mb-4 pl-4">
-									<li class="typography-body-sm text-text-light">You’re self-employed</li>
-									<li class="typography-body-sm text-text-light">You pay yourself a regular salary from your business</li>
+									<li class="typography-body-md text-[var(--form-text-secondary)]">You’re self-employed</li>
+									<li class="typography-body-md text-[var(--form-text-secondary)]">You pay yourself a regular salary from your business</li>
 								</ul>
 							</div>
 							<div>
-								<h3 class="mb-[1.5rem] typography-h3 font-semibold text-text-main">
+								<h3 class="mb-[1.5rem] md:text-start typography-body-lg !font-semibold text-black dark:text-white">
 									If eligible, you'll need:
 								</h3>
 								<ul class="list-disc space-y-2 mb-4 pl-4">
-									<li class="typography-body-sm text-text-light">Six months of salary credits in an account</li>
-									<li class="typography-body-sm text-text-light">Financial records showing profit and loss for the last two years, with a profit each year</li>
+									<li class="typography-body-md text-[var(--form-text-secondary)]">Six months of salary credits in an account</li>
+									<li class="typography-body-md text-[var(--form-text-secondary)]">Financial records showing profit and loss for the last two years, with a profit each year</li>
 								</ul>
-								<p class="mb-[1.5rem] typography-body-md text-text-light">
+								<p class="mb-[1.5rem] typography-body-md text-[var(--form-text-secondary)]">
 									In some instances, we may need more information. Our Home Lending Specialists will let you know.
 								</p>
 							</div>
@@ -286,31 +286,31 @@
 
 				<section id="fees" data-section="fees" class="py-[4rem] section">
 					<div class="grid grid-cols-3 gap-[2rem]">
-						<h2 class="mt-4 col-span-3 lg:col-span-1 typography-h2 text-text-main">
+						<h2 class="mt-4 col-span-3 lg:col-span-1 typography-h2-md text-black dark:text-white">
 							{content.rates.heading}
 						</h2>
 
 						<div class="col-span-3 lg:col-span-2">
 							<div class="grid grid-cols-2 pt-4 gap-[2rem]">
 								<div class="space-y-4">
-									<h3 class="typography-h3 font-semibold text-text-main">
+									<h3 class="typography-body-lg !font-semibold text-black dark:text-white">
 										Interest Rates ({roiResult.roi || '8.10'}% PA)
 									</h3>
 									<ul class="list-disc pl-4 marker:black space-y-2">
 										{#each content.rates.left[0].lists as list}
-											<li class="typography-body-sm text-text-light">
+											<li class="typography-body-md text-[var(--form-text-secondary)]">
 												{list}
 											</li>
 										{/each}
 									</ul>
 								</div>
 								<div class="space-y-4">
-									<h3 class="typography-h3 font-semibold text-text-main">
+									<h3 class="typography-body-lg !font-semibold text-black dark:text-white">
 										{content.rates.right[0].heading}
 									</h3>
 									<ul class="list-disc pl-4 marker:black space-y-2">
 										{#each content.rates.right[0].lists as list}
-											<li class="typography-body-sm text-text-light">
+											<li class="typography-body-md text-[var(--form-text-secondary)]">
 												{list}
 											</li>
 										{/each}
