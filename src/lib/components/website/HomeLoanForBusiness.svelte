@@ -14,7 +14,7 @@
 	import HelpList from './HelpList.svelte';
 	import { banks } from '$lib/data/bankEligibilityData';
 	import content from '$lib/data/website/homeLoanForBusiness.json';
-	import ThingsYouKnow from './ThingsYouKnow.svelte';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -381,14 +381,12 @@
 						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
-						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="typography-label text-black dark:text-white">{list}</h2>
-							<div class="icon-container typography-h3 justify-self-end">
-								<span
-									><i
-										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
-									></i></span
-								>
+						<div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="text-black dark:text-white">{list}</h2>
+							<div class="icon-container">
+								<ChevronDown
+									class="h-5 w-5 text-black transition-transform duration-300 dark:text-white"
+								/>
 							</div>
 						</div>
 					</summary>

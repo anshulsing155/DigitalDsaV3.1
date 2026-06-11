@@ -15,6 +15,7 @@
   import FeedbackCheck from "./FeedbackCheck.svelte";
   import Seo from "./Seo.svelte";
   import HelpList from "./HelpList.svelte";
+  import { ChevronDown } from '$lib/utils/iconRegistry';
 
   const toggleDropdown = (event, index) => {
     event.preventDefault();
@@ -132,11 +133,12 @@
         {
           btnName: "Book appointment",
           btnLink: "/appointment",
+          btnClass: "btn-secondary dark:text-white text-black"
         },
         {
           btnName: "Check lowest rates",
           btnLink: "/get-started/how-can-we-help",
-          btnColor: "#ffcc00",
+          btnClass: "btn-primary text-black",
           animation: true,
           btnClick: () => {
             $applicationData.LoanName = "Home Loan";
@@ -175,11 +177,12 @@
             {
               btnName: "Book appointment",
               btnLink: "/appointment",
+               btnClass: "btn-secondary dark:text-white text-black"
             },
             {
               btnName: "Check lowest rates",
               btnLink: "/get-started/how-can-we-help",
-              btnColor: "#ffcc00",
+             btnClass: "btn-primary text-black",
               btnClick: () => {
                 $applicationData.LoanName = "Home Loan";
               },
@@ -266,7 +269,7 @@
                 heading: "If the Processing Fees & Charges Are Too High​",
                 topPara: `Some banks <span class="font-semibold">advertise lower interest rates</span> but charge:`,
                 desc: [
-                  `<span class="font-semibold">igh processing fees</span> 10,000 - ₹50,000!)`,
+                  `<span class="font-semibold">High processing fees</span> 10,000 - ₹50,000!)`,
                   `<span class="font-semibold">Legal & technical</span> verification fees`,
                   `<span class="font-semibold">Hidden charges</span>.`,
                 ],
@@ -293,24 +296,24 @@
             heading: `Step-by-Step Guide`,
             list: [
               {
-                heading: `<span class="font-semibold">Step 1: Compare Interest Rates & Savings</span>`,
+                heading: `<span class="typography-body-lg !font-semibold">Step 1: Compare Interest Rates & Savings</span>`,
                 desc: `✔️ Check the latest home loan rates from top lenders. <br> ✔️ Use a home loan balance transfer calculator (We can help! 😎). <br> ✔️ Ensure your savings outweigh the transfer costs. `,
               },
 
               {
-                heading: `<span class="font-semibold">Step 2: Get a Loan Closure Letter from Your Current Lender</span>`,
+                heading: `<span class="typography-body-lg !font-semibold">Step 2: Get a Loan Closure Letter from Your Current Lender</span>`,
                 desc: `Request a Foreclosure letter & LOD (List of Original Documents) from your existing lender.`,
               },
               {
-                heading: `<span class="font-semibold">Step 3: Apply for a New Loan With the New Lender</span>`,
+                heading: `<span class="typography-body-lg !font-semibold">Step 3: Apply for a New Loan With the New Lender</span>`,
                 desc: `Submit the following documents: <br> 📌 KYC (Aadhaar, PAN, etc.) <br> 📌 Income proof (Salary slips, Form-16 or ITR) <br> 📌 Property documents <br> 📌 Foreclosure Letter & LOD from current lender`,
               },
               {
-                heading: `<span class="font-semibold">Step 4: Approval & Loan Disbursement</span>`,
+                heading: `<span class="typography-body-lg !font-semibold">Step 4: Approval & Loan Disbursement</span>`,
                 desc: `✔️ Once approved, your new lender pays off the old loan directly. <br> ✔️ Your new loan starts with the new bank at a lower rate.`,
               },
               {
-                heading: `<span class="font-semibold">Step 5: Start Paying Your New EMI & Enjoy Savings</span>`,
+                heading: `<span class="typography-body-lg !font-semibold">Step 5: Start Paying Your New EMI & Enjoy Savings</span>`,
                 desc: `You’ll now pay lower EMIs or close the loan faster!`,
               },
             ],
@@ -318,11 +321,11 @@
         />
 
         <div
-          class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="">
             <h2
-              class="grid mb-[4rem] typography-h3 font-semibold md:typography-h2-md text-center"
+              class="grid mb-[4rem] typography-h2-md text-center"
             >
               How Much Can You Save? Let's See With an Example!
             </h2>
@@ -339,7 +342,7 @@
             heading: `Ways to pay off your home loan faster`,
             para: `Small changes now can mean big differences later to how much of your home loan you end up repaying.`,
             btnName: `Find out how`,
-            btnBorder: `#4F4C4D`,
+           btnClass: "btn-secondary text-black",
             btnLink: "/planners/part-payment-planner",
           }}
         />
@@ -364,7 +367,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-semibold"
+                  <span class="typography-body-md !font-semibold"
                     >Compare the best balance transfer offers.</span
                   > Help users choose the best interest rate and tenure.
                 </span>
@@ -376,7 +379,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-semibold">Calculate actual savings</span> after
+                  <span class="typography-body-md !font-semibold">Calculate actual savings</span> after
                   all costs.
                 </span>
               </li>
@@ -387,7 +390,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-semibold"
+                  <span class="typography-body-md !font-semibold"
                     >Guide you through the process step by step.</span
                   >
                 </span>
@@ -399,7 +402,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-semibold"
+                  <span class="typography-body-md !font-semibold"
                     >Negotiate with lenders for better deals!</span
                   >
                 </span>
@@ -411,7 +414,7 @@
                   class="h-4 mt-1"
                 />
                 <span>
-                  <span class="font-semibold">Doorstep Services:</span> Highlight
+                  <span class="typography-body-md !font-semibold">Doorstep Services:</span> Highlight
                   your convenience factor, like document collection and processing
                   from home.
                 </span>
@@ -431,7 +434,7 @@
                 para: "Get the best balance transfer deals with lower interest rates and reduced EMIs. Secure your financial future by switching to a better loan option.",
                 btnName: "Compare bank offers",
                 btnLink: "/get-started/how-can-we-help",
-                btnColor: "#ffcc00",
+               btnClass: "btn-primary text-black",
                 btnClick: () => {
                   $applicationData.LoanName = "Home Loan";
                 },
@@ -441,6 +444,7 @@
                 para: "Get the most from your home loan application process and book time with our Home Lending Specialist at a time  that suits you.",
                 btnName: "Book an appointment",
                 btnLink: "/appointment",
+                btnClass: "btn-secondary dark:text-white text-black",
               },
             ],
           }}
@@ -526,16 +530,18 @@
     <div class="lg:hidden block">
       {#each ["When to consider", "When to avoid", "How to do it", "How we help", "Tools & Calculators"] as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
+          class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer"
             onclick={(e) => toggleDropdown(e, index)}
           >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end typography-h3">
-                <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+            <div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
+              <h2 class="text-black dark:text-white">{list}</h2>
+              <div class="icon-container">
+               <ChevronDown
+									class="h-5 w-5 text-black transition-transform duration-300 dark:text-white"
+								/>
               </div>
             </div>
           </summary>
@@ -645,24 +651,24 @@
                   heading: `Step-by-Step Guide`,
                   list: [
                     {
-                      heading: `<span class="font-semibold">Step 1: Compare Interest Rates & Savings</span>`,
+                      heading: `<span class="typography-body-lg !font-semibold">Step 1: Compare Interest Rates & Savings</span>`,
                       desc: `✔️ Check the latest home loan rates from top lenders. <br> ✔️ Use a home loan balance transfer calculator (We can help! 😎). <br> ✔️ Ensure your savings outweigh the transfer costs. `,
                     },
 
                     {
-                      heading: `<span class="font-semibold">Step 2: Get a Loan Closure Letter from Your Current Lender</span>`,
+                      heading: `<span class="typography-body-lg !font-semibold">Step 2: Get a Loan Closure Letter from Your Current Lender</span>`,
                       desc: `Request a Foreclosure letter & LOD (List of Original Documents) from your existing lender.`,
                     },
                     {
-                      heading: `<span class="font-semibold">Step 3: Apply for a New Loan With the New Lender</span>`,
+                      heading: `<span class="typography-body-lg !font-semibold">Step 3: Apply for a New Loan With the New Lender</span>`,
                       desc: `Submit the following documents: <br> 📌 KYC (Aadhaar, PAN, etc.) <br> 📌 Income proof (Salary slips, Form-16 or ITR) <br> 📌 Property documents <br> 📌 Foreclosure Letter & LOD from current lender`,
                     },
                     {
-                      heading: `<span class="font-semibold">Step 4: Approval & Loan Disbursement</span>`,
+                      heading: `<span class="typography-body-lg !font-semibold">Step 4: Approval & Loan Disbursement</span>`,
                       desc: `✔️ Once approved, your new lender pays off the old loan directly. <br> ✔️ Your new loan starts with the new bank at a lower rate.`,
                     },
                     {
-                      heading: `<span class="font-semibold">Step 5: Start Paying Your New EMI & Enjoy Savings</span>`,
+                      heading: `<span class="typography-body-lg !font-semibold">Step 5: Start Paying Your New EMI & Enjoy Savings</span>`,
                       desc: `You’ll now pay lower EMIs or close the loan faster!`,
                     },
                   ],
@@ -691,7 +697,7 @@
                   heading: `Ways to pay off your home loan faster`,
                   para: `Small changes now can mean big differences later to how much of your home loan you end up repaying.`,
                   btnName: `Find out how`,
-                  btnBorder: `#4F4C4D`,
+ btnClass: "btn-secondary text-black",
                   btnLink: "/planners/part-payment-planner",
                 }}
               />
@@ -716,7 +722,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-semibold"
+                        <span class="typography-body-md !font-semibold"
                           >Compare the best balance transfer offers.</span
                         > Help users choose the best interest rate and tenure.
                       </span>
@@ -728,7 +734,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-semibold"
+                        <span class="typography-body-md !font-semibold"
                           >Calculate actual savings</span
                         > after all costs.
                       </span>
@@ -740,7 +746,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-semibold"
+                        <span class="typography-body-md !font-semibold"
                           >Guide you through the process step by step.</span
                         >
                       </span>
@@ -752,7 +758,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-semibold"
+                        <span class="typography-body-md !font-semibold"
                           >Negotiate with lenders for better deals!</span
                         >
                       </span>
@@ -764,7 +770,7 @@
                         class="h-4 mt-1"
                       />
                       <span>
-                        <span class="font-semibold">Doorstep Services:</span> Highlight
+                        <span class="typography-body-md !font-semibold">Doorstep Services:</span> Highlight
                         your convenience factor, like document collection and processing
                         from home.
                       </span>
@@ -784,7 +790,7 @@
                       para: "Get the best balance transfer deals with lower interest rates and reduced EMIs. Secure your financial future by switching to a better loan option.",
                       btnName: "Compare bank offers",
                       btnLink: "/get-started/how-can-we-help",
-                      btnColor: "#ffcc00",
+                       btnClass: "btn-primary text-black",
                       btnClick: () => {
                         $applicationData.LoanName = "Home Loan";
                       },
@@ -793,6 +799,7 @@
                       title: "Get the best home loan deal",
                       para: "Get the most from your home loan application process and book time with our Home Lending Specialist at a time  that suits you.",
                       btnName: "Book an appointment",
+                      btnClass: "btn-secondary dark:text-white text-black",
                       btnLink: "/appointment",
                     },
                   ],
@@ -898,7 +905,7 @@
         promptly.
       </p>
       <div class="w-auto">
-        <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
+        <Button link="/contact"  btnClass= "btn-secondary dark:text-white text-black", btnName="Message us" />
       </div>
     </TwoColumnWithImage>
 

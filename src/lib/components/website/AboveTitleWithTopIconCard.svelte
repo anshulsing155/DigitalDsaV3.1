@@ -19,12 +19,12 @@
   <div class="flex flex-col gap-[2rem] w-full">
     <div class="flex flex-col gap-2">
       {#if contents.heading}
-        <h2 class="typography-h2 text-black dark:text-white">
+        <h2 class="typography-h2-md text-black dark:text-white">
           {@html contents.heading}
         </h2>
       {/if}
       {#if contents.subHeading}
-        <h3 class="typography-body-md text-[var(--form-text-secondary)]">
+        <h3 class="typography-body-lg !font-semibold text-black dark:text-white">
           {@html contents.subHeading}
         </h3>
       {/if}

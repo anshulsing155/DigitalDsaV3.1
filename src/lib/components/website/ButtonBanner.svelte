@@ -34,7 +34,7 @@
 
 			<div class="grid gap-12 lg:grid-cols-12">
 				<div class="lg:col-span-8">
-					<p class="typography-body-md text-[var(--form-text-secondary)]">
+					<p class="text-center lg:w-8/12 lg:justify-self-end typography-body-md text-[var(--form-text-secondary)]">
 						{@html contents.para}
 					</p>
 				</div>
