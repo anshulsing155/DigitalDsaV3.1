@@ -1043,9 +1043,6 @@
 }
 
 /* --- DigitalDSA Brand Gradients --- */
-/* --- deprecated --- 
-	instead this use direct --gradient-primary
-*/
 
 .bg-ddsa-gradient-primary {
 	background: var(--gradient-primary);

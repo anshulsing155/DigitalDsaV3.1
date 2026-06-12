@@ -331,7 +331,8 @@
 	--form-bg-input: rgba(30, 32, 26, 0.6);
 	--form-bg-disabled: #2b2d25;
 	--form-text: #f1f1ed;
-	--form-text-secondary: #c5c8bc;
+	/* --form-text-secondary: #c5c8bc; */
+	--form-text-secondary: #d1d5cb;
 	--form-text-muted: #8b9178;
 	--form-text-label: #a8ac9a;
 	--form-border: #353830;

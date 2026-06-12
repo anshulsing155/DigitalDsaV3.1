@@ -53,19 +53,19 @@
 					class="relative w-full border border-[var(--landing-glass-border)] bg-[var(--landing-bg)] px-6 py-12 lg:w-1/2 lg:p-12 2xl:p-16"
 				>
 					<div class="flex flex-col gap-4 sm:gap-8">
-						<h1 class="typography-h1 text-black dark:text-white">
+						<h1 class="typography-h1 text-[var(--form-text)]">
 							{@html pageData.heading}
 						</h1>
 
 						{#if pageData.subHeading}
-							<p class="typography-body-lg text-black dark:text-white">
+							<p class="typography-body-md text-[var(--form-text-secondary)]">
 								{@html pageData.subHeading}
 							</p>
 						{/if}
 
 						{#if pageData.para}
 							<p
-								class={`typography-body-lg text-black dark:text-white ${pageData.paraStyle}`}
+								class={`typography-body-md text-[var(--form-text-secondary)] ${pageData.paraStyle}`}
 							>
 								{@html pageData.para}
 							</p>
@@ -74,7 +74,7 @@
 						{#if pageData.heroList?.length}
 							<ul class="flex flex-col gap-4">
 								{#each pageData.heroList as item}
-									<li class="typography-body-md grid gap-4 text-black dark:text-white">
+									<li class="typography-body-md grid gap-4 text-[var(--form-text-secondary)]">
 										<!-- keep your existing hero list code -->
 									</li>
 								{/each}

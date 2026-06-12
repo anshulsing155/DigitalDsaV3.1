@@ -14,12 +14,14 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary",
+				"animation": true
 			},
 			{
 				"btnName": "Compare offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		],
@@ -51,12 +53,15 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary",
+				"animation": true
 			},
 			{
 				"btnName": "Compare offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary",
+				"animation": true
 			}
 		]
 	},
@@ -133,28 +138,16 @@
 				],
 				"rowData": [
 					{
-						"<span class='font-semibold flex gap-4 items-center'> Maharashtra </span>": [
-							"5%",
-							"1%"
-						]
+						"<span class='font-semibold flex gap-4 items-center'> Maharashtra </span>": ["5%", "1%"]
 					},
 					{
-						"<span class='font-semibold flex gap-4 items-center'>Delhi</span>": [
-							"4%-6%",
-							"1%"
-						]
+						"<span class='font-semibold flex gap-4 items-center'>Delhi</span>": ["4%-6%", "1%"]
 					},
 					{
-						"<span class='font-semibold flex gap-4 items-center'>Karnataka</span>": [
-							"5%",
-							"1%"
-						]
+						"<span class='font-semibold flex gap-4 items-center'>Karnataka</span>": ["5%", "1%"]
 					},
 					{
-						"<span class='font-semibold flex gap-4 items-center'>Tamil Nadu </span>": [
-							"7%",
-							"1%"
-						]
+						"<span class='font-semibold flex gap-4 items-center'>Tamil Nadu </span>": ["7%", "1%"]
 					},
 					{
 						"<span class='font-semibold flex gap-4 items-center'>Uttar Pradesh</span>": [
@@ -209,7 +202,8 @@
 				"para": "Are you confused? Talk with our loan specialist",
 				"btnName": "Book an appointment",
 				"btnLink": "/appointment",
-				"btnBorder": "#4F4C4D"
+				"btnClass": "btn-primary",
+				"animation": true
 			}
 		]
 	},

@@ -19,10 +19,10 @@
 
 </script>
 
-<div class="flex gap-4 items-start mt-4 pr-4 text-black dark:text-white">
+<div class="flex gap-4 items-start mt-4 pr-4">
   <div class="flex flex-col gap-4">
     {#if cardData.heading}
-      <h2 class="typography-body-lg !font-semibold text-black dark:text-white">{cardData.heading}</h2>
+      <h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">{cardData.heading}</h2>
     {/if}
     {#if cardData.subHeading}
       <h2 class="typography-body-md text-[var(--form-text-secondary)]">{@html cardData.subHeading}</h2>

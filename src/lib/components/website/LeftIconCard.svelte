@@ -42,13 +42,13 @@
 
 	<div class="flex flex-col gap-4">
 		{#if cardData.heading}
-			<h2 class="typography-body-lg !font-semibold text-black dark:text-white">
+			<h2 class="typography-body-md !font-semibold text-[var(--form-text)]">
 				{@html cardData.heading}
 			</h2>
 		{/if}
 
 		{#if cardData.para}
-			<p class="typography-body-md text-[var(--form-text-secondary)] group-hover:text-primary">
+			<p class="typography-body-sm text-[var(--form-text-secondary)] group-hover:text-primary">
 				{@html cardData.para}
 			</p>
 		{/if}
