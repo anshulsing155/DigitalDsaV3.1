@@ -15,12 +15,13 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary text-black",
 				"animation": true
 			}
 		],
@@ -52,12 +53,14 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary text-black",
+				"animation": true
 			}
 		]
 	},
