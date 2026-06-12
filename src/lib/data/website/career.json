@@ -1,0 +1,209 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "image": "/images/DigitalDSA-office-colleagues.jpg",
+    "title": "Careers at DigitalDSA | Grow in Fintech & Financial Advisory",
+    "description": "Join DigitalDSA for top fintech careers! Explore roles in loans, insurance, investment & more. Enjoy growth, rewards & work-life balance.",
+    "keywords": "careers at DigitalDSA, fintech jobs, financial advisor jobs, loan services careers, insurance jobs, investment advisory careers, risk management jobs, sales and business development careers, fintech internships, financial analyst jobs, fintech growth opportunities, work in finance, fintech career opportunities, best fintech jobs, work-life balance in finance"
+  },
+  "heroData": {
+    "coverImage": "/images/DigitalDSA-office-colleagues.jpg",
+    "coverAlt": "photo of office colleagues at DigitalDSA",
+    "sourceName": "Freepik",
+    "originalSource": "www.freepik.com",
+    "classStyle": "object-cover xl:h-[90svh] 3xl:max-h-[70svh]",
+    "heroHeading": "Careers with DigitalDSA ",
+    "heroParagraph": "Join us in transforming the financial ecosystem!"
+  },
+  "navBarMedium": [
+    "Our work areas",
+    "Rewards & benefits",
+    "Diversity & inclusion",
+    "Graduates, Interns & Analysts",
+    "Application information"
+  ],
+  "stickyNavBar": {
+    "items": [
+      {
+        "name": "Our business areas",
+        "targetId": "businessArea"
+      },
+      {
+        "name": "Rewards & benefits",
+        "targetId": "rewards"
+      },
+      {
+        "name": "Diversity & inclusion",
+        "targetId": "diversity"
+      },
+      {
+        "name": "Graduates, Interns & Analysts",
+        "targetId": "graduates"
+      },
+      {
+        "name": "Application information",
+        "targetId": "appInfo"
+      }
+    ]
+  },
+  "youAtDigitalDsa": {
+    "cardImage": "/images/man-laptop-with-smartphone-coffee.jpg",
+    "cardAltName": "CardCover",
+    "cardHeading": "You at DigitalDSA ",
+    "para": "At DigitalDSA, you are the driving force behind our success. We believe in:",
+    "bullets": [
+      {
+        "title": "Entrepreneurial Growth –",
+        "desc": " Take charge of your career in a performance-driven culture."
+      },
+      {
+        "title": "Continuous Learning -",
+        "desc": " Stay ahead with hands-on experience and skill development."
+      },
+      {
+        "title": "Flexibility & Autonomy –",
+        "desc": " Work with freedom while making a real impact."
+      },
+      {
+        "title": "Innovation in Finance –",
+        "desc": " Be part of a fintech revolution simplifying loans & investments."
+      }
+    ]
+  },
+  "workAreas": {
+    "heading": "Our Work Areas",
+    "para": "We specialize in a wide range of technologies and services and offering roles in:",
+    "paraMobile": "We specialize in a wide range of financial services, offering roles in:",
+    "roles": [
+      "Software Development",
+      "Loan Services",
+      "Investment Advisory",
+      "Operations & Administration",
+      "Sales & Business Development",
+      "Digital Marketing"
+    ],
+    "rolesMobile": [
+      "Loan Services",
+      "Insurance",
+      "Investment Advisory",
+      "Operations & Risk Management",
+      "Sales & Business Development",
+      "Digital Marketing"
+    ]
+  },
+  "rewardsAndBenefits": {
+    "cardImage": "/images/young-employee-working-at-DigitalDSA-office.jpg",
+    "cardAltName": "CardCover",
+    "cardHeading": "Rewards & benefits",
+    "para": "We recognize talent and reward excellence with:",
+    "bullets": [
+      {
+        "title": "Performance-based incentives –",
+        "desc": "The harder you work, the more you earn!"
+      },
+      {
+        "title": "Training & Development –",
+        "desc": "Get trained by experts and stay ahead in the finance sector."
+      },
+      {
+        "title": "Growth Opportunities -",
+        "desc": "Clear career progression for top performers."
+      },
+      {
+        "title": "Recognition Programs –",
+        "desc": "Be celebrated for your contributions."
+      },
+      {
+        "title": "Work-Life Balance –",
+        "desc": "Flexible work policies for personal & professional growth."
+      }
+    ]
+  },
+  "diversityAndInclusion": {
+    "cardImage": "/images/woman-with-tablet.jpg",
+    "cardAltName": "CardCover",
+    "cardHeading": "Commitment to Creating Self-Dependent Financial Advisors <br>  <span class = \"typography-body-md text-[var(--form-text-secondary)] italic font-semibold\">(For those who are interested)</span> ",
+    "para": "We empower our team with:",
+    "paraMobile": "We empower financial advisors with:",
+    "bullets": [
+      {
+        "title": "Complete Business Support –",
+        "desc": "Marketing, technology & operational assistance."
+      },
+      {
+        "title": "Exclusive Training Programs –",
+        "desc": "Upskill with real-world financial expertise."
+      },
+      {
+        "title": "Zero Investment, High Returns –",
+        "desc": "Earn commissions without any upfront costs."
+      },
+      {
+        "title": "Be Your Own Boss – ",
+        "desc": "Work at your pace & build your financial advisory business."
+      }
+    ]
+  },
+  "graduates": {
+    "cardImage": "/images/young-woman-working-as-part-timer.jpg",
+    "cardAltName": "photo of an intern working from home at DigitalDSA",
+    "cardHeading": "Graduates, Interns & Analysts",
+    "para": "Kickstart your career in fintech with us!",
+    "bullets": [
+      {
+        "title": "Internships – ",
+        "desc": "Gain hands-on experience in finance, sales, and operations."
+      },
+      {
+        "title": "Analyst Programs – ",
+        "desc": "Work on real-world data-driven financial solutions."
+      },
+      {
+        "title": "Graduate Opportunities –",
+        "desc": "Get mentored by industry leaders & build expertise."
+      }
+    ]
+  },
+  "awardsAndRecognition": {
+    "supportHeading": "Awards and recognition",
+    "para": "Our commitment to excellence has earned us:",
+    "bullets": [
+      {
+        "title": "Fintech Innovator of the Year",
+        "desc": "(Recognized for simplifying financial solutions)"
+      },
+      {
+        "title": "Best Loan Assistance Platform",
+        "desc": "(Helping thousands secure hassle-free loans)"
+      },
+      {
+        "title": "Top Workplace for Sales Professionals",
+        "desc": "(Creating high-rewarding careers)"
+      }
+    ]
+  },
+  "help": {
+    "heading": "We can help",
+    "xlGridCol": 3,
+    "cards": [
+      {
+        "heading": "Your questions answered",
+        "icon": "/icons/msg.svg",
+        "altTitle": "icons",
+        "url": "/career/career-FAQ"
+      },
+      {
+        "heading": "How to apply",
+        "icon": "/icons/apply-pen.svg",
+        "altTitle": "icons",
+        "url": "/career/application-process"
+      },
+      {
+        "heading": "Contact us",
+        "icon": "/icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      }
+    ]
+  }
+}

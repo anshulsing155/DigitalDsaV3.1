@@ -38,7 +38,7 @@
 	{#if thinkKnow.heading}
 		<div class="col-span-12 lg:col-span-4">
 			<h2
-				class="typography-h2"
+				class="typography-h2-md text-black dark:text-white"
 			>
 				{@html thinkKnow.heading}
 			</h2>

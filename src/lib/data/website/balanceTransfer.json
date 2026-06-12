@@ -15,13 +15,14 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
 				"btnColor": "#ffcc00",
-				"animation": true
+				"btnClass": "btn-primary text-white dark:text-black"
 			}
 		],
 		"para": "Transferring your home loan—also called a home loan balance transfer—can be a game changer if done at the right time. It allows you to move your outstanding loan amount to another bank or lender, usually at a lower interest rate or with better terms."
@@ -52,12 +53,14 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary text-white dark:text-black"
 			}
 		]
 	},
@@ -208,7 +211,7 @@
 			"heading": "Ways to pay off your home loan faster",
 			"para": "Small changes now can mean big differences later to how much of your home loan you end up repaying.",
 			"btnName": "Find out how",
-			"btnBorder": "#4F4C4D",
+			"btnClass": "btn-secondary dark:text-white text-black",
 			"btnLink": "/planners/part-payment-planner"
 		}
 	},
@@ -250,14 +253,15 @@
 					"para": "Get the best balance transfer deals with lower interest rates and reduced EMIs. Secure your financial future by switching to a better loan option.",
 					"btnName": "Compare bank offers",
 					"btnLink": "/get-started/how-can-we-help",
-					"btnColor": "#ffcc00",
+					"btnClass": "btn-primary text-white dark:text-black",
 					"needLoanName": true
 				},
 				{
 					"title": "Get the best home loan deal",
 					"para": "Get the most from your home loan application process and book time with our Home Lending Specialist at a time that suits you.",
 					"btnName": "Book an appointment",
-					"btnLink": "/appointment"
+					"btnLink": "/appointment",
+					"btnClass": "btn-secondary dark:text-white text-black"
 				}
 			]
 		},
@@ -343,7 +347,7 @@
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
 		"button": {
 			"link": "/contact",
-			"btnBorder": "#4F4C4D",
+			"btnClass": "btn-secondary dark:text-white text-black",
 			"btnName": "Message us"
 		}
 	},

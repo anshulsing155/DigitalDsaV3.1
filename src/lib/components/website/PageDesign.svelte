@@ -1,22 +1,18 @@
 <script>
-	let {
-		subList = [],
-		pageData = {},
-		actionBtns = [],
-		onClick = () => {}
-	} = $props();
-
-
   import Breadcrumb from "./Breadcrumb.svelte";
   import { onMount } from "svelte";
   import Button from "./Button.svelte";
 
   import TestBreadCrumb from "./TestBreadCrumb.svelte";
   import Tooltip from "./Tooltip.svelte";
+  import HeroImage from './HeroImage.svelte';
 
-;
-
-;
+	let {
+		subList = [],
+		pageData = {},
+		actionBtns = [],
+		onClick = () => {}
+	} = $props();
 
   let isBelow1024 = $state(false);
 
@@ -42,7 +38,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
 </script>
 
 <!--xl:w-9/12  -->
-<section class="mx-auto w-full">
+<section class="mx-auto w-full bg-[var(--landing-bg)]">
   <div id="pageDesign" class="relative mx-auto h-full">
     <div class="relative z-20 pt-[15rem] sm:pt-[23rem] lg:pt-0 w-full h-full">
       <div class="hidden lg:flex pl-[4rem] py-4">
@@ -51,36 +47,25 @@ window.removeEventListener("resize", updateSize); // Cleanup
       </div>
 
       <!-- image  -->
-      <div
-        id="image"
-        class="lg:-right-[5rem] absolute w-full lg:w-[calc(50%+12.5rem)] top-0 z-0 overflow-hidden"
-      >
-        <div class="absolute top-0 right-0 bg-opacity-50 text-white text-center">
-          <Tooltip
-            linkName={`image source: <span class="underline">${pageData.sourceName}</span>`}
-            hoverLink={pageData.originalSource}
-          />
-        </div>
-        <img
-          src={pageData.coverImage}
-          alt={pageData.coverAlt}
-          class="w-full h-full object-cover object-top"
-          loading="lazy"
-        />
-      </div>
+      <HeroImage
+				coverImage={pageData.coverImage}
+				coverAlt={pageData.coverAlt}
+				sourceName={pageData.sourceName}
+				originalSource={pageData.originalSource}
+			/>
       <div class="mx-1 lg:mx-0 h-auto relative">
         <div
           id="sideCard"
-          class="relative border border-[var(--landing-glass-border)] bg-[var(--landing-bg-card)] text-black dark:text-white px-[.5rem] py-[3rem] lg:p-[3rem] 2xl:p-[4rem] w-full lg:w-[50%] h-auto"
+          class="relative border border-[var(--landing-glass-border)] bg-[var(--landing-bg)] px-[.5rem] py-[3rem] lg:p-[3rem] 2xl:p-[4rem] w-full lg:w-[50%] h-auto"
         >
           <div class="flex flex-col gap-4 sm:gap-[2rem]">
             <h1
-              class="typography-h1 text-black dark:text-white"
+              class="typography-h1 text-(--form-text) dark:text-white"
             >
               {@html pageData.heroHeading}
             </h1>
             {#if pageData.subHeading}
-              <p class="typography-body-lg !font-semibold text-black dark:text-white">
+              <p class="typography-body-md text-(--form-text-secondary)">
                 {@html pageData.subHeading}
               </p>
             {/if}
@@ -187,7 +172,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
         {/if}
       </div>
     </div>
-    <div class="relative flex flex-col bg-[var(--landing-bg-card)] border-t border-[var(--landing-border)] text-black dark:text-white z-20 mx-1 lg:mx-0">
+    <div class="relative flex flex-col border border-[var(--form-border)] bg-[var(--landing-bg)]  z-20 mx-1 lg:mx-0">
       <!-- svelte-ignore slot_element_deprecated -->
       <slot />
     </div>

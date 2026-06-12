@@ -9,19 +9,10 @@
   import { onMount } from "svelte";
   import { slide } from "svelte/transition";
   import Seo from "$lib/components/Seo.svelte";
+  import content from "$lib/data/website/creditsAttributions.json";
 
   let activeSection = $state('');
-  let cardImg2 = "/images/credits & attributions.jpg";
-  let cardAlt1 = "CardCover";
   let activeIndex = $state<number | null>(null);
-
-  let navBarMedium = [
-    "Attribution Practices",
-    "Resources",
-    "Logos & Trademarks",
-    "Compliance",
-  ];
-
   const slideDuration = 400;
 
   const toggleDropdown = (event: any, index: any) => {
@@ -33,7 +24,7 @@
 
     // Calculate duration based on height (default min 300ms, max 800ms)
     let contentHeight = contentElement ? contentElement.scrollHeight : 0;
-    let slideDuration = Math.min(800, Math.max(300, contentHeight * 2)); // Adjust formula as needed
+    let slideDuration = Math.min(800, Math.max(300, contentHeight * 2));
 
     // Close all dropdowns except the clicked one
     document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
@@ -114,41 +105,22 @@
 </script>
 
 <Seo
-  type="WebPage"
-  title="Credits & Attributions - Digital DSA"
-  image="/images/who-we-are.jpg"
-  description="Learn about Digital DSA’s attribution practices, resources, logos, trademarks, and compliance policies for intellectual property rights."
-  keywords="Digital DSA attributions, Intellectual property rights, Logo usage policy, Freepik attribution, Pexels attribution, FlatIcons license, Bank logos disclaimer, Copyright compliance, Fair use policy, Digital asset licensing"
+  type={content.seo.type}
+  title={content.seo.title}
+  image={content.seo.image}
+  description={content.seo.description}
+  keywords={content.seo.keywords}
 />
 
 <section>
   <SecondPageLayout
-    pageData={{
-      heading: "Credits & Attributions",
-      coverImage: "/images/who-we-are.jpg",
-      coverAlt:
-        "photo of human hands joining together representing DigitalDSA team",
-      sourceName: "Freepik",
-      originalSource:
-        "https://www.freepik.com/free-photo/closeup-diverse-people-joining-their-hands_12193015.htm",
-    }}
+    pageData={content.pageData}
   >
     <!-- desktop view  -->
 
     <div class="hidden lg:block">
       <StickyNavbar
-        navList={{
-          items: [
-            {
-              name: "Attribution Practices",
-              targetId: "attribution",
-            },
-            { name: "Resources", targetId: "resources" },
-
-            { name: "Logos & Trademarks", targetId: "logo" },
-            { name: "Compliance", targetId: "compliance" },
-          ],
-        }}
+        navList={content.stickyNavBar}
         {activeSection}
       />
 
@@ -161,26 +133,22 @@
           <p
             class="mt-4 typography-h3 text-black dark:text-white"
           >
-            Understanding Our Attribution Practices
+            {content.attributionText.heading}
           </p>
           <div class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]">
             <p>
-              At DigitalDSA, we are committed to respecting intellectual
-              property rights and adhering to licensing agreements for all
-              third-party assets used on this platform. <br />This page provides
-              a consolidated attribution for images, logos, and other digital
-              elements featured on our website.
+              {@html content.attributionText.para}
             </p>
           </div>
         </div>
 
         <div data-section="resources" id="resources">
           <TwoColumn
-            cardImage={cardImg2}
-            cardAltName={cardAlt1}
-            cardHeading="Image & Graphic Resources"
-            sourceName="Freepik"
-            originalSource="https://www.freepik.com/free-photo/card-envelope-mockup-with-leaves-background_18415628.htm#fromView=search&page=1&position=2&uuid=bdd2b995-5dd3-40c3-83e2-040a49288fc8&query=thanks"
+            cardImage={content.resources.cardImage}
+            cardAltName={content.resources.cardAltName}
+            cardHeading={content.resources.cardHeading}
+            sourceName={content.resources.sourceName}
+            originalSource={content.resources.originalSource}
             reverse={true}
           >
             <ul
@@ -189,9 +157,7 @@
             >
               <div class="grid gap-5">
                 <li>
-                  Some images, icons, and illustrations on this website are
-                  sourced from Freepik, Pexels, and FlatIcons, licensed under
-                  their respective terms.
+                  {content.resources.para}
                 </li>
                 <li class="p-4 my-7 bg-grayColor border-l-4 border-btnBg">
                   <p>
@@ -199,12 +165,7 @@
                       >Attribution :
                     </span>
                     <span class="pt-2">
-                      Images and graphics used on this website are sourced from <span
-                        class="typography-body-lg !font-semibold text-black dark:text-white">Freepik</span
-                      >,
-                      <span class="typography-body-lg !font-semibold text-black dark:text-white">Pexels</span>, <span class="typography-body-lg !font-semibold text-black dark:text-white">Unsplash</span>, and
-                      <span class="typography-body-lg !font-semibold text-black dark:text-white">FlatIcons</span>. All rights
-                      to these assets remain with their original creators.
+                      {@html content.resources.attributionAlert}
                     </span>
                   </p>
                 </li>
@@ -212,76 +173,24 @@
                   <div>
                     <ul class="list-disc list-inside">
                       <p class="pb-4">
-                        Where required, usage complies with the licensing terms
-                        of each platform :
+                        {content.resources.intro}
                       </p>
-                      <li class="pb-2">
-                        Freepik
-                        <a
-                          class="underline underline-offset-4 hover:no-underline"
-                          href="https://www.freepik.com/legal/terms-of-use#nav-freepik"
-                        >
-                          Terms of use</a
-                        >
-                        &
-                        <a
-                          class="underline underline-offset-4 hover:no-underline"
-                          href="https://www.freepik.com/legal/terms-of-use#nav-freepik-agreement"
-                          >License agreement</a
-                        > details
-                      </li>
-
-                      <li class="pb-2">
-                        Pexels
-                        <a
-                          class="underline underline-offset-4 hover:no-underline"
-                          href="https://www.pexels.com/terms-of-service/"
-                        >
-                          Terms of use</a
-                        >
-                        &
-                        <a
-                          class="underline underline-offset-4 hover:no-underline"
-                          href="https://www.pexels.com/license/"
-                          >License agreement</a
-                        > details
-                      </li>
-                      <li class="pb-2">
-                        Unsplash
-                        <a
-                          class="underline underline-offset-4 hover:no-underline"
-                          href="https://unsplash.com/plus/terms"
-                        >
-                          Terms of use</a
-                        >
-                        &
-                        <a
-                          class="underline underline-offset-4 hover:no-underline"
-                          href="https://unsplash.com/plus/license"
-                          >License agreement</a
-                        > details
-                      </li>
-                      <li class="pb-2">
-                        FlatIcons
-                        <a
-                          class="underline underline-offset-4 hover:no-underline"
-                          href="https://www.flaticon.com/legal"
-                        >
-                          Terms of use</a
-                        >
-                        &
-                        <a
-                          class="underline underline-offset-4 hover:no-underline"
-                          href="https://www.flaticon.com/license/license.pdf"
-                          >License agreement</a
-                        > details
-                      </li>
+                      {#each content.resources.platforms as platform}
+                        <li class="pb-2">
+                          {platform.name}
+                          {#each platform.links as link, i}
+                            <a
+                              class="underline underline-offset-4 hover:no-underline"
+                              href={link.url}
+                            >
+                              {link.text}</a
+                            >{#if i < platform.links.length - 1} & {/if}
+                          {/each}
+                          details
+                        </li>
+                      {/each}
                       <p class="pt-8">
-                        If you believe an image on our website requires further
-                        attribution or needs to be removed, please <a
-                          class="underline underline-offset-4 hover:no-underline"
-                          href="/contact">contact us.</a
-                        >
+                        {@html content.resources.footer}
                       </p>
                     </ul>
                   </div>
@@ -293,51 +202,13 @@
       </div>
       <div data-section="logo" id="logo">
         <TwoColumnWithLeftHeading
-          contents={{
-            heading: `Bank Logos & Trademarks`,
-            secHeading: `Usage Disclaimer for Bank Logos & Trademarks`,
-            list: [
-              {
-                desc: `All bank logos, brand names, and trademarks displayed on this website are the exclusive property of their respective owners.`,
-              },
-              {
-                desc: `Logos are used for informational and identification purposes only, assisting users in recognizing financial institutions.`,
-              },
-              {
-                desc: `DigitalDSA does not claim ownership, affiliation, sponsorship, or endorsement from any financial institution unless explicitly stated.`,
-              },
-              {
-                desc: `If any institution requests specific attribution or removal, they may <a class="underline underline-offset-4 hover:no-underline" href="/contact">contact us</a> for resolution.`,
-              },
-            ],
-          }}
+          contents={content.logo}
         />
       </div>
 
       <div data-section="compliance" id="compliance">
         <TwoColumnWithLeftHeading
-          contents={{
-            heading: `Compliance & Fair Use`,
-
-            secPara: `<div class="">
-                                        <p class="typography-label pb-6">At DigitalDSA, we:</p>
-                                        <ul class="list-none space-y-2 bg-[var(--landing-bg-card)] p-4 rounded-xl">
-                                            <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
-                                                <span class="text-green-500 mr-2 self-start">✔</span> 
-                                                Ensure proper licensing and fair use of all third-party assets.
-                                            </li>
-                                            <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
-                                                <span class="text-green-500 items-top mr-2 self-start">✔</span> 
-                                                Do not modify or alter trademarks or copyrighted materials without authorization.
-                                            </li>
-                                            <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
-                                                <span class="text-green-500 mr-2 self-start">✔</span> 
-                                                Comply with all copyright laws, licensing agreements, and fair use policies.
-                                            </li>
-                                        </ul>
-                                        <p class="typography-body-md text-[var(--form-text-secondary)] pt-8">If any content owner or company has concerns about attribution, licensing, or usage, they can request modifications, credits, or removal by <a class="underline underline-offset-4 hover:no-underline" href="/contact">reaching out to us.</a></p>
-                                  </div>`,
-          }}
+          contents={content.compliance}
         />
       </div>
     </div>
@@ -345,9 +216,9 @@
     <!-- mobile view  -->
 
     <div class="block lg:hidden">
-      {#each navBarMedium as list, index}
+      {#each content.navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-[var(--form-bg)] text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown col-span-3 bg-[var(--form-bg)] text-black dark:text-white {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -374,24 +245,20 @@
                   <p
                     class="mt-4 typography-h3 text-black dark:text-white"
                   >
-                    Understanding Our Attribution Practices
+                    {content.attributionText.heading}
                   </p>
                   <div class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]">
                     <p>
-                      At DigitalDSA, we are committed to respecting intellectual
-                      property rights and adhering to licensing agreements for
-                      all third-party assets used on this platform. <br />This
-                      page provides a consolidated attribution for images,
-                      logos, and other digital elements featured on our website.
+                      {@html content.attributionText.para}
                     </p>
                   </div>
                 </div>
               {:else if index == 1}
                 <div id="resources" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]">
                   <TwoColumn
-                    cardImage={cardImg2}
-                    cardAltName={cardAlt1}
-                    cardHeading="Image & Graphic Resources"
+                    cardImage={content.resources.cardImage}
+                    cardAltName={content.resources.cardAltName}
+                    cardHeading={content.resources.cardHeading}
                     sourceName=""
                     originalSource="www.digitaldsa.com"
                     reverse={true}
@@ -402,9 +269,7 @@
                     >
                       <div class="grid gap-5">
                         <li>
-                          Some images, icons, and illustrations on this website
-                          are sourced from Freepik, Pexels, and FlatIcons,
-                          licensed under their respective terms.
+                          {content.resources.para}
                         </li>
                         <li
                           class="p-4 my-7 bg-grayColor border-l-4 border-btnBg"
@@ -414,92 +279,33 @@
                               >Attribution :
                             </span>
                             <span class="">
-                              Images and graphics used on this website are
-                              sourced from <span class="typography-body-lg !font-semibold text-black dark:text-white"
-                                >Freepik</span
-                              >,
-                              <span class="typography-body-lg !font-semibold text-black dark:text-white">Pexels</span>, <span class="typography-body-lg !font-semibold text-black dark:text-white">Unsplash</span>, and
-                              <span class="typography-body-lg !font-semibold text-black dark:text-white">FlatIcons</span>.
-                              All rights to these assets remain with their
-                              original creators.
+                              {@html content.resources.attributionAlert}
                             </span>
                           </p>
                         </li>
                         <li>
                           <div>
                             <p class="pb-4">
-                              Where required, usage complies with the licensing
-                              terms of each platform :
+                              {content.resources.intro}
                             </p>
                             <ul class="list-disc pl-4">
-                              <li class="pb-2">
-                                Freepik
-                                <a
-                                  class="underline underline-offset-4 hover:no-underline"
-                                  href="https://www.freepik.com/legal/terms-of-use#nav-freepik"
-                                >
-                                  Terms of use</a
-                                >
-                                &
-                                <a
-                                  class="underline underline-offset-4 hover:no-underline"
-                                  href="https://www.freepik.com/legal/terms-of-use#nav-freepik-agreement"
-                                  >License agreement</a
-                                > details
-                              </li>
-
-                              <li class="pb-2">
-                                Pexels
-                                <a
-                                  class="underline underline-offset-4 hover:no-underline"
-                                  href="https://www.pexels.com/terms-of-service/"
-                                >
-                                  Terms of use</a
-                                >
-                                &
-                                <a
-                                  class="underline underline-offset-4 hover:no-underline"
-                                  href="https://www.pexels.com/license/"
-                                  >License agreement</a
-                                > details
-                              </li>
-                              <li class="pb-2">
-                                Unsplash
-                                <a
-                                  class="underline underline-offset-4 hover:no-underline"
-                                  href="https://unsplash.com/plus/terms"
-                                >
-                                  Terms of use</a
-                                >
-                                &
-                                <a
-                                  class="underline underline-offset-4 hover:no-underline"
-                                  href="https://unsplash.com/plus/license"
-                                  >License agreement</a
-                                > details
-                              </li>
-                              <li class="pb-2">
-                                FlatIcons
-                                <a
-                                  class="underline underline-offset-4 hover:no-underline"
-                                  href="https://www.flaticon.com/legal"
-                                >
-                                  Terms of use</a
-                                >
-                                &
-                                <a
-                                  class="underline underline-offset-4 hover:no-underline"
-                                  href="https://www.flaticon.com/license/license.pdf"
-                                  >License agreement</a
-                                > details
-                              </li>
+                              {#each content.resources.platforms as platform}
+                                <li class="pb-2">
+                                  {platform.name}
+                                  {#each platform.links as link, i}
+                                    <a
+                                      class="underline underline-offset-4 hover:no-underline"
+                                      href={link.url}
+                                    >
+                                      {link.text}</a
+                                    >{#if i < platform.links.length - 1} & {/if}
+                                  {/each}
+                                  details
+                                </li>
+                              {/each}
                             </ul>
                             <p class="pt-8">
-                              If you believe an image on our website requires
-                              further attribution or needs to be removed, please <a
-                                class="underline underline-offset-4 hover:no-underline"
-                                href="/contact">contact us.</a
-                              >
+                              {@html content.resources.footer}
                             </p>
                           </div>
                         </li>
@@ -510,51 +316,13 @@
               {:else if index == 2}
                 <div id="logo" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]">
                   <TwoColumnWithLeftHeading
-                    contents={{
-                      heading: `Bank Logos & Trademarks`,
-                      secHeading: `Usage Disclaimer for Bank Logos & Trademarks`,
-                      list: [
-                        {
-                          desc: `All bank logos, brand names, and trademarks displayed on this website are the exclusive property of their respective owners.`,
-                        },
-                        {
-                          desc: `Logos are used for informational and identification purposes only, assisting users in recognizing financial institutions.`,
-                        },
-                        {
-                          desc: `DigitalDSA does not claim ownership, affiliation, sponsorship, or endorsement from any financial institution unless explicitly stated.`,
-                        },
-                        {
-                          desc: `If any institution requests specific attribution or removal, they may <a class="underline underline-offset-4 hover:no-underline" href="/contact">contact us</a> for resolution.`,
-                        },
-                      ],
-                    }}
+                    contents={content.logo}
                   />
                 </div>
               {:else if index == 3}
                 <div id="compliance" class="bg-[var(--landing-bg)] text-black dark:text-white">
                   <TwoColumnWithLeftHeading
-                    contents={{
-                      heading: `Compliance & Fair Use`,
-
-                      secPara: `<div class="">
-                                    <p class="typography-label pb-6">At DigitalDSA, we:</p>
-                                    <ul class="list-none space-y-2 bg-[var(--landing-bg-card)] p-4 rounded-xl">
-                                        <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
-                                            <span class="text-green-500 mr-2 self-start">✔</span> 
-                                            Ensure proper licensing and fair use of all third-party assets.
-                                        </li>
-                                        <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
-                                            <span class="text-green-500 items-top mr-2 self-start">✔</span> 
-                                            Do not modify or alter trademarks or copyrighted materials without authorization.
-                                        </li>
-                                        <li class="flex items-center typography-body-md text-[var(--form-text-secondary)]">
-                                            <span class="text-green-500 mr-2 self-start">✔</span> 
-                                            Comply with all copyright laws, licensing agreements, and fair use policies.
-                                        </li>
-                                    </ul>
-                                    <p class="typography-body-md text-[var(--form-text-secondary)] pt-8">If any content owner or company has concerns about attribution, licensing, or usage, they can request modifications, credits, or removal by <a class="underline underline-offset-4 hover:no-underline" href="/contact">reaching out to us.</a></p>
-                                    </div>`,
-                    }}
+                    contents={content.compliance}
                   />
                 </div>
               {/if}
@@ -565,64 +333,19 @@
     </div>
 
     <TwoColumnWithImage
-      contents={{
-        cardImage: `/images/message.jpg`,
-        cardAltName: `CardCover`,
-        cardHeading: `Message us 24/7`,
-        sourceName: "DigitalDSA",
-        originalSource: "www.digitaldsa.com",
-        reverse: false
-      }}
+      contents={content.messageUs}
     >
       <p>
-        Feel free to message us anytime for expert assistance with your loan
-        needs. Our team is here to provide professional advice, guide you
-        through the loan process, and help you find the best options. No matter
-        the time, we’ve got you covered! Message us anytime, and we’ll respond
-        promptly.
+        {content.messageUs.para}
       </p>
       <div class="w-auto">
         <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
       </div>
     </TwoColumnWithImage>
 
-    <div slot="secondary">
+    <div slot="secondary" class="">
       <HelpList
-        contents={{
-          heading: `We're here to help`,
-          xlGridCol: 4,
-
-          cards: [
-            {
-              heading: "Book an </br> appointment",
-              para: "Book instantly to speak to a loan specialist at a time that suits you",
-              icon: "/icons/appointment.svg",
-              altName: "appointment Icon",
-              url: "/appointment",
-            },
-            {
-              heading: "Check loan offers",
-              para: "In as little as 10 minutes and tailored exactly as per your financial profile.",
-              icon: "/icons/manageLoan2.svg",
-              altName: "Alert Icon",
-              url: "/get-started/how-can-we-help",
-            },
-            {
-              heading: "Contact us",
-              para: "Fast-track your call and connect with a specialist in the Digital DSA.",
-              icon: "/icons/contact.svg",
-              altName: "Alert Icon",
-              url: "/contact",
-            },
-            {
-              heading: "Message us",
-              para: `Get instant help from our online assistants  or chat to a specialist.`,
-              icon: "/icons/msg.svg",
-              altName: "Alert Icon",
-              url: "/contact",
-            },
-          ],
-        }}
+        contents={content.help}
       />
     </div>
   </SecondPageLayout>

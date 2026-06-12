@@ -1,0 +1,193 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Financial Support & Planning | Manage Loans & Life Changes",
+    "image": "/images/helping-hand.jpg",
+    "description": "Get expert financial guidance, loan tools, and inclusive banking solutions to manage life’s uncertainties and plan for a secure future.",
+    "keywords": "Financial support, Loan repayment assistance, Flexible EMI planning, Loan restructuring, Balance transfer solutions, Financial hardship help, Inclusive banking, Loan calculators, Digital loan assistance, Financial planning tools, Support for migrants, Managing life’s uncertainties, Secure financial future, Part payment planner, Affordability calculator"
+  },
+  "pageData": {
+    "heading": "We’re Here for Your Financial Need",
+    "para": "At DigitalDSA, we believe in empowering individuals with financial knowledge and seamless solutions. Whether you're managing life’s uncertainties or planning for a better future, we’re here to assist with tools, services, and guidance tailored to your unique circumstances.",
+    "coverImage": "/images/helping-hand.jpg",
+    "originalSource": "freepik.com",
+    "sourceName": "Freepik",
+    "coverAlt": "images-altName"
+  },
+  "navBarMedium": [
+    "Financial hardship",
+    "Financial Guidance",
+    "Planning for the Future",
+    "Inclusive banking",
+    "Get in touch"
+  ],
+  "stickyNavBar": {
+    "items": [
+      {
+        "name": "Financial hardship",
+        "targetId": "hardship"
+      },
+      {
+        "name": "Financial Guidance",
+        "targetId": "changes"
+      },
+      {
+        "name": "Planning for the Future",
+        "targetId": "planFuture"
+      },
+      {
+        "name": "Inclusive banking",
+        "targetId": "banking"
+      },
+      {
+        "name": "Get in touch",
+        "targetId": "support"
+      }
+    ]
+  },
+  "hardship": {
+    "heading": "How we can help",
+    "listTopPara": "<span class=\"font-semibold\">Life is full of uncertainties, and unexpected challenges can arise when we least expect them.</span>",
+    "list": [
+      {
+        "desc": "At DigitalDSA, we’re here to assist during difficult times, such as losing a loved one, facing unemployment, or dealing with health-related challenges."
+      },
+      {
+        "desc": "If your circumstances change, reach out to us promptly. Our tools and support services are designed to help you manage your financial situation effectively, providing the clarity and guidance you need to navigate life’s unpredictability. Together, we’ll find a way forward."
+      }
+    ]
+  },
+  "hardshipImageCard": {
+    "cardImage": "/images/financial-stress.jpg",
+    "cardAltName": "DigitalDSA advisor helping it's user to navigate through financial hardship with best available options",
+    "cardHeading": "Navigating Financial Hardship",
+    "sourceName": "freepik",
+    "originalSource": "https://www.freepik.com/free-photo/analyzing-work-results-with-colleagues_5576878.htm",
+    "reverse": true,
+    "para": "If you’re struggling to meet loan or EMI payments, our platform provides tools like <span class=\"font-semibold\">Part Payment Planner</span>, <span class=\"font-semibold\">Flexible EMI Planner</span>, and <span class=\"font-semibold\">Affordability Calculator</span> to help you strategize repayments effectively. Reach out to explore tailored solutions for loan restructuring or balance transfers."
+  },
+  "changes": {
+    "heading": "Financial Guidance for Life’s Unexpected Challenges",
+    "cardData": [
+      {
+        "title": "Struggling with Loan Repayments? Let’s Fix That!",
+        "para": "Lost your job or facing a salary cut? Don’t let EMIs steal your sleep! We help you explore <strong>loan restructuring, moratorium options, and balance transfers</strong> to lighten your financial burden.",
+        "linkName": "EMI Calculator",
+        "url": "/calculators/emi-calculator"
+      },
+      {
+        "title": "Make Your Money Work for You",
+        "para": "Why just pay EMIs when you can also <strong>grow your wealth</strong>? Our <strong>ARN-holder experts</strong> guide you through <strong>mutual funds, fixed-income plans, and smart financial strategies</strong> to maximize your returns.",
+        "linkName": "How Much to Save by Retirement",
+        "url": "/money-map/how-much-to-save-by-retirement"
+      }
+    ],
+    "cardDataMobile": [
+      {
+        "title": "Major Life Events",
+        "para": " Life’s challenges, such as health issues, loss of a loved one, or separation, often come with financial concerns. Our planners can guide you in managing your finances effectively during these times, ensuring you stay in control."
+      },
+      {
+        "title": "Natural Disasters & Emergencies",
+        "para": "Facing unforeseen events like floods or storms? Explore financial assistance options and repayment strategies with our platform to manage your loans seamlessly."
+      },
+      {
+        "title": "Addiction or Financial Abuse",
+        "para": "If you or someone you know is struggling with problem gambling, financial abuse, or elder financial exploitation, we provide resources to regain control of finances and protect against misuse."
+      }
+    ]
+  },
+  "planFuture": {
+    "cardImage": "/images/financial-planning-with-DigitalDSA.jpg",
+    "cardAltName": "phot os young parents enoying with their child representing financial planning well in advance",
+    "cardHeading": "Planning for the Future",
+    "sourceName": "freepik",
+    "originalSource": "https://www.freepik.com/free-photo/family-walking-nature_1208507.htm",
+    "reverse": false,
+    "para": "From planning for retirement to securing your family’s financial stability, our tools enable you to prepare for the future. With calculators and financial planners, we make it easy to map your financial journey step-by-step."
+  },
+  "banking": {
+    "cardImage": "/images/financial-wellbeing-exploration-onDigitalDSA-website.png",
+    "cardAltName": "Photo of person lloking financial advices from DigitalDSA app",
+    "cardHeading": "Inclusive Soultions for All",
+    "sourceName": "DigitalDSA",
+    "originalSource": "https://www.digitaldsa.com",
+    "reverse": true,
+    "bullets": [
+      {
+        "title": "Loans Without Labels",
+        "desc": "<strong>Salaried</strong>, <strong>self-employed</strong>, <strong>freelancer</strong>, or somewhere in between? We don’t do stereotypes—our loans fit <em>your profile</em>, not the other way around."
+      },
+      {
+        "title": "For NRIs: Homecoming Without Headaches",
+        "desc": "Buying a home in India shouldn’t feel like an <em>immigration checkpoint</em>. We simplify the process so you get the <strong>best loan</strong> without the <em>red tape</em>."
+      },
+      {
+        "title": "First-Time Borrower? We’ve Got You",
+        "desc": "Confused by <em>bank jargon</em>? Don't worry, we keep it simple—<strong>real numbers</strong>, <strong>clear guidance</strong>, and no <em>hidden fees lurking</em> in the fine print."
+      },
+      {
+        "title": "100% Digital, 0% Spam",
+        "desc": "Compare loans, check eligibility, and apply without your number ending up in a <em>million marketing lists</em>. <strong>Your privacy</strong>, our priority."
+      }
+    ],
+    "bulletsMobile": [
+      {
+        "title": "Accessible Financial Solutions",
+        "desc": "At DigitalDSA, we’re committed to making financial services accessible to everyone. From tools for self-employed individuals to salaried professionals, our platform caters to diverse user needs."
+      },
+      {
+        "title": "Support for Migrants",
+        "desc": "If you’ve recently moved to India, our user-friendly tools simplify loan processes, ensuring you can make informed financial decisions."
+      },
+      {
+        "title": "Digital Assistance",
+        "desc": "Through our online platform, users can compare loan offers, calculate eligibility, and receive step-by-step guidance for loan applications without the hassle of spam calls or unnecessary contact."
+      }
+    ]
+  },
+  "support": {
+    "cardImage": "/images/message.jpg",
+    "cardAltName": "CardCover",
+    "cardHeading": "Get in touch",
+    "sourceName": "DigitalDSA",
+    "originalSource": "www.DigitalDSA.com",
+    "para": "Whether you need help planning loan repayments, understanding your financial capacity, or seeking solutions during life’s challenges, DigitalDSA is here for you. Let’s simplify your financial journey together."
+  },
+  "help": {
+    "heading": "We're here to help",
+    "xlGridCol": 3,
+    "cards": [
+      {
+        "heading": "Contact Us",
+        "para": "Connect with us for any support, inquiries, or information. We're just a message away!",
+        "icon": "icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      },
+      {
+        "heading": "Message Us",
+        "para": "Reach out to us for any queries or assistance. We're here to help!",
+        "icon": "icons/msg.svg",
+        "altTitle": "icons",
+        "url": "/contact"
+      },
+      {
+        "heading": "Consultant",
+        "para": "Book an instant consultation with a  loan specialist at a time that suits you",
+        "icon": "/icons/appointment.svg",
+        "altName": "appointment Icon",
+        "url": "/appointment"
+      }
+    ]
+  },
+  "thingsYouShould": {
+    "heading": "Things you should know",
+    "paraGraph": [
+      "<span class=\"font-semibold\">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
+      "<span class=\"font-semibold\">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
+      "<span class=\"font-semibold\">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.",
+      "<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions."
+    ]
+  }
+}

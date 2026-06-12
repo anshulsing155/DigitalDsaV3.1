@@ -1,0 +1,203 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Improve Your Financial Well-Being – Assess & Plan Today",
+    "image": "/images/financial-wellbeing.jpg",
+    "description": "Take a quick survey to measure your financial well-being, get personalized insights, and learn how to save, invest, and plan for a secure future.",
+    "keywords": "financial well-being, financial health assessment, money management, budgeting tips, emergency fund, savings plan, debt management, investment strategies, financial planning, personal finance, financial security, financial literacy, money tips, financial stability"
+  },
+  "pageData": {
+    "coverImage": "/images/financial-wellbeing.jpg",
+    "coverAlt": "photo of a happy couple, financially doing well with the help of DigitalDSA, enjoying time with each other in their newly purchased home's living room",
+    "sourceName": "Freepik",
+    "originalSource": "https://www.freepik.com/free-photo/people-tickling-each-other_38625493.htm",
+    "actionBtns": [
+      {
+        "btnName": "Take assessment",
+        "btnLink": "/financial-wellbeing/form",
+        "btnColor": "#ffcc00"
+      }
+    ],
+    "heading": " Learn more about your financial wellbeing",
+    "para": " Understand your financial well-being better and take steps to improve it—whether it’s managing your finances, dealing with unexpected expenses, or working towards your future goals."
+  },
+  "navBarMedium": [
+    "What is financial wellbeing?",
+    "How it is measured?",
+    "Why take this assessment?",
+    "Additional resources"
+  ],
+  "stickyNavBar": {
+    "items": [
+      {
+        "name": "What is financial wellbeing?",
+        "targetId": "wellbeing"
+      },
+      {
+        "name": "How it is measured?",
+        "targetId": "measured"
+      },
+      {
+        "name": "Why take this assessment?",
+        "targetId": "assessment"
+      },
+      {
+        "name": "Additional resources",
+        "targetId": "resources"
+      }
+    ],
+    "actionBtns": [
+      {
+        "btnName": "Take assessment",
+        "btnLink": "/financial-wellbeing/form",
+        "btnColor": "#ffcc00"
+      }
+    ]
+  },
+  "wellBeing": {
+    "heading": "What is financial wellbeing?",
+    "subPara": [
+      "It’s about managing your money today and in the future, giving you control over your financial goals and ensuring you're prepared for the unexpected.<br> <br> We break it down into three key categories:"
+    ],
+    "paraGraph": [
+      "Every Day",
+      "Rainy day",
+      "One fine day"
+    ]
+  },
+  "wellBeingCards": [
+    {
+      "icon": "/icons/everyDay.svg",
+      "heading": "Every Day – Managing Regular Finances",
+      "para": "Managing expenses like rent, transportation, groceries and utility bills ensures financial stability. Smart budgeting, responsible spending, and expense tracking are essential.",
+      "suggested": "Budget planner"
+    },
+    {
+      "icon": "/icons/rainyDay.svg",
+      "heading": "Rainy Day – Preparing for Emergencies",
+      "para": "Unexpected expenses like medical bills or job loss can arise anytime. An emergency fund provides a financial cushion for handling challenges stress-free.",
+      "suggested": "Insurance, FD , RD"
+    },
+    {
+      "icon": "/icons/oneFineDay.svg",
+      "heading": "One fine Day – Building Long-Term Security",
+      "para": "Financial well-being extends beyond immediate needs. By saving, investing, and planning strategically, you can secure long-term stability and independence.",
+      "suggested": "SIP, Mutual funds"
+    }
+  ],
+  "measured": {
+    "heading": "How it is measured?",
+    "subPara": [
+      " Take a short 2-minute survey, and we'll use your responses to calculate a score that serves as a guide to help you better understand your financial well-being.",
+      "<p class=\"flex items-center gap-2\"> <span><img src=\"/icons/circle-check.svg\" alt=\"circle-check-icon\" class=\"h-4\" /></span> Understand your current financial health</p> ",
+      "<p class=\"flex items-center gap-2\"> <span><img src=\"/icons/circle-check.svg\" alt=\"circle-check-icon\" class=\"h-4\" /></span> Identify strengths and areas for improvement </p>",
+      "<p class=\"flex items-center gap-2\"> <span><img src=\"/icons/circle-check.svg\" alt=\"circle-check-icon\" class=\"h-4\" /></span> Receive personalized tips to enhance financial security </p>"
+    ],
+    "btnName": "Measure your score",
+    "btnColor": "#ffcc00",
+    "btnLink": "/financial-wellbeing/form"
+  },
+  "assessment": {
+    "cardImage": "/images/financial-wellbeing-exploration-onDigitalDSA-website.png",
+    "cardAltName": "Photo of a person who is taking survey of the financial wellbeing on DigitalDSA.com",
+    "cardHeading": "Why take this assessment?",
+    "bullets": [
+      {
+        "title": "1. Personalized Insights – Know Where You Stand",
+        "desc": "Understanding your financial well-being is key to security. This assessment analyzes your spending, savings, debt, and confidence, providing a personalized score to highlight strengths and areas for improvement."
+      },
+      {
+        "title": "2. Actionable Steps – Improve Your Financial Health",
+        "desc": "A score is just the start—you need a plan. Get step-by-step advice on saving, debt management, and long-term planning to boost your financial stability."
+      },
+      {
+        "title": "3. Better Decision-Making – Plan with Confidence",
+        "desc": "Smart financial decisions require planning. This assessment helps you understand your strengths and risks, empowering you to make informed choices with confidence."
+      }
+    ]
+  },
+  "resources": {
+    "heading": "Additional Resources",
+    "items": [
+      {
+        "id": 1,
+        "title": "Smart Budgeting Tips​​",
+        "desc": "Managing your daily expenses effectively starts with a solid budget. By tracking your spending, prioritizing needs over wants, and using budgeting tools, you can stay on top of your finances with ease. <a href=\"/finance-support/budgeting-tips\" class=\"underline text-linkColor\"> Explore budgeting strategies </a>",
+        "icon": "/icons/clock.svg",
+        "altName": "clock-icon"
+      },
+      {
+        "id": 2,
+        "title": "Debt Management Guide​",
+        "desc": "Struggling with debt? Learn how to pay off high-interest loans first, consolidate debt for better repayment terms, and avoid late payments to maintain a healthy credit score. <a href=\"/lap/what-is-debt-consolidation\" class=\"underline text-linkColor\"> Get expert debt management advice </a>",
+        "icon": "/icons/negotiate.svg",
+        "altName": "negotiate-icon"
+      },
+      {
+        "id": 3,
+        "title": "Savings & Investment Strategies​​",
+        "desc": "Building long-term financial security requires smart saving and investing. Whether you’re growing an emergency fund, diversifying investments, or automating savings, strategic planning is key. <a href=\"/money-map/how-long-will-your-savings-support-you\" class=\"underline text-linkColor\"> Discover smart saving tips </a>",
+        "icon": "/icons/phoneConnection.svg",
+        "altName": "phoneConnection-icon"
+      },
+      {
+        "id": 4,
+        "title": "Loan Readiness Checklist",
+        "desc": "Before applying for a loan, ensure you're financially prepared. From checking your credit score to comparing interest rates, taking the right steps can improve your approval chances.<a href=\"/loan-readiness-test/quiz\" class=\"underline text-linkColor\">  Check if you're loan-ready </a>​",
+        "icon": "/icons/inte.svg",
+        "altName": "inte-icon"
+      },
+      {
+        "id": 5,
+        "title": "Common Financial Pitfalls to Avoid​",
+        "desc": "Avoiding overspending, excessive credit card reliance, and neglecting savings can make a significant difference in your financial health.",
+        "icon": "/icons/contact.svg",
+        "altName": "contact-icon"
+      }
+    ]
+  },
+  "help": {
+    "heading": "We're here to help",
+    "xlGridCol": 4,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Book an </br> appointment",
+        "para": "Book instantly to speak to a loan specialist at a time that suits you",
+        "icon": "/icons/appointment.svg",
+        "altName": "appointment Icon",
+        "url": "/appointment"
+      },
+      {
+        "heading": "Check loan offers",
+        "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+        "icon": "/icons/manageLoan2.svg",
+        "altName": "Alert Icon",
+        "url": "/get-started/how-can-we-help"
+      },
+      {
+        "heading": "Contact us",
+        "para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+        "icon": "/icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      },
+      {
+        "heading": "Message us",
+        "para": "Get instant help from our online assistants  or chat to a specialist.",
+        "icon": "/icons/msg.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      }
+    ]
+  },
+  "thinkKnow": {
+    "heading": "Important Things to Know",
+    "paraGraph": [
+      "This survey is designed to understand your financial habits and interactions with financial institutions. Your responses are not stored or saved—data is processed only during your session to provide you with better insights and viable financial options for informed decision-making.",
+      "We value your privacy and ensure that no personal information is shared, stored, or disclosed to any third party. The information you provide is used solely within the session to generate personalized advice, and once the session ends, all data is automatically discarded.",
+      "By proceeding with the survey, you acknowledge and agree to our Terms & Conditions and Privacy Policy, which outline our commitment to data protection and confidentiality.",
+      "Participants must be 18 years or older to complete the survey."
+    ]
+  }
+}
