@@ -8,6 +8,7 @@
   import Seo from "$lib/components/Seo.svelte";
   import SecondPageLayout from "$lib/components/website/SecondPageLayout.svelte";
   import StickyNavbar from "$lib/components/website/StickyNavbar.svelte";
+  import content from "$lib/data/website/arrangeDownPayment.json";
 
   const toggleDropdown = (event: any, index: any) => {
     event.preventDefault();
@@ -71,8 +72,6 @@
     if (currentSection) {
       activeSection = currentSection; // Update the active section dynamically
     }
-
-    // //console.log(activeSection, 'active');
   };
 
   // Initialize the first active section when the component loads
@@ -84,139 +83,23 @@
       window.removeEventListener("scroll", handleScroll);
     };
   });
-  let yourSavings = {
-    heading: `Start with Your Savings: The Smartest First Step`,
-    para: `Why rely on loans or external help when you can take charge of your
-          finances? <span
-            class="underline decoration-btnBg underline-offset-4 decoration-2"
-            >Paying your down payment from your own savings</span
-          >
-          should be your
-          <span
-            class="underline decoration-btnBg underline-offset-4 decoration-2"
-            >first priority</span
-          >
-          not an afterthought! Every rupee you arrange yourself
-          <span
-            class="underline decoration-btnBg underline-offset-4 decoration-2"
-            >reduces your loan amount, slashes interest costs, and strengthens
-            your financial credibility.</span
-          >
-          Lenders trust borrowers who invest their own money first, making it easier
-          for you to secure a loan with better terms.
-          <span
-            class="underline decoration-btnBg underline-offset-4 decoration-2"
-            >Stop looking for shortcuts—start saving, cut unnecessary expenses,
-            and take responsibility for your down payment today!</span
-          > The more you contribute upfront, the less you’ll struggle later!`,
-  };
-
-  let planning = {
-    heading: `Strategies to Plan Your Home’s Down Payment in Advance`,
-    para: `Planning your home’s down payment well in advance can reduce financial stress and improve your chances of securing a loan with favorable terms. Here are some effective strategies to help you save and prepare:`,
-    listItems: [
-      {
-        heading: `1. Set a Clear Goal`,
-        desc: `Determine the exact amount you need for your down payment. Research the property prices in your desired location and calculate a realistic savings target based on the required percentage.`,
-      },
-      {
-        heading: `2. Create a Dedicated Savings Plan`,
-        desc: `Open a separate savings account exclusively for your down payment. This prevents unnecessary spending and helps you track your progress more effectively. Consider choosing an account with high interest to maximize your savings.`,
-      },
-      {
-        heading: `3. Reduce Unnecessary Expenses`,
-        desc: `Analyze your monthly expenses and identify areas where you can cut costs. Consider dining out less, canceling unused subscriptions, and opting for budget-friendly alternatives in daily spending.`,
-      },
-      {
-        heading: `4. Automate Your Savings`,
-        desc: `Set up an automatic transfer from your primary account to your dedicated down payment savings account every month. Treat it like a fixed expense, just like rent or utility bills.`,
-      },
-      {
-        heading: `5. Use Windfalls Wisely`,
-        desc: `Any unexpected income, such as tax refunds, bonuses, or gifts, can significantly boost your savings. Instead of spending them, deposit them directly into your down payment account.`,
-      },
-      {
-        heading: `6. Track and Adjust Your Budget`,
-        desc: `Regularly review your budget to ensure you’re staying on track. If needed, adjust your savings plan by increasing contributions or reducing unnecessary expenditures.`,
-      },
-    ],
-  };
-
-  let loan = {
-    heading: `Get a Personal Loan for Your Down Payment with digitalDSA`,
-    para: `If you've explored various investment options but still find yourself short on funds for a down payment, a personal loan could be the solution. digitalDSA can assist you in securing a personal loan tailored to your eligibility and financial situation. Before applying, consider these key factors:`,
-    listItems: [
-      {
-        heading: `Eligibility Criteria–`,
-        desc: `
-              Minimum age: 21 years (varies by lender)
-              <br>
-              Stable income source (salaried or self-employed)
-              <br>
-              Minimum credit score (typically 650+)
-              `,
-      },
-      {
-        heading: `Affordability & Repayment Capacity–`,
-        desc: `Assess monthly income vs. loan EMI
-              <br>
-              Choose a loan tenure that keeps EMIs manageable
-              <br>
-              Factor in existing financial obligations
-              `,
-      },
-      {
-        heading: `Credibility & Documentation–`,
-        desc: `Maintain a good credit history for better interest rates
-              <br>
-              Provide income proof, bank statements, and identity verification
-              <br>
-              Avoid multiple loan applications, which can impact your credit score
-              `,
-      },
-    ],
-    listUrl: {
-      url: "/personal-loan/",
-      linkName: "👉 Compare offers for a Personal Loan with digitalDSA",
-    },
-  };
-
-  let navBarMedium = [
-    "First Step",
-    "Smart savings",
-    "Withdraw and pay",
-    "Smart investing",
-    "Take loan",
-  ];
 </script>
 
 <Seo
-  type="WebPage"
-  title="Ultimate Guide to Down Payment Savings & Loan Options"
-  image="/images/arrange-down-payment-blog.png"
-  description="Learn smart strategies, savings plans, and investment options to arrange your down payment. Explore loans & financial tips with digitalDSA."
-  keywords="Down payment savings, Home down payment, How to save for a down payment, Best investments for down payment, Personal loan for down payment, Home loan down payment tips, Down payment strategies, Real estate down payment planning, Smart savings for home buying, digitalDSA loan options"
+  type={content.seo.type}
+  title={content.seo.title}
+  image={content.seo.image}
+  description={content.seo.description}
+  keywords={content.seo.keywords}
 />
 
 <section class="mx-auto w-full">
   <SecondPageLayout
-    pageData={{
-      heading: "The Ultimate Guide to Arranging Your Down Payment",
-      coverImage: "/images/arrange-down-payment-blog.png",
-      coverAlt: "images-altName",
-    }}
+    pageData={content.pageData}
   >
     <div class="hidden lg:block">
       <StickyNavbar
-        navList={{
-          items: [
-            { name: "First Step", targetId: "first" },
-            { name: "Smart savings", targetId: "smart" },
-            { name: "Withdraw and pay", targetId: "pay" },
-            { name: "Smart investing", targetId: "invest" },
-            { name: "Take loan", targetId: "loan" },
-          ],
-        }}
+        navList={content.stickyNavBar}
         {activeSection}
       />
 
@@ -228,10 +111,10 @@
           <h2
             class="typography-h2 text-black dark:text-white"
           >
-            {yourSavings.heading}
+            {content.yourSavings.heading}
           </h2>
           <p class="typography-body-md text-[var(--form-text-secondary)]">
-            {@html yourSavings.para}
+            {@html content.yourSavings.para}
           </p>
         </div>
         <!-- planning -->
@@ -242,14 +125,14 @@
             <h2
               class="typography-h2 text-black dark:text-white"
             >
-              {planning.heading}
+              {content.planning.heading}
             </h2>
             <p class="typography-body-md text-[var(--form-text-secondary)]">
-              {@html planning.para}
+              {@html content.planning.para}
             </p>
           </div>
           <ul class="space-y-6">
-            {#each planning.listItems as list}
+            {#each content.planning.listItems as list}
               <li class="space-y-2">
                 <h3 class="typography-body-lg !font-semibold text-black dark:text-white">{list.heading}</h3>
                 <p class="typography-body-md text-[var(--form-text-secondary)]">{list.desc}</p>
@@ -262,203 +145,20 @@
       <!-- money map -->
       <div data-section="smart" id="smart" class="">
         <AboveTitleWithTopIconCard
-          contents={{
-            heading: `Smart savings calculators – Plan your future with confidence`,
-            xlGridCol: 4,
-            borderBottom: true,
-            cards: [
-              {
-                heading: "Know How Long Your Savings Will Last",
-                para: `Determine how many years your savings can support your lifestyle.`,
-                icon: "/icons/clock.svg",
-                altName: "clock-icon",
-                linkName: "Check Your Savings Longevity",
-                url: "/money-map/how-long-will-your-savings-support-you",
-              },
-              {
-                heading: "Track Your Progress Towards Your Goal​",
-                para: `Estimate the time required to reach your financial milestones.`,
-                icon: "/icons/phoneConnection.svg",
-                altName: "phoneConnection-icon",
-                linkName: "Plan Your Savings Journey",
-                url: "/money-map/how-long-will-it-take-to-save",
-              },
-              {
-                heading: "Set a Target for Retirement Savings​​",
-                para: `Calculate the amount needed for a secure and comfortable retirement.`,
-                icon: "/icons/negotiate.svg",
-                altName: "negotiate-icon",
-                linkName: "Plan Your Retirement Fund",
-                url: "/money-map/how-much-to-save-by-retirement",
-              },
-              {
-                heading: "Grow Your Savings with Consistency​",
-                para: `See how regular contributions can maximize your savings over time.`,
-                icon: "/icons/coinHouse.svg",
-                altName: "coinHouse-icon",
-                linkName: "Calculate Your Future Savings",
-                url: "/money-map/how-much-can-i-save-with-regular-contributions",
-              },
-            ],
-          }}
+          contents={content.smartSavings}
         />
       </div>
       <!-- withdraw and pay -->
       <div data-section="pay" id="pay" class="">
         <AboveTitleWithoutIconCard
-          contents={{
-            heading: `Using Saved Investments for Your Down Payment`,
-            xlGridCol: 3,
-            borderBottom: true,
-            cards: [
-              {
-                heading: "1. Withdraw",
-                para: `If you have investments in savings schemes like Fixed Deposits (FDs) or Recurring Deposits (RDs), you can withdraw the matured amount along with the interest earned. Some investments allow early withdrawal, though penalties may apply.​​`,
-              },
-              {
-                heading: "2. Liquidate",
-                para: `If your money is in market-linked instruments like mutual funds, stocks, or gold ETFs, selling them at the right time can help you generate funds. For example, if your mutual fund investments have grown in value, redeeming them at a profitable point can contribute to your down payment.`,
-              },
-              {
-                heading: "3. Using the Funds for a Down Payment​",
-                para: `After withdrawing or liquidating investments, you can use the available cash to pay for your home’s down payment. If planned well, the returns from your investments can reduce the financial burden and help you reach your goal faster.`,
-              },
-            ],
-          }}
+          contents={content.withdrawAndPay}
         />
       </div>
 
       <!-- invest and save -->
       <div data-section="invest" id="invest" class="">
         <AboveTitleWithTopIconCard
-          contents={{
-            heading: `Smart Investment Options to Fund Your Down Payment`,
-            xlGridCol: 2,
-            borderBottom: true,
-            list: [
-              {
-                heading:
-                  "Fixed Deposits (FDs) or <br> Recurring Deposits (RDs)",
-                icon: "/icons/FD.svg",
-                altName: "fd-icon",
-                desc: [
-                  `<span class="font-semibold">How to Invest:</span> Open an FD or RD account with a bank or post office. Choose a tenure and deposit amount.`,
-                  `<span class="font-semibold">Duration:</span> 6 months to 5 years`,
-                  `<span class="font-semibold">Returns:</span> 5-7% per annum`,
-                  `<span class="font-semibold">Risk:</span> Low (returns are guaranteed)`,
-                  `<span class="font-semibold">Best for:</span> Those looking for safe investments with predictable returns.`,
-                ],
-              },
-              {
-                heading: "Mutual Funds <br> (SIP or Lump Sum)",
-                icon: "/icons/mutualFund.svg",
-                altName: "fund-icon",
-                desc: [
-                  `<span class="font-semibold">How to Invest:</span> Invest through a Systematic Investment Plan (SIP) or a lump sum via platforms like mutual fund websites or brokerage apps.`,
-                  `<span class="font-semibold">Duration:</span> 3-5 years for equity funds, 1-3 years for debt funds`,
-                  `<span class="font-semibold">Returns:</span> 10-15% per annum (historical average for equity funds)`,
-                  `<span class="font-semibold">Risk:</span> Medium to High (market fluctuations affect returns)`,
-                  `<span class="font-semibold">Best for:</span> Investors willing to take moderate risks for higher returns.`,
-                ],
-              },
-              {
-                heading: "Stocks (Direct Equity Investment)",
-                icon: "/icons/stocks.svg",
-                altName: "stocks-icon",
-                desc: [
-                  `<span class="font-semibold">How to Invest:</span> Open a Demat and trading account, research companies, and invest in shares.`,
-                  `<span class="font-semibold">Duration:</span> 3+ years for stable returns`,
-                  `<span class="font-semibold">Returns:</span> 12-20% per annum (historically, but varies)`,
-                  `<span class="font-semibold">Risk:</span> High (stock market volatility)`,
-                  `<span class="font-semibold">Best for:</span> Those who can analyze the market and take calculated risks.`,
-                ],
-              },
-              {
-                heading: "Real Estate (Short-Term Investment)",
-                icon: "/icons/financialProfile.svg",
-                altName: "profile-icon",
-                desc: [
-                  `<span class="font-semibold">How to Invest:</span> Buy undervalued properties and sell when prices appreciate.`,
-                  `<span class="font-semibold">Duration:</span> 2-5 years for decent appreciation`,
-                  `<span class="font-semibold">Returns:</span> 8-15% (depending on location and market conditions)`,
-                  `<span class="font-semibold">Risk:</span> Medium to High (depends on market trends and liquidity)`,
-                  `<span class="font-semibold">Best for:</span> Those with higher capital and a longer investment horizon.`,
-                ],
-              },
-              {
-                heading: "Gold and Silver Investments",
-                icon: "/icons/goldLoan.svg",
-                altName: "gold-icon",
-                desc: [
-                  `<span class="font-semibold">How to Invest:</span> Buy physical gold/silver, ETFs, or digital gold.`,
-                  `<span class="font-semibold">Duration:</span> 1-3 years`,
-                  `<span class="font-semibold">Returns:</span> 8-12% historically`,
-                  `<span class="font-semibold">Risk:</span> Medium (gold prices fluctuate)`,
-                  `<span class="font-semibold">Best for:</span> Those looking for a hedge against inflation.`,
-                ],
-              },
-              {
-                heading: "Government Bonds or <br> Corporate Bonds",
-                icon: "/icons/apply.svg",
-                altName: "apply-icon",
-                desc: [
-                  `<span class="font-semibold">How to Invest:</span> Buy bonds through banks, stock exchanges, or bond platforms.`,
-                  `<span class="font-semibold">Duration:</span> 3-10 years`,
-                  `<span class="font-semibold">Returns:</span> 6-10% per annum`,
-                  `<span class="font-semibold">Risk:</span> Low to Medium (government bonds are safer than corporate bonds)`,
-                  `<span class="font-semibold">Best for:</span> Conservative investors seeking stable returns.`,
-                ],
-              },
-              {
-                heading: "Cryptocurrency",
-                icon: "/icons/crypto.svg",
-                altName: "crypto-icon",
-                desc: [
-                  `<span class="font-semibold">How to Invest:</span> Buy through cryptocurrency exchanges and hold for price appreciation.`,
-                  `<span class="font-semibold">Duration:</span> 1-5 years`,
-                  `<span class="font-semibold">Returns:</span> Unpredictable (potential for high gains or losses)`,
-                  `<span class="font-semibold">Risk:</span> Very High (extreme market fluctuations)`,
-                  `<span class="font-semibold">Best for:</span> Risk-tolerant investors willing to gamble for high returns.`,
-                ],
-              },
-              {
-                heading: "Peer-to-Peer Lending (P2P)",
-                icon: "/icons/clock.svg",
-                altName: "clock-icon",
-                desc: [
-                  `<span class="font-semibold">How to Invest:</span> Lend money through P2P platforms and earn interest.`,
-                  `<span class="font-semibold">Duration:</span> 1-3 years`,
-                  `<span class="font-semibold">Returns:</span> 10-15%`,
-                  `<span class="font-semibold">Risk:</span> Medium to High (borrower defaults can occur)`,
-                  `<span class="font-semibold">Best for:</span> Those looking for high returns outside traditional investments.`,
-                ],
-              },
-              {
-                heading: "High-Yield Savings Accounts",
-                icon: "/icons/personalLoan.svg",
-                altName: "loan-icon",
-                desc: [
-                  `<span class="font-semibold">How to Invest:</span> Open an account with a high-interest savings bank.`,
-                  `<span class="font-semibold">Duration:</span> No fixed duration (funds are liquid)`,
-                  `<span class="font-semibold">Returns:</span> 3-5%`,
-                  `<span class="font-semibold">Risk:</span> Low (safe and insured by banks)`,
-                  `<span class="font-semibold">Best for:</span> Keeping money safe while earning small returns.`,
-                ],
-              },
-              {
-                heading: "Friends and Family",
-                icon: "/icons/negotiate.svg",
-                altName: "negotiate-icon",
-                desc: [
-                  `<span class="font-semibold">How to Borrow:</span> Ask close family or friends for a loan with clear repayment terms.`,
-                  `<span class="font-semibold">Duration:</span> Flexible, depending on the agreement`,
-                  `<span class="font-semibold">Pay back:</span> Usually low or no interest`,
-                  `<span class="font-semibold">Risk:</span> Low (but could strain relationships if not repaid)`,
-                  `<span class="font-semibold">Best for:</span> Those needing quick access to funds without high-interest bank loans.`,
-                ],
-              },
-            ],
-          }}
+          contents={content.smartInvesting}
           listGridAboveLg="2"
         />
       </div>
@@ -471,14 +171,14 @@
             <h2
               class="typography-h2 text-black dark:text-white"
             >
-              {loan.heading}
+              {content.loan.heading}
             </h2>
             <p class="typography-body-md text-[var(--form-text-secondary)]">
-              {@html loan.para}
+              {@html content.loan.para}
             </p>
           </div>
           <ul class="space-y-6">
-            {#each loan.listItems as list}
+            {#each content.loan.listItems as list}
               <li class="space-y-2">
                 <h3 class="typography-body-lg !font-semibold text-black dark:text-white">
                   {@html list.heading}
@@ -487,14 +187,14 @@
               </li>
             {/each}
           </ul>
-          <Anchor link={loan.listUrl.url} linkName={loan.listUrl.linkName} />
+          <Anchor link={content.loan.listUrl.url} linkName={content.loan.listUrl.linkName} />
         </div>
       </div>
     </div>
     <div class="lg:hidden">
-      {#each navBarMedium as list, index}
+      {#each content.navBarMedium as list, index}
         <details
-          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -515,10 +215,10 @@
                 <h2
                   class="typography-h2 text-black dark:text-white"
                 >
-                  {yourSavings.heading}
+                  {content.yourSavings.heading}
                 </h2>
                 <p class="typography-body-md text-[var(--form-text-secondary)]">
-                  {@html yourSavings.para}
+                  {@html content.yourSavings.para}
                 </p>
               </div>
               <div
@@ -528,14 +228,14 @@
                   <h2
                     class="typography-h2 text-black dark:text-white"
                   >
-                    {planning.heading}
+                    {content.planning.heading}
                   </h2>
                   <p class="typography-body-md text-[var(--form-text-secondary)]">
-                    {@html planning.para}
+                    {@html content.planning.para}
                   </p>
                 </div>
                 <ul class="space-y-6">
-                  {#each planning.listItems as list}
+                  {#each content.planning.listItems as list}
                     <li class="space-y-2">
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
@@ -549,202 +249,19 @@
           {:else if index == 1}
             <div id="smart" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <AboveTitleWithTopIconCard
-                contents={{
-                  heading: `Smart savings calculators – Plan your future with confidence`,
-                  xlGridCol: 4,
-                  borderBottom: true,
-                  cards: [
-                    {
-                      heading: "Know How Long Your Savings Will Last",
-                      para: `Determine how many years your savings can support your lifestyle.`,
-                      icon: "/icons/clock.svg",
-                      altName: "clock-icon",
-                      linkName: "Check Your Savings Longevity",
-                      url: "/money-map/how-long-will-your-savings-support-you",
-                    },
-                    {
-                      heading: "Track Your Progress Towards Your Goal​",
-                      para: `Estimate the time required to reach your financial milestones.`,
-                      icon: "/icons/phoneConnection.svg",
-                      altName: "phoneConnection-icon",
-                      linkName: "Plan Your Savings Journey",
-                      url: "/money-map/how-long-will-it-take-to-save",
-                    },
-                    {
-                      heading: "Set a Target for Retirement Savings​​",
-                      para: `Calculate the amount needed for a secure and comfortable retirement.`,
-                      icon: "/icons/negotiate.svg",
-                      altName: "negotiate-icon",
-                      linkName: "Plan Your Retirement Fund",
-                      url: "/money-map/how-much-to-save-by-retirement",
-                    },
-                    {
-                      heading: "Grow Your Savings with Consistency​",
-                      para: `See how regular contributions can maximize your savings over time.`,
-                      icon: "/icons/coinHouse.svg",
-                      altName: "coinHouse-icon",
-                      linkName: "Calculate Your Future Savings",
-                      url: "/money-map/how-much-can-i-save-with-regular-contributions",
-                    },
-                  ],
-                }}
+                contents={content.smartSavings}
               />
             </div>
           {:else if index == 2}
             <div id="pay" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <AboveTitleWithoutIconCard
-                contents={{
-                  heading: `Using Saved Investments for Your Down Payment`,
-                  xlGridCol: 3,
-                  borderBottom: true,
-                  cards: [
-                    {
-                      heading: "1. Withdraw",
-                      para: `If you have investments in savings schemes like Fixed Deposits (FDs) or Recurring Deposits (RDs), you can withdraw the matured amount along with the interest earned. Some investments allow early withdrawal, though penalties may apply.​​`,
-                    },
-                    {
-                      heading: "2. Liquidate",
-                      para: `If your money is in market-linked instruments like mutual funds, stocks, or gold ETFs, selling them at the right time can help you generate funds. For example, if your mutual fund investments have grown in value, redeeming them at a profitable point can contribute to your down payment.`,
-                    },
-                    {
-                      heading: "3. Using the Funds for a Down Payment​",
-                      para: `After withdrawing or liquidating investments, you can use the available cash to pay for your home’s down payment. If planned well, the returns from your investments can reduce the financial burden and help you reach your goal faster.`,
-                    },
-                  ],
-                }}
+                contents={content.withdrawAndPay}
               />
             </div>
           {:else if index == 3}
             <div id="invest" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
               <AboveTitleWithTopIconCard
-                contents={{
-                  heading: `Smart Investment Options to Fund Your Down Payment`,
-                  xlGridCol: 2,
-                  borderBottom: true,
-                  list: [
-                    {
-                      heading:
-                        "Fixed Deposits (FDs) or <br> Recurring Deposits (RDs)",
-                      icon: "/icons/FD.svg",
-                      altName: "fd-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Invest:</span> Open an FD or RD account with a bank or post office. Choose a tenure and deposit amount.`,
-                        `<span class="font-semibold">Duration:</span> 6 months to 5 years`,
-                        `<span class="font-semibold">Returns:</span> 5-7% per annum`,
-                        `<span class="font-semibold">Risk:</span> Low (returns are guaranteed)`,
-                        `<span class="font-semibold">Best for:</span> Those looking for safe investments with predictable returns.`,
-                      ],
-                    },
-                    {
-                      heading: "Mutual Funds <br> (SIP or Lump Sum)",
-                      icon: "/icons/mutualFund.svg",
-                      altName: "fund-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Invest:</span> Invest through a Systematic Investment Plan (SIP) or a lump sum via platforms like mutual fund websites or brokerage apps.`,
-                        `<span class="font-semibold">Duration:</span> 3-5 years for equity funds, 1-3 years for debt funds`,
-                        `<span class="font-semibold">Returns:</span> 10-15% per annum (historical average for equity funds)`,
-                        `<span class="font-semibold">Risk:</span> Medium to High (market fluctuations affect returns)`,
-                        `<span class="font-semibold">Best for:</span> Investors willing to take moderate risks for higher returns.`,
-                      ],
-                    },
-                    {
-                      heading: "Stocks (Direct Equity Investment)",
-                      icon: "/icons/stocks.svg",
-                      altName: "stocks-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Invest:</span> Open a Demat and trading account, research companies, and invest in shares.`,
-                        `<span class="font-semibold">Duration:</span> 3+ years for stable returns`,
-                        `<span class="font-semibold">Returns:</span> 12-20% per annum (historically, but varies)`,
-                        `<span class="font-semibold">Risk:</span> High (stock market volatility)`,
-                        `<span class="font-semibold">Best for:</span> Those who can analyze the market and take calculated risks.`,
-                      ],
-                    },
-                    {
-                      heading: "Real Estate (Short-Term Investment)",
-                      icon: "/icons/financialProfile.svg",
-                      altName: "profile-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Invest:</span> Buy undervalued properties and sell when prices appreciate.`,
-                        `<span class="font-semibold">Duration:</span> 2-5 years for decent appreciation`,
-                        `<span class="font-semibold">Returns:</span> 8-15% (depending on location and market conditions)`,
-                        `<span class="font-semibold">Risk:</span> Medium to High (depends on market trends and liquidity)`,
-                        `<span class="font-semibold">Best for:</span> Those with higher capital and a longer investment horizon.`,
-                      ],
-                    },
-                    {
-                      heading: "Gold and Silver Investments",
-                      icon: "/icons/goldLoan.svg",
-                      altName: "gold-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Invest:</span> Buy physical gold/silver, ETFs, or digital gold.`,
-                        `<span class="font-semibold">Duration:</span> 1-3 years`,
-                        `<span class="font-semibold">Returns:</span> 8-12% historically`,
-                        `<span class="font-semibold">Risk:</span> Medium (gold prices fluctuate)`,
-                        `<span class="font-semibold">Best for:</span> Those looking for a hedge against inflation.`,
-                      ],
-                    },
-                    {
-                      heading: "Government Bonds or <br> Corporate Bonds",
-                      icon: "/icons/apply.svg",
-                      altName: "apply-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Invest:</span> Buy bonds through banks, stock exchanges, or bond platforms.`,
-                        `<span class="font-semibold">Duration:</span> 3-10 years`,
-                        `<span class="font-semibold">Returns:</span> 6-10% per annum`,
-                        `<span class="font-semibold">Risk:</span> Low to Medium (government bonds are safer than corporate bonds)`,
-                        `<span class="font-semibold">Best for:</span> Conservative investors seeking stable returns.`,
-                      ],
-                    },
-                    {
-                      heading: "Cryptocurrency",
-                      icon: "/icons/crypto.svg",
-                      altName: "crypto-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Invest:</span> Buy through cryptocurrency exchanges and hold for price appreciation.`,
-                        `<span class="font-semibold">Duration:</span> 1-5 years`,
-                        `<span class="font-semibold">Returns:</span> Unpredictable (potential for high gains or losses)`,
-                        `<span class="font-semibold">Risk:</span> Very High (extreme market fluctuations)`,
-                        `<span class="font-semibold">Best for:</span> Risk-tolerant investors willing to gamble for high returns.`,
-                      ],
-                    },
-                    {
-                      heading: "Peer-to-Peer Lending (P2P)",
-                      icon: "/icons/clock.svg",
-                      altName: "clock-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Invest:</span> Lend money through P2P platforms and earn interest.`,
-                        `<span class="font-semibold">Duration:</span> 1-3 years`,
-                        `<span class="font-semibold">Returns:</span> 10-15%`,
-                        `<span class="font-semibold">Risk:</span> Medium to High (borrower defaults can occur)`,
-                        `<span class="font-semibold">Best for:</span> Those looking for high returns outside traditional investments.`,
-                      ],
-                    },
-                    {
-                      heading: "High-Yield Savings Accounts",
-                      icon: "/icons/personalLoan.svg",
-                      altName: "loan-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Invest:</span> Open an account with a high-interest savings bank.`,
-                        `<span class="font-semibold">Duration:</span> No fixed duration (funds are liquid)`,
-                        `<span class="font-semibold">Returns:</span> 3-5%`,
-                        `<span class="font-semibold">Risk:</span> Low (safe and insured by banks)`,
-                        `<span class="font-semibold">Best for:</span> Keeping money safe while earning small returns.`,
-                      ],
-                    },
-                    {
-                      heading: "Friends and Family",
-                      icon: "/icons/negotiate.svg",
-                      altName: "negotiate-icon",
-                      desc: [
-                        `<span class="font-semibold">How to Borrow:</span> Ask close family or friends for a loan with clear repayment terms.`,
-                        `<span class="font-semibold">Duration:</span> Flexible, depending on the agreement`,
-                        `<span class="font-semibold">Pay back:</span> Usually low or no interest`,
-                        `<span class="font-semibold">Risk:</span> Low (but could strain relationships if not repaid)`,
-                        `<span class="font-semibold">Best for:</span> Those needing quick access to funds without high-interest bank loans.`,
-                      ],
-                    },
-                  ],
-                }}
+                contents={content.smartInvesting}
                 listGridAboveLg="2"
               />
             </div>
@@ -757,14 +274,14 @@
                   <h2
                     class="typography-h2 text-black dark:text-white"
                   >
-                    {loan.heading}
+                    {content.loan.heading}
                   </h2>
                   <p class="typography-body-md text-[var(--form-text-secondary)]">
-                    {@html loan.para}
+                    {@html content.loan.para}
                   </p>
                 </div>
                 <ul class="space-y-6">
-                  {#each loan.listItems as list}
+                  {#each content.loan.listItems as list}
                     <li class="space-y-2">
                       <h3 class="font-semibold typography-body-md">
                         {@html list.heading}
@@ -776,8 +293,8 @@
                   {/each}
                 </ul>
                 <Anchor
-                  link={loan.listUrl.url}
-                  linkName={loan.listUrl.linkName}
+                  link={content.loan.listUrl.url}
+                  linkName={content.loan.listUrl.linkName}
                 />
               </div>
             </div>
@@ -787,54 +304,13 @@
     </div>
     <div slot="secondary">
       <HelpList
-        contents={{
-          heading: `We're here to help`,
-          xlGridCol: 4,
-          borderBottom: true,
-          cards: [
-            {
-              heading: "Book an </br> appointment",
-              para: "Book instantly to speak to a personal loan specialist at a time that suits you",
-              icon: "/icons/appointment.svg",
-              altName: "appointment Icon",
-              url: "/appointment",
-            },
-            {
-              heading: "Check loan offers",
-              para: "In as little as 10 minutes and tailored exactly as per your financial profile.",
-              icon: "/icons/manageLoan2.svg",
-              altName: "Alert Icon",
-              url: "/get-started/how-can-we-help",
-            },
-            {
-              heading: "Contact us",
-              para: "Fast-track your call and connect with a specialist in the Digital DSA.",
-              icon: "/icons/contact.svg",
-              altName: "Alert Icon",
-              url: "/contact",
-            },
-            {
-              heading: "Message us",
-              para: `Get instant help from our online assistants  or chat to a specialist.`,
-              icon: "/icons/msg.svg",
-              altName: "Alert Icon",
-              url: "/contact",
-            },
-          ],
-        }}
+        contents={content.help}
       />
       <ThingsYouShould
-        thinkKnow={{
-          heading: `Things you should know`,
-          paraGraph: [
-            `<span class="font-semibold">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-semibold">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.`,
-            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions.`,
-          ],
-        }}
+        thinkKnow={content.thingsYouShould}
         disc="list-decimal"
       ></ThingsYouShould>
     </div>
   </SecondPageLayout>
 </section>
+

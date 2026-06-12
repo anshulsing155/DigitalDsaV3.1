@@ -1,0 +1,97 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Essential Loan Guides & Disclosures | Compare Loan Options",
+    "image": "/images/who-we-are.jpg",
+    "description": "Find key loan disclosures, benefits, and eligibility details. Compare secured & unsecured loans from 50+ banks for informed financial decisions.",
+    "keywords": "loan services, secured loans, unsecured loans, home loans, mortgage loans, plot loans, business loans, personal loans, financial disclosure, loan eligibility, bank partnerships, loan benefits, interest rates, loan comparison"
+  },
+  "pageData": {
+    "heroHeading": "Important Information",
+    "heroParagraph": "Find essential guides and disclosures about our loan services, eligibility criteria, and partnerships with over 50 banks to help you make informed financial decisions."
+  },
+  "navBarLarge": [
+    {
+      "name": "Financial Services Information",
+      "targetId": "FinancialServicesGuides"
+    },
+    {
+      "name": "Loan Features & Benefits",
+      "targetId": "ProductDisclosureStatements"
+    },
+    {
+      "name": "Loan Categories",
+      "targetId": "Productcategories"
+    }
+  ],
+  "navBarMedium": [
+    "Financial Services Information",
+    "Loan Features & Benefits",
+    "Loan Categories"
+  ],
+  "serviceGuide": {
+    "heading": "Financial Services Information",
+    "para": "Before applying for any loan or financial product, we recommend reviewing our financial services guide, which outlines the products we compare and services we offer. This will provide clarity before making important financial decisions."
+  },
+  "disclosure": {
+    "heading": "Loan Features & Benefits",
+    "list": [
+      "Our Loan Disclosure Statements provide comprehensive information about loan products, including features, benefits, interest rates, fees, and potential risks.",
+      "Digital DSA partners with leading banks to offer electronic access to product information and terms for your convenience."
+    ]
+  },
+  "contents": [
+    {
+      "id": 1,
+      "title": "Secured Loans",
+      "links": [
+        { "id": 1, "name": "Home Loans", "url": "/home-loan" },
+        { "id": 2, "name": "Mortgage Loans", "url": "/lap" },
+        { "id": 3, "name": "Plot Loans", "url": "/plot-loan" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Unsecured Loans",
+      "links": [
+        { "id": 1, "name": "Business Loans", "url": "/business-loan" },
+        { "id": 2, "name": "Personal Loans", "url": "/personal-loan" },
+        { "id": 3, "name": "Professional Loans", "url": "/professional-loan" }
+      ]
+    }
+  ],
+  "help": {
+    "heading": "We're here to help",
+    "xlGridCol": 4,
+    "cards": [
+      {
+        "heading": "Book an </br> appointment",
+        "para": "Book instantly to speak to a home loan specialist at a time that suits you",
+        "icon": "/icons/appointment.svg",
+        "altName": "appointment Icon",
+        "url": "/appointment"
+      },
+      {
+        "heading": "Check loan offers",
+        "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+        "icon": "/icons/manageLoan2.svg",
+        "altName": "Alert Icon",
+        "url": "/get-started/how-can-we-help"
+      },
+      {
+        "heading": "Contact us",
+        "para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+        "icon": "/icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      },
+      {
+        "heading": "Message us",
+        "para": "Get instant help from our online assistants  or chat to a specialist.",
+        "icon": "/icons/msg.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      }
+    ]
+  }
+}
