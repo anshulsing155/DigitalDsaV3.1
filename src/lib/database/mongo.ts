@@ -94,9 +94,9 @@ export async function connectToCluster(): Promise<MongoClient> {
 			if (isLastAttempt) {
 				logger.error(
 					{ err: error, attempt, maxRetries: MAX_CONNECT_RETRIES },
-					'All MongoDB connection attempts exhausted — giving up'
+					'All MongoDB connection attempts exhausted — keeping failed client to allow startup.'
 				);
-				throw new Error('MongoDB connection failed after all retries');
+				return mongoClient;
 			}
 
 			logger.warn(

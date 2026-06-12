@@ -75,6 +75,24 @@
 		})
 	});
 
+	const toolsThreeColumnWithClicks = $derived({
+		...content.tools.threeColumn,
+		cardData: content.tools.threeColumn.cardData.map((card) => {
+			if (card.needLoanName) {
+				return {
+					...card,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Home Loan';
+							return data;
+						});
+					}
+				};
+			}
+			return card;
+		})
+	});
+
 	const toggleDropdown = (event: Event, index: number) => {
 		event.preventDefault();
 		const summaryElement = event.currentTarget as HTMLElement;
@@ -213,5 +231,177 @@
 	keywords="Home loan balance transfer, Transfer home loan to another bank, Lower home loan interest rate, Home loan EMI savings, Best home loan transfer offers, Home loan refinance, Reduce home loan EMI, Compare home loan rates, Home loan prepayment options, Home loan top-up loan, Home loan eligibility checker, Home loan transfer calculator, Home loan balance transfer process, Lowest home loan interest rates, Best home loan lenders"
 />
 
-<section>
+<section class="mx-auto w-full bg-mainBg xl:container">
+	<NewPageLayout pageData={pageDataWithClicks}>
+		<!-- desktop view -->
+		<div class="hidden lg:block">
+			<StickyNavbar navList={navListWithClicks} {activeSection} />
+
+			<div id="whyRefinance" data-section="whyRefinance">
+				<AboveTitleWithTopIconCard contents={content.whyRefinance.contents} />
+			</div>
+
+			<div id="whenAvoid" data-section="whenAvoid">
+				<AboveTitleWithTopIconCard contents={content.whenAvoid.contents} />
+			</div>
+
+			<div id="how" data-section="how">
+				<TwoColumnWithLeftHeading contents={content.how.contents} />
+				
+				{#if content.how.exampleTableData}
+					<div class="py-12 border-b border-[var(--form-border)] px-[1rem] lg:px-16">
+						<h3 class="typography-body-lg !font-semibold text-black dark:text-white mb-6">
+							{content.how.tableHeading}
+						</h3>
+						{#each content.how.exampleTableData as table}
+							<PaymentTable tableData={table} />
+						{/each}
+					</div>
+				{/if}
+
+				<ButtonBanner contents={content.how.buttonBanner} />
+			</div>
+
+			<div id="help" data-section="help">
+				<TwoColumnWithImage contents={content.help.contents}>
+					<div class="typography-body-sm text-text-light">
+						<ul class="list-disc space-y-4 typography-body-md text-text-light">
+							{#each content.help.list as item}
+								<li class="flex items-start gap-2">
+									<img src="/icons/circle-check.svg" alt="Check icon" class="h-5 mt-1" />
+									<p>
+										<span class="font-semibold">{item.bold}</span>
+										{@html item.text}
+									</p>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				</TwoColumnWithImage>
+			</div>
+
+			<div id="tools" data-section="tools">
+				<ThreeColumWithLeftHeading contents={toolsThreeColumnWithClicks} />
+				<AboveTitleWithBlackCard contents={content.tools.blackCard} />
+				<AboveTitleWithTopIconCard contents={content.tools.topIconCard} />
+			</div>
+		</div>
+
+		<!-- mobile view -->
+		<div class="block lg:hidden">
+			{#each content.mobileNavbarTitle as list, index (list)}
+				<details
+					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					content.mobileNavbarTitle.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
+				>
+					<summary
+						class="list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="flex items-center justify-between font-semibold typography-body-md">
+							<h2 class="text-black dark:text-white">{list}</h2>
+							<span
+								><i
+									class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
+								></i></span
+							>
+						</div>
+					</summary>
+
+					{#if index == 0}
+						<div
+							id="whyRefinance"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
+							<AboveTitleWithTopIconCard contents={content.whyRefinance.contents} />
+						</div>
+					{:else if index == 1}
+						<div id="whenAvoid" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+							<AboveTitleWithTopIconCard contents={content.whenAvoid.contents} />
+						</div>
+					{:else if index == 2}
+						<div
+							id="how"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
+							<TwoColumnWithLeftHeading contents={content.how.contents} />
+							
+							{#if content.how.exampleTableData}
+								<div class="py-12 border-b border-[var(--form-border)] px-[0.5rem]">
+									<h3 class="typography-body-lg !font-semibold text-black dark:text-white mb-6">
+										{content.how.tableHeading}
+									</h3>
+									{#each content.how.exampleTableData as table}
+										<PaymentTable tableData={table} />
+									{/each}
+								</div>
+							{/if}
+
+							<ButtonBanner contents={content.how.buttonBanner} />
+						</div>
+					{:else if index == 3}
+						<div
+							id="help"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
+							<TwoColumnWithImage contents={content.help.contents}>
+								<div class="typography-body-sm text-text-light">
+									<ul class="list-disc space-y-4 typography-body-md text-text-light">
+										{#each content.help.list as item}
+											<li class="flex items-start gap-2">
+												<img src="/icons/circle-check.svg" alt="Check icon" class="h-5 mt-1" />
+												<p>
+													<span class="font-semibold">{item.bold}</span>
+													{@html item.text}
+												</p>
+											</li>
+										{/each}
+									</ul>
+								</div>
+							</TwoColumnWithImage>
+						</div>
+					{:else if index == 4}
+						<div
+							id="tools"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+						>
+							<ThreeColumWithLeftHeading contents={toolsThreeColumnWithClicks} />
+							<AboveTitleWithBlackCard contents={content.tools.blackCard} />
+							<AboveTitleWithTopIconCard contents={content.tools.topIconCard} />
+						</div>
+					{/if}
+				</details>
+			{/each}
+		</div>
+
+		<!-- message us -->
+		<TwoColumnWithImage contents={content.messageUs.contents}>
+			<p class="typography-body-md text-[var(--form-text-secondary)]">{content.messageUs.para}</p>
+			<div class="w-auto">
+				<Button
+					link={content.messageUs.button.link}
+					btnBorder={content.messageUs.button.btnBorder}
+					btnName={content.messageUs.button.btnName}
+				/>
+			</div>
+		</TwoColumnWithImage>
+
+		<FeedbackCheck />
+
+		<div slot="secondary">
+			<HelpList contents={content.common_components.helpList.contents} />
+			<ThingsYouShould
+				thinkKnow={content.common_components.thinkYouShouldKnow.thinkKnow}
+				disc={content.common_components.thinkYouShouldKnow.disc}
+			/>
+		</div>
+	</NewPageLayout>
 </section>
+
+<style>
+	.section {
+		scroll-margin-top: 4rem;
+	}
+</style>
