@@ -225,7 +225,9 @@
 						<div class="flex flex-col gap-4">
 							{#each content.documentsGuide as guide}
 								<div class="flex flex-col gap-2">
-									<p class="typography-body-md text-[var(--form-text-secondary)]">{guide.para}</p>
+									<p class="typography-body-md text-[var(--form-text-secondary)]">
+										{guide.para}
+									</p>
 
 									{#each guide.lists as list, index}
 										<li
@@ -360,10 +362,7 @@
 					<Guides guide={content.getStart} />
 					<!-- <HelpList contents={content.}></HelpList> -->
 
-					<ThingsYouShould
-						thinkKnow={content.thinkKnow}
-						disc="list-decimal"
-					></ThingsYouShould>
+					<ThingsYouShould thinkKnow={content.thinkKnow} disc="list-decimal"></ThingsYouShould>
 				</section>
 			</div>
 		</div>
@@ -426,17 +425,21 @@
 								<div class="flex flex-col gap-4">
 									{#each content.documentsGuide as guide}
 										<div class="flex flex-col gap-2">
-											<p class="typography-body-sm text-text-light">
+											<p class="typography-body-md text-[var(--form-text-secondary)]">
 												{guide.para}
 											</p>
 
 											{#each guide.lists as list, index}
-												<li class="typography-body-md list-none font-semibold">
+												<li
+													class="typography-body-md list-none !font-semibold text-[var(--form-text-secondary)]"
+												>
 													{index + 1}. {list.heading}
 												</li>
 												<ul class="pl-4">
 													{#each list.subList as subList}
-														<li class="typography-body-md list-disc text-text-light">
+														<li
+															class="typography-body-md list-disc text-[var(--form-text-secondary)]"
+														>
 															{subList.list}
 														</li>
 													{/each}
