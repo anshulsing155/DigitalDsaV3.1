@@ -13,247 +13,50 @@
   import TwoColumnWithImage from "$lib/components/website/TwoColumnWithImage.svelte";
   import FeedbackCheck from "$lib/components/website/FeedbackCheck.svelte";
   import HelpList from "$lib/components/website/HelpList.svelte";
-
-  // Define type for loan factors
-  type LoanFactor = {
-    icon: "cash" | "bank" | "receipt" | "chart";
-    title: string;
-    description: string;
-    importance: string;
-  };
+  import content from "$lib/data/website/businessLoan.json";
 
   // Icon mapping for cleaner rendering
-  const iconMap: Record<LoanFactor["icon"], string> = {
+  const iconMap: Record<string, string> = {
     cash: "💰",
     bank: "🏦",
     receipt: "📄",
     chart: "📈",
   };
 
-  // Static loan factors data
-  const loanFactors: LoanFactor[] = [
-    {
-      icon: "cash",
-      title: "Cash Income",
-      description:
-        "Banks assess your daily and monthly cash inflows through bank statements, determining your regular income patterns.",
-      importance:
-        "Primary factor for small retailers and service-based businesses without formal accounting.",
-    },
-    {
-      icon: "bank",
-      title: "Monthly Average Balance (MAB)",
-      description:
-        "Your account’s average daily balance over a month shows financial stability and liquidity.",
-      importance:
-        "Critical for evaluating cash flow management and working capital efficiency.",
-    },
-    {
-      icon: "receipt",
-      title: "GST Turnover",
-      description:
-        "Your GSTR filings demonstrate business volume and formalization level, with banks typically offering 10-20% of annual turnover.",
-      importance:
-        "Highly weighted for registered businesses with consistent filing history.",
-    },
-    {
-      icon: "chart",
-      title: "Yearly Net Profit",
-      description:
-        "Income tax returns and financial statements reveal profitability, with loans typically capped at 3-6 times annual profit.",
-      importance:
-        "The gold standard for established businesses with proper financial records.",
-    },
-  ];
-
   // State for toggling visibility
-  let visible = true;
-
-  // Toggle visibility function
-  function toggleVisibility() {
-    visible = !visible;
-  }
+  let visible = $state(true);
 </script>
 
 <Seo
-  type="WebPage"
-  title="Business Loans & Financing – Fast, Easy & Tailored Solutions"
-  image="/images/business-loan-blog.jpg"
-  description="Get quick, tailored business loans with instant decisions. Compare offers, lower interest rates & apply online hassle-free. Start now!"
-  keywords="Business loans, Small business financing, Fast business loan approval, Working capital loan, Term loan for business, Equipment financing, Business expansion loan, Best business loan rates, Compare business loans, Government business loan schemes, Business loan eligibility, Low-interest business loan, Quick business funding, Secure business financing, Online business loan application"
+  type={content.seo.type}
+  title={content.seo.title}
+  image={content.seo.image}
+  description={content.seo.description}
+  keywords={content.seo.keywords}
 />
 
 <section class="content">
   <NewPageLayout
-    pageData={{
-      coverImage: "/images/business-loan-blog.jpg",
-      coverAlt: "hero-cover",
-      actionBtnsRequired: "",
-      sourceName: "undefined",
-      originalSource:
-        "https://assets.undefined.com.au/is/image/undefined/family-new-home?$Responsive_Align_Center_Top$&fit=constrain&wid=978&dpr=off",
-      classStyle: "object-cover xl:h-[90svh] 3xl:max-h-[60svh]",
-      heading: "Business loans & finance",
-      subHeading: `
-        Lending solutions that work for you
-        <ul class="flex flex-col gap-4 mt-4">
-          <li class="flex gap-2 items-center typography-body-md text-[var(--form-text-secondary)]">
-            <img src="/icons/circle-check.svg" alt="check-icon" class="h-4" />
-            <p class="text-start">Tailored lending for every stage of your business journey</p>
-          </li>
-          <li class="flex gap-2 items-center typography-body-md text-[var(--form-text-secondary)]">
-            <img src="/icons/circle-check.svg" alt="check-icon" class="h-4" />
-            <p class="text-start">Fast, easy online application with instant decision, if eligible.</p>
-          </li>
-          <li class="flex gap-2 items-center typography-body-md text-[var(--form-text-secondary)]">
-            <img src="/icons/circle-check.svg" alt="check-icon" class="h-4" />
-            <p class="text-start">Get an online application experience with lender support after you submit</p>
-          </li>
-          <li class="typography-body-md text-[var(--form-text-secondary)]">
-            <p>Alternatively, book an appointment and talk through your options with a Business Lending Specialist.</p>
-          </li>
-        </ul>
-      `,
-      actionBtn: [
-        {
-          btnName: "Explore loan offers",
-          btnLink: "/get-started/how-can-we-help",
-          btnColor: "#ffcc00",
-          animation: true,
-        },
-        {
-          btnName: "Book an appointment",
-          btnLink: "/appointment",
-          btnBorder: "#4F4C4D",
-        },
-      ],
-    }}
+    pageData={content.pageData}
   >
-    <Sublist
-      subList={[
-        {
-          linkName: "Uses of business loan",
-          url: `/business-loan#uses`,
-          icon: "/icons/features.svg",
-          altName: "feature-icon",
-        },
-        {
-          linkName: "Loans for business",
-          url: `/business-loan#business`,
-          icon: "/icons/mutualFund.svg",
-          altName: "loan-icon",
-        },
-        {
-          linkName: "Why choose us",
-          url: `/business-loan#why`,
-          icon: "/icons/negotiate.svg",
-          altName: "hands-icon",
-        },
-        {
-          linkName: "Tools & calculator",
-          url: `/business-loan#tools`,
-          icon: "/icons/calc.svg",
-          altName: "calculator-icon",
-        },
-        {
-          linkName: "Support",
-          url: `/business-loan#support`,
-          icon: "/icons/comparison.svg",
-          altName: "loan-icon",
-        },
-      ]}
-    />
+    <Sublist subList={content.subList} />
 
     <div id="uses" data-section="uses" class="section">
-      <AboveTitleWithTopIconCard
-        contents={{
-          heading: `Uses of business loan`,
-          xlGridCol: 3,
-          borderBottom: true,
-          cards: [
-            {
-              heading: "Business Expansion & Growth",
-              para: `Scaling a business requires capital for opening new locations, increasing production capacity, or entering new markets. A term loan provides the necessary funding to fuel growth without disrupting cash flow. This helps businesses seize opportunities at the right time and stay ahead of competitors.`,
-              icon: "/icons/expansion.svg",
-              altName: "growth-icon",
-            },
-            {
-              heading: "Working Capital Management",
-              para: "Every business needs steady cash flow to cover operational expenses like salaries, rent, and inventory. A business loan ensures smooth day-to-day operations, especially during seasonal fluctuations or unexpected cash crunches. This helps maintain financial stability and avoid disruptions.",
-              icon: "/icons/coinHouse.svg",
-              altName: "capital-icon",
-            },
-            {
-              heading: "Equipment & Machinery Purchase",
-              para: "Upgrading or purchasing new machinery and equipment is essential for businesses in manufacturing, healthcare, and other industries. A term loan helps finance these high-cost investments, improving efficiency, productivity, and overall output without straining existing capital.",
-              icon: "/icons/plotConstLoan.svg",
-              altName: "equipment-icon",
-            },
-            {
-              heading: "Debt Consolidation & Refinancing",
-              para: "Managing multiple high-interest debts can be challenging. A business loan allows companies to consolidate existing liabilities into a single, structured repayment plan with better terms. This reduces financial burden, improves credit health, and enhances overall cash flow management.",
-              icon: "/icons/emiIcon.svg",
-              altName: "card-icon",
-            },
-            {
-              heading: "Infrastructure & Renovation",
-              para: "Expanding office space, upgrading warehouses, or renovating retail stores often requires significant investment. A term loan provides the funds needed to modernize infrastructure, improve work environments, and enhance customer experience without depleting business reserves.",
-              icon: "/icons/renovateHome.svg",
-              altName: "renovate-icon",
-            },
-            {
-              heading: "Technology Upgrade & Digital Transformation",
-              para: "In today’s digital age, businesses must invest in advanced technology, such as ERP systems, cybersecurity, and cloud solutions. A business loan helps finance these upgrades, boosting efficiency, security, and competitiveness in an increasingly tech-driven market.",
-              icon: "/icons/uniqueLink.svg",
-              altName: "unique-icon",
-            },
-          ],
-        }}
-      />
+      <AboveTitleWithTopIconCard contents={content.uses} />
     </div>
 
     <div id="business" data-section="business" class="section">
-      <AboveTitleWithoutIconCard
-        contents={{
-          heading: `Loans for business`,
-          xlGridCol: 3,
-          borderBottom: true,
-          cards: [
-            {
-              heading: "Working Capital Loan",
-              para: `Working capital loans help businesses manage short-term financial needs, covering expenses like salaries, rent, utilities, and inventory during cash flow gaps or seasonal fluctuations. Unlike long-term loans, they maintain daily operations without funding expansion, ensuring business continuity.`,
-            },
-            {
-              heading: "Term Loan",
-              para: `A term loan is a fixed amount borrowed for a specific period, repaid in installments. Used for expansion, infrastructure, or asset purchases, it can be <span class="font-semibold">short-term (1-3 years)</span> or <span class="font-semibold">long-term (up to 15 years)</span>. With fixed or floating interest rates, it offers structured repayment, aiding financial planning.`,
-            },
-            {
-              heading: "Overdraft Facility",
-              para: `An overdraft facility allows businesses to withdraw beyond their account balance up to a pre-approved limit, aiding cash flow management and unexpected expenses. Interest applies only to the used amount and duration, offering flexible, cost-effective access to funds without a fixed repayment schedule.`,
-            },
-            {
-              heading: "Equipment Finance or Machinery Loan",
-              para: `Equipment finance, or a machinery loan, helps businesses acquire or upgrade equipment without draining working capital. Common in industries like manufacturing and healthcare, it offers flexible repayment, often using the equipment as collateral, boosting productivity and competitiveness.`,
-            },
-            {
-              heading: "Loans under Government Schemes",
-              para: `Governments offer subsidized loans to support SMEs, startups, and key industries. In India, schemes like <span class="font-semibold">MSME Loans under CGTMSE, Mudra Loans, and Stand-Up India</span> provide low-interest, minimal-collateral credit, promoting entrepreneurship, job creation, and economic growth.`,
-            },
-          ],
-        }}
-      />
+      <AboveTitleWithoutIconCard contents={content.loans} />
     </div>
 
     <section id="factors" class="pt-16 pb-32 px-4 lg:px-16 bg-[var(--landing-bg)] section">
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center mb-16">
           <h2 class="typography-h2 mb-4 text-black dark:text-white">
-            Key Factors in Business Loan Calculations
+            {content.loanFactorsSection.heading}
           </h2>
           <p class="typography-body-md text-[var(--form-text-secondary)]">
-            Indian banks use multiple criteria to evaluate your business loan
-            eligibility. Understanding these factors can help you optimize your
-            application and secure higher loan amounts.
+            {content.loanFactorsSection.subHeading}
           </p>
         </div>
 
@@ -262,7 +65,7 @@
             class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8"
             in:fade={{ duration: 300 }}
           >
-            {#each loanFactors as factor, i}
+            {#each content.loanFactorsSection.factors as factor, i}
               <div
                 class="card p-6 h-full flex flex-col"
                 in:fly={{
@@ -314,12 +117,10 @@
             </div>
             <div>
               <h4 class="typography-h3 mb-2 text-black dark:text-white">
-                Which factor matters most?
+                {content.loanFactorsSection.tips.heading}
               </h4>
               <p class="typography-body-md text-[var(--form-text-secondary)]">
-                Banks typically consider the <strong>highest value</strong> among
-                these factors to determine your maximum loan eligibility. However,
-                all factors are evaluated to assess your overall financial health.
+                {@html content.loanFactorsSection.tips.description}
               </p>
             </div>
           </div>
@@ -328,112 +129,25 @@
     </section>
 
     <div id="why" data-section="why" class="section">
-      <AboveTitleWithTopIconCard
-        contents={{
-          heading: `Why choose Digital DSA?`,
-          xlGridCol: 3,
-          borderBottom: true,
-          cards: [
-            {
-              heading: "Find offers in 10 minutes",
-              para: `You can unlock <a href="/get-started/how-can-we-help" class="underline hover:no-underline underline-offset-4">best business loan option</a>, tailored exactly as per your financial profile, in as little as 10 minutes`,
-              icon: "/icons/clock.svg",
-              altName: "clock-icon",
-            },
-            {
-              heading: "Negotiate your rate",
-              para: `At Digital DSA, we negotiate with lenders on your behalf, considering factors like your profile, property type, and CIBIL score, to get you the best deal possible.`,
-              icon: "/icons/negotiate.svg",
-              altName: "negotiate-icon",
-            },
-            {
-              heading: "Hyper secure",
-              para: `If you apply through us, your private info is safe with our custom-built loan platform.`,
-              icon: "/icons/phoneConnection.svg",
-              altName: "phoneConnection-icon",
-            },
-            {
-              heading: "Pay less interest on your loan",
-              para: `Make your money work harder by saving on interest and paying off your loan sooner. Don't apply without comparing.`,
-              icon: "/icons/inte.svg",
-              altName: "inte-icon",
-            },
-            {
-              heading: "Track your application",
-              para: `We keep a track of your application. Stay updated on every step, from submission to approval, with real-time status updates.`,
-              icon: "/icons/contact.svg",
-              altName: "contact-icon",
-            },
-            {
-              heading: "Access exclusive offers & discounts",
-              para: `Unlock exclusive offers & discounts with Digital DSA and get up to ₹5000 for each successful referral! Enjoy the best deals while earning rewards.`,
-              icon: "/icons/offers.svg",
-              altName: "offers-icon",
-            },
-          ],
-        }}
-      />
+      <AboveTitleWithTopIconCard contents={content.whyChooseUs} />
 
-      <ButtonBanner
-        contents={{
-          heading: `Compare business loan offers`,
-          btnName: `Find out how`,
-          btnBorder: `#4F4C4D`,
-          btnLink: "/get-started/how-can-we-help",
-        }}
-      />
+      <ButtonBanner contents={content.compareRatesBanner} />
 
       <div id="tools">
-        <AboveTitleWithBlackCard
-          contents={{
-            heading: "Business loan calculator",
-            xlGridCol: 4,
-            borderBottom: true,
-            cards: [
-              {
-                heading: "How much can I borrow?",
-                icon: "/icons/calc.svg",
-                iconAltName: "icon-calc",
-                url: "/calculators/eligibility-calculator",
-              },
-              {
-                heading: "Home loan repayments calculator",
-                icon: "/icons/lap.svg",
-                iconAltName: "loan-icon",
-                url: "/planners/part-payment-planner",
-              },
-              {
-                heading: "EMI calculator",
-                icon: "/icons/apply.svg",
-                iconAltName: "icons-apply",
-                url: "/calculators/stamp-duty-calculator",
-              },
-              {
-                heading: "Calculators & tools?",
-                icon: "/icons/calc.svg",
-                iconAltName: "icons-calc",
-                url: "/home-loan/home-loan-tools-calculator",
-              },
-            ],
-          }}
-        />
+        <AboveTitleWithBlackCard contents={content.businessLoanCalculator} />
       </div>
 
       <div id="support">
         <TwoColumnWithImage
           contents={{
-            cardImage: "/images/message.jpg",
-            cardAltName: "housing-figure",
-            cardHeading: "Message us 24/7",
-            reverse: true,
+            cardImage: content.support.cardImage,
+            cardAltName: content.support.cardAltName,
+            cardHeading: content.support.cardHeading,
+            reverse: content.support.reverse,
           }}
         >
           <p class="typography-body-md text-[var(--form-text-secondary)]">
-            Feel free to message us anytime for expert assistance with your loan
-            needs. Our team is here to provide professional advice, guide you
-            through the loan process, and help you find the best options. No
-            matter the time, we’ve got you covered! Message us anytime, and
-            we’ll respond promptly.
+            {content.support.para}
           </p>
           <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
         </TwoColumnWithImage>
@@ -444,52 +158,10 @@
 
     <div slot="secondary">
       <HelpList
-        contents={{
-          heading: `We're here to help`,
-          xlGridCol: 4,
-          borderBottom: true,
-          cards: [
-            {
-              heading: "Book an </br> appointment",
-              para: "Book instantly to speak to a business loan specialist at a time that suits you",
-              icon: "/icons/appointment.svg",
-              iconAltName: "appointment Icon",
-              url: "/appointment",
-            },
-            {
-              heading: "Check loan offers",
-              para: "In as little as 10 minutes and tailored exactly as per your financial profile.",
-              icon: "/icons/manageLoan2.svg",
-              iconAltName: "Alert Icon",
-              url: "/get-started/how-can-we-help",
-            },
-            {
-              heading: "Contact us",
-              para: "Fast-track your call and connect with a specialist in the Digital DSA.",
-              icon: "/icons/contact.svg",
-              iconAltName: "Alert Icon",
-              url: "/contact",
-            },
-            {
-              heading: "Message us",
-              para: `Get instant help from our online assistants or chat to a specialist.`,
-              icon: "/icons/msg.svg",
-              iconAltName: "Alert Icon",
-              url: "/contact",
-            },
-          ],
-        }}
+        contents={content.common_components.helpList}
       />
       <ThingsYouShould
-        thinkKnow={{
-          heading: `Things you should know`,
-          paraGraph: [
-            `<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-            `<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-            `<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-            `<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`,
-          ],
-        }}
+        thinkKnow={content.common_components.thinkYouShouldKnow}
         disc="list-decimal"
       />
     </div>
