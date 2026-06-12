@@ -71,7 +71,7 @@
   let currentYear = new Date().getFullYear();
 </script>
 
-<section class="relative z-20 w-full border-t border-dividerColor bg-[var(--landing-bg)]">
+<section class="relative z-20 w-full border-t border-[var(--form-border)] bg-[var(--landing-bg)]">
   <div class="relative">
     <div
       class="relative mx-auto flex w-full flex-col gap-4 lg:w-11/12 xl:w-10/12 2xl:w-[89.5%]"
@@ -104,7 +104,7 @@
           {/each}
         {/each}
       </nav>
-      <div class="h-[1px] w-full bg-dividerColor"></div>
+      <div class="h-[1px] w-full bg-[var(--form-border)]"></div>
 
       <div
         class="flex flex-col gap-2 py-4 text-center justify-center items-center px-[1rem] typography-body-sm lg:px-[4rem] text-[var(--form-text-secondary)]"
