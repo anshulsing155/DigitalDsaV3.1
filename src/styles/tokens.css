@@ -1,0 +1,343 @@
+/* Store design tokens only.
+Tokens are the foundation of the design system. */
+
+@theme {
+	--font-primary: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+	/* ============================================================ */
+
+	/* Success */
+	--ddsa-success-50: #ecfdf5;
+	--ddsa-success-100: #d1fae5;
+	--ddsa-success-500: #10b981;
+	--ddsa-success-600: #059669;
+	--ddsa-success-700: #047857;
+
+	/* Warning */
+	--ddsa-warning-50: #fffbeb;
+	--ddsa-warning-100: #fef3c7;
+	--ddsa-warning-500: #f59e0b;
+	--ddsa-warning-600: #d97706;
+	--ddsa-warning-700: #b45309;
+
+	/* Error */
+	--ddsa-error-50: #fef2f2;
+	--ddsa-error-100: #fee2e2;
+	--ddsa-error-500: #ef4444;
+	--ddsa-error-600: #dc2626;
+	--ddsa-error-700: #b91c1c;
+
+	/* Info */
+	--ddsa-info-50: #eff6ff;
+	--ddsa-info-100: #dbeafe;
+	--ddsa-info-500: #3b82f6;
+	--ddsa-info-600: #2563eb;
+	--ddsa-info-700: #1d4ed8;
+
+	/* --breakpoint-*: initial; */
+	--breakpoint-mobile: 375px;
+	--breakpoint-sm: 480px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 976px;
+
+	--ddsa-bg-overlay: rgba(0, 0, 0, 0.5);
+
+	/* --- Primary Colors (Updated for DigitalDSA) --- */
+
+	/* color  */
+	--gradient-primary: linear-gradient(
+		135deg,
+		var(--ddsa-primary-500) 0%,
+		var(--ddsa-accent-500) 100%
+	);
+
+	--layout-sidebar-width: 280px;
+	--layout-content-width: 56rem;
+	--layout-bottom-nav-height: 80px;
+	--layout-right-panel-width: 380px;
+	--layout-context-panel-width: 380px;
+
+	--radius-sm: 0.5rem;
+	--radius-md: 0.75rem;
+	--radius-lg: 1rem;
+
+	--landing-glass-blur: 16px;
+	--dash-glass-blur: 12px;
+
+	--panel-icon-size: 44px;
+
+	--sidebar-gradient: linear-gradient(165deg, #1e2430 0%, #151a24 50%, #0f1318 100%);
+	--sidebar-text: rgba(255, 255, 255, 0.85);
+	--sidebar-text-muted: rgba(255, 255, 255, 0.45);
+
+	/* Sidebar Surfaces */
+	--sidebar-surface: rgba(255, 255, 255, 0.04);
+	--sidebar-surface-hover: rgba(255, 255, 255, 0.06);
+
+	/* Sidebar Borders */
+	--sidebar-border: rgba(255, 255, 255, 0.08);
+
+	/* Sidebar Text */
+	--sidebar-text-primary: rgba(255, 255, 255, 0.9);
+	--sidebar-text-secondary: rgba(255, 255, 255, 0.7);
+
+	/* Scrollbar */
+	--sidebar-scrollbar: rgba(255, 255, 255, 0.15);
+	--sidebar-scrollbar-hover: rgba(255, 255, 255, 0.25);
+
+	/* Warning */
+	--warning-surface: rgba(245, 158, 11, 0.06);
+	--warning-surface-hover: rgba(245, 158, 11, 0.08);
+	--warning-border: rgba(245, 158, 11, 0.15);
+	--warning-text: #b45309;
+	--warning-text-muted: #92400e;
+
+	/* Accent / Tips */
+	--tips-surface: rgba(203, 153, 126, 0.06);
+	--tips-surface-hover: rgba(203, 153, 126, 0.08);
+	--tips-border: rgba(203, 153, 126, 0.12);
+	--tips-text: #cb997e;
+	--tips-text-muted: #b08968;
+
+	/* Danger */
+	--danger-surface: rgba(239, 68, 68, 0.06);
+	--danger-surface-hover: rgba(239, 68, 68, 0.08);
+	--danger-border: rgba(239, 68, 68, 0.15);
+	--danger-text: #dc2626;
+	--danger-text-muted: #b91c1c;
+
+	/* --- Buttons & States ---  (it doesn't work anywhere in the code)*/
+	/* --button-text: var(--ddsa-white);
+	--button-secondary-text: var(--ddsa-secondary-900);
+	--button-disabled-bg: var(--ddsa-gray-300);
+	--button-disabled-text: var(--ddsa-gray-700); */
+
+	/* Save Button */
+	--color-save: #7c3aed;
+	--color-save-border: rgba(139, 92, 246, 0.45);
+	--color-save-bg: rgba(139, 92, 246, 0.12);
+	--color-save-bg-hover: rgba(139, 92, 246, 0.2);
+	--color-save-border-hover: rgba(139, 92, 246, 0.7);
+
+	/* Stepper Icons */
+	--stepper-node-size: 24px;
+	--stepper-dot-size: 6px;
+	--stepper-line-width: 2px;
+	--stepper-icon-empty: var(--dash-text-secondary);
+	--stepper-icon-filled: var(--ddsa-primary-500);
+	--stepper-icon-focused: var(--ddsa-primary-500);
+	--stepper-icon-disabled: var(--form-text-muted);
+	--stepper-icon-border-active: color-mix(in srgb, var(--ddsa-primary-500) 35%, var(--form-border));
+	--stepper-icon-shadow: 0 0 8px color-mix(in srgb, var(--ddsa-primary-500) 40%, transparent);
+
+	/* Select */
+	--select-border: var(--form-border);
+	--select-border-hover: var(--form-border-hover);
+	--select-border-active: var(--ddsa-primary-500);
+	--select-bg: var(--form-bg-input);
+	--select-bg-filled: var(--form-bg-card);
+	--select-bg-disabled: var(--form-bg-disabled);
+	--select-text: var(--form-text);
+	--select-text-muted: var(--form-text-muted);
+	--select-radius: 1rem;
+	--select-shadow-hover: 0 1px 2px rgba(0, 0, 0, 0.05);
+	--select-shadow-focus:
+		0 0 0 1px color-mix(in srgb, var(--ddsa-primary-500) 45%, transparent),
+		0 8px 20px -6px rgba(16, 185, 129, 0.18);
+
+	/* Select Dropdown */
+	--select-dropdown-border: var(--ddsa-primary-200);
+	--select-dropdown-bg: var(--form-bg-card);
+	--select-dropdown-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+	/* Select Options */
+	--select-option-hover: linear-gradient(
+		135deg,
+		var(--ddsa-primary-100) 0%,
+		var(--ddsa-primary-50) 100%
+	);
+	--select-option-selected: var(--gradient-primary);
+	--select-option-selected-hover: linear-gradient(
+		135deg,
+		var(--ddsa-primary-600) 0%,
+		var(--ddsa-accent-600) 100%
+	);
+
+	--spinner-ring-border: rgba(255, 255, 255, 0.3);
+
+	/* Scrollbars */
+	--scrollbar-track: var(--form-bg-alt);
+	--scrollbar-thumb: var(--ddsa-primary-300);
+	--scrollbar-thumb-hover: var(--ddsa-primary-400);
+
+	/* Select Scroll Fade */
+	--select-scroll-fade-height: 24px;
+	--select-scroll-fade-offset: 2px;
+	--select-scroll-fade-shadow-top: inset 0 6px 6px -4px rgba(0, 0, 0, 0.06);
+	--select-scroll-fade-shadow-bottom: inset 0 -6px 6px -4px rgba(0, 0, 0, 0.06);
+
+	/* --------------------------------------------------------------------------
+   					DEPRECATED TOKENS
+   -------------------------------------------------------------------------- */
+
+	/* ==========================================================================
+	⚠️ DEPRECATED - Legacy Alias Tokens
+
+	These variables exist only for backward compatibility.
+
+	❌ Do NOT use in new components.
+
+	Replace with:
+
+	Primary:
+	--ddsa-primary-700
+	--ddsa-primary-800
+	--ddsa-primary-200
+	--ddsa-primary-50
+
+	Accent:
+	--ddsa-accent-500
+	--ddsa-accent-600
+	--ddsa-accent-100
+
+	Neutrals:
+	--ddsa-secondary-900
+	--ddsa-gray-500
+	--ddsa-white
+	--ddsa-gray-50
+	--ddsa-gray-200
+
+	Semantic:
+	--ddsa-success
+	--ddsa-warning
+	--ddsa-error
+	--ddsa-info
+
+	========================================================================== */
+
+	/* Primary: */
+	--color-primary: var(--ddsa-primary-700);
+	--color-primaryText: var(--ddsa-primary-700);
+	--color-primary-hover: var(--ddsa-primary-800);
+	--color-primary-light: var(--ddsa-primary-200);
+	--color-primary-bg: var(--ddsa-primary-50);
+
+	/* Accent: */
+	--color-accent: var(--ddsa-accent-500);
+	--color-accent-hover: var(--ddsa-accent-600);
+	--color-accent-bg: var(--ddsa-accent-100);
+
+	/* Neutrals: */
+	--color-text-main: var(--ddsa-secondary-900);
+	--color-text-light: var(--ddsa-gray-500);
+	--color-bg-main: var(--ddsa-white);
+	--color-bg-alt: var(--ddsa-gray-50);
+	--color-border: var(--ddsa-gray-200);
+
+	/* Semantic: */
+	--color-success: var(--ddsa-success-500);
+	--color-warning: var(--ddsa-warning-500);
+	--color-error: var(--ddsa-error-500);
+	--color-info: var(--ddsa-info-500);
+
+	/* ========================================
+	   Legacy Trial Variables (Mapped to New Palette)
+	   For backward compatibility during migration
+	   ======================================== */
+
+	/* ==========================================================================
+		⚠️ DEPRECATED - Legacy Trial Design Tokens
+		----------------------------------------------------------------------------
+		These tokens belong to the previous design system and are retained only for
+		backward compatibility.
+
+		❌ Do NOT use in new components.
+
+		Replace with:
+		- --ddsa-primary-*
+		- --ddsa-secondary-*
+		- --ddsa-gray-*
+		- --ddsa-accent-*
+
+		Remove only after all legacy components have been migrated.
+   ========================================================================== */
+	--trial-dark: var(--ddsa-secondary-900);
+	--trial-dark-100: #0e0f0b;
+	--trial-dark-200: #151612;
+	--trial-dark-300: #1e201a;
+	--trial-dark-400: var(--ddsa-secondary-800);
+	--trial-dark-500: var(--ddsa-secondary-900);
+	--trial-dark-600: var(--ddsa-secondary-700);
+	--trial-dark-700: var(--ddsa-secondary-600);
+	--trial-dark-800: var(--ddsa-secondary-400);
+	--trial-dark-900: var(--ddsa-secondary-300);
+
+	--trial-muted: var(--ddsa-gray-500);
+	--trial-muted-100: #1e201a;
+	--trial-muted-200: #353830;
+	--trial-muted-300: #4d5145;
+	--trial-muted-400: var(--ddsa-gray-600);
+	--trial-muted-500: var(--ddsa-gray-500);
+	--trial-muted-600: var(--ddsa-gray-400);
+	--trial-muted-700: var(--ddsa-gray-300);
+	--trial-muted-800: var(--ddsa-gray-200);
+	--trial-muted-900: var(--ddsa-gray-100);
+
+	--trial-light: var(--ddsa-gray-100);
+	--trial-light-100: #24353b;
+	--trial-light-200: #496a77;
+	--trial-light-300: #759bab;
+	--trial-light-400: #b1c6cf;
+	--trial-light-500: var(--ddsa-gray-100);
+	--trial-light-600: var(--ddsa-gray-100);
+	--trial-light-700: var(--ddsa-gray-50);
+	--trial-light-800: var(--ddsa-gray-50);
+	--trial-light-900: var(--ddsa-white);
+
+	/* Primary accent mapped to earthy warm tones */
+	--trial-accent: var(--ddsa-primary-500);
+	--trial-accent-light: var(--ddsa-primary-400);
+	--trial-accent-100: var(--ddsa-primary-900);
+	--trial-accent-200: var(--ddsa-primary-800);
+	--trial-accent-300: var(--ddsa-primary-700);
+	--trial-accent-400: var(--ddsa-primary-600);
+	--trial-accent-500: var(--ddsa-primary-500);
+	--trial-accent-600: var(--ddsa-primary-400);
+	--trial-accent-700: var(--ddsa-primary-300);
+	--trial-accent-800: var(--ddsa-primary-200);
+	--trial-accent-900: var(--ddsa-primary-100);
+
+	/* Aqua cyan for high-energy moments */
+	--trial-accent-dark: var(--ddsa-accent-500);
+	--trial-accent-dark-100: var(--ddsa-accent-900);
+	--trial-accent-dark-200: var(--ddsa-accent-800);
+	--trial-accent-dark-300: var(--ddsa-accent-700);
+	--trial-accent-dark-400: var(--ddsa-accent-600);
+	--trial-accent-dark-500: var(--ddsa-accent-500);
+	--trial-accent-dark-600: var(--ddsa-accent-400);
+	--trial-accent-dark-700: var(--ddsa-accent-300);
+	--trial-accent-dark-800: var(--ddsa-accent-200);
+	--trial-accent-dark-900: var(--ddsa-accent-100);
+
+	/* ---------- ends here ----------- */
+
+	/* --------------- shadow --------------------- */
+	--shadow-button: rgba(221, 190, 169, 0.25);
+	--shadow-button-hover: rgba(221, 190, 169, 0.35);
+	--shadow-secondary-button: rgba(21, 22, 18, 0.2);
+	--shadow-card: rgba(203, 153, 126, 0.3);
+	--shadow-hover: rgba(0, 0, 0, 0.15);
+	--shadow-container: rgba(0, 0, 0, 0.25);
+	--shadow-sidebar: rgba(255, 255, 255, 0.25);
+
+	--shadow-select: rgba(203, 153, 126, 0.1);
+	--shadow-secondary-select: rgba(203, 153, 126, 0.08);
+
+	--shadow-radio: rgba(203, 153, 126, 0.15);
+	--shadow-node: rgba(255, 255, 255, 0.3);
+	--shadow-dot: rgba(203, 153, 126, 0.6);
+
+	--shadow-primary: rgba(203, 153, 126, 0.2);
+	--shadow-accent: rgba(221, 190, 169, 0.2);
+	--shadow-ddsa-accent: rgba(221, 190, 169, 0.1);
+}

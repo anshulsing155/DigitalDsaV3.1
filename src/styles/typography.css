@@ -1,0 +1,211 @@
+/* ========================================
+	   Display Typography
+	   Hero sections, landing banners
+	   ======================================== */
+
+.typography-display {
+	font-family: var(--font-primary);
+	font-weight: 700;
+	font-size: clamp(2.25rem, 6vw, 4rem);
+	line-height: 1.05;
+	letter-spacing: -0.03em;
+}
+
+/* ========================================
+	   Page Titles
+	   Dashboard pages, form pages
+	   ======================================== */
+
+.typography-h1 {
+	font-family: var(--font-primary);
+	font-weight: 700;
+	font-size: clamp(1.75rem, 4vw, 2.75rem);
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+}
+
+/* ========================================
+	   Section Headings
+	   Cards, sections, widgets
+	   ======================================== */
+
+.typography-h2 {
+	font-family: var(--font-primary);
+	font-weight: 600;
+	font-size: clamp(1.25rem, 2.5vw, 2rem);
+	line-height: 1.25;
+	letter-spacing: -0.01em;
+}
+
+.typography-h2-md {
+	font-family: var(--font-primary);
+	font-weight: 600;
+	/* font-size: clamp(1.125rem, 2.25vw, 1.5rem); */
+	font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+}
+
+/* ========================================
+	   Sub Headings
+	   Card titles, form groups
+	   ======================================== */
+
+.typography-h3 {
+	font-family: var(--font-primary);
+	font-weight: 600;
+	font-size: clamp(1.125rem, 2vw, 1.25rem);
+	line-height: 1.35;
+	letter-spacing: 0;
+}
+
+/* ========================================
+	   Large Body
+	   Important descriptions
+	   ======================================== */
+
+.typography-body-lg {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: clamp(1rem, 1.2vw, 1.125rem);
+	line-height: 1.75;
+	letter-spacing: 0;
+}
+
+/* ========================================
+	   Default Body
+	   Paragraphs, descriptions
+	   ======================================== */
+
+.typography-body-md {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: clamp(0.875rem, 1vw, 1rem);
+	line-height: 1.7;
+	letter-spacing: 0;
+}
+
+/* ========================================
+	   Small Body
+	   Secondary descriptions
+	   ======================================== */
+
+.typography-body-sm {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: clamp(0.75rem, 0.8vw, 0.875rem);
+	line-height: 1.6;
+	letter-spacing: 0;
+}
+
+/* ========================================
+	   Form Labels
+	   Input labels, field labels
+	   ======================================== */
+
+.typography-label {
+	font-family: var(--font-primary);
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 1.4;
+	letter-spacing: 0.01em;
+}
+
+/*=======================================
+	  Labels description
+	  Helper text, field descriptions
+	   ======================================== */
+
+.typography-label-description {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 0.785rem;
+	line-height: 1.4;
+	letter-spacing: 0.01em;
+	color: var(--form-text-muted);
+}
+
+/* ========================================
+	   Buttons
+	   All CTA text
+	   ======================================== */
+
+.typography-button {
+	font-family: var(--font-primary);
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.2;
+	letter-spacing: 0;
+}
+
+/* ========================================
+	   Inputs
+	   User entered values
+	   ======================================== */
+
+.typography-input {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: clamp(0.8125rem, 0.78rem + 0.2vw, 0.875rem);
+	line-height: 1.5;
+	letter-spacing: 0;
+}
+
+/* ======================================
+		alert - messages
+		============================*/
+.typography-alert {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem); /* 12px → 13px */
+	line-height: 1.5;
+	letter-spacing: 0;
+}
+
+/* ========================================
+	   Captions
+	   Helper text, meta info
+	   ======================================== */
+
+.typography-caption {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 0.6875rem;
+	line-height: 1.4;
+	letter-spacing: 0.03em;
+}
+
+.typography-sub-caption {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 0.6845rem;
+	line-height: 1.4;
+	letter-spacing: 0.03em;
+}
+
+/* ========================================
+	   Table Text
+	   Dashboard tables
+	   ======================================== */
+
+.typography-table {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 0.8125rem;
+	line-height: 1.5;
+	letter-spacing: 0;
+}
+
+/* ========================================
+	   Badge Text
+	   Status badges
+	   ======================================== */
+
+.typography-badge {
+	font-family: var(--font-primary);
+	font-weight: 500;
+	font-size: 0.75rem;
+	line-height: 1;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}

@@ -1,0 +1,181 @@
+.animate-shake {
+	animation: shake 0.5s ease-in-out;
+}
+
+.animate-fade-slide {
+	animation: fadeSlideIn 0.3s ease-out forwards;
+}
+
+.animate-scale-in {
+	animation: scaleIn 0.2s ease-out forwards;
+}
+
+.animate-pulse-subtle {
+	animation: pulseSubtle 2s ease-in-out infinite;
+}
+
+.animate-slow-pulse {
+	animation: slow-pulse 2.5s ease-in-out infinite;
+}
+
+.animate-rotate {
+	animation: rotateAnimation 3.1s linear infinite;
+}
+
+details[open] .icon-container svg {
+	transform: rotate(180deg);
+}
+
+.animate-spin {
+	animation: spin 1s linear infinite;
+}
+
+@keyframes modal-in {
+	from {
+		opacity: 0;
+		transform: scale(0.95) translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px) scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* @keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+} */
+
+@keyframes slow-pulse {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.6;
+	}
+}
+
+@keyframes goldBorderMove {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 400% 50%;
+	}
+}
+
+@keyframes rectGoldMove {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+@keyframes info-ring-rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateAnimation {
+	0% {
+		transform: rotateY(0deg);
+	}
+	45% {
+		transform: rotateY(360deg);
+	}
+	100% {
+		transform: rotateY(360deg); /* Hold the rotation */
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translateX(-4px);
+	}
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translateX(4px);
+	}
+}
+
+@keyframes fadeSlideIn {
+	from {
+		opacity: 0;
+		transform: translateY(-8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes pulseSubtle {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.7;
+	}
+}

@@ -1,0 +1,296 @@
+/* ==========================================================================
+   PATCHES
+   ----------------------------------------------------------------------------
+   Temporary fixes only.
+
+   This file exists for:
+
+   • Browser-specific fixes
+   • Third-party library overrides
+   • Temporary production hotfixes
+   • Migration patches
+
+   ❌ Do not add components.
+   ❌ Do not add utilities.
+   ❌ Do not add design tokens.
+   ❌ Do not add themes.
+
+   Every patch must include a reason and should be removed once the
+   underlying issue is fixed.
+
+   ========================================================================== */
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+/* Chrome, Edge, Brave, Safari */
+
+.pincode-input:-webkit-autofill,
+.pincode-input:-webkit-autofill:hover,
+.pincode-input:-webkit-autofill:focus,
+.pincode-input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 1000px white inset !important;
+	box-shadow: 0 0 0 1000px white inset !important;
+	-webkit-text-fill-color: #111827 !important;
+	caret-color: #111827 !important;
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Dark mode */
+
+.dark .pincode-input:-webkit-autofill,
+.dark .pincode-input:-webkit-autofill:hover,
+.dark .pincode-input:-webkit-autofill:focus,
+.dark .pincode-input:-webkit-autofill:active {
+	/* -webkit-box-shadow: 0 0 0 1000px var(--form-bg-input) inset !important; */
+	box-shadow: 0 0 0 1000px var(--form-bg-input) inset !important;
+	-webkit-text-fill-color: white !important;
+	caret-color: white !important;
+}
+
+/* Chrome, Safari, Edge */
+input:-webkit-autofill
+/* input:-webkit-autofill:active  */
+/* input:-webkit-autofill:hover, */
+/* input:-webkit-autofill:focus, */ {
+	-webkit-box-shadow: 0 0 0 1000px var(--form-bg-card) inset !important;
+	-webkit-text-fill-color: currentColor !important;
+	caret-color: currentColor;
+	transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Firefox */
+input:autofill {
+	box-shadow: 0 0 0 1000px var(--form-bg-card) inset !important;
+	-moz-text-fill-color: currentColor !important;
+}
+
+input:-webkit-autofill {
+	-webkit-text-fill-color: var(--form-text-label) !important;
+}
+
+/* * Firefox */
+
+.pincode-input:-moz-autofill {
+	box-shadow: 0 0 0 1000px white inset !important;
+
+	color: #111827 !important;
+	caret-color: #111827 !important;
+}
+
+/* Firefox dark */
+
+.dark .pincode-input:-moz-autofill {
+	box-shadow: 0 0 0 1000px var(--form-bg-input) inset !important;
+
+	color: white !important;
+	caret-color: white !important;
+}
+:where(.dark, .dark *) {
+	/* Dark text on dark bg fix: flip gray-900/800/700/600 text to readable */
+	&:where(.text-gray-900) {
+		color: var(--form-text);
+	}
+	&:where(.text-gray-800) {
+		color: #e2e3dd;
+	}
+	&:where(.text-gray-700) {
+		color: #c5c8bc;
+	}
+	&:where(.text-gray-600) {
+		color: #a8ac9a;
+	}
+
+	/* Muted text: gray-500/400 → slightly lighter for dark bg */
+	&:where(.text-gray-500) {
+		color: #8b9178;
+	}
+	&:where(.text-gray-400) {
+		color: #8b9178;
+	}
+
+	/* Stone variants */
+	&:where(.text-stone-800) {
+		color: #e2e3dd;
+	}
+	&:where(.text-stone-700) {
+		color: #c5c8bc;
+	}
+	&:where(.text-stone-600) {
+		color: #a8ac9a;
+	}
+	&:where(.text-stone-500) {
+		color: #8b9178;
+	}
+
+	/* Black text */
+	/* &:where(.text-black) {
+		color: var(--form-text);
+	} */
+
+	/* --- Background colors: light → dark --- */
+	/* &:where(.bg-white) {
+		background-color: var(--form-bg-card);
+	} */
+	&:where(.bg-gray-50) {
+		background-color: var(--form-bg-alt);
+	}
+	&:where(.bg-gray-100) {
+		background-color: var(--dash-bg-elevated);
+	}
+	&:where(.bg-gray-200) {
+		background-color: #353830;
+	}
+	&:where(.bg-stone-50) {
+		background-color: var(--form-bg-alt);
+	}
+	&:where(.bg-stone-100) {
+		background-color: var(--dash-bg-elevated);
+	}
+	&:where(.bg-stone-200) {
+		background-color: #353830;
+	}
+
+	/* --- Border colors --- */
+	&:where(.border-gray-100) {
+		border-color: var(--form-border);
+	}
+	&:where(.border-gray-200) {
+		border-color: var(--form-border);
+	}
+	&:where(.border-gray-300) {
+		border-color: var(--form-border-hover);
+	}
+
+	&:where(.border-stone-200) {
+		border-color: var(--form-border);
+	}
+	&:where(.border-stone-300) {
+		border-color: var(--form-border-hover);
+	}
+
+	/* --- Divide colors --- */
+	&:where(.divide-gray-100 > :not(:first-child)) {
+		border-color: var(--form-border);
+	}
+
+	/* --- Placeholder colors --- */
+	&:where(.placeholder-gray-400)::placeholder {
+		color: var(--form-text-muted);
+	}
+	&:where(.placeholder-gray-500)::placeholder {
+		color: var(--form-text-muted);
+	}
+
+	/* --- Ring colors --- */
+	&:where(.ring-gray-100) {
+		--tw-ring-color: var(--form-border);
+	}
+	&:where(.ring-gray-200) {
+		--tw-ring-color: var(--form-border);
+	}
+
+	/* --- Hover states: light hover → dark hover --- */
+	&:where(.hover\:bg-gray-50:hover) {
+		background-color: var(--dash-hover);
+	}
+	&:where(.hover\:bg-gray-100:hover) {
+		background-color: var(--dash-hover);
+	}
+	&:where(.hover\:bg-stone-50:hover) {
+		background-color: var(--dash-hover);
+	}
+	&:where(.hover\:bg-stone-100:hover) {
+		background-color: var(--dash-hover);
+	}
+
+	/* --- Semantic badge backgrounds (light → dark translucent) --- */
+	&:where(.bg-red-50) {
+		background-color: rgba(239, 68, 68, 0.1);
+	}
+	&:where(.bg-red-100) {
+		background-color: rgba(239, 68, 68, 0.15);
+	}
+	&:where(.bg-green-50) {
+		background-color: rgba(34, 197, 94, 0.1);
+	}
+	&:where(.bg-green-100) {
+		background-color: rgba(34, 197, 94, 0.15);
+	}
+	&:where(.bg-amber-50) {
+		background-color: rgba(245, 158, 11, 0.1);
+	}
+	&:where(.bg-amber-100) {
+		background-color: rgba(245, 158, 11, 0.15);
+	}
+	&:where(.bg-blue-50) {
+		background-color: rgba(59, 130, 246, 0.1);
+	}
+	&:where(.bg-blue-100) {
+		background-color: rgba(59, 130, 246, 0.15);
+	}
+	&:where(.bg-yellow-50) {
+		background-color: rgba(234, 179, 8, 0.1);
+	}
+	&:where(.bg-orange-50) {
+		background-color: rgba(249, 115, 22, 0.1);
+	}
+	&:where(.bg-purple-50) {
+		background-color: rgba(168, 85, 247, 0.1);
+	}
+	&:where(.bg-violet-50) {
+		background-color: rgba(139, 92, 246, 0.1);
+	}
+
+	/* --- Semantic text colors (dark text → lighter for dark bg) --- */
+	&:where(.text-red-700) {
+		color: #fca5a5;
+	}
+	&:where(.text-red-600) {
+		color: #f87171;
+	}
+	&:where(.text-green-700) {
+		color: #86efac;
+	}
+	&:where(.text-green-600) {
+		color: #4ade80;
+	}
+	&:where(.text-amber-700) {
+		color: #fcd34d;
+	}
+	&:where(.text-amber-600) {
+		color: #fbbf24;
+	}
+	&:where(.text-blue-700) {
+		color: #93c5fd;
+	}
+	&:where(.text-blue-600) {
+		color: #60a5fa;
+	}
+
+	/* --- Semantic border colors (dark) --- */
+	&:where(.border-red-200) {
+		border-color: rgba(239, 68, 68, 0.3);
+	}
+	&:where(.border-green-200) {
+		border-color: rgba(34, 197, 94, 0.3);
+	}
+	&:where(.border-amber-200) {
+		border-color: rgba(245, 158, 11, 0.3);
+	}
+	&:where(.border-blue-200) {
+		border-color: rgba(59, 130, 246, 0.3);
+	}
+
+	/* --- Shadow adjustments --- */
+	&:where(.shadow-sm),
+	&:where(.shadow-md),
+	&:where(.shadow-lg) {
+		--tw-shadow-color: rgba(0, 0, 0, 0.3);
+	}
+}

@@ -3,32 +3,23 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Foundations */
-@import './styles/foundations/fonts.css';
-@import './styles/foundations/tokens.css';
-@import './styles/foundations/typography.css';
+@import './styles/fonts.css';
+@import './styles/tokens.css';
+@import './styles/typography.css';
 
 /* Themes */
-@import './styles/themes/themes.css';
+@import './styles/themes.css';
 
 /* Utilities */
-@import './styles/utilities/utilities.css';
-@import './styles/utilities/animations.css';
+@import './styles/utilities.css';
+@import './styles/animation.css';
 
 /* Components */
-@import './styles/components/buttons.css';
-@import './styles/components/cards.css';
-@import './styles/components/forms.css';
-@import './styles/components/badges.css';
-@import './styles/components/tooltips.css';
-@import './styles/components/navigation.css';
-@import './styles/components/sidebar.css';
-@import './styles/components/alert.css';
-@import './styles/components/context-panel.css';
-@import './styles/components/stepper.css';
+@import './styles/component.css';
+
 
 /* Fixes */
-@import './styles/fixes/autofill.css';
-@import './styles/fixes/dark-mode-safety.css';
+@import './styles/patches.css';
 
 /* layouts */
-@import './styles/layouts/form-shell.css';
+@import './styles/layout.css';
