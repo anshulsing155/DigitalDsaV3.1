@@ -15,13 +15,14 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
 				"btnColor": "#ffcc00",
-				"animation": true
+				"btnClass": "btn-primary text-white dark:text-black"
 			}
 		],
 		"para": "Transferring your home loan—also called a home loan balance transfer—can be a game changer if done at the right time. It allows you to move your outstanding loan amount to another bank or lender, usually at a lower interest rate or with better terms."

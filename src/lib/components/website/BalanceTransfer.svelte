@@ -269,7 +269,7 @@
 							{#each content.help.list as item}
 								<li class="flex items-start gap-2">
 									<img src="/icons/circle-check.svg" alt="Check icon" class="h-5 mt-1" />
-									<p>
+									<p class="text-[var(--form-text-secondary)]">
 										<span class="font-semibold">{item.bold}</span>
 										{@html item.text}
 									</p>

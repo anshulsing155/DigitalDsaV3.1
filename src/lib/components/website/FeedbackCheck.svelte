@@ -19,22 +19,24 @@ onMount(() => {
 
 <section class="py-[3rem] px-[1rem] lg:px-[4rem]">
   <div class="grid lg:grid-cols-4 justify-between items-center md:w-4/6 gap-4">
-    <p class="col-span-2 typography-body-md">
+    <p class="col-span-2 typography-body-md !font-semibold dark:text-white text-black ">
       Was the information on this page useful?
     </p>
     <div class="col-span-2 flex flex-col sm:flex-row gap-4">
       <button
         onclick={() => (feedback = "Yes")}
-        class:bg-primary={feedback === "Yes"}
-        class="text-center w-full rounded-full border border-black dark:text-white text-black px-[3rem] py-3 typography-button hover:opacity-90 sm:w-auto flex gap-2 items-center justify-center"
+        class:btn-primary={feedback === "Yes"}
+        class:btn-secondary={feedback !== "Yes"}
+        class="text-center w-full rounded-full border border-black px-[3rem] py-3 typography-button hover:opacity-90 sm:w-auto flex gap-2 items-center justify-center text-white dark:text-black"
       >
         <img src="/icons/like.svg" alt="like-icon" class="h-4" />
         <p class="typography-body-sm">Yes</p>
       </button>
       <button
         onclick={() => (feedback = "No")}
-        class:bg-primary={feedback === "No"}
-        class="text-center w-full rounded-full border border-black dark:text-white text-black px-[3rem] py-3 typography-button hover:opacity-90 sm:w-auto flex gap-2 items-center justify-center"
+        class:btn-primary={feedback === "No"}
+        class:btn-secondary={feedback !== "No"}
+        class="text-center w-full rounded-full border border-black  px-[3rem] py-3 typography-button hover:opacity-90 sm:w-auto flex gap-2 items-center justify-center text-white dark:text-black"
       >
         <img src="/icons/dislike.svg" alt="dislike-icon" class="h-4" />
         <p class="typography-body-sm ">No</p>
@@ -42,8 +44,8 @@ onMount(() => {
     </div>
   </div>
   {#if feedback == "No"}
-    <p in:fade class="mt-[2rem] typography-body-sm md:typography-body-md">
-      <span class="!font-semibold typography-body-sm"> Thanks for your feedback. </span>
+    <p in:fade class="mt-[2rem] typography-body-sm md:typography-body-md dark:text-white text-black ">
+      <span class="!font-semibold typography-body-sm "> Thanks for your feedback. </span>
       <br /> Have a suggestion? Please
       <a
         href="/complaint-compliment#feedback"
@@ -53,7 +55,7 @@ onMount(() => {
       >
     </p>
   {:else if feedback == "Yes"}
-    <p in:fade class="mt-[2rem] typography-body-sm md:typography-body-md">
+    <p in:fade class="mt-[2rem] typography-body-sm md:typography-body-md dark:text-white text-black ">
       <span class="!font-semibold typography-body-sm">That's really great.</span>
       <br />
       Share your experience with us and
