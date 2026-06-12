@@ -49,7 +49,6 @@
           btnName={contents.btnName}
           link={contents.btnLink}
           btnClass={contents.btnClass}
-          btnBorder={contents.btnBorder}
           onClick={contents.btnClick}
         />
       {/if}
@@ -85,7 +84,7 @@
               <li class="typography-body-md text-[var(--form-text-secondary)]">
                 <div class="flex flex-col gap-2">
                   {#if listItem.heading}
-                    <span class="typography-body-lg !font-semibold">
+                    <span class="typography-body-md !font-semibold">
                       {@html listItem.heading}
                     </span>
                   {/if}
