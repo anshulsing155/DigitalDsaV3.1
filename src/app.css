@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Foundations */
@@ -16,7 +22,6 @@
 
 /* Components */
 @import './styles/component.css';
-
 
 /* Fixes */
 @import './styles/patches.css';

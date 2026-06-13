@@ -193,7 +193,7 @@
 			</div>
 
 			<div id="laws" data-section="laws" class="section">
-				<div class="border-[var(--form-border)] border-b lg:px-[4rem]">
+				<div class="border-b border-[var(--form-border)] lg:px-[4rem]">
 					<ThingsYouShould
 						thinkKnow={{
 							heading: content.laws.heading,
@@ -215,7 +215,7 @@
 			</div>
 
 			<div id="charges" data-section="charges" class="section">
-				<div class="border-[var(--form-border)] border-b lg:px-[4rem]">
+				<div class="border-b border-[var(--form-border)] lg:px-[4rem]">
 					<TwoColumn
 						cardImage={content.charges.cardImage}
 						cardAltName={content.charges.cardAltName}
@@ -237,7 +237,7 @@
 			</div>
 
 			<div id="possession" data-section="possession" class="section">
-				<div class="border-[var(--form-border)] border-b lg:px-[4rem]">
+				<div class="border-b border-[var(--form-border)] lg:px-[4rem]">
 					<ThingsYouShould
 						thinkKnow={{
 							heading: content.possession.heading,
@@ -288,28 +288,23 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-[var(--form-text)] typography-label">{list}</h2>
-							<div class="text-[var(--form-text)] justify-self-end">
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
+							<div class="justify-self-end text-[var(--form-text)]">
 								<ChevronDown />
 							</div>
 						</div>
 					</summary>
 
 					{#if index === 0}
-						<div
-							id="laws"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 "
-						>
-							<ThingsYouShould
-								thinkKnow={{
-									heading: content.laws.heading,
-									subPara: content.laws.subPara,
-									paraGraph: content.laws.paraGraph,
-									bottomPara: content.laws.bottomPara
-								}}
-								disc="list-disc"
-							/>
-						</div>
+						<ThingsYouShould
+							thinkKnow={{
+								heading: content.laws.heading,
+								subPara: content.laws.subPara,
+								paraGraph: content.laws.paraGraph,
+								bottomPara: content.laws.bottomPara
+							}}
+							disc="list-disc"
+						/>
 					{:else if index === 1}
 						<div id="document" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
 							<AboveTitleWithoutIconCard contents={content.document.contents}>
@@ -319,18 +314,15 @@
 							</AboveTitleWithoutIconCard>
 						</div>
 					{:else if index === 2}
-						<div
-							id="charges"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 "
-						>
+						<div id="charges" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
 							<TwoColumn
 								cardImage={content.charges.cardImage}
 								cardAltName={content.charges.cardAltName}
 								cardHeading={content.charges.cardHeading}
 							>
-								<div class="typography-body-md space-y-6 text-text-light" slot="list">
+								<div class="typography-body-md space-y-6 text-[var(--form-text-secondary)]" slot="list">
 									<p>{content.charges.para1}</p>
-									<ul class="typography-body-md grid gap-[2rem] text-text-light">
+									<ul class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]">
 										<div>
 											{#each content.charges.firstTableData as tableData}
 												<PaymentTable {tableData} />
@@ -342,30 +334,22 @@
 							</TwoColumn>
 						</div>
 					{:else if index === 3}
-						<div
-							id="possession"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 "
-						>
-							<ThingsYouShould
-								thinkKnow={{
-									heading: content.possession.heading,
-									subPara: content.possession.subPara,
-									paraGraph: content.possession.paraGraph,
-									bottomPara: content.possession.bottomPara
-								}}
-								disc="list-disc"
-							/>
-						</div>
+						<ThingsYouShould
+							thinkKnow={{
+								heading: content.possession.heading,
+								subPara: content.possession.subPara,
+								paraGraph: content.possession.paraGraph,
+								bottomPara: content.possession.bottomPara
+							}}
+							disc="list-disc"
+						/>
 					{:else if index === 4}
-						<div
-							id="pitfalls"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4"
-						>
+						<div id="pitfalls" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
 							<TwoColumnWithImage contents={content.pitfalls}>
-								<div class="typography-body-sm space-y-6 text-[var(--form-text-secondary)]">
+								<div class="typography-body-md space-y-6 text-[var(--form-text-secondary)]">
 									<p>{content.pitfalls.para}</p>
 									<div class="space-y-4">
-										<h3 class="typography-h3 font-semibold text-text-main dark:text-white">
+										<h3 class="typography-h3 font-semibold text-[var(--form-text)]">
 											{content.pitfalls.subHeading}
 										</h3>
 										<ul class="list-disc space-y-3 pl-5">

@@ -27,99 +27,97 @@
 	const { thinkKnow = {}, disc = 'list-disc', isBorder = false, colSpan = 8 }: Props = $props();
 </script>
 
-<div class="grid grid-cols-12 gap-8 px-4 py-12 lg:px-0 lg:py-20">
-	{#if thinkKnow.heading}
-		<div class="col-span-12 lg:col-span-4">
-			<h2 class="typography-h2-md text-[var(--form-text)]">
-				{@html thinkKnow.heading}
-			</h2>
-		</div>
-	{/if}
+<section
+	class="w-full {isBorder
+		? 'border-b border-[var(--form-border)]'
+		: 'border-b-0'} bg-[var(--landing-bg)] px-[0.5rem] py-16 pb-4 lg:px-16 lg:py-0 lg:pt-16 lg:pb-0 lg:pb-32"
+>
+	<div class="grid grid-cols-12 gap-8">
+		{#if thinkKnow.heading}
+			<div class="col-span-12 lg:col-span-4">
+				<h2 class="typography-h2-md text-[var(--form-text)]">
+					{@html thinkKnow.heading}
+				</h2>
+			</div>
+		{/if}
 
-	<div
-		class={`col-span-12 lg:col-span-${colSpan} typography-body-md [overflow-wrap:anywhere] text-[var(--form-text-secondary)] text-wrap`}
-	>
-		<div class="grid gap-6">
-			{#if thinkKnow.subHeading}
-				<h3 class="typography-body-lg font-semibold break-words text-[var(--form-text)]">
-					{@html thinkKnow.subHeading}
-				</h3>
-			{/if}
+		<div
+			class={`col-span-12 min-w-0 lg:col-span-${colSpan} typography-body-md text-[var(--form-text-secondary)]`}
+		>
+			<div class="flex min-w-0 flex-col gap-6">
+				{#if thinkKnow.subHeading}
+					<h3 class="typography-body-lg font-semibold text-[var(--form-text)]">
+						{@html thinkKnow.subHeading}
+					</h3>
+				{/if}
 
-			{#if thinkKnow.subPara}
-				{#each thinkKnow.subPara as para}
-					<p class="break-words">
-						{@html para}
-					</p>
-				{/each}
-			{/if}
-
-			{#if isBorder}
-				<div class="border-t border-[var(--form-border)]"></div>
-			{/if}
-
-			{#if thinkKnow.paraGraph}
-				<ul class={`grid gap-4 ${disc}`}>
-					{#each thinkKnow.paraGraph as para}
-						<li class="ml-5 break-words">
+				{#if thinkKnow.subPara}
+					{#each thinkKnow.subPara as para}
+						<p class="break-words">
 							{@html para}
-						</li>
+						</p>
 					{/each}
-				</ul>
-			{/if}
+				{/if}
 
-			{#if thinkKnow.bottomHeading}
-				<h3 class="typography-body-lg font-semibold break-words text-[var(--form-text)]">
-					{thinkKnow.bottomHeading}
-				</h3>
-			{/if}
+				{#if isBorder}
+					<div class="border-t border-[var(--form-border)]"></div>
+				{/if}
 
-			{#if thinkKnow.bottomList}
-				<ul class="grid list-disc gap-4 break-words">
-					{#each thinkKnow.bottomList as para}
-						<li class="ml-5 break-words">
-							{@html para}
-						</li>
-					{/each}
-				</ul>
-			{/if}
+				{#if thinkKnow.paraGraph}
+					<ul class={`list-disc space-y-4 pl-5 ${disc}`}>
+						{#each thinkKnow.paraGraph as para}
+							<li class="break-words">
+								{@html para}
+							</li>
+						{/each}
+					</ul>
+				{/if}
 
-			{#if thinkKnow.bottomPara}
-				<div class="grid gap-4">
-					{#each thinkKnow.bottomPara as para}
-						<p class="break-words">{@html para}</p>
-					{/each}
-				</div>
-			{/if}
+				{#if thinkKnow.bottomHeading}
+					<h3 class="typography-body-lg font-semibold text-[var(--form-text)]">
+						{thinkKnow.bottomHeading}
+					</h3>
+				{/if}
 
-			{#if thinkKnow.btnName}
-				<div class="pt-2">
+				{#if thinkKnow.bottomList}
+					<ul class="list-disc space-y-4 pl-5">
+						{#each thinkKnow.bottomList as para}
+							<li class="break-words">
+								{@html para}
+							</li>
+						{/each}
+					</ul>
+				{/if}
+
+				{#if thinkKnow.bottomPara}
+					<div class="flex flex-col gap-4">
+						{#each thinkKnow.bottomPara as para}
+							<p class="break-words">
+								{@html para}
+							</p>
+						{/each}
+					</div>
+				{/if}
+
+				{#if thinkKnow.btnName}
 					<Button
 						btnName={thinkKnow.btnName}
 						btnClass={thinkKnow.btnColor}
 						link={thinkKnow.btnLink}
 					/>
-				</div>
-			{/if}
+				{/if}
 
-			{#if thinkKnow.linkName}
-				<a
-					href={thinkKnow.url}
-					class="font-medium underline underline-offset-4 hover:no-underline"
-				>
-					{thinkKnow.linkName}
-				</a>
-			{/if}
+				{#if thinkKnow.linkName}
+					<a
+						href={thinkKnow.url}
+						class="font-medium underline underline-offset-4 hover:no-underline"
+					>
+						{thinkKnow.linkName}
+					</a>
+				{/if}
 
-			<!-- svelte-ignore slot_element_deprecated -->
-			<slot name="list" />
+				<slot name="list" />
+			</div>
 		</div>
 	</div>
-</div>
-
-<style>
-	:global(.think-know a) {
-		overflow-wrap: anywhere;
-		word-break: break-word;
-	}
-</style>
+</section>
