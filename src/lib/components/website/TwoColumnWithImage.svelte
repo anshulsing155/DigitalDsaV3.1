@@ -27,19 +27,18 @@
 </script>
 
 <div
-	class="relative grid items-start gap-8 border-b border-[var(--form-border)] px-2 py-16 md:gap-12 lg:grid-cols-2 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32 space-x-20"
+	class="relative grid items-start gap-8 space-x-20 border-b border-[var(--form-border)] px-2 py-16 md:gap-12 lg:grid-cols-2 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
 >
 	<!-- Image -->
 	<div
-		class="top-0 w-full transform lg:relative"
-		class:lg\:order-last={contents.reverse}
-		class:lg\:translate-x-\[8rem\]={contents.reverse}
-		class:lg\:-translate-x-\[8rem\]={!contents.reverse}
+		class={`top-0 w-full transform lg:relative ${
+			contents.reverse
+				? 'lg:order-last lg:translate-x-[8rem]'
+				: 'lg:order-first lg:-translate-x-[8rem]'
+		}`}
 	>
 		<div class="relative">
-			<div
-				class="absolute top-0 right-0 bg-opacity-50 text-center text-white"
-			>
+			<div class="bg-opacity-50 absolute top-0 right-0 text-center text-white">
 				<Tooltip
 					linkName={`image source: <span class="underline">${contents.sourceName}</span>`}
 					hoverLink={contents.originalSource}
@@ -55,18 +54,14 @@
 	</div>
 
 	<!-- Content -->
-	<div
-		class="flex flex-col justify-self-start gap-2"
-		class:lg\:order-first={contents.reverse}
-	>
+	<div class="flex flex-col gap-2 justify-self-start" class:lg\:order-first={contents.reverse}>
 		{#if contents.cardHeading}
-			<h3
-				class="typography-h2-md text-[var(--form-text)]">
+			<h3 class="typography-h2-md text-[var(--form-text)]">
 				{@html contents.cardHeading}
 			</h3>
 		{/if}
 
-		<div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-4">
+		<div class="typography-body-md flex flex-col gap-4 text-[var(--form-text-secondary)]">
 			{@render children?.()}
 		</div>
 	</div>
