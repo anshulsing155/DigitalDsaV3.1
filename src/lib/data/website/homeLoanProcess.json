@@ -180,6 +180,7 @@
 		"cardImage": "/images/buildingHome-cover.jpg",
 		"cardAltName": "housing-figure",
 		"cardHeading": "Avoid Legal Pitfalls",
+		"reverse": true,
 		"para": "Even experienced buyers make mistakes when dealing with legal and financial aspects of home buying. Here’s how you can avoid them:",
 		"subHeading": "Common Mistakes & Their Solutions",
 		"bullets": [
