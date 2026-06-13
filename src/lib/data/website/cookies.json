@@ -1,0 +1,141 @@
+{
+	"seo": {
+		"type": "WebPage",
+		"title": "Cookies Notice | How We Use Cookies & Your Privacy Choices",
+		"description": "Learn how we use cookies to improve our website, enhance security, and personalize your experience. Manage your cookie settings anytime.",
+		"keywords": "cookies policy, cookie settings, how we use cookies, website cookies, privacy policy, manage cookies, analytics cookies, tracking cookies, essential cookies, block cookies, GDPR compliance, online privacy, website data tracking, cookie preferences."
+	},
+	"pageData": {
+		"altName": "hero-cover",
+		"heroHeading": "Our Cookies Notice",
+		"heroParagraph": "We use cookies to keep our website running, provide customer support, learn how people are using our website and improve our services. Here’s more about what that actually means.."
+	},
+	"subList": [
+		{ "name": "What are cookies?", "targetId": "cookies" },
+		{ "name": "First party cookies", "targetId": "firstPartyCookies" },
+		{ "name": "Third Party cookies", "targetId": "thirdPartyCookies" },
+		{ "name": "How to delete cookies", "targetId": "deleteCookies" }
+	],
+	"navBarMedium": [
+		"What are cookies?",
+		"First party cookies",
+		"Third Party cookies",
+		"How to delete cookies"
+	],
+	"cookies": {
+		"heading": "What is a cookie? 🍪",
+		"subPara": [
+			"Cookies are small text files that websites store on your browser and computer (or whatever device you’re using to visit).",
+			"It’s like the website writes a reminder on a tiny, virtual post it note, and sticks it onto you. That note might be something like: “This person has a teddy bear in their shopping basket” or “This person wants to stay logged in.”",
+			"Cookies are how websites seem to magically remember who you are. When you go back to a website, it checks your computer for the cookies it left there – reminding itself who you are, what pages you’ve visited, the account settings you chose, things like that.",
+			"Almost everything you do on the internet involves cookies in some way.Here's more about cookies and how they work."
+		]
+	},
+	"firstPartyCookies": {
+		"heading": "First party cookies (cookies set on Digital DSA’s website)",
+		"subPara": [
+			"Type of Cookies and What these cookies do :"
+		],
+		"paraGraph": [
+			"Strictly necessary : Essential to keep our website running on a basic level. They log you into your account and live chat, and help you make payments for some of our services.",
+			"Functional : 	Recognize you when you return to our website, so we can do things like remember your preferences from last time.",
+			"User identification :	We display ads on Facebook and other sites to track which ad led you to our website and how you interact with it once you’re here. This information helps us make the website and future ads more relevant to you. For example, we might show you information about Home Loan instead of Loan Against Property (LAP) or other Loans based on your interests.",
+			"Analytics, performance and research :	Recognize and count how many visitors we get and how they use our website. This helps us improve the way the website works – for example, making pages easier to find."
+		],
+		"bottomPara": [
+			"All the cookies we use play a part in fraud detection, prevention and investigation to help us keep our users secure. For example, cookies can help us identify if someone has accessed an account that doesn’t belong to them, and show us how they used that account."
+		],
+		"types": [
+			{
+				"title": "Strictly necessary",
+				"desc": "Essential to keep our website running on a basic level. They log you into your account and live chat, and help you make payments for some of our services."
+			},
+			{
+				"title": "Functional",
+				"desc": "Recognize you when you return to our website, so we can do things like remember your preferences from last time."
+			},
+			{
+				"title": "User identification",
+				"desc": "We display ads on Facebook and other sites to track which ad led you to our website and how you interact with it once you’re here. This information helps us make the website and future ads more relevant to you. For example, we might show you information about Home Loan instead of Loan Against Property (LAP) or other Loans based on your interests."
+			},
+			{
+				"title": "Analytics, performance and research",
+				"desc": "Analytics, performance and research : Recognize and count how many visitors we get and how they use our website. This helps us improve the way the website works – for example, making pages easier to find."
+			}
+		]
+	},
+	"thirdPartyCookies": {
+		"heading": "How we use cookies",
+		"subPara": [
+			"We integrate a few other services into our website – for example, we use a service called Hotjar to generate pop up surveys for us.",
+			"These services might use cookies of their own. You can read their privacy policies here:",
+			"To change your web browser preferences:"
+		],
+		"links": [
+			{ "name": "HotStar", "url": "https://help.hotjar.com/hc/en-us/articles/6952777582999-Cookies-Set-by-the-Hotjar-Tracking-Code" },
+			{ "name": "Amplitude", "url": "https://amplitude.com/privacy" },
+			{ "name": "Google", "url": "https://policies.google.com/privacy" },
+			{ "name": "MicroSoft", "url": "https://www.microsoft.com/en-gb/privacy/privacystatement" }
+		]
+	},
+	"deleteCookies": {
+		"heading": "How to block or delete cookies",
+		"subPara": [
+			"Most browsers automatically accept cookies, but you can decline some or all non-essential cookies if you want to. Check the settings on your browser and whatever device you’re using to visit the website. Or search “how to turn off cookies”.",
+			"If you do block cookies, that might mean you won’t be able to access some parts of our website (or any of it).",
+			"We’re reviewing our use of non-essential cookies, and we’ll update this page and our cookie banner as soon as we have any changes.",
+			"To change your web browser preferences:"
+		],
+		"browserInstructions": [
+			{
+				"heading": "Google Chrome",
+				"para": "Open your Chrome browser &gt; go to Customise and Control Google Chrome &gt; Settings gt; Main Menu &gt; Advanced &gt; Privacy and Security &gt; Content Settings &gt; Cookies. Then you can choose your settings.",
+				"link": {
+					"url": "https://support.google.com/chrome/answer/95647",
+					"text": "how to adjust cookie settings on mobile devices"
+				}
+			},
+			{
+				"heading": "Safari",
+				"para": "Go to Settings &gt; Safari &gt; Preferences &gt; Privacy. Then you can choose your settings.",
+				"link": {
+					"url": "https://support.apple.com/en-au/HT201265",
+					"text": "how to adjust cookie settings on Apple devices."
+				}
+			},
+			{
+				"heading": "Internet Explorer and Edge",
+				"para": "Open the browser &gt; select Tools &gt; Internet Options &gt; Privacy &gt; Advanced. Then you can choose your settings.",
+				"link": {
+					"url": "https://support.microsoft.com/en-au",
+					"text": "Microsoft Support"
+				}
+			},
+			{
+				"heading": "Mozilla Firefox",
+				"para": "Open Firefox &gt; select Tools &gt; Options &gt; Privacy &gt; Cookies. You can then choose your settings.",
+				"link": {
+					"url": "https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences",
+					"text": "Mozilla support"
+				}
+			}
+		]
+	},
+	"help": [
+		{
+			"Heading": "Security and privacy",
+			"icon": "/icons/appointment.svg",
+			"altTitle": "icons"
+		},
+		{
+			"Heading": "Contact us",
+			"icon": "/icons/manageLoan2.svg",
+			"altTitle": "icons"
+		},
+		{
+			"Heading": "Find your nearest branch",
+			"icon": "/icons/contact.svg",
+			"altTitle": "icons"
+		}
+	]
+}

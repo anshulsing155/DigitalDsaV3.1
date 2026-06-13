@@ -1,0 +1,65 @@
+{
+	"seo": {
+		"type": "WebPage",
+		"title": "What Our Customers Say | Digital DSA Testimonials",
+		"description": "Read success stories and feedback from customers who secured their loans with Digital DSA.",
+		"keywords": "testimonials, customer reviews, loan application success, home loan feedback"
+	},
+	"sameerSrivastava": {
+		"userName": "Sameer Srivastava",
+		"profileImg": "/testimonialImage/sameer.jpg",
+		"para": "I was nervous about getting my first home loan, but Nishant Bajpai made the process smooth and stress-free. He explained everything clearly, found me the best rates, and kept me updated at every step and from start to finish, Nishant Bajpai went above and beyond. He was always available, answered all my concerns, and made sure I got the best possible loan terms. I will definitely recommend them to friends and family!",
+		"profileName": "Home loan",
+		"stars": [
+			{ "ratingIcon": "/star.png", "ratingStyle": "h-4" },
+			{ "ratingIcon": "/star.png", "ratingStyle": "h-4" },
+			{ "ratingIcon": "/star.png", "ratingStyle": "h-8" },
+			{ "ratingIcon": "/star.png", "ratingStyle": "h-4" },
+			{ "ratingIcon": "/star.png", "ratingStyle": "h-4" }
+		]
+	},
+	"carousel": {
+		"card1": {
+			"userName": "Alok Raj Singh",
+			"profileImg": "/testimonialTest.png",
+			"para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, cupiditate."
+		},
+		"card2": {
+			"userName": "Alok Raj Singh",
+			"profileImg": "/testimonialTest.png",
+			"para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, cupiditate.",
+			"stars": [
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-4" },
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-4" },
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-8" },
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-4" },
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-4" }
+			]
+		},
+		"card3": {
+			"userName": "Alok Raj Singh",
+			"profileImg": "/testimonialTest.png",
+			"para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, cupiditate.",
+			"stars": [
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-4" },
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-4" },
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-8" },
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-4" },
+				{ "ratingIcon": "/star.png", "ratingStyle": "h-4" }
+			]
+		},
+		"card4": {
+			"userName": "Alok Raj Singh",
+			"profileImg": "/testimonialTest.png",
+			"para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, cupiditate.",
+			"quotes": " Try not to become a man of success, but rather try to become a man of value.",
+			"profileName": "Computer engineer"
+		},
+		"card5": {
+			"userName": "Alok Raj Singh",
+			"profileImg": "/testimonialTest.png",
+			"para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt vitae hic consequatur ipsam repudiandae rerum, asperiores quod velit expedita, nulla, maxime earum ut neque.",
+			"profileName": "Computer engineer"
+		}
+	}
+}

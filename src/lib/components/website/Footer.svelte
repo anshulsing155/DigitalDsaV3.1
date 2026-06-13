@@ -1,68 +1,7 @@
 <script>
-  const footerList = [
-  {
-    "Quick Access": [
-      { list: "Stay Safe Online", link: "/cyber-security-against-scams" },
-      { list: "Refer & Get Rewarded!", link: "/refer-&-earn" },
-      { list: "Financial Help & Support", link: "/finance-support" },
-      { list: "Share Your Feedback", link: "/complaint-compliment" },
-      { list: "Knowledge", link: "/knowledge" },
-    ],
-  },
-  {
-    "About Us": [
-      { list: "Who We Are", link: "/about-us" },
-      { list: "Get In Touch With Us", link: "/contact" },
-      { list: "Careers & Opportunities", link: "/career" },
-      { list: "Get Expert Insight", link: "/appointment" },
-    ],
-  },
-  {
-    "Important Info": [
-      { list: "Essential Documents", link: "/important-info" },
-      { list: "Cookies & Preferences", link: "/cookies" },
-      { list: "Privacy & Security", link: "/privacy-policy" },
-      { list: "Terms of Service", link: "/terms-conditions" },
-      { list: "Credits & Attributions", link: "/credits-attributions" },
+  import content from "$lib/data/website/footer.json";
 
-    ],
-  },
-  {
-    "Follow Us": [
-      {
-        list: "Twitter (X)",
-        link: "https://x.com/DigitalDSA001",
-        icon: "/icons/twitterIcon.svg",
-        altIcon: "twitter-icon",
-      },
-      {
-        list: "LinkedIn",
-        link: "https://www.linkedin.com/company/digitaldsa",
-        icon: "/icons/linkedinIcon.svg",
-        altIcon: "linkedin-icon",
-      },
-      {
-        list: "YouTube",
-        link: "https://www.youtube.com/@DigitalDSA",
-        icon: "/icons/youtubeIcon.svg",
-        altIcon: "youtube-icon",
-      },
-      {
-        list: "Facebook",
-        link: "https://www.facebook.com/profile.php?id=61561179107296",
-        icon: "/icons/fbIcon.svg",
-        altIcon: "facebook-icon",
-      },
-      {
-        list: "Instagram",
-        link: "https://www.instagram.com/digitaldsa1/",
-        icon: "/icons/instaIcon.svg",
-        altIcon: "insta-icon",
-      },
-    ],
-  },
-];
-
+  const { footerList, ownershipText, copyrightPrefix, copyrightSuffix } = content;
 
   function goToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -110,12 +49,10 @@
         class="flex flex-col gap-2 py-4 text-center justify-center items-center px-[1rem] typography-body-sm lg:px-[4rem] text-[var(--form-text-secondary)]"
       >
         <p>
-          Digital DSA is a platform fully owned and operated by E YANTRIK, a
-          proprietorship company.
+          {ownershipText}
         </p>
         <p>
-          © 2018–{currentYear}. All rights reserved by E YANTRIK for Digital
-          DSA.
+          {copyrightPrefix}{currentYear}{copyrightSuffix}
         </p>
       </div>
 
@@ -130,3 +67,4 @@
     </div>
   </div>
 </section>
+

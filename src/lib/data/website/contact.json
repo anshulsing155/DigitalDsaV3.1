@@ -1,0 +1,162 @@
+{
+	"seo": {
+		"type": "WebPage",
+		"title": "Get 24/7 Loan Assistance | Contact Digital DSA Today",
+		"description": "Need help with your loan queries? Contact Digital DSA 24/7 for instant assistance, book an appointment, or call us for expert loan support.",
+		"keywords": "loan assistance, loan enquiry, digital DSA support, loan specialist, book appointment, instant loan help, 24/7 loan support, FAQs, loan queries, personalized loan assistance"
+	},
+	"pageData": {
+		"classStyle": "object-cover xl:h-[90svh] 3xl:max-h-[70svh]",
+		"heroHeading": "Contact us",
+		"heroParagraph": "Need help with your queries? <br> Get instant assistance from Digital DSA. Send your query if not urgent or connect with a specialist, immediately."
+	},
+	"enquiry": {
+		"Home Loan": [
+			"Apply for a new loan",
+			"Balance Transfer",
+			"Top-up Loan",
+			"Manage your home loan",
+			"Debt Consolidation",
+			"Other"
+		],
+		"Loan Against Property": [
+			"Apply for a new loan",
+			"Balance Transfer",
+			"Top-up Loan",
+			"Manage your LAP",
+			"Debt Consolidation",
+			"Dropline Overdraft (DOD)",
+			"Other"
+		],
+		"Plot Loans": [
+			"Loan to purchase plot",
+			"Plot+Construction Loan",
+			"LAP on plot",
+			"Plot+Equity loan",
+			"Debt Consolidation",
+			"Other"
+		],
+		"Business Loans": [
+			"New business loan",
+			"Balance Transfer",
+			"Working Capital",
+			"Machinery Loan",
+			"Overdraft & Limits",
+			"Debt Consolidation",
+			"CIBIL Improvement",
+			"Low CIBIL",
+			"General enquiries"
+		],
+		"Personal Loans": [
+			"Personal Loan",
+			"Balance Transfer",
+			"Small Loan for travel & marriage",
+			"Debt Consolidation",
+			"CIBIL Improvement",
+			"Low CIBIL",
+			"Other"
+		],
+		"Professional Loans": [
+			"Personal loan for CA",
+			"Personal oan for Doctor",
+			"Small Loan for travel & marriage",
+			"Debt Consolidation",
+			"CIBIL Improvement",
+			"Low CIBIL",
+			"Other"
+		],
+		"Insurance": [
+			"Life Insurance",
+			"Car Insurance",
+			"Health Insurance",
+			"Home & Contents Insurance"
+		],
+		"Financial Assistance": [
+			"Personal Financial hardship",
+			"Business financial hardship"
+		],
+		"Investor": [
+			"Residential Plot",
+			"Residential Flat",
+			"Residential Villa",
+			"Commerical Property",
+			"Industrial Property"
+		],
+		"Other": []
+	},
+	"beforeReachingUs": {
+		"cardImage": "/images/mother-help-kid-to-learn-skate-roller-board.jpg",
+		"cardAltName": "photo of a mother helping her kid to learn the roller skates representing DigitalDSA helping its users in the same way",
+		"cardHeading": "Check These Out Before Reaching Us",
+		"sourceName": "Freepik",
+		"originalSource": "https://www.freepik.com/free-photo/mother-daughter-kick-scooter-park-kids-learn-skate-roller-board-little-girl-skating-sunny-summer-day_10064062.htm",
+		"reverse": true,
+		"items": [
+			{
+				"title": "Feeling your EMI is too high? –",
+				"desc": "Our <a href=\"/planners/flexible-emi-planner\" class=\"text-linkColor underline underline-offset-4\">Flexible EMI Planner</a> might just shrink it (without shrinking your wallet)."
+			},
+			{
+				"title": "Curious if you’re getting the best home loan deal? –",
+				"desc": "Compare real, <a href=\"/get-started/how-can-we-help\" class=\"text-linkColor underline underline-offset-4\">personalized offers</a> instead of guessing what banks might give you."
+			},
+			{
+				"title": "Financial stress keeping you up at night? –",
+				"desc": "Explore <a href=\"/finance-support/financial-hardship\" class=\"text-linkColor underline underline-offset-4\">relief plans, moratorium options</a>, and expert advice to breathe easy."
+			},
+			{
+				"title": "Thinking about prepaying your loan? –",
+				"desc": "See <a href=\"/planners/both\" class=\"text-linkColor underline underline-offset-4\">how much you’ll save</a> (and how fast you’ll be debt-free)."
+			}
+		]
+	},
+	"securityInfo": {
+		"cardImage": "/images/medium-shot-woman-cute-dog-home.jpg",
+		"sourceName": "Freepik",
+		"originalSource": "https://www.freepik.com/free-photo/medium-shot-woman-cute-dog-home_16604223.htm",
+		"cardAltName": "photo of a woman exploring DigitalDSA web app with her dog representing as security check",
+		"cardHeading": "Your Messages Stay Private, <br/> Your Deals Stay Sweet!",
+		"items": [
+			{
+				"title": "Your Data Stays Private –",
+				"desc": "We use <strong>ISO 27001-grade security</strong> to protect your information. No leaks, no unwanted calls—just secure access."
+			},
+			{
+				"title": "No Fishy Requests –",
+				"desc": "We never ask for OTPs, PINs, or passwords. If someone does, they are not from DigitalDSA."
+			},
+			{
+				"title": "Safe Loan Applications –",
+				"desc": "Your documents are encrypted and stored securely, following <strong>ISO 27001</strong> and <strong>DPDP Act compliance</strong>."
+			},
+			{
+				"title": "Beware of Fake Agents –",
+				"desc": "DigitalDSA never asks for payments outside our platform. We follow <strong>RBI’s digital lending guidelines</strong> to ensure secure transactions."
+			},
+			{
+				"title": "Honest Loan Comparison –",
+				"desc": "No hidden fees, no misleading rates—just clear, transparent offers aligned with the <strong>Fair Practices Code (FPC)</strong>."
+			}
+		],
+		"footerPara": "Stay informed, compare confidently, and secure your loan with peace of mind."
+	},
+	"mapSection": {
+		"heading": "Got a question?",
+		"subHeading": "Your query might already have an answer – check our FAQs or use our loan assistant for instant help.",
+		"iframeSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.582360012033!2d77.37939727539632!3d28.62274547572295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfba6614b50fd%3A0xf5f0a2f5d5b8a29b!2s202%2C%20G%20Block%2C%20Sector%2063%2C%20Noida%2C%20Chotpur%2C%20Uttar%20Pradesh%20201307!5e0!3m2!1sen!2sin!4v1710516891085!5m2!1sen!2sin",
+		"officeLabel": "Visit Our Office At:",
+		"addressLines": "202, G Block, Sector 63, Noida, Chotpur, <br /> Uttar Pradesh 201307"
+	},
+	"contactMethods": {
+		"call": {
+			"icon": "/icons/contact.svg",
+			"title": "Call us at:",
+			"value": "(+91) 120-4994466"
+		},
+		"email": {
+			"icon": "/icons/mail-icon.png",
+			"title": "Write to Us At:",
+			"value": "support@digitaldsa.com"
+		}
+	}
+}

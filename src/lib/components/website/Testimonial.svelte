@@ -4,6 +4,7 @@
   import CheckCard3 from "./CheckCard3.svelte";
   import CheckCard4 from "./CheckCard4.svelte";
   import CheckCard5 from "./CheckCard5.svelte";
+  import content from "$lib/data/website/testimonial.json";
 </script>
 
 <section class="flex flex-col gap-2 justify-center items-center">
@@ -13,94 +14,22 @@
     <div class="flex gap-4">
       <div class="flex flex-col gap-4">
         <CheckCard
-          contents={{
-            userName: "Alok Raj Singh",
-            profileImg: "/testimonialTest.png",
-            para: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-      cupiditate.`,
-          }}
+          contents={content.carousel.card1}
         />
         <CheckCard2
-          contents={{
-            userName: "Alok Raj Singh",
-            profileImg: "/testimonialTest.png",
-            para: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-      cupiditate.`,
-            stars: [
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-4",
-              },
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-4",
-              },
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-8",
-              },
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-4",
-              },
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-4",
-              },
-            ],
-          }}
+          contents={content.carousel.card2}
         />
       </div>
 
       <div class="flex flex-col gap-4">
         <CheckCard3
-          contents={{
-            userName: "Alok Raj Singh",
-            profileImg: "/testimonialTest.png",
-            para: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-      cupiditate.`,
-            stars: [
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-4",
-              },
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-4",
-              },
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-8",
-              },
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-4",
-              },
-              {
-                ratingIcon: "/star.png",
-                ratingStyle: "h-4",
-              },
-            ],
-          }}
+          contents={content.carousel.card3}
         />
         <CheckCard4
-          contents={{
-            userName: "Alok Raj Singh",
-            profileImg: "/testimonialTest.png",
-            para: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-      cupiditate.`,
-            quotes: ` Try not to become a man of success, but rather try to become a man of
-          value.`,
-            profileName: `Computer engineer`,
-          }}
+          contents={content.carousel.card4}
         />
         <CheckCard5
-          contents={{
-            userName: "Alok Raj Singh",
-            profileImg: "/testimonialTest.png",
-            para: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt vitae hic consequatur ipsam repudiandae rerum, asperiores quod velit expedita, nulla, maxime earum ut neque.`,
-            profileName: `Computer engineer`,
-          }}
+          contents={content.carousel.card5}
         />
       </div>
     </div>
