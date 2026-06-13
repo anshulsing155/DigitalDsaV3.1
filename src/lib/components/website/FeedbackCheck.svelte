@@ -19,7 +19,7 @@ onMount(() => {
 
 <section class="py-[3rem] px-[1rem] lg:px-[4rem]">
   <div class="grid lg:grid-cols-4 justify-between items-center md:w-4/6 gap-4">
-    <p class="col-span-2 typography-body-md !font-semibold dark:text-white text-black ">
+    <p class="col-span-2 typography-body-md !font-semibold text-[var(--form-text)] ">
       Was the information on this page useful?
     </p>
     <div class="col-span-2 flex flex-col sm:flex-row gap-4">
@@ -44,7 +44,7 @@ onMount(() => {
     </div>
   </div>
   {#if feedback == "No"}
-    <p in:fade class="mt-[2rem] typography-body-sm md:typography-body-md dark:text-white text-black ">
+    <p in:fade class="mt-[2rem] typography-body-sm md:typography-body-md text-[var(--form-text)] ">
       <span class="!font-semibold typography-body-sm "> Thanks for your feedback. </span>
       <br /> Have a suggestion? Please
       <a
@@ -55,7 +55,7 @@ onMount(() => {
       >
     </p>
   {:else if feedback == "Yes"}
-    <p in:fade class="mt-[2rem] typography-body-sm md:typography-body-md dark:text-white text-black ">
+    <p in:fade class="mt-[2rem] typography-body-sm md:typography-body-md text-[var(--form-text)] ">
       <span class="!font-semibold typography-body-sm">That's really great.</span>
       <br />
       Share your experience with us and
