@@ -9,7 +9,7 @@
 	const {
 		linkName = '',
 		link = '',
-		linkColor = '#1175BC',
+		linkColor = '[var(--ddsa-info-text)]',
 		onClick = () => {}
 	}: Props = $props();
 </script>
@@ -17,8 +17,7 @@
 <a
 	href={link}
 	onclick={onClick}
-	style={`color:${linkColor}`}
-	class="underline underline-offset-4 hover:no-underline cursor-pointer typography-input"
+	class={`underline underline-offset-4 hover:no-underline text-${linkColor} typography-input cursor-pointer`}
 >
 	{@html linkName}
 </a>

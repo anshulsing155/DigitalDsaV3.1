@@ -29,9 +29,7 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	// Inject store update callbacks dynamically for get-started actions
 	const pageDataWithClicks = $derived({
@@ -150,24 +148,24 @@
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		'itemListElement': [
+		itemListElement: [
 			{
 				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Saving for a Down Payment',
-				'item': 'https://www.digitaldsa.com/home-loan/saving-for-deposit'
+				position: 3,
+				name: 'Saving for a Down Payment',
+				item: 'https://www.digitaldsa.com/home-loan/saving-for-deposit'
 			}
 		]
 	};
@@ -213,9 +211,11 @@
 				<TwoColumnWithLeftHeading contents={content.guidance.advisors} />
 				<TwoColumnWithLeftHeading contents={content.guidance.steps} />
 
-				<div class="items-center border-b border-[#E5E5E5] px-2 py-8 md:p-16">
-					<h2 class="mb-4 font-semibold typography-h3">{content.guidance.finalThoughts.heading}</h2>
-					<p>
+				<div class="items-center border-b border-[var(--form-border)] px-2 py-8 md:p-16">
+					<h2 class="typography-h2-md mb-4 text-black dark:text-white">
+						{content.guidance.finalThoughts.heading}
+					</h2>
+					<p class="typography-body-md text-[var(--form-text-secondary)]">
 						{content.guidance.finalThoughts.para}
 					</p>
 				</div>
@@ -232,12 +232,12 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white typography-label">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
+							<h2 class="typography-label text-black dark:text-white">{list}</h2>
+							<div class="icon-container typography-h3 justify-self-end">
 								<span
 									><i
 										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
@@ -279,11 +279,11 @@
 						>
 							<TwoColumnWithLeftHeading contents={content.guidance.advisors} />
 							<TwoColumnWithLeftHeading contents={content.guidance.steps} />
-							<div class="items-center border-b border-[#E5E5E5] px-2 py-8 md:p-16">
-								<h2 class="mb-4 font-semibold typography-h3">
+							<div class="items-center border-b border-[var(--form-border)] px-2 py-8 md:p-16">
+								<h2 class="typography-h2-md mb-4 text-black dark:text-white">
 									{content.guidance.finalThoughts.heading}
 								</h2>
-								<p>
+								<p class="typography-body-md text-[var(--form-text-secondary)]">
 									{content.guidance.finalThoughts.para}
 								</p>
 							</div>
@@ -295,10 +295,10 @@
 
 		<!-- blog/related resources section -->
 		<div class="px-[0.5rem] py-[4rem] lg:px-[4rem]">
-			<h2 class="mb-5 font-semibold typography-h3">
+			<h2 class="typography-h2-md text-black dark:text-white mb-5">
 				{content.verticalBlog.heading}
 			</h2>
-			<p class="mb-4 font-semibold">{content.verticalBlog.sub}</p>
+			<p class="mb-4 typography-body-lg !font-semibold text-black dark:text-white">{content.verticalBlog.sub}</p>
 			<div class="flex flex-col gap-4 md:flex-row">
 				<VerticalBlog blogLists={content.verticalBlog.blogLists} />
 			</div>
@@ -310,8 +310,8 @@
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
-				btnBorder={content.messageUs.button.btnBorder}
 				btnName={content.messageUs.button.btnName}
+				btnClass={content.messageUs.button.btnClass}
 			/>
 		</TwoColumnWithImage>
 
@@ -319,7 +319,7 @@
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
-				<ul class="px-2 pl-4 flex flex-col gap-4 list-decimal">
+				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
 					{#each content.common_components.thinkYouShouldKnow.bullets as bullet}
 						<li>{@html bullet}</li>
 					{/each}

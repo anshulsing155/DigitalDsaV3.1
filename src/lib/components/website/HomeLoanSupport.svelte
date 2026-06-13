@@ -228,7 +228,7 @@
 					<div class="typography-body-sm text-text-light">
 						<ul class="list-disc space-y-4">
 							{#each content.steps.list as item}
-								<li class="flex items-start gap-1">
+								<li class="flex items-start gap-1 typography-body-md text-[var(--form-text-secondary)]">
 									<img src="/icons/circle-check.svg" alt="circle-check" class="mt-1 h-4" />
 									<span>
 										<strong>{item.bold}</strong>
@@ -335,8 +335,8 @@
 			<div class="w-auto">
 				<Button
 					link={content.messageUs.button.link}
-					btnBorder={content.messageUs.button.btnBorder}
 					btnName={content.messageUs.button.btnName}
+					btnClass={content.messageUs.button.btnClass}
 				/>
 			</div>
 		</TwoColumnWithImage>
