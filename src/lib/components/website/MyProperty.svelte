@@ -275,12 +275,12 @@
 
         <div    id="feature"
           data-section="feature"
-          class="border-b border-borderColor"
+          class="border-b border-[var(--form-border)]"
         >
           <WhyChoose facilities={benefits} gridCol="4" />
         </div>
         <div id="accessBank" data-section="accessBank">
-          <div class="border-b border-borderColor py-[2rem]">
+          <div class="border-b border-[var(--form-border)] py-[2rem]">
             <ThingsYouShould thinkKnow={accessBank} disc="list-disc" />
           </div>
         </div>

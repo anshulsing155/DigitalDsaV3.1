@@ -9,7 +9,7 @@
 </script>
 
 <div>
-  <details class="border-y border-borderColor py-[1.5rem] cursor-pointer">
+  <details class="border-y border-[var(--form-border)] py-[1.5rem] cursor-pointer">
     <summary class="list-none">
       <div class="flex items-center justify-between gap-4">
         <h2 class="typography-body-md typography-h3 font-semibold">{heading}</h2>

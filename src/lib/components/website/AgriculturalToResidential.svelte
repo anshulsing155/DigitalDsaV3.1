@@ -180,7 +180,7 @@
       <div id="benefits" data-section="benefits" class="section">
         <ThreeColumWithLeftHeading contents={content.benefits} />
 
-        <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor">
+        <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
           <div class="space-y-[3rem]">
             <h2 class="grid mb-[4rem] typography-h2 text-center text-text-main">
               Key Factors to Consider Before <br />
@@ -267,7 +267,7 @@
             <div id="benefits" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
               <ThreeColumWithLeftHeading contents={content.benefits} />
 
-              <div class="py-[4rem] px-[0.5rem] w-full border-b border-borderColor">
+              <div class="py-[4rem] px-[0.5rem] w-full border-b border-[var(--form-border)]">
                 <div class="space-y-[3rem]">
                   <h2 class="grid mb-[4rem] typography-h2 text-center text-text-main">
                     Key Factors to Consider Before <br />

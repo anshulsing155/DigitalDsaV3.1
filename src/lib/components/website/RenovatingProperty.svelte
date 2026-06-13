@@ -358,7 +358,7 @@ window.removeEventListener("scroll", handleScroll);
                   Plan your project
                 </h2>
                 <div
-                  class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor"
+                  class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]"
                 >
                   {#each planProject as cardData (cardData.heading)}
                     <ThreeCard {cardData} />
@@ -470,7 +470,7 @@ window.removeEventListener("scroll", handleScroll);
                       Plan your project
                     </h2>
                     <div
-                      class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor"
+                      class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]"
                     >
                       {#each planProject as cardData (cardData.heading)}
                         <ThreeCard {cardData} />

@@ -298,7 +298,7 @@ window.removeEventListener("scroll", handleScroll);
 
           <div id="calculate" data-section="calculate" class="section">
             <div
-              class="flex flex-col gap-[2rem] lg:gap-[1rem] lg:grid lg:grid-cols-5 py-[2rem] border-b border-borderColor"
+              class="flex flex-col gap-[2rem] lg:gap-[1rem] lg:grid lg:grid-cols-5 py-[2rem] border-b border-[var(--form-border)]"
             >
               <h2
                 class="typography-h3 font-semibold col-span-2 md:typography-h2-md lg:typography-h2"
@@ -373,7 +373,7 @@ window.removeEventListener("scroll", handleScroll);
             {:else if index == 3}
               <div id="calculate" class="bg-white text-black px-[2rem]">
                 <div
-              class="flex flex-col gap-[2rem] py-[2rem] border-b border-borderColor"
+              class="flex flex-col gap-[2rem] py-[2rem] border-b border-[var(--form-border)]"
             >
               <h2
                 class="typography-h3 font-semibold col-span-2 md:typography-h2-md lg:typography-h2"

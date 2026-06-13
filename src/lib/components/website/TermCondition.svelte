@@ -113,18 +113,18 @@
       <StickyNavbar navList={subList} {activeSection} />
       <div class="px-[2rem] lg:px-[4rem]">
         <div id="explore" data-section="explore">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={explore} disc="list-disc" />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={responsibilities} disc="list-disc" />
           </div>
         </div>
         <div id="restriction" data-section="restriction">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={eligibility} disc="list-disc" />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould
               thinkKnow={dataResponsibilities}
               disc="list-disc"
@@ -132,50 +132,50 @@
           </div>
         </div>
         <div id="submission" data-section="submission">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={submission} disc="list-disc" />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={limitation} disc="list-disc" />
           </div>
         </div>
         <div id="online" data-section="online">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={online} disc="list-disc" />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={compliance} disc="list-disc" />
           </div>
         </div>
         <div id="communication" data-section="communication">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={communication} disc="list-disc" />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={posting} disc="list-disc" />
           </div>
         </div>
         <div id="externalLink" data-section="externalLink">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={externalLink} disc="list-disc" />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={changes} disc="list-disc" />
           </div>
         </div>
         <div id="intellectual" data-section="intellectual">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={intellectual} disc="list-disc" />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={continued} disc="list-disc" />
           </div>
         </div>
         <div id="standard" data-section="standard">
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={standard} disc="list-disc" />
           </div>
-          <div class="border-b border-borderColor">
+          <div class="border-b border-[var(--form-border)]">
             <ThingsYouShould thinkKnow={indemnification} disc="list-disc" />
           </div>
         </div>
@@ -198,19 +198,19 @@
 
           {#if index == 0}
           <div id="explore" data-section="explore" class="bg-white text-black">
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={explore} disc="list-disc" />
             </div>
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={responsibilities} disc="list-disc" />
             </div>
           </div>
           {:else if index == 1}
           <div id="restriction" data-section="restriction" class="bg-white text-black" >
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={eligibility} disc="list-disc" />
             </div>
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould
                 thinkKnow={dataResponsibilities}
                 disc="list-disc"
@@ -219,55 +219,55 @@
           </div>
           {:else if index == 2}
           <div id="submission" data-section="submission" class="bg-white text-black">
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={submission} disc="list-disc" />
             </div>
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={limitation} disc="list-disc" />
             </div>
           </div>
           {:else if index == 3}
           <div id="online" data-section="online" class="bg-white text-black">
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={online} disc="list-disc" />
             </div>
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={compliance} disc="list-disc" />
             </div>
           </div>
           {:else if index == 4}
           <div id="communication" data-section="communication" class="bg-white text-black">
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={communication} disc="list-disc" />
             </div>
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={posting} disc="list-disc" />
             </div>
           </div>
           {:else if index == 5}
           <div id="externalLink" data-section="externalLink" class="bg-white text-black">
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={externalLink} disc="list-disc" />
             </div>
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={changes} disc="list-disc" />
             </div>
           </div>
           {:else if index == 6}
           <div id="intellectual" data-section="intellectual" class="bg-white text-black">
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={intellectual} disc="list-disc" />
             </div>
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={continued} disc="list-disc" />
             </div>
           </div>
           {:else if index==7}
           <div id="standard" data-section="standard" class="bg-white text-black">
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={standard} disc="list-disc" />
             </div>
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={indemnification} disc="list-disc" />
             </div>
           </div>

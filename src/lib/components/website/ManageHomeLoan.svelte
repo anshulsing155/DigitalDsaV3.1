@@ -113,7 +113,7 @@
       <div>
         <div class="hidden lg:block px-[2rem] lg:px-[4rem]">
           <div id="repayment">
-            <div class="py-[4rem] border-b border-borderColor">
+            <div class="py-[4rem] border-b border-[var(--form-border)]">
               <h2 class="mb-[3rem] md:text-start typography-h2 text-text-main">
                 Repayment & redraw
               </h2>
@@ -192,7 +192,7 @@
 
           <div
             id="offset"
-            class="border-b border-borderColor py-[4rem] grid grid-cols-3 justify-between gap-[4rem]"
+            class="border-b border-[var(--form-border)] py-[4rem] grid grid-cols-3 justify-between gap-[4rem]"
           >
             <h2 class="typography-h3 font-semibold md:typography-h2-md lg:col-span-1 lg:typography-h2">
               Everyday Offset
@@ -224,7 +224,7 @@
           </div>
 
           <div id="benefits">
-            <div class="py-[4rem] border-b border-borderColor">
+            <div class="py-[4rem] border-b border-[var(--form-border)]">
               <h2 class="mb-[3rem] md:text-start typography-h2 text-text-main">
                 Features & benefits
               </h2>
@@ -256,7 +256,7 @@
           </div>
 
           <div id="support">
-            <div class="flex flex-col gap-[3rem] border-b border-borderColor py-[2rem] lg:gap-[3rem] lg:py-[4rem]">
+            <div class="flex flex-col gap-[3rem] border-b border-[var(--form-border)] py-[2rem] lg:gap-[3rem] lg:py-[4rem]">
               <h2 class="md:text-start typography-h2 text-text-main">
                 Tools & support
               </h2>

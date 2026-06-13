@@ -170,7 +170,7 @@
             </ul>
           </div>
         </TwoColumnWithImage>
-        <div class="border-b border-borderColor px-[1rem] lg:px-[4rem]">
+        <div class="border-b border-[var(--form-border)] px-[1rem] lg:px-[4rem]">
           <ThingsYouShould thinkKnow={content.documents} disc="list-disc" />
         </div>
         <ButtonBanner contents={content.buttonBannerITR} />

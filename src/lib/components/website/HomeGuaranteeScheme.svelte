@@ -147,25 +147,25 @@
         <div class="px-[2rem] lg:px-[4rem]">
           <div>
             <div id="guarantee" data-section="guarantee">
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould thinkKnow={content.firstHomeSooner} />
               </div>
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould thinkKnow={content.firstHomeGuarantee} />
               </div>
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould thinkKnow={content.familyHomeGuarantee} />
               </div>
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould thinkKnow={content.firstHomeBuyerGuarantee} />
               </div>
             </div>
-            <div id="eligibility" data-section="eligibility" class="border-b border-borderColor">
+            <div id="eligibility" data-section="eligibility" class="border-b border-[var(--form-border)]">
               <ThingsYouShould thinkKnow={content.eligible} disc="list-disc" />
             </div>
 
             <div id="apply" data-section="apply">
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <WhyChoose facilities={content.apply} gridCol={3} />
               </div>
               {#if cardDataListWithClicks.length > 0}
@@ -183,7 +183,7 @@
             </div>
 
             <div id="concessions" data-section="concessions">
-              <div class="grid grid-cols-3 border-b border-borderColor gap-[2rem]">
+              <div class="grid grid-cols-3 border-b border-[var(--form-border)] gap-[2rem]">
                 <h2 class="typography-h2 text-text-main col-span-1 pt-[8rem]">
                   Other assistance grants & concessions
                 </h2>
@@ -195,11 +195,11 @@
               <ThingsYouShould thinkKnow={content.weHelp} />
 
               <div id="support" class="section" data-section="support">
-                <div class="border-b border-borderColor">
+                <div class="border-b border-[var(--form-border)]">
                   <div class="grid lg:grid-cols-3 gap-4 py-[1rem] md:py-[4rem]">
                     {#each content.contents as item}
                       {#each item.thirdBox as details}
-                        <div class="border-2 border-borderColor min-h-[50svh] h-full p-[1rem] md:p-[2rem] flex flex-col justify-between">
+                        <div class="border-2 border-[var(--form-border)] min-h-[50svh] h-full p-[1rem] md:p-[2rem] flex flex-col justify-between">
                           <div class="flex flex-col gap-4">
                             <h3 class="typography-h3 font-semibold text-text-main">
                               {details.title}
@@ -225,7 +225,7 @@
                       {#each item.firstBox as details}
                         <a
                           href={details.url}
-                          class="border-2 border-borderColor min-h-[50svh] h-full p-[1rem] md:p-[2rem] flex justify-center items-center bg-darkColor text-white"
+                          class="border-2 border-[var(--form-border)] min-h-[50svh] h-full p-[1rem] md:p-[2rem] flex justify-center items-center bg-darkColor text-white"
                         >
                           <div class="flex flex-col justify-center items-center">
                             <img src={details.icon} alt="icon" />
@@ -236,7 +236,7 @@
                         </a>
                       {/each}
                       {#each item.secBox as details}
-                        <div class="border-2 border-borderColor min-h-[50svh] h-full">
+                        <div class="border-2 border-[var(--form-border)] min-h-[50svh] h-full">
                           <div>
                             <img src={details.src} alt={details.alt} />
                           </div>
@@ -297,16 +297,16 @@
 
             {#if index == 0}
               <div id="guarantee" class="bg-white text-black px-[2rem] py-[1rem]">
-                <div class="border-b border-borderColor">
+                <div class="border-b border-[var(--form-border)]">
                   <ThingsYouShould thinkKnow={content.firstHomeSooner} />
                 </div>
-                <div class="border-b border-borderColor">
+                <div class="border-b border-[var(--form-border)]">
                   <ThingsYouShould thinkKnow={content.firstHomeGuarantee} />
                 </div>
-                <div class="border-b border-borderColor">
+                <div class="border-b border-[var(--form-border)]">
                   <ThingsYouShould thinkKnow={content.familyHomeGuarantee} />
                 </div>
-                <div class="border-b border-borderColor">
+                <div class="border-b border-[var(--form-border)]">
                   <ThingsYouShould thinkKnow={content.firstHomeBuyerGuarantee} />
                 </div>
               </div>

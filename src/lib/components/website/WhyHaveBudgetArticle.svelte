@@ -16,7 +16,7 @@
 <section class="w-full px-1">
     <div id="pageDesign" class="mx-auto bg-white">
         <div
-            class="grid items-center lg:grid-cols-2 gap-[4rem] py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-borderColor"
+            class="grid items-center lg:grid-cols-2 gap-[4rem] py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-[var(--form-border)]"
         >
             <div class="order-2 lg:order-1">
                 <h1
@@ -63,7 +63,7 @@
               </div>
         </div>
 
-            <div class="py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-borderColor">
+            <div class="py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-[var(--form-border)]">
                 <h2 class="typography-h2 text-text-main mb-[3rem]">
                     Is Budgeting About Deprivation?
                 </h2>
@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-borderColor">
+            <div class="py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-[var(--form-border)]">
                 <h2 class="typography-h2 text-text-main mb-[3rem]">
                     How to Get Started with Budgeting
                 </h2>
@@ -122,7 +122,7 @@
                 </div>
             </div>
 
-            <div class="py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-borderColor">
+            <div class="py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-[var(--form-border)]">
                 <h2 class="typography-h2 text-text-main mb-[3rem]">
                     Why You Need a Budget Even If You Think You Don't
                 </h2>
@@ -147,7 +147,7 @@
                 
                 </div>
             </div>
-<div class="py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-borderColor">
+<div class="py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-[var(--form-border)]">
             <h2 class="typography-h2 text-text-main mb-[3rem]">
                 Final Thoughts
             </h2>

@@ -123,7 +123,7 @@
 
         <div class="px-[2rem] lg:px-[4rem]">
           <div id="offers" data-section="offers" class="section">
-            <div class="grid lg:grid-cols-5 gap-4 border-b border-borderColor py-[4rem]">
+            <div class="grid lg:grid-cols-5 gap-4 border-b border-[var(--form-border)] py-[4rem]">
               <h2 class="typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2">
                 Current offers
               </h2>
@@ -359,7 +359,7 @@
 
             {#if index == 0}
               <div id="offers" class="bg-white text-black px-[2rem]">
-                <div class="grid gap-4 border-b border-borderColor py-[4rem]">
+                <div class="grid gap-4 border-b border-[var(--form-border)] py-[4rem]">
                   <h2 class="typography-h2 text-text-main">
                     Current offers
                   </h2>

@@ -362,7 +362,7 @@ Stay updated with the latest tax regulations by visiting the
       <!-- overview -->
       <div data-section="incomeTax" id="incomeTax" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <span class="typography-body-sm text-text-light text-gray-600">
             Posted on: {currentDate}
@@ -387,7 +387,7 @@ Stay updated with the latest tax regulations by visiting the
         </div>
         <!-- what is income tax -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -406,7 +406,7 @@ Stay updated with the latest tax regulations by visiting the
         </div>
         <!-- income taxpayers -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -429,7 +429,7 @@ Stay updated with the latest tax regulations by visiting the
         </div>
         <!-- income under income tax -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -451,7 +451,7 @@ Stay updated with the latest tax regulations by visiting the
       <!-- income tax slab table -->
       <div data-section="slab" id="slab" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -468,7 +468,7 @@ Stay updated with the latest tax regulations by visiting the
       <!-- income tax deductions -->
       <div data-section="deduction" id="deduction" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -488,7 +488,7 @@ Stay updated with the latest tax regulations by visiting the
         </div>
         <!-- fill itr -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -510,7 +510,7 @@ Stay updated with the latest tax regulations by visiting the
       <!-- deadlines -->
       <div data-section="deadline" id="deadline" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -530,7 +530,7 @@ Stay updated with the latest tax regulations by visiting the
         </div>
         <!-- penalties -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -551,7 +551,7 @@ Stay updated with the latest tax regulations by visiting the
       <!-- conclusion -->
       <div data-section="conclusion" id="conclusion" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -584,7 +584,7 @@ Stay updated with the latest tax regulations by visiting the
             <!-- overview -->
             <div id="incomeTax" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <span class="typography-body-sm text-text-light text-gray-600">
                   Posted on: {currentDate}
@@ -611,7 +611,7 @@ Stay updated with the latest tax regulations by visiting the
               </div>
               <!-- what is income tax -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -631,7 +631,7 @@ Stay updated with the latest tax regulations by visiting the
               </div>
               <!-- income taxpayers -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -656,7 +656,7 @@ Stay updated with the latest tax regulations by visiting the
               </div>
               <!-- income under income tax -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -681,7 +681,7 @@ Stay updated with the latest tax regulations by visiting the
             <!-- income tax slab table -->
             <div id="slab" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -699,7 +699,7 @@ Stay updated with the latest tax regulations by visiting the
             <!-- income tax deductions -->
             <div id="deduction" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -721,7 +721,7 @@ Stay updated with the latest tax regulations by visiting the
               </div>
               <!-- fill itr -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -744,7 +744,7 @@ Stay updated with the latest tax regulations by visiting the
             <!-- deadlines -->
             <div id="deadline" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -764,7 +764,7 @@ Stay updated with the latest tax regulations by visiting the
               </div>
               <!-- penalties -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -788,7 +788,7 @@ Stay updated with the latest tax regulations by visiting the
             <!-- conclusion -->
             <div id="conclusion" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"

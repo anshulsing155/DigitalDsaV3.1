@@ -193,7 +193,7 @@
 			</div>
 
 			<div id="laws" data-section="laws" class="section">
-				<div class="border-borderColor border-b lg:px-[4rem]">
+				<div class="border-[var(--form-border)] border-b lg:px-[4rem]">
 					<ThingsYouShould
 						thinkKnow={{
 							heading: content.laws.heading,
@@ -215,15 +215,15 @@
 			</div>
 
 			<div id="charges" data-section="charges" class="section">
-				<div class="border-borderColor border-b lg:px-[4rem]">
+				<div class="border-[var(--form-border)] border-b lg:px-[4rem]">
 					<TwoColumn
 						cardImage={content.charges.cardImage}
 						cardAltName={content.charges.cardAltName}
 						cardHeading={content.charges.cardHeading}
 					>
-						<div class="typography-body-md space-y-6 text-text-light" slot="list">
+						<div class="typography-body-md space-y-6 text-[var(--form-text-secondary)]" slot="list">
 							<p>{content.charges.para1}</p>
-							<ul class="typography-body-md grid gap-[2rem] text-text-light">
+							<ul class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]">
 								<div>
 									{#each content.charges.firstTableData as tableData}
 										<PaymentTable {tableData} />
@@ -237,7 +237,7 @@
 			</div>
 
 			<div id="possession" data-section="possession" class="section">
-				<div class="border-borderColor border-b lg:px-[4rem]">
+				<div class="border-[var(--form-border)] border-b lg:px-[4rem]">
 					<ThingsYouShould
 						thinkKnow={{
 							heading: content.possession.heading,

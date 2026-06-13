@@ -158,7 +158,7 @@ window.removeEventListener("scroll", handleScroll);
             <div
               id="started"
               data-section="started"
-              class="border-b border-borderColor section"
+              class="border-b border-[var(--form-border)] section"
             >
               {#each [
                 {
@@ -213,7 +213,7 @@ window.removeEventListener("scroll", handleScroll);
                 >
               </ul>
             </TwoColumn>
-            <div class="border-t border-borderColor">
+            <div class="border-t border-[var(--form-border)]">
               <HomeIntrest
                 homeInterest="Book a time with a Home Lending Specialist"
                 btnName="Book now"
@@ -259,7 +259,7 @@ window.removeEventListener("scroll", handleScroll);
                 ],
               },
             ] as steps}
-              <div class="col-span-2 border-b border-borderColor">
+              <div class="col-span-2 border-b border-[var(--form-border)]">
                 <NewHome {steps} />
               </div>
             {/each}
@@ -287,7 +287,7 @@ window.removeEventListener("scroll", handleScroll);
                 ],
               },
             ] as steps}
-              <div class="col-span-2 border-b border-borderColor">
+              <div class="col-span-2 border-b border-[var(--form-border)]">
                 <NewHome {steps} />
               </div>
             {/each}

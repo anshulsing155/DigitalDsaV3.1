@@ -143,7 +143,7 @@
         <ThreeColumWithLeftHeading contents={content.metrics} />
       </div>
 
-      <div class="px-[4rem] border-b border-borderColor" id="evaluation" data-section="evaluation">
+      <div class="px-[4rem] border-b border-[var(--form-border)]" id="evaluation" data-section="evaluation">
         <ThingsYouShould thinkKnow={content.evaluation} disc="list-disc" />
       </div>
 

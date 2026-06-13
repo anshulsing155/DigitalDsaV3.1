@@ -199,7 +199,7 @@
 
 			<div id="compare" data-section="compare" class="section">
 				<div
-					class="w-full border-b border-borderColor px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
 					<div class="">
 						<h2 class="mb-[4rem] grid text-center typography-h2 text-text-main">
@@ -305,7 +305,7 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
 						>
 							<div
-								class="w-full border-b border-borderColor px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+								class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 							>
 								<div class="">
 									<h2 class="mb-[4rem] grid text-center typography-h2 text-text-main">

@@ -140,7 +140,7 @@
 
         <div class="px-[2rem] lg:px-[4rem]">
           <div id="started" data-section="started" class="section">
-            <div class="grid gap-[2rem] border-b border-borderColor py-[4rem]">
+            <div class="grid gap-[2rem] border-b border-[var(--form-border)] py-[4rem]">
               <div class="grid gap-6">
                 <h2 class="typography-h2 text-text-main">
                   Getting started
@@ -187,7 +187,7 @@
             </div>
           </div>
 
-          <div id="plan" data-section="plan" class="border-b border-borderColor section">
+          <div id="plan" data-section="plan" class="border-b border-[var(--form-border)] section">
             <WhyChoose facilities={content.facilities} gridCol={4} />
           </div>
 
@@ -262,7 +262,7 @@
 
             {#if index == 0}
               <div id="started" class="bg-white text-black px-[2rem]">
-                <div class="grid gap-[2rem] border-b border-borderColor py-[4rem]">
+                <div class="grid gap-[2rem] border-b border-[var(--form-border)] py-[4rem]">
                   <div class="grid gap-6">
                     <h2 class="typography-h2 text-text-main">
                       Getting started

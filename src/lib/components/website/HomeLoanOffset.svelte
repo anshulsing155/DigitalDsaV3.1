@@ -200,7 +200,7 @@
           </div>
 
           <div id="benefits" data-section="benefits" class="section">
-            <div class="pt-[2rem] lg:pt-[4rem] border-b border-borderColor">
+            <div class="pt-[2rem] lg:pt-[4rem] border-b border-[var(--form-border)]">
               <h2 class="md:text-start typography-h2 text-text-main">
                 Looking for a home
               </h2>
@@ -213,7 +213,7 @@
           </div>
 
           <div id="offset" data-section="offset" class="section">
-            <div class="pt-[2rem] lg:pt-[4rem] border-b border-borderColor">
+            <div class="pt-[2rem] lg:pt-[4rem] border-b border-[var(--form-border)]">
               <h2 class="md:text-start typography-h2 text-text-main">
                 Home loans with an offset account
               </h2>
@@ -226,11 +226,11 @@
           </div>
 
           <div id="support" data-section="support" class="section">
-            <div class="border-b border-borderColor">
+            <div class="border-b border-[var(--form-border)]">
               <div class="grid grid-cols-3 gap-4 py-[4rem]">
                 {#each content.contents as item, index}
                   {#if index == 0 || index == 2}
-                    <div class="border-2 border-borderColor min-h-[25svh] p-[2rem] flex flex-col gap-[3rem]">
+                    <div class="border-2 border-[var(--form-border)] min-h-[25svh] p-[2rem] flex flex-col gap-[3rem]">
                       <div class="flex flex-col gap-4">
                         <h3 class="typography-h3 font-semibold text-text-main">
                           {item.title}
@@ -264,7 +264,7 @@
                       {#if idx >= item.links.length - 1}
                         <a
                           href={link.url}
-                          class="border-2 border-borderColor min-h-[25svh] p-[2rem] flex flex-col gap-[3rem] bg-darkColor text-white justify-center items-center h-full"
+                          class="border-2 border-[var(--form-border)] min-h-[25svh] p-[2rem] flex flex-col gap-[3rem] bg-darkColor text-white justify-center items-center h-full"
                         >
                           <div class="flex flex-col items-center">
                             <img src="/icons/comparison2.svg" alt="icon" />
@@ -383,7 +383,7 @@
                 <div class="grid md:grid-cols-2 gap-4 py-[4rem]">
                   {#each content.contents as item, idx}
                     {#if idx == 0 || idx == 2}
-                      <div class="border-2 border-borderColor min-h-[25svh] p-[2rem] flex flex-col gap-[3rem]">
+                      <div class="border-2 border-[var(--form-border)] min-h-[25svh] p-[2rem] flex flex-col gap-[3rem]">
                         <div class="flex flex-col gap-4">
                           <h3 class="typography-h3 font-semibold text-text-main">
                             {item.title}
@@ -417,7 +417,7 @@
                         {#if i >= item.links.length - 1}
                           <a
                             href={link.url}
-                            class="border-2 border-borderColor min-h-[50svh] h-full p-[2rem] flex flex-col gap-[3rem] bg-darkColor text-white justify-center items-center"
+                            class="border-2 border-[var(--form-border)] min-h-[50svh] h-full p-[2rem] flex flex-col gap-[3rem] bg-darkColor text-white justify-center items-center"
                           >
                             <div class="flex flex-col items-center">
                               <img src="/icons/comparison2.svg" alt="icon" />

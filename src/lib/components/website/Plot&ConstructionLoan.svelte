@@ -194,7 +194,7 @@
 
         <div id="bt">
           <TwoColumnWithLeftHeading contents={content.balanceTransfer.contents} />
-          <div class="py-[4rem] w-full border-b border-borderColor px-[0.5rem] lg:px-[4rem]">
+          <div class="py-[4rem] w-full border-b border-[var(--form-border)] px-[0.5rem] lg:px-[4rem]">
             <div class="flex flex-col justify-center items-center gap-[4rem] w-full lg:w-auto">
               <h2 class="typography-h2 text-text-main text-center">
                 {content.topUp.heading}
@@ -267,7 +267,7 @@
 
               <div id="bt">
                 <TwoColumnWithLeftHeading contents={content.balanceTransfer.contents} />
-                <div class="py-[4rem] w-full border-b border-borderColor px-[0.5rem] lg:px-[4rem]">
+                <div class="py-[4rem] w-full border-b border-[var(--form-border)] px-[0.5rem] lg:px-[4rem]">
                   <div class="flex flex-col justify-center items-center gap-[4rem] w-full lg:w-auto">
                     <h2 class="typography-h2 text-text-main text-center">
                       {content.topUp.heading}

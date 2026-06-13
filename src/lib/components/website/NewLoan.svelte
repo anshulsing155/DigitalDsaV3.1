@@ -438,7 +438,7 @@ dispatch("textExtracted", text);
                 Looking for a home
               </h2>
               <div
-                class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor"
+                class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]"
               >
                 {#each forHome as cardData (cardData.heading)}
                   <ThreeCard {cardData} />
@@ -476,7 +476,7 @@ dispatch("textExtracted", text);
                   What's next?
                 </h2>
                 <div
-                  class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor"
+                  class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]"
                 >
                   {#each whatNext as cardData (cardData.heading)}
                     <ThreeCard {cardData} />
@@ -578,7 +578,7 @@ dispatch("textExtracted", text);
                     Looking for a home
                   </h2>
                   <div
-                    class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor"
+                    class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]"
                   >
                     {#each forHome as cardData (cardData.heading)}
                       <ThreeCard {cardData} />
@@ -614,7 +614,7 @@ dispatch("textExtracted", text);
                       What's next?
                     </h2>
                     <div
-                      class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor"
+                      class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]"
                     >
                       {#each whatNext as cardData (cardData.heading)}
                         <ThreeCard {cardData} />

@@ -25,7 +25,7 @@
     <TwoColumnWithLeftHeading contents={content.lap} />
     <TwoColumnWithLeftHeading contents={content.dod} />
 
-    <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-borderColor">
+    <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
       <div>
         <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
           {content.comparison.heading}

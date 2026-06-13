@@ -204,7 +204,7 @@
 			</div>
 
 			<div id="equity" data-section="equity" class="section">
-				<div class="lg:px-[4rem] border-b border-borderColor">
+				<div class="lg:px-[4rem] border-b border-[var(--form-border)]">
 					<ThingsYouShould
 						thinkKnow={{
 							heading: content.equity.heading,
@@ -226,7 +226,7 @@
 			</div>
 
 			<div id="difference" data-section="difference" class="section">
-				<div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor text-black dark:text-white">
+				<div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] ">
 					<h2 class="typography-h2 text-text-main text-center py-5 dark:text-white">
 						{content.difference.heading}
 					</h2>
@@ -244,7 +244,7 @@
 
 			<div id="apply" data-section="apply" class="section">
 				<div class="lg:px-[4rem]">
-					<div class="border-b border-borderColor">
+					<div class="border-b border-[var(--form-border)]">
 						<ThingsYouShould
 							thinkKnow={{
 								heading: content.apply.heading,
@@ -262,7 +262,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)]  {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -272,7 +272,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white typography-label">{list}</h2>
+							<h2 class=" typography-label">{list}</h2>
 							<div class="icon-container justify-self-end typography-h3">
 								<span
 									><i
@@ -284,7 +284,7 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="equity" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="equity" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
 							<ThingsYouShould
 								thinkKnow={{
 									heading: content.equity.heading,
@@ -295,17 +295,17 @@
 							/>
 						</div>
 					{:else if index === 1}
-						<div id="topup" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="topup" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 ">
 							<AboveTitleWithoutIconCard contents={content.topup.contents} />
 							<AboveTitleWithBlackCard contents={content.topup.calculators} />
 						</div>
 					{:else if index === 2}
-						<div id="lap" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="lap" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 ">
 							<AboveTitleWithoutIconCard contents={content.lap.contents} />
 						</div>
 					{:else if index === 3}
-						<div id="difference" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
-							<div class="py-[2rem] px-[0.5rem] w-full text-black dark:text-white">
+						<div id="difference" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 ">
+							<div class="py-[2rem] px-[0.5rem] w-full ">
 								<h2 class="typography-h2 text-text-main text-center py-5 dark:text-white">
 									{content.difference.heading}
 								</h2>
@@ -317,11 +317,11 @@
 							</div>
 						</div>
 					{:else if index === 4}
-						<div id="howUseEquity" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="howUseEquity" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 ">
 							<ThreeColumWithLeftHeading contents={content.howUseEquity} />
 						</div>
 					{:else if index === 5}
-						<div id="apply" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="apply" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 ">
 							<ThingsYouShould
 								thinkKnow={{
 									heading: content.apply.heading,

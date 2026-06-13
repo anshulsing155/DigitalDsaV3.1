@@ -262,7 +262,7 @@
       <!-- cyber threat -->
       <div data-section="cyberThreat" id="cyberThreat" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -275,7 +275,7 @@
         </div>
         <!-- true cost -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -300,7 +300,7 @@
       <!-- real life -->
       <div data-section="realLife" id="realLife" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -322,7 +322,7 @@
       <!-- how to make -->
       <div data-section="safe" id="safe" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -347,7 +347,7 @@
       <!-- digital dsa -->
       <div data-section="commitment" id="commitment" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -372,7 +372,7 @@
       <!-- final thoughts -->
       <div data-section="final" id="final" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -405,7 +405,7 @@
           {#if index == 0}
             <div id="cyberThreat" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -418,7 +418,7 @@
               </div>
               <!-- true cost -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -447,7 +447,7 @@
           {:else if index == 1}
             <div id="realLife" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -473,7 +473,7 @@
           {:else if index == 2}
             <div id="safe" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -502,7 +502,7 @@
           {:else if index == 3}
             <div id="commitment" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -531,7 +531,7 @@
           {:else if index == 4}
             <div id="final" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"

@@ -163,7 +163,7 @@
   <PageDesign {pageData}>
     <div class="px-[2rem] lg:px-[4rem]">
       <div id="glance" data-section="glance">
-        <div class="border-b border-borderColor">
+        <div class="border-b border-[var(--form-border)]">
           <ThingsYouShould thinkKnow={newBaby} />
         </div>
 
@@ -177,24 +177,24 @@
           <div class="col-span-full lg:col-span-3">
             {#each manageHomeLoan as item, i (item.id)}
               <div
-                class="{manageHomeLoan.length - 1 > i ? 'border-b border-borderColor' : ''}"
+                class="{manageHomeLoan.length - 1 > i ? 'border-b border-[var(--form-border)]' : ''}"
               >
                 <ThingsYouShould thinkKnow={item} colSpan={5} />
               </div>
             {/each}
           </div>
         </div>
-        <div class="border-b border-borderColor">
+        <div class="border-b border-[var(--form-border)]">
             <WhyChoose facilities={guidance} gridCol=4/>
         
         </div>
 
-<div class="border-b border-borderColor">
+<div class="border-b border-[var(--form-border)]">
     <WhyChoose facilities={tools} />
 
 </div>
 
-        <div class="border-b border-borderColor">
+        <div class="border-b border-[var(--form-border)]">
           <TwoColumn
             cardImage="/images/message.jpg"
             cardAltName="housing-figure"

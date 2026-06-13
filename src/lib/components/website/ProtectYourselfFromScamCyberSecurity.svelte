@@ -230,7 +230,7 @@ dispatch("pageData", pageData);
             ],
           }}
         />
-        <div class="px-[4rem] border-b border-borderColor">
+        <div class="px-[4rem] border-b border-[var(--form-border)]">
           <Payments
             supportHeading="Remember 3 simple steps: Stop. Check. Reject."
           >
@@ -296,7 +296,7 @@ dispatch("pageData", pageData);
         />
       </div>
       <div
-        class="px-[4rem] border-b border-borderColor"
+        class="px-[4rem] border-b border-[var(--form-border)]"
         id="information"
         data-section="information"
       >
@@ -398,7 +398,7 @@ dispatch("pageData", pageData);
                   ],
                 }}
               />
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <Payments
                   supportHeading="Remember 3 simple steps: Stop. Check. Reject."
                 >

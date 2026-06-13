@@ -311,14 +311,14 @@
 
       <div class="px-[2rem] lg:px-[4rem]">
         <div
-          class="border-b border-borderColor section"
+          class="border-b border-[var(--form-border)] section"
           id="costOfLiving"
           data-section="costOfLiving"
         >
           <ThingsYouShould thinkKnow={costOfLiving} />
         </div>
         <div
-          class="border-b border-borderColor section"
+          class="border-b border-[var(--form-border)] section"
           id="affectingFactors"
           data-section="affectingFactors"
         >
@@ -327,13 +327,13 @@
         <div
           id="financialSupport"
           data-section="financialSupport"
-          class="border-b border-borderColor sections"
+          class="border-b border-[var(--form-border)] sections"
         >
           <NewHome steps={repayments} />
         </div>
 
         <div
-          class="pb-[2rem] border-b border-borderColor section"
+          class="pb-[2rem] border-b border-[var(--form-border)] section"
           id="offerDeals"
           data-section="offerDeals"
         >
@@ -348,7 +348,7 @@
             <div slot="list">
               <div class="flex flex-col gap-5 pb-[2rem]">
                 <h2
-                  class="font-semibold typography-h3 flex items-end gap-2 border-b border-borderColor pb-[.3rem]"
+                  class="font-semibold typography-h3 flex items-end gap-2 border-b border-[var(--form-border)] pb-[.3rem]"
                 >
                   <img src="/icons/no-fee.svg" alt="no-fee-icon" class="h-16" />
                   With Maximum Benefits!
@@ -412,7 +412,7 @@
 
               <div class="flex flex-col gap-5 pt-[2rem]">
                 <h2
-                  class="font-semibold typography-h3 flex gap-6 items-end border-b border-borderColor pb-[.3rem]"
+                  class="font-semibold typography-h3 flex gap-6 items-end border-b border-[var(--form-border)] pb-[.3rem]"
                 >
                   <img src="/icons/referral.svg" alt="" class="h-16" /> Spread the
                   Word
@@ -463,7 +463,7 @@
             </div>
           </div> -->
 
-          <div class="pb-[2rem] border-b border-borderColor">
+          <div class="pb-[2rem] border-b border-[var(--form-border)]">
             <TwoColumn
               cardImage={cardImg2}
               cardAltName={cardAlt2}
@@ -549,7 +549,7 @@
                   Exclusive Cashback Offers
                 </h2> -->
                     <h2
-                      class="font-semibold typography-h3 flex items-end gap-2 border-b border-borderColor pb-[.3rem]"
+                      class="font-semibold typography-h3 flex items-end gap-2 border-b border-[var(--form-border)] pb-[.3rem]"
                     >
                       <img src="/icons/no-fee.svg" alt="" class="h-10" /> With Maximum
                       Benefits!
@@ -617,7 +617,7 @@
 
                   <div class="flex flex-col gap-5 pt-[2rem]">
                     <h2
-                      class="font-semibold typography-h3 flex gap-6 items-end border-b border-borderColor pb-[.3rem]"
+                      class="font-semibold typography-h3 flex gap-6 items-end border-b border-[var(--form-border)] pb-[.3rem]"
                     >
                       <img src="/icons/referral.svg" alt="" class="h-10" /> Spread
                       the Word

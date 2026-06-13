@@ -139,7 +139,7 @@
       <div
         id="purpose"
         data-section="purpose"
-        class="border-b border-borderColor lg:px-[4rem]"
+        class="border-b border-[var(--form-border)] lg:px-[4rem]"
       >
         <ThingsYouShould
           thinkKnow={{
@@ -214,7 +214,7 @@
       </div>
       <div id="people" data-section="people">
         <div
-          class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[1rem] mb-[1rem]">
             <h2
@@ -259,7 +259,7 @@
       </div>
 
       <div id="code" data-section="code">
-        <div class="border-b border-borderColor lg:px-[4rem]">
+        <div class="border-b border-[var(--form-border)] lg:px-[4rem]">
           <ThingsYouShould
             thinkKnow={{
               heading: "Our Code of Trust",
@@ -421,7 +421,7 @@
           {:else if index == 3}
             <div class="bg-white text-black px-2">
               <div
-                class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[1rem] mb-[1rem]">
                   <h2

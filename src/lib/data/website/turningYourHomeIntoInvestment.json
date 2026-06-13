@@ -15,12 +15,14 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary",
+				"animation": true
 			},
 			{
 				"btnName": "Compare offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -55,12 +57,15 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary",
+				"animation": true
 			},
 			{
 				"btnName": "Compare offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary",
+				"animation": true
 			}
 		]
 	},
@@ -95,7 +100,8 @@
 					"para": "<ul class=\"pl-5 list-disc space-y-4\"><li><span class=\"font-semibold\">Check Your Property’s Market Value:</span> Get a valuation to know the maximum loan amount you may be eligible for.</li><li><span class=\"font-semibold\">Eligibility Check:</span> Ensure you meet the eligibility requirements for a Top-Up Loan, which will typically include a good credit score and an income check.</li><li><span class=\"font-semibold\">Submit Documents:</span> Provide necessary documents like income proof, property papers, and the details of your existing home loan.</li><li><span class=\"font-semibold\">Loan Disbursement:</span> Once approved, the loan amount is disbursed, and you can use it for your intended purpose.</li></ul>",
 					"btnName": "Explore more",
 					"btnLink": "/home-loan",
-					"btnColor": "#ffcc00"
+					"btnClass": "btn-primary",
+					"animation": true
 				}
 			]
 		},

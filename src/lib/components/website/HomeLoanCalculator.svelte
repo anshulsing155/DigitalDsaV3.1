@@ -13,7 +13,7 @@
 </script>
 
 <section
-  class="flex flex-col gap-4 border-b border-borderColor py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] xl:gap-[2rem]"
+  class="flex flex-col gap-4 border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] xl:gap-[2rem]"
 >
   <div class="flex flex-col gap-10">
     <h2

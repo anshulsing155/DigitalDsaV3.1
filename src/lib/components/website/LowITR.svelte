@@ -313,7 +313,7 @@ window.removeEventListener("scroll", handleScroll);
     <div
       id="documents"
       data-section="documents"
-      class="px-[1rem] lg:px-[4rem] border-b border-borderColor"
+      class="px-[1rem] lg:px-[4rem] border-b border-[var(--form-border)]"
     >
       <ThingsYouShould
         thinkKnow={{

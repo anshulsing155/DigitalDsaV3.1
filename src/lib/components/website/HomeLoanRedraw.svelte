@@ -135,7 +135,7 @@
             <h2 class="md:text-start typography-h2 text-text-main">
               Benefits of redraw
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]">
               {#each content.benefits as cardData (cardData.heading)}
                 <ThreeCard {cardData} />
               {/each}
@@ -152,7 +152,7 @@
             <h2 class="md:text-start typography-h2 text-text-main">
               How redraw works
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]">
               {#each content.works as cardData (cardData.heading)}
                 <ThreeCard {cardData} />
               {/each}
@@ -200,7 +200,7 @@
                   <h2 class="md:text-start typography-h2 text-text-main">
                     Benefits of redraw
                   </h2>
-                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor">
+                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]">
                     {#each content.benefits as cardData (cardData.heading)}
                       <ThreeCard {cardData} />
                     {/each}
@@ -217,7 +217,7 @@
                   <h2 class="md:text-start typography-h2 text-text-main">
                     How redraw works
                   </h2>
-                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-borderColor">
+                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]">
                     {#each content.works as cardData (cardData.heading)}
                       <ThreeCard {cardData} />
                     {/each}

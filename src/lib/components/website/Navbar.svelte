@@ -435,7 +435,7 @@
 						<div class="col-span-1 grid">
 							{#each searches.slice(0, 3) as search}
 								<button
-									class="typography-body-md border-borderColor hover:border-linkColor flex items-center justify-between border-b"
+									class="typography-body-md border-[var(--form-border)] hover:border-linkColor flex items-center justify-between border-b"
 									onclick={() => {
 										goto(search.link);
 										overlayOpen = false;
@@ -452,7 +452,7 @@
 						<div class="col-span-1 grid">
 							{#each searches.slice(3, 6) as search}
 								<button
-									class="typography-body-md border-borderColor hover:border-linkColor flex items-center justify-between border-b"
+									class="typography-body-md border-[var(--form-border)] hover:border-linkColor flex items-center justify-between border-b"
 									onclick={() => {
 										goto(search.link);
 										overlayOpen = false;

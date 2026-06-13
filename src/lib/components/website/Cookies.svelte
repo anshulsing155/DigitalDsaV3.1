@@ -114,7 +114,7 @@
         <div
           data-section="firstPartyCookies"
           id="firstPartyCookies"
-          class="py-[2rem] border-b border-borderColor"
+          class="py-[2rem] border-b border-[var(--form-border)]"
         >
           <Payments supportHeading="Different types of cookies">
             <div class="grid grid-cols-2 gap-[2rem]">

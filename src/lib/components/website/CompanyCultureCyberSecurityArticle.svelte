@@ -270,7 +270,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
       <!-- story -->
       <div data-section="first" id="first" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -283,7 +283,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
         </div>
         <!-- everyone's job -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -296,7 +296,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
         </div>
         <!-- example -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -311,7 +311,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
       <!-- fun -->
       <div data-section="smart" id="smart" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
@@ -339,7 +339,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
       <!-- empowerment -->
       <div data-section="awareness" id="awareness" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -352,7 +352,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
         </div>
         <!-- investing -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -367,7 +367,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
       <!-- team -->
       <div data-section="final" id="final" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -380,7 +380,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
         </div>
         <!-- final thought -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <h2
             class="typography-h2 text-text-main"
@@ -412,7 +412,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           {#if index == 0}
             <div id="first" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -425,7 +425,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
               </div>
               <!-- everyone's job -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -438,7 +438,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
               </div>
               <!-- example -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -453,7 +453,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           {:else if index == 1}
             <div id="smart" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
@@ -485,7 +485,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           {:else if index == 2}
             <div id="awareness" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -498,7 +498,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
               </div>
               <!-- investing -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -513,7 +513,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           {:else if index == 3}
             <div id="final" class="bg-white text-black">
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -526,7 +526,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
               </div>
               <!-- final thought -->
               <div
-                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <h2
                   class="typography-h2 text-text-main"

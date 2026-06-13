@@ -8,7 +8,7 @@
 	class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 >
 	<div class="flex w-full flex-col gap-[2rem]">
-		<div class="flex flex-col gap-1">
+		<div class="flex flex-col gap-2">
 			{#if contents.heading}
 				<h2 class="typography-h2-md text-[var(--form-text)]">
 					{@html contents.heading}

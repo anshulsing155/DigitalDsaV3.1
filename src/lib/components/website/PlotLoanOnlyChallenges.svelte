@@ -180,7 +180,7 @@
       </div>
 
       <div id="challenges" data-section="challenges" class="section">
-        <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor">
+        <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
           <div class="flex flex-col gap-[2rem] lg:gap-[4rem]">
             <h2 class="typography-h2 text-text-main">
               {@html challenges.heading}
@@ -211,7 +211,7 @@
       <div id="alternate" data-section="alternate" class="section">
         <AboveTitleWithTopIconCard contents={content.alternate.contents} />
 
-        <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor">
+        <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
           <div class="">
             <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
               Comparison of Alternative Financing Options for Buying a Plot
@@ -261,7 +261,7 @@
             </div>
           {:else if index == 1}
             <div id="challenges" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
-              <div class="py-[4rem] px-[0.5rem] w-full border-b border-borderColor">
+              <div class="py-[4rem] px-[0.5rem] w-full border-b border-[var(--form-border)]">
                 <div class="flex flex-col gap-[2rem]">
                   <h2 class="typography-h2 text-text-main">
                     {@html challenges.heading}
@@ -292,7 +292,7 @@
             <div id="alternate" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
               <AboveTitleWithTopIconCard contents={content.alternate.contents} />
 
-              <div class="py-[4rem] px-[0.5rem] w-full border-b border-borderColor">
+              <div class="py-[4rem] px-[0.5rem] w-full border-b border-[var(--form-border)]">
                 <div class="">
                   <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
                     Comparison of Alternative Financing Options for Buying a Plot

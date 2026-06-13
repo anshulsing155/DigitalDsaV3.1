@@ -25,7 +25,7 @@
 <section class="mx-auto w-full">
   <NewPageLayout {pageData}>
     <div class="px-[0.5rem] lg:px-[4rem]">
-      <div class="border-b border-borderColor">
+      <div class="border-b border-[var(--form-border)]">
         <WhyChoose facilities={benefits} gridCol={4} />
       </div>
       <TwoColumn
@@ -50,7 +50,7 @@
         </ul>
       </TwoColumn>
 
-      <div class="border-y border-borderColor">
+      <div class="border-y border-[var(--form-border)]">
         <WhyChoose facilities={instantSupport} gridCol={4} />
       </div>
 

@@ -210,7 +210,7 @@ dispatch("pageData", pageData);
       <div
         id="MFA"
         data-section="MFA"
-        class="lg:px-[4rem] border-b border-borderColor"
+        class="lg:px-[4rem] border-b border-[var(--form-border)]"
       >
         <ThingsYouShould
           thinkKnow={{
@@ -224,7 +224,7 @@ dispatch("pageData", pageData);
         />
       </div>
       <div id="caller" data-section="caller" class="">
-        <div class="border-b border-borderColor px-[4rem]">
+        <div class="border-b border-[var(--form-border)] px-[4rem]">
           <ThingsYouShould
             thinkKnow={{
               heading: "Caller ID and spam protection",
@@ -241,7 +241,7 @@ dispatch("pageData", pageData);
       <div
         id="telecomCompanies"
         data-section="telecomCompanies"
-        class="border-b border-borderColor px-[4rem]"
+        class="border-b border-[var(--form-border)] px-[4rem]"
       >
         <ThingsYouShould
           thinkKnow={{

@@ -255,7 +255,7 @@ window.removeEventListener("scroll", handleScroll);
 
       <div id="compare" data-section="compare" class="section">
         <div
-          class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+          class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
           <div class="">
             <h2
@@ -466,7 +466,7 @@ window.removeEventListener("scroll", handleScroll);
               class="section bg-white text-black"
             >
               <div
-                class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor"
+                class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
                 <div class="">
                   <h2

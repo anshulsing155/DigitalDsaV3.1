@@ -175,7 +175,7 @@
         </StickyNavbar>
         <AnchorCounter />
         <div class="px-[2rem] lg:px-[4rem]">
-          <div id="knowProperty" data-section="knowProperty" class="border-b border-borderColor py-[2rem]">
+          <div id="knowProperty" data-section="knowProperty" class="border-b border-[var(--form-border)] py-[2rem]">
             <ThingsYouShould thinkKnow={content.knowMarket} />
           </div>
           <div id="toolsSupport" data-section="toolsSupport" class="py-[2rem]">

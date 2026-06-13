@@ -160,7 +160,7 @@
         <div id="requirement" data-section="requirement">
           <ThreeColumWithLeftHeading contents={content.requirement} />
         </div>
-        <div class="lg:px-[4rem] border-b border-borderColor" id="benefits" data-section="benefits">
+        <div class="lg:px-[4rem] border-b border-[var(--form-border)]" id="benefits" data-section="benefits">
           <ThingsYouShould thinkKnow={content.benefits} disc="list-disc" />
         </div>
 
@@ -170,7 +170,7 @@
           <ThreeColumWithLeftHeading contents={content.eligibility} />
         </div>
 
-        <div class="border-b border-borderColor lg:px-[4rem]" id="process" data-section="process">
+        <div class="border-b border-[var(--form-border)] lg:px-[4rem]" id="process" data-section="process">
           <TwoColumn
             cardImage={content.process.cardImage}
             cardAltName={content.process.cardAltName}
@@ -192,7 +192,7 @@
         </div>
 
         <div id="consider" data-section="consider">
-          <div class="border-b border-borderColor lg:px-[4rem]">
+          <div class="border-b border-[var(--form-border)] lg:px-[4rem]">
             <ThingsYouShould thinkKnow={content.consider.things} disc="list-disc" />
           </div>
 

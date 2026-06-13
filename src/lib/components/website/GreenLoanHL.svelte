@@ -115,7 +115,7 @@
     <div class="px-[2rem] lg:hidden">
       <ThingsYouShould thinkKnow={content.head}>
         <div
-          class="flex flex-col md:flex-row pb-[2rem] gap-[1rem] border-b border-borderColor"
+          class="flex flex-col md:flex-row pb-[2rem] gap-[1rem] border-b border-[var(--form-border)]"
           slot="list"
         >
           <div class="flex items-center gap-1">
@@ -170,7 +170,7 @@
         <div id="glance" data-section="glance">
           <div>
             <ThingsYouShould thinkKnow={content.head}>
-              <div class="flex pb-[2rem] gap-2 border-b border-borderColor"
+              <div class="flex pb-[2rem] gap-2 border-b border-[var(--form-border)]"
                 slot="list"
               >
                 <div class="flex items-center gap-1">
@@ -248,7 +248,7 @@
           </TwoColumn>
         </div>
 
-        <div id="eligibility" data-section="eligibility" class="py-[2rem] border-b border-borderColor">
+        <div id="eligibility" data-section="eligibility" class="py-[2rem] border-b border-[var(--form-border)]">
           <ThingsYouShould thinkKnow={content.areYouEligible} disc="list-disc" />
         </div>
 
@@ -283,7 +283,7 @@
 
           <div class="lg:col-span-3 border-b">
             {#each content.faq as question}
-              <div class="border-b border-borderColor">
+              <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould
                   thinkKnow={question}
                   disc="list-disc"
@@ -399,7 +399,7 @@
       
               <div class="lg:col-span-3 border-b">
                 {#each content.faq as question}
-                  <div class="border-b border-borderColor">
+                  <div class="border-b border-[var(--form-border)]">
                     <ThingsYouShould
                       thinkKnow={question}
                       disc="list-disc"

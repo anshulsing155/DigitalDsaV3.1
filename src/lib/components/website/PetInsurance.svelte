@@ -451,7 +451,7 @@
         <div class="" id="learn" data-section="learn">
           <Ways ways={learnMore} />
           <div
-            class="flex flex-col gap-[1rem] border-b border-borderColor py-[2rem]"
+            class="flex flex-col gap-[1rem] border-b border-[var(--form-border)] py-[2rem]"
           >
             <h2
               class="typography-h2 text-text-main"
@@ -579,7 +579,7 @@
             >
               <Ways ways={learnMore} />
               <div
-                class="flex flex-col gap-[1rem] border-b border-borderColor py-[2rem]"
+                class="flex flex-col gap-[1rem] border-b border-[var(--form-border)] py-[2rem]"
               >
                 <h2
                   class="typography-h2 text-text-main"
@@ -643,7 +643,7 @@
         />
       </div>
       <div
-        class="grid lg:grid-cols-3 py-[2rem] border-y border-borderColor gap-[1rem]"
+        class="grid lg:grid-cols-3 py-[2rem] border-y border-[var(--form-border)] gap-[1rem]"
       >
         <h2
           class="typography-h2 text-text-main"
@@ -651,7 +651,7 @@
           FAQs
         </h2>
         <div class="col-span-2">
-          <details class="border-y border-borderColor py-4 cursor-pointer">
+          <details class="border-y border-[var(--form-border)] py-4 cursor-pointer">
             <summary class="list-none">
               <div class="flex items-center justify-between gap-4">
                 <h2 class="typography-body-md typography-h3 font-semibold">
@@ -674,7 +674,7 @@
               </p>
             </div>
           </details>
-          <details class="border-y border-borderColor py-4 cursor-pointer">
+          <details class="border-y border-[var(--form-border)] py-4 cursor-pointer">
             <summary class="list-none">
               <div class="flex items-center justify-between gap-4">
                 <h2 class="typography-body-md typography-h3 font-semibold">
@@ -715,7 +715,7 @@
               </ul>
             </div>
           </details>
-          <details class="border-y border-borderColor py-4 cursor-pointer">
+          <details class="border-y border-[var(--form-border)] py-4 cursor-pointer">
             <summary class="list-none">
               <div class="flex items-center justify-between gap-4">
                 <h2 class="typography-body-md typography-h3 font-semibold">

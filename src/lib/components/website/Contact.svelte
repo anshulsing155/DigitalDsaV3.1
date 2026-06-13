@@ -23,7 +23,7 @@
         <EnquiryContactPage {enquiry} heading="What is enquiry?" />
       </div>
 
-      <div class="border-t border-borderColor py-[2rem] space-y-5">
+      <div class="border-t border-[var(--form-border)] py-[2rem] space-y-5">
         <TwoColumn
           cardImage={content.beforeReachingUs.cardImage}
           cardAltName={content.beforeReachingUs.cardAltName}
@@ -47,7 +47,7 @@
         </TwoColumn>
       </div>
 
-      <div class="border-t border-borderColor py-[2rem] space-y-5">
+      <div class="border-t border-[var(--form-border)] py-[2rem] space-y-5">
         <TwoColumn
           cardImage={content.securityInfo.cardImage}
           sourceName={content.securityInfo.sourceName}
@@ -72,7 +72,7 @@
         </TwoColumn>
       </div>
 
-      <div class="border-t border-borderColor py-[6rem] space-y-5">
+      <div class="border-t border-[var(--form-border)] py-[6rem] space-y-5">
         <div class="flex flex-col gap-[3rem] w-full">
           <!-- first div  -->
           <div class="grid grid-cols-12 gap-4">
@@ -117,7 +117,7 @@
             </div>
             <div class="flex flex-col gap-4 col-span-3 lg:col-span-1">
               <div
-                class="border-borderColor border py-4 divide-x grid grid-cols-12"
+                class="border-[var(--form-border)] border py-4 divide-x grid grid-cols-12"
               >
                 <div
                   class="h-[3rem] flex justify-center col-span-2 lg:col-span-3"
@@ -136,7 +136,7 @@
               </div>
 
               <div
-                class="border-borderColor border py-4 divide-x grid grid-cols-12"
+                class="border-[var(--form-border)] border py-4 divide-x grid grid-cols-12"
               >
                 <div
                   class="h-[1.5rem] md:h-[2rem] lg:h-[2.4rem] flex justify-center col-span-2 lg:col-span-3"

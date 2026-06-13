@@ -92,7 +92,7 @@
     </div> -->
     <div class="px-0 lg:px-[4rem]">
       {#each tips as tip, index}
-        <div class="border-b border-borderColor">
+        <div class="border-b border-[var(--form-border)]">
           <ThingsYouShould thinkKnow={tip} disc="list-disc" />
         </div>
       {/each}

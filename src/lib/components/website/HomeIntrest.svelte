@@ -17,7 +17,7 @@
 </script>
 
 <section
-	class="grid items-center justify-center gap-[2rem] border-b border-borderColor py-[4rem] md:grid-cols-3"
+	class="grid items-center justify-center gap-[2rem] border-b border-[var(--form-border)] py-[4rem] md:grid-cols-3"
 >
 	<p class="text-center typography-h3 font-semibold typography-h2-md md:col-span-2">
 		{@html homeInterest}

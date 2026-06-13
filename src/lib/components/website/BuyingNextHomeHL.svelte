@@ -180,7 +180,7 @@
 					contents={content.whybuy.contents}
 				/>
 				<AboveTitleWithTopIconCard contents={content.considerations.contents} />
-				<div class="border-b border-borderColor">
+				<div class="border-b border-[var(--form-border)]">
 					<AboveTitleWithTopIconCard contents={content.benefits.contents} />
 				</div>
 				<AboveTitleWithTopIconCard
@@ -190,7 +190,7 @@
 			</section>
 
 			<section id="whychoose" data-section="whychoose" class="section">
-				<div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-borderColor">
+				<div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
 					<h2 class="grid mb-[4rem] typography-h3 font-semibold md:typography-h2-md text-center">
 						{content.whychoose.heading}
 					</h2>
@@ -236,14 +236,14 @@
 						<div id="whybuy" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
 							<AboveTitleWithTopIconCard contents={content.whybuy.contents} />
 							<AboveTitleWithTopIconCard contents={content.considerations.contents} />
-							<div class="border-b border-borderColor">
+							<div class="border-b border-[var(--form-border)]">
 								<AboveTitleWithTopIconCard contents={content.benefits.contents} />
 							</div>
 							<AboveTitleWithTopIconCard contents={content.steps.contents} />
 						</div>
 					{:else if index == 2}
 						<div id="whychoose" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
-							<div class="py-[4rem] w-full border-b border-borderColor overflow-x-auto">
+							<div class="py-[4rem] w-full border-b border-[var(--form-border)] overflow-x-auto">
 								<h2 class="grid mb-[4rem] typography-h3 font-semibold text-center">
 									{content.whychoose.heading}
 								</h2>
