@@ -8,14 +8,14 @@
 	import { hostName } from '$lib/stores/stores';
 	import { afterNavigate } from '$app/navigation';
 	import { FileUser } from 'lucide-svelte';
-	import { Menu, LogOut, CircleUserRound, ChevronDown } from '$lib/utils/iconRegistry';
+	import { Menu, LogOut, CircleUserRound, ChevronDown, X } from '$lib/utils/iconRegistry';
 
 	let firstPart = $state(''),
 		finalValue = $state('');
 
 	let goToCalculators = $state(false);
 
-	let profileIsOpen = $state(true);
+	let profileIsOpen = $state(false);
 	let mobileProfileIsOpen = $state(false);
 	let userName = $derived(page.data.user?.name?.split(' ')[0] || '');
 	let formattedName = $derived(
@@ -263,7 +263,9 @@
 						<p class="typography-button text-center text-[var(--form-text)]">
 							{$hostName}
 						</p>
-						<p class="typography-alert text-[var(--form-text)] hidden 2xl:flex">powered by EYantrik</p>
+						<p class="typography-alert hidden text-[var(--form-text)] 2xl:flex">
+							powered by EYantrik
+						</p>
 					</div>
 				</button>
 			</div>
@@ -302,7 +304,7 @@
 				type="button"
 				onclick={toggleNav}
 				aria-label="Open navigation"
-				class="typography-button text-[var(--form-text)] faBarCloseCustomClass flex items-center"
+				class="typography-button faBarCloseCustomClass flex items-center text-[var(--form-text)]"
 			>
 				<Menu />
 			</button>
@@ -389,7 +391,7 @@
 			{:else}
 				<a
 					href="/login"
-					class="typography-body-md btn-primary flex items-center gap-4 p-5  text-black sm:py-11"
+					class="typography-body-md btn-primary flex items-center gap-4 p-5 text-black sm:py-11"
 				>
 					<img src="/icons/lock.svg" alt="lock-svg" class="h-[.9rem]" />
 					<p>Login</p>
@@ -475,130 +477,145 @@
 
 	{#if navOpen}
 		<div
-			class="navbarForMobile fixed top-0 h-full w-full overflow-auto border-b border-[var(--form-border)] bg-[var(--landing-bg)] px-[1rem] text-black hover:text-black dark:text-white dark:hover:text-white"
+			class="navbarForMobile fixed top-0 flex min-h-screen w-full flex-col justify-between gap-4 overflow-auto border-b border-[var(--form-border)] bg-[var(--landing-bg)]"
 			in:fly={{ x: -100, duration: 500 }}
 			out:fly={{ x: -100, duration: 500 }}
 		>
-			<div
-				class="border-btnBg/60 mb-[2rem] flex items-center justify-between border-b px-2 py-[.8rem]"
-			>
-				<div class="flex flex-col">
-					<button
-						type="button"
-						onclick={() => {
-							goto('/');
-							toggleNav();
-						}}
-						class="flex flex-col items-center space-y-1"
-					>
-						<!-- White mode logo -->
-						<img
-							src="/logo/logoWhite.svg"
-							alt="Digital DSA Logo"
-							class="hidden h-[2rem] object-contain lg:h-[3rem] dark:block"
-							loading="lazy"
-						/>
-
-						<!-- Dark mode logo -->
-						<img
-							src="/logo/logoBlack.svg"
-							alt="digital-dsa-logo"
-							class="block h-[2rem] lg:h-[3rem] dark:hidden"
-						/>
-
-						<p class="typography-button text-center text-[var(--form-text)]">
-							{$hostName}
-						</p>
-					</button>
-				</div>
-
-				<button type="button" onclick={toggleNav} aria-label="Close navigation"
-					><i class="fa-solid fa-xmark text-2xl"></i></button
-				>
-			</div>
-
-			<ul
-				class="typography-body-md relative flex h-[calc(100vh-4rem)] flex-col pb-[1rem] font-semibold"
-			>
-				{#each navList as nav, i}
-					<li class="hover:text-btnBg py-1">
-						<a
-							href={nav.link}
-							class="block {i < navList.length - 1
-								? ' border-borderColor/50 border-b'
-								: '  border-btnBg/60 border-b'} py-[0.75rem]"
-							onclick={(e) => {
-								handleNavigation(nav.link, nav.mobId);
-							}}
-						>
-							<div class="flex items-center gap-[1.5rem] px-2">
-								<div class="h-[1.8rem]">
-									<img src={nav.icon} alt="nav-icon" class="h-full" />
-								</div>
-								<div class="relative flex">
-									{nav.list}
-									{#if nav.hasOwnProperty('star')}
-										<sup class="-top-4 -right-1 h-full">
-											<img src="/gif/moneyMapStar.gif" alt="money-map-star-icon" class="h-[2rem]" />
-										</sup>
-									{:else if nav.hasOwnProperty('offer')}
-										<sup class="-top-4 -right-1 h-full">
-											<img src="/gif/sale.gif" alt="sale-icon" class="h-[2.2rem]" />
-										</sup>
-									{/if}
-								</div>
-							</div>
-						</a>
-					</li>
-				{/each}
-
-				<!-- svelte-ignore a11y_click_events_have_key_events -->
-				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<div class="w-full pt-3" onclick={() => (mobileProfileIsOpen = !mobileProfileIsOpen)}>
-					{#if page.data.user?.name}
-						{#each profileDropDown as item (item.title)}
-							<li
-								class="text-btnBg typography-body-md hover:bg-btnBg border-borderColor/60 flex w-full items-end gap-[1.5rem] border-b px-2 py-[.6rem] text-[0.75rem] hover:text-black"
-							>
-								{#if item.url}
-									<!-- <img src={item.icon} alt={item.alt} class="h-5" /> -->
-									<item.icon {...item.iconProps} />
-									<button onclick={() => goto(item.url)}>{item.title}</button>
-								{/if}
-							</li>
-						{/each}
-
+			<div class="flex flex-col gap-4">
+				<div class="flex items-start justify-between px-3 py-[.8rem]">
+					<div class="flex flex-col">
 						<button
 							type="button"
-							class="font-FifthHead text-subParaFont bg-btnBg w-full py-[.4rem]"
 							onclick={() => {
-								signOut();
+								goto('/');
+								toggleNav();
 							}}
+							class="flex flex-col items-center space-y-1"
 						>
-							<div class="flex items-center gap-[1rem] px-2">
+							<!-- White mode logo -->
+							<img
+								src="/logo/logoWhite.svg"
+								alt="Digital DSA Logo"
+								class="hidden h-[2rem] object-contain lg:h-[3rem] dark:block"
+								loading="lazy"
+							/>
+
+							<!-- Dark mode logo -->
+							<img
+								src="/logo/logoBlack.svg"
+								alt="digital-dsa-logo"
+								class="block h-[2rem] lg:h-[3rem] dark:hidden"
+							/>
+
+							<p class="typography-button text-center text-[var(--form-text)]">
+								{$hostName}
+							</p>
+						</button>
+					</div>
+
+					<button
+						type="button"
+						onclick={toggleNav}
+						aria-label="Close navigation"
+						class="text-[var(--form-text)]"
+						><X />
+					</button>
+				</div>
+				<!-- h-[calc(100vh-4rem)] -->
+				<ul class="typography-body-md relative flex flex-col px-3 !font-medium">
+					{#each navList as nav, i}
+						<li class="py-1 text-[var(--form-text)]">
+							<a
+								href={nav.link}
+								class="block {i < navList.length - 1
+									? ' border-b border-[var(--form-border)]'
+									: '  border-b border-none'} py-[0.75rem]"
+								onclick={(e) => {
+									handleNavigation(nav.link, nav.mobId);
+								}}
+							>
+								<div class="flex items-center gap-[1.5rem] px-2">
+									<div class="h-[1.8rem]">
+										<img src={nav.icon} alt="nav-icon" class="h-full" />
+									</div>
+									<div class="relative inline-flex">
+										<span>{nav.list}</span>
+										{#if nav.hasOwnProperty('star')}
+											<div class="pointer-events-none absolute -top-6 -right-7">
+												<img
+													src="/gif/moneyMapStar.gif"
+													alt="money-map-star-icon"
+													class="h-[2.2rem]"
+												/>
+											</div>
+										{:else if nav.hasOwnProperty('offer')}
+											<div class="pointer-events-none absolute -top-6 -right-7">
+												<img src="/gif/sale.gif" alt="sale-icon" class="h-[2.2rem]" />
+											</div>
+										{/if}
+									</div>
+								</div>
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</div>
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<div
+				class="flex w-full flex-col gap-0 bg-[var(--landing-bg)] shadow-[0_4px_12px_var(--shadow-select)] border-t-2 border-[var(--form-border)]"
+				onclick={() => (mobileProfileIsOpen = !mobileProfileIsOpen)}
+			>
+				{#if page.data.user?.name}
+					<ul class="m-0 list-none p-0">
+						{#each profileDropDown as item (item.title)}
+							{#if item.url}
+								<li class="border-b border-[var(--form-border)]">
+									<button
+										type="button"
+										class="typography-body-md flex w-full items-center gap-6 px-3 py-3 text-left !font-medium text-[var(--form-text)]"
+										onclick={() => goto(item.url)}
+									>
+										<item.icon {...item.iconProps} />
+										<span>{item.title}</span>
+									</button>
+								</li>
+							{/if}
+						{/each}
+
+						<li>
+							<button
+								type="button"
+								class="typography-body-md flex w-full items-center gap-4 px-3 py-3 text-left !font-medium text-[var(--form-text)]"
+								onclick={signOut}
+							>
 								<img
 									src="/icons/logoutBlack.svg"
 									alt="icon-logout"
-									class="block h-10 dark:hidden"
+									class="block h-[1.8rem] dark:hidden"
 								/>
-								<img src="/icons/logout.svg" alt="icon-logout" class="hidden h-10 dark:block" />
-								<p>Logout</p>
-							</div>
-						</button>
-					{:else}
-						<button
-							type="button"
-							class="font-FifthHead text-subParaFont bg-btnBg w-full py-[.4rem]"
-							onclick={() => goto('/login')}
-						>
-							<div class="flex items-center gap-[1rem] px-2">
-								<img src="/icons/breakLock.svg" alt="lock-svg" class="h-10" />
-								<p>Login</p>
-							</div></button
-						>
-					{/if}
-				</div>
-			</ul>
+								<img
+									src="/icons/logout.svg"
+									alt="icon-logout"
+									class="hidden h-[1.8rem] dark:block"
+								/>
+								<span>Logout</span>
+							</button>
+						</li>
+					</ul>
+				{:else}
+					<button
+						type="button"
+						class="typography-body-md w-full py-[0.75rem] !font-medium text-[var(--form-text)]"
+						onclick={() => goto('/login')}
+					>
+						<div class="flex items-center gap-[1rem] px-2">
+							<img src="/icons/breakLock.svg" alt="lock-svg" class="h-[1.8rem]" />
+							<p>Login</p>
+						</div>
+					</button>
+				{/if}
+			</div>
 		</div>
 	{/if}
 </section>
