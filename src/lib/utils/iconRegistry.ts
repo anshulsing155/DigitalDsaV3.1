@@ -14,6 +14,7 @@
 // Import only the icons actually used in the codebase
 import {
 	// Navigation & UI
+	CircleUserRound,
 	Sun,
 	Paperclip,
 	MoveRight,
@@ -263,6 +264,7 @@ import {
 
 // Re-export all icons for direct imports
 export {
+	CircleUserRound,
 	Sun,
 	Paperclip,
 	MoveRight,
@@ -446,6 +448,7 @@ export {
 // Keys are PascalCase icon names as used in the codebase
 const iconRegistry: Record<string, typeof User> = {
 	// Navigation & UI
+	CircleUserRound,
 	Sun,
 	Paperclip,
 	MoveRight,

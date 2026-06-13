@@ -15,12 +15,13 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary text-black",
 				"animation": true
 			}
 		],
@@ -52,12 +53,14 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary text-black",
+				"animation": true
 			}
 		]
 	},
@@ -206,7 +209,7 @@
 			"heading": "See our home loan budget planner",
 			"btnName": "Explore now",
 			"btnLink": "/planners/budget-planner",
-			"btnBorder": "#4F4C4D"
+			"btnClass": "btn-secondary dark:text-white text-black"
 		},
 		"prosCons": {
 			"heading": "Pros & Cons of a Home Loan Top-Up",
@@ -262,13 +265,14 @@
 					"para": "Get the best top-up loan deals with competitive interest rates and flexible repayment options. Enhance your financial stability by accessing additional funds on your existing loan.",
 					"btnName": "Compare bank offers",
 					"btnLink": "/get-started/how-can-we-help",
-					"btnColor": "#ffcc00"
+					"btnClass": "btn-primary dark:text-white text-black"
 				},
 				{
 					"title": "Get the best home loan deal",
 					"para": "Get the most from your home loan application process and book time with our Home Lending Specialist at a time that suits you.",
 					"btnName": "Book an appointment",
-					"btnLink": "/appointment"
+					"btnLink": "/appointment",
+					"btnClass": "btn-secondary dark:text-white text-black"
 				}
 			]
 		},
@@ -354,7 +358,7 @@
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
 		"button": {
 			"link": "/contact",
-			"btnBorder": "#4F4C4D",
+			"btnClass": "btn-secondary dark:text-white text-black",
 			"btnName": "Message us"
 		}
 	},

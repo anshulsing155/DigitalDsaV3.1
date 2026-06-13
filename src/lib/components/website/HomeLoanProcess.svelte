@@ -11,6 +11,7 @@
 	import Seo from './Seo.svelte';
 	import { onMount } from 'svelte';
 	import { applicationData } from '$lib/stores/stores';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import content from '$lib/data/website/homeLoanProcess.json';
 
 	interface ButtonProps {
@@ -29,9 +30,7 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	// Inject store update callbacks dynamically for get-started actions
 	const pageDataWithClicks = $derived({
@@ -150,24 +149,24 @@
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		'itemListElement': [
+		itemListElement: [
 			{
 				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Understanding Home Loan Process',
-				'item': 'https://www.digitaldsa.com/home-loan/understanding-home-loan-process'
+				position: 3,
+				name: 'Understanding Home Loan Process',
+				item: 'https://www.digitaldsa.com/home-loan/understanding-home-loan-process'
 			}
 		]
 	};
@@ -194,7 +193,7 @@
 			</div>
 
 			<div id="laws" data-section="laws" class="section">
-				<div class="lg:px-[4rem] border-b border-borderColor">
+				<div class="border-borderColor border-b lg:px-[4rem]">
 					<ThingsYouShould
 						thinkKnow={{
 							heading: content.laws.heading,
@@ -209,22 +208,22 @@
 
 			<div id="document" data-section="document" class="section">
 				<AboveTitleWithoutIconCard contents={content.document.contents}>
-					<p class="typography-body-sm text-text-light">
+					<p class="typography-body-sm text-[var(--form-text-secondary)]">
 						{@html content.document.proTip}
 					</p>
 				</AboveTitleWithoutIconCard>
 			</div>
 
 			<div id="charges" data-section="charges" class="section">
-				<div class="lg:px-[4rem] border-b border-borderColor">
+				<div class="border-borderColor border-b lg:px-[4rem]">
 					<TwoColumn
 						cardImage={content.charges.cardImage}
 						cardAltName={content.charges.cardAltName}
 						cardHeading={content.charges.cardHeading}
 					>
-						<div class="typography-body-md text-text-light space-y-6" slot="list">
+						<div class="typography-body-md space-y-6 text-text-light" slot="list">
 							<p>{content.charges.para1}</p>
-							<ul class="grid gap-[2rem] typography-body-md text-text-light">
+							<ul class="typography-body-md grid gap-[2rem] text-text-light">
 								<div>
 									{#each content.charges.firstTableData as tableData}
 										<PaymentTable {tableData} />
@@ -238,7 +237,7 @@
 			</div>
 
 			<div id="possession" data-section="possession" class="section">
-				<div class="lg:px-[4rem] border-b border-borderColor">
+				<div class="border-borderColor border-b lg:px-[4rem]">
 					<ThingsYouShould
 						thinkKnow={{
 							heading: content.possession.heading,
@@ -253,13 +252,13 @@
 
 			<div id="pitfalls" data-section="pitfalls" class="section">
 				<TwoColumnWithImage contents={content.pitfalls}>
-					<div class="typography-body-md text-text-light space-y-6">
+					<div class="typography-body-sm flex flex-col gap-4 text-[var(--form-text-secondary)]">
 						<p>{content.pitfalls.para}</p>
 						<div class="space-y-4">
-							<h3 class="typography-h3 font-semibold text-text-main dark:text-white">
+							<h3 class="typography-h3 font-semibold text-[var(--form-text)]">
 								{content.pitfalls.subHeading}
 							</h3>
-							<ul class="space-y-3 list-disc pl-5">
+							<ul class="list-disc space-y-3 pl-5">
 								{#each content.pitfalls.bullets as bullet}
 									<li>{@html bullet}</li>
 								{/each}
@@ -279,29 +278,28 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white typography-label">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
-								<span
-									><i
-										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
-									></i></span
-								>
+							<h2 class="text-[var(--form-text)] typography-label">{list}</h2>
+							<div class="text-[var(--form-text)] justify-self-end">
+								<ChevronDown />
 							</div>
 						</div>
 					</summary>
 
 					{#if index === 0}
-						<div id="laws" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div
+							id="laws"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 "
+						>
 							<ThingsYouShould
 								thinkKnow={{
 									heading: content.laws.heading,
@@ -313,23 +311,26 @@
 							/>
 						</div>
 					{:else if index === 1}
-						<div id="document" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="document" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
 							<AboveTitleWithoutIconCard contents={content.document.contents}>
-								<p class="typography-body-sm text-text-light">
+								<p class="typography-body-sm text-[var(--form-text-secondary)]">
 									{@html content.document.proTip}
 								</p>
 							</AboveTitleWithoutIconCard>
 						</div>
 					{:else if index === 2}
-						<div id="charges" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div
+							id="charges"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 "
+						>
 							<TwoColumn
 								cardImage={content.charges.cardImage}
 								cardAltName={content.charges.cardAltName}
 								cardHeading={content.charges.cardHeading}
 							>
-								<div class="typography-body-md text-text-light space-y-6" slot="list">
+								<div class="typography-body-md space-y-6 text-text-light" slot="list">
 									<p>{content.charges.para1}</p>
-									<ul class="grid gap-[2rem] typography-body-md text-text-light">
+									<ul class="typography-body-md grid gap-[2rem] text-text-light">
 										<div>
 											{#each content.charges.firstTableData as tableData}
 												<PaymentTable {tableData} />
@@ -341,7 +342,10 @@
 							</TwoColumn>
 						</div>
 					{:else if index === 3}
-						<div id="possession" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div
+							id="possession"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 "
+						>
 							<ThingsYouShould
 								thinkKnow={{
 									heading: content.possession.heading,
@@ -353,15 +357,18 @@
 							/>
 						</div>
 					{:else if index === 4}
-						<div id="pitfalls" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div
+							id="pitfalls"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4"
+						>
 							<TwoColumnWithImage contents={content.pitfalls}>
-								<div class="typography-body-md text-text-light space-y-6">
+								<div class="typography-body-sm space-y-6 text-[var(--form-text-secondary)]">
 									<p>{content.pitfalls.para}</p>
 									<div class="space-y-4">
 										<h3 class="typography-h3 font-semibold text-text-main dark:text-white">
 											{content.pitfalls.subHeading}
 										</h3>
-										<ul class="space-y-3 list-disc pl-5">
+										<ul class="list-disc space-y-3 pl-5">
 											{#each content.pitfalls.bullets as bullet}
 												<li>{@html bullet}</li>
 											{/each}

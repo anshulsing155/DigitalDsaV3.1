@@ -12,7 +12,7 @@
 	class={`w-full px-2 py-16 lg:px-0 ${ contents.borderBottom ? 'border-b border-[var(--form-border)]' : '' }`}
 >
 	<div class="flex w-full flex-col gap-4">
-		<h2 class="typography-h2-md text-black dark:text-white">
+		<h2 class="typography-h2-md text-[var(--form-text)]">
 			{@html contents.heading}
 		</h2>
 

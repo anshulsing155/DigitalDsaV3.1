@@ -116,9 +116,9 @@
     </NewPageLayout>
   </section>
 {:else}
-  <div class="flex flex-col items-center justify-center h-screen">
-    <Loader />
-  </div>
+	<div class="flex h-screen flex-col items-center justify-center">
+		<Loader />
+	</div>
 {/if}
 
 <!-- Download Guide Modal -->

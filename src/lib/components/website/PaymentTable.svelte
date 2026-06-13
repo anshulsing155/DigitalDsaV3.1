@@ -76,7 +76,7 @@
 {/if}
 <div class="overflow-x-auto">
   <table
-    class="min-w-full border border-[var(--form-border)] typography-body-md text-black dark:text-white"
+    class="min-w-full border border-[var(--form-border)] typography-body-md text-black"
   >
     <thead class="bg-[#495057]">
       <tr>
@@ -90,7 +90,7 @@
     </thead>
     <tbody>
       {#each tableData.rowData as row, i}
-        <tr class={`${i % 2 === 0 ? "bg-[#e5e5e5]" : "bg-[#f8f9fa]"} typography-body-md text-[var(--form-text)]`}>
+        <tr class={`${i % 2 === 0 ? "bg-[#e5e5e5]" : "bg-[#f8f9fa]"} typography-body-md !text-black`}>
           <td class="border-y border-[var(--form-border)] p-4 text-left">
             {@html Object.keys(row)}
           </td>
