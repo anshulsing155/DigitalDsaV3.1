@@ -8,11 +8,10 @@
   import HelpList from "./HelpList.svelte";
   import Seo from "./Seo.svelte";
   import NewPageLayout from "./NewPageLayout.svelte";
+  import content from "$lib/data/website/complaintCompliments.json";
 
   const toggleDropdown = (event, index) => {
-    // if (event) {
     event.preventDefault();
-    // }
     const summaryElement = event.currentTarget;
     const icon = summaryElement.querySelector(".faq-icon");
     const detailsElement = summaryElement.parentElement;
@@ -45,9 +44,10 @@
       detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
-  // logic for second nav bar which is not working yet
+
   let activeSection = $state(''); // Initially no section is active
   let showFeedback = false;
+
   // This function sets the first section as active on initial load
   const initializeActiveSection = () => {
     const firstSection = document.querySelector("[data-section]");
@@ -71,8 +71,6 @@
     if (currentSection) {
       activeSection = currentSection; // Update the active section dynamically
     }
-
-    // //console.log(activeSection, 'active');
   };
 
   function scrollToFeedback(id) {
@@ -94,46 +92,23 @@
       window.removeEventListener("scroll", handleScroll);
     };
   });
-  //ends here...
 </script>
 
 <Seo
-  type="WebPage"
-  title="Feedback & Support | Digital DSA - Complaints & Assistance"
-  image="/images/feedback.jpg"
-  description="Share feedback, raise concerns, or give compliments. Get 24/7 support for complaints, scams, business, and financial assistance at Digital DSA."
-  keywords="Digital DSA feedback, Digital DSA support, Raise a complaint online, Submit a complaint Digital DSA, Customer service Digital DSA, Financial support program, Loan assistance feedback, Protect from scams, Estate settlement support, Home purchase guide, Debt consolidation support"
+  type={content.seo.type}
+  title={content.seo.title}
+  image={content.seo.image}
+  description={content.seo.description}
+  keywords={content.seo.keywords}
 />
 
 <section class="">
   <NewPageLayout
-    pageData={{
-      coverImage: "/images/feedback.jpg",
-      coverAlt:
-        "photo of a man's hand having two signs of happy and sad faces representing complaint and compliment section for DigitalDSA services",
-      classStyle: "object-cover xl:h-[90svh] 3xl:max-h-[70svh]",
-      heading: "Feedback",
-      para: `We value your experience and are committed to improving our services. If we've let you down, let us know so we can make things right.
-
-`,
-    }}
+    pageData={content.pageData}
   >
     <div class="w-full hidden lg:block">
       <StickyNavbar
-        navList={{
-          items: [
-            {
-              name: `Make a complaint <img src="/icons/dislike.svg" alt="dislike-icon" class="h-4" />`,
-              targetId: "makeComplaint",
-            },
-            {
-              name: `Give a compliment <img src="/icons/like.svg" alt="like-icon" class="h-4" />`,
-              targetId: "giveComplaint",
-            },
-
-            { name: "Feedback", targetId: "feedback" },
-          ],
-        }}
+        navList={content.stickyNavBar}
         {activeSection}
       />
 
@@ -141,9 +116,9 @@
         <div class="pb-8" id="makeComplaint" data-section="makeComplaint">
           <div class="border-b border-dividerColor">
             <TwoColumn
-              cardImage="/images/raise-a-complaint.jpg"
-              cardAltName="photo of a young woman raising her finger as seeking some information from DigitalDSA and providing feedback"
-              cardHeading="Raise a Concern"
+              cardImage={content.makeComplaint.cardImage}
+              cardAltName={content.makeComplaint.cardAltName}
+              cardHeading={content.makeComplaint.cardHeading}
               reverse
             >
               <ul
@@ -151,9 +126,7 @@
                 slot="list"
               >
                 <li>
-                  If you're not satisfied with our services, products, staff, or
-                  complaint resolution process, we want to hear from you.We take
-                  every complaint seriously and work towards a fair resolution.
+                  {content.makeComplaint.para}
                 </li>
 
                 <div class="w-auto">
@@ -164,7 +137,7 @@
                       scrollToFeedback("feedForm");}}
                     class="btn btn-primary typography-button text-black w-full md:w-auto"
                   >
-                    Make a complaint
+                    {content.makeComplaint.btnText}
                   </button>
                 </div>
               </ul>
@@ -175,19 +148,16 @@
         <div class="pb-8" id="giveComplaint" data-section="giveComplaint">
           <div class="border-b border-dividerColor">
             <TwoColumn
-              cardImage="/images/compliment-to-DigitalDSA.jpg"
-              cardAltName="Photo of a happy customer giving 5 star rating to DigitalDSA services"
-              cardHeading="Tell us about your compliment"
+              cardImage={content.giveComplaint.cardImage}
+              cardAltName={content.giveComplaint.cardAltName}
+              cardHeading={content.giveComplaint.cardHeading}
             >
               <ul
                 class="grid gap-[2rem] typography-body-md text-text-light"
                 slot="list"
               >
                 <li>
-                  We love to hear about your positive experiences and when
-                  someone in our team makes things easier, quicker or special
-                  for you. We’ll pass on the compliment and make sure we keep up
-                  the good work.
+                  {content.giveComplaint.para}
                 </li>
 
                 <div class="w-auto">
@@ -198,7 +168,7 @@
                       scrollToFeedback("feedForm");}}
                     class="btn btn-primary typography-button text-black w-full md:w-auto"
                   >
-                    Give a compliment
+                    {content.giveComplaint.btnText}
                   </button>
                 </div>
               </ul>
@@ -208,9 +178,9 @@
       </div>
     </div>
     <div class="lg:hidden">
-      {#each ["Make a complaint", "Give a compliment"] as list, index}
+      {#each content.mobileNavbarTitle as list, index}
         <details
-          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -231,19 +201,16 @@
             >
               <div class="border-b border-dividerColor">
                 <TwoColumn
-                  cardImage="/images/raise-a-complaint.jpg"
-                  cardAltName="photo of a young woman raising her finger as seeking some information from DigitalDSA and providing feedback"
-                  cardHeading="Raise a Concern"
+                  cardImage={content.makeComplaint.cardImage}
+                  cardAltName={content.makeComplaint.cardAltName}
+                  cardHeading={content.makeComplaint.cardHeading}
                 >
                   <ul
                     class="grid gap-4 md:gap-[2rem] typography-body-md text-text-light"
                     slot="list"
                   >
                     <li>
-                      If you're not satisfied with our services, products,
-                      staff, or complaint resolution process, we want to hear
-                      from you.We take every complaint seriously and work
-                      towards a fair resolution.
+                      {content.makeComplaint.para}
                     </li>
 
                     <div class="w-auto">
@@ -254,33 +221,30 @@
                           scrollToFeedback("feedback");}}
                         class="btn btn-primary typography-button text-black w-full md:w-auto"
                       >
-                        Make a complaint
+                        {content.makeComplaint.btnText}
                       </button>
                     </div>
                   </ul>
                 </TwoColumn>
               </div>
             </div>
-          {:else if index == 1}
+          {:else}
             <div
               class="pb-8 bg-white text-black px-4"
               id="giveComplaint"
             >
               <div>
                 <TwoColumn
-                  cardImage="/images/compliment-to-DigitalDSA.jpg"
-                  cardAltName="Photo of a happy customer giving 5 star rating to DigitalDSA services"
-                  cardHeading="Tell us about your compliment"
+                  cardImage={content.giveComplaint.cardImage}
+                  cardAltName={content.giveComplaint.cardAltName}
+                  cardHeading={content.giveComplaint.cardHeading}
                 >
                   <ul
                     class="grid gap-[2rem] typography-body-md text-text-light"
                     slot="list"
                   >
                     <li>
-                      We love to hear about your positive experiences and when
-                      someone in our team makes things easier, quicker or
-                      special for you. We’ll pass on the compliment and make
-                      sure we keep up the good work.
+                      {content.giveComplaint.para}
                     </li>
 
                     <div class="w-auto">
@@ -292,7 +256,7 @@
                             scrollToFeedback("feedback");}}
                           class="btn btn-primary typography-button text-black w-full md:w-auto"
                         >
-                          Give a compliment
+                          {content.giveComplaint.btnText}
                         </button>
                       </div>
                     </div>
@@ -316,46 +280,11 @@
     </div>
     <div slot="secondary" class="">
       <HelpList
-        contents={{
-          heading: `We're here to help`,
-          xlGridCol: 3,
-          borderBottom: true,
-          cards: [
-            {
-              heading: "Message us",
-              para: `Reach out to us for any queries or assistance. We're here to help!`,
-              icon: "/icons/msg.svg",
-              altTitle: "icons",
-              url: "/contact",
-            },
-            {
-              heading: "Contact us",
-              para: `Connect with us for any support, inquiries, or information. We're just a message away!`,
-              icon: "/icons/contact.svg",
-              altName: "Alert Icon",
-              url: "/contact",
-            },
-            {
-              heading: "Consultant",
-              para: "Book an instant consultation with a  loan specialist at a time that suits you",
-              icon: "/icons/appointment.svg",
-              altName: "appointment Icon",
-              url: "/appointment",
-            },
-          ],
-        }}
+        contents={content.help}
       />
 
       <ThingsYouShould
-        thinkKnow={{
-          heading: "Things you should know",
-          paraGraph: [
-            `This is general educational content. Assess its relevance to your needs before making decisions.`,
-            `With over 50 lenders partnered, Digital DSA compares a wide range of loan options. Find the best rates, terms, and eligibility across multiple banks, ensuring you get the most suitable loan for your needs.`,
-            `Activate offers through the app for cashback. Cashback is typically received within 14 business days after qualifying.`,
-            `Digital DSA arranges loans across 80+ cities. Terms and conditions may vary; check the latest details for your location.`,
-          ],
-        }}
+        thinkKnow={content.thingsYouShould}
         disc="list-decimal"
       />
     </div>

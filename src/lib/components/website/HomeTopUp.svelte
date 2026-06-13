@@ -33,15 +33,17 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	// Inject store update callbacks dynamically for get-started actions
 	const pageDataWithClicks = $derived({
 		...pageData,
 		actionBtns: pageData.actionBtns.map((btn) => {
-			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Check lowest rates' || btn.btnName === 'Compare rates') {
+			if (
+				btn.btnLink === '/get-started/how-can-we-help' ||
+				btn.btnName === 'Check lowest rates' ||
+				btn.btnName === 'Compare rates'
+			) {
 				return {
 					...btn,
 					btnClick: () => {
@@ -59,7 +61,11 @@
 	const navListWithClicks = $derived({
 		...content.navList,
 		actionBtns: content.navList.actionBtns.map((btn) => {
-			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Check lowest rates' || btn.btnName === 'Compare rates') {
+			if (
+				btn.btnLink === '/get-started/how-can-we-help' ||
+				btn.btnName === 'Check lowest rates' ||
+				btn.btnName === 'Compare rates'
+			) {
 				return {
 					...btn,
 					btnClick: () => {
@@ -153,24 +159,24 @@
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		'itemListElement': [
+		itemListElement: [
 			{
 				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Home Loan Top-Up',
-				'item': 'https://www.digitaldsa.com/home-loan/top-up-only'
+				position: 3,
+				name: 'Home Loan Top-Up',
+				item: 'https://www.digitaldsa.com/home-loan/top-up-only'
 			}
 		]
 	};
@@ -178,37 +184,37 @@
 	const faqSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
-		'mainEntity': [
+		mainEntity: [
 			{
 				'@type': 'Question',
-				'name': content.started.intro.heading,
-				'acceptedAnswer': {
+				name: content.started.intro.heading,
+				acceptedAnswer: {
 					'@type': 'Answer',
-					'text': content.started.intro.secPara
+					text: content.started.intro.secPara
 				}
 			},
 			...content.started.eligibility.list.map((c) => ({
 				'@type': 'Question',
-				'name': c.heading,
-				'acceptedAnswer': {
+				name: c.heading,
+				acceptedAnswer: {
 					'@type': 'Answer',
-					'text': c.desc.join(' ')
+					text: c.desc.join(' ')
 				}
 			})),
 			{
 				'@type': 'Question',
-				'name': content.fee.tenure.heading,
-				'acceptedAnswer': {
+				name: content.fee.tenure.heading,
+				acceptedAnswer: {
 					'@type': 'Answer',
-					'text': content.fee.tenure.list.map(l => l.desc).join(' ')
+					text: content.fee.tenure.list.map((l) => l.desc).join(' ')
 				}
 			},
 			{
 				'@type': 'Question',
-				'name': content.fee.rates.heading,
-				'acceptedAnswer': {
+				name: content.fee.rates.heading,
+				acceptedAnswer: {
 					'@type': 'Answer',
-					'text': content.fee.rates.list.map(l => l.desc).join(' ')
+					text: content.fee.rates.list.map((l) => l.desc).join(' ')
 				}
 			}
 		]
@@ -251,7 +257,7 @@
 							<ul class="space-y-6">
 								{#each content.step.list as s}
 									<li class="">
-										<div class="space-y-4 typography-body-md">
+										<div class="typography-body-md space-y-4 text-[var(--form-text-secondary)]">
 											<span class="font-semibold">{s.title}</span>
 											<ul class="ml-[2rem] list-disc space-y-2">
 												{#each s.bullets as b}
@@ -261,9 +267,11 @@
 										</div>
 									</li>
 								{/each}
-								<li class="typography-body-md">
+								<li class="typography-body-md text-[var(--form-text-secondary)]">
 									<span class="font-semibold">📢 Processing Time:</span>
-									<p class="font-para typography-body-md">{content.step.processingTime}</p>
+									<p class="typography-body-md text-[var(--form-text-secondary)]">
+										{content.step.processingTime}
+									</p>
 								</li>
 							</ul>
 						</div>
@@ -310,17 +318,18 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index (list)}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < 4
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					4
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white typography-label">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
+							<h2 class="typography-label text-black dark:text-white">{list}</h2>
+							<div class="icon-container typography-h3 justify-self-end">
 								<span
 									><i
 										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
@@ -356,7 +365,7 @@
 									<ul class="space-y-6">
 										{#each content.step.list as s}
 											<li class="">
-												<div class="space-y-4 typography-body-md">
+												<div class="typography-body-md space-y-4 text-[var(--form-text-secondary)]">
 													<span class="font-semibold">{s.title}</span>
 													<ul class="ml-[2rem] list-disc space-y-2">
 														{#each s.bullets as b}
@@ -366,9 +375,11 @@
 												</div>
 											</li>
 										{/each}
-										<li class="typography-body-md">
+										<li class="typography-body-md text-[var(--form-text-secondary)]">
 											<span class="font-semibold">📢 Processing Time:</span>
-											<p class="font-para typography-body-md">{content.step.processingTime}</p>
+											<p class="typography-body-md text-[var(--form-text-secondary)]">
+												{content.step.processingTime}
+											</p>
 										</li>
 									</ul>
 								</div>

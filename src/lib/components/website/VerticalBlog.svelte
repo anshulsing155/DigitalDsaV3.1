@@ -13,10 +13,10 @@
 {#each blogLists as blog}
   <a
     href={blog.url}
-    class="relative group overflow-hidden hover:shadow-md cursor-pointer text-black"
+    class="relative group overflow-hidden hover:shadow-md cursor-pointer"
   >
     <div
-      class="flex items-center justify-center w-full border h-[6rem] md:h-[8rem]"
+      class="flex items-center justify-center w-full border border-[var(--form-border)] h-[6rem] md:h-[8rem]"
     >
       <div class="w-[10rem] md:w-[12rem] h-full relative">
         {#if blog.icon}
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="w-full h-full px-2 flex items-center text-start">
-        <h3 class="font-semibold typography-body-sm md:typography-body-md">
+        <h3 class="!font-semibold typography-body-md text-black dark:text-white">
           {@html blog.heading}
         </h3>
       </div>

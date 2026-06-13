@@ -69,7 +69,7 @@
 									{#each card.links as link}
 										<ul class="grid list-disc pl-5 marker:text-black">
 											<li>
-												<Anchor link={link.secUrl} linkName={link.secLinkName} />
+												<Anchor link={link.secUrl} linkName={link.secLinkName} linkColor={link.linkColor} />
 											</li>
 										</ul>
 									{/each}

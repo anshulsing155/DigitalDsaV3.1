@@ -13,12 +13,13 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary text-black",
 				"animation": true
 			}
 		]
@@ -45,12 +46,14 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary dark:text-white text-black"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary text-black",
+				"animation": true
 			}
 		]
 	},
@@ -149,7 +152,7 @@
 					"heading": "Transparent advice with no hidden charges. "
 				},
 				{
-					"heading": "Tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline\"> Affordability Calculator</a> to refine your search."
+					"heading": "Tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\"> Affordability Calculator</a> to refine your search."
 				},
 				{
 					"heading": "A no-pressure approach with zero processing fees and no spam calls. "
@@ -209,7 +212,7 @@
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
 		"button": {
 			"link": "/contact",
-			"btnBorder": "#4F4C4D",
+			"btnClass": "btn-secondary dark:text-white text-black",
 			"btnName": "Message us"
 		}
 	},
