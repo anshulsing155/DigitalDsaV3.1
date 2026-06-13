@@ -20,7 +20,7 @@
       {
         "btnName": "Compare loan offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00",
+        "btnClass": "btn-primary w-full"
         "animation": true
       }
     ]
@@ -42,7 +42,7 @@
       {
         "btnName": "Compare loan offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -70,7 +70,7 @@
         "para": "Generally lower than personal loans or credit card debts, making it a cost-effective borrowing option.",
         "btnName": "Compare LAP Offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -78,7 +78,7 @@
     "heading": "Benefits",
     "secPara": "<ul class=\"list-disc flex flex-col gap-2 pl-2\"><li>Lower Interest Rates: <span class=\"font-semibold\">9% to 12% p.a.</span></li><li>No Restrictions on Usage</li><li>Higher Loan Amounts: <span class=\"font-semibold\">Up to 60-70% of the property's market value.</span></li><li>Flexible Repayment Options: <span class=\"font-semibold\">Loan repayment terms from 5 to 15 years.</span></li></ul>",
     "btnName": "Explore loan options",
-    "btnColor": "#ffcc00",
+    "btnClass": "btn-primary w-full"
     "btnBorder": "#4F4C4D",
     "btnLink": "/get-started/how-can-we-help"
   },
@@ -132,7 +132,7 @@
       "heading": "Unlock the Value of Your Property!",
       "btnName": "Compare & Apply Now",
       "btnLink": "/get-started/how-can-we-help",
-      "btnColor": "#ffcc00",
+      "btnClass": "btn-primary w-full"
       "btnBorder": "#4F4C4D"
     }
   },

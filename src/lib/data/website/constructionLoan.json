@@ -27,7 +27,7 @@
 			{
 				"btnName": "get best offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary w-full",
 				"animation": true
 			}
 		]
@@ -45,7 +45,7 @@
 			{
 				"btnName": "get best offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary w-full"
 			}
 		]
 	},
@@ -184,7 +184,7 @@
 					"para": "Compare interest rates and explore the latest construction loan and balance transfer offers. Get the best deal with flexible terms and expert guidance.",
 					"btnName": "Secure best offer",
 					"btnLink": "/get-started/how-can-we-help",
-					"btnColor": "#ffcc00"
+					"btnClass": "btn-primary w-full"
 				},
 				{
 					"title": "Still confused?",

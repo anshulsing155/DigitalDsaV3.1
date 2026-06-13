@@ -19,7 +19,7 @@
       {
         "btnName": "Check Offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -51,7 +51,7 @@
       {
         "btnName": "Apply Online",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -151,7 +151,7 @@
     "button": {
       "link": "/get-started/how-can-we-help",
       "btnBorder": "#4F4C4D",
-      "btnColor": "#ffcc00",
+      "btnClass": "btn-primary w-full"
       "btnName": "Check Offers"
     }
   },

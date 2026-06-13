@@ -27,7 +27,7 @@
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary w-full",
 				"animation": true
 			}
 		]
@@ -45,7 +45,7 @@
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary w-full"
 			}
 		]
 	},
@@ -131,7 +131,7 @@
 			"secPara": "Avoid rejection, delays and hidden charges with expert guidance, complete documentation, and transparent terms. Apply with confidence and secure your loan smoothly.",
 			"btnName": "Compare rates",
 			"btnLink": "/get-started/how-can-we-help",
-			"btnColor": "#ffcc00"
+			"btnClass": "btn-primary w-full"
 		}
 	},
 	"support": {

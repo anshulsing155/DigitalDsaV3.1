@@ -15,7 +15,7 @@
       {
         "btnName": "Take assessment",
         "btnLink": "/financial-wellbeing/form",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ],
     "heading": " Learn more about your financial wellbeing",
@@ -50,7 +50,7 @@
       {
         "btnName": "Take assessment",
         "btnLink": "/financial-wellbeing/form",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -94,7 +94,7 @@
       "<p class=\"flex items-center gap-2\"> <span><img src=\"/icons/circle-check.svg\" alt=\"circle-check-icon\" class=\"h-4\" /></span> Receive personalized tips to enhance financial security </p>"
     ],
     "btnName": "Measure your score",
-    "btnColor": "#ffcc00",
+    "btnClass": "btn-primary w-full"
     "btnLink": "/financial-wellbeing/form"
   },
   "assessment": {

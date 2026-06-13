@@ -27,7 +27,7 @@
   "navList": {
     "firstBtn": "Book appointment",
     "link": "/appointment",
-    "btnColor": "#ffcc00"
+    "btnClass": "btn-primary w-full"
   },
   "firstHomeSooner": {
     "heading": "You could buy your first home sooner",

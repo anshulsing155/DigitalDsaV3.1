@@ -13,7 +13,7 @@
 			{
 				"btnName": "Compare Loan Offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary w-full",
 				"animation": true
 			}
 		]
@@ -273,7 +273,7 @@
 			"para": "Access lender programs, interest rates, eligibility criteria, and financing options from multiple banks and NBFCs through a single platform.",
 			"btnName": "Compare Loan Offers",
 			"btnBorder": "#4F4C4D",
-			"btnColor": "#ffcc00",
+			"btnClass": "btn-primary w-full",
 			"btnLink": "/get-started/how-can-we-help"
 		}
 	},

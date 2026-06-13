@@ -19,7 +19,7 @@
       {
         "btnName": "Explore loan offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00",
+        "btnClass": "btn-primary w-full"
         "animation": true
       },
       {
@@ -386,7 +386,7 @@
     "secPara": "Get the financing you need with ease. Discover flexible loan options, expert guidance, and a quick application process.",
     "btnName": "compare offers",
     "btnLink": "/get-started/how-can-we-help",
-    "btnColor": "#ffcc00"
+    "btnClass": "btn-primary w-full"
   },
   "agriToResiCard": {
     "cardImage": "/images/homeLoanGreenDigital.jpg",

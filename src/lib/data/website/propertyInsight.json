@@ -30,7 +30,7 @@
         {
           "firstBtn": "Book appointment",
           "link": "/appointment",
-          "btnColor": "#ffcc00"
+          "btnClass": "btn-primary w-full"
         }
       ]
     }
@@ -151,7 +151,7 @@
     "para": "Existing undefined customer? Log onto NetBank and find your perfect property sooner  with market estimates and affordability snapshots.",
     "btnName": "Log on",
     "btnLink": "",
-    "btnColor": "#ffcc00"
+    "btnClass": "btn-primary w-full"
   },
   "propertyPurchase": {
     "heading": "Simplify your property purchase with Home-in",
@@ -167,7 +167,7 @@
       "title": "Get the report",
       "paragraph": "Following an appointment with one of our Home Lending Specialists, access an unlimited number of reports and get all the insights to the property you may be interested in buying or selling, as well as compare it against similar properties on the market.",
       "btnName": "Book appointment",
-      "btnColor": "#ffcc00",
+      "btnClass": "btn-primary w-full"
       "link": "/appointment"
     },
     {

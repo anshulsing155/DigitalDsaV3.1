@@ -20,7 +20,7 @@
       {
         "btnName": "Compare Bank offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -55,7 +55,7 @@
       {
         "btnName": "Compare Bank offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -181,7 +181,7 @@
           "para": "Explore personalized top-up loan options on your Loan Against Property and choose the best deal for your needs.",
           "btnName": "View loan offers",
           "btnLink": "/get-started/how-can-we-help",
-          "btnColor": "#ffcc00"
+          "btnClass": "btn-primary w-full"
         },
         {
           "title": "Still confused?  ",

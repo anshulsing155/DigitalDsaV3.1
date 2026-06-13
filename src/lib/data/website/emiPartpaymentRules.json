@@ -27,7 +27,7 @@
       {
         "btnName": "Compare now",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },

@@ -26,7 +26,7 @@
 			{
 				"btnName": "Compare offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary w-full",
 				"animation": true
 			}
 		]
@@ -43,7 +43,7 @@
 			{
 				"btnName": "Compare offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary w-full"
 			}
 		]
 	},
@@ -279,7 +279,7 @@
 					"para": "Secure your plot loan easily. Explore financing options, get expert support, and apply in just a few clicks.",
 					"btnName": "Claim your loan",
 					"btnLink": "/get-started/how-can-we-help",
-					"btnColor": "#ffcc00"
+					"btnClass": "btn-primary w-full"
 				},
 				{
 					"title": "Get the best plot loan deal",

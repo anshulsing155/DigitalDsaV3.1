@@ -30,7 +30,7 @@
         {
           "firstBtn": "Call +91XXXXXXXXX",
           "link": "/contact",
-          "btnColor": "#ffcc00"
+          "btnClass": "btn-primary w-full"
         }
       ]
     }

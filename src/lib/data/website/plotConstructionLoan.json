@@ -26,7 +26,7 @@
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary w-full",
 				"animation": true
 			}
 		]
@@ -43,7 +43,7 @@
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary w-full"
 			}
 		]
 	},
@@ -218,7 +218,7 @@
 					"para": "Explore competitive interest rates on Plot + Construction Loans and Balance Transfers. Find the best financing options with flexible terms, lower EMIs, and expert support to make your home-building journey smooth and affordable.",
 					"btnName": "Get the Best Offer Now",
 					"btnLink": "/get-started/how-can-we-help",
-					"btnColor": "#ffcc00"
+					"btnClass": "btn-primary w-full"
 				},
 				{
 					"title": "Schedule Your Loan Consultation",

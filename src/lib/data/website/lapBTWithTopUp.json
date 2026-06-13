@@ -19,7 +19,7 @@
       {
         "btnName": "Compare best rates",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -50,7 +50,7 @@
       {
         "btnName": "Compare best rates",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -217,7 +217,7 @@
       "para": "Compare offers, check eligibility, and apply seamlessly on DigitalDSA! 🚀",
       "btnName": "Check offers",
       "btnBorder": "#4F4C4D",
-      "btnColor": "#ffcc00",
+      "btnClass": "btn-primary w-full"
       "btnLink": "/get-started/how-can-we-help"
     }
   },

@@ -21,7 +21,7 @@
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				
 				"btnClass": "btn-primary text-white dark:text-black"
 			}
 		],
@@ -59,7 +59,6 @@
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
 				"btnClass": "btn-primary text-white dark:text-black"
 			}
 		]

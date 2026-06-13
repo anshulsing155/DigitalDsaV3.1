@@ -27,7 +27,7 @@
 			{
 				"btnName": "Get best offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary w-full",
 				"animation": true
 			}
 		]
@@ -45,7 +45,7 @@
 			{
 				"btnName": "Get best offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00"
+				"btnClass": "btn-primary w-full"
 			}
 		]
 	},
@@ -200,7 +200,7 @@
 					"para": "Compare the best Plot + Equity Loan options based on interest rates, loan amounts, and terms. Find the most suitable lender to maximize benefits.",
 					"btnName": "Compare offers",
 					"btnLink": "/get-started/how-can-we-help",
-					"btnColor": "#ffcc00"
+					"btnClass": "btn-primary w-full"
 				},
 				{
 					"title": "Still confused in plot + equity",

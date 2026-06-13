@@ -78,7 +78,8 @@
 		"paraGraph": [
 			"If your property is worth ₹50 lakh and you still owe ₹30 lakh on your home loan, your home equity is ₹20 lakh.",
 			"This ₹20 lakh is the portion you can use to get a <span class=\"underline decoration-btnBg underline-offset-4\" > Top-Up Loan </span> or a <span class=\"underline decoration-btnBg underline-offset-4\" >Loan Against Property (LAP) </span>."
-		]
+		],
+		"isBorder": true
 	},
 	"topup": {
 		"contents": {
@@ -100,7 +101,7 @@
 					"para": "<ul class=\"pl-5 list-disc space-y-4\"><li><span class=\"font-semibold\">Check Your Property’s Market Value:</span> Get a valuation to know the maximum loan amount you may be eligible for.</li><li><span class=\"font-semibold\">Eligibility Check:</span> Ensure you meet the eligibility requirements for a Top-Up Loan, which will typically include a good credit score and an income check.</li><li><span class=\"font-semibold\">Submit Documents:</span> Provide necessary documents like income proof, property papers, and the details of your existing home loan.</li><li><span class=\"font-semibold\">Loan Disbursement:</span> Once approved, the loan amount is disbursed, and you can use it for your intended purpose.</li></ul>",
 					"btnName": "Explore more",
 					"btnLink": "/home-loan",
-					"btnClass": "btn-primary",
+					"btnClass": "btn-primary w-full",
 					"animation": true
 				}
 			]
@@ -157,7 +158,7 @@
 					"para": "<ul class=\"pl-5 list-disc space-y-4\"><li><span class=\"font-semibold\">Get Property Valuation:</span> You will need to get your property valued to understand how much loan you can avail.</li><li><span class=\"font-semibold\">Eligibility Check:</span> Banks will evaluate your repayment capacity based on your income, credit history, and the value of the property.</li><li><span class=\"font-semibold\">Submit Documents:</span> Provide necessary documents such as property papers, income proof, and bank statements.</li><li><span class=\"font-semibold\">Loan Disbursement:</span> After approval, funds are disbursed, and you can use them for your chosen purpose.</li></ul>",
 					"btnName": "Explore more",
 					"btnLink": "/lap",
-					"btnColor": "#ffcc00"
+					"btnClass": "btn-primary w-full"
 				}
 			]
 		}

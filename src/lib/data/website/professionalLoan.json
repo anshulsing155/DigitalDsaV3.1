@@ -16,7 +16,7 @@
       {
         "btnName": "Explore loan offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00",
+        "btnClass": "btn-primary w-full"
         "animation": true
       },
       {
@@ -285,7 +285,7 @@
         "para": "Book an Appointment for Expert Guidance!",
         "btnName": "Book appointment",
         "btnLink": "/appointment",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },

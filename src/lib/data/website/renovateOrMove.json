@@ -18,7 +18,7 @@
 			{
 				"btnName": "Compare all offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnColor": "#ffcc00",
+				"btnClass": "btn-primary w-full",
 				"animation": true
 			}
 		]

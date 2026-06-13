@@ -17,7 +17,7 @@
       {
         "btnName": "Compare LAP offers online",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00",
+        "btnClass": "btn-primary w-full"
         "animation": true
       },
       {
@@ -151,7 +151,7 @@
         "title": "Get a New LAP or DOD",
         "desc": "Not sure where to start? Whether you're looking for a Loan Against Property (LAP) or a Dropline Overdraft (DOD), we provide the right tools and support to help you move forward with confidence.",
         "btnText": "Compare LAP Offers Online",
-        "btnColor": "#ffcc00",
+        "btnClass": "btn-primary w-full"
         "btnLink": "/get-started/how-can-we-help",
         "btnBorder": ""
       },
@@ -169,7 +169,7 @@
     "heading": "Discover the Best Loan Against Property Options",
     "btnName": "Explore Now",
     "btnLink": "/get-started/how-can-we-help",
-    "btnColor": "#ffcc00"
+    "btnClass": "btn-primary w-full"
   },
   "businessHealthCard": {
     "cardImage": "/images/cardImage.jpg",

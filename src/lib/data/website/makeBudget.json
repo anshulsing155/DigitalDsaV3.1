@@ -21,7 +21,7 @@
       {
         "btnName": "Compare loans",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ],
     "para": "Budgeting doesn’t have to be <strong>complicated! </strong> <br> Here are some simple and practical steps to get you started."
@@ -58,7 +58,7 @@
       {
         "btnName": "Compare loans",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },

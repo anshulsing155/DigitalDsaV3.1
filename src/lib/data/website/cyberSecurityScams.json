@@ -17,7 +17,7 @@
       {
         "btnName": "Book appointment",
         "btnLink": "/appointment",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       },
       {
         "btnName": "Compare Loan Offers, Securely",
@@ -53,7 +53,7 @@
       {
         "btnName": "Compare Loan Offers, Securely",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },

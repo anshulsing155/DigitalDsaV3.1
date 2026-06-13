@@ -15,7 +15,7 @@
       {
         "btnName": "Compare LAP Offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       },
       {
         "btnName": "Check Your Savings",
@@ -46,7 +46,7 @@
       {
         "btnName": "Compare LAP Offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       },
       {
         "btnName": "Check Your Savings",
@@ -73,7 +73,7 @@
     "heading": "Looking to Transfer Your LAP for Better Rates?",
     "btnName": "Compare Best Offers",
     "btnLink": "/get-started/how-can-we-help",
-    "btnColor": "#ffcc00"
+    "btnClass": "btn-primary w-full"
   },
   "howWeHelp": {
     "contents": {
@@ -119,7 +119,7 @@
     "heading": "Struggling with loan approval due to <span class=\"underline decoration-btnBg underline-offset-4\">low ITR</span>?",
     "btnName": "Get Help",
     "BtnBorder": "#4F4C4D",
-    "btnColor": "#ffcc00",
+    "btnClass": "btn-primary w-full"
     "btnLink": "/appointment"
   },
   "things": {

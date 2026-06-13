@@ -38,7 +38,7 @@
         {
           "firstBtn": "Log on to NetBank",
           "link": "",
-          "btnColor": "#ffcc00"
+          "btnClass": "btn-primary w-full"
         }
       ]
     }
