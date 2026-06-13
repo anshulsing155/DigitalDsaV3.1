@@ -28,9 +28,7 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	// Inject store update callbacks dynamically for get-started actions
 	const pageDataWithClicks = $derived({
@@ -148,24 +146,24 @@
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		'itemListElement': [
+		itemListElement: [
 			{
 				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Understanding Home Buying Costs',
-				'item': 'https://www.digitaldsa.com/home-loan/understand-cost-of-buying-home'
+				position: 3,
+				name: 'Understanding Home Buying Costs',
+				item: 'https://www.digitaldsa.com/home-loan/understand-cost-of-buying-home'
 			}
 		]
 	};
@@ -222,12 +220,12 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white typography-label">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
+							<h2 class="typography-label text-black dark:text-white">{list}</h2>
+							<div class="icon-container typography-h3 justify-self-end">
 								<span
 									><i
 										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
@@ -275,7 +273,10 @@
 		</div>
 
 		<div class="px-1 py-4 md:p-16">
-			<p class="mb-4 font-semibold">{content.verticalBlog.sub}</p>
+			<h2 class="typography-h2-md mb-5 text-black dark:text-white">
+				{content.verticalBlog.heading}
+			</h2>
+			<p class="mb-4 typography-body-lg !font-semibold text-black dark:text-white">{content.verticalBlog.sub}</p>
 			<div class="flex flex-col gap-4 md:flex-row">
 				<VerticalBlog blogLists={content.verticalBlog.blogLists} />
 			</div>
@@ -287,7 +288,7 @@
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
-				btnBorder={content.messageUs.button.btnBorder}
+				btnClass={content.messageUs.button.btnClass}
 				btnName={content.messageUs.button.btnName}
 			/>
 		</TwoColumnWithImage>
@@ -296,7 +297,7 @@
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
-				<ul class="px-2 pl-4 flex flex-col gap-4 list-decimal">
+				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
 					{#each content.common_components.thinkYouShouldKnow.bullets as bullet}
 						<li>{@html bullet}</li>
 					{/each}

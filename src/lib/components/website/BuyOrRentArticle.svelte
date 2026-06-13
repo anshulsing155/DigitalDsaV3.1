@@ -29,9 +29,7 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	// Inject store update callbacks dynamically for get-started actions
 	const pageDataWithClicks = $derived({
@@ -150,24 +148,24 @@
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		'itemListElement': [
+		itemListElement: [
 			{
 				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Should You Buy or Rent',
-				'item': 'https://www.digitaldsa.com/home-loan/buy-or-rent'
+				position: 3,
+				name: 'Should You Buy or Rent',
+				item: 'https://www.digitaldsa.com/home-loan/buy-or-rent'
 			}
 		]
 	};
@@ -202,9 +200,9 @@
 					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
 					<div class="">
-						<h2 class="mb-[4rem] grid text-center typography-h2 text-text-main">
+						<h2 class="typography-h2-md mb-[4rem] grid text-center text-black dark:text-white">
 							<p>Renting vs Buying</p>
-							<span class="underline decoration-btnBg decoration-4 underline-offset-4"
+							<span class="underline decoration-primary decoration-4 underline-offset-4"
 								>The Breakdown</span
 							>
 						</h2>
@@ -214,22 +212,25 @@
 							<PaymentTable {tableData} />
 						{/each}
 					</div>
-					<p class="mt-14 text-center text-text-light typography-body-md">
+					<p class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]">
 						{@html content.compare.funFact}
 					</p>
 				</div>
 
 				<div class="mt-[4rem]">
-					<p class="mb-[2rem] text-center typography-h2 text-text-main">
+					<p class="typography-h2-md mb-[2rem] text-center text-black dark:text-white">
 						Real-Life Scenarios: What Worked for Others
-						<br /><span class="mt-14 text-center text-text-light typography-body-md"
+						<br /><span
+							class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]"
 							>Here’s what people like you did and why</span
 						>
 					</p>
 					<TwoColumnWithImage contents={content.compare.buyerStory.contents}>
 						<div class="mt-4 text-center">
-							<blockquote class="relative italic text-gray-800">
-								<span class="absolute -left-12 -top-3 font-serif text-4xl">“</span>
+							<blockquote
+								class="typography-body-md relative text-[var(--form-text-secondary)] italic"
+							>
+								<span class="absolute -top-3 -left-12 font-serif text-4xl">“</span>
 								{content.compare.buyerStory.quote}
 								<span class="absolute -right-4 -bottom-6 font-serif text-4xl">”</span>
 							</blockquote>
@@ -238,14 +239,16 @@
 
 					<TwoColumnWithImage contents={content.compare.renterStory.contents}>
 						<div class="mt-4 text-center">
-							<blockquote class="relative italic text-gray-800">
-								<span class="absolute -left-8 -top-3 font-serif text-4xl">“</span>
+							<blockquote
+								class="typography-body-md relative text-[var(--form-text-secondary)] italic"
+							>
+								<span class="absolute -top-3 -left-8 font-serif text-4xl">“</span>
 								{content.compare.renterStory.quote}
 								<span class="absolute -right-2 -bottom-6 font-serif text-4xl">”</span>
 							</blockquote>
 							<p class="mt-10">
 								<a
-									class="underline underline-offset-4 hover:no-underline"
+									class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
 									href={content.compare.renterStory.linkUrl}
 									>{content.compare.renterStory.linkText}</a
 								>
@@ -277,12 +280,12 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white typography-label">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
+							<h2 class="typography-label text-black dark:text-white">{list}</h2>
+							<div class="icon-container typography-h3 justify-self-end">
 								<span
 									><i
 										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
@@ -308,9 +311,11 @@
 								class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 							>
 								<div class="">
-									<h2 class="mb-[4rem] grid text-center typography-h2 text-text-main">
+									<h2
+										class="typography-h2-md mb-[4rem] grid text-center text-black dark:text-white"
+									>
 										<p>Renting vs Buying</p>
-										<span class="underline decoration-btnBg decoration-4 underline-offset-4"
+										<span class="underline decoration-primary decoration-4 underline-offset-4"
 											>The Breakdown</span
 										>
 									</h2>
@@ -320,21 +325,22 @@
 										<PaymentTable {tableData} />
 									{/each}
 								</div>
-								<p class="mt-14 text-center text-text-light typography-body-md">
+								<p class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]">
 									{@html content.compare.funFact}
 								</p>
 							</div>
 
 							<div class="mt-[4rem]">
-								<p class="mb-[2rem] text-center typography-h2 text-text-main">
+								<p class="typography-h2-md mb-[2rem] text-center text-black dark:text-white">
 									Real-Life Scenarios: What Worked for Others
-									<br /><span class="mt-14 text-center text-text-light typography-body-md"
+									<br /><span
+										class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]"
 										>Here’s what people like you did and why</span
 									>
 								</p>
 								<TwoColumnWithImage contents={content.compare.buyerStory.contents}>
 									<div class="mt-4 text-center">
-										<blockquote class="relative italic text-gray-800">
+										<blockquote class="relative italic">
 											{content.compare.buyerStory.quote}
 										</blockquote>
 									</div>
@@ -342,7 +348,7 @@
 
 								<TwoColumnWithImage contents={content.compare.renterStory.contents}>
 									<div class="mt-4 text-center">
-										<blockquote class="relative italic text-gray-800">
+										<blockquote class="relative italic">
 											{content.compare.renterStory.quote}
 										</blockquote>
 										<p class="mt-10">
@@ -380,7 +386,7 @@
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
-				btnBorder={content.messageUs.button.btnBorder}
+				btnClass={content.messageUs.button.btnClass}
 				btnName={content.messageUs.button.btnName}
 			/>
 		</TwoColumnWithImage>
@@ -389,7 +395,7 @@
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
-				<ul class="px-2 pl-4 flex flex-col gap-4 list-decimal">
+				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
 					{#each content.common_components.thinkYouShouldKnow.bullets as bullet}
 						<li>{@html bullet}</li>
 					{/each}
