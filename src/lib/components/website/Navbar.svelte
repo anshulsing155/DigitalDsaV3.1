@@ -563,7 +563,7 @@
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<!-- svelte-ignore a11y_no_static_element_interactions -->
 			<div
-				class="flex w-full flex-col gap-0 bg-[var(--landing-bg)] shadow-[0_4px_12px_var(--shadow-select)] border-t-2 border-[var(--form-border)]"
+				class="flex w-full flex-col gap-0 bg-[var(--landing-bg-card)] shadow-[0_4px_12px_var(--shadow-select)] border-t-2 border-[var(--form-border)]"
 				onclick={() => (mobileProfileIsOpen = !mobileProfileIsOpen)}
 			>
 				{#if page.data.user?.name}

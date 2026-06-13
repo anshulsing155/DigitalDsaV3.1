@@ -11,7 +11,7 @@
 </script>
 
 <section
-	class="border-[var(--form-border)] py-[1rem] lg:border-b lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+	class="border-[var(--form-border)] py-[1rem] lg:border-b  lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 >
 	<div class={`grid grid-cols-3 gap-[2rem] ${paddingClass}`}>
 		<!-- Left Heading -->
@@ -34,7 +34,7 @@
 			<div class="col-span-3 grid grid-cols-2 gap-[4rem] lg:col-span-2">
 				{#each contents.cardData as card}
 					<div
-						class="col-span-2 grid gap-[4rem] border-b border-[var(--form-border)] pb-[2rem] md:col-span-1 md:border-b-0 md:pb-0"
+						class="col-span-2 grid gap-[4rem] border-b border-[var(--form-border)] last:border-b-0 pb-[2rem] md:col-span-1 md:border-b-0 md:pb-0"
 					>
 						<div class="flex flex-col gap-4">
 							{#if card.title}
