@@ -56,7 +56,7 @@
 {#if tableData.heading || tableData.para || tableData.linkName}
   <div class="flex flex-col gap-[2rem]">
     {#if tableData.heading}
-      <h2 class="typography-body-md !font-semibold text-black dark:text-white">{@html tableData.heading}</h2>
+      <h2 class="typography-h2-md text-black dark:text-white">{@html tableData.heading}</h2>
     {/if}
 
     <div class="mb-[2rem] flex items-center justify-between">
@@ -90,7 +90,7 @@
     </thead>
     <tbody>
       {#each tableData.rowData as row, i}
-        <tr class={`${i % 2 === 0 ? "bg-[#e5e5e5]" : "bg-[#f8f9fa]"} typography-body-md !text-black`}>
+        <tr class={`${i % 2 === 0 ? "bg-[#e5e5e5]" : "bg-[#f8f9fa]"} typography-body-sm !text-black`}>
           <td class="border-y border-[var(--form-border)] p-4 text-left">
             {@html Object.keys(row)}
           </td>
