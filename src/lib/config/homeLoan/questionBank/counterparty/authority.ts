@@ -188,7 +188,7 @@ export function getAuthorityQuestions(): RawSchemaQuestion[] {
 			contextKey: 'documentationReadiness',
 			type: 'radio',
 			radioClass: 'mt-[1rem] md:mt-[2rem]',
-			labelClass: 'text-black dark:text-white',
+			labelClass: 'text-[var(--form-text)]',
 			optionContainerClass: 'grid gap-3',
 			uiGroup: 'loan_details',
 			required: true,

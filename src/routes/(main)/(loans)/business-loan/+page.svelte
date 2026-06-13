@@ -52,7 +52,7 @@
     <section id="factors" class="pt-16 pb-32 px-4 lg:px-16 bg-[var(--landing-bg)] section">
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center mb-16">
-          <h2 class="typography-h2 mb-4 text-black dark:text-white">
+          <h2 class="typography-h2 mb-4 text-[var(--form-text)]">
             {content.loanFactorsSection.heading}
           </h2>
           <p class="typography-body-md text-[var(--form-text-secondary)]">
@@ -86,14 +86,14 @@
                   </div>
                 </div>
 
-                <h3 class="typography-h3 mb-2 text-black dark:text-white">
+                <h3 class="typography-h3 mb-2 text-[var(--form-text)]">
                   {factor.title}
                 </h3>
                 <p class="typography-body-md text-[var(--form-text-secondary)] mb-4">{factor.description}</p>
 
                 <div class="mt-auto">
                   <div class="bg-[var(--landing-bg-card)] p-3 rounded-xl">
-                    <p class="typography-body-sm text-black dark:text-white">
+                    <p class="typography-body-sm text-[var(--form-text)]">
                       <span class="text-btnBg font-semibold">Important:</span>
                       {factor.importance}
                     </p>
@@ -116,7 +116,7 @@
               </div>
             </div>
             <div>
-              <h4 class="typography-h3 mb-2 text-black dark:text-white">
+              <h4 class="typography-h3 mb-2 text-[var(--form-text)]">
                 {content.loanFactorsSection.tips.heading}
               </h4>
               <p class="typography-body-md text-[var(--form-text-secondary)]">

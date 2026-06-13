@@ -180,7 +180,7 @@
     <div class="lg:hidden">
       {#each content.mobileNavbarTitle as list, index}
         <details
-          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown bg-darkColor col-span-3 text-[var(--form-text)] {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"

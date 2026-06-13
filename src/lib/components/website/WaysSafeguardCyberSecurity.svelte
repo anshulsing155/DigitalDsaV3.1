@@ -313,22 +313,22 @@ dispatch("pageData", pageData);
     <div class="lg:hidden block">
       {#each ["Multi-Factor authentication", " Caller ID check", "Options with telecom companies", "Password securing"] as list, index}
         <details
-          class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < 3 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < 3 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
             onclick={(e) => toggleDropdown(e, index)}
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="typography-label text-black dark:text-white">{list}</h2>
+              <h2 class="typography-label text-[var(--form-text)]">{list}</h2>
               <div class="icon-container justify-self-end typography-h3">
-                <span><i class="fa-solid fa-angle-down faq-icon text-black dark:text-white transition-transform duration-300"></i></span>
+                <span><i class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"></i></span>
               </div>
             </div>
           </summary>
 
           {#if index == 0}
-            <div class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4" id="MFA">
+            <div class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4" id="MFA">
               <ThingsYouShould
                 thinkKnow={{
                   heading: "Multi-Factor Authentication (MFA)",
@@ -341,7 +341,7 @@ dispatch("pageData", pageData);
               />
             </div>
           {:else if index == 1}
-            <div class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4" id="caller">
+            <div class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4" id="caller">
               <ThingsYouShould
                 thinkKnow={{
                   heading: "Caller ID and spam protection",
@@ -354,7 +354,7 @@ dispatch("pageData", pageData);
               ></ThingsYouShould>
             </div>
           {:else if index == 2}
-            <div class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4" id="telecomCompanies">
+            <div class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4" id="telecomCompanies">
               <ThingsYouShould
                 thinkKnow={{
                   heading: "Options with telecom companies",
@@ -385,7 +385,7 @@ dispatch("pageData", pageData);
               </ThingsYouShould>
             </div>
           {:else if index == 3}
-            <div class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4" id="password-securing">
+            <div class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4" id="password-securing">
               <ThreeColumWithLeftHeading
                 contents={{
                   heading: "Creating and securing passwords",

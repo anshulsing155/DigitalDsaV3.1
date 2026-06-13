@@ -304,7 +304,7 @@
 		<div class="block lg:hidden">
 			{#each ['Getting ready', 'Start buying journey', "What's next?", 'Tools & calculators'] as list, index}
 				<details
-					class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index <
+					class="dropdown bg-darkColor col-span-3 text-[var(--form-text)] {index <
 					list.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''} "

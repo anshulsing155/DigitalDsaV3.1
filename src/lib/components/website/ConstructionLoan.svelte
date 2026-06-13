@@ -239,32 +239,32 @@
     <div class="block lg:hidden">
       {#each content.mobileNavbarTitle as list, index (list)}
         <details
-          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="list-none cursor-pointer px-[1rem] py-[1.5rem]"
             onclick={(e) => toggleDropdown(e, index)}
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="typography-label text-black dark:text-white">{list}</h2>
+              <h2 class="typography-label text-[var(--form-text)]">{list}</h2>
               <div class="icon-container justify-self-end typography-h3">
                 <span>
-                  <i class="fa-solid fa-angle-down faq-icon text-black dark:text-white transition-transform duration-300"></i>
+                  <i class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"></i>
                 </span>
               </div>
             </div>
           </summary>
 
           {#if index == 0}
-            <div id="features" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="features" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <TwoColumnWithLeftHeading contents={content.features} />
             </div>
           {:else if index == 1}
-            <div id="benefits" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="benefits" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <TwoColumnWithLeftHeading contents={content.benefits} />
             </div>
           {:else if index == 2}
-            <div id="eligibility" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="eligibility" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <ButtonBanner contents={content.willApprove} />
               <AboveTitleWithTopIconCard contents={content.eligibility.contents} />
 
@@ -285,7 +285,7 @@
               <ThreeColumWithLeftHeading contents={visionBannerWithClicks} />
             </div>
           {:else if index == 3}
-            <div id="steps" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="steps" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <TwoColumnWithImage contents={content.steps.contents}>
                 <div class="typography-body-sm text-text-light">
                   <ul class="list-disc space-y-4">
@@ -302,7 +302,7 @@
               </TwoColumnWithImage>
             </div>
           {:else if index == 4}
-            <div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
               <AboveTitleWithBlackCard contents={content.tools.calculators} />
               <ButtonBanner contents={content.tools.buttonBanner} />

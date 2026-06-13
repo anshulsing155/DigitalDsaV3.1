@@ -95,7 +95,7 @@
 
 <section class="py-16" aria-labelledby="bank-comparison">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 id="bank-comparison" class="text-4xl sm:text-5xl font-extrabold text-center text-black dark:text-white mb-6 tracking-tight">
+    <h2 id="bank-comparison" class="text-4xl sm:text-5xl font-extrabold text-center text-[var(--form-text)] mb-6 tracking-tight">
       Compare Banks for Business Loans
     </h2>
     <p class="text-lg sm:text-xl text-center text-[var(--form-text-secondary)] max-w-4xl mx-auto mb-12 leading-relaxed">

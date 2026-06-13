@@ -56,12 +56,12 @@
 {#if tableData.heading || tableData.para || tableData.linkName}
   <div class="flex flex-col gap-[2rem]">
     {#if tableData.heading}
-      <h2 class="typography-h2-md text-black dark:text-white">{@html tableData.heading}</h2>
+      <h2 class="typography-h2-md text-[var(--form-text)]">{@html tableData.heading}</h2>
     {/if}
 
     <div class="mb-[2rem] flex items-center justify-between">
       {#if tableData.para}
-        <p class="typography-body-md text-black dark:text-white">{@html tableData.para}</p>
+        <p class="typography-body-md text-[var(--form-text)]">{@html tableData.para}</p>
       {/if}
       {#if tableData.linkName}
         <!-- <a

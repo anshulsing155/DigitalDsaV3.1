@@ -329,7 +329,7 @@
 						<div class="col-span-3 lg:col-span-2">
 							<div class="grid grid-cols-2 gap-[2rem] pt-4">
 								<div class="space-y-4">
-									<h3 class="typography-body-lg !font-semibold text-black dark:text-white">
+									<h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">
 										Interest Rates ({roiResult.roi || '8.10'}% PA)
 									</h3>
 									<ul class="marker:black list-disc space-y-2 pl-4">
@@ -341,7 +341,7 @@
 									</ul>
 								</div>
 								<div class="space-y-4">
-									<h3 class="typography-body-lg !font-semibold text-black dark:text-white">
+									<h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">
 										{content.rates.right[0].heading}
 									</h3>
 									<ul class="marker:black list-disc space-y-2 pl-4">
@@ -371,7 +371,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -381,7 +381,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white">{list}</h2>
+							<h2 class="text-[var(--form-text)]">{list}</h2>
 							<div class="icon-container">
 								<ChevronDown
 									class="h-5 w-5 text-black transition-transform duration-300 dark:text-white"
@@ -393,27 +393,27 @@
 					{#if index == 0}
 						<div
 							id="started"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<Journey journey={content.journey} />
 						</div>
 					{:else if index == 1}
 						<div
 							id="choose"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<WhyChoose facilities={content.facilities} gridCol={4} />
 						</div>
 					{:else if index == 2}
 						<div
 							id="loanOptions"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<WhyChoose facilities={content.homeLoanOptions} gridCol={3} />
 						</div>
 					{:else if index == 3}
 						<div
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 							id="whatDocs"
 						>
 							<TwoColumn
@@ -455,7 +455,7 @@
 					{:else if index == 4}
 						<div
 							id="process"
-							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)]"
 						>
 							<div class="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3">
 								<div>
@@ -513,7 +513,7 @@
 					{:else if index == 5}
 						<div
 							id="fees"
-							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)]"
 						>
 							<div class="grid grid-cols-1 gap-[2rem]">
 								<h2 class="typography-h2 text-text-main">
@@ -551,7 +551,7 @@
 					{:else if index == 6}
 						<div
 							id="support"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
 							<Guides guide={content.getStart} />

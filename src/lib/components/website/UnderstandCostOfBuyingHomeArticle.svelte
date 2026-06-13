@@ -214,7 +214,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -224,7 +224,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="typography-label text-black dark:text-white">{list}</h2>
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
 							<div class="icon-container typography-h3 justify-self-end">
 								<span
 									><i
@@ -238,21 +238,21 @@
 					{#if index === 0}
 						<div
 							id="taxes-fees"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.taxesFees.contents} />
 						</div>
 					{:else if index === 1}
 						<div
 							id="inspections"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.inspections.contents} />
 						</div>
 					{:else if index === 2}
 						<div
 							id="setup-cost"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.setupCost.insurance} />
 							<TwoColumnWithLeftHeading contents={content.setupCost.legal} />
@@ -263,7 +263,7 @@
 					{:else if index === 3}
 						<div
 							id="guidance"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.guidance.help} />
 						</div>
@@ -273,10 +273,10 @@
 		</div>
 
 		<div class="px-1 py-4 md:p-16">
-			<h2 class="typography-h2-md mb-5 text-black dark:text-white">
+			<h2 class="typography-h2-md mb-5 text-[var(--form-text)]">
 				{content.verticalBlog.heading}
 			</h2>
-			<p class="mb-4 typography-body-lg !font-semibold text-black dark:text-white">{content.verticalBlog.sub}</p>
+			<p class="mb-4 typography-body-lg !font-semibold text-[var(--form-text)]">{content.verticalBlog.sub}</p>
 			<div class="flex flex-col gap-4 md:flex-row">
 				<VerticalBlog blogLists={content.verticalBlog.blogLists} />
 			</div>

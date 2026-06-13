@@ -155,7 +155,7 @@
                       />
 
                       <p class="typography-body-md text-[var(--form-text-secondary)]">
-                        <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                        <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                           >{bullet.title}
                         </span> {bullet.desc}
                       </p>
@@ -171,7 +171,7 @@
           >
             <div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
               <h2
-                class="typography-h2 text-black dark:text-white"
+                class="typography-h2 text-[var(--form-text)]"
               >
                 {content.workAreas.heading}
               </h2>
@@ -186,7 +186,7 @@
                 <div
                   class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                 >
-                  <p class="typography-h4 text-black dark:text-white">{role}</p>
+                  <p class="typography-h4 text-[var(--form-text)]">{role}</p>
                 </div>
               {/each}
             </div>
@@ -208,7 +208,7 @@
                 <div class="flex flex-col space-y-10">
                   {#each content.rewardsAndBenefits.bullets as bullet}
                     <p class="typography-body-md text-[var(--form-text-secondary)]">
-                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                      <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                         >{bullet.title}
                       </span>{bullet.desc}
                     </p>
@@ -235,7 +235,7 @@
                 <div class="flex flex-col space-y-10">
                   {#each content.diversityAndInclusion.bullets as bullet}
                     <p class="typography-body-md text-[var(--form-text-secondary)]">
-                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                      <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                         >{bullet.title}
                       </span>{bullet.desc}
                     </p>
@@ -261,7 +261,7 @@
                 <div class="flex flex-col space-y-10">
                   {#each content.graduates.bullets as bullet}
                     <p class="typography-body-md text-[var(--form-text-secondary)]">
-                      <span class="typography-body-lg !font-semibold text-black dark:text-white">{bullet.title}</span>{bullet.desc}
+                      <span class="typography-body-lg !font-semibold text-[var(--form-text)]">{bullet.title}</span>{bullet.desc}
                     </p>
                   {/each}
                 </div>
@@ -277,7 +277,7 @@
               <div class="col-span-2 grid space-y-10">
                 {#each content.awardsAndRecognition.bullets as bullet}
                   <p class="typography-body-md text-[var(--form-text-secondary)] italic">
-                    <span class="typography-body-lg !font-semibold text-black dark:text-white not-italic"
+                    <span class="typography-body-lg !font-semibold text-[var(--form-text)] not-italic"
                       >{bullet.title}
                     </span>{bullet.desc}
                   </p>
@@ -292,14 +292,14 @@
     <div class="lg:hidden">
       {#each content.navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-[var(--form-bg)] text-black dark:text-white {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown col-span-3 bg-[var(--form-bg)] text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
             onclick={(e) => toggleDropdown(e, index)}
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="typography-h3 text-black dark:text-white">{list}</h2>
+              <h2 class="typography-h3 text-[var(--form-text)]">{list}</h2>
               <div class="icon-container justify-self-end text-[var(--form-text-secondary)] text-lg">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
@@ -309,7 +309,7 @@
           {#if index == 0}
             <div
               id="businessArea"
-              class="pb-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]"
+              class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]"
             >
               <div class="border-b border-dividerColor">
                 <TwoColumn
@@ -335,7 +335,7 @@
                           />
 
                           <p class="typography-body-md text-[var(--form-text-secondary)]">
-                            <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                            <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                               >{bullet.title}
                             </span> {bullet.desc}
                           </p>
@@ -350,7 +350,7 @@
               >
                 <div class="lg:col-span-4 flex flex-col gap-4">
                   <h2
-                    class="typography-h2 text-black dark:text-white"
+                    class="typography-h2 text-[var(--form-text)]"
                   >
                     Our Business Areas
                   </h2>
@@ -365,7 +365,7 @@
                     <div
                       class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                     >
-                      <p class="typography-h4 text-black dark:text-white">
+                      <p class="typography-h4 text-[var(--form-text)]">
                         {role}
                       </p>
                     </div>
@@ -374,7 +374,7 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="rewards" class="pb-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]">
+            <div id="rewards" class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]">
               <TwoColumn
                 cardImage={content.rewardsAndBenefits.cardImage}
                 cardAltName={content.rewardsAndBenefits.cardAltName}
@@ -388,7 +388,7 @@
                   <div class="flex flex-col">
                     {#each content.rewardsAndBenefits.bullets as bullet}
                       <p class="typography-body-md text-[var(--form-text-secondary)]">
-                        <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                        <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                           >{bullet.title}
                         </span>{bullet.desc}
                       </p>
@@ -400,7 +400,7 @@
           {:else if index == 2}
             <div
               id="diversity"
-              class="pb-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]"
+              class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]"
             >
               <TwoColumn
                 cardImage={content.diversityAndInclusion.cardImage}
@@ -416,7 +416,7 @@
                   <div class="flex flex-col">
                     {#each content.diversityAndInclusion.bullets as bullet}
                       <p class="typography-body-md text-[var(--form-text-secondary)]">
-                        <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                        <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                           >{bullet.title}
                         </span>{bullet.desc}
                       </p>
@@ -427,7 +427,7 @@
             </div>
           {:else if index == 3}
             <div
-              class="pb-[2rem] bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]"
+              class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]"
               id="graduates"
             >
               <TwoColumn
@@ -443,7 +443,7 @@
                   <div class="flex flex-col">
                     {#each content.graduates.bullets as bullet}
                       <p class="typography-body-md text-[var(--form-text-secondary)]">
-                        <span class="typography-body-lg !font-semibold text-black dark:text-white">{bullet.title} </span>{bullet.desc}
+                        <span class="typography-body-lg !font-semibold text-[var(--form-text)]">{bullet.title} </span>{bullet.desc}
                       </p>
                     {/each}
                   </div>
@@ -451,7 +451,7 @@
               </TwoColumn>
             </div>
           {:else if index == 4}
-            <div class="bg-[var(--landing-bg)] text-black dark:text-white px-[.5rem]" id="appInfo">
+            <div class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]" id="appInfo">
               <Payments supportHeading={content.awardsAndRecognition.supportHeading}>
                 <div slot="para">
                   {content.awardsAndRecognition.para}
@@ -459,7 +459,7 @@
                 <div class="grid">
                   {#each content.awardsAndRecognition.bullets as bullet}
                     <p class="typography-body-md text-[var(--form-text-secondary)] italic">
-                      <span class="typography-body-lg !font-semibold text-black dark:text-white not-italic"
+                      <span class="typography-body-lg !font-semibold text-[var(--form-text)] not-italic"
                         >{bullet.title}
                       </span>{bullet.desc}
                     </p>

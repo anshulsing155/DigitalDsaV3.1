@@ -15,7 +15,7 @@
     return pathSegments.length > 1; // Show breadcrumbs only if there's more than one segment
   })());</script>
 
-<section class="w-full bg-[var(--landing-bg)] text-black dark:text-white">
+<section class="w-full bg-[var(--landing-bg)] text-[var(--form-text)]">
   <div id="parentDiv" class="mx-1 lg:mx-auto relative">
     {#if shouldShowBreadcrumbs}
       <div class="hidden lg:flex pl-[4rem] py-4">
@@ -42,11 +42,11 @@
       class="w-full relative -top-[3rem] md:-top-[5rem] lg:-top-[13rem] lg:px-0 mx-auto"
     >
       <div
-        class="bg-[var(--landing-bg)] text-black dark:text-white lg:w-[80%] mx-auto border border-[var(--landing-glass-border)] border-b p-6 sm:p-8 text-center flex justify-center items-center relative z-40"
+        class="bg-[var(--landing-bg)] text-[var(--form-text)] lg:w-[80%] mx-auto border border-[var(--landing-glass-border)] border-b p-6 sm:p-8 text-center flex justify-center items-center relative z-40"
       >
         <div class="flex flex-col gap-4">
           <h1
-            class="typography-h1 text-black dark:text-white"
+            class="typography-h1 text-[var(--form-text)]"
           >
             {pageData.heading}
           </h1>
@@ -57,7 +57,7 @@
           {/if}
         </div>
       </div>
-      <div class="bg-[var(--landing-bg)] text-black dark:text-white h-full right-0 mx-auto">
+      <div class="bg-[var(--landing-bg)] text-[var(--form-text)] h-full right-0 mx-auto">
         <!-- svelte-ignore slot_element_deprecated -->
         <slot />
       </div>

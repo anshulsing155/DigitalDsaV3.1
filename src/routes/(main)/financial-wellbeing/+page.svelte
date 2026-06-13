@@ -113,7 +113,7 @@
               class="flex flex-col items-start gap-3 typography-body-md text-[var(--form-text-secondary)]"
             >
               <img src={card.icon} alt="" class="h-10" />
-              <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
+              <h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
                 {card.heading}
               </h2>
               <p>
@@ -153,7 +153,7 @@
           >
             {#each content.assessment.bullets as bullet}
               <p>
-                <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                   >{bullet.title}</span
                 > <br />
                 {bullet.desc}
@@ -184,7 +184,7 @@
           </summary>
 
           {#if index == 0}
-            <div id="Financial Services Guides" class="bg-[var(--landing-bg)] text-black dark:text-white">
+            <div id="Financial Services Guides" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
               <ThingsYouShould thinkKnow={content.wellBeing} disc="list-decimal" />
               <div class="grid md:grid-cols-2 gap-[2rem] px-[0.5rem] pb-[3rem]">
                 {#each content.wellBeingCards as card}
@@ -192,7 +192,7 @@
                     class="flex flex-col items-start gap-3 typography-body-md text-[var(--form-text-secondary)]"
                   >
                     <img src={card.icon} alt="" class="h-10" />
-                    <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
+                    <h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
                       {card.heading}
                     </h2>
                     <p>
@@ -206,11 +206,11 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="measured" class="bg-[var(--landing-bg)] text-black dark:text-white">
+            <div id="measured" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
               <ThingsYouShould thinkKnow={content.measured} disc="list-disc" />
             </div>
           {:else if index == 2}
-            <div id="assessment" class="px-[0.5rem] bg-[var(--landing-bg)] text-black dark:text-white">
+            <div id="assessment" class="px-[0.5rem] bg-[var(--landing-bg)] text-[var(--form-text)]">
               <TwoColumn
                 cardImage={content.assessment.cardImage}
                 cardAltName={content.assessment.cardAltName}
@@ -222,7 +222,7 @@
                 >
                   {#each content.assessment.bullets as bullet}
                     <p>
-                      <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                      <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                         >{bullet.title}</span
                       > <br />
                       {bullet.desc}
@@ -232,7 +232,7 @@
               </TwoColumn>
             </div>
           {:else if index == 3}
-            <div id="resources" class="px-[0.5rem] bg-[var(--landing-bg)] text-black dark:text-white">
+            <div id="resources" class="px-[0.5rem] bg-[var(--landing-bg)] text-[var(--form-text)]">
               <WhyChoose facilities={content.resources} />
             </div>
           {/if}

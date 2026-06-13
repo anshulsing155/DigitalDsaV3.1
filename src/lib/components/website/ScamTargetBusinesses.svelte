@@ -342,7 +342,7 @@ dispatch("pageData", pageData);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-black dark:text-white">
+              <div class="icon-container justify-self-end text-[var(--form-text)]">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>

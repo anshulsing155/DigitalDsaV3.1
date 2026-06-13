@@ -116,7 +116,7 @@
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <h2
       id="eligibility-examples"
-      class="text-4xl sm:text-5xl font-extrabold text-center text-black dark:text-white mb-6 tracking-tight"
+      class="text-4xl sm:text-5xl font-extrabold text-center text-[var(--form-text)] mb-6 tracking-tight"
     >
       Eligibility Calculation Examples
     </h2>
@@ -189,7 +189,7 @@
                   <p class="text-sm text-[var(--form-text-secondary)] capitalize">
                     {key.replace(/([A-Z])/g, " $1").trim()}
                   </p>
-                  <p class="text-lg font-semibold text-black dark:text-white">
+                  <p class="text-lg font-semibold text-[var(--form-text)]">
                     {examples[activeTab][key]}
                   </p>
                 </div>

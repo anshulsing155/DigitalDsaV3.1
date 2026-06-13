@@ -241,14 +241,14 @@
     <div class="block lg:hidden">
       {#each content.mobileNavbarTitle as list, index (list)}
         <details
-          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="list-none cursor-pointer px-[1rem] py-[1.5rem]"
             onclick={(e) => toggleDropdown(e, index)}
           >
             <div class="flex items-center justify-between font-semibold typography-body-md">
-              <h2 class="text-black dark:text-white">{list}</h2>
+              <h2 class="text-[var(--form-text)]">{list}</h2>
               <span>
                 <i class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"></i>
               </span>
@@ -256,7 +256,7 @@
           </summary>
 
           {#if index == 0}
-            <div id="type" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="type" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <TwoColumnWithLeftHeading contents={content.type.loanTypes} />
 
               <!-- we help -->
@@ -274,11 +274,11 @@
               </TwoColumnWithImage>
             </div>
           {:else if index == 1}
-            <div id="challenges" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="challenges" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <TwoColumnWithLeftHeading contents={content.challenges.contents} />
             </div>
           {:else if index == 2}
-            <div id="steps" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="steps" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <AboveTitleWithTopIconCard contents={content.steps.awareness} />
 
               <!-- apply -->
@@ -295,11 +295,11 @@
               />
             </div>
           {:else if index == 3}
-            <div id="support" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="support" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <AboveTitleWithoutIconCard contents={supportWithClicks} />
             </div>
           {:else if index == 4}
-            <div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+            <div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
               <AboveTitleWithBlackCard contents={content.tools.calculators} />
               <ButtonBanner contents={content.tools.buttonBanner} />

@@ -11,11 +11,11 @@
 
 </script>
 
-<section class="grid py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] gap-[2rem] text-black dark:text-white">
+<section class="grid py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] gap-[2rem] text-[var(--form-text)]">
   <div class="space-y-5">
     {#if facilities.heading}
       <h2
-        class="typography-h2-md text-black dark:text-white md:col-span-2"
+        class="typography-h2-md text-[var(--form-text)] md:col-span-2"
       >
         {@html facilities.heading}
       </h2>
@@ -37,7 +37,7 @@
           </div>
         {/if}
         {#if facility.title}
-          <p class="typography-body-lg !font-semibold text-black dark:text-white">{facility.title}</p>
+          <p class="typography-body-lg !font-semibold text-[var(--form-text)]">{facility.title}</p>
         {/if}
         {#if facility.desc}
           <p class="typography-body-md text-[var(--form-text-secondary)]">{@html facility.desc}</p>

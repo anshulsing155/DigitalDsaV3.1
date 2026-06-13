@@ -22,17 +22,17 @@
 ;
 </script>
 
-<div class="flex flex-col gap-4 text-black dark:text-white">
+<div class="flex flex-col gap-4 text-[var(--form-text)]">
   <!-- {#if title}
     <h2
-      class="md:text-start typography-h2 text-black dark:text-white"
+      class="md:text-start typography-h2 text-[var(--form-text)]"
     >
       {title}
     </h2>
   {/if} -->
   <!-- {#each cardData as card} -->
   <div class="flex flex-col gap-4 py-[1.5rem] lg:py-[3rem]">
-    <h2 class="typography-body-lg !font-semibold text-black dark:text-white">{cardData.heading}</h2>
+    <h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">{cardData.heading}</h2>
     {#if cardData.para}
       <p class="typography-body-md text-[var(--form-text-secondary)]">{@html cardData.para}</p>
     {/if}

@@ -11,7 +11,7 @@
 <section class="pt-[4rem] pb-[8rem]">
   <div class="grid grid-cols-3 gap-[2rem]">
     <div
-      class="col-span-3 typography-h2 text-black dark:text-white lg:col-span-1"
+      class="col-span-3 typography-h2 text-[var(--form-text)] lg:col-span-1"
     >
       {#if steps.heading}
         {steps.heading}
@@ -28,7 +28,7 @@
             <img src={step.icon} alt={step.altTitle} class="h-10" />
           {/if}
           <div class="flex flex-col gap-4">
-            <p class="typography-body-lg !font-semibold text-black dark:text-white">{step.title}</p>
+            <p class="typography-body-lg !font-semibold text-[var(--form-text)]">{step.title}</p>
             
             <p class="typography-body-md text-[var(--form-text-secondary)]">{@html step.desc}</p>
           </div>

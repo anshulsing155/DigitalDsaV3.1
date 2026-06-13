@@ -215,7 +215,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -225,7 +225,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white typography-label">{list}</h2>
+							<h2 class="text-[var(--form-text)] typography-label">{list}</h2>
 							<div class="icon-container justify-self-end typography-h3">
 								<span
 									><i
@@ -237,17 +237,17 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="Calculators" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="Calculators" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<AboveTitleWithoutIconCard contents={content.calculators.contents} />
 						</div>
 					{:else if index === 1}
-						<div id="Tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="Tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<AboveTitleWithBlackCard contents={content.tools.moneyMap} />
 							<AboveTitleWithoutIconCard contents={content.tools.planners} />
 							<AboveTitleWithLeftIconCard contents={content.tools.journey} />
 						</div>
 					{:else if index === 2}
-						<div id="guides" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="guides" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<ButtonBanner contents={content.guides.buttonBanner} />
 							<AboveTitleWithTopIconCard contents={content.guides.topIconCards} />
 						</div>

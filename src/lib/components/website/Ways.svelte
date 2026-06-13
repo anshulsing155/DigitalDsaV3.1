@@ -13,7 +13,7 @@
 >
   {#if ways.heading}
     <h2
-      class="text-center typography-h2 text-black dark:text-white md:text-start"
+      class="text-center typography-h2 text-[var(--form-text)] md:text-start"
     >
       {ways.heading}
     </h2>

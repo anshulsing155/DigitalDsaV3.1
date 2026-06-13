@@ -50,7 +50,7 @@
     "sourceName": "Freepik",
     "originalSource": "https://www.freepik.com/free-photo/card-envelope-mockup-with-leaves-background_18415628.htm#fromView=search&page=1&position=2&uuid=bdd2b995-5dd3-40c3-83e2-040a49288fc8&query=thanks",
     "para": "Some images, icons, and illustrations on this website are sourced from Freepik, Pexels, and FlatIcons, licensed under their respective terms.",
-    "attributionAlert": "Images and graphics used on this website are sourced from <span class=\"typography-body-lg !font-semibold text-black dark:text-white\">Freepik</span>, <span class=\"typography-body-lg !font-semibold text-black dark:text-white\">Pexels</span>, <span class=\"typography-body-lg !font-semibold text-black dark:text-white\">Unsplash</span>, and <span class=\"typography-body-lg !font-semibold text-black dark:text-white\">FlatIcons</span>. All rights to these assets remain with their original creators.",
+    "attributionAlert": "Images and graphics used on this website are sourced from <span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">Freepik</span>, <span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">Pexels</span>, <span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">Unsplash</span>, and <span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">FlatIcons</span>. All rights to these assets remain with their original creators.",
     "intro": "Where required, usage complies with the licensing terms of each platform :",
     "platforms": [
       {

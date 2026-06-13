@@ -77,11 +77,11 @@
 
       <div
         id="securedUnsecured"
-        class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
+        class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-[var(--form-text)]"
       >
         <div class="">
           <h2
-            class="typography-h2 text-center py-5 text-black dark:text-white"
+            class="typography-h2 text-center py-5 text-[var(--form-text)]"
           >
             <span class="underline"> Secured </span> vs
             <span class="underline"> Unsecured Loans</span>
@@ -135,7 +135,7 @@
 
     <div slot="secondary" class="px[1rem] py-[2rem] lg:px-[0rem]">
       <h2
-        class="typography-h3 text-black dark:text-white"
+        class="typography-h3 text-[var(--form-text)]"
       >
         We're here to help
       </h2>

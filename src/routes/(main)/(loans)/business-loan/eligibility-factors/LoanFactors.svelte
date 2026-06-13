@@ -52,10 +52,10 @@
           <div class="flex items-start">
            
             <div>
-              <h3 class="text-xl font-semibold mb-2 text-black dark:text-white">{factor.title}</h3>
+              <h3 class="text-xl font-semibold mb-2 text-[var(--form-text)]">{factor.title}</h3>
               <p class="text-[var(--form-text-secondary)] mb-3">{factor.description}</p>
               <div class="bg-[var(--landing-bg)] p-3 rounded-md">
-                <p class="text-sm font-medium text-black dark:text-white">
+                <p class="text-sm font-medium text-[var(--form-text)]">
                   <span class="text-btnBg font-bold">Important:</span> {factor.importance}
                 </p>
               </div>

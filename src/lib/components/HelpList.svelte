@@ -14,7 +14,7 @@
 	}`}
 >
 	<div class="flex w-full flex-col gap-4">
-		<h2 class="typography-h2-md text-black dark:text-white">
+		<h2 class="typography-h2-md text-[var(--form-text)]">
 			{@html contents.heading}
 		</h2>
 

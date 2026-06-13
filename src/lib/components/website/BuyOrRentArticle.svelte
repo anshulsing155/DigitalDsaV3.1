@@ -200,7 +200,7 @@
 					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
 					<div class="">
-						<h2 class="typography-h2-md mb-[4rem] grid text-center text-black dark:text-white">
+						<h2 class="typography-h2-md mb-[4rem] grid text-center text-[var(--form-text)]">
 							<p>Renting vs Buying</p>
 							<span class="underline decoration-primary decoration-4 underline-offset-4"
 								>The Breakdown</span
@@ -218,7 +218,7 @@
 				</div>
 
 				<div class="mt-[4rem]">
-					<p class="typography-h2-md mb-[2rem] text-center text-black dark:text-white">
+					<p class="typography-h2-md mb-[2rem] text-center text-[var(--form-text)]">
 						Real-Life Scenarios: What Worked for Others
 						<br /><span
 							class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]"
@@ -274,7 +274,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -284,7 +284,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="typography-label text-black dark:text-white">{list}</h2>
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
 							<div class="icon-container typography-h3 justify-self-end">
 								<span
 									><i
@@ -298,21 +298,21 @@
 					{#if index === 0}
 						<div
 							id="right"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.right.contents} />
 						</div>
 					{:else if index === 1}
 						<div
 							id="compare"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<div
 								class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 							>
 								<div class="">
 									<h2
-										class="typography-h2-md mb-[4rem] grid text-center text-black dark:text-white"
+										class="typography-h2-md mb-[4rem] grid text-center text-[var(--form-text)]"
 									>
 										<p>Renting vs Buying</p>
 										<span class="underline decoration-primary decoration-4 underline-offset-4"
@@ -331,7 +331,7 @@
 							</div>
 
 							<div class="mt-[4rem]">
-								<p class="typography-h2-md mb-[2rem] text-center text-black dark:text-white">
+								<p class="typography-h2-md mb-[2rem] text-center text-[var(--form-text)]">
 									Real-Life Scenarios: What Worked for Others
 									<br /><span
 										class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]"
@@ -365,7 +365,7 @@
 					{:else if index === 2}
 						<div
 							id="prosCons"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.prosCons} />
 							<TwoColumnWithLeftHeading contents={content.prosCons.unsure} />
@@ -373,7 +373,7 @@
 					{:else if index === 3}
 						<div
 							id="calculators"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<AboveTitleWithBlackCard contents={content.tools.contents} />
 						</div>

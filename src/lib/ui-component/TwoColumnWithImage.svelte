@@ -61,7 +61,7 @@
 	>
 		{#if contents.cardHeading}
 			<h3
-				class="typography-h2-md text-black dark:text-white">
+				class="typography-h2-md text-[var(--form-text)]">
 				{@html contents.cardHeading}
 			</h3>
 		{/if}

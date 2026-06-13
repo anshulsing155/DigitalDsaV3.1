@@ -12,7 +12,7 @@
 </script>
 
 <section
-  class="border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] text-black dark:text-white"
+  class="border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] text-[var(--form-text)]"
 >
   <div
     class="grid lg:grid-cols-12 gap-[2rem] lg:gap-[4rem] px-[0.5rem] lg:px-[4rem] items-start"
@@ -20,7 +20,7 @@
     <!-- left-heading  -->
     <div class="lg:col-span-4 flex flex-col gap-4">
       {#if contents.heading}
-        <p class="typography-h2-md text-black dark:text-white">
+        <p class="typography-h2-md text-[var(--form-text)]">
           {@html contents.heading}
         </p>
       {/if}
@@ -34,7 +34,7 @@
 
     <div class="lg:col-span-8 flex flex-col gap-[3rem]">
       {#if contents.secHeading}
-        <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
+        <h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
           {@html contents.secHeading}
         </h2>
       {/if}
@@ -73,7 +73,7 @@
         <div class="space-y-[2rem]">
           {#if contents.listTopPara}
             <div class="">
-              <p class="typography-body-lg !font-semibold text-black dark:text-white">
+              <p class="typography-body-lg !font-semibold text-[var(--form-text)]">
                 {@html contents.listTopPara}
               </p>
             </div>

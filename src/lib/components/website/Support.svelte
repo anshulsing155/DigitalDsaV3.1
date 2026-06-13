@@ -14,10 +14,10 @@
 
 </script>
 
-<section class="flex flex-col gap-[2rem] lg:pt-[4rem] lg:pb-[8rem] text-black dark:text-white">
+<section class="flex flex-col gap-[2rem] lg:pt-[4rem] lg:pb-[8rem] text-[var(--form-text)]">
   {#if supportHeading}
     <p
-      class="typography-h2 text-black dark:text-white"
+      class="typography-h2 text-[var(--form-text)]"
     >
       {supportHeading}
     </p>
@@ -29,7 +29,7 @@
         class="col-span-1 flex flex-col gap-[1rem] border-b md:border-b-0 py-[1rem]"
       >
         {#if content.title}
-          <p class="typography-body-lg !font-semibold text-black dark:text-white md:w-3/4">{content.title}</p>
+          <p class="typography-body-lg !font-semibold text-[var(--form-text)] md:w-3/4">{content.title}</p>
         {/if}
 
         {#if content.lists}

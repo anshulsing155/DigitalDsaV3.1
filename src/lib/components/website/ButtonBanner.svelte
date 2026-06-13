@@ -13,7 +13,7 @@
 		<div
 			class="flex w-full flex-col items-center justify-center gap-8 md:gap-16 lg:w-auto lg:flex-row"
 		>
-			<h2 class="typography-h2-md text-black dark:text-white">
+			<h2 class="typography-h2-md text-[var(--form-text)]">
 				{@html contents.heading}
 			</h2>
 
@@ -28,7 +28,7 @@
 		</div>
 	{:else}
 		<div class="flex w-full flex-col items-center justify-center gap-8 md:gap-16 lg:w-auto">
-			<h2 class="typography-h2-md text-black dark:text-white">
+			<h2 class="typography-h2-md text-[var(--form-text)]">
 				{@html contents.heading}
 			</h2>
 

@@ -525,7 +525,7 @@ describe('Schema Composer — equivalence with original JSON', () => {
 				delete normalizedCompQ.minLimit;
 				delete normalizedCompQ.maxLimit;
 				// Strip labelClass — the 2026-05-20 mobile/uniform-UI refresh removed
-				// the per-question `labelClass: 'text-black dark:text-white'` override
+				// the per-question `labelClass: 'text-[var(--form-text)]'` override
 				// from the TS question banks (label colour is now owned by the field
 				// components). The legacy JSON still carries it; since the composer is
 				// the source of truth, normalize it away on both sides.

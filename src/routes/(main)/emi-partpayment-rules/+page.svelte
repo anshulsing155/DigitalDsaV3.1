@@ -121,11 +121,11 @@
         </div>
         <div id="table" data-section="table">
           <div
-            class="flex flex-col xl:grid grid-cols-5 gap-[3rem] pt-[4rem] pb-[8rem] border-b border-[var(--form-border)] text-black dark:text-white"
+            class="flex flex-col xl:grid grid-cols-5 gap-[3rem] pt-[4rem] pb-[8rem] border-b border-[var(--form-border)] text-[var(--form-text)]"
           >
             <div class="col-span-2">
               <h2
-                class="grid mb-[1.5rem] typography-h2 text-black dark:text-white"
+                class="grid mb-[1.5rem] typography-h2 text-[var(--form-text)]"
               >
                 Maximum Part-Payment Limits in Indian Banks
               </h2>
@@ -138,11 +138,11 @@
           </div>
 
           <div
-            class="flex flex-col xl:grid grid-cols-5 gap-[3rem] pt-[4rem] pb-[8rem] border-b border-[var(--form-border)] text-black dark:text-white"
+            class="flex flex-col xl:grid grid-cols-5 gap-[3rem] pt-[4rem] pb-[8rem] border-b border-[var(--form-border)] text-[var(--form-text)]"
           >
             <div class="col-span-2">
               <h2
-                class="grid mb-[1.5rem] typography-h2 text-black dark:text-white"
+                class="grid mb-[1.5rem] typography-h2 text-[var(--form-text)]"
               >
                 Bank-Wise EMI Increment & Part-Payment Rules
               </h2>
@@ -182,7 +182,7 @@
             <div
               id="emi"
               data-section="emi"
-              class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]"
+              class="bg-[var(--landing-bg)] text-[var(--form-text)] border-[var(--form-border)]"
             >
               <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould thinkKnow={content.emiIncrement} disc={"list-disc"} />
@@ -202,7 +202,7 @@
             <div
               id="partPayment"
               data-section="partPayment"
-              class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]"
+              class="bg-[var(--landing-bg)] text-[var(--form-text)] border-[var(--form-border)]"
             >
               <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould thinkKnow={content.partPayment} disc={"list-disc"} />
@@ -217,14 +217,14 @@
             <div
               id="table"
               data-section="table"
-              class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]"
+              class="bg-[var(--landing-bg)] text-[var(--form-text)] border-[var(--form-border)]"
             >
               <div
                 class="flex flex-col xl:grid grid-cols-5 gap-[1rem] py-[4rem] px-[0.5rem] border-b border-[var(--form-border)]"
               >
                 <div class="col-span-2">
                   <h2
-                    class="grid typography-h2 text-black dark:text-white"
+                    class="grid typography-h2 text-[var(--form-text)]"
                   >
                     Maximum Part-Payment Limits in Indian Banks
                   </h2>
@@ -241,7 +241,7 @@
               >
                 <div class="col-span-2">
                   <h2
-                    class="grid typography-h2 text-black dark:text-white"
+                    class="grid typography-h2 text-[var(--form-text)]"
                   >
                     Bank-Wise EMI Increment & Part-Payment Rules
                   </h2>
@@ -257,7 +257,7 @@
             <div
               id="tips"
               data-section="tips"
-              class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]"
+              class="bg-[var(--landing-bg)] text-[var(--form-text)] border-[var(--form-border)]"
             >
               <div class="border-b border-[var(--form-border)]">
                 <ThingsYouShould

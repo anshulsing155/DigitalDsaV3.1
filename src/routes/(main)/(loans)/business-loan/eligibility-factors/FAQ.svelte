@@ -49,7 +49,7 @@
           onclick={() => toggleFAQ(i)}
           aria-expanded={activeIndex === i}
         >
-          <span class="text-left font-medium text-black dark:text-white">{faq.question}</span>
+          <span class="text-left font-medium text-[var(--form-text)]">{faq.question}</span>
           <svg
             class="w-5 h-5 text-[var(--form-text-secondary)] transform transition-transform duration-200 {activeIndex === i ? 'rotate-180' : ''}"
             fill="none"

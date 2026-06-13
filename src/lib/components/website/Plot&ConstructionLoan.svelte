@@ -239,29 +239,29 @@
     <div class="block lg:hidden">
       {#each content.mobileNavbarTitle as list, index (list)}
         <details
-          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="list-none cursor-pointer px-[1rem] py-[1.5rem]"
             onclick={(e) => toggleDropdown(e, index)}
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="typography-label text-black dark:text-white">{list}</h2>
+              <h2 class="typography-label text-[var(--form-text)]">{list}</h2>
               <div class="icon-container justify-self-end typography-h3">
                 <span>
-                  <i class="fa-solid fa-angle-down faq-icon text-black dark:text-white transition-transform duration-300"></i>
+                  <i class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"></i>
                 </span>
               </div>
             </div>
           </summary>
 
           {#if index == 0}
-            <div id="guide" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+            <div id="guide" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
               <ThreeColumWithLeftHeading contents={content.guide} />
               <TwoColumnWithLeftHeading contents={content.keyAdvantages} />
             </div>
           {:else if index == 1}
-            <div id="eligibility" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+            <div id="eligibility" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
               <AboveTitleWithTopIconCard contents={content.eligibility.contents} />
               <AboveTitleWithoutIconCard contents={content.disbursement.contents} />
 
@@ -282,7 +282,7 @@
               <ThreeColumWithLeftHeading contents={consultationWithClicks} />
             </div>
           {:else if index == 2}
-            <div id="help" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+            <div id="help" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
               <TwoColumnWithImage contents={content.howWeHelp.contents}>
                 <div class="typography-body-sm text-text-light">
                   <ul class="list-disc space-y-4">
@@ -301,7 +301,7 @@
               <TwoColumnWithLeftHeading contents={content.exploreMore} />
             </div>
           {:else if index == 3}
-            <div id="tools" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+            <div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
               <AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
               <AboveTitleWithBlackCard contents={content.tools.calculators} />
               <ButtonBanner contents={content.tools.buttonBanner} />

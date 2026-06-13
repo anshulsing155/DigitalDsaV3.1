@@ -214,34 +214,34 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index (list)}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
 				>
 					<summary
 						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white">{list}</h2>
+							<h2 class="text-[var(--form-text)]">{list}</h2>
 							<div class="icon-container justify-self-end typography-h3">
-								<span><i class="fa-solid fa-angle-down faq-icon text-black dark:text-white transition-transform duration-300"></i></span>
+								<span><i class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"></i></span>
 							</div>
 						</div>
 					</summary>
 
 					{#if index == 0}
-						<div id="ready" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+						<div id="ready" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
 							<ThreeColumWithLeftHeading
 								contents={content.ready.contents}
 							/>
 						</div>
 					{:else if index == 1}
-						<div id="start" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+						<div id="start" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
 							<AboveTitleWithLeftIconCard
 								contents={content.start.contents}
 							/>
 						</div>
 					{:else if index == 2}
-						<div id="next" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+						<div id="next" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
 							<ThreeColumWithLeftHeading
 								contents={content.next.contents}
 							/>
@@ -250,7 +250,7 @@
 							/>
 						</div>
 					{:else if index == 3}
-						<div id="calculators" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem] pb-4">
+						<div id="calculators" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
 							<AboveTitleWithBlackCard
 								contents={content.calculators.contents}
 							/>

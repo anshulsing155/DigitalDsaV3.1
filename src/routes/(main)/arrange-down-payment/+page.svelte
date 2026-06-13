@@ -106,10 +106,10 @@
       <!-- your savings -->
       <div data-section="first" id="first" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-[var(--form-text)]"
         >
           <h2
-            class="typography-h2 text-black dark:text-white"
+            class="typography-h2 text-[var(--form-text)]"
           >
             {content.yourSavings.heading}
           </h2>
@@ -119,11 +119,11 @@
         </div>
         <!-- planning -->
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-[var(--form-text)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="typography-h2 text-black dark:text-white"
+              class="typography-h2 text-[var(--form-text)]"
             >
               {content.planning.heading}
             </h2>
@@ -134,7 +134,7 @@
           <ul class="space-y-6">
             {#each content.planning.listItems as list}
               <li class="space-y-2">
-                <h3 class="typography-body-lg !font-semibold text-black dark:text-white">{list.heading}</h3>
+                <h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">{list.heading}</h3>
                 <p class="typography-body-md text-[var(--form-text-secondary)]">{list.desc}</p>
               </li>
             {/each}
@@ -165,11 +165,11 @@
       <!-- take loan -->
       <div data-section="loan" id="loan" class="">
         <div
-          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
+          class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-[var(--form-text)]"
         >
           <div class="flex flex-col gap-[2rem]">
             <h2
-              class="typography-h2 text-black dark:text-white"
+              class="typography-h2 text-[var(--form-text)]"
             >
               {content.loan.heading}
             </h2>
@@ -180,7 +180,7 @@
           <ul class="space-y-6">
             {#each content.loan.listItems as list}
               <li class="space-y-2">
-                <h3 class="typography-body-lg !font-semibold text-black dark:text-white">
+                <h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">
                   {@html list.heading}
                 </h3>
                 <p class="typography-body-md text-[var(--form-text-secondary)]">{@html list.desc}</p>
@@ -194,7 +194,7 @@
     <div class="lg:hidden">
       {#each content.navBarMedium as list, index}
         <details
-          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown bg-darkColor col-span-3 text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -208,12 +208,12 @@
             </div>
           </summary>
           {#if index == 0}
-            <div id="first" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
+            <div id="first" class="bg-[var(--landing-bg)] text-[var(--form-text)] border-[var(--form-border)]">
               <div
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)]"
               >
                 <h2
-                  class="typography-h2 text-black dark:text-white"
+                  class="typography-h2 text-[var(--form-text)]"
                 >
                   {content.yourSavings.heading}
                 </h2>
@@ -226,7 +226,7 @@
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="typography-h2 text-black dark:text-white"
+                    class="typography-h2 text-[var(--form-text)]"
                   >
                     {content.planning.heading}
                   </h2>
@@ -247,32 +247,32 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="smart" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
+            <div id="smart" class="bg-[var(--landing-bg)] text-[var(--form-text)] border-[var(--form-border)]">
               <AboveTitleWithTopIconCard
                 contents={content.smartSavings}
               />
             </div>
           {:else if index == 2}
-            <div id="pay" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
+            <div id="pay" class="bg-[var(--landing-bg)] text-[var(--form-text)] border-[var(--form-border)]">
               <AboveTitleWithoutIconCard
                 contents={content.withdrawAndPay}
               />
             </div>
           {:else if index == 3}
-            <div id="invest" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
+            <div id="invest" class="bg-[var(--landing-bg)] text-[var(--form-text)] border-[var(--form-border)]">
               <AboveTitleWithTopIconCard
                 contents={content.smartInvesting}
                 listGridAboveLg="2"
               />
             </div>
           {:else if index == 4}
-            <div id="loan" class="bg-[var(--landing-bg)] text-black dark:text-white border-[var(--form-border)]">
+            <div id="loan" class="bg-[var(--landing-bg)] text-[var(--form-text)] border-[var(--form-border)]">
               <div
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-4 lg:px-16 w-full border-b border-[var(--form-border)]"
               >
                 <div class="flex flex-col gap-[2rem]">
                   <h2
-                    class="typography-h2 text-black dark:text-white"
+                    class="typography-h2 text-[var(--form-text)]"
                   >
                     {content.loan.heading}
                   </h2>

@@ -17,7 +17,7 @@
 		<!-- Left Heading -->
 		<div class="col-span-3 flex flex-col gap-4 lg:col-span-1">
 			{#if contents.heading}
-				<p class="typography-h2-md text-black dark:text-white">
+				<p class="typography-h2-md text-[var(--form-text)]">
 					{@html contents.heading}
 				</p>
 			{/if}
@@ -38,7 +38,7 @@
 					>
 						<div class="flex flex-col gap-4">
 							{#if card.title}
-								<p class="typography-body-lg !font-semibold text-black dark:text-white">
+								<p class="typography-body-lg !font-semibold text-[var(--form-text)]">
 									{@html card.title}
 								</p>
 							{/if}

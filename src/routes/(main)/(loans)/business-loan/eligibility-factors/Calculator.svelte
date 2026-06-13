@@ -58,7 +58,7 @@
 
 {#if visible}
   <div class="py-12 bg-[var(--landing-bg)] px-4 lg:px-16" in:fade={{ duration: 500 }}>
-    <h2 class="typography-h2 text-center mb-8 text-black dark:text-white">Business Loan Eligibility Calculator</h2>
+    <h2 class="typography-h2 text-center mb-8 text-[var(--form-text)]">Business Loan Eligibility Calculator</h2>
     <p class="typography-body-lg text-center max-w-3xl mx-auto mb-12 text-[var(--form-text-secondary)]">
       Estimate how much business loan you might qualify for based on your financial details.
     </p>
@@ -74,7 +74,7 @@
               id="business-type"
               bind:value={businessType}
               onchange={calculateEligibility}
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
             >
               <option value="retail">Retail Business</option>
               <option value="manufacturing">Manufacturing Business</option>
@@ -93,7 +93,7 @@
               oninput={calculateEligibility}
               min="10000"
               step="10000"
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
             />
           </div>
           
@@ -108,7 +108,7 @@
               oninput={calculateEligibility}
               min="5000"
               step="5000"
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
             />
           </div>
           
@@ -123,7 +123,7 @@
               oninput={calculateEligibility}
               min="100000"
               step="100000"
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
             />
           </div>
           
@@ -138,13 +138,13 @@
               oninput={calculateEligibility}
               min="50000"
               step="50000"
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-black dark:text-white focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
             />
           </div>
         </div>
         
         <div class="mt-8 p-6 bg-[var(--landing-bg)] border border-[var(--form-border)] rounded-xl">
-          <h3 class="typography-h3 text-black dark:text-white mb-4">Estimated Loan Eligibility</h3>
+          <h3 class="typography-h3 text-[var(--form-text)] mb-4">Estimated Loan Eligibility</h3>
           <div class="flex flex-col md:flex-row md:items-center justify-between">
             <div>
               <p class="typography-body-sm text-[var(--form-text-secondary)] mb-1">Estimated Range</p>

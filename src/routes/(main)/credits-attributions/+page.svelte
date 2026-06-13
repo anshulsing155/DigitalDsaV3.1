@@ -128,10 +128,10 @@
         <div
           data-section="attribution"
           id="attribution"
-          class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 text-black dark:text-white"
+          class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 text-[var(--form-text)]"
         >
           <p
-            class="mt-4 typography-h3 text-black dark:text-white"
+            class="mt-4 typography-h3 text-[var(--form-text)]"
           >
             {content.attributionText.heading}
           </p>
@@ -161,7 +161,7 @@
                 </li>
                 <li class="p-4 my-7 bg-grayColor border-l-4 border-btnBg">
                   <p>
-                    <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                    <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                       >Attribution :
                     </span>
                     <span class="pt-2">
@@ -218,7 +218,7 @@
     <div class="block lg:hidden">
       {#each content.navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-[var(--form-bg)] text-black dark:text-white {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown col-span-3 bg-[var(--form-bg)] text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -240,10 +240,10 @@
               {#if index == 0}
                 <div
                   id="attribution"
-                  class="flex flex-col gap-8 border-b border-[var(--form-border)] bg-[var(--landing-bg)] text-black dark:text-white px-4 py-12"
+                  class="flex flex-col gap-8 border-b border-[var(--form-border)] bg-[var(--landing-bg)] text-[var(--form-text)] px-4 py-12"
                 >
                   <p
-                    class="mt-4 typography-h3 text-black dark:text-white"
+                    class="mt-4 typography-h3 text-[var(--form-text)]"
                   >
                     {content.attributionText.heading}
                   </p>
@@ -254,7 +254,7 @@
                   </div>
                 </div>
               {:else if index == 1}
-                <div id="resources" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]">
+                <div id="resources" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem]">
                   <TwoColumn
                     cardImage={content.resources.cardImage}
                     cardAltName={content.resources.cardAltName}
@@ -275,7 +275,7 @@
                           class="p-4 my-7 bg-grayColor border-l-4 border-btnBg"
                         >
                           <p>
-                            <span class="typography-body-lg !font-semibold text-black dark:text-white"
+                            <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                               >Attribution :
                             </span>
                             <span class="">
@@ -314,13 +314,13 @@
                   </TwoColumn>
                 </div>
               {:else if index == 2}
-                <div id="logo" class="bg-[var(--landing-bg)] text-black dark:text-white px-[0.5rem]">
+                <div id="logo" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem]">
                   <TwoColumnWithLeftHeading
                     contents={content.logo}
                   />
                 </div>
               {:else if index == 3}
-                <div id="compliance" class="bg-[var(--landing-bg)] text-black dark:text-white">
+                <div id="compliance" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
                   <TwoColumnWithLeftHeading
                     contents={content.compliance}
                   />

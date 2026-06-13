@@ -243,7 +243,7 @@ dispatch("pageData", pageData);
                     {step.id}
                   </div>
                   <div class="flex flex-col gap-4 col-span-5 md:col-span-9">
-                    <h2 class="typography-h3 text-black dark:text-white">{step.title}</h2>
+                    <h2 class="typography-h3 text-[var(--form-text)]">{step.title}</h2>
                     <p class="typography-body-md text-[var(--form-text-secondary)]">{step.desc}</p>
                   </div>
                 </div>
@@ -326,7 +326,7 @@ dispatch("pageData", pageData);
           >
             <div class="mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-black dark:text-white">
+              <div class="icon-container justify-self-end text-[var(--form-text)]">
                 <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
               </div>
             </div>
@@ -415,7 +415,7 @@ dispatch("pageData", pageData);
                         <div
                           class="flex flex-col gap-4 col-span-5 md:col-span-9"
                         >
-                          <h2 class="typography-h3 text-black dark:text-white">
+                          <h2 class="typography-h3 text-[var(--form-text)]">
                             {step.title}
                           </h2>
                           <p class="typography-body-md text-[var(--form-text-secondary)]">

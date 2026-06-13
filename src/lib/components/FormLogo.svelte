@@ -39,7 +39,7 @@
 <div class={viewSide}>
 	<button
 		onclick={() => (showModal = true)}
-		class="logo z-20 flex cursor-pointer flex-col items-center text-black dark:text-white"
+		class="logo z-20 flex cursor-pointer flex-col items-center text-[var(--form-text)]"
 	>
 		<div class="animate-rotate flex">
 			<svg
@@ -76,7 +76,7 @@
 		</div>
 
 		<div class="flex flex-col items-center justify-center">
-			<p class="tinyText text-black dark:text-white text-nowrap">Digital DSA</p>
+			<p class="tinyText text-[var(--form-text)] text-nowrap">Digital DSA</p>
 		</div>
 	</button>
 </div>

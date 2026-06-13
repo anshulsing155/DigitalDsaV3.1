@@ -212,7 +212,7 @@
 				<TwoColumnWithLeftHeading contents={content.guidance.steps} />
 
 				<div class="items-center border-b border-[var(--form-border)] px-2 py-8 md:p-16">
-					<h2 class="typography-h2-md mb-4 text-black dark:text-white">
+					<h2 class="typography-h2-md mb-4 text-[var(--form-text)]">
 						{content.guidance.finalThoughts.heading}
 					</h2>
 					<p class="typography-body-md text-[var(--form-text-secondary)]">
@@ -226,7 +226,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -236,7 +236,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="typography-label text-black dark:text-white">{list}</h2>
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
 							<div class="icon-container typography-h3 justify-self-end">
 								<span
 									><i
@@ -250,14 +250,14 @@
 					{#if index === 0}
 						<div
 							id="intro"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.intro} />
 						</div>
 					{:else if index === 1}
 						<div
 							id="understand-spending"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.understandSpending.habits} />
 							<TwoColumnWithLeftHeading contents={content.understandSpending.budget} />
@@ -266,7 +266,7 @@
 					{:else if index === 2}
 						<div
 							id="start-saving"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.startSaving.strategic} />
 							<TwoColumnWithLeftHeading contents={content.startSaving.assistance} />
@@ -275,12 +275,12 @@
 					{:else if index === 3}
 						<div
 							id="guidance"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.guidance.advisors} />
 							<TwoColumnWithLeftHeading contents={content.guidance.steps} />
 							<div class="items-center border-b border-[var(--form-border)] px-2 py-8 md:p-16">
-								<h2 class="typography-h2-md mb-4 text-black dark:text-white">
+								<h2 class="typography-h2-md mb-4 text-[var(--form-text)]">
 									{content.guidance.finalThoughts.heading}
 								</h2>
 								<p class="typography-body-md text-[var(--form-text-secondary)]">
@@ -295,10 +295,10 @@
 
 		<!-- blog/related resources section -->
 		<div class="px-[0.5rem] py-[4rem] lg:px-[4rem]">
-			<h2 class="typography-h2-md text-black dark:text-white mb-5">
+			<h2 class="typography-h2-md text-[var(--form-text)] mb-5">
 				{content.verticalBlog.heading}
 			</h2>
-			<p class="mb-4 typography-body-lg !font-semibold text-black dark:text-white">{content.verticalBlog.sub}</p>
+			<p class="mb-4 typography-body-lg !font-semibold text-[var(--form-text)]">{content.verticalBlog.sub}</p>
 			<div class="flex flex-col gap-4 md:flex-row">
 				<VerticalBlog blogLists={content.verticalBlog.blogLists} />
 			</div>

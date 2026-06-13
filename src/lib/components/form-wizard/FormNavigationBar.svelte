@@ -112,7 +112,7 @@
 			<div class="nav-left">
 				{#if showPrevious && onPrevious}
 					<button
-						class="nav-btn nav-btn-prev buttonText text-black dark:text-white"
+						class="nav-btn nav-btn-prev buttonText text-[var(--form-text)]"
 						onclick={onPrevious}
 						type="button"
 						aria-label="Go to previous step"

@@ -77,7 +77,7 @@
     class="flex h-full flex-col items-start justify-between gap-4 {cardBorder ? 'p-4' : ''}"
   >
     <div class="flex flex-col gap-4">
-      <h3 class="typography-h3 text-black dark:text-white">{title}</h3>
+      <h3 class="typography-h3 text-[var(--form-text)]">{title}</h3>
       <p class="typography-body-md text-[var(--form-text-secondary)]">{paragraph}</p>
     </div>
     <!-- typography-body-sm text-text-light md:typography-body-md -->

@@ -212,7 +212,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -222,7 +222,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white typography-label">{list}</h2>
+							<h2 class="text-[var(--form-text)] typography-label">{list}</h2>
 							<div class="icon-container justify-self-end typography-h3">
 								<span
 									><i
@@ -234,20 +234,20 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="preparation" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="preparation" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.preparation.prep} />
 						</div>
 					{:else if index === 1}
-						<div id="marketing-buyers" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="marketing-buyers" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.marketingBuyers.marketing} />
 							<TwoColumnWithLeftHeading contents={content.marketingBuyers.negotiating} />
 						</div>
 					{:else if index === 2}
-						<div id="legal" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="legal" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.legal.docs} />
 						</div>
 					{:else if index === 3}
-						<div id="closing" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="closing" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.closing.close} />
 							<TwoColumnWithLeftHeading contents={content.closing.final} />
 						</div>

@@ -250,7 +250,7 @@
 				
 				{#if content.how.exampleTableData}
 					<div class="py-12 border-b border-[var(--form-border)] px-[1rem] lg:px-16">
-						<h3 class="typography-body-lg !font-semibold text-black dark:text-white mb-6">
+						<h3 class="typography-body-lg !font-semibold text-[var(--form-text)] mb-6">
 							{content.how.tableHeading}
 						</h3>
 						{#each content.how.exampleTableData as table}
@@ -291,7 +291,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index (list)}
 				<details
-					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -301,7 +301,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="flex items-center justify-between font-semibold typography-body-md">
-							<h2 class="text-black dark:text-white">{list}</h2>
+							<h2 class="text-[var(--form-text)]">{list}</h2>
 							<span
 								><i
 									class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
@@ -313,24 +313,24 @@
 					{#if index == 0}
 						<div
 							id="whyRefinance"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<AboveTitleWithTopIconCard contents={content.whyRefinance.contents} />
 						</div>
 					{:else if index == 1}
-						<div id="whenAvoid" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="whenAvoid" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<AboveTitleWithTopIconCard contents={content.whenAvoid.contents} />
 						</div>
 					{:else if index == 2}
 						<div
 							id="how"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.how.contents} />
 							
 							{#if content.how.exampleTableData}
 								<div class="py-12 border-b border-[var(--form-border)] px-[0.5rem]">
-									<h3 class="typography-body-lg !font-semibold text-black dark:text-white mb-6">
+									<h3 class="typography-body-lg !font-semibold text-[var(--form-text)] mb-6">
 										{content.how.tableHeading}
 									</h3>
 									{#each content.how.exampleTableData as table}
@@ -344,7 +344,7 @@
 					{:else if index == 3}
 						<div
 							id="help"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithImage contents={content.help.contents}>
 								<div class="typography-body-sm text-text-light">
@@ -365,7 +365,7 @@
 					{:else if index == 4}
 						<div
 							id="tools"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<ThreeColumWithLeftHeading contents={toolsThreeColumnWithClicks} />
 							<AboveTitleWithBlackCard contents={content.tools.blackCard} />

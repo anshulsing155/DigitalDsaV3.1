@@ -217,7 +217,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -227,7 +227,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-black dark:text-white typography-label">{list}</h2>
+							<h2 class="text-[var(--form-text)] typography-label">{list}</h2>
 							<div class="icon-container justify-self-end typography-h3">
 								<span
 									><i
@@ -239,23 +239,23 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="goals-types" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="goals-types" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.goalsTypes.goal} />
 							<TwoColumnWithLeftHeading contents={content.goalsTypes.resVsComm} />
 						</div>
 					{:else if index === 1}
-						<div id="location-timing" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="location-timing" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.locationTiming.location} />
 							<TwoColumnWithLeftHeading contents={content.locationTiming.constructionVsReady} />
 						</div>
 					{:else if index === 2}
-						<div id="financials-tax" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="financials-tax" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.financialsTax.loanVsCash} />
 							<TwoColumnWithLeftHeading contents={content.financialsTax.rentalYield} />
 							<TwoColumnWithLeftHeading contents={content.financialsTax.taxBenefits} />
 						</div>
 					{:else if index === 3}
-						<div id="scenarios" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white">
+						<div id="scenarios" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.scenarios.cases} />
 							<TwoColumnWithLeftHeading contents={content.scenarios.help} />
 						</div>

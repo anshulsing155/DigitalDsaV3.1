@@ -169,7 +169,7 @@
       <!-- Category sidebar -->
       <div class="py-[0.5rem] lg:py-[4rem] pl-[1rem] lg:pl-[2rem] sticky top-0">
         <h3
-          class="hidden sm:block typography-body-lg !font-semibold text-black dark:text-white border-b border-btnBg pb-2 sm:pb-4"
+          class="hidden sm:block typography-body-lg !font-semibold text-[var(--form-text)] border-b border-btnBg pb-2 sm:pb-4"
         >
           Categories
         </h3>
@@ -177,7 +177,7 @@
         <!-- Desktop search -->
         <div class="sm:block hidden mt-4 relative overflow-hidden">
           <input
-            class="w-full pl-2 pr-12 h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-black dark:text-white focus:ring-btnBg"
+            class="w-full pl-2 pr-12 h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-[var(--form-text)] focus:ring-btnBg"
             type="text"
             placeholder="Search blog titles..."
             bind:value={searchQuery}
@@ -236,7 +236,7 @@
             >Show blogs:</span
           >
           <select
-            class="cursor-pointer border border-[var(--landing-border)] rounded-md bg-[var(--landing-bg-card)] text-black dark:text-white outline-none focus:ring-2 ring-btnBg typography-body-sm px-2"
+            class="cursor-pointer border border-[var(--landing-border)] rounded-md bg-[var(--landing-bg-card)] text-[var(--form-text)] outline-none focus:ring-2 ring-btnBg typography-body-sm px-2"
             bind:value={itemsPerPage}
             onchange={() => (currentPage = 1)}
           >
@@ -267,7 +267,7 @@
           <!-- Mobile search -->
           <div class="block sm:hidden my-4 relative overflow-hidden w-full">
             <input
-              class="w-full pl-2 pr-12 h-8 sm:h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-black dark:text-white focus:ring-btnBg"
+              class="w-full pl-2 pr-12 h-8 sm:h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-[var(--form-text)] focus:ring-btnBg"
               type="text"
               placeholder="Search blog titles..."
               bind:value={searchQuery}
@@ -308,9 +308,9 @@
                   {blog.categoryType}
                 </span>
               </div>
-              <div class="flex flex-col gap-1 sm:gap-2 p-2 text-black dark:text-white">
+              <div class="flex flex-col gap-1 sm:gap-2 p-2 text-[var(--form-text)]">
                 <h3
-                  class="typography-body-lg !font-semibold text-black dark:text-white line-clamp-1 sm:line-clamp-2"
+                  class="typography-body-lg !font-semibold text-[var(--form-text)] line-clamp-1 sm:line-clamp-2"
                 >
                   {blog.title}
                 </h3>
@@ -400,7 +400,7 @@
   <!-- Mobile category sidebar -->
   <div class="sm:hidden block w-full">
     <div
-      class="fixed top-0 left-0 w-full h-full z-50 bg-[var(--landing-bg)] text-black dark:text-white transition-transform duration-300 ease-in-out {mobileCategoryBar ? 'translate-x-0' : '-translate-x-full'}"
+      class="fixed top-0 left-0 w-full h-full z-50 bg-[var(--landing-bg)] text-[var(--form-text)] transition-transform duration-300 ease-in-out {mobileCategoryBar ? 'translate-x-0' : '-translate-x-full'}"
     >
       <!-- Close button -->
       <div
@@ -416,7 +416,7 @@
         </button>
       </div>
 
-      <ul class="flex flex-col gap-4 p-4 text-black dark:text-white">
+      <ul class="flex flex-col gap-4 p-4 text-[var(--form-text)]">
         {#each blogCategory as category}
           <li class="flex items-center gap-4 select-none">
             <label class="flex gap-2 cursor-pointer">

@@ -14,17 +14,17 @@
 
 <!-- class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full {contents.borderBottom ? 'lg:border-b' : 'border-b-0'} border-[var(--form-border)]" -->
 <section
-  class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-black dark:text-white"
+  class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)] text-[var(--form-text)]"
 >
   <div class="flex flex-col gap-[2rem] w-full">
     <div class="flex flex-col gap-2">
       {#if contents.heading}
-        <h2 class="typography-h2-md text-black dark:text-white">
+        <h2 class="typography-h2-md text-[var(--form-text)]">
           {@html contents.heading}
         </h2>
       {/if}
       {#if contents.subHeading}
-        <h3 class="typography-body-lg !font-semibold text-black dark:text-white">
+        <h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">
           {@html contents.subHeading}
         </h3>
       {/if}
@@ -51,7 +51,7 @@
       >
         {#each contents.list as listItem}
           <div
-            class="flex flex-col gap-4 items-start mt-4 pr-4 lg:my-[4rem] group border-b border-[var(--form-border)] lg:border-b-0 pb-[2rem] lg:pb-0 text-black dark:text-white"
+            class="flex flex-col gap-4 items-start mt-4 pr-4 lg:my-[4rem] group border-b border-[var(--form-border)] lg:border-b-0 pb-[2rem] lg:pb-0 text-[var(--form-text)]"
           >
             {#if listItem.icon}
               <img
@@ -62,7 +62,7 @@
             {/if}
             <div class="flex flex-col gap-4">
               {#if listItem.heading}
-                <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
+                <h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
                   {@html listItem.heading}
                 </h2>
               {/if}

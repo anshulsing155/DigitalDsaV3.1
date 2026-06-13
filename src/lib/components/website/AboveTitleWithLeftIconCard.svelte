@@ -14,7 +14,7 @@
 	<div class="flex w-full flex-col gap-8">
 		<h2
 			class="
-				typography-h2-md text-black dark:text-white
+				typography-h2-md text-[var(--form-text)]
 			"
 		>
 			{@html contents.heading}

@@ -159,7 +159,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
             {#each subList as item, index}
               <a
                 href={item.url}
-                class="flex flex-col items-center justify-center border-dividerColor px-2 text-black dark:text-white"
+                class="flex flex-col items-center justify-center border-dividerColor px-2 text-[var(--form-text)]"
               >
                 <img src={item.icon} alt={item.altName} class="h-8" />
 

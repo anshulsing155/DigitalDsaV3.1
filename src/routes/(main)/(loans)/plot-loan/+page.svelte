@@ -55,11 +55,11 @@
 
       <!-- diff b/w plot & home -->
       <div
-        class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
+        class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-[var(--form-text)]"
       >
         <div class="">
           <h2
-            class="typography-h2 text-center mb-8 text-black dark:text-white"
+            class="typography-h2 text-center mb-8 text-[var(--form-text)]"
           >
             Plot Loan vs Home Loan:
             <span
@@ -81,11 +81,11 @@
       <!-- balance transfer -->
       <div id="bt">
         <div
-          class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-black dark:text-white"
+          class="py-8 lg:py-0 lg:pt-16 lg:pb-32 px-4 lg:px-16 w-full border-b border-[var(--form-border)] text-[var(--form-text)]"
         >
           <div class="">
             <h2
-              class="typography-h2 text-center mb-8 text-black dark:text-white"
+              class="typography-h2 text-center mb-8 text-[var(--form-text)]"
             >
               Balance Transfer for Plot Loans
             </h2>

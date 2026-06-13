@@ -353,7 +353,7 @@ window.removeEventListener("scroll", handleScroll);
             <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
               {#if planProject.length > 0}
                 <h2
-                  class="md:text-start typography-h2 text-black dark:text-white"
+                  class="md:text-start typography-h2 text-[var(--form-text)]"
                 >
                   Plan your project
                 </h2>
@@ -385,7 +385,7 @@ window.removeEventListener("scroll", handleScroll);
           <div data-section="calculators" id="calculators" class="section">
             <div class="border-b pt-[3rem]">
               <h2
-                class="typography-h2 text-black dark:text-white"
+                class="typography-h2 text-[var(--form-text)]"
               >
                 Tools & calculators
               </h2>
@@ -416,7 +416,7 @@ window.removeEventListener("scroll", handleScroll);
                 class="mx-auto flex w-full items-center justify-between gap-4"
               >
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-black dark:text-white">
+                <div class="icon-container justify-self-end text-[var(--form-text)]">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -465,7 +465,7 @@ window.removeEventListener("scroll", handleScroll);
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
                   {#if planProject.length > 0}
                     <h2
-                      class="md:text-start typography-h2 text-black dark:text-white"
+                      class="md:text-start typography-h2 text-[var(--form-text)]"
                     >
                       Plan your project
                     </h2>
@@ -500,7 +500,7 @@ window.removeEventListener("scroll", handleScroll);
               >
               <div class="pt-[3rem]">
                 <h2
-                  class="typography-h2 text-black dark:text-white"
+                  class="typography-h2 text-[var(--form-text)]"
                 >
                   Tools & calculators
                 </h2>

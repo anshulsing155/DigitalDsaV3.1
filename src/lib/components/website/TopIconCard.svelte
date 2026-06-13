@@ -22,7 +22,7 @@
 
 </script>
 
-<div class="flex flex-col gap-4 items-start mt-4 pr-4 my-[4rem] group text-black dark:text-white">
+<div class="flex flex-col gap-4 items-start mt-4 pr-4 my-[4rem] group text-[var(--form-text)]">
   {#if cardData.icon}
     <img
       src={cardData.icon}
@@ -33,7 +33,7 @@
 
   <div class="flex flex-col gap-4">
     {#if cardData.heading}
-      <h2 class="typography-body-lg !font-semibold text-black dark:text-white">{cardData.heading}</h2>
+      <h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">{cardData.heading}</h2>
     {/if}
     {#if cardData.subHeading}
       <h2 class="typography-body-md text-[var(--form-text-secondary)]">{cardData.subHeading}</h2>

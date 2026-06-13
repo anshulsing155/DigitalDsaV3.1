@@ -318,7 +318,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index (list)}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-black dark:text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					4
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -328,7 +328,7 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="typography-label text-black dark:text-white">{list}</h2>
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
 							<div class="icon-container typography-h3 justify-self-end">
 								<span
 									><i
@@ -342,7 +342,7 @@
 					{#if index == 0}
 						<div
 							id="started"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.started.intro} />
 							<AboveTitleWithTopIconCard contents={content.started.eligibility} />
@@ -350,7 +350,7 @@
 					{:else if index == 1}
 						<div
 							id="fee"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.fee.tenure} />
 							<TwoColumnWithLeftHeading contents={content.fee.rates} />
@@ -358,7 +358,7 @@
 					{:else if index == 2}
 						<div
 							id="step"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithImage contents={content.step.guide}>
 								<div class="typography-body-sm text-text-light">
@@ -391,7 +391,7 @@
 					{:else if index == 3}
 						<div
 							id="help"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithImage contents={content.help.contents}>
 								<div>
@@ -423,7 +423,7 @@
 					{:else if index == 4}
 						<div
 							id="tool"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-black dark:text-white"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<ThreeColumWithLeftHeading contents={content.tool.threeColumn} />
 							<AboveTitleWithBlackCard contents={content.tool.blackCard} />

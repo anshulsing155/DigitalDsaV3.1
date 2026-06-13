@@ -97,7 +97,7 @@
     <div class="block lg:hidden">
       {#each content.navBarMedium as list, index}
         <details
-          class="dropdown bg-darkColor col-span-3 text-black dark:text-white {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown bg-darkColor col-span-3 text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -114,10 +114,10 @@
           {#if index == 0}
             <div
               id="began"
-              class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 bg-[var(--landing-bg)] text-black dark:text-white px-4"
+              class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 bg-[var(--landing-bg)] text-[var(--form-text)] px-4"
             >
               <p
-                class="mt-4 typography-h3 text-black dark:text-white"
+                class="mt-4 typography-h3 text-[var(--form-text)]"
               >
                 {content.history.heading}
               </p>
@@ -128,8 +128,8 @@
               </div>
             </div>
           {:else if index == 1}
-            <div class="pt-8 bg-[var(--landing-bg)] text-black dark:text-white px-4" id="team">
-              <h2 class="typography-h2 text-center text-black dark:text-white">
+            <div class="pt-8 bg-[var(--landing-bg)] text-[var(--form-text)] px-4" id="team">
+              <h2 class="typography-h2 text-center text-[var(--form-text)]">
                 {content.leaders.heading}
               </h2>
               {#each content.leaders.team as member}
@@ -160,10 +160,10 @@
           {:else if index == 2}
             <div
               id="sustainability"
-              class="pt-8 flex flex-col gap-8 bg-[var(--landing-bg)] text-black dark:text-white px-4"
+              class="pt-8 flex flex-col gap-8 bg-[var(--landing-bg)] text-[var(--form-text)] px-4"
             >
               <h3
-                class="typography-h3 text-black dark:text-white"
+                class="typography-h3 text-[var(--form-text)]"
               >
                 {content.coreValues.heading}
               </h3>
@@ -190,10 +190,10 @@
         <div
           data-section="where"
           id="where"
-          class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 text-black dark:text-white"
+          class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 text-[var(--form-text)]"
         >
           <p
-            class="mt-4 typography-h3 text-black dark:text-white"
+            class="mt-4 typography-h3 text-[var(--form-text)]"
           >
             {content.history.heading}
           </p>
@@ -205,7 +205,7 @@
         </div>
 
         <div data-section="ourteam" id="ourteam" class="mt-8">
-          <h2 class="typography-h2 text-center text-black dark:text-white">
+          <h2 class="typography-h2 text-center text-[var(--form-text)]">
             {content.leaders.heading}
           </h2>
           {#each content.leaders.team as member}
@@ -235,10 +235,10 @@
         <div
           data-section="sustain"
           id="sustain"
-          class="grid gap-8 py-8 border-y border-[var(--form-border)] text-black dark:text-white"
+          class="grid gap-8 py-8 border-y border-[var(--form-border)] text-[var(--form-text)]"
         >
           <h3
-            class="typography-h3 text-black dark:text-white"
+            class="typography-h3 text-[var(--form-text)]"
           >
             {content.coreValues.heading}
           </h3>

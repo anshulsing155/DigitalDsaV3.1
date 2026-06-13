@@ -17,7 +17,7 @@
 <section class="mx-auto w-full">
   <div id="pageDesign" class="relative mx-1 lg:mx-auto">
     <div class="relative z-20 lg:mx-0">
-      <div class="relative w-full bg-[var(--landing-bg)] text-black dark:text-white px-[2rem] py-[3rem] lg:p-[4rem]">
+      <div class="relative w-full bg-[var(--landing-bg)] text-[var(--form-text)] px-[2rem] py-[3rem] lg:p-[4rem]">
         <div class="flex flex-col gap-4 sm:gap-[2rem] lg:w-2/3">
           <h1
             class="typography-h3 font-semibold typography-h2 sm:text-mobHeadFont lg:text-headFont"

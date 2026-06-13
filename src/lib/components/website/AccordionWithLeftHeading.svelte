@@ -16,13 +16,13 @@
 </script>
 
 <div
-  class="grid lg:grid-cols-12 gap-[2rem] lg:gap-[4rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] lg:border-b lg:border-[var(--form-border)] text-black dark:text-white"
+  class="grid lg:grid-cols-12 gap-[2rem] lg:gap-[4rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] lg:border-b lg:border-[var(--form-border)] text-[var(--form-text)]"
 >
   <!-- Left Column (Heading & Description) -->
   <div class="lg:col-span-4 flex flex-col gap-4">
     {#if contents.heading}
       <p
-        class="typography-h2-md text-black dark:text-white"
+        class="typography-h2-md text-[var(--form-text)]"
       >
         {@html contents.heading}
       </p>
@@ -46,7 +46,7 @@
           <summary
             class="flex items-center justify-between gap-4 cursor-pointer"
           >
-            <h2 class="typography-body-lg !font-semibold text-black dark:text-white">
+            <h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
               {accordion.question}
             </h2>
             <div class="icon-container">

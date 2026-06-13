@@ -179,7 +179,7 @@
             <ThingsYouShould thinkKnow={content.knowMarket} />
           </div>
           <div id="toolsSupport" data-section="toolsSupport" class="py-[2rem]">
-            <h2 class="typography-h2 text-black dark:text-white">
+            <h2 class="typography-h2 text-[var(--form-text)]">
               Tools & support
             </h2>
             <div class="grid gap-[2rem] py-[2rem] lg:grid-cols-3 lg:gap-[2rem] lg:py-[2rem]">
@@ -206,7 +206,7 @@
           </div>
           <div id="benefit" data-section="benefits" class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2 section">
             {#if content.benefits.length > 0}
-              <h2 class="md:text-start typography-h2 text-black dark:text-white">
+              <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                 Features & benefits
               </h2>
               <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -217,7 +217,7 @@
             {/if}
             <Ways ways={content.propertyPurchase} />
             <div class="pt-[4rem]">
-              <h3 class="md:text-start typography-h3 text-black dark:text-white">
+              <h3 class="md:text-start typography-h3 text-[var(--form-text)]">
                 {content.IconCardHeading}
               </h3>
               <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
@@ -257,7 +257,7 @@
             >
               <div class="mx-auto flex w-full items-center justify-between gap-4">
                 <h2 class="text-navFont">{list}</h2>
-                <div class="icon-container justify-self-end text-black dark:text-white">
+                <div class="icon-container justify-self-end text-[var(--form-text)]">
                   <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
                 </div>
               </div>
@@ -269,7 +269,7 @@
               </div>
             {:else if index == 1}
               <div id="toolsSupport" class="py-[1rem] bg-white text-black px-[2rem]">
-                <h2 class="typography-h2 text-black dark:text-white">
+                <h2 class="typography-h2 text-[var(--form-text)]">
                   Tools & support
                 </h2>
                 <div class="grid gap-[2rem] py-[2rem] lg:grid-cols-3 lg:gap-[2rem] lg:py-[2rem]">
@@ -298,7 +298,7 @@
             {:else if index == 3}
               <div id="benefit" data-section="benefits" class="bg-white text-black px-[2rem] py-[1rem]">
                 {#if content.benefits.length > 0}
-                  <h2 class="md:text-start typography-h2 text-black dark:text-white">
+                  <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     Features & benefits
                   </h2>
                   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -309,7 +309,7 @@
                 {/if}
                 <Ways ways={content.propertyPurchase} />
                 <div class="pt-[4rem]">
-                  <h3 class="md:text-start typography-h3 text-black dark:text-white">
+                  <h3 class="md:text-start typography-h3 text-[var(--form-text)]">
                     {content.IconCardHeading}
                   </h3>
                   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
