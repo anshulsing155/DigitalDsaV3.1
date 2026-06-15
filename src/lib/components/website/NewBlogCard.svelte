@@ -12,7 +12,7 @@
 </script>
 
 {#each blogLists as blog}
-  <div class="flex flex-col border group relative overflow-hidden">
+  <div class="flex flex-col border border-[var(--form-border)] group relative overflow-hidden">
     <div class="relative">
       <div class="absolute top-0 right-0 bg-opacity-50 text-white text-center">
         <Tooltip
@@ -36,8 +36,8 @@
     </div>
     <div class="flex flex-col justify-between h-full gap-4 p-4">
       <div class="flex flex-col gap-4">
-        <h3 class="font-semibold text-cardHeading">{@html blog.heading}</h3>
-        <p class="typography-body-sm text-subPara">{@html blog.para}</p>
+        <h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">{@html blog.heading}</h3>
+        <p class="typography-body-md text-[var(--form-text-secondary)]">{@html blog.para}</p>
       </div>
 
       {#if blog.linkName}
@@ -49,7 +49,6 @@
           btnName={blog.btnName}
           btnClass={blog.btnClass}
           link={blog.btnLink}
-          btnBorder={blog.btnBorder}
         />
       {/if}
 

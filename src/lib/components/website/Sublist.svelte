@@ -13,7 +13,7 @@
   {#each subList as list}
     <a
       href={list.url}
-      class="flex flex-col items-center justify-center border-dividerColor px-2 text-black group"
+      class="flex flex-col items-center justify-center border-[var(--form-border)] px-2 group"
     >
       <img
         src={list.icon}
@@ -21,7 +21,7 @@
         class="h-10 transition-transform duration-300 group-hover:scale-110"
       />
 
-      <p class="mt-2 text-center typography-body-md text-text-light {list.linkNameClass}">
+      <p class="mt-2 text-center typography-body-md {list.linkNameClass}">
         {list.linkName}
       </p>
     </a>

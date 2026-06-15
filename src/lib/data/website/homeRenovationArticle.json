@@ -13,7 +13,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary text-[var(--form-text)]"
 			},
 			{
 				"btnName": "Compare rates",
@@ -45,12 +46,14 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary text-[var(--form-text)]"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary w-full",
+				"animation": true
 			}
 		]
 	},

@@ -260,7 +260,7 @@
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
-				btnBorder={content.messageUs.button.btnBorder}
+				btnClass={content.messageUs.button.btnClass}
 				btnName={content.messageUs.button.btnName}
 			/>
 		</TwoColumnWithImage>

@@ -13,7 +13,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary text-[var(--form-text)]"
 			},
 			{
 				"btnName": "Compare rates",
@@ -45,7 +46,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary text-[var(--form-text)]"
 			},
 			{
 				"btnName": "Compare rates",
@@ -152,7 +154,7 @@
 		},
 		"final": {
 			"heading": "Final Thought: Selling Smart & Stress-Free 🪙",
-			"listTopPara": "Selling property is a major financial decision, and a structured approach ensures better results.<p class=\"typography-body-md pt-2\"> With the right pricing, marketing, negotiation, and legal support, you can achieve a smooth and profitable sale.</p>",
+			"listTopPara": "Selling property is a major financial decision, and a structured approach ensures better results.<p class=\"typography-body-md text-[var(--form-text-secondary)] pt-2\"> With the right pricing, marketing, negotiation, and legal support, you can achieve a smooth and profitable sale.</p>",
 			"list": [],
 			"listSecPara": "<p class=\"p-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">👉 Need help in the selling process?</span> Whether it’s valuation, legal guidance, or marketing tips, we're here to assist you!</p>"
 		}

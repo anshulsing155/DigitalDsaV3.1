@@ -13,7 +13,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary text-[var(--form-text)]"
 			},
 			{
 				"btnName": "Compare all offers",
@@ -57,46 +58,46 @@
 	},
 	"renovation": {
 		"contents": {
-			"heading": "Home Renovation:<br> <span class=\"underline decoration-btnBg underline-offset-4\">The Smart Upgrade</span>",
-			"listTopPara": "<p>Renovating your existing home can give it a fresh new feel without the hassle of moving. You can add new features, modernize spaces, and create the dream home you’ve always wanted right where you are. <br><br>Here are some benefits of home renovation:</p>",
+			"heading": "Home Renovation:<br> <span class=\"underline decoration-primary underline-offset-4\">The Smart Upgrade</span>",
+			"listTopPara": "<p class=\"typography-body-md text-[var(--form-text)] !font-semibold\">Renovating your existing home can give it a fresh new feel without the hassle of moving. You can add new features, modernize spaces, and create the dream home you’ve always wanted right where you are. <br><br>Here are some benefits of home renovation:</p>",
 			"list": [
 				{
-					"heading": "<span class=\"typography-body-md\">Cost-Effective</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Cost-Effective</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">Personalized Upgrades</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Personalized Upgrades</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">Save on Moving Costs</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Save on Moving Costs</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">Increased Property Value</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Increased Property Value</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">Stay in a Familiar Environment</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Stay in a Familiar Environment</span>"
 				}
 			]
 		}
 	},
 	"buying": {
 		"contents": {
-			"heading": "Buying a New Home: <br><span class=\"underline decoration-btnBg underline-offset-4\">The Fresh Start</span>",
-			"listTopPara": "<p>On the other hand, buying a new home allows you to start afresh, with the amenities and features you’ve always dreamed of. Whether it’s more space, better location, or modern designs, moving can provide a whole new lifestyle.<br><br> Here’s why buying a new home could be the better option for some:</p>",
+			"heading": "Buying a New Home: <br><span class=\"underline decoration-primary underline-offset-4\">The Fresh Start</span>",
+			"listTopPara": "<p class=\"typography-body-md text-[var(--form-text)] !font-semibold\">On the other hand, buying a new home allows you to start afresh, with the amenities and features you’ve always dreamed of. Whether it’s more space, better location, or modern designs, moving can provide a whole new lifestyle.<br><br> Here’s why buying a new home could be the better option for some:</p>",
 			"list": [
 				{
-					"heading": "<span class=\"typography-body-md\">Modern Features and Amenities</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Modern Features and Amenities</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">No Renovation Hassles</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">No Renovation Hassles</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">Better Location or Neighborhood</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Better Location or Neighborhood</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">Increased Energy Efficiency</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Increased Energy Efficiency</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">No Need for Future Renovations</span>"
+					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">No Need for Future Renovations</span>"
 				}
 			]
 		}
@@ -111,49 +112,49 @@
 				],
 				"rowData": [
 					{
-						"Cost": [
+						"<span class='font-semibold'>Cost</span>": [
 							"Lower, ₹5-15 lakh for major work.",
 							"Higher, ₹30 lakh to ₹1 crore+."
 						]
 					},
 					{
-						"Time": [
+						"<span class='font-semibold'>Time</span>": [
 							"Longer, several months.",
 							"Faster, move-in ready."
 						]
 					},
 					{
-						"Emotional Value": [
+						"<span class='font-semibold'>Emotional Value</span>": [
 							"Retain attachment to your home/neighborhood.",
 							"Fresh start, but leaving old memories."
 						]
 					},
 					{
-						"Customization": [
+						"<span class='font-semibold'>Customization</span>": [
 							"Fully tailored to your needs.",
 							"Limited, unless it’s a new build."
 						]
 					},
 					{
-						"Resale Value": [
+						"<span class='font-semibold'>Resale Value</span>": [
 							"Boosts value if done well.",
 							"Higher resale, but costly to sell later."
 						]
 					},
 					{
-						"Stress Level": [
+						"<span class='font-semibold'>Stress Level</span>": [
 							"High—living through disruptions.",
 							"Lower—ready to move in."
 						]
 					},
 					{
-						"Location": [
+						"<span class='font-semibold'>Location</span>": [
 							"Stay in your current community.",
 							"Freedom to choose a new, ideal location."
 						]
 					},
 					{
-						"Energy Efficiency": [
+						"<span class='font-semibold'>Energy Efficiency</span>": [
 							"Upgrade as needed.",
 							"Likely pre-equipped with modern systems."
 						]
@@ -162,9 +163,9 @@
 			}
 		],
 		"buttonBanner": {
-			"heading": "Compare all bank offers <span class=\"underline decoration-btnBg underline-offset-4\">instantly</span>",
+			"heading": "Compare all bank offers <span class=\"underline decoration-primary underline-offset-4\">instantly</span>",
 			"btnName": "Compare Here",
-			"btnBorder": "#4F4C4D",
+			"btnClass": "btn-secondary text-[var(--form-text)]",
 			"btnLink": "/get-started/how-can-we-help"
 		}
 	},
@@ -185,7 +186,7 @@
 			]
 		},
 		"contents2": {
-			"heading": "Which One Suits Your <span class=\"underline decoration-btnBg underline-offset-4\">Goals?</span>",
+			"heading": "Which One Suits Your <span class=\"underline decoration-primary underline-offset-4\">Goals?</span>",
 			"listTopPara": "<p>The choice ultimately comes down to your budget, personal priorities, and long-term plans.</p>",
 			"list": [
 				{

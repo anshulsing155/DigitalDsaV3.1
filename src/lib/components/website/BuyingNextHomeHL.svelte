@@ -191,7 +191,7 @@
 
 			<section id="whychoose" data-section="whychoose" class="section">
 				<div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-					<h2 class="grid mb-[4rem] typography-h3 font-semibold md:typography-h2-md text-center">
+					<h2 class="grid mb-[4rem] font-semibold typography-h2-md text-[var(--form-text)] text-center">
 						{content.whychoose.heading}
 					</h2>
 					<div>

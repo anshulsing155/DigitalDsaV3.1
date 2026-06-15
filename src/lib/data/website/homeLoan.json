@@ -26,35 +26,35 @@
   "subList": [
     {
       "linkName": "Buying your first home",
-      "linkNameClass": "text-linkColor",
+      "linkNameClass": "text-[var(--ddsa-info-text)]",
       "url": "/home-loan/buying-first-home",
       "icon": "/icons/home.svg",
       "altName": "loan-icon"
     },
     {
       "linkName": "Buying your next home",
-      "linkNameClass": "text-linkColor",
+      "linkNameClass": "text-[var(--ddsa-info-text)]",
       "url": "/home-loan/buying-next-home",
       "icon": "/icons/house.svg",
       "altName": "loan-twohouse"
     },
     {
       "linkName": "Balance transfer",
-      "linkNameClass": "text-linkColor",
+      "linkNameClass": "text-[var(--ddsa-info-text)]",
       "url": "/home-loan/balance-transfer",
       "icon": "/icons/bt-2.svg",
       "altName": "balancetransfer-icon"
     },
     {
       "linkName": "Top-Up Only",
-      "linkNameClass": "text-linkColor",
+      "linkNameClass": "text-[var(--ddsa-info-text)]",
       "url": "/home-loan/top-up-only",
       "icon": "/icons/mutualFund.svg",
       "altName": "loan-icon"
     },
     {
       "linkName": "Our tools",
-      "linkNameClass": "text-linkColor",
+      "linkNameClass": "text-[var(--ddsa-info-text)]",
       "url": "/home-loan/home-loan-tools-calculator",
       "icon": "/icons/calc.svg",
       "altName": "calc-icon"
@@ -67,7 +67,7 @@
     "cards": [
       {
         "heading": "Find the Best Offers in Just 10 Minutes",
-        "para": "Get access to the <a href=\"/get-started/how-can-we-help\" class=\"underline hover:no-underline underline-offset-4\">best home loan options</a> tailored to your financial profile—quick, easy, and hassle-free.",
+        "para": "Get access to the <a href=\"/get-started/how-can-we-help\" class=\"underline hover:no-underline underline-offset-4 text-[var(--ddsa-info-text)]\">best home loan options</a> tailored to your financial profile—quick, easy, and hassle-free.",
         "icon": "/icons/clock.svg",
         "altName": "clock-icon"
       },
@@ -204,7 +204,7 @@
     ]
   },
   "itrBanner": {
-    "heading": "Need a Home Loan but Your ITR Shows <span class=\"underline decoration-btnBg underline-offset-4\">Low Profit</span>?",
+    "heading": "Need a Home Loan but Your ITR Shows <span class=\"underline decoration-primary underline-offset-4\">Low Profit</span>?",
     "btnName": "Get Help",
     "btnClass": "btn-primary",
     "btnLink": "/appointment"
@@ -315,37 +315,37 @@
     "cards": [
       {
         "heading": "Home Renovation",
-        "para": "Home renovations can be costly, without proper planning and financial support. We're here to help you every step of the way with the <a href=\"/home-loan/home-renovation\" class=\"underline text-linkColor underline-offset-4\"> right resources and expert advice</a>. ",
+        "para": "Home renovations can be costly, without proper planning and financial support. We're here to help you every step of the way with the <a href=\"/home-loan/home-renovation\" class=\"underline text-[var(--ddsa-info-text)] underline-offset-4\"> right resources and expert advice</a>. ",
         "icon": "/icons/renovateHome.svg",
         "iconAltName": "home-icon"
       },
       {
         "heading": "Transferring your home loan",
-        "para": "DigitalDSA helps you <a href=\"/home-loan/balance-transfer\" class=\"underline text-linkColor underline-offset-4\"> transfer your existing loan </a> seamlessly, ensuring lower interest rates, better part payment options, and zero (or minimal) processing fees—so you save more while managing your loan efficiently.",
+        "para": "DigitalDSA helps you <a href=\"/home-loan/balance-transfer\" class=\"underline text-[var(--ddsa-info-text)] underline-offset-4\"> transfer your existing loan </a> seamlessly, ensuring lower interest rates, better part payment options, and zero (or minimal) processing fees—so you save more while managing your loan efficiently.",
         "icon": "/icons/bt-2.svg",
         "iconAltName": "negotiate-icon"
       },
       {
         "heading": "Investing in property",
-        "para": "Plan your next steps with the right tools and resources. Make an informed decision when it comes to <a href=\"/home-loan/investing-in-property\" class=\"underline text-linkColor underline-offset-4\"> buying an investment property </a>.",
+        "para": "Plan your next steps with the right tools and resources. Make an informed decision when it comes to <a href=\"/home-loan/investing-in-property\" class=\"underline text-[var(--ddsa-info-text)] underline-offset-4\"> buying an investment property </a>.",
         "icon": "/icons/loanValue.svg",
         "iconAltName": "phoneConnection-icon"
       },
       {
         "heading": "Buying your first home",
-        "para": "As a first-time homebuyer, knowing where to begin can be challenging.  The right resources and expert advice will help you start strong and <a href=\"/home-loan/buying-first-home\" class=\"underline text-linkColor underline-offset-4\"> make informed decisions </a>.​",
+        "para": "As a first-time homebuyer, knowing where to begin can be challenging.  The right resources and expert advice will help you start strong and <a href=\"/home-loan/buying-first-home\" class=\"underline text-[var(--ddsa-info-text)] underline-offset-4\"> make informed decisions </a>.​",
         "icon": "/icons/firstHome.svg",
         "iconAltName": "inte-icon"
       },
       {
         "heading": "Selling Your Property",
-        "para": "From pricing to paperwork and negotiations, we provide everything you need for a seamless experience. <a href=\"/home-loan/selling-your-property\" class=\"underline text-linkColor underline-offset-4\"> Start your property sale journey now </a>.",
+        "para": "From pricing to paperwork and negotiations, we provide everything you need for a seamless experience. <a href=\"/home-loan/selling-your-property\" class=\"underline text-[var(--ddsa-info-text)] underline-offset-4\"> Start your property sale journey now </a>.",
         "icon": "/icons/sellingHome.svg",
         "iconAltName": "contact-icon"
       },
       {
         "heading": "Construction of your dream home",
-        "para": "Building a home is a big decision that involves careful planning and research. We can equip you to manage every aspect of the process. <a href=\"/plot-loan/construction-loan\" class=\"underline text-linkColor underline-offset-4\"> Discover how to plan your home build </a>.",
+        "para": "Building a home is a big decision that involves careful planning and research. We can equip you to manage every aspect of the process. <a href=\"/plot-loan/construction-loan\" class=\"underline text-[var(--ddsa-info-text)] underline-offset-4\"> Discover how to plan your home build </a>.",
         "icon": "/icons/constructionTable.svg",
         "iconAltName": "offers-icon"
       }

@@ -212,7 +212,7 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] {index <
 					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"

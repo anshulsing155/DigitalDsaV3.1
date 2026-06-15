@@ -187,17 +187,17 @@
 			<section id="comparision" data-section="comparision" class="section">
 				<div class="pb-[8rem] border-b border-[#E5E5E5]">
 					<div class="mt-[4rem]">
-						<h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
-							<p class="mb-[1rem]">The Ultimate Comparison</p>
-							<span class="typography-body-sm text-text-light"
+						<div class="grid mb-[4rem] text-center">
+							<h2 class="mb-[1rem] typography-h2-md text-[var(--form-text)]">The Ultimate Comparison</h2>
+							<p class="typography-body-md text-[var(--form-text-secondary)]"
 								>Here’s a detailed comparison of the <span
-									class="underline underline-offset-4 decoration-btnBg"
+									class="underline underline-offset-4 decoration-primary font-semibold"
 									>Home Renovation</span
-								> and <span class="underline underline-offset-4 decoration-btnBg"
+								> and <span class="underline underline-offset-4 decoration-primary font-semibold"
 									>New Home Purchase</span
-								> options, including financial, emotional, and practical considerations:</span
+								> options, including financial, emotional, and practical considerations:</p
 							>
-						</h2>
+						</div>
 					</div>
 					<div class="px-[4rem]">
 						{#each content.comparison.firstTableData as tableData}

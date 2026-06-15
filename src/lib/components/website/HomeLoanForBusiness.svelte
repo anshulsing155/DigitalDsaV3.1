@@ -382,10 +382,12 @@
 					>
 						<div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="text-[var(--form-text)]">{list}</h2>
-							<div class="icon-container">
-								<ChevronDown
-									class="h-5 w-5 text-black transition-transform duration-300 dark:text-white"
-								/>
+							<div class="icon-container typography-h3 justify-self-end">
+								<span
+									><i
+										class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"
+									></i></span
+								>
 							</div>
 						</div>
 					</summary>

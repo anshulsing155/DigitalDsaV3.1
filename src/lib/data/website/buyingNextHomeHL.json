@@ -8,7 +8,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Speak with a Loan Expert",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary text-[var(--form-text)]"
 			},
 			{
 				"btnName": "Compare Loan Offers",
@@ -222,7 +223,7 @@
 				],
 				"rowData": [
 					{
-						"Location & connectivity": [
+						"<span class='font-semibold'>Location & connectivity</span>": [
 							"Established neighborhoods with good infrastructure",
 							"Older surroundings, limited future development",
 							"Newer townships, planned layouts",
@@ -230,7 +231,7 @@
 						]
 					},
 					{
-						"Possession timeline": [
+						"<span class='font-semibold'>Possession timeline</span>": [
 							"Immediate possession, no waiting",
 							"–",
 							"Option to buy under construction or ready-to-move homes",
@@ -238,7 +239,7 @@
 						]
 					},
 					{
-						"Customization & layout": [
+						"<span class='font-semibold'>Customization & layout</span>": [
 							"Existing structure gives a clear idea of space",
 							"No major customization possible",
 							"Choose layouts, interiors, and fixtures",
@@ -246,7 +247,7 @@
 						]
 					},
 					{
-						"Cost factors": [
+						"<span class='font-semibold'>Cost factors</span>": [
 							"No GST, lower upfront cost",
 							"May require renovation, leading to additional expenses",
 							"Modern amenities, better construction quality",
@@ -254,7 +255,7 @@
 						]
 					},
 					{
-						"Future value & investment": [
+						"<span class='font-semibold'>Future value & investment</span>": [
 							"Property value depends on demand in the area",
 							"Older properties may have limited resale demand",
 							"High resale potential due to modern design and amenities",
