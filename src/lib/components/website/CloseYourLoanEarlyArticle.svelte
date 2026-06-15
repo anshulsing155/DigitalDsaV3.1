@@ -28,9 +28,7 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	// Inject store update callbacks dynamically for get-started actions
 	const pageDataWithClicks = $derived({
@@ -149,24 +147,24 @@
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		'itemListElement': [
+		itemListElement: [
 			{
 				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Smart Ways to Close Your Loan Early',
-				'item': 'https://www.digitaldsa.com/home-loan/close-your-loan-early'
+				position: 3,
+				name: 'Smart Ways to Close Your Loan Early',
+				item: 'https://www.digitaldsa.com/home-loan/close-your-loan-early'
 			}
 		]
 	};
@@ -193,19 +191,23 @@
 			</div>
 
 			<div id="benefits" data-section="benefits" class="section">
-				<div class="border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] text-[var(--form-text)]">
+				<div
+					class="border-b border-[var(--form-border)] py-[4rem] text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+				>
 					<div class="px-[0.5rem] lg:px-[4rem]">
-						<h2 class="text-center typography-h2 text-text-main mb-[5rem] dark:text-white">
+						<h2 class="typography-h2-md mb-[5rem] text-center text-[var(--form-text)]">
 							{content.benefits.heading}
 						</h2>
-						<div class="flex justify-center items-center">
+						<div class="flex items-center justify-center">
 							<div class="flex gap-10">
 								{#each content.benefits.cards as card}
-									<div class="bg-[var(--landing-bg-card)] p-8 shadow-lg text-center max-w-xs rounded-lg">
-										<h3 class="text-darkColor dark:text-white typography-h3 font-semibold pb-5">
+									<div
+										class="max-w-xs rounded-sm bg-[var(--landing-bg-card)] p-8 text-center shadow-lg"
+									>
+										<h3 class="typography-body-lg pb-5 !font-semibold text-[var(--form-text)]">
 											{card.heading}
 										</h3>
-										<p class="text-[var(--form-text-secondary)] typography-body-md">
+										<p class="typography-body-md text-[var(--form-text-secondary)]">
 											{card.desc}
 										</p>
 									</div>
@@ -229,15 +231,16 @@
 			</div>
 
 			<div id="success-stories" data-section="success-stories" class="section">
-				<div class="border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] text-[var(--form-text)]">
-					<p class="typography-h2 text-text-main text-center mb-[2rem] dark:text-white">
-						<span class="decoration-btnBg underline underline-offset-4">
-							Inspiration:</span>
+				<div
+					class="py-[4rem] text-[var(--form-text)]"
+				>
+					<p class="mb-[2rem] text-center typography-h2-md text-[var(--form-text)]">
+						<span class="decoration-primary underline underline-offset-4"> Inspiration:</span>
 						Real Stories of Success
 					</p>
 					<TwoColumnWithImage contents={content.successStories.neha.contents}>
 						<div class="mt-4">
-							<p class="relative text-gray-800 dark:text-white">
+							<p class="relative typography-body-md text-[var(--form-text-secondary)]">
 								{content.successStories.neha.para}
 							</p>
 						</div>
@@ -245,7 +248,7 @@
 
 					<TwoColumnWithImage contents={content.successStories.sharma.contents}>
 						<div class="mt-4">
-							<p class="relative text-gray-800 dark:text-white">
+							<p class="relative typography-body-md text-[var(--form-text-secondary)]">
 								{content.successStories.sharma.para}
 							</p>
 						</div>
@@ -264,12 +267,12 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-[var(--form-text)] typography-label">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
+							<div class="icon-container typography-h3 justify-self-end">
 								<span
 									><i
 										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
@@ -280,52 +283,68 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="benefits" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="benefits"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<div class="py-[2rem]">
-								<h2 class="text-center typography-h2 text-text-main mb-[3rem] dark:text-white">
+								<h2 class="typography-h2-md mb-[5rem] text-center text-[var(--form-text)]">
 									{content.benefits.heading}
 								</h2>
-								<div class="flex flex-col gap-6 items-center">
-									{#each content.benefits.cards as card}
-										<div class="bg-[var(--landing-bg-card)] p-6 shadow-md text-center w-full max-w-xs rounded-lg">
-											<h3 class="text-darkColor dark:text-white typography-h3 font-semibold pb-3">
-												{card.heading}
-											</h3>
-											<p class="text-[var(--form-text-secondary)] typography-body-md">
-												{card.desc}
-											</p>
-										</div>
-									{/each}
+								<div class="flex items-center justify-center">
+									<div class="flex gap-10">
+										{#each content.benefits.cards as card}
+											<div
+												class="max-w-xs rounded-sm bg-[var(--landing-bg-card)] p-8 text-center shadow-lg"
+											>
+												<h3 class="typography-body-lg pb-5 !font-semibold text-[var(--form-text)]">
+													{card.heading}
+												</h3>
+												<p class="typography-body-md text-[var(--form-text-secondary)]">
+													{card.desc}
+												</p>
+											</div>
+										{/each}
+									</div>
 								</div>
 							</div>
 						</div>
 					{:else if index === 1}
-						<div id="strategies" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="strategies"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.strategies.extraPayments} />
 							<TwoColumnWithLeftHeading contents={content.strategies.higherEmis} />
 							<TwoColumnWithLeftHeading contents={content.strategies.lumpSums} />
 						</div>
 					{:else if index === 2}
-						<div id="savings-transfer" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="savings-transfer"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.savingsTransfer.reduceExpenses} />
 							<TwoColumnWithLeftHeading contents={content.savingsTransfer.balanceTransfer} />
 							<TwoColumnWithLeftHeading contents={content.savingsTransfer.planStrategically} />
 						</div>
 					{:else if index === 3}
-						<div id="success-stories" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<p class="typography-h2 text-text-main text-center mb-[2rem] dark:text-white pt-4">
+						<div
+							id="success-stories"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
+							<p class="mb-[2rem] pt-4 text-center typography-h2-md text-[var(--form-text)]">
 								Real Stories of Success
 							</p>
 							<TwoColumnWithImage contents={content.successStories.neha.contents}>
 								<div class="mt-4">
-									<p class="relative text-gray-800 dark:text-white">
+									<p class="relative typography-body-md text-[var(--form-text-secondary)]">
 										{content.successStories.neha.para}
 									</p>
 								</div>
 							</TwoColumnWithImage>
 							<TwoColumnWithImage contents={content.successStories.sharma.contents}>
 								<div class="mt-4">
-									<p class="relative text-gray-800 dark:text-white">
+									<p class="relative typography-body-md text-[var(--form-text-secondary)]">
 										{content.successStories.sharma.para}
 									</p>
 								</div>
@@ -342,7 +361,7 @@
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
-				<ul class="px-2 pl-4 flex flex-col gap-4 list-decimal">
+				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
 					{#each content.common_components.thinkYouShouldKnow.bullets as bullet}
 						<li>{@html bullet}</li>
 					{/each}

@@ -13,7 +13,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary text-[var(--form-text)]"
 			},
 			{
 				"btnName": "Compare rates",
@@ -45,7 +46,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary text-[var(--form-text)]"
 			},
 			{
 				"btnName": "Compare rates",
@@ -157,7 +159,7 @@
 			"contents": {
 				"cardImage": "/images/buildingHome-cover.jpg",
 				"cardAltName": "housing-figure",
-				"cardHeading": "Neha’s Journey:"
+				"cardHeading": "<span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">Neha’s Journey:</span>"
 			},
 			"para": "Neha closed her 20-year loan in 12 years by increasing her EMI by 10% every year and using bonuses for part-payments. She also made use of tax refunds and other unexpected income to make additional payments, significantly reducing her loan tenure."
 		},
@@ -165,7 +167,7 @@
 			"contents": {
 				"cardImage": "/images/TheSharmaFamilyStory.jpg",
 				"cardAltName": "housing-figure",
-				"cardHeading": "The Sharma Family:",
+				"cardHeading": "<span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">The Sharma Family:</span>",
 				"reverse": true
 			},
 			"para": "They reduced their tenure from 15 years to 10 by using a balance transfer and making yearly lump sum payments. By carefully planning their finances and prioritizing loan repayment, they managed to save a significant amount on interest. The Sharma family also utilized tax refunds and bonuses to make additional payments, further accelerating their loan closure."
@@ -175,7 +177,7 @@
 		"contents": {
 			"heading": "Ready to Close Your Loan Early?",
 			"btnName": "Speak to an Expert",
-			"btnBorder": "#4F4C4D",
+			"btnClass": "btn-secondary text-[var(--form-text)]",
 			"btnLink": "/appointment"
 		}
 	},
