@@ -1,353 +1,369 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import StickyNavbar from "./StickyNavbar.svelte";
-  import NewPageLayout from "./NewPageLayout.svelte";
-  import ThreeColumWithLeftHeading from "./ThreeColumWithLeftHeading.svelte";
-  import TwoColumnWithImage from "./TwoColumnWithImage.svelte";
-  import Anchor from "./Anchor.svelte";
-  import AboveTitleWithLeftIconCard from "./AboveTitleWithLeftIconCard.svelte";
-  import TwoColumnWithLeftHeading from "./TwoColumnWithLeftHeading.svelte";
-  import ThingsYouShould from "./ThingsYouShould.svelte";
-  import HelpList from "./HelpList.svelte";
-  import Button from "./Button.svelte";
-  import PaymentTable from "./PaymentTable.svelte";
-  import ButtonBanner from "./ButtonBanner.svelte";
-  import { applicationData } from "$lib/stores/stores";
-  import AboveTitleWithBlackCard from "./AboveTitleWithBlackCard.svelte";
-  import AboveTitleWithTopIconCard from "./AboveTitleWithTopIconCard.svelte";
-  import Seo from "./Seo.svelte";
-  import content from "$lib/data/website/plotLoanOnly.json";
+	import { onMount } from 'svelte';
+	import StickyNavbar from './StickyNavbar.svelte';
+	import NewPageLayout from './NewPageLayout.svelte';
+	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
+	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
+	import Anchor from './Anchor.svelte';
+	import AboveTitleWithLeftIconCard from './AboveTitleWithLeftIconCard.svelte';
+	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';
+	import ThingsYouShould from './ThingsYouShould.svelte';
+	import HelpList from './HelpList.svelte';
+	import Button from './Button.svelte';
+	import PaymentTable from './PaymentTable.svelte';
+	import ButtonBanner from './ButtonBanner.svelte';
+	import { applicationData } from '$lib/stores/stores';
+	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
+	import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
+	import Seo from './Seo.svelte';
+	import content from '$lib/data/website/plotLoanOnly.json';
 
-  interface ButtonProps {
-    btnName: string;
-    btnLink: string;
-    btnColor?: string;
-    animation?: boolean;
-  }
+	interface ButtonProps {
+		btnName: string;
+		btnLink: string;
+		btnColor?: string;
+		animation?: boolean;
+	}
 
-  interface PageDataProps {
-    coverImage: string;
-    coverAlt: string;
-    classStyle?: string;
-    heading: string;
-    para: string;
-    actionBtns: ButtonProps[];
-  }
+	interface PageDataProps {
+		coverImage: string;
+		coverAlt: string;
+		classStyle?: string;
+		heading: string;
+		para: string;
+		actionBtns: ButtonProps[];
+	}
 
-  let {
-    pageData = content.pageData
-  }: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
-  const pageDataWithClicks = $derived({
-    ...pageData,
-    actionBtns: pageData.actionBtns.map((btn) => {
-      if (btn.btnLink === "/get-started/how-can-we-help" || btn.btnName === "Compare offers") {
-        return {
-          ...btn,
-          btnClick: () => {
-            applicationData.update((data) => {
-              data.LoanName = "Plot Loan";
-              data.typeOfROI = "(HL/Construction/Plot+Construction/Plot)";
-              return data;
-            });
-          }
-        };
-      }
-      return btn;
-    })
-  });
+	const pageDataWithClicks = $derived({
+		...pageData,
+		actionBtns: pageData.actionBtns.map((btn) => {
+			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Compare offers') {
+				return {
+					...btn,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Plot Loan';
+							data.typeOfROI = '(HL/Construction/Plot+Construction/Plot)';
+							return data;
+						});
+					}
+				};
+			}
+			return btn;
+		})
+	});
 
-  const navListWithClicks = $derived({
-    ...content.navList,
-    actionBtns: content.navList.actionBtns.map((btn) => {
-      if (btn.btnLink === "/get-started/how-can-we-help" || btn.btnName === "Compare offers") {
-        return {
-          ...btn,
-          btnClick: () => {
-            applicationData.update((data) => {
-              data.LoanName = "Plot Loan";
-              data.typeOfROI = "(HL/Construction/Plot+Construction/Plot)";
-              return data;
-            });
-          }
-        };
-      }
-      return btn;
-    })
-  });
+	const navListWithClicks = $derived({
+		...content.navList,
+		actionBtns: content.navList.actionBtns.map((btn) => {
+			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Compare offers') {
+				return {
+					...btn,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Plot Loan';
+							data.typeOfROI = '(HL/Construction/Plot+Construction/Plot)';
+							return data;
+						});
+					}
+				};
+			}
+			return btn;
+		})
+	});
 
-  const dreamPlotWithClicks = $derived({
-    ...content.dreamPlot.contents,
-    cardData: content.dreamPlot.contents.cardData.map((card) => {
-      if (card.btnLink === "/get-started/how-can-we-help") {
-        return {
-          ...card,
-          btnClick: () => {
-            applicationData.update((data) => {
-              data.LoanName = "Plot Loan";
-              data.LoanType = "Plot Loan Only";
-              return data;
-            });
-          }
-        };
-      }
-      return card;
-    })
-  });
+	const dreamPlotWithClicks = $derived({
+		...content.dreamPlot.contents,
+		cardData: content.dreamPlot.contents.cardData.map((card) => {
+			if (card.btnLink === '/get-started/how-can-we-help') {
+				return {
+					...card,
+					btnClick: () => {
+						applicationData.update((data) => {
+							data.LoanName = 'Plot Loan';
+							data.LoanType = 'Plot Loan Only';
+							return data;
+						});
+					}
+				};
+			}
+			return card;
+		})
+	});
 
-  let activeSection = $state("");
-  let firstTableData = content.firstTableData;
+	let activeSection = $state('');
+	let firstTableData = content.firstTableData;
 
-  const initializeActiveSection = () => {
-    const firstSection = document.querySelector("[data-section]");
-    if (firstSection) {
-      activeSection = firstSection.id;
-    }
-  };
+	const initializeActiveSection = () => {
+		const firstSection = document.querySelector('[data-section]');
+		if (firstSection) {
+			activeSection = firstSection.id;
+		}
+	};
 
-  const handleScroll = () => {
-    const sections = document.querySelectorAll("[data-section]");
-    let currentSection = "";
+	const handleScroll = () => {
+		const sections = document.querySelectorAll('[data-section]');
+		let currentSection = '';
 
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= 200 && rect.bottom >= 200) {
-        currentSection = section.id;
-      }
-    });
+		sections.forEach((section) => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top <= 200 && rect.bottom >= 200) {
+				currentSection = section.id;
+			}
+		});
 
-    if (currentSection) {
-      activeSection = currentSection;
-    }
-  };
+		if (currentSection) {
+			activeSection = currentSection;
+		}
+	};
 
-  onMount(() => {
-    initializeActiveSection();
-    window.addEventListener("scroll", handleScroll);
+	onMount(() => {
+		initializeActiveSection();
+		window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 
-  const toggleDropdown = (event: Event, index: number) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget as HTMLElement;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
+	const toggleDropdown = (event: Event, index: number) => {
+		event.preventDefault();
+		const summaryElement = event.currentTarget as HTMLElement;
+		const icon = summaryElement.querySelector('.faq-icon');
+		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
 
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
+		// Close all dropdowns except the clicked one
+		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
+			const otherIcon = otherDetails.querySelector('.faq-icon');
 
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
+			if (idx !== index) {
+				otherDetails.removeAttribute('open');
+				if (otherIcon) {
+					otherIcon.classList.remove('fa-angle-up');
+					otherIcon.classList.add('fa-angle-down');
+				}
+			}
+		});
 
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      if (icon) {
-        icon.classList.remove("fa-angle-up");
-        icon.classList.add("fa-angle-down");
-      }
-    } else {
-      detailsElement.setAttribute("open", "true");
-      if (icon) {
-        icon.classList.remove("fa-angle-down");
-        icon.classList.add("fa-angle-up");
-      }
-    }
-    setTimeout(() => {
-      if (detailsElement) {
-        detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 100);
-  };
+		// Toggle current dropdown open/close state
+		const isOpen = detailsElement.hasAttribute('open');
+		if (isOpen) {
+			detailsElement.removeAttribute('open');
+			if (icon) {
+				icon.classList.remove('fa-angle-up');
+				icon.classList.add('fa-angle-down');
+			}
+		} else {
+			detailsElement.setAttribute('open', 'true');
+			if (icon) {
+				icon.classList.remove('fa-angle-down');
+				icon.classList.add('fa-angle-up');
+			}
+		}
+		setTimeout(() => {
+			if (detailsElement) {
+				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		}, 100);
+	};
 </script>
 
 <Seo
-  type={content.seo.type}
-  title={content.seo.title}
-  image={content.seo.image}
-  description={content.seo.description}
-  keywords={content.seo.keywords}
+	type={content.seo.type}
+	title={content.seo.title}
+	image={content.seo.image}
+	description={content.seo.description}
+	keywords={content.seo.keywords}
 />
 
-<section class="mx-auto w-full bg-mainBg xl:container">
-  <NewPageLayout pageData={pageDataWithClicks}>
-    <!-- desktop view -->
-    <div class="hidden lg:block">
-      <StickyNavbar navList={navListWithClicks} {activeSection} />
+<section class="bg-mainBg mx-auto w-full xl:container">
+	<NewPageLayout pageData={pageDataWithClicks}>
+		<!-- desktop view -->
+		<div class="hidden lg:block">
+			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
-      <div id="ready" data-section="ready" class="section">
-        <ThreeColumWithLeftHeading contents={content.ready} />
-      </div>
+			<div id="ready" data-section="ready" class="section">
+				<ThreeColumWithLeftHeading contents={content.ready} />
+			</div>
 
-      <div id="challenges" data-section="challenges" class="section">
-        <TwoColumnWithLeftHeading contents={content.challenges.contents} />
-        <AboveTitleWithLeftIconCard contents={content.categories.contents} />
+			<div id="challenges" data-section="challenges" class="section">
+				<TwoColumnWithLeftHeading contents={content.challenges.contents} />
+				<AboveTitleWithLeftIconCard contents={content.categories.contents} />
 
-        <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-          <div class="">
-            <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
-              Plot-Only loans : <br />
-              <span class="underline decoration-4 underline-offset-4 decoration-btnBg italic">
-                Key Differences
-              </span>
-            </h2>
-          </div>
-          <div class="">
-            {#each firstTableData as tableData}
-              <PaymentTable {tableData} />
-            {/each}
-          </div>
-        </div>
+				<div
+					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+				>
+					<div class="">
+						<h2 class="typography-h2-md mb-[4rem] grid text-center text-[var(--form-text)]">
+							Plot-Only loans : <br />
+							<span class="italic underline decoration-primary decoration-4 underline-offset-4">
+								Key Differences
+							</span>
+						</h2>
+					</div>
+					<div class="">
+						{#each firstTableData as tableData}
+							<PaymentTable {tableData} />
+						{/each}
+					</div>
+				</div>
 
-        <div id="bt">
-          <TwoColumnWithLeftHeading contents={content.bt.contents} />
-        </div>
+				<div id="bt">
+					<TwoColumnWithLeftHeading contents={content.bt.contents} />
+				</div>
 
-        <ThreeColumWithLeftHeading contents={dreamPlotWithClicks} />
-      </div>
+				<ThreeColumWithLeftHeading contents={dreamPlotWithClicks} />
+			</div>
 
-      <div id="help" data-section="help" class="section">
-        <TwoColumnWithImage contents={content.howWeHelp.contents}>
-          <div class="typography-body-sm text-text-light">
-            <ul class="list-disc space-y-4">
-              {#each content.howWeHelp.list as item}
-                <li class="flex items-start gap-1">
-                  <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
-                  <span>
-                    <strong>{item.bold}</strong> {item.text}
-                  </span>
-                </li>
-              {/each}
-            </ul>
-          </div>
-        </TwoColumnWithImage>
+			<div id="help" data-section="help" class="section">
+				<TwoColumnWithImage contents={content.howWeHelp.contents}>
+					<div class="typography-body-md mt-8 text-[var(--form-text-secondary)]">
+						<ul class="list-disc space-y-4">
+							{#each content.howWeHelp.list as item}
+								<li class="flex items-start gap-1">
+									<img src="/icons/circle-check.svg" alt="circle-check-icon" class="mt-1 h-4" />
+									<span>
+										<strong>{item.bold}</strong>
+										{item.text}
+									</span>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				</TwoColumnWithImage>
 
-        <TwoColumnWithLeftHeading contents={content.exploreMore} />
-      </div>
+				<TwoColumnWithLeftHeading contents={content.exploreMore} />
+			</div>
 
-      <div id="tools" data-section="tools" class="section">
-        <AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
-        <AboveTitleWithBlackCard contents={content.tools.calculators} />
-        <ButtonBanner contents={content.tools.buttonBanner} />
-      </div>
-    </div>
+			<div id="tools" data-section="tools" class="section">
+				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+				<AboveTitleWithBlackCard contents={content.tools.calculators} />
+				<ButtonBanner contents={content.tools.buttonBanner} />
+			</div>
+		</div>
 
-    <!-- mobile view -->
-    <div class="block lg:hidden">
-      {#each content.mobileNavbarTitle as list, index (list)}
-        <details
-          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
-        >
-          <summary
-            class="list-none cursor-pointer px-[1rem] py-[1.5rem]"
-            onclick={(e) => toggleDropdown(e, index)}
-          >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-              <div class="icon-container justify-self-end typography-h3">
-                <span>
-                  <i class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"></i>
-                </span>
-              </div>
-            </div>
-          </summary>
+		<!-- mobile view -->
+		<div class="block lg:hidden">
+			{#each content.mobileNavbarTitle as list, index (list)}
+				<details
+					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					content.mobileNavbarTitle.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
+				>
+					<summary
+						class="cursor-pointer list-none px-[1rem] py-[1.5rem]"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
+							<div class="icon-container typography-h3 justify-self-end">
+								<span>
+									<i
+										class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"
+									></i>
+								</span>
+							</div>
+						</div>
+					</summary>
 
-          {#if index == 0}
-            <div id="ready" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
-              <ThreeColumWithLeftHeading contents={content.ready} />
-            </div>
-          {:else if index == 1}
-            <div id="challenges" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
-              <TwoColumnWithLeftHeading contents={content.challenges.contents} />
-              <AboveTitleWithLeftIconCard contents={content.categories.contents} />
+					{#if index == 0}
+						<div id="ready" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+							<ThreeColumWithLeftHeading contents={content.ready} />
+						</div>
+					{:else if index == 1}
+						<div
+							id="challenges"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
+							<TwoColumnWithLeftHeading contents={content.challenges.contents} />
+							<AboveTitleWithLeftIconCard contents={content.categories.contents} />
 
-              <div class="py-[4rem] px-[0.5rem] w-full border-b border-[var(--form-border)]">
-                <div class="">
-                  <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
-                    Plot-Only loans : <br />
-                    <span class="underline decoration-4 underline-offset-4 decoration-btnBg italic">
-                      Key Differences
-                    </span>
-                  </h2>
-                </div>
-                <div class="">
-                  {#each firstTableData as tableData}
-                    <PaymentTable {tableData} />
-                  {/each}
-                </div>
-              </div>
+							<div class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem]">
+								<div class="">
+									<h2 class="typography-h2-md mb-[4rem] grid text-center text-[var(--form-text)]">
+										Plot-Only loans : <br />
+										<span
+											class="italic underline decoration-primary decoration-4 underline-offset-4"
+										>
+											Key Differences
+										</span>
+									</h2>
+								</div>
+								<div class="">
+									{#each firstTableData as tableData}
+										<PaymentTable {tableData} />
+									{/each}
+								</div>
+							</div>
 
-              <div id="bt">
-                <TwoColumnWithLeftHeading contents={content.bt.contents} />
-              </div>
+							<div id="bt">
+								<TwoColumnWithLeftHeading contents={content.bt.contents} />
+							</div>
 
-              <ThreeColumWithLeftHeading contents={dreamPlotWithClicks} />
-            </div>
-          {:else if index == 2}
-            <div id="help" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
-              <TwoColumnWithImage contents={content.howWeHelp.contents}>
-                <div class="typography-body-sm text-text-light">
-                  <ul class="list-disc space-y-4">
-                    {#each content.howWeHelp.list as item}
-                      <li class="flex items-start gap-1">
-                        <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
-                        <span>
-                          <strong>{item.bold}</strong> {item.text}
-                        </span>
-                      </li>
-                    {/each}
-                  </ul>
-                </div>
-              </TwoColumnWithImage>
+							<ThreeColumWithLeftHeading contents={dreamPlotWithClicks} />
+						</div>
+					{:else if index == 2}
+						<div id="help" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+							<TwoColumnWithImage contents={content.howWeHelp.contents}>
+								<div class="typography-body-md mt-8 text-[var(--form-text-secondary)]">
+									<ul class="list-disc space-y-4">
+										{#each content.howWeHelp.list as item}
+											<li class="flex items-start gap-1">
+												<img
+													src="/icons/circle-check.svg"
+													alt="circle-check-icon"
+													class="mt-1 h-4"
+												/>
+												<span>
+													<strong>{item.bold}</strong>
+													{item.text}
+												</span>
+											</li>
+										{/each}
+									</ul>
+								</div>
+							</TwoColumnWithImage>
 
-              <TwoColumnWithLeftHeading contents={content.exploreMore} />
-            </div>
-          {:else if index == 3}
-            <div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
-              <AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
-              <AboveTitleWithBlackCard contents={content.tools.calculators} />
-              <ButtonBanner contents={content.tools.buttonBanner} />
-            </div>
-          {/if}
-        </details>
-      {/each}
-    </div>
+							<TwoColumnWithLeftHeading contents={content.exploreMore} />
+						</div>
+					{:else if index == 3}
+						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+							<AboveTitleWithBlackCard contents={content.tools.calculators} />
+							<ButtonBanner contents={content.tools.buttonBanner} />
+						</div>
+					{/if}
+				</details>
+			{/each}
+		</div>
 
-    <!-- message us -->
-    <TwoColumnWithImage contents={content.messageUs.contents}>
-      <p>{content.messageUs.para}</p>
-      <div class="w-auto">
-        <Button
-          link={content.messageUs.button.link}
-          btnBorder={content.messageUs.button.btnBorder}
-          btnName={content.messageUs.button.btnName}
-        />
-      </div>
-    </TwoColumnWithImage>
+		<!-- message us -->
+		<TwoColumnWithImage contents={content.messageUs.contents}>
+			<p>{content.messageUs.para}</p>
+			<div class="w-auto">
+				<Button
+					link={content.messageUs.button.link}
+					btnClass={content.messageUs.button.btnClass}
+					btnName={content.messageUs.button.btnName}
+				/>
+			</div>
+		</TwoColumnWithImage>
 
-    <div slot="secondary">
-      <HelpList contents={content.common_components.helpList.contents} />
-      <ThingsYouShould
-        thinkKnow={content.common_components.thinkYouShouldKnow}
-        disc="list-decimal"
-      />
-    </div>
-  </NewPageLayout>
+		<div slot="secondary">
+			<HelpList contents={content.common_components.helpList.contents} />
+			<ThingsYouShould
+				thinkKnow={content.common_components.thinkYouShouldKnow}
+				disc="list-decimal"
+			/>
+		</div>
+	</NewPageLayout>
 </section>
 
 <style>
-  .section {
-    scroll-margin-top: 4rem;
-  }
+	.section {
+		scroll-margin-top: 4rem;
+	}
 </style>

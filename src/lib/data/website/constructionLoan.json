@@ -22,7 +22,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "get best offers",
@@ -41,11 +42,16 @@
 			{ "name": "Tools & calculators", "targetId": "tools" }
 		],
 		"actionBtns": [
-			{ "btnName": "Book appointment", "btnLink": "/appointment" },
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
+			},
 			{
 				"btnName": "get best offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary w-full",
+				"animation": true
 			}
 		]
 	},
@@ -83,7 +89,7 @@
 		"list": [
 			{
 				"heading": "<span class=\"font-semibold\">Custom-Built Home–</span>",
-				"desc": "Enables you to build your <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-btnBg\">dream home</span> according to your preferences rather than buying a pre-built property."
+				"desc": "Enables you to build your <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-primary\">dream home</span> according to your preferences rather than buying a pre-built property."
 			},
 			{
 				"heading": "<span class=\"font-semibold\">Preserve Your Savings–</span>",
@@ -107,7 +113,7 @@
 		"heading": "Will your loan get approved?",
 		"para": "Understanding your eligibility today can help you secure better loan terms and reduce repayment burdens in the future.",
 		"btnName": "Check eligibility",
-		"btnBorder": "#4F4C4D",
+		"btnClass": "btn-secondary w-full",
 		"btnLink": "/calculators/eligibility-calculator"
 	},
 	"eligibility": {
@@ -125,7 +131,7 @@
 						"<span class=\"font-semibold\">Credit Score –</span> A 700+ CIBIL score boosts approval chances.",
 						"<span class=\"font-semibold\">Debt-to-Income Ratio –</span> Lower existing loans for better eligibility."
 					],
-					"para": "<span class=\"font-semibold\">Tip:</span> <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-btnBg\">Maintain good credit history & reduce debts before applying.</span>"
+					"para": "<span class=\"font-semibold\">Tip:</span> <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-primary\">Maintain good credit history & reduce debts before applying.</span>"
 				},
 				{
 					"icon": "/icons/personalLoan.svg",
@@ -136,7 +142,7 @@
 						"<span class=\"font-semibold\">LTV Ratio –</span> Banks fund up to 80%, requiring a 20% down payment.",
 						"<span class=\"font-semibold\">Location & Approval –</span> Plot must be in a lender-approved area with all permits."
 					],
-					"para": "<span class=\"font-semibold\">Tip:</span> <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-btnBg\">Ensure clear land titles & approvals to avoid loan rejection.</span>"
+					"para": "<span class=\"font-semibold\">Tip:</span> <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-primary\">Ensure clear land titles & approvals to avoid loan rejection.</span>"
 				},
 				{
 					"icon": "/icons/apply-pen.svg",
@@ -147,7 +153,7 @@
 						"<span class=\"font-semibold\">Income Proof –</span> Salary slips & ITRs (salaried) / Business financials (self-employed).",
 						"<span class=\"font-semibold\">Construction Plan & Cost Estimate –</span> Architect-certified plan & cost estimate."
 					],
-					"para": "<span class=\"font-semibold\">Tip:</span> <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-btnBg\">Keep all documents updated for faster approval.</span>"
+					"para": "<span class=\"font-semibold\">Tip:</span> <span class=\"underline decoration-[1.5px] underline-offset-4 decoration-primary\">Keep all documents updated for faster approval.</span>"
 				}
 			]
 		}
@@ -191,7 +197,7 @@
 					"para": "If you need expert guidance, you can book an appointment for personalized advice. Get the right solutions tailored to your financial needs with a quick consultation.",
 					"btnName": "Book an appointment",
 					"btnLink": "/appointment",
-					"btnBorder": "#4F4C4D"
+					"btnClass": "btn-secondary w-full"
 				}
 			]
 		}
@@ -227,10 +233,38 @@
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
-				{ "heading": "Know How Long Your Savings Will Last", "para": "Determine how many years your savings can support your lifestyle.", "icon": "/icons/clock.svg", "altName": "clock-icon", "linkName": "Check Your Savings Longevity", "url": "/money-map/how-long-will-your-savings-support-you" },
-				{ "heading": "Track Your Progress Towards Your Goal​", "para": "Estimate the time required to reach your financial milestones.", "icon": "/icons/phoneConnection.svg", "altName": "phoneConnection-icon", "linkName": "Plan Your Savings Journey", "url": "/money-map/how-long-will-it-take-to-save" },
-				{ "heading": "Set a Target for Retirement Savings​​", "para": "Calculate the amount needed for a secure and comfortable retirement.", "icon": "/icons/negotiate.svg", "altName": "negotiate-icon", "linkName": "Plan Your Retirement Fund", "url": "/money-map/how-much-to-save-by-retirement" },
-				{ "heading": "Grow Your Savings with Consistency​", "para": "See how regular contributions can maximize your savings over time.", "icon": "/icons/coinHouse.svg", "altName": "coinHouse-icon", "linkName": "Calculate Your Future Savings", "url": "/money-map/how-much-can-i-save-with-regular-contributions" }
+				{
+					"heading": "Know How Long Your Savings Will Last",
+					"para": "Determine how many years your savings can support your lifestyle.",
+					"icon": "/icons/clock.svg",
+					"altName": "clock-icon",
+					"linkName": "Check Your Savings Longevity",
+					"url": "/money-map/how-long-will-your-savings-support-you"
+				},
+				{
+					"heading": "Track Your Progress Towards Your Goal​",
+					"para": "Estimate the time required to reach your financial milestones.",
+					"icon": "/icons/phoneConnection.svg",
+					"altName": "phoneConnection-icon",
+					"linkName": "Plan Your Savings Journey",
+					"url": "/money-map/how-long-will-it-take-to-save"
+				},
+				{
+					"heading": "Set a Target for Retirement Savings​​",
+					"para": "Calculate the amount needed for a secure and comfortable retirement.",
+					"icon": "/icons/negotiate.svg",
+					"altName": "negotiate-icon",
+					"linkName": "Plan Your Retirement Fund",
+					"url": "/money-map/how-much-to-save-by-retirement"
+				},
+				{
+					"heading": "Grow Your Savings with Consistency​",
+					"para": "See how regular contributions can maximize your savings over time.",
+					"icon": "/icons/coinHouse.svg",
+					"altName": "coinHouse-icon",
+					"linkName": "Calculate Your Future Savings",
+					"url": "/money-map/how-much-can-i-save-with-regular-contributions"
+				}
 			]
 		},
 		"calculators": {
@@ -238,17 +272,37 @@
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
-				{ "heading": "How much can I borrow?", "icon": "/icons/calc.svg", "iconAltName": "icon-calc", "url": "/calculators/eligibility-calculator" },
-				{ "heading": "Plot loan repayments calculator", "icon": "/icons/lap.svg", "iconAltName": "loan-icon", "url": "/planners/part-payment-planner" },
-				{ "heading": "Stamp duty calculator", "icon": "/icons/apply.svg", "iconAltName": "icons-apply", "url": "/calculators/stamp-duty-calculator" },
-				{ "heading": "Balance transfer calculator", "icon": "/icons/calc.svg", "iconAltName": "icons-calc", "url": "/calculators/balance-transfer-calculator" }
+				{
+					"heading": "How much can I borrow?",
+					"icon": "/icons/calc.svg",
+					"iconAltName": "icon-calc",
+					"url": "/calculators/eligibility-calculator"
+				},
+				{
+					"heading": "Plot loan repayments calculator",
+					"icon": "/icons/lap.svg",
+					"iconAltName": "loan-icon",
+					"url": "/planners/part-payment-planner"
+				},
+				{
+					"heading": "Stamp duty calculator",
+					"icon": "/icons/apply.svg",
+					"iconAltName": "icons-apply",
+					"url": "/calculators/stamp-duty-calculator"
+				},
+				{
+					"heading": "Balance transfer calculator",
+					"icon": "/icons/calc.svg",
+					"iconAltName": "icons-calc",
+					"url": "/calculators/balance-transfer-calculator"
+				}
 			]
 		},
 		"buttonBanner": {
 			"heading": "Ways to pay off your construction loan faster",
 			"para": "Small changes now can mean big differences later to how much of your construction loan you end up repaying.",
 			"btnName": "Find out how",
-			"btnBorder": "#4F4C4D",
+			"btnClass": "btn-secondary w-full",
 			"btnLink": "/planners/both"
 		}
 	},
@@ -261,7 +315,7 @@
 			"originalSource": "www.digitaldsa.com"
 		},
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we've got you covered! Message us anytime, and we'll respond promptly.",
-		"button": { "link": "/contact", "btnBorder": "#4F4C4D", "btnName": "Message us" }
+		"button": { "link": "/contact", "btnClass": "btn-secondary w-full", "btnName": "Message us" }
 	},
 	"common_components": {
 		"helpList": {
@@ -270,10 +324,34 @@
 				"xlGridCol": 4,
 				"borderBottom": true,
 				"cards": [
-					{ "heading": "Book an </br> appointment", "para": "Book instantly to speak to a plot loan specialist at a time that suits you", "icon": "/icons/appointment.svg", "altName": "appointment Icon", "url": "/appointment" },
-					{ "heading": "Check loan offers", "para": "In as little as 10 minutes and tailored exactly as per your financial profile.", "icon": "/icons/manageLoan2.svg", "altName": "Alert Icon", "url": "/get-started/how-can-we-help" },
-					{ "heading": "Contact us", "para": "Fast-track your call and connect with a specialist in the DigitalDSA.", "icon": "/icons/contact.svg", "altName": "Alert Icon", "url": "/contact" },
-					{ "heading": "Message us", "para": "Get instant help from our online assistants or chat to a specialist.", "icon": "/icons/msg.svg", "altName": "Alert Icon", "url": "/contact" }
+					{
+						"heading": "Book an </br> appointment",
+						"para": "Book instantly to speak to a plot loan specialist at a time that suits you",
+						"icon": "/icons/appointment.svg",
+						"altName": "appointment Icon",
+						"url": "/appointment"
+					},
+					{
+						"heading": "Check loan offers",
+						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"icon": "/icons/manageLoan2.svg",
+						"altName": "Alert Icon",
+						"url": "/get-started/how-can-we-help"
+					},
+					{
+						"heading": "Contact us",
+						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+						"icon": "/icons/contact.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					},
+					{
+						"heading": "Message us",
+						"para": "Get instant help from our online assistants or chat to a specialist.",
+						"icon": "/icons/msg.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					}
 				]
 			}
 		},

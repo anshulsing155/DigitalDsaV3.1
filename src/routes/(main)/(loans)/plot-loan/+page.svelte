@@ -59,11 +59,11 @@
       >
         <div class="">
           <h2
-            class="typography-h2 text-center mb-8 text-[var(--form-text)]"
+            class="typography-h2-md text-[var(--form-text)] text-center mb-8"
           >
             Plot Loan vs Home Loan:
             <span
-              class="underline decoration-btnBg italic"
+              class="underline decoration-primary italic"
               >Key Differences</span
             >
           </h2>
@@ -85,7 +85,7 @@
         >
           <div class="">
             <h2
-              class="typography-h2 text-center mb-8 text-[var(--form-text)]"
+              class="typography-h2-md text-[var(--form-text)] text-center mb-8"
             >
               Balance Transfer for Plot Loans
             </h2>
@@ -142,7 +142,7 @@
           {content.messageUsCard.para}
         </p>
         <div class="w-auto">
-          <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
+          <Button link="/contact" btnClass="btn-secondary w-full" btnName="Message us" />
         </div>
       </TwoColumnWithImage>
 

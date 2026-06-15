@@ -21,7 +21,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare offers",
@@ -39,11 +40,16 @@
 			{ "name": "Tools & calculators", "targetId": "tools" }
 		],
 		"actionBtns": [
-			{ "btnName": "Book appointment", "btnLink": "/appointment" },
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
+			},
 			{
 				"btnName": "Compare offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary w-full",
+				"animation": true
 			}
 		]
 	},
@@ -74,7 +80,7 @@
 	},
 	"challenges": {
 		"contents": {
-			"heading": "Common Challenges in Securing <span class=\"underline decoration-4 underline-offset-4 decoration-btnBg\">Plot-Only</span> loan",
+			"heading": "Common Challenges in Securing <span class=\"underline decoration-4 underline-offset-4 decoration-primary\">Plot-Only</span> loan",
 			"secHeading": "Getting a plot loan in India is tougher than a home loan due to:",
 			"list": [
 				{
@@ -108,26 +114,26 @@
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "Residential Plot Loan",
-					"para": "A loan designed for individuals looking to purchase a plot for <span class='font-semibold'>building a home</span> in a residential area. Some lenders may require you to start <span class='font-semibold'>construction</span> within a specific <span class='font-semibold'>timeframe</span>.",
+					"heading": "<span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">Residential Plot Loan</span>",
+					"para": "<p class=\"typography-body-md text-[var(--form-text-secondary)]\">A loan designed for individuals looking to purchase a plot for <span class='font-semibold'>building a home</span> in a residential area. Some lenders may require you to start <span class='font-semibold'>construction</span> within a specific <span class='font-semibold'>timeframe</span>.</p>",
 					"icon": "/icons/residential.svg",
 					"altName": "residential Icon"
 				},
 				{
-					"heading": "Commercial Plot Loan",
-					"para": "This type of loan is for buying land intended for <span class='font-semibold'>commercial use</span>, such as <span class='font-semibold'>office spaces</span>, <span class='font-semibold'>retail outlets</span>, or <span class='font-semibold'>warehouses</span>. Interest rates and <span class='font-semibold'>eligibility criteria</span> may differ from <span class='font-semibold'>residential plot loans</span>.",
+					"heading": "<span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">Commercial Plot Loan</span>",
+					"para": "<p class=\"typography-body-md text-[var(--form-text-secondary)]\">This type of loan is for buying land intended for <span class='font-semibold'>commercial use</span>, such as <span class='font-semibold'>office spaces</span>, <span class='font-semibold'>retail outlets</span>, or <span class='font-semibold'>warehouses</span>. Interest rates and <span class='font-semibold'>eligibility criteria</span> may differ from <span class='font-semibold'>residential plot loans</span>.</p>",
 					"icon": "/icons/bt-2.svg",
 					"altName": "commercial Icon"
 				},
 				{
-					"heading": "Agricultural Land Loan",
-					"para": "A loan provided for <span class='font-semibold'>purchasing farmland</span>, often <span class='font-semibold'>restricted</span> to individuals engaged in <span class='font-semibold'>farming</span> or <span class='font-semibold'>agriculture</span>. Some countries have <span class='font-semibold'>regulations</span> on who can buy <span class='font-semibold'>agricultural land</span>.",
+					"heading": "<span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">Agricultural Land Loan</span>",
+					"para": "<p class=\"typography-body-md text-[var(--form-text-secondary)]\">A loan provided for <span class='font-semibold'>purchasing farmland</span>, often <span class='font-semibold'>restricted</span> to individuals engaged in <span class='font-semibold'>farming</span> or <span class='font-semibold'>agriculture</span>. Some countries have <span class='font-semibold'>regulations</span> on who can buy <span class='font-semibold'>agricultural land</span>.</p>",
 					"icon": "/icons/agriZone.svg",
 					"altName": "plot Icon"
 				},
 				{
-					"heading": "Investment Plot Loan",
-					"para": "For those looking to buy land purely for <span class='font-semibold'>investment purposes</span> without immediate plans to develop it. These loans may have <span class='font-semibold'>stricter conditions</span> since they <span class='font-semibold'>don’t involve immediate construction</span>.",
+					"heading": "<span class=\"typography-body-lg !font-semibold text-[var(--form-text)]\">Investment Plot Loan</span>",
+					"para": "<p class=\"typography-body-md text-[var(--form-text-secondary)]\">For those looking to buy land purely for <span class='font-semibold'>investment purposes</span> without immediate plans to develop it. These loans may have <span class='font-semibold'>stricter conditions</span> since they <span class='font-semibold'>don’t involve immediate construction</span>.</p>",
 					"icon": "/icons/sellingHome.svg",
 					"altName": "home Icon"
 				}
@@ -286,7 +292,7 @@
 					"para": "Find competitive interest rates and flexible repayment options tailored to your needs. Compare offers and secure the best deal for your plot purchase.",
 					"btnName": "Book an appointment",
 					"btnLink": "/appointment",
-					"btnBorder": "#4F4C4D"
+					"btnClass": "btn-secondary w-full"
 				}
 			]
 		}
@@ -310,7 +316,8 @@
 		"heading": "Explore more loan options",
 		"secPara": "Discover various loan alternatives tailored to your financial needs.",
 		"btnName": "Explore now",
-		"btnLink": "/plot-loan"
+		"btnLink": "/plot-loan",
+		"btnClass": "btn-secondary w-full"
 	},
 	"tools": {
 		"moneyMap": {
@@ -339,7 +346,7 @@
 			"heading": "Ways to pay off your plot loan faster",
 			"para": "Small changes now can mean big differences later to how much of your plot loan you end up repaying.",
 			"btnName": "Find out how",
-			"btnBorder": "#4F4C4D",
+			"btnClass": "btn-secondary w-full",
 			"btnLink": "/planners/both"
 		}
 	},
@@ -352,7 +359,7 @@
 			"originalSource": "www.digitaldsa.com"
 		},
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we've got you covered! Message us anytime, and we'll respond promptly.",
-		"button": { "link": "/contact", "btnBorder": "#4F4C4D", "btnName": "Message us" }
+		"button": { "link": "/contact", "btnClass": "btn-secondary w-full", "btnName": "Message us" }
 	},
 	"common_components": {
 		"helpList": {

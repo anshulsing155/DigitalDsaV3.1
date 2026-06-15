@@ -17,7 +17,7 @@
       {
         "btnName": "Compare LAP offers online",
         "btnLink": "/get-started/how-can-we-help",
-        "btnClass": "btn-primary w-full"
+        "btnClass": "btn-primary w-full",
         "animation": true
       },
       {

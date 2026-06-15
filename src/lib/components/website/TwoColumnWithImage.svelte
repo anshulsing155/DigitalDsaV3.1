@@ -56,7 +56,7 @@
 	<!-- Content -->
 	<div class="flex flex-col gap-2 justify-self-start" class:lg\:order-first={contents.reverse}>
 		{#if contents.cardHeading}
-			<h3 class="typography-h2-md text-[var(--form-text)]">
+			<h3 class="typography-h2-md text-[var(--form-text)] mb-8">
 				{@html contents.cardHeading}
 			</h3>
 		{/if}

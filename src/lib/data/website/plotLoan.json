@@ -19,13 +19,13 @@
       {
         "btnName": "Explore loan offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnClass": "btn-primary w-full"
+        "btnClass": "btn-primary w-full",
         "animation": true
       },
       {
         "btnName": "Book an appointment",
         "btnLink": "/appointment",
-        "btnBorder": "#4F4C4D"
+        "btnClass": "btn-secondary w-full"
       }
     ]
   },
@@ -377,7 +377,7 @@
     "heading": "Ways to pay off your plot loan faster",
     "para": "Small changes now can mean big differences later to how much of your plot loan you end up repaying.",
     "btnName": "Find out how",
-    "btnBorder": "#4F4C4D",
+     "btnClass": "btn-secondary w-full",
     "btnLink": "/planners/both"
   },
   "secureDreamPlotBanner": {
