@@ -1,302 +1,193 @@
-<script lang="ts">
-	import NewPageLayout from './NewPageLayout.svelte';
-	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';
-	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
-	import StickyNavbar from './StickyNavbar.svelte';
-	import { onMount } from 'svelte';
-	import Button from './Button.svelte';
-	import HelpList from './HelpList.svelte';
-	import ThingsYouKnow from './ThingsYouKnow.svelte';
-	import VerticalBlog from './VerticalBlog.svelte';
-	import Seo from './Seo.svelte';
-	import { applicationData } from '$lib/stores/stores';
-	import content from '$lib/data/website/choosePerfectNeighbourhoodArticle.json';
+<script>
+  import HelpList from "./HelpList.svelte";
+  import NewPageLayout from "./NewPageLayout.svelte";
+  import Seo from "./Seo.svelte";
+  import ThingsYouKnow from "./ThingsYouKnow.svelte";
+  import VerticalBlog from "./VerticalBlog.svelte";
+  import content from "$lib/data/website/choosePerfectNeighbourhoodArticle.json";
 
-	interface ButtonProps {
-		btnName: string;
-		btnLink: string;
-		btnClass?: string;
-		animation?: boolean;
-	}
-
-	interface PageDataProps {
-		coverImage: string;
-		coverAlt?: string;
-		altName?: string;
-		heading: string;
-		para: string;
-		actionBtns: ButtonProps[];
-	}
-
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
-
-	// Inject store update callbacks dynamically for get-started actions
-	const pageDataWithClicks = $derived({
-		...pageData,
-		coverAlt: pageData.coverAlt || pageData.altName || '',
-		actionBtns: pageData.actionBtns.map((btn) => {
-			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Compare rates') {
-				return {
-					...btn,
-					btnClick: () => {
-						applicationData.update((data) => {
-							data.LoanName = 'Home Loan';
-							return data;
-						});
-					}
-				};
-			}
-			return btn;
-		})
-	});
-
-	const navListWithClicks = $derived({
-		...content.navList,
-		actionBtns: content.navList.actionBtns.map((btn) => {
-			if (btn.btnLink === '/get-started/how-can-we-help' || btn.btnName === 'Compare rates') {
-				return {
-					...btn,
-					btnClick: () => {
-						applicationData.update((data) => {
-							data.LoanName = 'Home Loan';
-							return data;
-						});
-					}
-				};
-			}
-			return btn;
-		})
-	});
-
-	let activeSection = $state('');
-
-	const initializeActiveSection = () => {
-		const firstSection = document.querySelector('[data-section]');
-		if (firstSection) {
-			activeSection = firstSection.id;
-		}
-	};
-
-	const handleScroll = () => {
-		const sections = document.querySelectorAll('[data-section]');
-		let currentSection = '';
-
-		sections.forEach((section) => {
-			const rect = section.getBoundingClientRect();
-			if (rect.top <= 100 && rect.bottom >= 200) {
-				currentSection = section.id;
-			}
-		});
-
-		if (currentSection) {
-			activeSection = currentSection;
-		}
-	};
-
-	onMount(() => {
-		initializeActiveSection();
-		window.addEventListener('scroll', handleScroll);
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	});
-
-	const toggleDropdown = (event: Event, index: number) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
-			}
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
-			}
-		}
-		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		}, 100);
-	};
-
-	// JSON-LD Structured Data Schema for Breadcrumbs
-	const breadcrumbSchema = {
-		'@context': 'https://schema.org',
-		'@type': 'BreadcrumbList',
-		'itemListElement': [
-			{
-				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
-			},
-			{
-				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
-			},
-			{
-				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Choose Perfect Neighbourhood',
-				'item': 'https://www.digitaldsa.com/home-loan/choose-perfect-neighbourhood'
-			}
-		]
-	};
+  let { pageData = content.pageData } = $props();
 </script>
 
-<svelte:head>
-	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
-</svelte:head>
-
 <Seo
-	type="WebPage"
-	title="How to Choose the Perfect Neighborhood for Your Dream Home"
-	image={pageData.coverImage}
-	description="Find the best neighborhood with safety, amenities, and future growth in mind. Discover key factors to make the right choice for your new home."
-	keywords="Choosing the right neighborhood, Best neighborhood for home, Safe neighborhoods to live in, Neighborhood amenities checklist, Home buying guide, Future-proof neighborhoods, Best areas to live, Property investment tips, Neighborhood safety tips, Real estate location guide"
+  type="WebPage"
+  title={content.seo.title}
+  image={pageData.coverImage}
+  description={content.seo.description}
+  keywords={content.seo.keywords}
 />
 
-<section class="content">
-	<NewPageLayout pageData={pageDataWithClicks}>
-		<!-- desktop view -->
-		<div class="hidden lg:block">
-			<div>
-				<StickyNavbar navList={navListWithClicks} {activeSection} />
-			</div>
+<section>
+  <NewPageLayout {pageData}>
+    <div
+      class="lg:mx-[13rem] md:mx-[2rem] items-center pb-10 md:pb-16 lg:pb-20 py-7 md:p-12 px-[0.5rem]"
+    >
+      {#each content.sections as section, i}
+        <div class="mb-12">
+          <div class="flex items-center my-{i === 0 ? '5' : '8'}">
+            {#if section.icon === 'book-open'}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide-icon lucide lucide-book-open text-btnBg mr-3"
+                ><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path
+                  d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+                ></path></svg
+              >
+            {:else if section.icon === 'map-pin'}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide-icon lucide lucide-map-pin text-btnBg mr-3"
+                ><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                ></path><circle cx="12" cy="10" r="3"></circle></svg
+              >
+            {:else if section.icon === 'compass'}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide-icon lucide lucide-compass text-btnBg mr-3"
+                ><circle cx="12" cy="12" r="10"></circle><polygon
+                  points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
+                ></polygon></svg
+              >
+            {:else if section.icon === 'shield'}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide-icon lucide lucide-shield text-btnBg mr-3"
+                ><path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                ></path></svg
+              >
+            {:else if section.icon === 'dollar-sign'}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide-icon lucide lucide-dollar-sign text-btnBg mr-3"
+                ><line x1="12" x2="12" y1="2" y2="22"></line><path
+                  d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                ></path></svg
+              >
+            {:else if section.icon === 'heart'}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide-icon lucide lucide-heart text-btnBg mr-3"
+                ><path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                ></path></svg
+              >
+            {/if}
 
-			<div id="priorities" data-section="priorities" class="section">
-				<TwoColumnWithLeftHeading contents={content.priorities.future} />
-				<TwoColumnWithLeftHeading contents={content.priorities.define} />
-			</div>
+            <h2
+              class="text-minSubHead font-ThirdHead text-gray-900 border-l-4 border-btnBg pl-3"
+            >
+              {section.heading}
+            </h2>
+          </div>
+          {#each section.paragraphs as paragraph}
+            <p
+              class="text-paraFont font-Paragraph text-gray-700 leading-relaxed ml-10"
+            >
+              {@html paragraph}
+            </p>
+          {/each}
+          {#if section.list}
+            <ul
+              class="list-disc pl-5 space-y-3 text-subParaFont font-Paragraph text-gray-700 mt-3 ml-10"
+            >
+              {#each section.list as item}
+                <li>
+                  {#if item.bold}
+                    <strong class="mr-1">{@html item.bold}</strong>
+                  {/if}
+                  {@html item.text}
+                </li>
+              {/each}
+            </ul>
+          {/if}
+          {#if section.callout}
+            <p
+              class="text-paraFont font-Paragraph text-gray-700 bg-gray-100 p-5 border-l-4 border-btnBg mt-3 leading-relaxed ml-10"
+            >
+              {@html section.callout}
+            </p>
+          {/if}
+        </div>
+      {/each}
+    </div>
 
-			<div id="testing-growth" data-section="testing-growth" class="section">
-				<TwoColumnWithLeftHeading contents={content.testingGrowth.test} />
-				<TwoColumnWithLeftHeading contents={content.testingGrowth.growth} />
-			</div>
+    <div slot="secondary" class="">
+      <div class="px-[0.5rem] py-[3rem] lg:py-0">
+        <h2 class="text-minSubHead font-FourthHead mb-2">
+          {content.resonateWithYou.heading}
+        </h2>
+        <p
+          class="mb-8 text-paraFont font-Paragraph text-gray-700 leading-relaxed"
+        >
+          {content.resonateWithYou.para}
+        </p>
+        <div class="md:flex gap-2">
+          <VerticalBlog blogLists={content.resonateWithYou.blogLists} />
+        </div>
+      </div>
 
-			<div id="budget-emotions" data-section="budget-emotions" class="section">
-				<TwoColumnWithLeftHeading contents={content.budgetEmotions.budget} />
-				<TwoColumnWithLeftHeading contents={content.budgetEmotions.emotional} />
-			</div>
+      <HelpList contents={content.common_components.helpList.contents} />
 
-			<div id="decision" data-section="decision" class="section">
-				<TwoColumnWithLeftHeading contents={content.decision.leap} />
-			</div>
-		</div>
-
-		<!-- mobile view -->
-		<div class="block lg:hidden">
-			{#each content.mobileNavbarTitle as list, index}
-				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
-					content.mobileNavbarTitle.length - 1
-						? 'border-b border-[var(--form-border)]'
-						: ''}"
-				>
-					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
-						onclick={(e) => toggleDropdown(e, index)}
-					>
-						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-[var(--form-text)] typography-label">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
-								<span
-									><i
-										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
-									></i></span
-								>
-							</div>
-						</div>
-					</summary>
-
-					{#if index === 0}
-						<div id="priorities" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithLeftHeading contents={content.priorities.future} />
-							<TwoColumnWithLeftHeading contents={content.priorities.define} />
-						</div>
-					{:else if index === 1}
-						<div id="testing-growth" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithLeftHeading contents={content.testingGrowth.test} />
-							<TwoColumnWithLeftHeading contents={content.testingGrowth.growth} />
-						</div>
-					{:else if index === 2}
-						<div id="budget-emotions" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithLeftHeading contents={content.budgetEmotions.budget} />
-							<TwoColumnWithLeftHeading contents={content.budgetEmotions.emotional} />
-						</div>
-					{:else if index === 3}
-						<div id="decision" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithLeftHeading contents={content.decision.leap} />
-						</div>
-					{/if}
-				</details>
-			{/each}
-		</div>
-
-		<!-- Did this resonate with you? section -->
-		<div class="px-[0.5rem] py-[4rem] lg:px-[4rem]">
-			<h2 class="mb-5 font-semibold typography-h3">
-				{content.verticalBlog.heading}
-			</h2>
-			<p class="mb-4 font-semibold">{content.verticalBlog.sub}</p>
-			<div class="flex flex-col gap-4 md:flex-row">
-				<VerticalBlog blogLists={content.verticalBlog.blogLists} />
-			</div>
-		</div>
-
-		<TwoColumnWithImage contents={content.messageUs.contents}>
-			<p>{content.messageUs.para}</p>
-			<Button
-				link={content.messageUs.button.link}
-				btnBorder={content.messageUs.button.btnBorder}
-				btnName={content.messageUs.button.btnName}
-			/>
-		</TwoColumnWithImage>
-
-		<div slot="secondary" class="px-2">
-			<HelpList contents={content.common_components.helpList.contents} />
-
-			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
-				<ul class="px-2 pl-4 flex flex-col gap-4 list-decimal">
-					{#each content.common_components.thinkYouShouldKnow.bullets as bullet}
-						<li>{@html bullet}</li>
-					{/each}
-				</ul>
-			</ThingsYouKnow>
-		</div>
-	</NewPageLayout>
+      <ThingsYouKnow contents={{ heading: `Things you should know` }}>
+        <ul class="list-disc pl-4 flex flex-col gap-4 px-2">
+          {#each content.common_components.thinkYouShouldKnow.bullets as bullet}
+            <li>
+              <span class="font-FourthHead">{bullet.title}</span>
+              {bullet.text}
+            </li>
+          {/each}
+        </ul>
+      </ThingsYouKnow>
+    </div>
+  </NewPageLayout>
 </section>
 
-<style>
-	.section {
-		scroll-margin-top: 5rem;
-	}
-</style>

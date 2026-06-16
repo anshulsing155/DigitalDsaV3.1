@@ -1,152 +1,125 @@
 {
-	"mobileNavbarTitle": [
-		"Define Priorities",
-		"Testing & Growth",
-		"Budget & Emotions",
-		"Making Decision"
-	],
 	"pageData": {
 		"coverImage": "/images/woman-offering-food-neighbor.jpg",
 		"coverAlt": "a young woman offering food to elderly neighbor",
+		"sourceName": "Freepik",
+		"originalSource": "https://www.freepik.com/free-photo/woman-offering-food-neighbor_27645466.htm",
 		"heading": "How to Choose the Perfect Neighborhood",
-		"para": "Finding the right neighborhood is just as important as finding the right home. It involves considering various factors that contribute to your overall quality of life and future growth.",
-		"actionBtns": [
-			{
-				"btnName": "Book appointment",
-				"btnLink": "/appointment"
-			},
-			{
-				"btnName": "Compare rates",
-				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full",
-				"animation": true
-			}
-		]
+		"para": "<p class=\"p-[1rem] bg-gray-100\">Finding the right neighborhood is just as important as finding the right home. It involves considering various factors that contribute to your overall quality of life and future growth.</p>"
 	},
-	"navList": {
-		"items": [
-			{
-				"name": "Define Priorities",
-				"targetId": "priorities"
-			},
-			{
-				"name": "Testing & Growth",
-				"targetId": "testing-growth"
-			},
-			{
-				"name": "Budget & Emotions",
-				"targetId": "budget-emotions"
-			},
-			{
-				"name": "Making Decision",
-				"targetId": "decision"
-			}
-		],
-		"actionBtns": [
-			{
-				"btnName": "Book appointment",
-				"btnLink": "/appointment"
-			},
-			{
-				"btnName": "Compare rates",
-				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
-			}
-		]
+	"seo": {
+		"title": "How to Choose the Perfect Neighborhood for Your Dream Home",
+		"description": "Find the best neighborhood with safety, amenities, and future growth in mind. Discover key factors to make the right choice for your new home.",
+		"keywords": "Choosing the right neighborhood, Best neighborhood for home, Safe neighborhoods to live in, Neighborhood amenities checklist, Home buying guide, Future-proof neighborhoods, Best areas to live, Property investment tips, Neighborhood safety tips, Real estate location guide"
 	},
-	"priorities": {
-		"future": {
+	"sections": [
+		{
+			"icon": "book-open",
 			"heading": "Imagine Your Future Here",
-			"para": "When you step into a new neighborhood, think about this: <strong>Can I truly call this place home?</strong>",
-			"secPara": "From schools to shops, parks to public transport—every detail matters when building the life you dream of."
+			"paragraphs": [
+				"When you step into a new neighborhood, think about this : <strong>Can I truly call this place home?</strong>",
+				"From schools to shops, parks to public transport every detail matters when building the life you dream of."
+			]
 		},
-		"define": {
+		{
+			"icon": "map-pin",
 			"heading": "Define What Matters to You",
-			"listTopPara": "Your priorities are unique. Focus on what makes your life easier and happier:",
+			"paragraphs": [
+				"Your priorities are unique focus on what makes your life easier and happier."
+			],
 			"list": [
 				{
-					"heading": "Proximity to Essentials:",
-					"desc": "Schools, offices, hospitals, and markets should be easily accessible."
+					"bold": "Proximity to Essentials :",
+					"text": "Schools, offices, hospitals, and markets should be easily accessible."
 				},
 				{
-					"heading": "Safety and Security:",
-					"desc": "Well-lit streets and secure communities are a must."
+					"bold": "Safety and Security :",
+					"text": "Well-lit streets and secure communities are a must."
 				},
 				{
-					"heading": "Lifestyle and Convenience:",
-					"desc": "Parks, gyms, and entertainment hubs add to your quality of life."
+					"bold": "Lifestyle and Convenience :",
+					"text": "Parks, gyms, and entertainment hubs add to your quality of life."
 				}
 			]
-		}
-	},
-	"testingGrowth": {
-		"test": {
+		},
+		{
+			"icon": "compass",
 			"heading": "Test the Neighborhood",
-			"listTopPara": "Sometimes, you need to experience the area before making a decision:",
+			"paragraphs": [
+				"Sometimes, you need to experience the area before making a decision."
+			],
 			"list": [
 				{
-					"heading": "Visit at Different Times:",
-					"desc": "A calm morning might turn into a noisy evening."
+					"bold": "Visit at Different Times :",
+					"text": "A calm morning might turn into a noisy evening."
 				},
 				{
-					"heading": "Talk to the Locals:",
-					"desc": "Get firsthand stories from residents about their experiences."
+					"bold": "Talk to the Locals :",
+					"text": "Get firsthand stories from residents about their experiences."
 				}
 			]
 		},
-		"growth": {
+		{
+			"icon": "shield",
 			"heading": "Keep Future Growth in Mind",
-			"listTopPara": "Neighborhoods evolve—make sure you’re investing in one that grows with you:",
+			"paragraphs": [
+				"Neighborhoods evolve—make sure you’re investing in one that grows with you."
+			],
 			"list": [
 				{
-					"heading": "Upcoming Infrastructure:",
-					"desc": "Metro stations, malls, and highways can boost future value."
+					"bold": "Upcoming Infrastructure :",
+					"text": "Metro stations, malls, and highways can boost future value."
 				},
 				{
-					"heading": "Resale Value:",
-					"desc": "Growing areas ensure higher property appreciation."
-				}
-			]
-		}
-	},
-	"budgetEmotions": {
-		"budget": {
-			"heading": "Know Your Budget, Know Your Area",
-			"listTopPara": "What’s affordable now may not be the best long-term choice:",
-			"list": [
-				{
-					"heading": "Affordability Zone:",
-					"desc": "Match your budget with the cost of living in the area."
-				},
-				{
-					"heading": "Hidden Costs:",
-					"desc": "Parking fees, maintenance charges, and commute expenses add up."
+					"bold": "Resale Value :",
+					"text": "Growing areas ensure higher property appreciation."
 				}
 			]
 		},
-		"emotional": {
-			"heading": "The Emotional Test",
-			"listTopPara": "Beyond logic, listen to your heart. Does the neighborhood feel like home?",
+		{
+			"icon": "dollar-sign",
+			"heading": "Know Your Budget, Know Your Area",
+			"paragraphs": [
+				"What’s affordable now may not be the best long-term choice."
+			],
 			"list": [
 				{
-					"heading": "Can you imagine celebrating festivals here?"
+					"bold": "Affordability Zone :",
+					"text": "Match your budget with the cost of living in the area."
 				},
 				{
-					"heading": "Does the view from your future home bring you peace?"
+					"bold": "Hidden Costs :",
+					"text": "Parking fees, maintenance charges, and commute expenses add up."
 				}
 			]
-		}
-	},
-	"decision": {
-		"leap": {
+		},
+		{
+			"icon": "heart",
+			"heading": "The Emotional Test",
+			"paragraphs": [
+				"Beyond logic, listen to your heart. Does the neighborhood feel like home?"
+			],
+			"list": [
+				{
+					"text": "Can you imagine celebrating festivals here?"
+				},
+				{
+					"text": "Does the view from your future home bring you peace?"
+				}
+			]
+		},
+		{
+			"icon": "book-open",
 			"heading": "Take the Leap",
-			"para": "Choosing a neighborhood isn’t just a financial decision—it’s about finding where you truly belong.",
-			"secPara": "<p class=\"typography-body-md text-gray-700 bg-gray-100 dark:bg-gray-800 p-5 border-l-4 border-btnBg mt-3 leading-relaxed\">🎯 Start with your property consultant to explore neighborhoods that match your preferences.</p>"
+			"paragraphs": [
+				"Choosing a neighborhood isn’t just a financial decision it’s about finding where you truly belong."
+			],
+			"callout": "🎯 Start with your property consultant to explore neighborhoods that match your preferences."
 		}
-	},
-	"verticalBlog": {
+	],
+	"resonateWithYou": {
 		"heading": "Did this resonate with you?",
-		"sub": "If so, you may also want to explore:",
+		"para": "If so, you may also want to explore:",
 		"blogLists": [
 			{
 				"icon": "/images/diversity.jpg",
@@ -168,20 +141,6 @@
 			}
 		]
 	},
-	"messageUs": {
-		"contents": {
-			"cardImage": "/images/message.jpg",
-			"cardAltName": "housing-figure",
-			"cardHeading": "Message us 24/7",
-			"reverse": true
-		},
-		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
-		"button": {
-			"link": "/contact",
-			"btnBorder": "#4F4C4D",
-			"btnName": "Message us"
-		}
-	},
 	"common_components": {
 		"helpList": {
 			"contents": {
@@ -193,28 +152,28 @@
 						"heading": "Know your borrowing power",
 						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
 						"icon": "/icons/appointment.svg",
-						"altName": "appointment Icon",
+						"coverAlt": "appointment Icon",
 						"url": "/appointment"
 					},
 					{
 						"heading": "Check loan offers",
 						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
 						"icon": "/icons/manageLoan2.svg",
-						"altName": "Alert Icon",
+						"coverAlt": "Alert Icon",
 						"url": "/get-started/how-can-we-help"
 					},
 					{
 						"heading": "Contact us",
 						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
 						"icon": "/icons/contact.svg",
-						"altName": "Alert Icon",
+						"coverAlt": "Alert Icon",
 						"url": "/contact"
 					},
 					{
 						"heading": "Message us",
 						"para": "Get instant help from our online assistants  or chat to a specialist.",
 						"icon": "/icons/msg.svg",
-						"altName": "Alert Icon",
+						"coverAlt": "Alert Icon",
 						"url": "/contact"
 					}
 				]
@@ -222,11 +181,26 @@
 		},
 		"thinkYouShouldKnow": {
 			"bullets": [
-				"Ensure essentials like schools, hospitals, and markets are nearby, with well-lit and secure surroundings.",
-				"Parks, gyms, and entertainment hubs contribute to a better quality of life.",
-				"Visit at different times and talk to locals for real-life insights.",
-				"Upcoming infrastructure can boost property value and ensure better returns.",
-				"Consider hidden costs and choose a neighborhood that feels like home."
+				{
+					"title": "Accessibility & Safety: ",
+					"text": "Ensure essentials like schools, hospitals, and markets are nearby, with well-lit and secure surroundings."
+				},
+				{
+					"title": "Lifestyle & Convenience: ",
+					"text": "Parks, gyms, and entertainment hubs contribute to a better quality of life."
+				},
+				{
+					"title": "Experience Before Deciding: ",
+					"text": "Visit at different times and talk to locals for real-life insights."
+				},
+				{
+					"title": "Future Growth & Resale Value: ",
+					"text": "Upcoming infrastructure can boost property value and ensure better returns."
+				},
+				{
+					"title": "Budget & Emotional Fit: ",
+					"text": "Consider hidden costs and choose a neighborhood that feels like home."
+				}
 			]
 		}
 	}
