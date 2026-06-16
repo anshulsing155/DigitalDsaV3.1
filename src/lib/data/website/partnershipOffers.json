@@ -157,7 +157,7 @@
     "cardHeading": "Business partnerships",
     "text": "Looking for offers to help run your business? Explore our range of partnerships today.",
     "btnName": "Visit our Business partnerships page",
-    "btnBorder": "#4F4C4D",
+    "btnClass": "btn-secondary",
     "link": ""
   },
   "help": [

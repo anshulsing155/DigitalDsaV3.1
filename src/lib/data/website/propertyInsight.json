@@ -184,7 +184,7 @@
       "title": "Know your borrowing power",
       "paragraph": "Get the confidence to act quickly when the right property comes along. Calculate your income and expenses to estimate how much you may be able to borrow for a home loan. Check conditional pre-approval.",
       "btnName": "Check now",
-      "btnBorder": "#4F4C4D",
+      "btnClass": "btn-secondary",
       "link": "/calculators/emi-calculator"
     }
   ],

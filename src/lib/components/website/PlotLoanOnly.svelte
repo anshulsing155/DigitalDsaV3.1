@@ -13,6 +13,7 @@
 	import PaymentTable from './PaymentTable.svelte';
 	import ButtonBanner from './ButtonBanner.svelte';
 	import { applicationData } from '$lib/stores/stores';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
 	import Seo from './Seo.svelte';
@@ -130,42 +131,46 @@
 
 	const toggleDropdown = (event: Event, index: number) => {
 		event.preventDefault();
+
 		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
+		const icon = summaryElement.querySelector('.faq-icon') as HTMLElement;
 		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
 
-		// Close all dropdowns except the clicked one
+		// Close all other dropdowns
 		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
+			const otherIcon = otherDetails.querySelector('.faq-icon') as HTMLElement;
 
 			if (idx !== index) {
-				otherDetails.removeAttribute('open');
+				(otherDetails as HTMLDetailsElement).removeAttribute('open');
+
 				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
+					otherIcon.style.transform = 'rotate(0deg)';
 				}
 			}
 		});
 
-		// Toggle current dropdown open/close state
+		// Toggle current dropdown
 		const isOpen = detailsElement.hasAttribute('open');
+
 		if (isOpen) {
 			detailsElement.removeAttribute('open');
+
 			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
+				icon.style.transform = 'rotate(0deg)';
 			}
 		} else {
-			detailsElement.setAttribute('open', 'true');
+			detailsElement.setAttribute('open', '');
+
 			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
+				icon.style.transform = 'rotate(180deg)';
 			}
 		}
+
 		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
+			detailsElement.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
 		}, 100);
 	};
 </script>
@@ -219,7 +224,7 @@
 
 			<div id="help" data-section="help" class="section">
 				<TwoColumnWithImage contents={content.howWeHelp.contents}>
-					<div class="typography-body-md mt-8 text-[var(--form-text-secondary)]">
+					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="list-disc space-y-4">
 							{#each content.howWeHelp.list as item}
 								<li class="flex items-start gap-1">
@@ -254,23 +259,19 @@
 						: ''}"
 				>
 					<summary
-						class="cursor-pointer list-none px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-							<div class="icon-container typography-h3 justify-self-end">
-								<span>
-									<i
-										class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"
-									></i>
-								</span>
+							<div class="justify-self-end text-[var(--form-text)]">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index == 0}
-						<div id="ready" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="ready" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
 							<ThreeColumWithLeftHeading contents={content.ready} />
 						</div>
 					{:else if index == 1}
@@ -308,7 +309,7 @@
 					{:else if index == 2}
 						<div id="help" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithImage contents={content.howWeHelp.contents}>
-								<div class="typography-body-md mt-8 text-[var(--form-text-secondary)]">
+								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="list-disc space-y-4">
 										{#each content.howWeHelp.list as item}
 											<li class="flex items-start gap-1">
@@ -357,6 +358,7 @@
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
+				containerClass="pl-0"
 			/>
 		</div>
 	</NewPageLayout>

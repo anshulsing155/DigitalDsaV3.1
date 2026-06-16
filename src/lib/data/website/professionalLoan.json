@@ -135,7 +135,7 @@
   "balanceTransferBanner": {
     "heading": "Move Your Loan, Minimize Your Costs!",
     "btnName": " Calculate Now",
-    "btnBorder": "#4F4C4D",
+    "btnClass": "btn-secondary",
     "btnLink": "/calculators/balance-transfer-calculator?loanTypeValue=Professional Loan"
   },
   "calculators": {

@@ -183,7 +183,7 @@
     "text": "Get instant help from the Digital DSA app or connect with a specialist who can message you back. You’ll need Digital DSA app notifications turned on so you know when you’ve received a reply.",
     "button": {
       "link": "/contact",
-      "btnBorder": "#4F4C4D",
+      "btnClass": "btn-secondary",
       "btnName": "Message us"
     }
   },

@@ -65,7 +65,7 @@
     "text": "Reach out to us anytime for expert guidance on your loan needs. Our team is ready to offer professional advice, assist you through the loan process, and help you find the best solutions. No matter when you need us, we're here to support you! Send us a message, and we’ll respond promptly.",
     "button": {
       "link": "/contact",
-      "btnBorder": "#4F4C4D",
+      "btnClass": "btn-secondary",
       "btnName": "Message us"
     }
   },

@@ -84,7 +84,7 @@
 		"heading": "Can You Avail an Equity or LAP Against <br> an Already Purchased Plot?",
 		"para": "Yes! If you have already purchased a plot, you can avail a Loan Against Property (LAP) or Plot Equity Loan up to 50% of the current market value, provided you are eligible for that loan amount.",
 		"btnName": "Explore how",
-		"btnBorder": "#4F4C4D",
+		"btnClass": "btn-secondary",
 		"btnLink": "/lap"
 	},
 	"loanTable": [
@@ -310,7 +310,7 @@
 			"originalSource": "www.digitaldsa.com"
 		},
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we've got you covered! Message us anytime, and we'll respond promptly.",
-		"button": { "link": "/contact", "btnBorder": "#4F4C4D", "btnName": "Message us" }
+		"button": { "link": "/contact", "btnClass": "btn-secondary", "btnName": "Message us" }
 	},
 	"common_components": {
 		"helpList": {

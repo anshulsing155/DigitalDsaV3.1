@@ -273,7 +273,7 @@
 			"heading": "Compare Multiple Home Loan Offers for Your Clients",
 			"para": "Access lender programs, interest rates, eligibility criteria, and financing options from multiple banks and NBFCs through a single platform.",
 			"btnName": "Compare Loan Offers",
-			"btnBorder": "#4F4C4D",
+			"btnClass": "btn-secondary",
 			"btnClass": "btn-primary w-full",
 			"btnLink": "/get-started/how-can-we-help"
 		}
