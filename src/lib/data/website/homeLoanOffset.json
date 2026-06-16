@@ -146,14 +146,14 @@
     },
     {
       "btnName": "Book now",
-      "btnClass": "btn-primary w-full"
+      "btnClass": "btn-primary w-full",
       "btnLink": "/appointment",
       "heading": "Book time with a lender instantly",
       "para": "Get the most from your home loan application process and book time with a <a href=\"\" class=\"underline hover:no-underline text-linkColor\">Home Lending Specialist</a> at a time and place that suits you."
     },
     {
       "btnName": "Apply online",
-      "btnClass": "btn-primary w-full"
+      "btnClass": "btn-primary w-full",
       "btnLink": "/get-started/how-can-we-help",
       "heading": "Apply for a home loan, conditional pre-approval or refinance",
       "para": "Start your home loan or refinance application online and if eligible receive a conditional approval in minutes."

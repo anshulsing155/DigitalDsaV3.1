@@ -38,7 +38,7 @@
   "customerStatus": {
     "homeInterest": "Not an existing undefined customer?",
     "btnName": "Open now",
-    "btnClass": "btn-primary w-full"
+    "btnClass": "btn-primary w-full",
     "btnLink": "/home-loan"
   },
   "offers": [
@@ -98,7 +98,7 @@
       "title": "More mobile and nbn",
       "btnName": "Tell me about More",
       "link": "",
-      "btnClass": "btn-primary w-full"
+      "btnClass": "btn-primary w-full",
       "lists": [
         "No matter what your internet or mobile plan requirements are, More has an nbn® or mobile plan that’s right for you",
         "More’s team of experts is committed to providing quality connections for you and your household to enjoy – with no lock-in contracts",
@@ -112,7 +112,7 @@
       "title": "Amber",
       "btnName": "Tell me about Amber",
       "link": "",
-      "btnClass": "btn-primary w-full"
+      "btnClass": "btn-primary w-full",
       "lists": [
         "Unlock the real value of renewable energy with Amber",
         "Their wholesale model and SmartShift™ technology gives solar and battery owners the control they need to get the most value out of their exports, lowering the overall cost of energy usage",
@@ -128,7 +128,7 @@
       "title": "Credit Savvy",
       "btnName": "Check my credit score now",
       "link": "",
-      "btnClass": "btn-primary w-full"
+      "btnClass": "btn-primary w-full",
       "lists": [
         "No matter what your internet or mobile plan requirements are, More has an nbn® or mobile plan that’s right for you",
         "More’s team of experts is committed to providing quality connections for you and your household to enjoy – with no lock-in contracts",
@@ -142,7 +142,7 @@
       "title": "Kit",
       "btnName": "Tell me more about Kit",
       "link": "",
-      "btnClass": "btn-primary w-full"
+      "btnClass": "btn-primary w-full",
       "lists": [
         "No matter what your internet or mobile plan requirements are, More has an nbn® or mobile plan that’s right for you",
         "More’s team of experts is committed to providing quality connections for you and your household to enjoy – with no lock-in contracts",

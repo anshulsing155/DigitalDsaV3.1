@@ -21,7 +21,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare rates",
@@ -39,7 +40,11 @@
 			{ "name": "Tools & calculators", "targetId": "tools" }
 		],
 		"actionBtns": [
-			{ "btnName": "Book appointment", "btnLink": "/appointment" },
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
+			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
@@ -48,7 +53,7 @@
 		]
 	},
 	"guide": {
-		"heading": "Guide to <br> <span class='underline decoration-4 underline-offset-4 decoration-btnBg'>Plot + Construction</span> loan",
+		"heading": "Guide to <br> <span class='underline decoration-4 underline-offset-4 decoration-primary'>Plot + Construction</span> loan",
 		"cardData": [
 			{
 				"title": "Loan Sanction & Approval",
@@ -69,7 +74,7 @@
 		]
 	},
 	"keyAdvantages": {
-		"heading": "Plot & Construction Loan: <br> <span class=\"underline decoration-4 underline-offset-4 decoration-btnBg\">Key Advantages</span>",
+		"heading": "Plot & Construction Loan: <br> <span class=\"underline decoration-4 underline-offset-4 decoration-primary\">Key Advantages</span>",
 		"list": [
 			{
 				"heading": "Lower Interest Rates –",
