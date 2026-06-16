@@ -158,7 +158,7 @@
   "balanceTransferBanner": {
     "heading": "Optimize Your Loan with Balance Transfer",
     "btnName": " Calculate Now",
-    "btnBorder": "#4F4C4D",
+    "btnClass": "btn-secondary",
     "btnLink": "/calculators/balance-transfer-calculator?loanTypeValue=Personal Loan"
   },
   "calculators": {

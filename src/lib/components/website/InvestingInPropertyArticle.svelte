@@ -10,6 +10,8 @@
 	import Seo from './Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/investingInPropertyArticle.json';
+		import { toggleDropdown } from '$lib/utils/toggleDropdown';
+		import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -103,46 +105,7 @@
 		};
 	});
 
-	const toggleDropdown = (event: Event, index: number) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
-			}
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
-			}
-		}
-		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		}, 100);
-	};
+	
 
 	// JSON-LD Structured Data Schema for Breadcrumbs
 	const breadcrumbSchema = {
@@ -223,17 +186,13 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-[var(--form-text)] typography-label">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
-								<span
-									><i
-										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
-									></i></span
-								>
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
+							<div class="justify-self-end text-[var(--form-text)]">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>

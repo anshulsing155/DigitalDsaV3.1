@@ -11,6 +11,8 @@
 	import { onMount } from 'svelte';
 	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/renovateOrMove.json';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -28,52 +30,9 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	let activeSection = $state('');
-
-	const toggleDropdown = (event: Event, index: number) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
-			}
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
-			}
-		}
-		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		}, 100);
-	};
 
 	const initializeActiveSection = () => {
 		const firstSection = document.querySelector('[data-section]');
@@ -109,48 +68,48 @@
 
 	// JSON-LD Structured Data Schema for Breadcrumbs and FAQ Rich Snippets
 	const breadcrumbSchema = {
-		"@context": "https://schema.org",
-		"@type": "BreadcrumbList",
-		"itemListElement": [
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
 			{
-				"@type": "ListItem",
-				"position": 1,
-				"name": "Home",
-				"item": "https://www.digitaldsa.com"
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
-				"@type": "ListItem",
-				"position": 2,
-				"name": "Home Loan",
-				"item": "https://www.digitaldsa.com/home-loan"
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
-				"@type": "ListItem",
-				"position": 3,
-				"name": "Renovate or Move Guide",
-				"item": "https://www.digitaldsa.com/home-loan/renovate-or-move"
+				'@type': 'ListItem',
+				position: 3,
+				name: 'Renovate or Move Guide',
+				item: 'https://www.digitaldsa.com/home-loan/renovate-or-move'
 			}
 		]
 	};
 
 	const faqSchema = {
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		"mainEntity": [
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: [
 			{
-				"@type": "Question",
-				"name": "Is it cheaper to renovate or move?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "Renovating is generally more cost-effective (typically ₹5-15 lakh for major work) compared to buying a new home (which involves ₹30 lakh to ₹1 crore+ in transaction costs, stamp duties, and registration)."
+				'@type': 'Question',
+				name: 'Is it cheaper to renovate or move?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'Renovating is generally more cost-effective (typically ₹5-15 lakh for major work) compared to buying a new home (which involves ₹30 lakh to ₹1 crore+ in transaction costs, stamp duties, and registration).'
 				}
 			},
 			{
-				"@type": "Question",
-				"name": "Does home renovation increase property value?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "Yes, high-quality renovations that improve layout, add modern amenities, or enhance energy efficiency can boost your property's resale value significantly."
+				'@type': 'Question',
+				name: 'Does home renovation increase property value?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: "Yes, high-quality renovations that improve layout, add modern amenities, or enhance energy efficiency can boost your property's resale value significantly."
 				}
 			}
 		]
@@ -185,18 +144,22 @@
 			</section>
 
 			<section id="comparision" data-section="comparision" class="section">
-				<div class="pb-[8rem] border-b border-[#E5E5E5]">
+				<div class="border-b border-[#E5E5E5] pb-[8rem]">
 					<div class="mt-[4rem]">
-						<div class="grid mb-[4rem] text-center">
-							<h2 class="mb-[1rem] typography-h2-md text-[var(--form-text)]">The Ultimate Comparison</h2>
-							<p class="typography-body-md text-[var(--form-text-secondary)]"
-								>Here’s a detailed comparison of the <span
-									class="underline underline-offset-4 decoration-primary font-semibold"
+						<div class="mb-[4rem] grid text-center">
+							<h2 class="typography-h2-md mb-[1rem] text-[var(--form-text)]">
+								The Ultimate Comparison
+							</h2>
+							<p class="typography-body-md text-[var(--form-text-secondary)]">
+								Here’s a detailed comparison of the <span
+									class="font-semibold underline decoration-primary underline-offset-4"
 									>Home Renovation</span
-								> and <span class="underline underline-offset-4 decoration-primary font-semibold"
+								>
+								and
+								<span class="font-semibold underline decoration-primary underline-offset-4"
 									>New Home Purchase</span
-								> options, including financial, emotional, and practical considerations:</p
-							>
+								> options, including financial, emotional, and practical considerations:
+							</p>
 						</div>
 					</div>
 					<div class="px-[4rem]">
@@ -219,39 +182,52 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index (list)}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					content.mobileNavbarTitle.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
-								<span><i class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"></i></span>
+							<div class="justify-self-end text-[var(--form-text)]">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index === 0}
-						<div id="renovation" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
+						<div
+							id="renovation"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.renovation.contents} />
 						</div>
 					{:else if index === 1}
-						<div id="buying" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
+						<div
+							id="buying"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.buying.contents} />
 						</div>
 					{:else if index === 2}
-						<div id="comparision" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4 overflow-x-auto">
+						<div
+							id="comparision"
+							class="overflow-x-auto bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<div>
 								<div class="mt-[4rem]">
-									<h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
+									<h2 class="typography-h2 mb-[4rem] grid text-center text-text-main">
 										<p class="mb-[1rem]">The Ultimate Comparison</p>
 										<span class="typography-body-sm text-text-light"
 											>Here's a detailed comparison of the <span
-												class="underline underline-offset-4 decoration-btnBg"
-												>Home Renovation</span
-											> and <span class="underline underline-offset-4 decoration-btnBg"
+												class="decoration-btnBg underline underline-offset-4">Home Renovation</span
+											>
+											and
+											<span class="decoration-btnBg underline underline-offset-4"
 												>New Home Purchase</span
 											> options, including financial, emotional, and practical considerations:</span
 										>
@@ -266,7 +242,10 @@
 							<ButtonBanner contents={content.comparison.buttonBanner} />
 						</div>
 					{:else if index === 3}
-						<div id="option" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
+						<div
+							id="option"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.option.contents1} />
 							<TwoColumnWithLeftHeading contents={content.option.contents2} />
 						</div>

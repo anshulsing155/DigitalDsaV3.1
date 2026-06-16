@@ -11,6 +11,8 @@
 	import Seo from './Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/choosePerfectNeighbourhoodArticle.json';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -28,9 +30,7 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	// Inject store update callbacks dynamically for get-started actions
 	const pageDataWithClicks = $derived({
@@ -104,69 +104,28 @@
 		};
 	});
 
-	const toggleDropdown = (event: Event, index: number) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
-			}
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
-			}
-		}
-		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		}, 100);
-	};
-
 	// JSON-LD Structured Data Schema for Breadcrumbs
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		'itemListElement': [
+		itemListElement: [
 			{
 				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Choose Perfect Neighbourhood',
-				'item': 'https://www.digitaldsa.com/home-loan/choose-perfect-neighbourhood'
+				position: 3,
+				name: 'Choose Perfect Neighbourhood',
+				item: 'https://www.digitaldsa.com/home-loan/choose-perfect-neighbourhood'
 			}
 		]
 	};
@@ -222,38 +181,46 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-[var(--form-text)] typography-label">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
-								<span
-									><i
-										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
-									></i></span
-								>
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
+							<div class="justify-self-end text-[var(--form-text)]">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index === 0}
-						<div id="priorities" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="priorities"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.priorities.future} />
 							<TwoColumnWithLeftHeading contents={content.priorities.define} />
 						</div>
 					{:else if index === 1}
-						<div id="testing-growth" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="testing-growth"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.testingGrowth.test} />
 							<TwoColumnWithLeftHeading contents={content.testingGrowth.growth} />
 						</div>
 					{:else if index === 2}
-						<div id="budget-emotions" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="budget-emotions"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.budgetEmotions.budget} />
 							<TwoColumnWithLeftHeading contents={content.budgetEmotions.emotional} />
 						</div>
 					{:else if index === 3}
-						<div id="decision" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="decision"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.decision.leap} />
 						</div>
 					{/if}
@@ -263,7 +230,7 @@
 
 		<!-- Did this resonate with you? section -->
 		<div class="px-[0.5rem] py-[4rem] lg:px-[4rem]">
-			<h2 class="mb-5 font-semibold typography-h3">
+			<h2 class="typography-h3 mb-5 font-semibold">
 				{content.verticalBlog.heading}
 			</h2>
 			<p class="mb-4 font-semibold">{content.verticalBlog.sub}</p>
@@ -276,7 +243,7 @@
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
-				btnBorder={content.messageUs.button.btnBorder}
+				btnClass={content.messageUs.button.btnClass}
 				btnName={content.messageUs.button.btnName}
 			/>
 		</TwoColumnWithImage>
@@ -285,7 +252,7 @@
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
-				<ul class="px-2 pl-4 flex flex-col gap-4 list-decimal">
+				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
 					{#each content.common_components.thinkYouShouldKnow.bullets as bullet}
 						<li>{@html bullet}</li>
 					{/each}

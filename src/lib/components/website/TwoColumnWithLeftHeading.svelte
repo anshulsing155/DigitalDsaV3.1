@@ -84,7 +84,7 @@
               <li class="typography-body-md text-[var(--form-text-secondary)]">
                 <div class="flex flex-col gap-2">
                   {#if listItem.heading}
-                    <span class="typography-body-md !font-semibold">
+                    <span class="typography-body-md !font-semibold text-[var(--form-text)]">
                       {@html listItem.heading}
                     </span>
                   {/if}

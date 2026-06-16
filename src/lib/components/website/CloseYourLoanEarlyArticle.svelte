@@ -11,6 +11,8 @@
 	import Seo from './Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/closeYourLoanEarlyArticle.json';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -102,47 +104,6 @@
 		};
 	});
 
-	const toggleDropdown = (event: Event, index: number) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
-			}
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
-			}
-		}
-		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		}, 100);
-	};
-
 	// JSON-LD Structured Data Schema for Breadcrumbs
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
@@ -231,16 +192,14 @@
 			</div>
 
 			<div id="success-stories" data-section="success-stories" class="section">
-				<div
-					class="py-[4rem] text-[var(--form-text)]"
-				>
-					<p class="mb-[2rem] text-center typography-h2-md text-[var(--form-text)]">
-						<span class="decoration-primary underline underline-offset-4"> Inspiration:</span>
+				<div class="py-[4rem] text-[var(--form-text)]">
+					<p class="typography-h2-md mb-[2rem] text-center text-[var(--form-text)]">
+						<span class="underline decoration-primary underline-offset-4"> Inspiration:</span>
 						Real Stories of Success
 					</p>
 					<TwoColumnWithImage contents={content.successStories.neha.contents}>
 						<div class="mt-4">
-							<p class="relative typography-body-md text-[var(--form-text-secondary)]">
+							<p class="typography-body-md relative text-[var(--form-text-secondary)]">
 								{content.successStories.neha.para}
 							</p>
 						</div>
@@ -248,7 +207,7 @@
 
 					<TwoColumnWithImage contents={content.successStories.sharma.contents}>
 						<div class="mt-4">
-							<p class="relative typography-body-md text-[var(--form-text-secondary)]">
+							<p class="typography-body-md relative text-[var(--form-text-secondary)]">
 								{content.successStories.sharma.para}
 							</p>
 						</div>
@@ -272,12 +231,8 @@
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-							<div class="icon-container typography-h3 justify-self-end">
-								<span
-									><i
-										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
-									></i></span
-								>
+							<div class="justify-self-end text-[var(--form-text)]">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
@@ -332,19 +287,19 @@
 							id="success-stories"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<p class="mb-[2rem] pt-4 text-center typography-h2-md text-[var(--form-text)]">
+							<p class="typography-h2-md mb-[2rem] pt-4 text-center text-[var(--form-text)]">
 								Real Stories of Success
 							</p>
 							<TwoColumnWithImage contents={content.successStories.neha.contents}>
 								<div class="mt-4">
-									<p class="relative typography-body-md text-[var(--form-text-secondary)]">
+									<p class="typography-body-md relative text-[var(--form-text-secondary)]">
 										{content.successStories.neha.para}
 									</p>
 								</div>
 							</TwoColumnWithImage>
 							<TwoColumnWithImage contents={content.successStories.sharma.contents}>
 								<div class="mt-4">
-									<p class="relative typography-body-md text-[var(--form-text-secondary)]">
+									<p class="typography-body-md relative text-[var(--form-text-secondary)]">
 										{content.successStories.sharma.para}
 									</p>
 								</div>

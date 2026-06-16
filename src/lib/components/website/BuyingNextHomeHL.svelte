@@ -14,6 +14,8 @@
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import HelpList from './HelpList.svelte';
 	import content from '$lib/data/website/buyingNextHomeHL.json';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -31,50 +33,7 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
-
-	const toggleDropdown = (event: Event, index: number) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
-			}
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
-			}
-		}
-		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		}, 100);
-	};
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	let activeSection = $state('');
 	const initializeActiveSection = () => {
@@ -111,41 +70,41 @@
 
 	// JSON-LD Structured Data Schema for Breadcrumbs and FAQ Rich Snippets
 	const breadcrumbSchema = {
-		"@context": "https://schema.org",
-		"@type": "BreadcrumbList",
-		"itemListElement": [
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
 			{
-				"@type": "ListItem",
-				"position": 1,
-				"name": "Home",
-				"item": "https://www.digitaldsa.com"
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
-				"@type": "ListItem",
-				"position": 2,
-				"name": "Home Loan",
-				"item": "https://www.digitaldsa.com/home-loan"
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
-				"@type": "ListItem",
-				"position": 3,
-				"name": "Next Home Buyer Guide",
-				"item": "https://www.digitaldsa.com/home-loan/buying-next-home"
+				'@type': 'ListItem',
+				position: 3,
+				name: 'Next Home Buyer Guide',
+				item: 'https://www.digitaldsa.com/home-loan/buying-next-home'
 			}
 		]
 	};
 
 	const faqSchema = {
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		"mainEntity": content.started.contents.cardData
-			.filter(c => c.url !== '')
-			.map(c => ({
-				"@type": "Question",
-				"name": c.title,
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": c.para
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: content.started.contents.cardData
+			.filter((c) => c.url !== '')
+			.map((c) => ({
+				'@type': 'Question',
+				name: c.title,
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: c.para
 				}
 			}))
 	};
@@ -175,23 +134,21 @@
 			</section>
 
 			<section id="whybuy" data-section="whybuy" class="section">
-				<AboveTitleWithTopIconCard
-					listGridAboveLg="2"
-					contents={content.whybuy.contents}
-				/>
+				<AboveTitleWithTopIconCard listGridAboveLg="2" contents={content.whybuy.contents} />
 				<AboveTitleWithTopIconCard contents={content.considerations.contents} />
 				<div class="border-b border-[var(--form-border)]">
 					<AboveTitleWithTopIconCard contents={content.benefits.contents} />
 				</div>
-				<AboveTitleWithTopIconCard
-					listGridAboveLg="2"
-					contents={content.steps.contents}
-				/>
+				<AboveTitleWithTopIconCard listGridAboveLg="2" contents={content.steps.contents} />
 			</section>
 
 			<section id="whychoose" data-section="whychoose" class="section">
-				<div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-					<h2 class="grid mb-[4rem] font-semibold typography-h2-md text-[var(--form-text)] text-center">
+				<div
+					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+				>
+					<h2
+						class="typography-h2-md mb-[4rem] grid text-center font-semibold text-[var(--form-text)]"
+					>
 						{content.whychoose.heading}
 					</h2>
 					<div>
@@ -214,26 +171,35 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index (list)}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					content.mobileNavbarTitle.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none cursor-pointer px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
-						<div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-[var(--form-text)]">{list}</h2>
-							<div class="icon-container justify-self-end typography-h3">
-								<span><i class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"></i></span>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
+							<div class="justify-self-end text-[var(--form-text)]">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index == 0}
-						<div id="started" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
+						<div
+							id="started"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<ThreeColumWithLeftHeading contents={content.started.contents} />
 						</div>
 					{:else if index == 1}
-						<div id="whybuy" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
+						<div
+							id="whybuy"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<AboveTitleWithTopIconCard contents={content.whybuy.contents} />
 							<AboveTitleWithTopIconCard contents={content.considerations.contents} />
 							<div class="border-b border-[var(--form-border)]">
@@ -242,9 +208,12 @@
 							<AboveTitleWithTopIconCard contents={content.steps.contents} />
 						</div>
 					{:else if index == 2}
-						<div id="whychoose" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
-							<div class="py-[4rem] w-full border-b border-[var(--form-border)] overflow-x-auto">
-								<h2 class="grid mb-[4rem] typography-h3 font-semibold text-center">
+						<div
+							id="whychoose"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
+							<div class="w-full overflow-x-auto border-b border-[var(--form-border)] py-[4rem]">
+								<h2 class="typography-h3 mb-[4rem] grid text-center font-semibold">
 									{content.whychoose.heading}
 								</h2>
 								<div>
@@ -257,7 +226,10 @@
 							<ButtonBanner contents={content.whychoose.buttonBanner} />
 						</div>
 					{:else if index == 3}
-						<div id="calculators" class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem] pb-4">
+						<div
+							id="calculators"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<AboveTitleWithBlackCard contents={content.calculators.contents} />
 						</div>
 					{/if}

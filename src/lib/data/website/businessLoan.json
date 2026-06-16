@@ -211,7 +211,7 @@
   "compareRatesBanner": {
     "heading": "Compare business loan offers",
     "btnName": "Find out how",
-    "btnBorder": "#4F4C4D",
+    "btnClass": "btn-secondary",
     "btnLink": "/get-started/how-can-we-help"
   },
   "businessLoanCalculator": {

@@ -12,6 +12,8 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/savingForDepositArticle.json';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 
 	interface ButtonProps {
 		btnName: string;
@@ -102,47 +104,6 @@
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
-
-	const toggleDropdown = (event: Event, index: number) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
-			}
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
-			}
-		}
-		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		}, 100);
-	};
 
 	// JSON-LD Structured Data Schema for Breadcrumbs
 	const breadcrumbSchema = {
@@ -237,21 +198,14 @@
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-							<div class="icon-container typography-h3 justify-self-end">
-								<span
-									><i
-										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
-									></i></span
-								>
+							<div class="justify-self-end text-[var(--form-text)]">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index === 0}
-						<div
-							id="intro"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="intro" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.intro} />
 						</div>
 					{:else if index === 1}
@@ -295,10 +249,12 @@
 
 		<!-- blog/related resources section -->
 		<div class="px-[0.5rem] py-[4rem] lg:px-[4rem]">
-			<h2 class="typography-h2-md text-[var(--form-text)] mb-5">
+			<h2 class="typography-h2-md mb-5 text-[var(--form-text)]">
 				{content.verticalBlog.heading}
 			</h2>
-			<p class="mb-4 typography-body-lg !font-semibold text-[var(--form-text)]">{content.verticalBlog.sub}</p>
+			<p class="typography-body-lg mb-4 !font-semibold text-[var(--form-text)]">
+				{content.verticalBlog.sub}
+			</p>
 			<div class="flex flex-col gap-4 md:flex-row">
 				<VerticalBlog blogLists={content.verticalBlog.blogLists} />
 			</div>
