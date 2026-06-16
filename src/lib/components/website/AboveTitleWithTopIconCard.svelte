@@ -14,7 +14,7 @@
 
 <!-- class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full {contents.borderBottom ? 'lg:border-b' : 'border-b-0'} border-[var(--form-border)]" -->
 <section
-  class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full last:border-b-0 border-b border-[var(--form-border)] text-[var(--form-text)]"
+  class="w-full last:border-b-0 border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 >
   <div class="flex flex-col gap-[2rem] w-full">
     <div class="flex flex-col gap-2">
@@ -36,7 +36,7 @@
         {#each contents.cards as card, index}
           <div
             class={index < contents.cards.length - 1
-              ? "border-b md:border-b-0 md:pb-0 border-[var(--form-border)]"
+              ? "border-b border-[var(--form-border)] pb-[4rem] md:border-b-0 md:pb-0"
               : ""}
           >
             <TopIconCard cardData={card} />
@@ -51,7 +51,7 @@
       >
         {#each contents.list as listItem}
           <div
-            class="flex flex-col gap-4 items-start mt-4 pr-4 lg:my-[4rem] group border-b border-[var(--form-border)] lg:border-b-0 pb-[2rem] lg:pb-0 text-[var(--form-text)]"
+            class="flex flex-col gap-4 items-start mt-4 pr-4 my-[4rem] group text-[var(--form-text)]"
           >
             {#if listItem.icon}
               <img
@@ -72,7 +72,7 @@
                 </p>
               {/if}
               {#if listItem.desc}
-                <ul class="space-y-2 list-disc ml-5">
+                <ul class="space-y-1 list-disc ml-5">
                   {#each listItem.desc as desc}
                     <li
                       class="typography-body-md text-[var(--form-text-secondary)]"
