@@ -167,7 +167,7 @@
       "title": "Get the report",
       "paragraph": "Following an appointment with one of our Home Lending Specialists, access an unlimited number of reports and get all the insights to the property you may be interested in buying or selling, as well as compare it against similar properties on the market.",
       "btnName": "Book appointment",
-      "btnClass": "btn-primary w-full"
+      "btnClass": "btn-primary w-full",
       "link": "/appointment"
     },
     {
