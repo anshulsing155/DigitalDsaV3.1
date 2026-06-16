@@ -117,8 +117,7 @@
               <Button
                 btnName={contents.listBtn.btnName}
                 link={contents.listBtn.btnLink}
-                btnColor={contents.listBtn.btnColor}
-                btnBorder={contents.listBtn.btnBorder}
+                btnClass={contents.listBtn.btnClass}
                 onClick={contents.listBtn.btnClick}
               />
             </div>

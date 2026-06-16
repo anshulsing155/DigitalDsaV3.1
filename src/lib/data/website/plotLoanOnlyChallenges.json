@@ -23,7 +23,7 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-"btnClass":"btn-secondary w-full"
+				"btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare rates",
@@ -42,7 +42,11 @@
 			{ "name": "Tools & calculators", "targetId": "tools" }
 		],
 		"actionBtns": [
-			{ "btnName": "Book appointment", "btnLink": "/appointment" },
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
+			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
@@ -147,7 +151,8 @@
 		],
 		"listBtn": {
 			"btnName": "Get help with your plot-only loan",
-			"btnLink": "/appointment"
+			"btnLink": "/appointment",
+			"btnClass": "btn-secondary w-full"
 		}
 	},
 	"alternate": {
@@ -209,76 +214,70 @@
 			],
 			"rowData": [
 				{
-					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> NBFCs (Non-Banking Financial Companies) </span>":
-						[
-							"⭐⭐⭐",
-							"Moderate to High",
-							"Medium to High",
-							"Usually Required",
-							"Easier approval, flexible terms",
-							"Higher interest than banks",
-							"Buyers needing structured loans"
-						]
+					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/purpose.svg' alt='purpose icon'> NBFCs (Non-Banking Financial Companies) </span>": [
+						"⭐⭐⭐",
+						"Moderate to High",
+						"Medium to High",
+						"Usually Required",
+						"Easier approval, flexible terms",
+						"Higher interest than banks",
+						"Buyers needing structured loans"
+					]
 				},
 				{
-					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>HFCs (Housing Finance Companies)</span>":
-						[
-							"⭐⭐",
-							"Moderate",
-							"Medium to High",
-							"Sometimes Required",
-							"Specialized in property loans",
-							"May require higher down payment",
-							"Buyers looking for real estate-focused loans"
-						]
+					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='home icon'>HFCs (Housing Finance Companies)</span>": [
+						"⭐⭐",
+						"Moderate",
+						"Medium to High",
+						"Sometimes Required",
+						"Specialized in property loans",
+						"May require higher down payment",
+						"Buyers looking for real estate-focused loans"
+					]
 				},
 				{
-					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Loan Against Property (LAP)</span>":
-						[
-							"⭐⭐",
-							"Low to Moderate",
-							"High (depends on property value)",
-							"Yes (existing property)",
-							"Large loan amounts, lower rates",
-							"Risk of losing property",
-							"Those with an existing property"
-						]
+					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='home icon'>Loan Against Property (LAP)</span>": [
+						"⭐⭐",
+						"Low to Moderate",
+						"High (depends on property value)",
+						"Yes (existing property)",
+						"Large loan amounts, lower rates",
+						"Risk of losing property",
+						"Those with an existing property"
+					]
 				},
 				{
-					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Gold Loan</span>":
-						[
-							"⭐⭐⭐⭐",
-							"Low to Moderate",
-							"Low to Medium",
-							"Yes (gold as collateral)",
-							"Quick processing, no property required",
-							"Limited loan amount, risk of losing gold",
-							"Buyers needing a quick short-term loan"
-						]
+					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='home icon'>Gold Loan</span>": [
+						"⭐⭐⭐⭐",
+						"Low to Moderate",
+						"Low to Medium",
+						"Yes (gold as collateral)",
+						"Quick processing, no property required",
+						"Limited loan amount, risk of losing gold",
+						"Buyers needing a quick short-term loan"
+					]
 				},
 				{
-					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Credit Unions & Cooperative Societies</span>":
-						[
-							"⭐⭐",
-							"Low to Moderate",
-							"Medium",
-							"Sometimes",
-							"Lower rates than private lenders",
-							"Limited availability",
-							"Those eligible for membership"
-						]
+					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/availability.svg' alt='home icon'>Credit Unions & Cooperative Societies</span>": [
+						"⭐⭐",
+						"Low to Moderate",
+						"Medium",
+						"Sometimes",
+						"Lower rates than private lenders",
+						"Limited availability",
+						"Those eligible for membership"
+					]
 				},
 				{
-					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='home icon'>Friends & Family Loan</span>":
-						[
-							"⭐⭐⭐⭐",
-							"None to Low",
-							"Varies",
-							"No",
-							"No interest or flexible repayment",
-							"Personal relationship risk",
-							"Buyers with trusted financial support"
-						]
+					"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/bestFor.svg' alt='home icon'>Friends & Family Loan</span>": [
+						"⭐⭐⭐⭐",
+						"None to Low",
+						"Varies",
+						"No",
+						"No interest or flexible repayment",
+						"Personal relationship risk",
+						"Buyers with trusted financial support"
+					]
 				}
 			]
 		}
@@ -321,10 +320,38 @@
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
-				{ "heading": "Know How Long Your Savings Will Last", "para": "Determine how many years your savings can support your lifestyle.", "icon": "/icons/clock.svg", "altName": "clock-icon", "linkName": "Check Your Savings Longevity", "url": "/money-map/how-long-will-your-savings-support-you" },
-				{ "heading": "Track Your Progress Towards Your Goal​", "para": "Estimate the time required to reach your financial milestones.", "icon": "/icons/phoneConnection.svg", "altName": "phoneConnection-icon", "linkName": "Plan Your Savings Journey", "url": "/money-map/how-long-will-it-take-to-save" },
-				{ "heading": "Set a Target for Retirement Savings​​", "para": "Calculate the amount needed for a secure and comfortable retirement.", "icon": "/icons/negotiate.svg", "altName": "negotiate-icon", "linkName": "Plan Your Retirement Fund", "url": "/money-map/how-much-to-save-by-retirement" },
-				{ "heading": "Grow Your Savings with Consistency​", "para": "See how regular contributions can maximize your savings over time.", "icon": "/icons/coinHouse.svg", "altName": "coinHouse-icon", "linkName": "Calculate Your Future Savings", "url": "/money-map/how-much-can-i-save-with-regular-contributions" }
+				{
+					"heading": "Know How Long Your Savings Will Last",
+					"para": "Determine how many years your savings can support your lifestyle.",
+					"icon": "/icons/clock.svg",
+					"altName": "clock-icon",
+					"linkName": "Check Your Savings Longevity",
+					"url": "/money-map/how-long-will-your-savings-support-you"
+				},
+				{
+					"heading": "Track Your Progress Towards Your Goal​",
+					"para": "Estimate the time required to reach your financial milestones.",
+					"icon": "/icons/phoneConnection.svg",
+					"altName": "phoneConnection-icon",
+					"linkName": "Plan Your Savings Journey",
+					"url": "/money-map/how-long-will-it-take-to-save"
+				},
+				{
+					"heading": "Set a Target for Retirement Savings​​",
+					"para": "Calculate the amount needed for a secure and comfortable retirement.",
+					"icon": "/icons/negotiate.svg",
+					"altName": "negotiate-icon",
+					"linkName": "Plan Your Retirement Fund",
+					"url": "/money-map/how-much-to-save-by-retirement"
+				},
+				{
+					"heading": "Grow Your Savings with Consistency​",
+					"para": "See how regular contributions can maximize your savings over time.",
+					"icon": "/icons/coinHouse.svg",
+					"altName": "coinHouse-icon",
+					"linkName": "Calculate Your Future Savings",
+					"url": "/money-map/how-much-can-i-save-with-regular-contributions"
+				}
 			]
 		},
 		"calculators": {
@@ -332,10 +359,30 @@
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
-				{ "heading": "How much can I borrow?", "icon": "/icons/calc.svg", "iconAltName": "icon-calc", "url": "/calculators/eligibility-calculator" },
-				{ "heading": "Plot loan repayments calculator", "icon": "/icons/lap.svg", "iconAltName": "loan-icon", "url": "/planners/part-payment-planner" },
-				{ "heading": "Stamp duty calculator", "icon": "/icons/apply.svg", "iconAltName": "icons-apply", "url": "/calculators/stamp-duty-calculator" },
-				{ "heading": "Balance transfer calculator", "icon": "/icons/calc.svg", "iconAltName": "icons-calc", "url": "/calculators/balance-transfer-calculator" }
+				{
+					"heading": "How much can I borrow?",
+					"icon": "/icons/calc.svg",
+					"iconAltName": "icon-calc",
+					"url": "/calculators/eligibility-calculator"
+				},
+				{
+					"heading": "Plot loan repayments calculator",
+					"icon": "/icons/lap.svg",
+					"iconAltName": "loan-icon",
+					"url": "/planners/part-payment-planner"
+				},
+				{
+					"heading": "Stamp duty calculator",
+					"icon": "/icons/apply.svg",
+					"iconAltName": "icons-apply",
+					"url": "/calculators/stamp-duty-calculator"
+				},
+				{
+					"heading": "Balance transfer calculator",
+					"icon": "/icons/calc.svg",
+					"iconAltName": "icons-calc",
+					"url": "/calculators/balance-transfer-calculator"
+				}
 			]
 		},
 		"buttonBanner": {
@@ -364,10 +411,34 @@
 				"xlGridCol": 4,
 				"borderBottom": true,
 				"cards": [
-					{ "heading": "Book an </br> appointment", "para": "Book instantly to speak to a plot loan specialist at a time that suits you", "icon": "/icons/appointment.svg", "altName": "appointment Icon", "url": "/appointment" },
-					{ "heading": "Check loan offers", "para": "In as little as 10 minutes and tailored exactly as per your financial profile.", "icon": "/icons/manageLoan2.svg", "altName": "Alert Icon", "url": "/get-started/how-can-we-help" },
-					{ "heading": "Contact us", "para": "Fast-track your call and connect with a specialist in the DigitalDSA.", "icon": "/icons/contact.svg", "altName": "Alert Icon", "url": "/contact" },
-					{ "heading": "Message us", "para": "Get instant help from our online assistants or chat to a specialist.", "icon": "/icons/msg.svg", "altName": "Alert Icon", "url": "/contact" }
+					{
+						"heading": "Book an </br> appointment",
+						"para": "Book instantly to speak to a plot loan specialist at a time that suits you",
+						"icon": "/icons/appointment.svg",
+						"altName": "appointment Icon",
+						"url": "/appointment"
+					},
+					{
+						"heading": "Check loan offers",
+						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"icon": "/icons/manageLoan2.svg",
+						"altName": "Alert Icon",
+						"url": "/get-started/how-can-we-help"
+					},
+					{
+						"heading": "Contact us",
+						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+						"icon": "/icons/contact.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					},
+					{
+						"heading": "Message us",
+						"para": "Get instant help from our online assistants or chat to a specialist.",
+						"icon": "/icons/msg.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					}
 				]
 			}
 		},
