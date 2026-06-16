@@ -358,6 +358,7 @@
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
+        containerClass="lg:px-0"
 			/>
 		</div>
 	</NewPageLayout>
