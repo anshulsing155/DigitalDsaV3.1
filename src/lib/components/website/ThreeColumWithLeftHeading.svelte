@@ -7,7 +7,7 @@
 		paddingClass?: string;
 	};
 
-	const { contents = {}, paddingClass = 'px-[1rem] lg:px-16' }: Props = $props();
+	const { contents = {}, paddingClass = 'px-[0.5rem] lg:px-16' }: Props = $props();
 </script>
 
 <section

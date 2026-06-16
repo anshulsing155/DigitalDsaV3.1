@@ -28,7 +28,7 @@
 		</div>
 	{:else}
 		<div class="flex w-full flex-col items-center justify-center gap-8 md:gap-16 lg:w-auto">
-			<h2 class="typography-h2-md text-[var(--form-text)]">
+			<h2 class="typography-h2-md text-[var(--form-text)] text-center">
 				{@html contents.heading}
 			</h2>
 
@@ -39,7 +39,7 @@
 					</p>
 				</div>
 
-				<div class="w-full justify-self-center md:w-auto lg:col-span-4 lg:justify-self-start">
+				<div class="justify-self-center md:w-auto lg:col-span-4 lg:justify-self-start">
 					<Button
 						btnName={contents.btnName}
 						link={contents.btnLink}

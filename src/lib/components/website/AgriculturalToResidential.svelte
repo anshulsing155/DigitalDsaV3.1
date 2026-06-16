@@ -287,11 +287,11 @@
 						>
 							<ThreeColumWithLeftHeading contents={content.benefits} />
 
-							<div class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem]">
+							<div class="w-full px-[0.5rem] py-[2rem]">
 								<div class="space-y-[3rem]">
-									<h2 class="typography-h2 mb-[4rem] grid text-center text-text-main">
+									<h2 class="typography-h2-md text-center font-semibold text-[var(--form-text)]">
 										Key Factors to Consider Before <br />
-										<span class="decoration-btnBg underline decoration-4 underline-offset-4">
+										<span class="underline decoration-primary decoration-4 underline-offset-4">
 											Building on Agricultural Land
 										</span>
 									</h2>
@@ -300,8 +300,8 @@
 										{#each content.keyFactors.list as factor}
 											<li>
 												<div class="space-y-3">
-													<h3 class="typography-h3 font-semibold text-text-main">{factor.title}</h3>
-													<ul class="typography-body-md ml-[2rem] list-disc text-text-light">
+													<h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">{factor.title}</h3>
+													<ul class="typography-body-md list-disc pl-4 text-[var(--form-text-secondary)]">
 														{#each factor.items as item}
 															<li>{item}</li>
 														{/each}
@@ -325,12 +325,12 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithImage contents={content.process.contents}>
-								<div class="typography-body-sm text-text-light">
+								<div class="">
 									<ul class="list-disc space-y-4">
 										{#each content.process.list as item}
 											<li class="flex items-start gap-1">
 												<img src="/icons/circle-check.svg" alt="circle-check" class="mt-1 h-4" />
-												<p class="typography-body-md text-text-light">
+												<p class="typography-body-md text-[var(--form-text-secondary)]">
 													<span class="font-semibold">{item.bold}</span>{@html item.text}
 												</p>
 											</li>

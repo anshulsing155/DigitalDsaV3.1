@@ -12,7 +12,7 @@
 </script>
 
 <section
-  class="border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] text-[var(--form-text)]"
+  class="lg:border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] text-[var(--form-text)]"
 >
   <div
     class="grid lg:grid-cols-12 gap-[2rem] lg:gap-[4rem] px-[0.5rem] lg:px-[4rem] items-start"
