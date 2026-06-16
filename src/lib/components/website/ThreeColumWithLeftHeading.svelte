@@ -11,7 +11,7 @@
 </script>
 
 <section
-	class="border-[var(--form-border)] py-[1rem] lg:border-b  lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+	class="lg:border-b border-[var(--form-border)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] text-[var(--form-text)]"
 >
 	<div class={`grid grid-cols-3 gap-[2rem] ${paddingClass}`}>
 		<!-- Left Heading -->
