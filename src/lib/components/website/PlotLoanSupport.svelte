@@ -174,7 +174,7 @@
   keywords={content.seo.keywords}
 />
 
-<section class="mx-auto w-full bg-mainBg xl:container">
+<section class="">
   <NewPageLayout pageData={pageDataWithClicks}>
     <!-- desktop view -->
     <div class="hidden lg:block">
