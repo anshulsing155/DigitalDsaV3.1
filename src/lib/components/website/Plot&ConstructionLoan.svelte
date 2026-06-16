@@ -195,11 +195,11 @@
         <div id="bt">
           <TwoColumnWithLeftHeading contents={content.balanceTransfer.contents} />
           <div class="py-[4rem] w-full border-b border-[var(--form-border)] px-[0.5rem] lg:px-[4rem]">
-            <div class="flex flex-col justify-center items-center gap-[4rem] w-full lg:w-auto">
-              <h2 class="typography-h2 text-text-main text-center">
+            <div class="flex flex-col justify-center items-center gap-8 md:gap-16 w-full lg:w-auto">
+              <h2 class="typography-h2-md text-[var(--form-text)] text-center">
                 {content.topUp.heading}
               </h2>
-              <p class="typography-body-md text-text-light text-center lg:w-8/12 lg:justify-self-end">
+              <p class="typography-body-md text-[var(--form-text-secondary)] text-center lg:w-8/12 lg:justify-self-end">
                 {content.topUp.para}
               </p>
             </div>
