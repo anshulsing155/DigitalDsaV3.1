@@ -48,7 +48,7 @@
 		{/if}
 
 		{#if cardData.para}
-			<p class="typography-body-sm text-[var(--form-text-secondary)] group-hover:text-primary">
+			<p class="typography-body-md text-[var(--form-text-secondary)] group-hover:text-primary">
 				{@html cardData.para}
 			</p>
 		{/if}

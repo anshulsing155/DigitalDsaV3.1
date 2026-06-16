@@ -13,6 +13,7 @@
 	import Seo from './Seo.svelte';
 	import { onMount, createEventDispatcher } from 'svelte';
 	import { applicationData } from '$lib/stores/stores';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import content from '$lib/data/website/turningYourHomeIntoInvestment.json';
 
 	interface ButtonProps {
@@ -107,42 +108,46 @@
 
 	const toggleDropdown = (event: Event, index: number) => {
 		event.preventDefault();
+
 		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
+		const icon = summaryElement.querySelector('.faq-icon') as HTMLElement;
 		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
 
-		// Close all dropdowns except the clicked one
+		// Close all other dropdowns
 		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
+			const otherIcon = otherDetails.querySelector('.faq-icon') as HTMLElement;
 
 			if (idx !== index) {
-				otherDetails.removeAttribute('open');
+				(otherDetails as HTMLDetailsElement).removeAttribute('open');
+
 				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
+					otherIcon.style.transform = 'rotate(0deg)';
 				}
 			}
 		});
 
-		// Toggle current dropdown open/close state
+		// Toggle current dropdown
 		const isOpen = detailsElement.hasAttribute('open');
+
 		if (isOpen) {
 			detailsElement.removeAttribute('open');
+
 			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
+				icon.style.transform = 'rotate(0deg)';
 			}
 		} else {
-			detailsElement.setAttribute('open', 'true');
+			detailsElement.setAttribute('open', '');
+
 			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
+				icon.style.transform = 'rotate(180deg)';
 			}
 		}
+
 		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
+			detailsElement.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
 		}, 100);
 	};
 
@@ -202,7 +207,6 @@
 			</div>
 
 			<div id="equity" data-section="equity" class="section">
-				<!-- <div class="lg:px-[4rem] border-b border-[var(--form-border)]"> -->
 				<ThingsYouShould
 					thinkKnow={{
 						heading: content.equity.heading,
@@ -212,7 +216,6 @@
 					isBorder={content.equity.isBorder}
 					disc="list-disc"
 				/>
-				<!-- </div> -->
 			</div>
 
 			<div id="topup" data-section="topup" class="section">
@@ -244,18 +247,16 @@
 			</div>
 
 			<div id="apply" data-section="apply" class="section">
-				<div class="lg:px-[4rem]">
-					<div class="border-b border-[var(--form-border)]">
-						<ThingsYouShould
-							thinkKnow={{
-								heading: content.apply.heading,
-								paraGraph: content.apply.paraGraph
-							}}
-							disc="list-disc"
-						/>
-					</div>
-					<ButtonBanner contents={content.apply.buttonBanner} />
+				<div class="border-b border-[var(--form-border)]">
+					<ThingsYouShould
+						thinkKnow={{
+							heading: content.apply.heading,
+							paraGraph: content.apply.paraGraph
+						}}
+						disc="list-disc"
+					/>
 				</div>
+				<ButtonBanner contents={content.apply.buttonBanner} />
 			</div>
 		</div>
 
@@ -273,19 +274,15 @@
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class=" typography-label">{list}</h2>
-							<div class="icon-container typography-h3 justify-self-end">
-								<span
-									><i
-										class="fa-solid fa-angle-down faq-icon text-black transition-transform duration-300 dark:text-white"
-									></i></span
-								>
+							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
+							<div class="justify-self-end text-[var(--form-text)]">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index === 0}
-						<div id="equity" class="">
+						<div id="equity" class="min-w-0 w-full overflow-hidden">
 							<ThingsYouShould
 								thinkKnow={{
 									heading: content.equity.heading,
@@ -341,12 +338,12 @@
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
-				btnBorder={content.messageUs.button.btnBorder}
+				btnClass={content.messageUs.button.btnClass}
 				btnName={content.messageUs.button.btnName}
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary" class="px-2">
+		<div slot="secondary">
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouShould
@@ -355,6 +352,7 @@
 					paraGraph: content.common_components.thinkYouShouldKnow.bullets
 				}}
 				disc="list-decimal"
+				containerClass="lg:px-0"
 			/>
 		</div>
 	</NewPageLayout>

@@ -104,44 +104,49 @@
 		};
 	});
 
+	
 	const toggleDropdown = (event: Event, index: number) => {
 		event.preventDefault();
+
 		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon');
+		const icon = summaryElement.querySelector('.faq-icon') as HTMLElement;
 		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
 
-		// Close all dropdowns except the clicked one
+		// Close all other dropdowns
 		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
+			const otherIcon = otherDetails.querySelector('.faq-icon') as HTMLElement;
 
 			if (idx !== index) {
-				otherDetails.removeAttribute('open');
+				(otherDetails as HTMLDetailsElement).removeAttribute('open');
+
 				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
+					otherIcon.style.transform = 'rotate(0deg)';
 				}
 			}
 		});
 
-		// Toggle current dropdown open/close state
+		// Toggle current dropdown
 		const isOpen = detailsElement.hasAttribute('open');
+
 		if (isOpen) {
 			detailsElement.removeAttribute('open');
+
 			if (icon) {
-				icon.classList.remove('fa-angle-up');
-				icon.classList.add('fa-angle-down');
+				icon.style.transform = 'rotate(0deg)';
 			}
 		} else {
-			detailsElement.setAttribute('open', 'true');
+			detailsElement.setAttribute('open', '');
+
 			if (icon) {
-				icon.classList.remove('fa-angle-down');
-				icon.classList.add('fa-angle-up');
+				icon.style.transform = 'rotate(180deg)';
 			}
 		}
+
 		setTimeout(() => {
-			if (detailsElement) {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
+			detailsElement.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
 		}, 100);
 	};
 
@@ -193,7 +198,7 @@
 			</div>
 
 			<div id="laws" data-section="laws" class="section">
-				<div class="border-b border-[var(--form-border)] lg:px-[4rem]">
+				<div class="border-b border-[var(--form-border)]">
 					<ThingsYouShould
 						thinkKnow={{
 							heading: content.laws.heading,
@@ -208,14 +213,14 @@
 
 			<div id="document" data-section="document" class="section">
 				<AboveTitleWithoutIconCard contents={content.document.contents}>
-					<p class="typography-body-sm text-[var(--form-text-secondary)]">
+					<p class="typography-body-md text-[var(--form-text-secondary)]">
 						{@html content.document.proTip}
 					</p>
 				</AboveTitleWithoutIconCard>
 			</div>
 
 			<div id="charges" data-section="charges" class="section">
-				<div class="border-b border-[var(--form-border)] lg:px-[4rem]">
+				<div class="border-b border-[var(--form-border)]">
 					<TwoColumn
 						cardImage={content.charges.cardImage}
 						cardAltName={content.charges.cardAltName}
@@ -237,7 +242,7 @@
 			</div>
 
 			<div id="possession" data-section="possession" class="section">
-				<div class="border-b border-[var(--form-border)] lg:px-[4rem]">
+				<div class="border-b border-[var(--form-border)]">
 					<ThingsYouShould
 						thinkKnow={{
 							heading: content.possession.heading,
@@ -252,7 +257,7 @@
 
 			<div id="pitfalls" data-section="pitfalls" class="section">
 				<TwoColumnWithImage contents={content.pitfalls}>
-					<div class="typography-body-sm flex flex-col gap-4 text-[var(--form-text-secondary)]">
+					<div class="typography-body-md flex flex-col gap-4 text-[var(--form-text-secondary)]">
 						<p>{content.pitfalls.para}</p>
 						<div class="space-y-4">
 							<h3 class="typography-h3 font-semibold text-[var(--form-text)]">
@@ -290,7 +295,7 @@
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
 							<div class="justify-self-end text-[var(--form-text)]">
-								<ChevronDown />
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
@@ -308,7 +313,7 @@
 					{:else if index === 1}
 						<div id="document" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
 							<AboveTitleWithoutIconCard contents={content.document.contents}>
-								<p class="typography-body-sm text-[var(--form-text-secondary)]">
+								<p class="typography-body-md text-[var(--form-text-secondary)]">
 									{@html content.document.proTip}
 								</p>
 							</AboveTitleWithoutIconCard>
@@ -320,7 +325,10 @@
 								cardAltName={content.charges.cardAltName}
 								cardHeading={content.charges.cardHeading}
 							>
-								<div class="typography-body-md space-y-6 text-[var(--form-text-secondary)]" slot="list">
+								<div
+									class="typography-body-md space-y-6 text-[var(--form-text-secondary)]"
+									slot="list"
+								>
 									<p>{content.charges.para1}</p>
 									<ul class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]">
 										<div>
@@ -369,7 +377,7 @@
 			{/each}
 		</div>
 
-		<div slot="secondary" class="px-2">
+		<div slot="secondary">
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouShould
@@ -378,6 +386,7 @@
 					paraGraph: content.common_components.thinkYouShouldKnow.bullets
 				}}
 				disc="list-decimal"
+				containerClass="lg:px-0"
 			/>
 		</div>
 	</NewPageLayout>

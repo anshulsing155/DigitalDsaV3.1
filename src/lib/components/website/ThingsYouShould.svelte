@@ -22,17 +22,24 @@
 		disc?: string;
 		isBorder?: boolean;
 		colSpan?: number;
+		containerClass?: string;
 	};
 
-	const { thinkKnow = {}, disc = 'list-disc', isBorder = false, colSpan = 8 }: Props = $props();
+	const {
+		thinkKnow = {},
+		disc = 'list-disc',
+		isBorder = false,
+		colSpan = 8,
+		containerClass = 'lg:px-16'
+	}: Props = $props();
 </script>
 
 <section
 	class="w-full {isBorder
 		? 'border-b border-[var(--form-border)]'
-		: 'border-b-0'} bg-[var(--landing-bg)] px-[0.5rem] py-16 pb-4 lg:px-16 lg:py-0 lg:pt-16 lg:pb-0 lg:pb-32"
+		: 'border-b-0'} bg-[var(--landing-bg)] px-[0.5rem] py-16 pb-4 lg:py-0 lg:pt-16 lg:pb-0 lg:pb-32 {containerClass}"
 >
-	<div class="grid grid-cols-12 gap-8">
+	<div class="grid lg:grid-cols-12 gap-4 lg:gap-8">
 		{#if thinkKnow.heading}
 			<div class="col-span-12 lg:col-span-4">
 				<h2 class="typography-h2-md text-[var(--form-text)]">
@@ -42,9 +49,9 @@
 		{/if}
 
 		<div
-			class={`col-span-12 min-w-0 lg:col-span-${colSpan} typography-body-md text-[var(--form-text-secondary)]`}
+			class={`typography-body-md col-span-12 text-[var(--form-text-secondary)] lg:col-span-8`}
 		>
-			<div class="flex min-w-0 flex-col gap-6">
+			<div class="flex flex-col gap-6">
 				{#if thinkKnow.subHeading}
 					<h3 class="typography-body-lg font-semibold text-[var(--form-text)]">
 						{@html thinkKnow.subHeading}
@@ -64,7 +71,7 @@
 				{/if}
 
 				{#if thinkKnow.paraGraph}
-					<ul class={`list-disc space-y-4 pl-5 ${disc}`}>
+					<ul class={`list-disc space-y-4 pl-4 ${disc}`}>
 						{#each thinkKnow.paraGraph as para}
 							<li class="break-words">
 								{@html para}

@@ -44,7 +44,7 @@
 			<div class="bg-dividerColor h-[1px] w-full"></div>
 
       <div
-        class="flex flex-col items-center justify-center gap-2 px-[1rem] py-4 text-center lg:px-[4rem] typography-label-description !text-[var(--form-text-secondary)]"
+        class="flex flex-col items-center justify-center gap-2 px-[1rem] py-4 text-center lg:px-[4rem] typography-body-sm !text-[var(--form-text-secondary)]"
       >
         <p>
           {ownershipText}
