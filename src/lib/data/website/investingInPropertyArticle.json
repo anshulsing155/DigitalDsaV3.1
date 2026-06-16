@@ -13,7 +13,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare rates",
@@ -45,7 +46,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare rates",

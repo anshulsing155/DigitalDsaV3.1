@@ -268,7 +268,7 @@ window.removeEventListener("scroll", handleScroll);
           reverse: true,
         }}
       >
-        <div class="typography-body-sm text-text-light">
+        <div class="typography-body-md text-[var(--form-text-secondary)]">
           <ul class="list-disc text-gray-700 space-y-4">
             <li class="flex items-start gap-1">
               <img src="/icons/circle-check.svg" alt="circle-check-icon" class="h-4 mt-1" />
@@ -331,7 +331,7 @@ window.removeEventListener("scroll", handleScroll);
     </div>
     <ButtonBanner
       contents={{
-        heading: `Struggling with loan approval due to <span class="underline decoration-btnBg underline-offset-4"> low ITR</span> ? `,
+        heading: `Struggling with loan approval due to <span class="underline decoration-primary underline-offset-4"> low ITR</span> ? `,
         btnName: "Get help",
         BtnBorder: `#4F4C4D`,
         btnColor: "#ffcc00",

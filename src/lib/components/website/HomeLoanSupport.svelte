@@ -192,7 +192,7 @@
 
 			<div id="steps" data-section="steps">
 				<TwoColumnWithImage contents={content.steps.contents}>
-					<div class="typography-body-sm text-text-light">
+					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="list-disc space-y-4">
 							{#each content.steps.list as item}
 								<li
@@ -257,7 +257,7 @@
 					{:else if index == 3}
 						<div id="steps" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithImage contents={content.steps.contents}>
-								<div class="typography-body-sm text-text-light">
+								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="list-disc space-y-4">
 										{#each content.steps.list as item}
 											<li class="flex items-start gap-1">

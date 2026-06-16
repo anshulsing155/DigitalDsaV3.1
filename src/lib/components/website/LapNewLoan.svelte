@@ -181,7 +181,7 @@
         <ThreeColumWithLeftHeading contents={content.eligibility.contents} />
 
         <TwoColumnWithImage contents={content.eligibility.whatWeProvide.contents}>
-          <div class="typography-body-sm text-text-light">
+          <div class="typography-body-md text-[var(--form-text-secondary)]">
             <ul class="list-disc pl-2 space-y-4">
               {#each content.eligibility.whatWeProvide.list as item}
                 <li class="flex items-start gap-1">
@@ -244,7 +244,7 @@
               <ThreeColumWithLeftHeading contents={content.eligibility.contents} />
 
               <TwoColumnWithImage contents={content.eligibility.whatWeProvide.contents}>
-                <div class="typography-body-sm text-text-light">
+                <div class="typography-body-md text-[var(--form-text-secondary)]">
                   <ul class="list-disc pl-2 space-y-4">
                     {#each content.eligibility.whatWeProvide.list as item}
                       <li class="flex items-start gap-1">

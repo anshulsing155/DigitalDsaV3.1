@@ -263,7 +263,7 @@ window.removeEventListener("scroll", handleScroll);
             >
               <p>Lending Risks</p>
               <span
-                class="underline decoration-4 underline-offset-4 decoration-btnBg"
+                class="underline decoration-4 underline-offset-4 decoration-primary"
                 >The Breakdown</span
               >
             </h2>
@@ -474,7 +474,7 @@ window.removeEventListener("scroll", handleScroll);
                   >
                     <p>Lending Risks</p>
                     <span
-                      class="underline decoration-4 underline-offset-4 decoration-btnBg"
+                      class="underline decoration-4 underline-offset-4 decoration-primary"
                       >The Breakdown</span
                     >
                   </h2>

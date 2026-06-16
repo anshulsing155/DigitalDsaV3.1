@@ -22,7 +22,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare rates",
@@ -41,7 +42,11 @@
 			{ "name": "Tools & calculators", "targetId": "tools" }
 		],
 		"actionBtns": [
-			{ "btnName": "Book appointment", "btnLink": "/appointment" },
+			{
+				"btnName": "Book appointment",
+				"btnLink": "/appointment",
+				"btnClass": "btn-secondary w-full"
+			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
@@ -72,11 +77,26 @@
 			"cardAltName": "employees-figure",
 			"cardHeading": "How we Help",
 			"items": [
-				{ "bold": "Compare offers from multiple banks/NBFCs:", "text": " Help users choose the best interest rate and tenure." },
-				{ "bold": "Transparency & zero spam policy:", "text": " No contact required upfront; no spam calls." },
-				{ "bold": "Easy-to-use tools:", "text": " Use our calculators to determine your eligibility, affordability, and EMI for plot loan." },
-				{ "bold": "Assured cashback offers:", "text": " Mention any ongoing cashback promotions or benefits for applying via your platform." },
-				{ "bold": "Doorstep Services:", "text": " Highlight your convenience factor, like document collection and processing from home." }
+				{
+					"bold": "Compare offers from multiple banks/NBFCs:",
+					"text": " Help users choose the best interest rate and tenure."
+				},
+				{
+					"bold": "Transparency & zero spam policy:",
+					"text": " No contact required upfront; no spam calls."
+				},
+				{
+					"bold": "Easy-to-use tools:",
+					"text": " Use our calculators to determine your eligibility, affordability, and EMI for plot loan."
+				},
+				{
+					"bold": "Assured cashback offers:",
+					"text": " Mention any ongoing cashback promotions or benefits for applying via your platform."
+				},
+				{
+					"bold": "Doorstep Services:",
+					"text": " Highlight your convenience factor, like document collection and processing from home."
+				}
 			]
 		}
 	},
@@ -117,16 +137,46 @@
 			"xlGridCol": 3,
 			"borderBottom": true,
 			"cards": [
-				{ "heading": "Verify title and ownership", "para": "Ensure that the title deed is genuine and that the seller is the rightful owner by checking government records.", "icon": "/icons/ownership.svg", "altName": "owner-icon" },
-				{ "heading": "Confirm boundaries​​", "para": "Check that the plot's boundaries are clearly marked and free from any encroachments.", "icon": "/icons/boundaries.svg", "altName": "boundary-icon" },
-				{ "heading": "Review documentation​", "para": "Make sure all documents—such as sale deeds, land records, and approvals—are complete and authentic.", "icon": "/icons/financialProfile.svg", "altName": "profile-icon" },
-				{ "heading": "Check regulatory approvals", "para": "Verify that the plot has the necessary clearances, including land use conversion and zoning permissions.​", "icon": "/icons/inte.svg", "altName": "inte-icon" },
-				{ "heading": "Avoid double selling​", "para": "Confirm that the plot isn't being sold to multiple buyers at the same time.", "icon": "/icons/contact.svg", "altName": "contact-icon" },
-				{ "heading": "Choose reputable agents​", "para": "Work with trusted brokers or developers to reduce the risk of misrepresentation or fraudulent practices.", "icon": "/icons/people.svg", "altName": "offers-icon" }
+				{
+					"heading": "Verify title and ownership",
+					"para": "Ensure that the title deed is genuine and that the seller is the rightful owner by checking government records.",
+					"icon": "/icons/ownership.svg",
+					"altName": "owner-icon"
+				},
+				{
+					"heading": "Confirm boundaries​​",
+					"para": "Check that the plot's boundaries are clearly marked and free from any encroachments.",
+					"icon": "/icons/boundaries.svg",
+					"altName": "boundary-icon"
+				},
+				{
+					"heading": "Review documentation​",
+					"para": "Make sure all documents—such as sale deeds, land records, and approvals—are complete and authentic.",
+					"icon": "/icons/financialProfile.svg",
+					"altName": "profile-icon"
+				},
+				{
+					"heading": "Check regulatory approvals",
+					"para": "Verify that the plot has the necessary clearances, including land use conversion and zoning permissions.​",
+					"icon": "/icons/inte.svg",
+					"altName": "inte-icon"
+				},
+				{
+					"heading": "Avoid double selling​",
+					"para": "Confirm that the plot isn't being sold to multiple buyers at the same time.",
+					"icon": "/icons/contact.svg",
+					"altName": "contact-icon"
+				},
+				{
+					"heading": "Choose reputable agents​",
+					"para": "Work with trusted brokers or developers to reduce the risk of misrepresentation or fraudulent practices.",
+					"icon": "/icons/people.svg",
+					"altName": "offers-icon"
+				}
 			]
 		},
 		"cta": {
-			"heading": "Get hassle-free plot loans with <span class='underline decoration-4 underline-offset-4 decoration-btnBg'>digitalDSA!</span>",
+			"heading": "Get hassle-free plot loans with <span class='underline decoration-4 underline-offset-4 decoration-primary'>digitalDSA!</span>",
 			"secHeading": "Own your plot with the best loan options",
 			"secPara": "Avoid rejection, delays and hidden charges with expert guidance, complete documentation, and transparent terms. Apply with confidence and secure your loan smoothly.",
 			"btnName": "Compare rates",
@@ -167,10 +217,38 @@
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
-				{ "heading": "Know How Long Your Savings Will Last", "para": "Determine how many years your savings can support your lifestyle.", "icon": "/icons/clock.svg", "altName": "clock-icon", "linkName": "Check Your Savings Longevity", "url": "/money-map/how-long-will-your-savings-support-you" },
-				{ "heading": "Track Your Progress Towards Your Goal​", "para": "Estimate the time required to reach your financial milestones.", "icon": "/icons/phoneConnection.svg", "altName": "phoneConnection-icon", "linkName": "Plan Your Savings Journey", "url": "/money-map/how-long-will-it-take-to-save" },
-				{ "heading": "Set a Target for Retirement Savings​​", "para": "Calculate the amount needed for a secure and comfortable retirement.", "icon": "/icons/negotiate.svg", "altName": "negotiate-icon", "linkName": "Plan Your Retirement Fund", "url": "/money-map/how-much-to-save-by-retirement" },
-				{ "heading": "Grow Your Savings with Consistency​", "para": "See how regular contributions can maximize your savings over time.", "icon": "/icons/coinHouse.svg", "altName": "coinHouse-icon", "linkName": "Calculate Your Future Savings", "url": "/money-map/how-much-can-i-save-with-regular-contributions" }
+				{
+					"heading": "Know How Long Your Savings Will Last",
+					"para": "Determine how many years your savings can support your lifestyle.",
+					"icon": "/icons/clock.svg",
+					"altName": "clock-icon",
+					"linkName": "Check Your Savings Longevity",
+					"url": "/money-map/how-long-will-your-savings-support-you"
+				},
+				{
+					"heading": "Track Your Progress Towards Your Goal​",
+					"para": "Estimate the time required to reach your financial milestones.",
+					"icon": "/icons/phoneConnection.svg",
+					"altName": "phoneConnection-icon",
+					"linkName": "Plan Your Savings Journey",
+					"url": "/money-map/how-long-will-it-take-to-save"
+				},
+				{
+					"heading": "Set a Target for Retirement Savings​​",
+					"para": "Calculate the amount needed for a secure and comfortable retirement.",
+					"icon": "/icons/negotiate.svg",
+					"altName": "negotiate-icon",
+					"linkName": "Plan Your Retirement Fund",
+					"url": "/money-map/how-much-to-save-by-retirement"
+				},
+				{
+					"heading": "Grow Your Savings with Consistency​",
+					"para": "See how regular contributions can maximize your savings over time.",
+					"icon": "/icons/coinHouse.svg",
+					"altName": "coinHouse-icon",
+					"linkName": "Calculate Your Future Savings",
+					"url": "/money-map/how-much-can-i-save-with-regular-contributions"
+				}
 			]
 		},
 		"calculators": {
@@ -178,10 +256,30 @@
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
-				{ "heading": "How much can I borrow?", "icon": "/icons/calc.svg", "iconAltName": "icon-calc", "url": "/calculators/eligibility-calculator" },
-				{ "heading": "Plot loan repayments calculator", "icon": "/icons/lap.svg", "iconAltName": "loan-icon", "url": "/planners/part-payment-planner" },
-				{ "heading": "Stamp duty calculator", "icon": "/icons/apply.svg", "iconAltName": "icons-apply", "url": "/calculators/stamp-duty-calculator" },
-				{ "heading": "Balance transfer calculator", "icon": "/icons/calc.svg", "iconAltName": "icons-calc", "url": "/calculators/balance-transfer-calculator" }
+				{
+					"heading": "How much can I borrow?",
+					"icon": "/icons/calc.svg",
+					"iconAltName": "icon-calc",
+					"url": "/calculators/eligibility-calculator"
+				},
+				{
+					"heading": "Plot loan repayments calculator",
+					"icon": "/icons/lap.svg",
+					"iconAltName": "loan-icon",
+					"url": "/planners/part-payment-planner"
+				},
+				{
+					"heading": "Stamp duty calculator",
+					"icon": "/icons/apply.svg",
+					"iconAltName": "icons-apply",
+					"url": "/calculators/stamp-duty-calculator"
+				},
+				{
+					"heading": "Balance transfer calculator",
+					"icon": "/icons/calc.svg",
+					"iconAltName": "icons-calc",
+					"url": "/calculators/balance-transfer-calculator"
+				}
 			]
 		},
 		"buttonBanner": {
@@ -210,10 +308,34 @@
 				"xlGridCol": 4,
 				"borderBottom": true,
 				"cards": [
-					{ "heading": "Book an </br> appointment", "para": "Book instantly to speak to a plot loan specialist at a time that suits you", "icon": "/icons/appointment.svg", "altName": "appointment Icon", "url": "/appointment" },
-					{ "heading": "Check loan offers", "para": "In as little as 10 minutes and tailored exactly as per your financial profile.", "icon": "/icons/manageLoan2.svg", "altName": "Alert Icon", "url": "/get-started/how-can-we-help" },
-					{ "heading": "Contact us", "para": "Fast-track your call and connect with a specialist in the DigitalDSA.", "icon": "/icons/contact.svg", "altName": "Alert Icon", "url": "/contact" },
-					{ "heading": "Message us", "para": "Get instant help from our online assistants or chat to a specialist.", "icon": "/icons/msg.svg", "altName": "Alert Icon", "url": "/contact" }
+					{
+						"heading": "Book an </br> appointment",
+						"para": "Book instantly to speak to a plot loan specialist at a time that suits you",
+						"icon": "/icons/appointment.svg",
+						"altName": "appointment Icon",
+						"url": "/appointment"
+					},
+					{
+						"heading": "Check loan offers",
+						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"icon": "/icons/manageLoan2.svg",
+						"altName": "Alert Icon",
+						"url": "/get-started/how-can-we-help"
+					},
+					{
+						"heading": "Contact us",
+						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+						"icon": "/icons/contact.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					},
+					{
+						"heading": "Message us",
+						"para": "Get instant help from our online assistants or chat to a specialist.",
+						"icon": "/icons/msg.svg",
+						"altName": "Alert Icon",
+						"url": "/contact"
+					}
 				]
 			}
 		},

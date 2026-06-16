@@ -116,7 +116,7 @@
     ]
   },
   "buttonBannerITR": {
-    "heading": "Struggling with loan approval due to <span class=\"underline decoration-btnBg underline-offset-4\">low ITR</span>?",
+    "heading": "Struggling with loan approval due to <span class=\"underline decoration-primary underline-offset-4\">low ITR</span>?",
     "btnName": "Get Help",
     "btnClass": "btn-secondary",
     "btnClass": "btn-primary w-full"

@@ -227,7 +227,7 @@
 
 			<div id="help" data-section="help">
 				<TwoColumnWithImage contents={content.help.contents}>
-					<div class="typography-body-sm text-text-light">
+					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="list-disc space-y-4 typography-body-md text-text-light">
 							{#each content.help.list as item}
 								<li class="flex items-start gap-2">
@@ -308,7 +308,7 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithImage contents={content.help.contents}>
-								<div class="typography-body-sm text-text-light">
+								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="list-disc space-y-4 typography-body-md text-text-light">
 										{#each content.help.list as item}
 											<li class="flex items-start gap-2">

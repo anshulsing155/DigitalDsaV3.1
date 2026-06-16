@@ -165,7 +165,7 @@
         <TwoColumnWithLeftHeading contents={content.isRight} />
 
         <TwoColumnWithImage contents={content.getStarted.contents}>
-          <div class="typography-body-sm text-text-light">
+          <div class="typography-body-md text-[var(--form-text-secondary)]">
             {@html content.getStarted.text}
             <Button
               link={getStartedButtonWithClicks.link}
@@ -218,7 +218,7 @@
               <TwoColumnWithLeftHeading contents={content.isRight} />
 
               <TwoColumnWithImage contents={content.getStarted.contents}>
-                <div class="typography-body-sm text-text-light">
+                <div class="typography-body-md text-[var(--form-text-secondary)]">
                   {@html content.getStarted.text}
                   <Button
                     link={getStartedButtonWithClicks.link}

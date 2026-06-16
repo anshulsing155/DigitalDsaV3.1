@@ -29,7 +29,7 @@
       <div>
         <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
           {content.comparison.heading}
-          <span class="underline decoration-4 underline-offset-4 decoration-btnBg italic">
+          <span class="underline decoration-4 underline-offset-4 decoration-primary italic">
             {content.comparison.italicHeading}
           </span>
         </h2>

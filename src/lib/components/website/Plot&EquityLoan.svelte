@@ -231,7 +231,7 @@
 
       <div id="help" data-section="help" class="section">
         <TwoColumnWithImage contents={content.howWeHelp.contents}>
-          <div class="typography-body-sm text-text-light">
+          <div class="typography-body-md text-[var(--form-text-secondary)]">
             <ul class="list-disc space-y-4">
               {#each content.howWeHelp.list as item}
                 <li class="flex items-start gap-1">
@@ -320,7 +320,7 @@
           {:else if index == 3}
             <div id="help" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
               <TwoColumnWithImage contents={content.howWeHelp.contents}>
-                <div class="typography-body-sm text-text-light">
+                <div class="typography-body-md text-[var(--form-text-secondary)]">
                   <ul class="list-disc space-y-4">
                     {#each content.howWeHelp.list as item}
                       <li class="flex items-start gap-1">

@@ -156,7 +156,7 @@
 
       <div id="howDSAHelp" data-section="howDSAHelp">
         <TwoColumnWithImage contents={content.howWeHelp.contents}>
-          <div class="typography-body-sm text-text-light">
+          <div class="typography-body-md text-[var(--form-text-secondary)]">
             <ul class="list-disc space-y-4 typography-body-md text-text-light">
               {#each content.howWeHelp.list as item}
                 <li class="flex items-start gap-2">
@@ -213,7 +213,7 @@
           {:else if index == 1}
             <div class="bg-white text-black">
               <TwoColumnWithImage contents={content.howWeHelp.contents}>
-                <div class="typography-body-sm text-text-light">
+                <div class="typography-body-md text-[var(--form-text-secondary)]">
                   <ul class="list-disc space-y-4 typography-body-md text-text-light">
                     {#each content.howWeHelp.list as item}
                       <li class="flex items-start gap-2">

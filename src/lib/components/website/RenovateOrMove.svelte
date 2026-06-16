@@ -224,10 +224,10 @@
 										<p class="mb-[1rem]">The Ultimate Comparison</p>
 										<span class="typography-body-sm text-text-light"
 											>Here's a detailed comparison of the <span
-												class="decoration-btnBg underline underline-offset-4">Home Renovation</span
+												class="decoration-primary underline underline-offset-4">Home Renovation</span
 											>
 											and
-											<span class="decoration-btnBg underline underline-offset-4"
+											<span class="decoration-primary underline underline-offset-4"
 												>New Home Purchase</span
 											> options, including financial, emotional, and practical considerations:</span
 										>

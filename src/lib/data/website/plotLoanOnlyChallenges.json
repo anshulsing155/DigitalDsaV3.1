@@ -22,7 +22,8 @@
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
-				"btnLink": "/appointment"
+				"btnLink": "/appointment",
+"btnClass":"btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare rates",
@@ -75,7 +76,7 @@
 		]
 	},
 	"challenges": {
-		"heading": "Common Challenges in <br> securing <span class=\"underline decoration-4 underline-offset-4 decoration-btnBg\">Plot-Only </span> loans",
+		"heading": "Common Challenges in <br> securing <span class=\"underline decoration-4 underline-offset-4 decoration-primary\">Plot-Only </span> loans",
 		"list": [
 			{
 				"heading": "Limited availability",

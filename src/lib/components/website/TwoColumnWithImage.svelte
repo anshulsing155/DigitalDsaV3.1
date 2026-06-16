@@ -27,7 +27,7 @@
 </script>
 
 <div
-	class="relative grid items-start gap-8 space-x-20 border-b border-[var(--form-border)] px-2 py-16 md:gap-12 lg:grid-cols-2 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
+	class="relative grid items-start gap-8 space-x-20 lg:border-b border-[var(--form-border)] px-2 py-16 md:gap-12 lg:grid-cols-2 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
 >
 	<!-- Image -->
 	<div

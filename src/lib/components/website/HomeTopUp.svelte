@@ -216,7 +216,7 @@
 
 				<div id="step" data-section="step" class="section">
 					<TwoColumnWithImage contents={content.step.guide}>
-						<div class="typography-body-sm text-text-light">
+						<div class="typography-body-md text-[var(--form-text-secondary)]">
 							<ul class="space-y-6">
 								{#each content.step.list as s}
 									<li class="">
@@ -320,7 +320,7 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithImage contents={content.step.guide}>
-								<div class="typography-body-sm text-text-light">
+								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="space-y-6">
 										{#each content.step.list as s}
 											<li class="">

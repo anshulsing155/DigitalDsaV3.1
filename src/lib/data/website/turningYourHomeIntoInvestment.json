@@ -77,7 +77,7 @@
 		],
 		"paraGraph": [
 			"If your property is worth ₹50 lakh and you still owe ₹30 lakh on your home loan, your home equity is ₹20 lakh.",
-			"This ₹20 lakh is the portion you can use to get a <span class=\"underline decoration-btnBg underline-offset-4\" > Top-Up Loan </span> or a <span class=\"underline decoration-btnBg underline-offset-4\" >Loan Against Property (LAP) </span>."
+			"This ₹20 lakh is the portion you can use to get a <span class=\"underline decoration-primary underline-offset-4\" > Top-Up Loan </span> or a <span class=\"underline decoration-primary underline-offset-4\" >Loan Against Property (LAP) </span>."
 		],
 		"isBorder": true
 	},
