@@ -13,21 +13,7 @@
     "heading": "Plot loans",
     "sourceName": "undefined",
     "originalSource": "https://assets.undefined.com.au/is/image/undefined/family-new-home?$Responsive_Align_Center_Top$&fit=constrain&wid=978&dpr=off",
-    "para": "Tools, calculators, and plot-buying guides to support you at every step of your journey. Whether you're looking for a balance transfer, upgrading or downsizing your plot, investing, or buying your first property, we’re here to help.",
-    "actionBtnsRequired": "",
-    "actionBtn": [
-      {
-        "btnName": "Explore loan offers",
-        "btnLink": "/get-started/how-can-we-help",
-        "btnClass": "btn-primary w-full",
-        "animation": true
-      },
-      {
-        "btnName": "Book an appointment",
-        "btnLink": "/appointment",
-        "btnClass": "btn-secondary w-full"
-      }
-    ]
+    "para": "Tools, calculators, and plot-buying guides to support you at every step of your journey. Whether you're looking for a balance transfer, upgrading or downsizing your plot, investing, or buying your first property, we’re here to help."
   },
   "subList": [
     {

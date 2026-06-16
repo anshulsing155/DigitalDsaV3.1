@@ -81,7 +81,7 @@
 							</ul>
 						{/if}
 
-						{#if pageData.actionBtn && pageData.hasOwnProperty('actionBtnsRequired')}
+						{#if pageData?.actionBtn && pageData.hasOwnProperty('actionBtnsRequired')}
 							<div class="mx-auto flex w-[85%] flex-col gap-4 sm:flex-row md:w-full">
 								{#if pageData.actionBtn?.length}
 									{#each pageData.actionBtn as btn}
