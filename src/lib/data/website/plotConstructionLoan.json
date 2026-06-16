@@ -230,7 +230,7 @@
 					"para": "Get funding for both land purchase and home construction with competitive interest rates and flexible repayment options. Compare lenders, explore customized loan solutions, and build your dream home with ease.",
 					"btnName": "Book an appointment",
 					"btnLink": "/appointment",
-					"btnBorder": "#4F4C4D"
+					"btnClass": "btn-secondary w-full"
 				}
 			]
 		}
@@ -254,7 +254,8 @@
 		"heading": "Explore more loan options",
 		"secPara": "Discover various loan alternatives tailored to your financial needs.",
 		"btnName": "Explore now",
-		"btnLink": "/plot-loan"
+		"btnLink": "/plot-loan",
+		"btnClass": "btn-secondary w-full"
 	},
 	"tools": {
 		"moneyMap": {
@@ -283,7 +284,7 @@
 			"heading": "Ways to pay off your plot loan faster",
 			"para": "Small changes now can mean big differences later to how much of your plot loan you end up repaying.",
 			"btnName": "Find out how",
-			"btnClass": "btn-secondary",
+			"btnClass": "btn-secondary w-full",
 			"btnLink": "/planners/both"
 		}
 	},
@@ -296,7 +297,7 @@
 			"originalSource": "www.digitaldsa.com"
 		},
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we've got you covered! Message us anytime, and we'll respond promptly.",
-		"button": { "link": "/contact", "btnClass": "btn-secondary", "btnName": "Message us" }
+		"button": { "link": "/contact", "btnClass": "btn-secondary w-full", "btnName": "Message us" }
 	},
 	"common_components": {
 		"helpList": {
