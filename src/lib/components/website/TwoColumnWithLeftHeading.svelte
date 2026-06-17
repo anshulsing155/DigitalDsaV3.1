@@ -73,7 +73,7 @@
         <div class="space-y-[2rem]">
           {#if contents.listTopPara}
             <div class="">
-              <p class="typography-body-lg !font-semibold text-[var(--form-text)]">
+              <p class="typography-body-md text-[var(--form-text-secondary)]">
                 {@html contents.listTopPara}
               </p>
             </div>
@@ -89,7 +89,7 @@
                     </span>
                   {/if}
                   {#if listItem.desc}
-                    <p class="typography-body-md">
+                    <p class="typography-body-md text-[var(--form-text-secondary)]">
                       {@html listItem.desc}
                     </p>
                   {/if}
