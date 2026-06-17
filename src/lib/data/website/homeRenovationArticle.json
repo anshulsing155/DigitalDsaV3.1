@@ -78,7 +78,7 @@
 					"heading": "❌ Avoid: <span class=\"typography-body-md\">Over the top luxury kitchen designs buyers won’t pay extra for them!</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Financing Tip:</span> A home renovation loan can cover major kitchen remodels.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Financing Tip:</span> A home renovation loan can cover major kitchen remodels.</p>"
 		},
 		"bathroom": {
 			"heading": "Bathroom Makeover: Luxury & Functionality 🚿",
@@ -100,7 +100,7 @@
 					"heading": "❌ Avoid: <span class=\"typography-body-md\">Overspending on fancy bathtubs they rarely get used!</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need financial assistance for bathroom renovations? We can guide you on affordable home improvement loans.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need financial assistance for bathroom renovations? We can guide you on affordable home improvement loans.</p>"
 		},
 		"flooring": {
 			"heading": "Flooring: The Game Changer 🏠",
@@ -119,7 +119,7 @@
 					"heading": "❌ Avoid: Going for cheap laminate flooring it looks great initially but wears out fast!"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> We can help you estimate the cost vs. benefit of different flooring options.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> We can help you estimate the cost vs. benefit of different flooring options.</p>"
 		}
 	},
 	"aesthetics": {
@@ -140,7 +140,7 @@
 					"heading": "❌ Avoid: Bright or experimental colors buyers prefer neutral tones."
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Financing Tip:</span> If you’re low on budget, start with one room at a time.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Financing Tip:</span> If you’re low on budget, start with one room at a time.</p>"
 		},
 		"balcony": {
 			"heading": "Adding a Balcony or Outdoor Space 🌿",
@@ -159,7 +159,7 @@
 					"heading": "❌ Avoid: Over-building make sure your structure can support additional weight."
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need loan assistance for bigger renovations? We can help with financial planning.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need loan assistance for bigger renovations? We can help with financial planning.</p>"
 		}
 	},
 	"structure": {
@@ -180,7 +180,7 @@
 					"heading": "❌ Avoid: Ignoring hidden problems small leaks now can lead to big expenses later!"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need funds for essential repairs? We can guide you on home renovation loans.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need funds for essential repairs? We can guide you on home renovation loans.</p>"
 		},
 		"smartHome": {
 			"heading": "Smart Home Upgrades: The Future of Living 💡",
@@ -199,7 +199,7 @@
 					"heading": "✅ Solar panels – <span class=\"typography-body-md\">Cuts down power bills.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Pro Tip:</span> A small investment in automation can give you big savings in the long run.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Pro Tip:</span> A small investment in automation can give you big savings in the long run.</p>"
 		}
 	},
 	"financing": {
@@ -220,7 +220,7 @@
 					"heading": "⭐ Using Savings – <span class=\"typography-body-md\">Ideal for small upgrades.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> We can guide you on cost-effective financing options tailored to your needs.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> We can guide you on cost-effective financing options tailored to your needs.</p>"
 		},
 		"final": {
 			"heading": "Final Thought:<br> Is Home Renovation Worth It?",

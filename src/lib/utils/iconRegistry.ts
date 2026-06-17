@@ -189,6 +189,7 @@ import {
 	BookOpen,
 	BookOpenCheck,
 	School,
+	Compass,
 
 	// Contact & Location
 	Phone,
@@ -336,7 +337,7 @@ export {
 	ShieldX,
 	ShieldMinus,
 	ShieldAlert,
-	ShieldQuestionMark,	
+	ShieldQuestionMark,
 	Wheat,
 	Laptop,
 	Gavel,
@@ -413,6 +414,7 @@ export {
 	BookOpen,
 	BookOpenCheck,
 	School,
+	Compass,
 	Phone,
 	Mail,
 	MessageSquarePlus,
@@ -441,7 +443,8 @@ export {
 	Timer,
 	Clock,
 	FlaskConical,
-	Send
+	Send,
+	Heart
 };
 
 // Icon registry for dynamic lookups
@@ -637,6 +640,7 @@ const iconRegistry: Record<string, typeof User> = {
 	BookOpen,
 	BookOpenCheck,
 	School,
+	Compass,
 
 	// Contact & Location
 	Phone,
