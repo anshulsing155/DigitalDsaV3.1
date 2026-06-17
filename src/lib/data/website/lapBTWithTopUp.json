@@ -217,7 +217,6 @@
       "para": "Compare offers, check eligibility, and apply seamlessly on DigitalDSA! 🚀",
       "btnName": "Check offers",
       "btnClass": "btn-secondary",
-      "btnClass": "btn-primary w-full"
       "btnLink": "/get-started/how-can-we-help"
     }
   },

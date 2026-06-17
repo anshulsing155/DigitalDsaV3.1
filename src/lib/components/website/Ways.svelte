@@ -13,22 +13,22 @@
 >
   {#if ways.heading}
     <h2
-      class="text-center typography-h2 text-[var(--form-text)] md:text-start"
+      class="typography-h2-md text-center text-[var(--form-text)]"
     >
       {ways.heading}
     </h2>
   {/if}
   <div class="flex flex-col md:flex-row gap-[2rem] item-center justify-center">
     {#if ways.para}
-      <p class="typography-body-lg text-[var(--form-text-secondary)] my-auto md:w-8/12 text-center">
+      <p class="typography-body-md text-[var(--form-text-secondary)] my-auto md:w-8/12 text-center">
         {ways.para}
       </p>
     {/if}
 
     <Button
       btnName={ways.btnName}
-      btnBorder={ways.btnBorder}
-      btnColor={ways.btnColor}
+      btnClass={ways.btnClass}
+      btnAnimation={ways.btnAnimation}
       link={ways.btnLink}
     />
   </div>

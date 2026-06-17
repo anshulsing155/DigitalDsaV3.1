@@ -151,7 +151,6 @@
     "button": {
       "link": "/get-started/how-can-we-help",
       "btnClass": "btn-secondary",
-      "btnClass": "btn-primary w-full"
       "btnName": "Check Offers"
     }
   },

@@ -58,7 +58,7 @@
 				class="w-full border-b border-[var(--form-border)] px-4 py-8 text-[var(--form-text)] lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
 			>
 				<div class="">
-					<h2 class="typography-h2-md mb-8 text-center text-[var(--form-text)]">
+					<h2 class=" mb-8 typography-h2-md text-center text-[var(--form-text)]">
 						Plot Loan vs Home Loan:
 						<span class="italic underline decoration-primary">Key Differences</span>
 					</h2>
