@@ -14,7 +14,8 @@
     "actionBtns": [
       {
         "btnName": "Book appointment",
-        "btnLink": "/appointment"
+        "btnLink": "/appointment",
+        "btnClass":"btn-secondary"
       },
       {
         "btnName": "Check Offers",
@@ -46,7 +47,7 @@
       {
         "btnName": "Book Appointment",
         "btnLink": "/appointment",
-        "btnColor": ""
+         "btnClass":"btn-secondary"
       },
       {
         "btnName": "Apply Online",
@@ -147,7 +148,7 @@
       "cardAltName": "housing-figure",
       "cardHeading": "Get Started with Debt Consolidation"
     },
-    "text": "<p>Assess your debts and explore options that fit your needs. Tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline underline-offset-4 hover:no-underline\">Affordability Calculator</a> and <a href=\"/calculators/balance-transfer-calculator\" class=\"underline underline-offset-4 hover:no-underline\">Balance Transfer Calculator</a> can help you figure out how much you’ll save by consolidating your debts.</p><p class=\"mt-2 mb-8\"><strong>Need assistance? </strong>Digital DSA offers expert guidance and the best loan offers tailored to your needs.</p>",
+    "text": "<p>Assess your debts and explore options that fit your needs. Tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline underline-offset-4 hover:no-underline text-[var(--ddsa-info-text)]\">Affordability Calculator</a> and <a href=\"/calculators/balance-transfer-calculator\" class=\"underline underline-offset-4 hover:no-underline text-[var(--ddsa-info-text)]\">Balance Transfer Calculator</a> can help you figure out how much you’ll save by consolidating your debts.</p><p class=\"mt-2 mb-8\"><strong>Need assistance? </strong>Digital DSA offers expert guidance and the best loan offers tailored to your needs.</p>",
     "button": {
       "link": "/get-started/how-can-we-help",
       "btnClass": "btn-secondary",
