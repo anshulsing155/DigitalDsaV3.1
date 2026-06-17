@@ -198,7 +198,7 @@
 
     <div class="flex flex-col py-[2rem] lg:py-[4rem] px-[1rem] lg:px-[4rem] gap-[1rem]">
       <h2 class="typography-h2 text-text-main">{content.conclusion.heading}</h2>
-      <p class="typography-body-sm text-text-light">{content.conclusion.text}</p>
+      <p class="typography-body-sm text-[var(--form-text-secondary)]">{content.conclusion.text}</p>
     </div>
 
     <div slot="secondary">

@@ -216,7 +216,7 @@
                           </div>
                           <a
                             href="/home-loan/home-loan-tools-calculator"
-                            class="hover:underline text-linkColor typography-body-md text-text-light"
+                            class="hover:underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                           >
                             Show me more home loan tools and calculators
                           </a>
@@ -229,7 +229,7 @@
                         >
                           <div class="flex flex-col justify-center items-center">
                             <img src={details.icon} alt="icon" />
-                            <p class="text-center typography-body-md text-text-light">
+                            <p class="text-center typography-body-md text-[var(--form-text-secondary)]">
                               {details.linkName}
                             </p>
                           </div>
@@ -244,10 +244,10 @@
                             <h3 class="typography-h3 font-semibold text-text-main">
                               {details.heading}
                             </h3>
-                            <p class="typography-body-sm text-text-light">
+                            <p class="typography-body-sm text-[var(--form-text-secondary)]">
                               {details.para}
                             </p>
-                            <a href={details.url} class="text-linkColor hover:underline typography-body-md text-text-light">
+                            <a href={details.url} class="text-linkColor hover:underline typography-body-md text-[var(--form-text-secondary)]">
                               {details.link}
                             </a>
                           </div>
@@ -263,7 +263,7 @@
                 cardAltName={content.messageUs.cardAltName}
                 cardHeading={content.messageUs.cardHeading}
               >
-                <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+                <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                   <li>{content.messageUs.text}</li>
                   <div class="w-auto">
                     <Button

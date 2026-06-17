@@ -273,7 +273,7 @@ window.removeEventListener("scroll", handleScroll);
               <PaymentTable {tableData} />
             {/each}
           </div>
-          <p class="typography-body-md text-text-light mt-14 text-center">
+          <p class="typography-body-md text-[var(--form-text-secondary)] mt-14 text-center">
             💡 <span class="font-semibold mr-2">Fun Fact :</span> Banks approve over 80% of loans for salaried professionals with stable income, but police and lawyers face higher scrutiny due to recovery risks.
           </p>
         </div>
@@ -284,7 +284,7 @@ window.removeEventListener("scroll", handleScroll);
           >
             Real-Life Scenarios: What Happened to Others
             <br /><span
-              class="typography-body-md text-text-light mt-14 text-center"
+              class="typography-body-md text-[var(--form-text-secondary)] mt-14 text-center"
               >Here’s how others navigated loan challenges</span
             >
           </p>
@@ -484,7 +484,7 @@ window.removeEventListener("scroll", handleScroll);
                     <PaymentTable {tableData} />
                   {/each}
                 </div>
-                <p class="typography-body-md text-text-light mt-14 text-center">
+                <p class="typography-body-md text-[var(--form-text-secondary)] mt-14 text-center">
                   💡 <span class="font-semibold mr-2">Fun Fact :</span> Banks approve over 80% of loans for salaried professionals with stable income, but police and lawyers face higher scrutiny due to recovery risks.
                 </p>
               </div>
@@ -495,7 +495,7 @@ window.removeEventListener("scroll", handleScroll);
                 >
                   Real-Life Scenarios: What Happened to Others
                   <br /><span
-                    class="typography-body-md text-text-light mt-14 text-center"
+                    class="typography-body-md text-[var(--form-text-secondary)] mt-14 text-center"
                     >Here’s how others navigated loan challenges</span
                   >
                 </p>

@@ -106,7 +106,7 @@
         Conclusion:
       </h2>
 
-      <p class="typography-body-md text-text-light">
+      <p class="typography-body-md text-[var(--form-text-secondary)]">
         Adjusting your budget to make room for debt repayment doesn’t have to be
         overwhelming. By cutting back on non-essential spending and prioritizing
         debt repayment, you can free up cash and make faster progress toward

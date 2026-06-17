@@ -22,7 +22,7 @@
       {homeLoanCalculator.heading}
     </h2>
     {#if homeLoanCalculator.subHeading}
-      <p class="typography-body-sm text-text-light">
+      <p class="typography-body-sm text-[var(--form-text-secondary)]">
         {@html homeLoanCalculator.subHeading}
       </p>
     {/if}
@@ -36,12 +36,12 @@
         <div class="space-y-5">
           <h3 class="typography-h3 font-semibold text-miniSubHead">{@html item.Heading}</h3>
           {#if item.paragraph}
-            <p class="typography-body-sm text-text-light">
+            <p class="typography-body-sm text-[var(--form-text-secondary)]">
               {@html item.paragraph}
             </p>
           {/if}
           {#if item.paragraphAfterChange}
-            <p class="typography-body-sm text-text-light">
+            <p class="typography-body-sm text-[var(--form-text-secondary)]">
               {@html item.paragraphAfterChange}
             </p>
           {/if}
@@ -50,7 +50,7 @@
         {#if item.btnBorder}
           <div class="w-full">
             <button
-              class="w-full rounded-full border px-[3rem] py-3 typography-body-md text-text-light hover:opacity-90 md:w-auto"
+              class="w-full rounded-full border px-[3rem] py-3 typography-body-md text-[var(--form-text-secondary)] hover:opacity-90 md:w-auto"
               style={`border-color: ${item.btnBorder};`}
             >
               <a href={item.url}>{item.btnText}</a>
@@ -61,12 +61,12 @@
             href={item.url}
             class:text-linkColor={item.url !== ""}
             class:text-dangerColor={!item.url}
-            class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline"
+            class="typography-body-md text-[var(--form-text-secondary)] underline underline-offset-4 hover:no-underline"
             >{item.btnText}</a
           >
         {:else if item.btnChangeAfter}
           <span
-            class="typography-body-md text-text-light text-underline underline-black underline-offset-4"
+            class="typography-body-md text-[var(--form-text-secondary)] text-underline underline-black underline-offset-4"
             >{item.btnChangeAfter}</span
           >
         {:else if item.btn}
@@ -80,7 +80,7 @@
         {#if item.list}
           <div class="flex flex-col justify-start gap-2">
             {#each item.list as list}
-              <li class="typography-body-sm text-text-light">
+              <li class="typography-body-sm text-[var(--form-text-secondary)]">
                 <a
                   class="text-linkColor underline underline-offset-4 hover:no-underline"
                   href={list.link}>{@html list.btnText}</a

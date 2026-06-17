@@ -307,7 +307,7 @@ window.removeEventListener("scroll", handleScroll);
               </h2>
 
               <div class="col-span-3">
-                <p class="typography-body-md text-text-light pb-[1rem]">
+                <p class="typography-body-md text-[var(--form-text-secondary)] pb-[1rem]">
                     Equity calculation example:
                 </p>
                 {#each calcList as list}
@@ -317,7 +317,7 @@ window.removeEventListener("scroll", handleScroll);
                         class="col-span-1 flex items-center justify-center text-white bg-darkColor rounded-full w-[2rem] h-[2rem]"
                         >{list.num}</span
                       >
-                      <p class="col-span-9 typography-body-md text-text-light">
+                      <p class="col-span-9 typography-body-md text-[var(--form-text-secondary)]">
                         {list.text}
                       </p>
                     </div>
@@ -382,7 +382,7 @@ window.removeEventListener("scroll", handleScroll);
               </h2>
 
               <div class="col-span-3">
-                <p class="typography-body-md text-text-light pb-[1rem]">
+                <p class="typography-body-md text-[var(--form-text-secondary)] pb-[1rem]">
                     Equity calculation example:
                 </p>
                 {#each calcList as list}
@@ -392,7 +392,7 @@ window.removeEventListener("scroll", handleScroll);
                         class="col-span-1 xs:col-span-1 flex items-center justify-center text-white bg-darkColor rounded-full w-[2rem] h-[2rem]"
                         >{list.num}</span
                       >
-                      <p class="col-span-7 xs:col-span-9 typography-body-md text-text-light">
+                      <p class="col-span-7 xs:col-span-9 typography-body-md text-[var(--form-text-secondary)]">
                         {list.text}
                       </p>
                     </div>
@@ -416,7 +416,7 @@ window.removeEventListener("scroll", handleScroll);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] typography-body-md text-text-light"
+            class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
             slot="list"
           >
             <li>

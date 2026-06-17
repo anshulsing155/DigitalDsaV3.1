@@ -149,7 +149,7 @@
                 <h2 class="typography-h2 text-text-main">
                   Shop till you drop
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   We want to make sure you get the best deals when you shop.
                   That’s why we’ve partnered with Australia’s biggest brands to
                   give you personalised cashback rewards, helping you save when
@@ -165,7 +165,7 @@
                     <div>
                       <img src={items.icon} alt={items.altName} />
                     </div>
-                    <div class="typography-body-md text-text-light flex flex-col gap-3 p-4">
+                    <div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-3 p-4">
                       <h3 class="font-semibold text-miniSubHead">
                         {items.title}
                       </h3>
@@ -210,7 +210,7 @@
                 <h2 class="typography-h2 text-text-main">
                   There’s no place like home
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   Looking for a new home? Moving into a new home? Or just
                   looking for a better NBN and electricity deal? We’ve got you
                   covered.
@@ -223,7 +223,7 @@
                     <div>
                       <img src={items.icon} alt={items.altName} />
                     </div>
-                    <div class="typography-body-md text-text-light flex flex-col gap-3 p-4">
+                    <div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-3 p-4">
                       <h3 class="font-semibold text-miniSubHead">
                         {items.title}
                       </h3>
@@ -268,7 +268,7 @@
                 <h2 class="typography-h2 text-text-main">
                   Control what matters to you
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   We can help you feel in control of your money and more protected when it comes to your credit score. Take a look at our current partners supporting you in the finance space.
                 </p>
               </div>
@@ -279,7 +279,7 @@
                     <div>
                       <img src={items.icon} alt={items.altName} />
                     </div>
-                    <div class="typography-body-md text-text-light flex flex-col gap-3 p-4">
+                    <div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-3 p-4">
                       <h3 class="font-semibold text-miniSubHead">
                         {items.title}
                       </h3>
@@ -324,7 +324,7 @@
               cardAltName={content.businessPartnerships.cardAltName}
               cardHeading={content.businessPartnerships.cardHeading}
             >
-              <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+              <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                 <li>
                   {content.businessPartnerships.text}
                 </li>
@@ -385,7 +385,7 @@
                     <h2 class="typography-h2 text-text-main">
                       Shop till you drop
                     </h2>
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       We want to make sure you get the best deals when you shop.
                       That’s why we’ve partnered with Australia’s biggest brands to
                       give you personalised cashback rewards, helping you save when
@@ -401,7 +401,7 @@
                         <div>
                           <img src={items.icon} alt={items.altName} />
                         </div>
-                        <div class="typography-body-md text-text-light flex flex-col gap-3 p-4">
+                        <div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-3 p-4">
                           <h3 class="font-semibold text-miniSubHead">
                             {items.title}
                           </h3>
@@ -446,7 +446,7 @@
                     <h2 class="typography-h2 text-text-main">
                       There’s no place like home
                     </h2>
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       Looking for a new home? Moving into a new home? Or just
                       looking for a better NBN and electricity deal? We’ve got you
                       covered.
@@ -459,7 +459,7 @@
                         <div>
                           <img src={items.icon} alt={items.altName} />
                         </div>
-                        <div class="typography-body-md text-text-light flex flex-col gap-3 p-4">
+                        <div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-3 p-4">
                           <h3 class="font-semibold text-miniSubHead">
                             {items.title}
                           </h3>
@@ -504,7 +504,7 @@
                     <h2 class="typography-h2 text-text-main">
                       Control what matters to you
                     </h2>
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       We can help you feel in control of your money and more protected when it comes to your credit score. Take a look at our current partners supporting you in the finance space.
                     </p>
                   </div>
@@ -515,7 +515,7 @@
                         <div>
                           <img src={items.icon} alt={items.altName} />
                         </div>
-                        <div class="typography-body-md text-text-light flex flex-col gap-3 p-4">
+                        <div class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-3 p-4">
                           <h3 class="font-semibold text-miniSubHead">
                             {items.title}
                           </h3>
@@ -560,7 +560,7 @@
                   cardAltName={content.businessPartnerships.cardAltName}
                   cardHeading={content.businessPartnerships.cardHeading}
                 >
-                  <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+                  <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                     <li>
                       {content.businessPartnerships.text}
                     </li>

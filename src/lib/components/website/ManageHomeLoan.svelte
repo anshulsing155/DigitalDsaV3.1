@@ -124,11 +124,11 @@
                       <h3 class="typography-h3 font-semibold text-text-main">
                         {data1.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">
                         {data1.para}
                       </p>
                       <div>
-                        <p class="mb-2 typography-body-md text-text-light">
+                        <p class="mb-2 typography-body-md text-[var(--form-text-secondary)]">
                           {data1.listHeading}
                         </p>
                         <ul class="list-disc pl-4 flex flex-col gap-2">
@@ -139,7 +139,7 @@
                       </div>
                       <a
                         href={data1.url}
-                        class="typography-body-md text-text-light text-linkColor underline"
+                        class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                       >{data1.link}</a>
                       <div>
                         <Button
@@ -155,12 +155,12 @@
                       <h3 class="typography-h3 font-semibold text-text-main">
                         {data2.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">
                         {data2.para}
                       </p>
                       <a
                         href={data2.url}
-                        class="typography-body-md text-text-light text-linkColor underline"
+                        class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                       >{data2.link}</a>
                       <div>
                         <Button
@@ -176,12 +176,12 @@
                       <h3 class="typography-h3 font-semibold text-text-main">
                         {data3.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">
                         {data3.para}
                       </p>
                       <a
                         href={data3.url}
-                        class="typography-body-md text-text-light text-linkColor underline"
+                        class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                       >{data3.link}</a>
                     </div>
                   {/each}
@@ -199,10 +199,10 @@
             </h2>
             {#each content.offset.data as data}
               <div class="col-span-2 grid gap-4">
-                <p class="typography-body-sm text-text-light">{data.desc}</p>
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">{data.desc}</p>
                 <a
                   href={data.url}
-                  class="typography-body-md text-text-light text-linkColor underline"
+                  class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                 >{data.linkName}</a>
                 <div>
                   <Button
@@ -234,12 +234,12 @@
                     <h3 class="typography-h3 font-semibold text-text-main">
                       {data.heading}
                     </h3>
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       {data.para}
                     </p>
                     <a
                       href={data.url}
-                      class="typography-body-md text-text-light text-linkColor underline"
+                      class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                     >{data.link}</a>
                   </div>
                 {/each}
@@ -270,14 +270,14 @@
                       <li>
                         <a
                           href={item.link}
-                          class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline text-linkColor"
+                          class="typography-body-md text-[var(--form-text-secondary)] underline underline-offset-4 hover:no-underline text-linkColor"
                         >{item.title}</a>
                       </li>
                     {/each}
                   </ul>
                   <a
                     href={content.support.url}
-                    class="typography-body-md text-text-light text-linkColor"
+                    class="typography-body-md text-[var(--form-text-secondary)] text-linkColor"
                   >{content.support.btnName}</a>
                 </div>
                 <div class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor">
@@ -286,7 +286,7 @@
                   </h3>
                   <a
                     href="/"
-                    class="typography-body-md text-text-light text-linkColor"
+                    class="typography-body-md text-[var(--form-text-secondary)] text-linkColor"
                   >Tell me more</a>
                 </div>
                 <div class="space-y-6">
@@ -316,7 +316,7 @@
               cardHeading={content.payOffSooner.cardHeading}
               reverse
             >
-              <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+              <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                 <li>{content.payOffSooner.text}</li>
               </ul>
             </TwoColumn>
@@ -326,7 +326,7 @@
               cardAltName={content.messageUs.cardAltName}
               cardHeading={content.messageUs.cardHeading}
             >
-              <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+              <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                 <li>
                   {content.messageUs.text}
                 </li>
@@ -348,10 +348,10 @@
                         {data.heading}
                       </h3>
                     {/if}
-                    <p class="typography-body-sm text-text-light">{data.desc}</p>
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">{data.desc}</p>
                     <a
                       href={data.url}
-                      class="typography-body-md text-text-light text-linkColor underline"
+                      class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                     >{data.linkName}</a>
                   </div>
                 {/each}
@@ -388,11 +388,11 @@
                             <h3 class="typography-h3 font-semibold text-text-main">
                               {data1.heading}
                             </h3>
-                            <p class="typography-body-sm text-text-light">
+                            <p class="typography-body-sm text-[var(--form-text-secondary)]">
                               {data1.para}
                             </p>
                             <div>
-                              <p class="mb-2 typography-body-md text-text-light">
+                              <p class="mb-2 typography-body-md text-[var(--form-text-secondary)]">
                                 {data1.listHeading}
                               </p>
                               <ul class="list-disc pl-4 flex flex-col gap-2">
@@ -403,7 +403,7 @@
                             </div>
                             <a
                               href={data1.url}
-                              class="typography-body-md text-text-light text-linkColor underline"
+                              class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                             >{data1.link}</a>
                             <div>
                               <Button
@@ -419,12 +419,12 @@
                             <h3 class="typography-h3 font-semibold text-text-main">
                               {data2.heading}
                             </h3>
-                            <p class="typography-body-sm text-text-light">
+                            <p class="typography-body-sm text-[var(--form-text-secondary)]">
                               {data2.para}
                             </p>
                             <a
                               href={data2.url}
-                              class="typography-body-md text-text-light text-linkColor underline"
+                              class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                             >{data2.link}</a>
                             <div>
                               <Button
@@ -440,12 +440,12 @@
                             <h3 class="typography-h3 font-semibold text-text-main">
                               {data3.heading}
                             </h3>
-                            <p class="typography-body-sm text-text-light">
+                            <p class="typography-body-sm text-[var(--form-text-secondary)]">
                               {data3.para}
                             </p>
                             <a
                               href={data3.url}
-                              class="typography-body-md text-text-light text-linkColor underline"
+                              class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                             >{data3.link}</a>
                           </div>
                         {/each}
@@ -461,12 +461,12 @@
                     </h2>
                     {#each content.offset.data as data}
                       <div class="lg:col-span-2 grid gap-[1.5rem]">
-                        <p class="typography-body-sm text-text-light">
+                        <p class="typography-body-sm text-[var(--form-text-secondary)]">
                           {data.desc}
                         </p>
                         <a
                           href={data.url}
-                          class="typography-body-md text-text-light text-linkColor underline"
+                          class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                         >{data.linkName}</a>
                         <div>
                           <Button
@@ -499,12 +499,12 @@
                           <h3 class="typography-h3 font-semibold text-text-main">
                             {data.heading}
                           </h3>
-                          <p class="typography-body-sm text-text-light">
+                          <p class="typography-body-sm text-[var(--form-text-secondary)]">
                             {data.para}
                           </p>
                           <a
                             href={data.url}
-                            class="typography-body-md text-text-light text-linkColor underline"
+                            class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                           >{data.link}</a>
                         </div>
                       {/each}
@@ -535,14 +535,14 @@
                             <li>
                               <a
                                 href={item.link}
-                                class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline text-linkColor"
+                                class="typography-body-md text-[var(--form-text-secondary)] underline underline-offset-4 hover:no-underline text-linkColor"
                               >{item.title}</a>
                             </li>
                           {/each}
                         </ul>
                         <a
                           href={content.support.url}
-                          class="typography-body-md text-text-light text-linkColor"
+                          class="typography-body-md text-[var(--form-text-secondary)] text-linkColor"
                         >{content.support.btnName}</a>
                       </div>
                       <div class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor">
@@ -551,7 +551,7 @@
                         </h3>
                         <a
                           href="/"
-                          class="typography-body-md text-text-light text-linkColor"
+                          class="typography-body-md text-[var(--form-text-secondary)] text-linkColor"
                         >Tell me more</a>
                       </div>
                       <div class="space-y-6">
@@ -581,7 +581,7 @@
                     cardHeading={content.payOffSooner.cardHeading}
                     reverse
                   >
-                    <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+                    <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                       <li>
                         {content.payOffSooner.text}
                       </li>
@@ -593,7 +593,7 @@
                     cardAltName={content.messageUs.cardAltName}
                     cardHeading={content.messageUs.cardHeading}
                   >
-                    <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+                    <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                       <li>
                         {content.messageUs.text}
                       </li>
@@ -620,12 +620,12 @@
                               {data.heading}
                             </h3>
                           {/if}
-                          <p class="typography-body-sm text-text-light">
+                          <p class="typography-body-sm text-[var(--form-text-secondary)]">
                             {data.desc}
                           </p>
                           <a
                             href={data.url}
-                            class="typography-body-md text-text-light text-linkColor underline"
+                            class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                           >{data.linkName}</a>
                         </div>
                       {/each}

@@ -167,8 +167,8 @@
               <h2 class="typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2">
                 How to switch an account to Everyday Offset
               </h2>
-              <div class="grid gap-5 overflow-hidden typography-body-md text-text-light md:col-span-3">
-                <p class="typography-body-sm text-text-light">
+              <div class="grid gap-5 overflow-hidden typography-body-md text-[var(--form-text-secondary)] md:col-span-3">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   You can switch an eligible transaction account to an Everyday Offset online with your eligible Standard Variable Rate home loan
                 </p>
                 {#each content.switchList as switchItems}
@@ -183,7 +183,7 @@
                             <span class="col-span-1 flex items-center justify-center text-white bg-darkColor rounded-full w-[2rem] h-[2rem]">
                               {item.num}
                             </span>
-                            <p class="md:col-span-7 col-span-5 typography-body-md text-text-light">
+                            <p class="md:col-span-7 col-span-5 typography-body-md text-[var(--form-text-secondary)]">
                               {@html item.text}
                             </p>
                           </div>
@@ -192,7 +192,7 @@
                     </ul>
                   {/each}
                 {/each}
-                <a href="/" class="text-linkColor hover:no-underline underline typography-body-md text-text-light">
+                <a href="/" class="text-linkColor hover:no-underline underline typography-body-md text-[var(--form-text-secondary)]">
                   Download the Everyday Offset fact sheet (PDF)
                 </a>
               </div>
@@ -321,8 +321,8 @@
                   <h2 class="typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2">
                     How to switch an account to Everyday Offset
                   </h2>
-                  <div class="grid gap-5 overflow-hidden typography-body-md text-text-light md:col-span-3">
-                    <p class="typography-body-sm text-text-light">
+                  <div class="grid gap-5 overflow-hidden typography-body-md text-[var(--form-text-secondary)] md:col-span-3">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       You can switch an eligible transaction account to an Everyday Offset online with your eligible Digital DSA Standard Variable Rate home loan
                     </p>
                     {#each content.switchList as switchItems}
@@ -337,7 +337,7 @@
                                 <span class="col-span-1 flex items-center justify-center text-white bg-darkColor rounded-full w-[2rem] h-[2rem]">
                                   {item.num}
                                 </span>
-                                <p class="md:col-span-7 col-span-5 typography-body-md text-text-light">
+                                <p class="md:col-span-7 col-span-5 typography-body-md text-[var(--form-text-secondary)]">
                                   {@html item.text}
                                 </p>
                               </div>
@@ -346,7 +346,7 @@
                         </ul>
                       {/each}
                     {/each}
-                    <a href="/" class="text-linkColor hover:no-underline underline typography-body-md text-text-light">
+                    <a href="/" class="text-linkColor hover:no-underline underline typography-body-md text-[var(--form-text-secondary)]">
                       Download the Everyday Offset fact sheet (PDF)
                     </a>
                   </div>
@@ -441,7 +441,7 @@
           cardAltName={content.messageUs.cardAltName}
           cardHeading={content.messageUs.cardHeading}
         >
-          <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+          <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
             <li>{content.messageUs.text}</li>
             <div class="w-auto">
               <Button

@@ -37,7 +37,7 @@
         reverse={howCanWeHelp.reverse}
       >
         <ul
-          class="grid gap-6 typography-body-md text-text-light list-disc pl-5"
+          class="grid gap-6 typography-body-md text-[var(--form-text-secondary)] list-disc pl-5"
           slot="list"
         >
           {#each howCanWeHelp.items as item}
@@ -62,14 +62,14 @@
         cardHeading={securityInfo.cardHeading}
       >
         <div class="flex flex-col gap-5" slot="list">
-          <ul class="grid gap-4 typography-body-md text-text-light list-disc pl-5">
+          <ul class="grid gap-4 typography-body-md text-[var(--form-text-secondary)] list-disc pl-5">
             {#each securityInfo.items as item}
               <li>
                 <span class="font-semibold">{item.title}</span> {@html item.desc}
               </li>
             {/each}
           </ul>
-          <p class="mt-4 text-text-light typography-body-md">
+          <p class="mt-4 text-[var(--form-text-secondary)] typography-body-md">
             {securityInfo.footerPara}
           </p>
         </div>

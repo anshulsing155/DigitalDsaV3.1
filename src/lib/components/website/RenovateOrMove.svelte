@@ -222,7 +222,7 @@
 								<div class="mt-[4rem]">
 									<h2 class="typography-h2 mb-[4rem] grid text-center text-text-main">
 										<p class="mb-[1rem]">The Ultimate Comparison</p>
-										<span class="typography-body-sm text-text-light"
+										<span class="typography-body-sm text-[var(--form-text-secondary)]"
 											>Here's a detailed comparison of the <span
 												class="decoration-primary underline underline-offset-4">Home Renovation</span
 											>

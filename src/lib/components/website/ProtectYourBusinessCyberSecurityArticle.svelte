@@ -242,7 +242,7 @@
         <div
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             Imagine waking up to find that your business bank account is wiped
             clean, or that your customers' personal data is leaked online.
             Unfortunately, this is the reality for thousands of Indian
@@ -262,7 +262,7 @@
             {threatReal.heading}
           </h2>
           <h3 class="font-semibold typography-body-md">{threatReal.subHead}</h3>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html threatReal.para}
           </p>
         </div>
@@ -283,8 +283,8 @@
             {#each common.listItems as list}
               <li class="space-y-4">
                 <h3 class="font-semibold typography-body-md">{list.heading}</h3>
-                <p class="typography-body-sm text-text-light">{@html list.desc}</p>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">{@html list.desc}</p>
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html list.story}
                 </p>
               </li>
@@ -306,7 +306,7 @@
             <h3 class="font-semibold typography-body-md">{list.subHead}</h3>
             <ul class="space-y-2 pl-5">
               {#each list.lists as item}
-                <li class="list-disc typography-body-sm text-text-light space-y-2">
+                <li class="list-disc typography-body-sm text-[var(--form-text-secondary)] space-y-2">
                   {item}
                 </li>
               {/each}
@@ -324,7 +324,7 @@
           >
             {final.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html final.para}
           </p>
         </div>
@@ -351,7 +351,7 @@
               <div
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   Imagine waking up to find that your business bank account is
                   wiped clean, or that your customers' personal data is leaked
                   online. Unfortunately, this is the reality for thousands of
@@ -373,7 +373,7 @@
                 <h3 class="font-semibold typography-body-md">
                   {threatReal.subHead}
                 </h3>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html threatReal.para}
                 </p>
               </div>
@@ -397,10 +397,10 @@
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">
                         {@html list.desc}
                       </p>
-                      <p class="typography-body-sm text-text-light">
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">
                         {@html list.story}
                       </p>
                     </li>
@@ -424,7 +424,7 @@
                   <ul class="space-y-2 pl-5">
                     {#each list.lists as item}
                       <li
-                        class="list-disc typography-body-sm text-text-light space-y-2"
+                        class="list-disc typography-body-sm text-[var(--form-text-secondary)] space-y-2"
                       >
                         {item}
                       </li>
@@ -444,7 +444,7 @@
                 >
                   {final.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html final.para}
                 </p>
               </div>

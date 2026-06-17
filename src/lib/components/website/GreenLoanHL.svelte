@@ -125,7 +125,7 @@
               <span class="text-[2rem] leading-[2.15rem]">PA</span>
             </div>
           </div>
-          <div class="flex flex-col gap-1 justify-center typography-body-md text-text-light">
+          <div class="flex flex-col gap-1 justify-center typography-body-md text-[var(--form-text-secondary)]">
             <p class="font-semibold">10 Year fixed rate and Comparison rate^</p>
             <p>Minimum loan size $5,000. Maximum loan size</p>
             <p>
@@ -180,7 +180,7 @@
                     <span class="text-[2rem] leading-[2.15rem]">PA</span>
                   </div>
                 </div>
-                <div class="flex flex-col gap-1 justify-center typography-body-md text-text-light">
+                <div class="flex flex-col gap-1 justify-center typography-body-md text-[var(--form-text-secondary)]">
                   <p class="font-semibold">10 Year fixed rate and Comparison rate^</p>
                   <p>Minimum loan size $5,000. Maximum loan size</p>
                   <p> $30,000. <span class="underline text-linkColor cursor-pointer">^Comparison rate warning.</span> </p>
@@ -233,7 +233,7 @@
             cardAltName={content.cardAlt1}
             cardHeading={content.cardHead1}
           >
-            <div class="grid gap-4 typography-body-md text-text-light" slot="list">
+            <div class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]" slot="list">
               <li>
                 Check out our range of resources to help you on your journey
                 towards a more sustainable life.
@@ -256,7 +256,7 @@
           <h3 class="typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2">
             How to apply
           </h3>
-          <div class="grid gap-5 overflow-hidden typography-body-md text-text-light md:col-span-3">
+          <div class="grid gap-5 overflow-hidden typography-body-md text-[var(--form-text-secondary)] md:col-span-3">
             {#each content.switchList as list}
               <ul class="flex flex-col gap-4">
                 <li>
@@ -264,7 +264,7 @@
                     <span class="col-span-1 flex items-center justify-center text-white bg-darkColor rounded-full w-[2rem] h-[2rem]">
                       {list.num}
                     </span>
-                    <p class="md:col-span-8 col-span-5 typography-body-md text-text-light">
+                    <p class="md:col-span-8 col-span-5 typography-body-md text-[var(--form-text-secondary)]">
                       {@html list.text}
                     </p>
                   </div>
@@ -348,7 +348,7 @@
                   cardAltName={content.cardAlt1}
                   cardHeading={content.cardHead1}
                 >
-                  <div class="grid gap-4 typography-body-md text-text-light" slot="list">
+                  <div class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]" slot="list">
                     <li>
                       Check out our range of resources to help you on your journey
                       towards a more sustainable life.
@@ -372,7 +372,7 @@
               <h3 class="typography-h2 text-text-main">
                 How to apply
               </h3>
-              <div class="grid gap-5 overflow-hidden typography-body-md text-text-light">
+              <div class="grid gap-5 overflow-hidden typography-body-md text-[var(--form-text-secondary)]">
                 {#each content.switchList as list}
                   <ul class="flex flex-col gap-4">
                     <li>
@@ -380,7 +380,7 @@
                         <span class="col-span-1 flex items-center justify-center text-white bg-darkColor rounded-full w-[2rem] h-[2rem]">
                           {list.num}
                         </span>
-                        <p class="md:col-span-8 col-span-5 typography-body-md text-text-light">
+                        <p class="md:col-span-8 col-span-5 typography-body-md text-[var(--form-text-secondary)]">
                           {@html list.text}
                         </p>
                       </div>

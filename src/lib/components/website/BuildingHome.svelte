@@ -198,7 +198,7 @@ window.removeEventListener("scroll", handleScroll);
               cardHeading="Work out your upfront costs"
             >
               <ul
-                class="grid gap-[2rem] typography-body-md text-text-light"
+                class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
                 <li>
@@ -415,7 +415,7 @@ window.removeEventListener("scroll", handleScroll);
                   cardHeading="Work out your upfront costs"
                 >
                   <ul
-                    class="grid gap-[2rem] typography-body-md text-text-light"
+                    class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                     slot="list"
                   >
                     <li>
@@ -583,7 +583,7 @@ window.removeEventListener("scroll", handleScroll);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] typography-body-md text-text-light"
+            class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
             slot="list"
           >
             <li>

@@ -517,7 +517,7 @@
         data-section="getStarted"
       >
         <div
-          class="typography-body-md text-text-light flex flex-col gap-2 justify-center w-full order-2 lg:order-first"
+          class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-2 justify-center w-full order-2 lg:order-first"
         >
           <h2
             class="md:text-start typography-h2 text-text-main"
@@ -562,7 +562,7 @@
                 </div>
               </div>
             </summary>
-            <div class="grid gap-4 pt-[2rem] typography-body-md text-text-light">
+            <div class="grid gap-4 pt-[2rem] typography-body-md text-[var(--form-text-secondary)]">
               <p>
                 The investing experience features and functionality in the
                 undefined app is only available for CommSec Pocket and individual <span
@@ -585,7 +585,7 @@
                 </div>
               </div>
             </summary>
-            <div class="grid gap-4 pt-[2rem] typography-body-md text-text-light">
+            <div class="grid gap-4 pt-[2rem] typography-body-md text-[var(--form-text-secondary)]">
               <p>
                 Yes, the same eligibility criteria that currently exists for
                 CommSec Pocket and CommSec Australian Shares will exist for the
@@ -625,7 +625,7 @@
                 </div>
               </div>
             </summary>
-            <div class="grid gap-4 pt-[2rem] typography-body-md text-text-light">
+            <div class="grid gap-4 pt-[2rem] typography-body-md text-[var(--form-text-secondary)]">
               <p>
                 Yes, you can use both the CommSec app and the undefined app to
                 manage your CommSec Pocket and/or Australian Shares account.

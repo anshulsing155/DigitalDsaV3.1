@@ -145,7 +145,7 @@
                 <h2 class="typography-h2 text-text-main">
                   Getting started
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   Unlike a home, buying the right investment property is a
                   financial decision. So, it’s important to understand the goals
                   and strategies behind a successful property investment.
@@ -197,13 +197,13 @@
               cardAltName={content.propertyGuide.cardAltName}
               cardHeading={content.propertyGuide.cardHeading}
             >
-              <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+              <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                 <li>
                   {content.propertyGuide.text}
                 </li>
                 <a
                   href={content.propertyGuide.linkUrl}
-                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                 >
                   {content.propertyGuide.linkText}
                 </a>
@@ -218,13 +218,13 @@
               cardHeading={content.suburbReports.cardHeading}
               reverse
             >
-              <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+              <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                 <li>
                   {content.suburbReports.text}
                 </li>
                 <a
                   href={content.suburbReports.linkUrl}
-                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                 >
                   {content.suburbReports.linkText}
                 </a>
@@ -267,7 +267,7 @@
                     <h2 class="typography-h2 text-text-main">
                       Getting started
                     </h2>
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       Unlike a home, buying the right investment property is a
                       financial decision. So, it’s important to understand the goals
                       and strategies behind a successful property investment.
@@ -319,13 +319,13 @@
                   cardAltName={content.propertyGuide.cardAltName}
                   cardHeading={content.propertyGuide.cardHeading}
                 >
-                  <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+                  <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                     <li>
                       {content.propertyGuide.text}
                     </li>
                     <a
                       href={content.propertyGuide.linkUrl}
-                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                     >
                       {content.propertyGuide.linkText}
                     </a>
@@ -340,13 +340,13 @@
                   cardHeading={content.suburbReports.cardHeading}
                   reverse
                 >
-                  <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+                  <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
                     <li>
                       {content.suburbReports.text}
                     </li>
                     <a
                       href={content.suburbReports.linkUrl}
-                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                     >
                       {content.suburbReports.linkText}
                     </a>
@@ -375,7 +375,7 @@
           cardAltName={content.messageUs.cardAltName}
           cardHeading={content.messageUs.cardHeading}
         >
-          <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+          <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
             <li>
               {content.messageUs.text}
             </li>

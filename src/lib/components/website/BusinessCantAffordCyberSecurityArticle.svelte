@@ -269,7 +269,7 @@
           >
             {cyberThreats.heading}
           </h2>
-          <p class="typography-body-md text-text-light">
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             {@html cyberThreats.para}
           </p>
         </div>
@@ -283,7 +283,7 @@
             >
               {trueCost.heading}
             </h2>
-            <p class="typography-body-md text-text-light">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               {trueCost.para}
             </p>
           </div>
@@ -291,7 +291,7 @@
             {#each trueCost.listItems as list}
               <li class="space-y-2">
                 <h3 class="typography-h3 font-semibold text-text-main">{list.heading}</h3>
-                <p class="typography-body-md text-text-light">{@html list.desc}</p>
+                <p class="typography-body-md text-[var(--form-text-secondary)]">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -313,7 +313,7 @@
             {#each realLife.listItems as list}
               <li class="space-y-2">
                 <h3 class="typography-h3 font-semibold text-text-main">{list.heading}</h3>
-                <p class="typography-body-md text-text-light">{@html list.desc}</p>
+                <p class="typography-body-md text-[var(--form-text-secondary)]">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -330,7 +330,7 @@
             >
               {howToMake.heading}
             </h2>
-            <p class="typography-body-md text-text-light">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               {trueCost.para}
             </p>
           </div>
@@ -338,7 +338,7 @@
             {#each howToMake.listItems as list}
               <li class="space-y-2">
                 <h3 class="typography-h3 font-semibold text-text-main">{list.heading}</h3>
-                <p class="typography-body-md text-text-light">{@html list.desc}</p>
+                <p class="typography-body-md text-[var(--form-text-secondary)]">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -355,7 +355,7 @@
             >
               {digital.heading}
             </h2>
-            <p class="typography-body-md text-text-light">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               {@html trueCost.para}
             </p>
           </div>
@@ -363,7 +363,7 @@
             {#each digital.listItems as list}
               <li class="space-y-2">
                 <h3 class="typography-h3 font-semibold text-text-main">{list.heading}</h3>
-                <p class="typography-body-md text-text-light">{@html list.desc}</p>
+                <p class="typography-body-md text-[var(--form-text-secondary)]">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -379,7 +379,7 @@
           >
             {finalThoughts.heading}
           </h2>
-          <p class="typography-body-md text-text-light">
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             {@html finalThoughts.para}
           </p>
         </div>
@@ -412,7 +412,7 @@
                 >
                   {cyberThreats.heading}
                 </h2>
-                <p class="typography-body-md text-text-light">
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   {@html cyberThreats.para}
                 </p>
               </div>
@@ -426,7 +426,7 @@
                   >
                     {trueCost.heading}
                   </h2>
-                  <p class="typography-body-md text-text-light">
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
                     {trueCost.para}
                   </p>
                 </div>
@@ -436,7 +436,7 @@
                       <h3 class="typography-h3 font-semibold text-text-main">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-md text-text-light">
+                      <p class="typography-body-md text-[var(--form-text-secondary)]">
                         {@html list.desc}
                       </p>
                     </li>
@@ -462,7 +462,7 @@
                       <h3 class="typography-h3 font-semibold text-text-main">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-md text-text-light">
+                      <p class="typography-body-md text-[var(--form-text-secondary)]">
                         {@html list.desc}
                       </p>
                     </li>
@@ -481,7 +481,7 @@
                   >
                     {howToMake.heading}
                   </h2>
-                  <p class="typography-body-md text-text-light">
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
                     {trueCost.para}
                   </p>
                 </div>
@@ -491,7 +491,7 @@
                       <h3 class="typography-h3 font-semibold text-text-main">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-md text-text-light">
+                      <p class="typography-body-md text-[var(--form-text-secondary)]">
                         {@html list.desc}
                       </p>
                     </li>
@@ -510,7 +510,7 @@
                   >
                     {digital.heading}
                   </h2>
-                  <p class="typography-body-md text-text-light">
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
                     {@html trueCost.para}
                   </p>
                 </div>
@@ -520,7 +520,7 @@
                       <h3 class="typography-h3 font-semibold text-text-main">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-md text-text-light">
+                      <p class="typography-body-md text-[var(--form-text-secondary)]">
                         {@html list.desc}
                       </p>
                     </li>
@@ -538,7 +538,7 @@
                 >
                   {finalThoughts.heading}
                 </h2>
-                <p class="typography-body-md text-text-light">
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   {@html finalThoughts.para}
                 </p>
               </div>

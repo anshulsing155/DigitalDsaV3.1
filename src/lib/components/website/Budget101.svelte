@@ -80,9 +80,9 @@
                 <h3 class="typography-h3 font-semibold text-text-main">
                   Ransomware Attacks – The Digital Hostage Situation
                 </h3>
-                <div class="typography-body-md text-text-light">
+                <div class="typography-body-md text-[var(--form-text-secondary)]">
                   <br />
-                  <div class="typography-body-sm py-[.5rem] px-2 italic text-text-light">
+                  <div class="typography-body-sm py-[.5rem] px-2 italic text-[var(--form-text-secondary)]">
                     <span class="font-semibold">💡 Real Story:</span> In
                     November 2022, AIIMS Delhi suffered a ransomware attack that
                     wiped outpatient and research data from both primary and
@@ -95,9 +95,9 @@
                 <h3 class="typography-h3 font-semibold text-text-main">
                   Business Email Compromise (BEC) – The CEO Fraud
                 </h3>
-                <div class="typography-body-md text-text-light">
+                <div class="typography-body-md text-[var(--form-text-secondary)]">
                   <br />
-                  <div class="typography-body-sm py-[.5rem] px-2 italic text-text-light">
+                  <div class="typography-body-sm py-[.5rem] px-2 italic text-[var(--form-text-secondary)]">
                     <span class="font-semibold">💡 Real Story:</span> A
                     Mumbai-based chemicals trading firm lost ₹10 lakh when
                     cybercriminals spoofed a supplier’s email. The accounts team
@@ -111,9 +111,9 @@
                 <h3 class="typography-h3 font-semibold text-text-main">
                   Phishing Scams – The Fake But Convincing Trap
                 </h3>
-                <div class="typography-body-md text-text-light">
+                <div class="typography-body-md text-[var(--form-text-secondary)]">
                   <br />
-                  <div class="typography-body-sm py-[.5rem] px-2 italic text-text-light">
+                  <div class="typography-body-sm py-[.5rem] px-2 italic text-[var(--form-text-secondary)]">
                     <span class="font-semibold">💡 Real Story:</span> Across
                     Indian organizations, phishing scams have led to significant
                     financial losses as attackers impersonate bosses, urging
@@ -134,7 +134,7 @@
                   Educate Your Team
                 </h3>
                 <ul
-                  class="list-disc pl-4 space-y-3 typography-body-md text-text-light"
+                  class="list-disc pl-4 space-y-3 typography-body-md text-[var(--form-text-secondary)]"
                 >
                   <li>
                     Teach employees how to spot suspicious emails and scams.
@@ -154,7 +154,7 @@
                   Lock Down Data & Devices
                 </h3>
                 <ul
-                  class="list-disc pl-4 space-y-3 typography-body-md text-text-light"
+                  class="list-disc pl-4 space-y-3 typography-body-md text-[var(--form-text-secondary)]"
                 >
                   <li>
                     Always back up important files using <span
@@ -180,7 +180,7 @@
                   Secure Passwords & Accounts
                 </h3>
                 <ul
-                  class="list-disc pl-4 space-y-3 typography-body-md text-text-light"
+                  class="list-disc pl-4 space-y-3 typography-body-md text-[var(--form-text-secondary)]"
                 >
                   <li>
                     Use strong, unique passwords—no birthdays or common words!
@@ -207,7 +207,7 @@
                   Stay Vigilant
                 </h3>
                 <ul
-                  class="list-disc pl-4 space-y-3 typography-body-md text-text-light"
+                  class="list-disc pl-4 space-y-3 typography-body-md text-[var(--form-text-secondary)]"
                 >
                   <li>
                     Always verify unexpected financial requests through a phone
@@ -233,7 +233,7 @@
               </h2>
 
               <div class="space-y-4">
-                <p class="typography-body-md text-text-light">
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   Cybersecurity isn’t a luxury—it’s a necessity. By taking
                   simple proactive measures today, you can protect your business
                   from costly disruptions tomorrow.
@@ -262,11 +262,11 @@
               </div>
 
               <div class="pt-[2rem]">
-                <p class="typography-body-md text-text-light">
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   Review your cybersecurity measures and educate your team
                   today. Not sure where to start?
                 </p>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   💡 Visit <span class="font-semibold"
                     >Cyber Swachhta Kendra,</span
                   >

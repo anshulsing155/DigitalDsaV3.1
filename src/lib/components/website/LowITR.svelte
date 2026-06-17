@@ -384,19 +384,19 @@ window.removeEventListener("scroll", handleScroll);
               title: "Tools",
               para: `
           <ul class="list-disc flex flex-col gap-1 pl-4">
-            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/get-started/how-can-we-help"</a>Check bank offers
+            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-[var(--form-text-secondary)] cursor-pointer" href="/get-started/how-can-we-help"</a>Check bank offers
             </li>
             
-            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/planners/budget-planner"</a>Budget Planner</li>
-            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/calculators/eligibility-calculator"</a>How much I can borrow</li> </ul>`,
+            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-[var(--form-text-secondary)] cursor-pointer" href="/planners/budget-planner"</a>Budget Planner</li>
+            <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-[var(--form-text-secondary)] cursor-pointer" href="/calculators/eligibility-calculator"</a>How much I can borrow</li> </ul>`,
             },
             {
               id: "2",
               title: "Calculators",
               para: `<ul class="list-disc flex flex-col gap-1 pl-4">
-          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/planners/part-payment-planner"</a>Part-payment Calculator</li>
-          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/calculators/emi-calculator"</a>How much EMI I can pay</li>
-          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-text-light cursor-pointer" href="/planners/flexible-emi-planner"</a>Optimize my loan tenure</li>`,
+          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-[var(--form-text-secondary)] cursor-pointer" href="/planners/part-payment-planner"</a>Part-payment Calculator</li>
+          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-[var(--form-text-secondary)] cursor-pointer" href="/calculators/emi-calculator"</a>How much EMI I can pay</li>
+          <li><a class="underline underline-offset-4 text-linkColor hover:no-underline typography-body-md text-[var(--form-text-secondary)] cursor-pointer" href="/planners/flexible-emi-planner"</a>Optimize my loan tenure</li>`,
             },
           ],
         }}

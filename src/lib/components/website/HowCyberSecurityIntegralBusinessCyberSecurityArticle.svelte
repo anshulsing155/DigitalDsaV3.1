@@ -280,7 +280,7 @@
           >
             {onlineBusiness.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html onlineBusiness.para}
           </p>
         </div>
@@ -299,7 +299,7 @@
             {#each reality.listItems as list}
               <li class="space-y-2">
                 <h3 class="font-semibold typography-body-md">{list.heading}</h3>
-                <p class="typography-body-sm text-text-light">{@html list.desc}</p>
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -313,7 +313,7 @@
           >
             {realLife.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html realLife.para}
           </p>
         </div>
@@ -334,7 +334,7 @@
             {#each threats.listItems as list}
               <li class="space-y-2">
                 <h3 class="font-semibold typography-body-md">{list.heading}</h3>
-                <p class="typography-body-sm text-text-light">{@html list.desc}</p>
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -348,7 +348,7 @@
           >
             {sme.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html sme.para}
           </p>
         </div>
@@ -369,7 +369,7 @@
             {#each essential.listItems as list}
               <li class="space-y-2">
                 <h3 class="font-semibold typography-body-md">{list.heading}</h3>
-                <p class="typography-body-sm text-text-light">{list.desc}</p>
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">{list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -383,7 +383,7 @@
           >
             {example.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html example.para}
           </p>
         </div>
@@ -398,7 +398,7 @@
           >
             {conclusion.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html conclusion.para}
           </p>
         </div>
@@ -430,7 +430,7 @@
                 >
                   {onlineBusiness.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html onlineBusiness.para}
                 </p>
               </div>
@@ -451,7 +451,7 @@
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">
                         {@html list.desc}
                       </p>
                     </li>
@@ -467,7 +467,7 @@
                 >
                   {realLife.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html realLife.para}
                 </p>
               </div>
@@ -491,7 +491,7 @@
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">
                         {@html list.desc}
                       </p>
                     </li>
@@ -507,7 +507,7 @@
                 >
                   {sme.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html sme.para}
                 </p>
               </div>
@@ -531,7 +531,7 @@
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">{list.desc}</p>
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">{list.desc}</p>
                     </li>
                   {/each}
                 </ul>
@@ -545,7 +545,7 @@
                 >
                   {example.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html example.para}
                 </p>
               </div>
@@ -561,7 +561,7 @@
                 >
                   {conclusion.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html conclusion.para}
                 </p>
               </div>

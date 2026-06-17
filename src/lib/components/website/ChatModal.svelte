@@ -138,7 +138,7 @@ handleSendMessage();
               <div
                 class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
               ></div>
-              <span class="typography-caption text-text-light text-gray-600"
+              <span class="typography-caption text-[var(--form-text-secondary)] text-gray-600"
                 >Online</span
               >
             </div>
@@ -195,9 +195,9 @@ handleSendMessage();
                   class:bg-gray-100={message.sender === "bot"}
                   class:text-gray-800={message.sender === "bot"}
                 >
-                  <p class="typography-caption text-text-light">{message.text}</p>
+                  <p class="typography-caption text-[var(--form-text-secondary)]">{message.text}</p>
                 </div>
-                <p class="typography-caption text-text-light text-gray-500 mt-1">
+                <p class="typography-caption text-[var(--form-text-secondary)] text-gray-500 mt-1">
                   {message.timestamp.toLocaleTimeString([], {
                     hour: "2-digit",
                     minute: "2-digit",
@@ -243,7 +243,7 @@ handleSendMessage();
               bind:value={inputText}
               onkeypress={handleKeyPress}
               placeholder="Type your message..."
-              class="flex-1 px-4 py-2 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-btnBg focus:border-transparent transition-all duration-200 typography-caption text-text-light"
+              class="flex-1 px-4 py-2 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-btnBg focus:border-transparent transition-all duration-200 typography-caption text-[var(--form-text-secondary)]"
             />
             <button
               onclick={handleSendMessage}

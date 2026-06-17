@@ -108,8 +108,6 @@
 								link={btn.btnLink}
 								onClick={btn.btnClick}
 								btnClass={btn.btnClass}
-								btnColor={btn.btnColor}
-								btnBorder={btn.btnBorder}
 							/>
 						{/each}
 					</div>

@@ -414,12 +414,12 @@ dispatch("textExtracted", text);
               reverse
             >
               <div slot="list" class="flex flex-col gap-4">
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   Get an estimate of how much you may be able to borrow.
                 </p>
                 <a
                   href="/calculators/emi-calculator"
-                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                   >Use calculator</a
                 >
               </div>
@@ -455,13 +455,13 @@ dispatch("textExtracted", text);
                 cardHeading="Home Guarantee Scheme"
               >
                 <div slot="list" class="flex flex-col gap-4">
-                  <p class="typography-body-sm text-text-light">
+                  <p class="typography-body-sm text-[var(--form-text-secondary)]">
                     You may be able to buy your first home sooner with a smaller
                     deposit.
                   </p>
                   <a
                     href="/finance-support"
-                    class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                    class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                     >Discover the Scheme</a
                   >
                 </div>
@@ -555,12 +555,12 @@ dispatch("textExtracted", text);
                   reverse
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       Get an estimate of how much you may be able to borrow.
                     </p>
                     <a
                       href="/calculators/emi-calculator"
-                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                       >Use calculator</a
                     >
                   </div>
@@ -594,13 +594,13 @@ dispatch("textExtracted", text);
                   cardHeading="Home Guarantee Scheme"
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       You may be able to buy your first home sooner with a
                       smaller deposit.
                     </p>
                     <a
                       href="/finance-support"
-                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                       >Discover the Scheme</a
                     >
                   </div>
@@ -657,7 +657,7 @@ dispatch("textExtracted", text);
           cardHeading="Message us 24/7"
         >
           <ul
-            class="grid gap-[2rem] typography-body-md text-text-light"
+            class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
             slot="list"
           >
             <li>

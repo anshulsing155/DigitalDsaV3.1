@@ -140,7 +140,7 @@
           >
             Protect yourself from scams
           </h2>
-          <p class="typography-body-md text-text-light py-[1rem]">
+          <p class="typography-body-md text-[var(--form-text-secondary)] py-[1rem]">
             Remember three simple steps: <br><span class="font-semibold">
                Stop.   Check.  Reject.
             </span>
@@ -230,7 +230,7 @@
                 <h2 class="font-semibold typography-h3">
                   {itemObj.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {itemObj.para}
                 </p>
                 <Anchor
@@ -274,7 +274,7 @@
                   >
                     Protect your business from scams
                   </h2>
-                  <p class="typography-body-sm text-text-light">
+                  <p class="typography-body-sm text-[var(--form-text-secondary)]">
                     Remember three simple <span class="font-semibold">
                       steps: Stop. Check. Reject.
                     </span>
@@ -375,7 +375,7 @@
                         <h2 class="font-semibold typography-h3">
                           {itemObj.heading}
                         </h2>
-                        <p class="typography-body-sm text-text-light">
+                        <p class="typography-body-sm text-[var(--form-text-secondary)]">
                           {itemObj.para}
                         </p>
                         <Anchor

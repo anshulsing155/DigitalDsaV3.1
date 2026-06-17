@@ -472,7 +472,7 @@ notificationStore.set(null);
                     }
                   }}
                   id="message"
-                  class="border-1 peer block w-full appearance-none border border-[#0000003A] bg-white py-[0.6rem] pl-[3rem] pr-4 typography-body-sm text-text-light md:typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
+                  class="border-1 peer block w-full appearance-none border border-[#0000003A] bg-white py-[0.6rem] pl-[3rem] pr-4 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
                   placeholder="Describe your query atleast in 20 characters and 5 words."
                   rows="6"
                 ></textarea>
@@ -554,7 +554,7 @@ notificationStore.set(null);
                   <h1 class="font-semibold typography-h3">
                     OTP Verification
                   </h1>
-                  <p class="typography-body-sm text-text-light">
+                  <p class="typography-body-sm text-[var(--form-text-secondary)]">
                     Enter the OTP you received at <br /><span
                       class="font-HeadingBold">{feedbackData.userMobile}</span
                     >
@@ -596,7 +596,7 @@ notificationStore.set(null);
                       {#if isWaiting}
                         <button
                           type="button"
-                          class="w-full rounded-full px-[2rem] py-3 typography-body-md text-text-light hover:opacity-90"
+                          class="w-full rounded-full px-[2rem] py-3 typography-body-md text-[var(--form-text-secondary)] hover:opacity-90"
                           aria-label="Verifying OTP"
                           ><div class="flex text-center">
                             <div class="loader"></div>
@@ -608,7 +608,7 @@ notificationStore.set(null);
                           onclick={() => {
                             verifyOTP();}}
                           onkeydown={(e) => handleEnter(e, verifyOTP)}
-                          class="w-full rounded bg-btnBg py-[0.7rem] typography-body-md text-text-light hover:opacity-90"
+                          class="w-full rounded bg-btnBg py-[0.7rem] typography-body-md text-[var(--form-text-secondary)] hover:opacity-90"
                           >Verify OTP <span
                             ><i class="fa-regular fa-paper-plane"></i></span
                           ></button
@@ -650,7 +650,7 @@ notificationStore.set(null);
               {:else}
                 <button
                   type="submit"
-                  class="text-white focus:outline-none typography-body-sm text-text-light md:typography-body-md w-full px-5 py-2.5 text-center {hasErrors ||
+                  class="text-white focus:outline-none typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md w-full px-5 py-2.5 text-center {hasErrors ||
                   !recaptchaToken ||
                   !feedbackData.userMobile ||
                   !feedbackData.feedbackMsg ||

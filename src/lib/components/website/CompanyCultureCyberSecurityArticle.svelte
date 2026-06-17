@@ -277,7 +277,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           >
             {storyData.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html storyData.para}
           </p>
         </div>
@@ -290,7 +290,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           >
             {everyone.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html everyone.para}
           </p>
         </div>
@@ -303,7 +303,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           >
             {example.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html example.para}
           </p>
         </div>
@@ -319,7 +319,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
             >
               {fun.heading}
             </h2>
-            <p class="typography-body-sm text-text-light">
+            <p class="typography-body-sm text-[var(--form-text-secondary)]">
               {@html fun.firstPara}
             </p>
           </div>
@@ -327,11 +327,11 @@ So, as you sip your next cup of chai at work, remember: You might just be
             {#each fun.listItems as list}
               <li class="space-y-2">
                 <h3 class="font-semibold typography-body-md">{list.heading}</h3>
-                <p class="typography-body-sm text-text-light">{@html list.desc}</p>
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">{@html list.desc}</p>
               </li>
             {/each}
           </ul>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html fun.secPara}
           </p>
         </div>
@@ -346,7 +346,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           >
             {empowerment.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html empowerment.para}
           </p>
         </div>
@@ -359,7 +359,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           >
             {investing.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html investing.para}
           </p>
         </div>
@@ -374,7 +374,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           >
             {team.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html team.para}
           </p>
         </div>
@@ -387,7 +387,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
           >
             {final.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html final.para}
           </p>
         </div>
@@ -419,7 +419,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 >
                   {storyData.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html storyData.para}
                 </p>
               </div>
@@ -432,7 +432,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 >
                   {everyone.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html everyone.para}
                 </p>
               </div>
@@ -445,7 +445,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 >
                   {example.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html example.para}
                 </p>
               </div>
@@ -461,7 +461,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
                   >
                     {fun.heading}
                   </h2>
-                  <p class="typography-body-sm text-text-light">
+                  <p class="typography-body-sm text-[var(--form-text-secondary)]">
                     {@html fun.firstPara}
                   </p>
                 </div>
@@ -471,13 +471,13 @@ So, as you sip your next cup of chai at work, remember: You might just be
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">
                         {@html list.desc}
                       </p>
                     </li>
                   {/each}
                 </ul>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html fun.secPara}
                 </p>
               </div>
@@ -492,7 +492,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 >
                   {empowerment.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html empowerment.para}
                 </p>
               </div>
@@ -505,7 +505,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 >
                   {investing.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html investing.para}
                 </p>
               </div>
@@ -520,7 +520,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 >
                   {team.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html team.para}
                 </p>
               </div>
@@ -533,7 +533,7 @@ So, as you sip your next cup of chai at work, remember: You might just be
                 >
                   {final.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html final.para}
                 </p>
               </div>

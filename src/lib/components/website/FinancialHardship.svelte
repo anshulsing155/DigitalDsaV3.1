@@ -299,7 +299,7 @@
             reverse: true,
           }}
         >
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             You can easily request help at Digital DSA by visiting our website
             to raise an online request. We’ll ask a few questions to understand
             your situation and connect you with the right support.
@@ -523,7 +523,7 @@
                   reverse: true,
                 }}
               >
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   You can easily request help at Digital DSA by visiting our
                   website to raise an online request. We’ll ask a few questions
                   to understand your situation and connect you with the right
@@ -670,7 +670,7 @@
               <h3 class="font-semibold typography-body-md">
                 {@html youKnow.heading}
               </h3>
-              <p class="typography-body-sm text-text-light">
+              <p class="typography-body-sm text-[var(--form-text-secondary)]">
                 {@html youKnow.para}
               </p>
             </li>

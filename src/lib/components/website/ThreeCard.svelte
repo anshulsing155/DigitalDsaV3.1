@@ -51,7 +51,7 @@
         href={cardData.link}
         class:text-linkColor={cardData.link !== ""}
         class:text-deActiveLinkColor={cardData.link == ""}
-        class="text-linkColor underline typography-body-md text-text-light hover:no-underline"
+        class="text-linkColor underline typography-body-md text-[var(--form-text-secondary)] hover:no-underline"
       >
         {cardData.linkName}
       </a>

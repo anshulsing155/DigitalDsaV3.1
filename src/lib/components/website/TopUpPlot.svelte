@@ -179,7 +179,7 @@
             reverse
           >
             <div slot="list" class="flex flex-col gap-4">
-              <ul class="space-y-4 typography-body-md text-text-light">
+              <ul class="space-y-4 typography-body-md text-[var(--form-text-secondary)]">
                 {#each content.process.list as step}
                   <li class="flex items-start gap-1">
                     <img src="/icons/circle-check.svg" alt="circle icon" class="h-4 mt-1" />
@@ -241,7 +241,7 @@
                   reverse
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <ul class="space-y-4 typography-body-md text-text-light">
+                    <ul class="space-y-4 typography-body-md text-[var(--form-text-secondary)]">
                       {#each content.process.list as step}
                         <li class="flex items-start gap-1">
                           <img src="/icons/circle-check.svg" alt="circle icon" class="h-4 mt-1" />
@@ -268,7 +268,7 @@
           cardAltName={content.messageUs.cardAltName}
           cardHeading={content.messageUs.cardHeading}
         >
-          <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+          <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
             <li>{content.messageUs.text}</li>
             <div class="w-auto">
               <Button

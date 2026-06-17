@@ -230,7 +230,7 @@
             cardHeading="Smarter management of your home loan & property"
           >
             <div
-              class="grid gap-[2rem] typography-body-md text-text-light"
+              class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
               slot="list"
             >
               <p>
@@ -241,7 +241,7 @@
                 for the future.
               </p>
               <ul
-                class="list-disc ml-5 typography-body-md text-text-light space-y-3"
+                class="list-disc ml-5 typography-body-md text-[var(--form-text-secondary)] space-y-3"
               >
                 <li>
                   Monitor your home loan and property’s market performance
@@ -313,7 +313,7 @@
                 cardHeading="Smarter management of your home loan & property"
               >
                 <div
-                  class="grid gap-[2rem] typography-body-md text-text-light"
+                  class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                   slot="list"
                 >
                   <p>
@@ -324,7 +324,7 @@
                     options and plan for the future.
                   </p>
                   <ul
-                    class="list-disc ml-5 typography-body-md text-text-light space-y-3"
+                    class="list-disc ml-5 typography-body-md text-[var(--form-text-secondary)] space-y-3"
                   >
                     <li>
                       Monitor your home loan and property’s market performance

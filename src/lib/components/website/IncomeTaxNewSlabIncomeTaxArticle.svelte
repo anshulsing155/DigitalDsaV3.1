@@ -364,10 +364,10 @@ Stay updated with the latest tax regulations by visiting the
         <div
           class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
         >
-          <span class="typography-body-sm text-text-light text-gray-600">
+          <span class="typography-body-sm text-[var(--form-text-secondary)] text-gray-600">
             Posted on: {currentDate}
           </span>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             Income tax is a crucial financial obligation for every individual
             and business in India. With the Union Budget 2025 introducing new
             <strong>income tax slabs in India 2025</strong> and enhanced
@@ -394,7 +394,7 @@ Stay updated with the latest tax regulations by visiting the
           >
             ✅ What is Income Tax?
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             Income tax is a direct tax levied on an individual’s or entity’s
             earnings during a financial year. It is governed by the <strong
               >Income Tax Act, 1961</strong
@@ -419,11 +419,11 @@ Stay updated with the latest tax regulations by visiting the
             {#each taxPayers.listItems as list}
               <li class="space-y-2">
                 <h3 class="font-semibold typography-body-md">{list.heading}</h3>
-                <p class="typography-body-sm text-text-light">{list.desc}</p>
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">{list.desc}</p>
               </li>
             {/each}
           </ul>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html taxPayers.secPara}
           </p>
         </div>
@@ -442,7 +442,7 @@ Stay updated with the latest tax regulations by visiting the
             {#each income.listItems as list}
               <li class="space-y-2">
                 <h3 class="font-semibold typography-body-md">{list.heading}</h3>
-                <p class="typography-body-sm text-text-light">{list.desc}</p>
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">{list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -481,7 +481,7 @@ Stay updated with the latest tax regulations by visiting the
             {#each deduction.listItems as list}
               <li class="space-y-2">
                 <h3 class="font-semibold typography-body-md">{list.heading}</h3>
-                <p class="typography-body-sm text-text-light">{list.desc}</p>
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">{list.desc}</p>
               </li>
             {/each}
           </ul>
@@ -499,7 +499,7 @@ Stay updated with the latest tax regulations by visiting the
           </div>
           <ul class="space-y-6">
             {#each itr.listItems as list}
-              <li class="space-y-2 typography-body-sm text-text-light">
+              <li class="space-y-2 typography-body-sm text-[var(--form-text-secondary)]">
                 <span class="font-semibold">{list.num}</span>
                 {@html list.desc}
               </li>
@@ -521,7 +521,7 @@ Stay updated with the latest tax regulations by visiting the
           </div>
           <ul class="space-y-6">
             {#each deadline.listItems as list}
-              <li class="space-y-2 typography-body-sm text-text-light">
+              <li class="space-y-2 typography-body-sm text-[var(--form-text-secondary)]">
                 <span class="font-semibold">{list.date}</span>
                 {@html list.desc}
               </li>
@@ -541,7 +541,7 @@ Stay updated with the latest tax regulations by visiting the
           </div>
           <ul class="space-y-6 pl-4">
             {#each penalties.listItems as list}
-              <li class="list-disc space-y-2 typography-body-sm text-text-light">
+              <li class="list-disc space-y-2 typography-body-sm text-[var(--form-text-secondary)]">
                 {@html list.desc}
               </li>
             {/each}
@@ -558,7 +558,7 @@ Stay updated with the latest tax regulations by visiting the
           >
             {conclusion.heading}
           </h2>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html conclusion.para}
           </p>
         </div>
@@ -586,10 +586,10 @@ Stay updated with the latest tax regulations by visiting the
               <div
                 class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]"
               >
-                <span class="typography-body-sm text-text-light text-gray-600">
+                <span class="typography-body-sm text-[var(--form-text-secondary)] text-gray-600">
                   Posted on: {currentDate}
                 </span>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   Income tax is a crucial financial obligation for every
                   individual and business in India. With the Union Budget 2025
                   introducing new
@@ -618,7 +618,7 @@ Stay updated with the latest tax regulations by visiting the
                 >
                   ✅ What is Income Tax?
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   Income tax is a direct tax levied on an individual’s or
                   entity’s earnings during a financial year. It is governed by
                   the <strong>Income Tax Act, 1961</strong>, and applies to
@@ -646,11 +646,11 @@ Stay updated with the latest tax regulations by visiting the
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">{list.desc}</p>
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">{list.desc}</p>
                     </li>
                   {/each}
                 </ul>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html taxPayers.secPara}
                 </p>
               </div>
@@ -671,7 +671,7 @@ Stay updated with the latest tax regulations by visiting the
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">{list.desc}</p>
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">{list.desc}</p>
                     </li>
                   {/each}
                 </ul>
@@ -714,7 +714,7 @@ Stay updated with the latest tax regulations by visiting the
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">{list.desc}</p>
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">{list.desc}</p>
                     </li>
                   {/each}
                 </ul>
@@ -732,7 +732,7 @@ Stay updated with the latest tax regulations by visiting the
                 </div>
                 <ul class="space-y-6">
                   {#each itr.listItems as list}
-                    <li class="space-y-2 typography-body-sm text-text-light">
+                    <li class="space-y-2 typography-body-sm text-[var(--form-text-secondary)]">
                       <span class="font-semibold">{list.num}</span>
                       {@html list.desc}
                     </li>
@@ -755,7 +755,7 @@ Stay updated with the latest tax regulations by visiting the
                 </div>
                 <ul class="space-y-6">
                   {#each deadline.listItems as list}
-                    <li class="space-y-2 typography-body-sm text-text-light">
+                    <li class="space-y-2 typography-body-sm text-[var(--form-text-secondary)]">
                       <span class="font-semibold">{list.date}</span>
                       {@html list.desc}
                     </li>
@@ -776,7 +776,7 @@ Stay updated with the latest tax regulations by visiting the
                 <ul class="space-y-6 pl-4">
                   {#each penalties.listItems as list}
                     <li
-                      class="list-disc space-y-2 typography-body-sm text-text-light"
+                      class="list-disc space-y-2 typography-body-sm text-[var(--form-text-secondary)]"
                     >
                       {@html list.desc}
                     </li>
@@ -795,7 +795,7 @@ Stay updated with the latest tax regulations by visiting the
                 >
                   {conclusion.heading}
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html conclusion.para}
                 </p>
               </div>

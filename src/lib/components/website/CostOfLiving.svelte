@@ -354,7 +354,7 @@
                   With Maximum Benefits!
                 </h2>
 
-                <ul class="typography-body-md text-text-light">
+                <ul class="typography-body-md text-[var(--form-text-secondary)]">
                   <li class="flex items-center gap-2">
                     <span
                       ><img
@@ -403,7 +403,7 @@
                   👉
                   <a
                     href="/get-started/how-can-we-help"
-                    class="typography-body-md text-text-light text-linkColor underline"
+                    class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                   >
                     Get Started</a
                   >
@@ -417,10 +417,10 @@
                   <img src="/icons/referral.svg" alt="" class="h-16" /> Spread the
                   Word
                 </h2>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   Earn Rewards by Referring! Your friends win, and so do you!
                 </p>
-                <ul class="typography-body-sm text-text-light">
+                <ul class="typography-body-sm text-[var(--form-text-secondary)]">
                   {#each spreadWord as item}
                     <li class="flex items-center gap-2">
                       <span
@@ -438,7 +438,7 @@
                   👉
                   <a
                     href="/refer-&-earn"
-                    class="typography-body-md text-text-light text-linkColor underline"
+                    class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                   >
                     Refer Now & Start Earning</a
                   >
@@ -471,10 +471,10 @@
               reverse
             >
               <ul
-                class="grid gap-[2rem] typography-body-md text-text-light"
+                class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   Feel free to message us anytime for expert assistance with
                   your loan needs. Our team is here to provide professional
                   advice, guide you through the loan process, and help you find
@@ -556,10 +556,10 @@
                     </h2>
                     <!-- <a
                     href=""
-                    class="typography-body-md text-text-light text-linkColor underline"
+                    class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                     >Get more</a
                   > -->
-                    <ul class="typography-body-md text-text-light">
+                    <ul class="typography-body-md text-[var(--form-text-secondary)]">
                       <li class="flex items-center gap-2">
                         <span
                           ><img
@@ -608,7 +608,7 @@
                       👉
                       <a
                         href="/get-started/how-can-we-help"
-                        class="typography-body-md text-text-light text-linkColor underline"
+                        class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                       >
                         Get Started</a
                       >
@@ -622,11 +622,11 @@
                       <img src="/icons/referral.svg" alt="" class="h-10" /> Spread
                       the Word
                     </h2>
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       Earn Rewards by Referring! Your friends win, and so do
                       you!
                     </p>
-                    <ul class="typography-body-sm text-text-light">
+                    <ul class="typography-body-sm text-[var(--form-text-secondary)]">
                       {#each spreadWord as item}
                         <li class="flex items-center gap-2">
                           <span
@@ -644,7 +644,7 @@
                       👉
                       <a
                         href="/refer-&-earn"
-                        class="typography-body-md text-text-light text-linkColor underline"
+                        class="typography-body-md text-[var(--form-text-secondary)] text-linkColor underline"
                       >
                         Refer Now & Start Earning</a
                       >
@@ -674,10 +674,10 @@
                   cardHeading={cardHead2}
                 >
                   <ul
-                    class="grid gap-[2rem] typography-body-md text-text-light"
+                    class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                     slot="list"
                   >
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       Feel free to message us anytime for expert assistance with
                       your loan needs. Our team is here to provide professional
                       advice, guide you through the loan process, and help you

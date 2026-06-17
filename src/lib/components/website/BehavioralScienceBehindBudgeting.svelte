@@ -135,7 +135,7 @@
       >
         Understanding Yourself to Budget Better
       </h3>
-      <p class="typography-body-md text-text-light">
+      <p class="typography-body-md text-[var(--form-text-secondary)]">
         By applying insights from behavioral science to your budgeting process,
         you can better understand your financial behaviors and overcome the
         psychological barriers that often hinder financial progress. Budgeting

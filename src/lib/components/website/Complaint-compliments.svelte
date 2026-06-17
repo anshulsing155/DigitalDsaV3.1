@@ -122,7 +122,7 @@
               reverse
             >
               <ul
-                class="grid gap-[2rem] typography-body-md text-text-light"
+                class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
                 <li>
@@ -153,7 +153,7 @@
               cardHeading={content.giveComplaint.cardHeading}
             >
               <ul
-                class="grid gap-[2rem] typography-body-md text-text-light"
+                class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                 slot="list"
               >
                 <li>
@@ -206,7 +206,7 @@
                   cardHeading={content.makeComplaint.cardHeading}
                 >
                   <ul
-                    class="grid gap-4 md:gap-[2rem] typography-body-md text-text-light"
+                    class="grid gap-4 md:gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                     slot="list"
                   >
                     <li>
@@ -240,7 +240,7 @@
                   cardHeading={content.giveComplaint.cardHeading}
                 >
                   <ul
-                    class="grid gap-[2rem] typography-body-md text-text-light"
+                    class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
                     slot="list"
                   >
                     <li>

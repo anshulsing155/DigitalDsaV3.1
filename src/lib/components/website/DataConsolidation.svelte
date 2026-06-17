@@ -238,7 +238,7 @@
     </div>
 
     <TwoColumnWithImage contents={content.messageUs}>
-      <p class="typography-body-sm text-text-light">{content.messageUs.text}</p>
+      <p class="typography-body-sm text-[var(--form-text-secondary)]">{content.messageUs.text}</p>
       <Button
         link={content.messageUs.button.link}
         btnBorder={content.messageUs.button.btnBorder}

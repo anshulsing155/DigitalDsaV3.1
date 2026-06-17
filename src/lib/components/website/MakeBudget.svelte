@@ -164,7 +164,7 @@
       <div id="process" data-section="process">
         <TwoColumnWithLeftHeading contents={content.understandingIncomeExpenses} />
         <TwoColumnWithImage contents={content.trackingIncome}>
-          <p class="typography-body-md text-text-light">
+          <p class="typography-body-md text-[var(--form-text-secondary)]">
             {content.trackingIncome.text}
           </p>
 
@@ -176,7 +176,7 @@
         </TwoColumnWithImage>
 
         <TwoColumnWithImage contents={content.categorizingExpenses}>
-          <p class="typography-body-sm text-text-light">
+          <p class="typography-body-sm text-[var(--form-text-secondary)]">
             {@html content.categorizingExpenses.text}
           </p>
 
@@ -273,7 +273,7 @@
             <div id="process" class="bg-white text-black">
               <TwoColumnWithLeftHeading contents={content.understandingIncomeExpenses} />
               <TwoColumnWithImage contents={content.trackingIncome}>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {content.trackingIncome.text}
                 </p>
 
@@ -287,7 +287,7 @@
               </TwoColumnWithImage>
 
               <TwoColumnWithImage contents={content.categorizingExpenses}>
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {@html content.categorizingExpenses.text}
                 </p>
 

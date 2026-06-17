@@ -174,12 +174,12 @@
               reverse
             >
               <div slot="list" class="flex flex-col gap-4">
-                <p class="typography-body-sm text-text-light">
+                <p class="typography-body-sm text-[var(--form-text-secondary)]">
                   {content.borrow.text}
                 </p>
                 <a
                   href={content.borrow.link}
-                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                  class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                 >
                   {content.borrow.linkText}
                 </a>
@@ -208,12 +208,12 @@
                 cardHeading={content.guaranteeScheme.cardHeading}
               >
                 <div slot="list" class="flex flex-col gap-4">
-                  <p class="typography-body-sm text-text-light">
+                  <p class="typography-body-sm text-[var(--form-text-secondary)]">
                     {content.guaranteeScheme.text}
                   </p>
                   <a
                     href={content.guaranteeScheme.link}
-                    class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                    class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                   >
                     {content.guaranteeScheme.linkText}
                   </a>
@@ -299,12 +299,12 @@
                   reverse
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       {content.borrow.text}
                     </p>
                     <a
                       href={content.borrow.link}
-                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                     >
                       {content.borrow.linkText}
                     </a>
@@ -332,12 +332,12 @@
                   cardHeading={content.guaranteeScheme.cardHeading}
                 >
                   <div slot="list" class="flex flex-col gap-4">
-                    <p class="typography-body-sm text-text-light">
+                    <p class="typography-body-sm text-[var(--form-text-secondary)]">
                       {content.guaranteeScheme.text}
                     </p>
                     <a
                       href={content.guaranteeScheme.link}
-                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-text-light"
+                      class="underline underline-offset-4 hover:no-underline text-linkColor typography-body-md text-[var(--form-text-secondary)]"
                     >
                       {content.guaranteeScheme.linkText}
                     </a>
@@ -385,7 +385,7 @@
           cardAltName={content.messageUs.cardAltName}
           cardHeading={content.messageUs.cardHeading}
         >
-          <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+          <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
             <li>{content.messageUs.text}</li>
             <div class="w-auto">
               <Button

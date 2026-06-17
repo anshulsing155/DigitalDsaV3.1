@@ -222,7 +222,7 @@
             >
               Our People Promise
             </h2>
-            <p class="typography-body-sm text-text-light">
+            <p class="typography-body-sm text-[var(--form-text-secondary)]">
               We don’t just build financial solutions—we build careers that
               matter. You can expect an environment where you’ll be challenged,
               supported, and empowered to do your best work.
@@ -429,7 +429,7 @@
                   >
                     Our People Promise
                   </h2>
-                  <p class="typography-body-sm text-text-light">
+                  <p class="typography-body-sm text-[var(--form-text-secondary)]">
                     We don’t just build financial solutions—we build careers
                     that matter. You can expect an environment where you’ll be
                     challenged, supported, and empowered to do your best work.

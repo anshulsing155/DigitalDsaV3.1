@@ -314,7 +314,8 @@
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
-			/>
+        containerClass="px-0"
+/>
 		</div>
 	</NewPageLayout>
 </section>

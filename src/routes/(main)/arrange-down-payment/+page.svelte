@@ -240,7 +240,7 @@
                       <h3 class="font-semibold typography-body-md">
                         {list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">{list.desc}</p>
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">{list.desc}</p>
                     </li>
                   {/each}
                 </ul>
@@ -286,7 +286,7 @@
                       <h3 class="font-semibold typography-body-md">
                         {@html list.heading}
                       </h3>
-                      <p class="typography-body-sm text-text-light">
+                      <p class="typography-body-sm text-[var(--form-text-secondary)]">
                         {@html list.desc}
                       </p>
                     </li>

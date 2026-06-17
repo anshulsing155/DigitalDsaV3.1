@@ -33,7 +33,7 @@
           reverse={content.beforeReachingUs.reverse}
         >
           <ul
-            class="grid gap-6 typography-body-sm text-text-light md:typography-body-md list-disc pl-5"
+            class="grid gap-6 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md list-disc pl-5"
             slot="list"
           >
             {#each content.beforeReachingUs.items as item}
@@ -57,7 +57,7 @@
         >
           <div class="flex flex-col gap-5" slot="list">
             <ul
-              class="grid gap-4 typography-body-sm text-text-light md:typography-body-md list-disc pl-5"
+              class="grid gap-4 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md list-disc pl-5"
             >
               {#each content.securityInfo.items as item}
                 <li>
@@ -65,7 +65,7 @@
                 </li>
               {/each}
             </ul>
-            <p class="mt-4 typography-body-sm text-text-light md:typography-body-md">
+            <p class="mt-4 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md">
               {content.securityInfo.footerPara}
             </p>
           </div>
@@ -82,7 +82,7 @@
               {content.mapSection.heading}
             </h2>
             <div
-              class="col-span-12 first-letter: lg:col-span-7 typography-body-sm text-text-light md:typography-body-md"
+              class="col-span-12 first-letter: lg:col-span-7 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md"
             >
               <p>
                 {content.mapSection.subHeading}
@@ -91,7 +91,7 @@
           </div>
           <!-- sec div  -->
           <div
-            class="grid grid-cols-3 justify-between gap-4 typography-body-sm text-text-light md:typography-body-md"
+            class="grid grid-cols-3 justify-between gap-4 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md"
           >
             <div class="col-span-3 lg:col-span-2">
               <div

@@ -418,11 +418,11 @@
 										Our simplified verification process
 									</h3>
 									<ul class="mb-4 space-y-2">
-										<li class="typography-body-sm text-text-light">
+										<li class="typography-body-sm text-[var(--form-text-secondary)]">
 											A simple application process for business owners with less documents to prove
 											your income.
 										</li>
-										<li class="typography-body-sm text-text-light">
+										<li class="typography-body-sm text-[var(--form-text-secondary)]">
 											Get in touch with our Home Lending Specialists to discuss your options.
 										</li>
 									</ul>
@@ -439,8 +439,8 @@
 										You may be eligible if:
 									</h3>
 									<ul class="mt-[1.5rem] list-disc space-y-2 pl-4 md:mb-4">
-										<li class="typography-body-sm text-text-light">You're self-employed</li>
-										<li class="typography-body-sm text-text-light">
+										<li class="typography-body-sm text-[var(--form-text-secondary)]">You're self-employed</li>
+										<li class="typography-body-sm text-[var(--form-text-secondary)]">
 											You pay yourself a regular salary from your business
 										</li>
 									</ul>
@@ -450,15 +450,15 @@
 										If eligible, you'll need:
 									</h3>
 									<ul class="mb-4 list-disc space-y-2 pl-4">
-										<li class="typography-body-sm text-text-light">
+										<li class="typography-body-sm text-[var(--form-text-secondary)]">
 											Six months of salary credits in an account
 										</li>
-										<li class="typography-body-sm text-text-light">
+										<li class="typography-body-sm text-[var(--form-text-secondary)]">
 											Financial records showing profit and loss for the last two years, with a
 											profit each year
 										</li>
 									</ul>
-									<p class="typography-body-md mb-[1.5rem] text-text-light">
+									<p class="typography-body-md mb-[1.5rem] text-[var(--form-text-secondary)]">
 										In some instances, we may need more information. Our Home Lending Specialists
 										will let you know.
 									</p>
@@ -482,7 +482,7 @@
 										</h3>
 										<ul class="marker:black list-disc space-y-2 pl-4">
 											{#each content.rates.left[0].lists as list}
-												<li class="typography-body-sm text-text-light">
+												<li class="typography-body-sm text-[var(--form-text-secondary)]">
 													{list}
 												</li>
 											{/each}
@@ -494,7 +494,7 @@
 										</h3>
 										<ul class="marker:black list-disc space-y-2 pl-4">
 											{#each content.rates.right[0].lists as list}
-												<li class="typography-body-sm text-text-light">
+												<li class="typography-body-sm text-[var(--form-text-secondary)]">
 													{list}
 												</li>
 											{/each}

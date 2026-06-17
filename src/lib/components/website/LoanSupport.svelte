@@ -13,9 +13,9 @@
         {support.title}
     </div>
     <div class="lg:col-span-4 grid gap-[2rem]">
-        <p class="typography-body-sm text-text-light">{support.paraGraph}</p>
+        <p class="typography-body-sm text-[var(--form-text-secondary)]">{support.paraGraph}</p>
         <p class="h-[3rem]">
-            <a class={`underline hover:no-underline underline-offset-4 ${support.url ==="" ?"text-dangerColor":"text-linkColor"} typography-body-md text-text-light`} href={support.url}>{support.link}</a>
+            <a class={`underline hover:no-underline underline-offset-4 ${support.url ==="" ?"text-dangerColor":"text-linkColor"} typography-body-md text-[var(--form-text-secondary)]`} href={support.url}>{support.link}</a>
         </p>
     </div>
 </section>

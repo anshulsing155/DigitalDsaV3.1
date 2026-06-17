@@ -228,7 +228,7 @@
 			<div id="help" data-section="help">
 				<TwoColumnWithImage contents={content.help.contents}>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
-						<ul class="list-disc space-y-4 typography-body-md text-text-light">
+						<ul class="list-disc space-y-4 typography-body-md text-[var(--form-text-secondary)]">
 							{#each content.help.list as item}
 								<li class="flex items-start gap-2">
 									<img src="/icons/circle-check.svg" alt="Check icon" class="h-5 mt-1" />
@@ -309,7 +309,7 @@
 						>
 							<TwoColumnWithImage contents={content.help.contents}>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
-									<ul class="list-disc space-y-4 typography-body-md text-text-light">
+									<ul class="list-disc space-y-4 typography-body-md text-[var(--form-text-secondary)]">
 										{#each content.help.list as item}
 											<li class="flex items-start gap-2">
 												<img src="/icons/circle-check.svg" alt="Check icon" class="h-5 mt-1" />

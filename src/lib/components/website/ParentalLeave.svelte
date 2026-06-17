@@ -201,7 +201,7 @@
             cardHeading="Message us 24/7"
           >
             <div
-              class="grid gap-[2rem] typography-body-md text-text-light"
+              class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]"
               slot="list"
             >
               <p>

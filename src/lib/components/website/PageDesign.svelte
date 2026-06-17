@@ -77,7 +77,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
             {#if pageData.heroList && pageData.heroList.length > 0}
               <ul class="flex flex-col gap-4">
                 {#each pageData.heroList as item}
-                  <li class="grid gap-4 typography-body-md text-text-light">
+                  <li class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]">
                     {#if typeof item.text === "object"}
                       {#if item.text.subText}
                         <span>{@html item.text.subText}</span>
@@ -123,7 +123,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
             {/if}
             {#if pageData.actionBtn}
               <div
-                class="flex flex-col gap-4 typography-body-sm text-text-light sm:flex-row md:typography-body-md"
+                class="flex flex-col gap-4 typography-body-sm text-[var(--form-text-secondary)] sm:flex-row md:typography-body-md"
               >
                 {#each pageData.actionBtn as actionBtn}
                   <a href={actionBtn.link} class="text-black">

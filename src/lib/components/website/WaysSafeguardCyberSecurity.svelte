@@ -256,7 +256,7 @@ dispatch("pageData", pageData);
                   {#each Object.entries(item) as [key, value], i}
                     {#if key != "heading"}
                       <ul
-                        class="list-disc pl-4 typography-body-md text-text-light space-y-3"
+                        class="list-disc pl-4 typography-body-md text-[var(--form-text-secondary)] space-y-3"
                       >
                         <li>
                           <span class="font-semibold">
@@ -368,7 +368,7 @@ dispatch("pageData", pageData);
                         {#each Object.entries(item) as [key, value], i}
                           {#if key != "heading"}
                             <ul
-                              class="list-disc pl-4 typography-body-md text-text-light space-y-3"
+                              class="list-disc pl-4 typography-body-md text-[var(--form-text-secondary)] space-y-3"
                             >
                               <li>
                                 <span class="font-semibold">

@@ -47,7 +47,7 @@
           <a
             class:text-linkColor={facility.link !== ""}
             class:text-dangerColor={facility.link == ""}
-            class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline text-linkColor"
+            class="typography-body-md text-[var(--form-text-secondary)] underline underline-offset-4 hover:no-underline text-linkColor"
             href={facility.link}>{facility.linkText}</a
           >
         {/if}
@@ -61,7 +61,7 @@
                     href={item.url}
                     class:text-linkColor={item.url !== ""}
                     class:text-dangerColor={item.url == ""}
-                    class="typography-body-md text-text-light underline underline-offset-4 hover:no-underline text-linkColor"
+                    class="typography-body-md text-[var(--form-text-secondary)] underline underline-offset-4 hover:no-underline text-linkColor"
                     >{item.linkName}</a
                   >
                 </li>

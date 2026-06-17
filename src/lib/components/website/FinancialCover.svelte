@@ -147,7 +147,7 @@
         <TwoColumnWithImage
           contents={content.banking}
         >
-          <ul class="space-y-4 typography-body-md text-text-light">
+          <ul class="space-y-4 typography-body-md text-[var(--form-text-secondary)]">
             {#each content.banking.bullets as bullet}
               <li class="flex flex-col gap-2">
                 <span class="typography-h3 font-semibold text-text-main">{@html bullet.title}</span>
@@ -242,7 +242,7 @@
               <TwoColumnWithImage
                 contents={content.banking}
               >
-                <ul class="space-y-4 typography-body-md text-text-light">
+                <ul class="space-y-4 typography-body-md text-[var(--form-text-secondary)]">
                   {#each content.banking.bulletsMobile as bullet}
                     <li class="flex flex-col gap-2">
                       <span class="typography-h3 font-semibold text-text-main">{@html bullet.title}</span>

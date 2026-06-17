@@ -27,7 +27,7 @@
   </div>
 
   <div
-    class="lg:col-span-{colSpanText} grid md:gap-[2rem] typography-body-md text-text-light justify-self-end"
+    class="lg:col-span-{colSpanText} grid md:gap-[2rem] typography-body-md text-[var(--form-text-secondary)] justify-self-end"
   >
     <!-- svelte-ignore slot_element_deprecated -->
     <slot />

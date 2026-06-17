@@ -241,7 +241,7 @@
       >
         Feedback matters!
       </h2>
-      <p class="typography-body-md text-text-light md:w-[50%] mx-auto">
+      <p class="typography-body-md text-[var(--form-text-secondary)] md:w-[50%] mx-auto">
         We value your feedback to help us improve our portal and services.
         Please take a moment to share your thoughts and suggestions.
       </p>
@@ -301,7 +301,7 @@
               <h2 class="font-semibold typography-body-md">
                 That's great! What features do you find most useful?
               </h2>
-              <p class="typography-body-sm text-text-light">
+              <p class="typography-body-sm text-[var(--form-text-secondary)]">
                 (We’d love to hear your feedback, we'll feature it as a
                 testimonial on our web app!)
               </p>
@@ -547,7 +547,7 @@
 
               {#if feedbackData.ddsaRatingDetailsId >= 4}
                 <div class="text-start">
-                  <p class="typography-body-md text-text-light">
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
                     We may showcase your feedback as a testimonial
                     {#if !feedbackData.uploadedImage}
                       if you provide a profile image.
@@ -589,7 +589,7 @@
           {#if isWaiting}
             <button
               type="button"
-              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-text-light md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
+              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
               disabled
               aria-label="Submitting feedback"
             >
@@ -600,7 +600,7 @@
           {:else}
             <button
               type="submit"
-              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-text-light md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
+              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
               disabled={hasErrors || !recaptchaToken}
             >
               Submit

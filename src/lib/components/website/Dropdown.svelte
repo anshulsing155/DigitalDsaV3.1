@@ -18,7 +18,7 @@
         </div>
       </div>
     </summary>
-    <div class="grid gap-4 pt-[2rem] typography-body-md text-text-light">
+    <div class="grid gap-4 pt-[2rem] typography-body-md text-[var(--form-text-secondary)]">
       {@render children?.()}
     </div>
   </details>

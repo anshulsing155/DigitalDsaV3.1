@@ -133,7 +133,7 @@
       >
         💡 Final Thoughts
       </h2>
-      <p class="typography-body-md text-text-light">
+      <p class="typography-body-md text-[var(--form-text-secondary)]">
         Budgeting is a powerful tool for achieving financial success. Start
         small, stay consistent, and don’t be afraid to tweak your approach as
         you go. With these 6 tips, you’ll be well on your way to a financially

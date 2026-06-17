@@ -243,7 +243,7 @@
           cardAltName={content.messageUs.cardAltName}
           cardHeading={content.messageUs.cardHeading}
         >
-          <ul class="grid gap-[2rem] typography-body-md text-text-light" slot="list">
+          <ul class="grid gap-[2rem] typography-body-md text-[var(--form-text-secondary)]" slot="list">
             <li>{content.messageUs.text}</li>
             <div class="w-auto">
               <Button
