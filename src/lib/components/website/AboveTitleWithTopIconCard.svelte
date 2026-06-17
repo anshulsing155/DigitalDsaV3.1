@@ -47,7 +47,7 @@
 
     {#if contents.list}
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-{listGridAboveLg} xl:grid-cols-{contents.xlGridCol} gap-4"
+        class="grid md:grid-cols-2 lg:grid-cols-{listGridAboveLg} xl:grid-cols-{contents.xlGridCol} gap-4 "
       >
         {#each contents.list as listItem}
           <div

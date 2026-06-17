@@ -16,7 +16,7 @@
 	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/plotConstructionLoan.json';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
-
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -145,10 +145,10 @@
 />
 
 <section class="">
-  <NewPageLayout pageData={pageDataWithClicks}>
-    <!-- desktop view -->
-    <div class="hidden lg:block">
-      <StickyNavbar navList={navListWithClicks} {activeSection} />
+	<NewPageLayout pageData={pageDataWithClicks}>
+		<!-- desktop view -->
+		<div class="hidden lg:block">
+			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="guide" data-section="guide" class="section">
 				<ThreeColumWithLeftHeading contents={content.guide} />
@@ -217,17 +217,13 @@
 						: ''}"
 				>
 					<summary
-						class="cursor-pointer list-none px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-							<div class="icon-container typography-h3 justify-self-end">
-								<span>
-									<i
-										class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"
-									></i>
-								</span>
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
@@ -235,7 +231,9 @@
 					{#if index == 0}
 						<div id="guide" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.guide} />
-							<TwoColumnWithLeftHeading contents={content.keyAdvantages} />
+						<div class="border-t border-[var(--form-border)]">
+								<TwoColumnWithLeftHeading contents={content.keyAdvantages} />
+						</div>
 						</div>
 					{:else if index == 1}
 						<div
@@ -248,7 +246,7 @@
 							<div id="bt">
 								<TwoColumnWithLeftHeading contents={content.balanceTransfer.contents} />
 								<div
-									class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem]"
+									class="w-full border-b border-[var(--form-border)] px-[0.5rem] lg:px-[4rem] pb-[4rem]"
 								>
 									<div
 										class="flex w-full flex-col items-center justify-center gap-8 md:gap-16 lg:w-auto"
@@ -289,7 +287,9 @@
 								</div>
 							</TwoColumnWithImage>
 
-							<TwoColumnWithLeftHeading contents={content.exploreMore} />
+							<div class="border-t border-[var(--form-border)]">
+								<TwoColumnWithLeftHeading contents={content.exploreMore} />
+							</div>
 						</div>
 					{:else if index == 3}
 						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
@@ -319,7 +319,7 @@
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
-        containerClass="lg:px-0"
+				containerClass="lg:px-0"
 			/>
 		</div>
 	</NewPageLayout>

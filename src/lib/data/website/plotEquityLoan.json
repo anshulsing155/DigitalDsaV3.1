@@ -208,7 +208,7 @@
 					"para": "If you're unsure about how a Plot + Equity Loan works and whether it suits your needs, schedule an appointment with our experts.",
 					"btnName": "Book an appointment",
 					"btnLink": "/appointment",
-					"btnBorder": "#4F4C4D"
+					"btnClass": "btn-secondary w-full"
 				}
 			]
 		}
@@ -276,7 +276,8 @@
 		"heading": "Explore more loan options",
 		"secPara": "Discover various loan alternatives tailored to your financial needs.",
 		"btnName": "Explore now",
-		"btnLink": "/plot-loan"
+		"btnLink": "/plot-loan",
+		"btnClass": "btn-primary w-full"
 	},
 	"tools": {
 		"moneyMap": {

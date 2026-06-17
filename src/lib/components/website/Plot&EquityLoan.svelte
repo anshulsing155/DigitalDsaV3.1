@@ -16,6 +16,8 @@
   import AboveTitleWithTopIconCard from "./AboveTitleWithTopIconCard.svelte";
   import Seo from "./Seo.svelte";
   import content from "$lib/data/website/plotEquityLoan.json";
+  	import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 
   interface ButtonProps {
     btnName: string;
@@ -130,46 +132,7 @@
     };
   });
 
-  const toggleDropdown = (event: Event, index: number) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget as HTMLElement;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
-
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
-
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      if (icon) {
-        icon.classList.remove("fa-angle-up");
-        icon.classList.add("fa-angle-down");
-      }
-    } else {
-      detailsElement.setAttribute("open", "true");
-      if (icon) {
-        icon.classList.remove("fa-angle-down");
-        icon.classList.add("fa-angle-up");
-      }
-    }
-    setTimeout(() => {
-      if (detailsElement) {
-        detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 100);
-  };
+  
 </script>
 
 <Seo
@@ -193,7 +156,7 @@
 
         <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
           <div class="">
-            <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
+            <h2 class="typography-h2-md text-center font-semibold text-[var(--form-text)] mb-[4rem]">
               Comparison of Different Plot Loan Types
             </h2>
           </div>
@@ -217,7 +180,7 @@
       <div id="plotEquity" data-section="plotEquity" class="section">
         <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
           <div class="">
-            <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
+            <h2 class="typography-h2-md text-center font-semibold text-[var(--form-text)] mb-[4rem]">
               Plot + Equity Loan vs. Only Plot Equity Loan
             </h2>
           </div>
@@ -260,19 +223,17 @@
         <details
           class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.mobileNavbarTitle.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
-          <summary
-            class="list-none cursor-pointer px-[1rem] py-[1.5rem]"
-            onclick={(e) => toggleDropdown(e, index)}
-          >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-              <div class="icon-container justify-self-end typography-h3">
-                <span>
-                  <i class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"></i>
-                </span>
-              </div>
-            </div>
-          </summary>
+         <summary
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
 
           {#if index == 0}
             <div id="equity" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
@@ -282,7 +243,7 @@
 
               <div class="py-[4rem] px-[1rem] w-full border-b border-[var(--form-border)]">
                 <div class="">
-                  <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
+                  <h2 class="typography-h2-md text-center font-semibold text-[var(--form-text)] mb-[4rem]">
                     Comparison of Different Plot Loan Types
                   </h2>
                 </div>
@@ -304,9 +265,9 @@
             </div>
           {:else if index == 2}
             <div id="plotEquity" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-              <div class="py-[4rem] px-[0.5rem] w-full border-b border-[var(--form-border)]">
+              <div class="py-[4rem] px-[0.5rem] w-full">
                 <div class="">
-                  <h2 class="grid mb-[4rem] typography-h2 text-text-main text-center">
+                  <h2 class="typography-h2-md text-center font-semibold text-[var(--form-text)] mb-[4rem]">
                     Plot + Equity Loan vs. Only Plot Equity Loan
                   </h2>
                 </div>
@@ -352,7 +313,7 @@
       <div class="w-auto">
         <Button
           link={content.messageUs.button.link}
-          btnBorder={content.messageUs.button.btnBorder}
+          btnClass={content.messageUs.button.btnClass}
           btnName={content.messageUs.button.btnName}
         />
       </div>
@@ -363,6 +324,7 @@
       <ThingsYouShould
         thinkKnow={content.common_components.thinkYouShouldKnow}
         disc="list-decimal"
+        containerClass="px-0"
       />
     </div>
   </NewPageLayout>

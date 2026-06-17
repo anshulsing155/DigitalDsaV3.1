@@ -129,50 +129,7 @@
 		};
 	});
 
-	// const toggleDropdown = (event: Event, index: number) => {
-	// 	event.preventDefault();
-
-	// 	const summaryElement = event.currentTarget as HTMLElement;
-	// 	const icon = summaryElement.querySelector('.faq-icon') as HTMLElement;
-	// 	const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-	// 	// Close all other dropdowns
-	// 	document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-	// 		const otherIcon = otherDetails.querySelector('.faq-icon') as HTMLElement;
-
-	// 		if (idx !== index) {
-	// 			(otherDetails as HTMLDetailsElement).removeAttribute('open');
-
-	// 			if (otherIcon) {
-	// 				otherIcon.style.transform = 'rotate(0deg)';
-	// 			}
-	// 		}
-	// 	});
-
-	// 	// Toggle current dropdown
-	// 	const isOpen = detailsElement.hasAttribute('open');
-
-	// 	if (isOpen) {
-	// 		detailsElement.removeAttribute('open');
-
-	// 		if (icon) {
-	// 			icon.style.transform = 'rotate(0deg)';
-	// 		}
-	// 	} else {
-	// 		detailsElement.setAttribute('open', '');
-
-	// 		if (icon) {
-	// 			icon.style.transform = 'rotate(180deg)';
-	// 		}
-	// 	}
-
-	// 	setTimeout(() => {
-	// 		detailsElement.scrollIntoView({
-	// 			behavior: 'smooth',
-	// 			block: 'start'
-	// 		});
-	// 	}, 100);
-	// };
+	
 </script>
 
 <Seo
@@ -269,12 +226,12 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-							<div class="justify-self-end text-[var(--form-text)]">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
 								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>

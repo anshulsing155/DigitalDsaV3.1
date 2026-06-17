@@ -260,12 +260,12 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-							<div class="justify-self-end text-[var(--form-text)]">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
 								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>

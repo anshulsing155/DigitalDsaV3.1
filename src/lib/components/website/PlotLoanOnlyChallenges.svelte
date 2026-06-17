@@ -17,6 +17,7 @@
 	import content from '$lib/data/website/plotLoanOnlyChallenges.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import GradientCard from './GradientCard.svelte';
 
 	interface ButtonProps {
 		btnName: string;
@@ -148,25 +149,11 @@
 						</h2>
 						<div class="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 							{#each challenges.list as listItem}
-								<div
-									class="grid gap-4 min-h-fit rounded rounded-lg border border-[var(--form-border)] shadow-[10px_10px_10px_rgba(0,0,0,0.15)]"
-								>
-									<div class="row-span-2">
-										<h2 class="typography-h3 p-4 font-semibold text-text-main">
-											{@html listItem.heading}
-										</h2>
-										<p class="typography-body-md p-4 text-text-light">
-											{@html listItem.topPara}
-										</p>
-									</div>
-									<div class="bg-ddsa-gradient-primary p-4 rounded-b-lg row-span-1">
-										<p
-											class="typography-body-md text-text-light text-white"
-										>
-											{@html listItem.para}
-										</p>
-									</div>
-								</div>
+								<GradientCard
+									heading={listItem.heading}
+									topPara={listItem.topPara}
+									para={listItem.para}
+								/>
 							{/each}
 						</div>
 					</div>
@@ -218,12 +205,12 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
+						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="typography-label text-[var(--form-text)]">{list}</h2>
-							<div class="justify-self-end text-[var(--form-text)]">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
 								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
@@ -241,28 +228,18 @@
 							id="challenges"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<div class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem]">
-								<div class="flex flex-col gap-[2rem]">
-									<h2 class="typography-h2 text-text-main">
+							<div class="w-full px-[0.5rem] py-[4rem]">
+								<div class="flex flex-col gap-[2rem] lg:gap-[4rem]">
+									<h2 class="typography-h2-md !font-semibold text-[var(--form-text)]">
 										{@html challenges.heading}
 									</h2>
-									<div class="grid gap-[4rem] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+									<div class="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 										{#each challenges.list as listItem}
-											<div
-												class="grid grid-rows-8 gap-4 rounded shadow-[10px_10px_10px_rgba(0,0,0,0.15)]"
-											>
-												<h2 class="typography-h3 row-span-2 p-4 font-semibold text-text-main">
-													{@html listItem.heading}
-												</h2>
-												<p class="typography-body-md row-span-3 p-4 text-text-light">
-													{@html listItem.topPara}
-												</p>
-												<p
-													class="typography-body-md row-span-3 rounded-b-lg bg-black p-4 text-text-light text-white"
-												>
-													{@html listItem.para}
-												</p>
-											</div>
+											<GradientCard
+												heading={listItem.heading}
+												topPara={listItem.topPara}
+												para={listItem.para}
+											/>
 										{/each}
 									</div>
 								</div>
