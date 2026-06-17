@@ -10,8 +10,8 @@
 	import Seo from './Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/investingInPropertyArticle.json';
-		import { toggleDropdown } from '$lib/utils/toggleDropdown';
-		import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -29,9 +29,7 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	// Inject store update callbacks dynamically for get-started actions
 	const pageDataWithClicks = $derived({
@@ -105,30 +103,28 @@
 		};
 	});
 
-	
-
 	// JSON-LD Structured Data Schema for Breadcrumbs
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		'itemListElement': [
+		itemListElement: [
 			{
 				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Investing in Property',
-				'item': 'https://www.digitaldsa.com/home-loan/investing-in-property'
+				position: 3,
+				name: 'Investing in Property',
+				item: 'https://www.digitaldsa.com/home-loan/investing-in-property'
 			}
 		]
 	};
@@ -186,7 +182,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -198,23 +194,35 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="goals-types" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="goals-types"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.goalsTypes.goal} />
 							<TwoColumnWithLeftHeading contents={content.goalsTypes.resVsComm} />
 						</div>
 					{:else if index === 1}
-						<div id="location-timing" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="location-timing"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.locationTiming.location} />
 							<TwoColumnWithLeftHeading contents={content.locationTiming.constructionVsReady} />
 						</div>
 					{:else if index === 2}
-						<div id="financials-tax" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="financials-tax"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.financialsTax.loanVsCash} />
 							<TwoColumnWithLeftHeading contents={content.financialsTax.rentalYield} />
 							<TwoColumnWithLeftHeading contents={content.financialsTax.taxBenefits} />
 						</div>
 					{:else if index === 3}
-						<div id="scenarios" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="scenarios"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={content.scenarios.cases} />
 							<TwoColumnWithLeftHeading contents={content.scenarios.help} />
 						</div>
@@ -227,7 +235,7 @@
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
-				<ul class="px-2 pl-4 flex flex-col gap-4 list-decimal">
+				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
 					{#each content.common_components.thinkYouShouldKnow.bullets as bullet}
 						<li>{@html bullet}</li>
 					{/each}
