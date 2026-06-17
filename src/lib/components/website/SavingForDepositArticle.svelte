@@ -280,6 +280,7 @@
 						<li>{@html bullet}</li>
 					{/each}
 				</ul>
+				
 			</ThingsYouKnow>
 		</div>
 	</NewPageLayout>

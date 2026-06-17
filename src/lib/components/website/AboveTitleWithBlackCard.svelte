@@ -11,7 +11,7 @@
 </script>
 
 <section
-	class={`w-full px-[0.5rem] py-[1rem] lg:px-16 lg:py-0 lg:pt-16 lg:pb-32 ${ contents.borderBottom ? 'border-b border-[var(--form-border)]' : '' }`}
+	class={`w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] ${contents.borderBottom ? 'border-b border-[var(--form-border)]' : ''}`}
 >
 	<div class="flex w-full flex-col gap-12">
 		<h2 class="typography-h2-md text-[var(--form-text)]">

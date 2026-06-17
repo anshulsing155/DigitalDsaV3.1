@@ -271,6 +271,7 @@
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow.contents}
 				disc={content.common_components.thinkYouShouldKnow.disc}
+				containerClass="lg:px-0"
 			></ThingsYouShould>
 		</div>
 	</NewPageLayout>

@@ -141,7 +141,7 @@
 	},
 	"getStart": {
 		"heading": "How to Get Started",
-		"para": "For individuals like shopkeepers, small vendors, or repair workers with no financial records:<br><ul class=\"list-disc pl-4 space-y-4 mt-4 typography-body-md text-[var(--form-text-secondary)]\"><li><span class=\"font-semibold\">Step 1: First Time Free Consultation</span><br>Speak with our Loan Specialists to discuss your needs and financial situation.</li><li><span class=\"font-semibold\">Step 2: Check Your Eligibility</span><br>Use our <a href=\"/calculators/eligibility-calculator\" class=\"underline underline-offset-4 hover:no-underline cursor-pointer\">Home Loan Eligibility Calculator</a> or connect with us to get a quick estimate.</li><li><span class=\"font-semibold\">Step 3: Submit Documents</span> Provide the necessary financial or alternate documents based on your business type.</li><li><span class=\"font-semibold\">Step 4: Choose Your Loan</span> We’ll match you with the best lenders and guide you through the application process.</li></ul>"
+		"para": "For individuals like shopkeepers, small vendors, or repair workers with no financial records:<br><ul class=\"list-disc pl-4 space-y-4 mt-4 typography-body-md text-[var(--form-text-secondary)]\"><li><span class=\"font-semibold\">Step 1: First Time Free Consultation</span><br>Speak with our Loan Specialists to discuss your needs and financial situation.</li><li><span class=\"font-semibold\">Step 2: Check Your Eligibility</span><br>Use our <a href=\"/calculators/eligibility-calculator\" class=\"underline underline-offset-4 hover:no-underline cursor-pointer text-[var(--ddsa-info-text)]\">Home Loan Eligibility Calculator</a> or connect with us to get a quick estimate.</li><li><span class=\"font-semibold\">Step 3: Submit Documents</span> Provide the necessary financial or alternate documents based on your business type.</li><li><span class=\"font-semibold\">Step 4: Choose Your Loan</span> We’ll match you with the best lenders and guide you through the application process.</li></ul>"
 	},
 	"documentsGuide": [
 		{
@@ -196,6 +196,56 @@
 					"Processing Fee: ₹10,000–₹15,000 (varies by lender, often negotiable).",
 					"Service Charges: Detailed in your loan agreement based on the loan type and lender."
 				]
+			}
+		]
+	},
+	"messageUs": {
+		"contents": {
+			"cardImage": "/images/message.jpg",
+			"cardAltName": "CardCover",
+			"cardHeading": "Why Wait? Let Us Help You Own Your Dream Home!",
+			"sourceName": "DigitalDSA",
+			"originalSource": "www.digitaldsa.com"
+		},
+		"para": "At Digital DSA, we’re committed to making the loan process easier for self-employed individuals and business owners from all walks of life.",
+		"button": {
+			"link": "/contact",
+			"btnClass": "btn-secondary",
+			"btnName": "Contact us today"
+		}
+	},
+	"helpList": {
+		"heading": "We're here to help",
+		"xlGridCol": 4,
+		"borderBottom": true,
+		"cards": [
+			{
+				"heading": "Book an </br> appointment",
+				"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+				"icon": "/icons/appointment.svg",
+				"altName": "appointment Icon",
+				"url": "/appointment"
+			},
+			{
+				"heading": "Check loan offers",
+				"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+				"icon": "/icons/manageLoan2.svg",
+				"altName": "Alert Icon",
+				"url": "/get-started/how-can-we-help"
+			},
+			{
+				"heading": "Contact us",
+				"para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+				"icon": "/icons/contact.svg",
+				"altName": "Alert Icon",
+				"url": "/contact"
+			},
+			{
+				"heading": "Message us",
+				"para": "Get instant help from our online assistants  or chat to a specialist.",
+				"icon": "/icons/msg.svg",
+				"altName": "Alert Icon",
+				"url": "/contact"
 			}
 		]
 	},

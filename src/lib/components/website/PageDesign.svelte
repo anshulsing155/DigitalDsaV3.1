@@ -148,7 +148,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
             {/if}
           </div>
           <div
-            class="absolute left-0 top-0 h-2 w-full -translate-y-1/2 transform bg-btnBg sm:h-3 lg:top-1/2 lg:h-[13rem] lg:w-4"
+            class="absolute left-0 top-0 h-2 w-full -translate-y-1/2 transform bg-primary sm:h-3 lg:top-1/2 lg:h-[13rem] lg:w-4"
           ></div>
         </div>
 

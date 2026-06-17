@@ -3,6 +3,7 @@
 	import Button from '$lib/components/website/Button.svelte';
 	import TwoColumn from '$lib/components/website/TwoColumn.svelte';
 	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
+	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import Journey from '$lib/components/website/Journey.svelte';
 	import { onMount } from 'svelte';
 	import StickyNavbar from './StickyNavbar.svelte';
@@ -319,9 +320,6 @@
 				<section id="support" data-section="support" class="section">
 					<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
 					<Guides guide={content.getStart} />
-					<!-- <HelpList contents={content.}></HelpList> -->
-
-					<ThingsYouShould thinkKnow={content.thinkKnow} disc="list-decimal"></ThingsYouShould>
 				</section>
 			</div>
 		</div>
@@ -516,6 +514,25 @@
 					{/if}
 				</details>
 			{/each}
+		</div>
+
+		<!-- message us -->
+		<TwoColumnWithImage contents={content.messageUs.contents}>
+			<p class="typography-body-md text-[var(--form-text-secondary)]">{content.messageUs.para}</p>
+			<div class="w-auto">
+				<Button
+					link={content.messageUs.button.link}
+					btnName={content.messageUs.button.btnName}
+					btnClass={content.messageUs.button.btnClass}
+				/>
+			</div>
+		</TwoColumnWithImage>
+
+
+		<div slot="secondary">
+		<HelpList contents={content.helpList}></HelpList>
+			<ThingsYouShould thinkKnow={content.thinkKnow} disc="list-decimal" containerClass="lg:px-0"
+			></ThingsYouShould>
 		</div>
 	</PageDesign>
 </section>

@@ -233,6 +233,7 @@
 					paraGraph: content.common_components.thinkYouShouldKnow.bullets
 				}}
 				disc="list-decimal"
+				containerClass="lg:px-0"
 			/>
 		</div>
 	</NewPageLayout>
