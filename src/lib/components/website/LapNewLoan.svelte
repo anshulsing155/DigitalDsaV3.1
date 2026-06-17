@@ -183,7 +183,7 @@
 				<details
 					class="dropdown border-bgBtn bg-darkColor col-span-3 text-white {index <
 					content.mobileNavbarTitle.length - 1
-						? 'border-b'
+						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
