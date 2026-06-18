@@ -12,8 +12,8 @@
 		"coverImage": "/images/business-owners.jpg",
 		"coverAlt": "photo of two business owners",
 		"classStyle": "object-cover xl:h-[60svh] 3xl:max-h-[70svh]",
-		"heroHeading": "Home loans for business owners",
-		"heroParagraph": "Are you self-employed, a shopkeeper, or running a small business?<br>At Digital DSA, we specialize in helping self-employed individuals and business owners from all sectors—organized or unorganized—secure the perfect home loan solution, no matter how complex your income verification might seem."
+		"heroHeading": "Help Business Owners Get Home Loans Faster",
+		"heroParagraph": "Many self-employed customers face loan rejections due to income assessment challenges, limited documentation, or lender policy restrictions.<br>DigitalDSA helps DSAs identify suitable lenders, evaluate eligibility, and improve approval chances for business owners, shopkeepers, traders, professionals, and MSME customers."
 	},
 	"navList": {
 		"items": [
@@ -48,20 +48,20 @@
 		]
 	},
 	"journey": {
-		"heading": "Get started",
+		"heading": "How DigitalDSA Helps DSAs",
 		"items": [
 			{
 				"id": 1,
-				"title": "Just need a home loan?",
-				"desc": "Talk to our Home Loan Assistant about finding the right home loan for you.",
+				"title": "Have a Self-Employed Customer?",
+				"desc": "Get lender recommendations based on business profile, income pattern, and available documentation.",
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
 				"btnClass": "btn-secondary"
 			},
 			{
 				"id": 2,
-				"title": "Looking for a home & business loan?",
-				"desc": "Talk to our specialists about financing your home and business loan together.",
+				"title": "Handling a Complex Case?",
+				"desc": "Discuss difficult files with our specialists and discover alternative lender options.",
 				"premiumBtnName": "Book appointment",
 				"premiumBtnLink": "/appointment",
 				"premiumBtnClass": "btn-primary text-white dark:text-black"
@@ -73,71 +73,76 @@
 		"items": [
 			{
 				"id": 1,
-				"title": "Custom Solutions for All Business Owners",
-				"desc": "Whether you’re a shopkeeper, mechanic, electrician, food joint owner, or running any other small business, we offer personalized loan solutions.",
+				"title": "Higher Approval Probability",
+				"desc": "Find lenders whose policies match the customer's actual profile. We help you identify the right fit, increasing the chances of approval for self-employed customers.",
 				"icon": "/icons/uniqueLink.svg",
 				"altName": "unique-icon"
 			},
 			{
 				"id": 2,
-				"title": "No Strict Financial History Required",
-				"desc": "Don’t have three years of financial records? Don’t worry! We can assist even if you have only 2 years, 1 year, or no financial records at all.",
+				"title": "Support for Non-Standard Income Cases",
+				"desc": "Serve customers with low-profit ITRs, cash businesses, or inconsistent income. We help you navigate these challenges and find lenders that consider alternative income assessments.",
 				"icon": "/icons/apply-pen.svg",
 				"altName": "pen-icon"
 			},
 			{
 				"id": 3,
-				"title": "Access to Multiple Lenders",
-				"desc": "With partnerships across banks, NBFCs, and financial institutions, we match you with the best home loan options available for your unique situation.",
+				"title": "Multiple Banks & NBFCs",
+				"desc": "Expand beyond your existing lender relationships. We connect you with a wide network of banks and NBFCs that offer home loans to self-employed customers, giving you more options to serve your clients effectively.",
 				"icon": "/icons/FD.svg",
 				"altName": "fd-icon"
 			},
 			{
 				"id": 4,
-				"title": "Competitive Interest Rates",
-				"desc": "Get affordable interest rates and repayment options, whether you have formal income proof or not.",
+				"title": "Faster File Movement",
+				"desc": "Reduce time spent checking lender eligibility manually. We provide quick insights on which lenders are likely to approve a file, allowing you to move files faster and improve customer satisfaction.",
 				"icon": "/icons/interestIcon.svg",
 				"altName": "interest-icon"
 			},
 			{
 				"id": 5,
-				"title": "Dedicated Support",
-				"desc": "Our specialists will guide you through the entire process, ensuring a seamless experience.",
+				"title": "Expert Case Assistance",
+				"desc": "Get support for challenging self-employed files. Our specialists can help you strategize and find solutions for cases that may not fit traditional lending criteria.",
 				"icon": "/icons/negotiate.svg",
 				"altName": "hands-icon"
 			},
 			{
 				"id": 6,
-				"title": "Flexible Appointments",
-				"desc": "We’re available to assist you in person, over the phone, or online, at a time that works for you.",
+				"title": "Grow Monthly Disbursements",
+				"desc": "Close more cases and increase revenue. By improving approval rates for self-employed customers, you can grow your monthly disbursements and build stronger relationships with your clients.",
 				"icon": "/icons/appointment.svg",
 				"altName": "appoint-icon"
 			}
 		]
 	},
 	"homeLoanOptions": {
-		"heading": "Home Loan Options for <br> Business Owners",
+		"heading": "Business Owner Customer <br> Segments We Support",
 		"items": [
 			{
 				"id": 1,
-				"title": "For Established Business Owners with Financial Records",
-				"desc": "Provide ITRs, computation of income, and other financial documents for the last 2–3 years to get the best loan options tailored to your needs."
+				"title": "Established Business Owners",
+				"desc": "Customers with ITRs and financial statements. We help you identify lenders that consider their income and business stability for home loan approvals."
 			},
 			{
 				"id": 2,
 				"title": "For New Business Owners (1 Year or Less)",
-				"desc": "Even if your business has been running for just one year, we can help you secure a loan by evaluating your current income and projections."
+				"desc": "Customers with limited operating history. We assist in finding lenders that evaluate current income and growth potential, even without extensive financial records."
 			},
 			{
 				"id": 3,
-				"title": "For Small Vendors and Unorganized Businesses",
-				"desc": "No formal financial records? No problem! We specialize in finding solutions for small vendors, shopkeepers, mechanics, electricians, and others in the unorganized sector."
+				"title": "Small Vendors & Informal Businesses",
+				"desc": "Shopkeepers, traders, mechanics, electricians, service providers, and local businesses. We help you connect with lenders that accept alternative documentation and assess cash flow for home loan eligibility."
+			},
+			{
+				"id": 4,
+				"title": "Professionals & Freelancers",
+				"desc": "Doctors, architects, consultants, freelancers, and other self-employed professionals. We guide you to lenders that understand the unique income patterns of professionals and offer suitable home loan options."
 			}
 		]
 	},
 	"guide": {
-		"heading": "How We Help Business <br> Owners Without Documents",
-		"para": "For individuals like shopkeepers, small vendors, or repair workers with no financial records:<br><ul class=\"list-disc pl-4 space-y-4 mt-4 typography-body-md text-[var(--form-text-secondary)]\"><li><span class=\"font-semibold\">Cash Flow Assessment:</span> We evaluate your income using your bank deposits, expense patterns, and other financial behaviors.</li><li><span class=\"font-semibold\">Alternate Documentation:</span> If you don’t have ITRs or financial statements, we help by submitting alternative proofs like rent agreements, utility bills, or sales invoices.</li><li><span class=\"font-semibold\">Tailored Solutions:</span> Our wide network of lenders allows us to offer customized loan options for unorganized sector businesses.</li></ul>"
+		"heading": "Handling Customers With <br> Limited Documentation",
+		"para": "DigitalDSA helps DSAs evaluate alternative lending opportunities when customers do not have complete financial records.<br><ul class=\"list-disc pl-4 space-y-4 mt-4 typography-body-md text-[var(--form-text-secondary)]\"><li><span class=\"font-semibold\">Alternative Assessment Methods</span><br>- Bank statement analysis<br>- Cash-flow evaluation<br>- GST-based assessment<br>- Surrogate income programs<br>- Banking behavior review</li><li><span class=\"font-semibold\">Alternative Documents</span>- GST returns<br>- Shop establishment certificate<br>- Utility bills<br>- Business invoices<br>- Bank statements</li></ul>"
 	},
 	"getStart": {
 		"heading": "How to Get Started",
@@ -145,7 +150,7 @@
 	},
 	"documentsGuide": [
 		{
-			"para": "Depending on your business profile, you may need:",
+			"para": "Documentation requirements vary by lender and customer profile.",
 			"lists": [
 				{
 					"heading": "For Organized Sector Business Owners",
