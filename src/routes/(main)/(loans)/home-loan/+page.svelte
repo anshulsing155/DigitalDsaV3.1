@@ -18,6 +18,7 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import DownloadGuideModal from '$lib/components/website/DownloadGuideModal.svelte';
 	import content from '$lib/data/website/homeLoan.json';
+	import TwoColumn from '$lib/components/website/TwoColumn.svelte';
 
 	let loaderValue = false;
 	let showDownloadModal = $state(false);
@@ -52,56 +53,64 @@
 	<section class="content">
 		<NewPageLayout pageData={pageDataWithClicks}>
 			<Sublist subList={content.subList} />
+			<div class="px-[0.5rem] lg:px-16">
+				<AboveTitleWithTopIconCard contents={content.whyChoose} />
 
-			<AboveTitleWithTopIconCard contents={content.whyChoose} />
-
-			<div id="calc">
-				<AboveTitleWithBlackCard contents={content.calculators} />
-			</div>
-
-			<div
-				class="grid w-full gap-8 border-b border-[var(--form-border)] px-4 py-8 md:grid-cols-2 lg:grid-cols-3 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
-			>
-				<NewBlogCard blogLists={content.blogCard1} />
-			</div>
-
-			<ButtonBanner contents={content.payFasterBanner} />
-
-			<AboveTitleWithoutIconCard contents={content.buyingNewHome} />
-
-			<ButtonBanner contents={content.itrBanner} />
-
-			<ThreeColumWithLeftHeading contents={content.startJourney} />
-
-			<div
-				class="grid w-full gap-8 border-b border-[var(--form-border)] px-4 py-8 md:grid-cols-2 lg:grid-cols-3 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
-			>
-				<NewBlogCard blogLists={content.blogCard2} />
-
-				<div class="flex flex-col gap-4">
-					<VerticalBlog blogLists={content.verticalBlog} />
+				<div id="calc">
+					<AboveTitleWithBlackCard contents={content.calculators} />
 				</div>
+
+				<div
+					class="grid w-full gap-8 border-b border-[var(--form-border)] py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32"
+				>
+					<NewBlogCard blogLists={content.blogCard1} />
+				</div>
+
+				<ButtonBanner contents={content.payFasterBanner} />
+
+				<AboveTitleWithoutIconCard contents={content.buyingNewHome} />
+
+				<ButtonBanner contents={content.itrBanner} />
+
+				<ThreeColumWithLeftHeading contents={content.startJourney} />
+
+				<div
+					class="grid w-full gap-8 border-b border-[var(--form-border)] py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32"
+				>
+					<NewBlogCard blogLists={content.blogCard2} />
+
+					<div class="flex flex-col gap-4">
+						<VerticalBlog blogLists={content.verticalBlog} />
+					</div>
+				</div>
+
+				<ButtonBanner contents={content.compareRatesBanner} />
+
+				<TwoColumnWithLeftHeading contents={content.support} />
+
+				<div class="border-b border-[var(--form-border)]">
+					<TwoColumn
+						cardImage={content.messageUs.contents.cardImage}
+						cardAltName={content.messageUs.contents.cardAltName}
+						cardHeading={content.messageUs.contents.cardHeading}
+						reverse={content.messageUs.contents.reverse}
+						sourceName={content.messageUs.contents.sourceName}
+						originalSource={content.messageUs.contents.originalSource}
+					>
+						<p class="typography-body-md text-[var(--form-text-secondary)]">
+							{content.messageUs.para}
+						</p>
+						<Button link="/contact" btnClass="btn-secondary" btnName="Message us" />
+					</TwoColumn>
+				</div>
+				<ButtonBanner contents={content.keyFactsBanner} />
+
+				<div id="propertyguide">
+					<AboveTitleWithTopIconCard contents={content.propertyGuides} />
+				</div>
+
+				<FeedbackCheck />
 			</div>
-
-			<ButtonBanner contents={content.compareRatesBanner} />
-
-			<TwoColumnWithLeftHeading contents={content.support} />
-
-			<TwoColumnWithImage contents={content.messageUs.contents}>
-				<p>
-					{content.messageUs.para}
-				</p>
-				<Button link="/contact" btnClass="btn-secondary" btnName="Message us" />
-			</TwoColumnWithImage>
-
-			<ButtonBanner contents={content.keyFactsBanner} />
-
-			<div id="propertyguide">
-				<AboveTitleWithTopIconCard contents={content.propertyGuides} />
-			</div>
-
-			<FeedbackCheck />
-
 			<div slot="secondary">
 				<HelpList contents={content.common_components.helpList.contents} />
 				<ThingsYouShould

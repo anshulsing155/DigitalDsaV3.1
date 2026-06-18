@@ -26,7 +26,7 @@
 <section class="content">
 	<NewPageLayout pageData={content.pageData}>
 		<Sublist subList={content.subList} />
-		<div class="px-4 lg:px-16">
+		<div class="px-[0.5rem] lg:px-16">
 			<div id="type" class="border-b border-[var(--form-border)]">
 				<WhyChoose facilities={content.personalLoanPurpose} />
 			</div>

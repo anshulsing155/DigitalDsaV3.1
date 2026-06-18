@@ -14,7 +14,7 @@
 		btnName = '',
 		cardBorder = '',
 		sourceName = 'undefined',
-    btnClass = '',
+    	btnClass = '',
 		originalSource = '',
 		url = '',
 		onClick = () => {},
@@ -33,7 +33,7 @@
 <div
 	class="group relative flex flex-col gap-2 overflow-hidden {cardBorder
 		? 'rounded-xl border border-[var(--form-border)]'
-		: ''}"
+		: 'rounded-xl border border-[var(--form-border)]'}"
 >
 	<div class="relative w-full">
 		{#if icon}
@@ -57,9 +57,9 @@
 			/>
 		</div>
 	</div>
-	<div class="flex h-full flex-col items-start justify-between gap-4 {cardBorder ? 'p-4' : ''}">
+	<div class="flex h-full flex-col items-start justify-between gap-4 {cardBorder ? 'p-4' : 'p-4'}">
 		<div class="flex flex-col gap-4">
-			<h3 class="typography-h2-md text-[var(--form-text)]">{title}</h3>
+			<h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">{title}</h3>
 			<p class="typography-body-md text-[var(--form-text-secondary)]">{paragraph}</p>
 		</div>
 

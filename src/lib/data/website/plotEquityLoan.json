@@ -208,7 +208,7 @@
 					"para": "If you're unsure about how a Plot + Equity Loan works and whether it suits your needs, schedule an appointment with our experts.",
 					"btnName": "Book an appointment",
 					"btnLink": "/appointment",
-					 btnClass= "btn-secondary w-full"
+		 "btnClass": "btn-secondary w-full"
 				}
 			]
 		}

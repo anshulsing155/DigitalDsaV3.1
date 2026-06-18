@@ -17,6 +17,7 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import AboveTitleWithoutIconCard from '$lib/components/website/AboveTitleWithoutIconCard.svelte';
 	import content from '$lib/data/website/plotLoan.json';
+	import TwoColumn from '$lib/components/website/TwoColumn.svelte';
 
 	let loaderValue = false;
 
@@ -49,101 +50,119 @@
 	<section class="content">
 		<NewPageLayout {pageData}>
 			<Sublist subList={content.subList} />
+			<div class="px-[0.5rem] lg:px-16">
+				<!-- plot categories -->
+				<TwoColumnWithLeftHeading contents={content.plotCategories} paddingClass="px-0" />
 
-			<!-- plot categories -->
-			<TwoColumnWithLeftHeading contents={content.plotCategories} />
-
-			<!-- diff b/w plot & home -->
-			<div
-				class="w-full border-b border-[var(--form-border)] px-4 py-8 text-[var(--form-text)] lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
-			>
-				<div class="">
-					<h2 class=" mb-8 typography-h2-md text-center text-[var(--form-text)]">
-						Plot Loan vs Home Loan:
-						<span class="italic underline decoration-primary">Key Differences</span>
-					</h2>
-				</div>
-				<div class="">
-					{#each content.firstTableData as tableData}
-						<PaymentTable {tableData} />
-					{/each}
-				</div>
-			</div>
-
-			<!-- why choose us -->
-			<AboveTitleWithTopIconCard contents={content.whyChooseUs} />
-
-			<!-- balance transfer -->
-			<div id="bt">
+				<!-- diff b/w plot & home -->
 				<div
-					class="w-full border-b border-[var(--form-border)] px-4 py-8 text-[var(--form-text)] lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
+					class="w-full border-b border-[var(--form-border)] py-8 text-[var(--form-text)] lg:py-0 lg:pt-16 lg:pb-32"
 				>
 					<div class="">
-						<h2 class="typography-h2-md mb-8 text-center text-[var(--form-text)]">
-							Balance Transfer for Plot Loans
+						<h2 class="typography-h2-md py-5 text-center text-[var(--form-text)]">
+							Plot Loan vs Home Loan:
+							<span class="italic underline decoration-primary underline-offset-4"
+								>Key Differences</span
+							>
 						</h2>
 					</div>
 					<div class="">
-						{#each content.btTable as tableData}
+						{#each content.firstTableData as tableData}
 							<PaymentTable {tableData} />
 						{/each}
 					</div>
 				</div>
 
-				<AboveTitleWithoutIconCard contents={content.chargesAndSavings} />
+				<!-- why choose us -->
+				<AboveTitleWithTopIconCard contents={content.whyChooseUs} />
 
-				<AboveTitleWithTopIconCard contents={content.thingsToConsider} />
-			</div>
+				<!-- balance transfer -->
+				<div id="bt">
+					<div
+						class="w-full border-b border-[var(--form-border)] py-8 text-[var(--form-text)] lg:py-0 lg:pt-16 lg:pb-32"
+					>
+						<div class="">
+							<h2 class="typography-h2-md py-5 text-center text-[var(--form-text)]">
+								Balance Transfer for Plot Loans
+							</h2>
+						</div>
+						<div class="">
+							{#each content.btTable as tableData}
+								<PaymentTable {tableData} />
+							{/each}
+						</div>
+					</div>
 
-			<!-- money map -->
-			<AboveTitleWithTopIconCard contents={content.savingsCalculators} />
+					<AboveTitleWithoutIconCard contents={content.chargesAndSavings} />
 
-			<!-- plot loan calc -->
-			<div id="calc">
-				<AboveTitleWithBlackCard contents={content.plotLoanCalculators} />
-			</div>
-
-			<!-- ways to pay off -->
-			<ButtonBanner contents={content.waysToPayOffFaster} />
-
-			<!-- journey -->
-			<TwoColumnWithLeftHeading
-				contents={{
-					...content.secureDreamPlotBanner,
-					btnClick: () => {
-						$applicationData.LoanName = 'Plot Loan';
-					}
-				}}
-			/>
-
-			<TwoColumnWithImage contents={content.agriToResiCard}>
-				<p class="typography-body-md text-[var(--form-text-secondary)]">
-					{content.agriToResiCard.para}
-				</p>
-				<Anchor link={content.agriToResiCard.url} linkName={content.agriToResiCard.linkName} />
-			</TwoColumnWithImage>
-
-			<!-- plot loan support -->
-			<TwoColumnWithLeftHeading contents={content.plotLoanSupportBanner} />
-
-			<!-- message us  -->
-			<TwoColumnWithImage contents={content.messageUsCard}>
-				<p class="typography-body-md text-[var(--form-text-secondary)]">
-					{content.messageUsCard.para}
-				</p>
-				<div class="w-auto">
-					<Button link="/contact" btnClass="btn-secondary w-full" btnName="Message us" />
+					<AboveTitleWithTopIconCard contents={content.thingsToConsider} />
 				</div>
-			</TwoColumnWithImage>
 
-			<FeedbackCheck />
+				<!-- money map -->
+				<AboveTitleWithTopIconCard contents={content.savingsCalculators} />
+
+				<!-- plot loan calc -->
+				<div id="calc">
+					<AboveTitleWithBlackCard contents={content.plotLoanCalculators} />
+				</div>
+
+				<!-- ways to pay off -->
+				<ButtonBanner contents={content.waysToPayOffFaster} />
+
+				<!-- journey -->
+				<TwoColumnWithLeftHeading
+					contents={{
+						...content.secureDreamPlotBanner,
+						btnClick: () => {
+							$applicationData.LoanName = 'Plot Loan';
+						}
+					}}
+				/>
+
+				<div class="border-b border-[var(--form-border)]">
+					<TwoColumn
+						cardImage={content.agriToResiCard.cardImage}
+						cardAltName={content.agriToResiCard.cardAltName}
+						cardHeading={content.agriToResiCard.cardHeading}
+						sourceName={content.agriToResiCard.sourceName}
+					>
+						<p class="typography-body-md text-[var(--form-text-secondary)]">
+							{content.agriToResiCard.para}
+						</p>
+						<Anchor link={content.agriToResiCard.url} linkName={content.agriToResiCard.linkName} />
+					</TwoColumn>
+				</div>
+
+				<!-- plot loan support -->
+				<TwoColumnWithLeftHeading contents={content.plotLoanSupportBanner} />
+
+				<!-- message us  -->
+				<div class="border-b border-[var(--form-border)]">
+					<TwoColumn
+						cardImage={content.messageUsCard.cardImage}
+						cardAltName={content.messageUsCard.cardAltName}
+						cardHeading={content.messageUsCard.cardHeading}
+						sourceName={content.messageUsCard.sourceName}
+						reverse={content.messageUsCard.reverse}
+					>
+						<p class="typography-body-md text-[var(--form-text-secondary)]">
+							{content.messageUsCard.para}
+						</p>
+						<div class="w-auto">
+							<Button link="/contact" btnClass="btn-secondary w-full" btnName="Message us" />
+						</div>
+					</TwoColumn>
+				</div>
+
+				<FeedbackCheck />
+			</div>
 
 			<div slot="secondary">
 				<HelpList contents={content.help} />
 				<ThingsYouShould
 					thinkKnow={content.common_components.thingsYouShouldKnow}
 					disc="list-decimal"
-          containerClass="px-0"
+					containerClass="px-0"
 				></ThingsYouShould>
 			</div>
 		</NewPageLayout>

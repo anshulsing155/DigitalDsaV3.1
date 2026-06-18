@@ -26,7 +26,7 @@
 <section class="content">
 	<NewPageLayout pageData={content.pageData}>
 		<Sublist subList={content.subList} />
-		<div class="px-4 lg:px-16">
+		<div class="px-[0.5rem] lg:px-16">
 			<div class="border-b border-[var(--form-border)]">
 				<WhyChoose facilities={content.facilities} />
 			</div>
@@ -96,7 +96,10 @@
 
 		<div slot="secondary">
 			<HelpList contents={content.help} />
-			<ThingsYouShould thinkKnow={content.common_components.thingsYouShouldKnow} disc="list-decimal" containerClass="px-0"
+			<ThingsYouShould
+				thinkKnow={content.common_components.thingsYouShouldKnow}
+				disc="list-decimal"
+				containerClass="px-0"
 			></ThingsYouShould>
 		</div>
 	</NewPageLayout>

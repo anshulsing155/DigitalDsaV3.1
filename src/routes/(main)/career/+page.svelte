@@ -128,7 +128,7 @@
       />
     </div>
 
-    <div class="px-4 lg:px-16">
+    <div class="px-[0.5rem] lg:px-16">
       <div class="hidden lg:block">
         <div id="businessArea" data-section="businessArea" class="pb-[2rem]">
           <div class="border-b border-dividerColor">
