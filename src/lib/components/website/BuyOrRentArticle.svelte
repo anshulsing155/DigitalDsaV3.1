@@ -304,7 +304,7 @@
 											{content.compare.renterStory.quote}
 										</blockquote>
 										<p class="mt-10">
-											<a href={content.compare.renterStory.linkUrl} class="underline"
+											<a href={content.compare.renterStory.linkUrl} class="underline underline-offset-4"
 												>{content.compare.renterStory.linkText}</a
 											>
 										</p>

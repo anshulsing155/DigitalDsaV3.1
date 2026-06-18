@@ -207,7 +207,7 @@
 								</div>
 								{#if t.failureMessages?.length}
 									<div class="mx-4 mb-2 rounded-lg bg-red-50 p-3">
-										<pre class="text-xs whitespace-pre-wrap text-red-700">{t.failureMessages.join(
+										<pre class="text-xs whitespace-pre-wrap text-[var(--color-error)]">{t.failureMessages.join(
 												'\n'
 											)}</pre>
 									</div>

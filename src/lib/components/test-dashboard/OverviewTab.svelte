@@ -266,7 +266,7 @@
 							<p class="mt-1 text-xs text-gray-700"><strong>Tests:</strong> {t.what}</p>
 							<p class="mt-0.5 text-xs text-gray-500"><strong>Why it matters:</strong> {t.why}</p>
 							<p
-								class="mt-1 rounded border-l-2 border-red-300 bg-red-50 px-2 py-1 text-xs text-red-700"
+								class="mt-1 rounded border-l-2 border-red-300 bg-red-50 px-2 py-1 text-xs text-[var(--color-error)]"
 							>
 								If it fails: {t.report}
 							</p>

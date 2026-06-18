@@ -507,7 +507,7 @@
 		<!-- Global error banner -->
 		{#if errorMessage}
 			<div
-				class="mb-5 flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+				class="mb-5 flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-[var(--color-error)]"
 			>
 				<span class="flex-1">{errorMessage}</span>
 				<button

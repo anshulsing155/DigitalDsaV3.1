@@ -278,7 +278,7 @@
 		<!-- Help text -->
 		<p class="mt-3 text-center text-[10px] text-[var(--form-text-muted)]">
 			Check your spam/junk folder. If issue persists, contact
-			<a href="mailto:support@digitaldsa.com" class="underline">support@digitaldsa.com</a>
+			<a href="mailto:support@digitaldsa.com" class="underline underline-offset-4">support@digitaldsa.com</a>
 		</p>
 	</div>
 </div>

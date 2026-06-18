@@ -145,7 +145,7 @@
                         <Button
                           link="/"
                           btnName="Change in Dgital DSA"
-                          btnBorder="#4F4C4D"
+                            btnClass= "btn-secondary w-full"
                         />
                       </div>
                     </div>
@@ -166,7 +166,7 @@
                         <Button
                           link="/"
                           btnName="Redraw in Digital DSA"
-                          btnBorder="#4F4C4D"
+                            btnClass= "btn-secondary w-full"
                         />
                       </div>
                     </div>
@@ -207,7 +207,7 @@
                 <div>
                   <Button
                     btnName={data.btnName}
-                    btnBorder="#4F4C4D"
+                      btnClass= "btn-secondary w-full"
                     link={data.btnLink}
                   />
                 </div>
@@ -331,7 +331,7 @@
                   {content.messageUs.text}
                 </li>
                 <div class="w-auto">
-                  <Button link="" btnBorder="#4F4C4D" btnName="Message us" />
+                  <Button link=""   btnClass= "btn-secondary w-full" btnName="Message us" />
                 </div>
               </ul>
             </TwoColumn>
@@ -409,7 +409,7 @@
                               <Button
                                 link="/"
                                 btnName="Change in Dgital DSA"
-                                btnBorder="#4F4C4D"
+                                  btnClass= "btn-secondary w-full"
                               />
                             </div>
                           </div>
@@ -430,7 +430,7 @@
                               <Button
                                 link="/"
                                 btnName="Redraw in Digital DSA"
-                                btnBorder="#4F4C4D"
+                                  btnClass= "btn-secondary w-full"
                               />
                             </div>
                           </div>
@@ -471,7 +471,7 @@
                         <div>
                           <Button
                             btnName={data.btnName}
-                            btnBorder="#4F4C4D"
+                              btnClass= "btn-secondary w-full"
                             link={data.btnLink}
                           />
                         </div>
@@ -601,7 +601,7 @@
                       <div class="w-auto">
                         <Button
                           link=""
-                          btnBorder="#4F4C4D"
+                            btnClass= "btn-secondary w-full"
                           btnName="Message us"
                         />
                       </div>

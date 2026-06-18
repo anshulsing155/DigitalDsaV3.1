@@ -23,7 +23,7 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare rates",
@@ -45,7 +45,7 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare rates",
@@ -152,7 +152,7 @@
 		"listBtn": {
 			"btnName": "Get help with your plot-only loan",
 			"btnLink": "/appointment",
-			"btnClass": "btn-secondary w-full"
+			 btnClass= "btn-secondary w-full"
 		}
 	},
 	"alternate": {

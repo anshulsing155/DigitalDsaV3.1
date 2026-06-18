@@ -154,7 +154,7 @@
 				<AlertTriangle size={18} class="mt-0.5 shrink-0 text-red-500" />
 				<div class="flex-1 min-w-0">
 					<p class="text-sm font-semibold text-red-800">Returned for revision</p>
-					<p class="mt-1 text-sm text-red-700">{policy.adminRejectionNote}</p>
+					<p class="mt-1 text-sm text-[var(--color-error)]">{policy.adminRejectionNote}</p>
 					{#if policy.adminRejectedAt}
 						<p class="mt-1 text-xs text-red-400">{formatDateTime(policy.adminRejectedAt)}</p>
 					{/if}

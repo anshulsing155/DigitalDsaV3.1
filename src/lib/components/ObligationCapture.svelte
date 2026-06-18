@@ -1352,7 +1352,7 @@
 								</span>
 								{#if isClosureStale(entry)}
 									<span
-										class="tinyText font-titleMedium inline-flex items-center gap-1 rounded-full border border-red-300 bg-red-50 px-2.5 py-0.5 text-red-700 dark:border-red-700/40 dark:bg-red-900/20 dark:text-red-400"
+										class="tinyText font-titleMedium inline-flex items-center gap-1 rounded-full border border-red-300 bg-red-50 px-2.5 py-0.5 text-[var(--color-error)] dark:border-red-700/40 dark:bg-red-900/20 dark:text-red-400"
 										title="Stored closure plan ({shortClosure(
 											entry.selectedToClose ?? ''
 										)}) is not valid for this loan journey. Edit the obligation and pick a closure plan."

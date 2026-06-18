@@ -152,7 +152,7 @@
 				</div>
 				<div class="flex justify-between">
 					<span class="text-gray-400">Final score</span>
-					<span class="font-semibold {policy.aiPipelineRun.finalScore && policy.aiPipelineRun.finalScore >= 80 ? 'text-green-700' : policy.aiPipelineRun.finalScore && policy.aiPipelineRun.finalScore >= 60 ? 'text-amber-700' : 'text-red-700'}">
+					<span class="font-semibold {policy.aiPipelineRun.finalScore && policy.aiPipelineRun.finalScore >= 80 ? 'text-green-700' : policy.aiPipelineRun.finalScore && policy.aiPipelineRun.finalScore >= 60 ? 'text-amber-700' : 'text-[var(--color-error)]'}">
 						{policy.aiPipelineRun.finalScore ?? '—'}/100
 					</span>
 				</div>
@@ -280,7 +280,7 @@
 		{/if}
 
 		{#if policy.adminRejectionNote}
-			<div class="mt-4 rounded-lg border border-red-200 bg-red-50 p-3 text-xs text-red-700">
+			<div class="mt-4 rounded-lg border border-red-200 bg-red-50 p-3 text-xs text-[var(--color-error)]">
 				<p class="mb-1 font-semibold">Previous rejection note:</p>
 				<p>{policy.adminRejectionNote}</p>
 				{#if policy.adminRejectedAt}

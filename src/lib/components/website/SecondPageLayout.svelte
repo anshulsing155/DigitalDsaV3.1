@@ -31,7 +31,7 @@
       />
       <div class="absolute top-0 right-0 bg-opacity-50 text-white text-center">
         <Tooltip
-          linkName={`image source: <span class="underline">${pageData.sourceName}</span>`}
+          linkName={`image source: <span class="underline underline-offset-4">${pageData.sourceName}</span>`}
           hoverLink={pageData.originalSource}
         />
       </div>

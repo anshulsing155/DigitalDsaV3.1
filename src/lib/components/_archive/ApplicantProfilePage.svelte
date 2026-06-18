@@ -771,7 +771,7 @@
 						<div
 							class="mt-2 mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 dark:border-red-800 dark:bg-red-900/20"
 						>
-							<p class="flex items-start gap-2 text-sm text-red-700 dark:text-red-400">
+							<p class="flex items-start gap-2 text-sm text-[var(--color-error)] dark:text-red-400">
 								<CircleAlert size={14} class="mt-0.5 shrink-0" />
 								<span
 									>Expired registration cannot be used for loan application. Please renew first.</span
@@ -820,7 +820,7 @@
 					>
 						{#each relConflicts as conflict}
 							<p
-								class="flex items-start gap-2 font-paragraph text-sm text-red-700 dark:text-red-400"
+								class="flex items-start gap-2 font-paragraph text-sm text-[var(--color-error)] dark:text-red-400"
 							>
 								<CircleAlert size={14} class="mt-0.5 shrink-0" />
 								<span>{conflict.message}</span>
@@ -851,7 +851,7 @@
 						>
 							{#each casteConflictList as conflict}
 								<p
-									class="flex items-start gap-2 font-paragraph text-sm text-red-700 dark:text-red-400"
+									class="flex items-start gap-2 font-paragraph text-sm text-[var(--color-error)] dark:text-red-400"
 								>
 									<CircleAlert size={14} class="mt-0.5 shrink-0" />
 									<span>{conflict.message}</span>

@@ -36,7 +36,7 @@
           class="absolute top-0 right-0 bg-opacity-50 text-white text-center"
         >
           <Tooltip
-            linkName={`<span class="underline">${blog.sourceName}</span>`}
+            linkName={`<span class="underline underline-offset-4">${blog.sourceName}</span>`}
             hoverLink={blog.originalSource}
           />
         </div>

@@ -5,7 +5,7 @@
 	let feedback = '';
 </script>
 
-<section class="py-[3rem]">
+<section class="py-[4rem] px-[0.5rem] lg:px-16">
 	<div class="grid items-center justify-between gap-4 md:w-4/6 lg:grid-cols-4">
 		<p class="typography-body-md col-span-2 text-[var(--form-text-secondary)]">
 			Did you find the information on this page helpful?

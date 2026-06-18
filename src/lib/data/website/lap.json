@@ -23,7 +23,7 @@
 			{
 				"btnName": "Book an appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full",
+				 "btnClass": "btn-secondary w-full",
 				"animation": true
 			}
 		]
@@ -144,7 +144,7 @@
 		"para": "Making small financial changes today can lead to significant savings on your loan in the long run. Learn how to reduce interest payments and close your loan sooner.",
 		"btnName": "Find Out How",
 		"btnLink": "/planners/part-payment-planner",
-		"btnClass": "btn-secondary w-full",
+		 btnClass= "btn-secondary w-full",
 		"animation": true
 	},
 	"steps": {

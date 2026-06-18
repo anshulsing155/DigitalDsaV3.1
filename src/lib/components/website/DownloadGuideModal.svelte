@@ -171,7 +171,7 @@ isSubmitting = false;
 
     <!-- Error Message -->
     {#if submitError}
-      <div class="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-md">
+      <div class="mb-4 p-3 bg-red-100 border border-red-400 text-[var(--color-error)] rounded-md">
         {submitError}
       </div>
     {/if}

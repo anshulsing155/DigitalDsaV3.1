@@ -170,7 +170,7 @@
           <div class="w-full lg:w-auto">
             <Button
               link="/contact"
-              btnBorder="#4F4C4D"
+                btnClass= "btn-secondary w-full"
               btnName="Contact us"
             />
           </div>
@@ -265,7 +265,7 @@
                 <div class="w-full lg:w-auto">
                   <Button
                     link="mailto:support@digitaldsa.com"
-                    btnBorder="#4F4C4D"
+                      btnClass= "btn-secondary w-full"
                     btnName="Contact us"
                   />
                 </div>

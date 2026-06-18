@@ -8,7 +8,7 @@
 	const { contents = {} }: Props = $props();
 </script>
 
-<section class="w-full border-b border-[var(--form-border)] px-6 py-12 lg:px-16">
+<section class="w-full border-b border-[var(--form-border)] py-12 px-[0.5rem] lg:px-16">
 	{#if !contents.para}
 		<div
 			class="flex w-full flex-col items-center justify-center gap-8 md:gap-16 lg:w-auto lg:flex-row"

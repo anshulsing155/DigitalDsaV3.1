@@ -309,7 +309,7 @@
 				<ul class="mt-2 space-y-1">
 					{#each dupCaptures as dup}
 						<li class="text-xs">
-							<a href="/dashboard/admin/policies/captures/{dup.capture_id}" class="underline">
+							<a href="/dashboard/admin/policies/captures/{dup.capture_id}" class="underline underline-offset-4">
 								{dup.rm_name}
 							</a>
 							· {dup.status.replace(/_/g, ' ')}

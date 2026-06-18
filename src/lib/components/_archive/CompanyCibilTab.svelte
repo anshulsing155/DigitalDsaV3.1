@@ -140,7 +140,7 @@
 				{:else if (creditScore ?? 0) >= 550}
 					<span class="rounded-md bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">Fair (550-649)</span>
 				{:else}
-					<span class="rounded-md bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700 dark:bg-red-900/30 dark:text-red-400">Poor (300-549)</span>
+					<span class="rounded-md bg-red-100 px-2 py-0.5 text-xs font-medium text-[var(--color-error)] dark:bg-red-900/30 dark:text-red-400">Poor (300-549)</span>
 				{/if}
 			</div>
 		{/if}

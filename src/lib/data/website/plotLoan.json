@@ -363,7 +363,7 @@
     "heading": "Ways to pay off your plot loan faster",
     "para": "Small changes now can mean big differences later to how much of your plot loan you end up repaying.",
     "btnName": "Find out how",
-     "btnClass": "btn-secondary w-full",
+      btnClass= "btn-secondary w-full",
     "btnLink": "/planners/both"
   },
   "secureDreamPlotBanner": {

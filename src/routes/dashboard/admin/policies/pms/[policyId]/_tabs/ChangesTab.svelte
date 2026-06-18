@@ -307,7 +307,7 @@
 				</div>
 				<div class="flex justify-between">
 					<dt class="text-gray-500">Final score</dt>
-					<dd class="font-semibold {finalScore && finalScore >= 80 ? 'text-green-700' : finalScore && finalScore >= 60 ? 'text-amber-700' : 'text-red-700'}">
+					<dd class="font-semibold {finalScore && finalScore >= 80 ? 'text-green-700' : finalScore && finalScore >= 60 ? 'text-amber-700' : 'text-[var(--color-error)]'}">
 						{finalScore ?? '—'}%
 					</dd>
 				</div>

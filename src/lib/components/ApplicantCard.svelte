@@ -191,7 +191,7 @@
 								? 'border border-amber-300 bg-amber-50  text-amber-700 transition-colors hover:bg-amber-100 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-400 dark:hover:bg-amber-900/40'
 								: cardStatus === 'partial'
 									? 'border border-amber-200 bg-amber-50  text-amber-700 transition-colors hover:bg-amber-100 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-400 dark:hover:bg-amber-900/40'
-									: 'border border-red-200 bg-red-50  text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-400'
+									: 'border border-red-200 bg-red-50  text-[var(--color-error)] dark:border-red-800 dark:bg-red-950/30 dark:text-red-400'
 					}
 				`}
 			>
@@ -275,7 +275,7 @@
 					${solo ? 'py-3 text-sm sm:text-base' : 'buttonText py-2.5'}
 					${
 						cardStatus === 'pending'
-							? 'animate-slow-pulse border border-red-200 bg-red-50 px-2.5 py-1 text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-400'
+							? 'animate-slow-pulse border border-red-200 bg-red-50 px-2.5 py-1 text-[var(--color-error)] dark:border-red-800 dark:bg-red-950/30 dark:text-red-400'
 							: cardStatus === 'partial'
 								? 'animate-slow-pulse border border-amber-200 bg-amber-50  text-amber-700 transition-colors hover:bg-amber-100 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-400 dark:hover:bg-amber-900/40'
 								: cardStatus === 'warnings'

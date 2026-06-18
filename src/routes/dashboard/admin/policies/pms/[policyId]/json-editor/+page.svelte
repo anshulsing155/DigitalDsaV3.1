@@ -203,7 +203,7 @@
 					<p class="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-400">Validation</p>
 
 					{#if !validation.ok}
-						<div class="flex items-start gap-2 rounded-md bg-red-50 p-3 text-xs text-red-700">
+						<div class="flex items-start gap-2 rounded-md bg-red-50 p-3 text-xs text-[var(--color-error)]">
 							<AlertTriangle size={13} class="mt-0.5 shrink-0" />
 							<span>{validation.error}</span>
 						</div>
@@ -239,7 +239,7 @@
 
 				<!-- Save error -->
 				{#if saveError}
-					<div class="rounded-lg border border-red-200 bg-red-50 p-3 text-xs text-red-700">
+					<div class="rounded-lg border border-red-200 bg-red-50 p-3 text-xs text-[var(--color-error)]">
 						{saveError}
 					</div>
 				{/if}

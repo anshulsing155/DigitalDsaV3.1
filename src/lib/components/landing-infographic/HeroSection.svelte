@@ -128,16 +128,16 @@
 						[SCENE 1: THE CRUMPLED DATA DESK CHAOS]
 					</div>
 					<div class="flex flex-wrap gap-4 items-center justify-center max-w-2xl relative z-10">
-						<div class="chaos-node-item px-4 py-2 bg-red-100 dark:bg-red-950/30 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900/40 rounded-xl text-xs font-bold shadow-md">
+						<div class="chaos-node-item px-4 py-2 bg-red-100 dark:bg-red-950/30 text-[var(--color-error)] dark:text-red-400 border border-red-200 dark:border-red-900/40 rounded-xl text-xs font-bold shadow-md">
 							💬 Blurred WhatsApp Screenshot
 						</div>
-						<div class="chaos-node-item px-4 py-2 bg-red-100 dark:bg-red-950/30 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900/40 rounded-xl text-xs font-bold shadow-md">
+						<div class="chaos-node-item px-4 py-2 bg-red-100 dark:bg-red-950/30 text-[var(--color-error)] dark:text-red-400 border border-red-200 dark:border-red-900/40 rounded-xl text-xs font-bold shadow-md">
 							📂 Scattered PDFs
 						</div>
-						<div class="chaos-node-item px-4 py-2 bg-red-100 dark:bg-red-950/30 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900/40 rounded-xl text-xs font-bold shadow-md">
+						<div class="chaos-node-item px-4 py-2 bg-red-100 dark:bg-red-950/30 text-[var(--color-error)] dark:text-red-400 border border-red-200 dark:border-red-900/40 rounded-xl text-xs font-bold shadow-md">
 							📧 Lost RM Emails
 						</div>
-						<div class="chaos-node-item px-4 py-2 bg-red-100 dark:bg-red-950/30 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900/40 rounded-xl text-xs font-bold shadow-md">
+						<div class="chaos-node-item px-4 py-2 bg-red-100 dark:bg-red-950/30 text-[var(--color-error)] dark:text-red-400 border border-red-200 dark:border-red-900/40 rounded-xl text-xs font-bold shadow-md">
 							📊 Broken Excels
 						</div>
 					</div>

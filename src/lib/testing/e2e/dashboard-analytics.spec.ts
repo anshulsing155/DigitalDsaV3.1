@@ -299,7 +299,7 @@ test.describe('Analytics / Scorecard — UI Tests', () => {
 		if (!isVisible) return;
 
 		// Count badge (red circle with number)
-		const countBadge = page.locator('.bg-red-100.text-red-700');
+		const countBadge = page.locator('.bg-red-100.text-[var(--color-error)]');
 		const emptyState = page.locator('text=No active alerts');
 
 		const hasAlerts = await countBadge.isVisible().catch(() => false);

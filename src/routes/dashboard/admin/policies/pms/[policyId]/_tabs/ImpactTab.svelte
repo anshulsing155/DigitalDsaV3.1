@@ -140,7 +140,7 @@
 	</div>
 
 	{#if runError}
-		<div class="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+		<div class="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-[var(--color-error)]">
 			<AlertTriangle size={14} />
 			{runError}
 		</div>
@@ -248,7 +248,7 @@
 										<p class="font-medium text-gray-800">{result.profileId}</p>
 										<p class="mt-0.5 text-gray-500">{result.description}</p>
 										{#if isFlip(result)}
-											<span class="mt-1 inline-flex items-center gap-1 rounded-full bg-red-100 px-1.5 py-0.5 text-[10px] font-semibold text-red-700">
+											<span class="mt-1 inline-flex items-center gap-1 rounded-full bg-red-100 px-1.5 py-0.5 text-[10px] font-semibold text-[var(--color-error)]">
 												<AlertTriangle size={9} /> FLIP
 											</span>
 										{/if}

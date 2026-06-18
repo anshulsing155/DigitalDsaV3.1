@@ -142,7 +142,7 @@
 				<h4 class="text-regularText text-error">⚠️ Application Issues:</h4>
 				<ul class="mt-2 space-y-1">
 					{#each offer.error.reasons as reason}
-						<li class="text-sm text-red-700 dark:text-red-400">• {reason}</li>
+						<li class="text-sm text-[var(--color-error)] dark:text-red-400">• {reason}</li>
 					{/each}
 				</ul>
 			</div>

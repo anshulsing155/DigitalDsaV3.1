@@ -34,7 +34,7 @@
 		if (score === null) return { cls: 'bg-gray-100 text-gray-500', label: 'N/A' };
 		if (score >= 80) return { cls: 'bg-green-100 text-green-700', label: `${score}%` };
 		if (score >= 60) return { cls: 'bg-amber-100 text-amber-700', label: `${score}%` };
-		return { cls: 'bg-red-100 text-red-700', label: `${score}%` };
+		return { cls: 'bg-red-100 text-[var(--color-error)]', label: `${score}%` };
 	}
 
 	const badge = $derived(confidenceBadge(finalScore));
@@ -212,7 +212,7 @@
 			</div>
 
 			{#if localError}
-				<div class="mb-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 text-xs text-red-700">
+				<div class="mb-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 text-xs text-[var(--color-error)]">
 					{localError}
 				</div>
 			{/if}

@@ -382,7 +382,7 @@
 				{Object.keys(errors).length} row(s) have validation issues.
 			</p>
 
-			<button class="mt-1 text-red-700 underline" onclick={() => (showErrors = !showErrors)}>
+			<button class="mt-1 text-[var(--color-error)] underline" onclick={() => (showErrors = !showErrors)}>
 				{showErrors ? 'Hide details' : 'View details'}
 			</button>
 

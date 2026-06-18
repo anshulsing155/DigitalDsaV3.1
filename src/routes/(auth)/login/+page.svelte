@@ -1359,7 +1359,7 @@
 						<p class="mt-4 text-[10px] text-[var(--form-text-muted)]">
 							Wrong number? Tap <strong>Change</strong> above to re-enter. If issue persists,
 							contact
-							<a href="mailto:support@digitaldsa.com" class="underline">support@digitaldsa.com</a>
+							<a href="mailto:support@digitaldsa.com" class="underline underline-offset-4">support@digitaldsa.com</a>
 						</p>
 					</div>
 				{/if}

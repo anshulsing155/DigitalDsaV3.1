@@ -16,7 +16,7 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare Bank offers",
@@ -52,7 +52,7 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "Compare Bank offers",

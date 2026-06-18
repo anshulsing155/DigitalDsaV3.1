@@ -75,7 +75,7 @@
 
 	function resultBadgeClass(result: string | null) {
 		if (result === 'pass') return 'bg-emerald-100 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300';
-		if (result === 'fail') return 'bg-red-100 text-red-700 border-red-200 dark:bg-red-900/30 dark:text-red-300';
+		if (result === 'fail') return 'bg-red-100 text-[var(--color-error)] border-red-200 dark:bg-red-900/30 dark:text-red-300';
 		if (result === 'warning') return 'bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-900/30 dark:text-amber-300';
 		return 'bg-gray-100 text-gray-500 border-gray-200 dark:bg-gray-800 dark:text-gray-400';
 	}
@@ -202,7 +202,7 @@
 							<span class="text-emerald-700 dark:text-emerald-300">{warning}</span>
 						{:else}
 							<XCircle class="mt-0.5 h-4 w-4 shrink-0 text-red-500" />
-							<span class="text-red-700 line-through dark:text-red-300">{warning}</span>
+							<span class="text-[var(--color-error)] line-through dark:text-red-300">{warning}</span>
 							<span class="text-xs text-red-500">(not seen in output)</span>
 						{/if}
 					</div>
@@ -224,7 +224,7 @@
 				<div class="text-xs text-amber-600 dark:text-amber-500">Conditional</div>
 			</div>
 			<div class="rounded-xl border border-red-200 bg-red-50 p-3 text-center dark:border-red-800 dark:bg-red-950/30">
-				<div class="text-2xl font-bold text-red-700 dark:text-red-400">{redLenders.length}</div>
+				<div class="text-2xl font-bold text-[var(--color-error)] dark:text-red-400">{redLenders.length}</div>
 				<div class="text-xs text-red-600 dark:text-red-500">Rejected</div>
 			</div>
 		</div>
@@ -294,7 +294,7 @@
 								<td colspan="7" class="px-4 py-2">
 									<div class="flex flex-wrap gap-x-4 gap-y-1">
 										{#each negativeFactors as f}
-											<span class="text-xs text-red-700 dark:text-red-400">
+											<span class="text-xs text-[var(--color-error)] dark:text-red-400">
 												• {f.description}
 												{#if f.metric}
 													<span class="opacity-70">({f.metric.value}{f.metric.benchmark ? ` / ${f.metric.benchmark}` : ''})</span>

@@ -226,7 +226,7 @@
 			</button>
 		{:else}
 			<span
-				class="font-titleMedium smallText inline-flex items-center gap-1 rounded-full border border-red-200 bg-red-50 px-2.5 py-1 text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-400"
+				class="font-titleMedium smallText inline-flex items-center gap-1 rounded-full border border-red-200 bg-red-50 px-2.5 py-1 text-[var(--color-error)] dark:border-red-800 dark:bg-red-950/30 dark:text-red-400"
 			>
 				<CircleAlert size={12} />
 				Pending

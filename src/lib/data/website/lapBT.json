@@ -20,7 +20,7 @@
 			{
 				"btnName": "Check Your Savings",
 				"btnLink": "/calculators/balance-transfer-calculator",
-				"btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary w-full"
 			}
 		]
 	},
@@ -52,7 +52,7 @@
 			{
 				"btnName": "Check Your Savings",
 				"btnLink": "/calculators/balance-transfer-calculator",
-				"btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary w-full"
 			}
 		]
 	},

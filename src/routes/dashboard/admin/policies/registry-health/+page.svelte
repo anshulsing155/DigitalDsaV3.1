@@ -111,7 +111,7 @@
 					<p class="text-sm font-semibold text-red-800">
 						{report.stalePolicies.length} stale policies · {report.unknownKeyPaths.length} unknown paths
 					</p>
-					<p class="text-xs text-red-700">
+					<p class="text-xs text-[var(--color-error)]">
 						These policies reference deprecated or unrecognised key paths and need re-encoding.
 					</p>
 				</div>
@@ -210,7 +210,7 @@
 								{#each report.unknownKeyPaths as item (`${item.policyId}-${item.keyPath}`)}
 									<div class="flex items-center gap-2 text-xs">
 										<span class="h-1.5 w-1.5 rounded-full bg-red-500 shrink-0"></span>
-										<span class="font-mono text-red-700">{item.keyPath}</span>
+										<span class="font-mono text-[var(--color-error)]">{item.keyPath}</span>
 										<span class="text-gray-400">in policy {item.policyId.slice(-8)}</span>
 									</div>
 								{/each}
@@ -288,7 +288,7 @@
 								<span class="font-mono font-semibold text-gray-800">{entry.key}</span>
 								<span class="rounded-full px-1.5 py-px text-[10px] font-semibold
 									{entry.action === 'added' ? 'bg-green-100 text-green-700'
-									: entry.action === 'deprecated' ? 'bg-red-100 text-red-700'
+									: entry.action === 'deprecated' ? 'bg-red-100 text-[var(--color-error)]'
 									: entry.action === 'renamed' ? 'bg-blue-100 text-blue-700'
 									: 'bg-amber-100 text-amber-700'}">
 									{entry.action}

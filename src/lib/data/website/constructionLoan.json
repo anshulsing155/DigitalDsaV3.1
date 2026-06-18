@@ -23,7 +23,7 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "get best offers",
@@ -45,7 +45,7 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary w-full"
 			},
 			{
 				"btnName": "get best offers",
@@ -113,7 +113,7 @@
 		"heading": "Will your loan get approved?",
 		"para": "Understanding your eligibility today can help you secure better loan terms and reduce repayment burdens in the future.",
 		"btnName": "Check eligibility",
-		"btnClass": "btn-secondary w-full",
+		 btnClass= "btn-secondary w-full",
 		"btnLink": "/calculators/eligibility-calculator"
 	},
 	"eligibility": {
@@ -197,7 +197,7 @@
 					"para": "If you need expert guidance, you can book an appointment for personalized advice. Get the right solutions tailored to your financial needs with a quick consultation.",
 					"btnName": "Book an appointment",
 					"btnLink": "/appointment",
-					"btnClass": "btn-secondary w-full"
+					 btnClass= "btn-secondary w-full"
 				}
 			]
 		}
@@ -302,7 +302,7 @@
 			"heading": "Ways to pay off your construction loan faster",
 			"para": "Small changes now can mean big differences later to how much of your construction loan you end up repaying.",
 			"btnName": "Find out how",
-			"btnClass": "btn-secondary w-full",
+			 btnClass= "btn-secondary w-full",
 			"btnLink": "/planners/both"
 		}
 	},
@@ -315,7 +315,7 @@
 			"originalSource": "www.digitaldsa.com"
 		},
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we've got you covered! Message us anytime, and we'll respond promptly.",
-		"button": { "link": "/contact", "btnClass": "btn-secondary w-full", "btnName": "Message us" }
+		"button": { "link": "/contact",  btnClass= "btn-secondary w-full", "btnName": "Message us" }
 	},
 	"common_components": {
 		"helpList": {

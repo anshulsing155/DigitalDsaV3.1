@@ -21,7 +21,7 @@
       </h2>
     {/if}
     {#if facilities.subHeading}
-      <p class="typography-body-lg !font-semibold text-[var(--form-text-secondary)]">
+      <p class="typography-body-md !font-semibold text-[var(--form-text-secondary)]">
         {@html facilities.subHeading}
       </p>
     {/if}

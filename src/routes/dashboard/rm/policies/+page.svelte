@@ -227,7 +227,7 @@
 						<div class="text-right shrink-0">
 							{#if assignment.renewalOverdue}
 								<span
-									class="inline-flex items-center gap-1 rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700"
+									class="inline-flex items-center gap-1 rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-[var(--color-error)]"
 								>
 									<AlertTriangle size={11} />
 									Overdue

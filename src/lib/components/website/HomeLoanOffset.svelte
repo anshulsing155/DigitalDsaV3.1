@@ -157,7 +157,7 @@
             <HomeIntrest
               homeInterest="Compare home loans"
               btnName="Compare now"
-              btnBorder="#4F4C4D"
+                btnClass= "btn-secondary w-full"
               btnLink="/home-loan"
             />
           </div>
@@ -311,7 +311,7 @@
                 <HomeIntrest
                   homeInterest="Compare home loans"
                   btnName="Compare now"
-                  btnBorder="#4F4C4D"
+                    btnClass= "btn-secondary w-full"
                   btnLink="/home-loan"
                 />
               </div>

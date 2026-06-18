@@ -641,7 +641,7 @@
 					<div
 						class="mb-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 dark:border-red-800 dark:bg-red-950/40"
 					>
-						<p class="text-xs text-red-700 dark:text-red-400">{errorMessage}</p>
+						<p class="text-xs text-[var(--color-error)] dark:text-red-400">{errorMessage}</p>
 						<div class="mt-3 flex gap-2">
 							<button
 								onclick={handleRetry}
@@ -746,7 +746,7 @@
 			>
 				<div class="mb-4 flex items-center gap-3">
 					<div
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300"
+						class="flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-[var(--color-error)] dark:bg-red-900 dark:text-red-300"
 					>
 						<svg
 							class="h-5 w-5"

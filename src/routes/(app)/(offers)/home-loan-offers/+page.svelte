@@ -1280,7 +1280,7 @@
 										</h4>
 										<ul class="space-y-1">
 											{#each offer.error.reasons as reason}
-												<li class="flex items-start text-sm text-red-700 dark:text-red-400">
+												<li class="flex items-start text-sm text-[var(--color-error)] dark:text-red-400">
 													<span class="mt-2 mr-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-red-400"
 													></span>
 													{reason}

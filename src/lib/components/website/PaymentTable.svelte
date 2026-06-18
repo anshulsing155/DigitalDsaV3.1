@@ -82,7 +82,7 @@
       <tr>
         {#each tableData.columnName as column}
           <th
-            class="border-y typography-body-md px-4 py-4 text-left text-white"
+            class="typography-body-md px-4 py-4 text-left text-white"
             >{@html column}</th
           >
         {/each}

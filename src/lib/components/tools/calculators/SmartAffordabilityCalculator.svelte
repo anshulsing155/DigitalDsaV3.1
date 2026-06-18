@@ -474,7 +474,7 @@
 
 	{#if config.branding?.showWatermark}
 		<p class="text-center text-[10px] text-[var(--ddsa-secondary-300)]">
-			Powered by <a href="https://digitaldsa.com" target="_blank" class="underline">DigitalDSA</a>
+			Powered by <a href="https://digitaldsa.com" target="_blank" class="underline underline-offset-4">DigitalDSA</a>
 		</p>
 	{/if}
 </div>

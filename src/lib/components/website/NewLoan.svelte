@@ -488,7 +488,7 @@ dispatch("textExtracted", text);
             <HomeIntrest
               homeInterest="See our home loan options"
               btnName="Explore now"
-              btnBorder="#4F4C4D"
+                btnClass= "btn-secondary w-full"
               btnLink="/home-loan"
             />
           </div>
@@ -626,7 +626,7 @@ dispatch("textExtracted", text);
                 <HomeIntrest
                   homeInterest="See our home loan options"
                   btnName="Explore now"
-                  btnBorder="#4F4C4D"
+                    btnClass= "btn-secondary w-full"
                 />
               </div>
             {:else if index == 3}
@@ -669,7 +669,7 @@ dispatch("textExtracted", text);
             <div class="w-auto">
               <Button
                 link="/contact"
-                btnBorder="#4F4C4D"
+                  btnClass= "btn-secondary w-full"
                 btnName="Message us"
               />
             </div>

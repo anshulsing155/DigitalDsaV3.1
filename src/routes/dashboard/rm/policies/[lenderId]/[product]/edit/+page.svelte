@@ -262,7 +262,7 @@
 			</div>
 
 			{#if saveError}
-				<div class="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-2.5 text-sm text-red-700">
+				<div class="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-2.5 text-sm text-[var(--color-error)]">
 					<AlertTriangle size={14} class="mt-0.5 shrink-0" />
 					<span class="flex-1">{saveError}</span>
 					<button type="button" onclick={() => (saveError = '')} class="shrink-0 text-red-400 hover:text-red-600" aria-label="Dismiss">×</button>
@@ -277,7 +277,7 @@
 			{/if}
 
 			{#if submitError}
-				<div class="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-2.5 text-sm text-red-700">
+				<div class="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-2.5 text-sm text-[var(--color-error)]">
 					<AlertTriangle size={14} class="mt-0.5 shrink-0" />
 					<span class="flex-1">{submitError}</span>
 					<button type="button" onclick={() => (submitError = '')} class="shrink-0 text-red-400 hover:text-red-600" aria-label="Dismiss">×</button>

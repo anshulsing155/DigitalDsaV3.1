@@ -267,7 +267,7 @@
 									{#if isBool && typeof val === 'boolean'}
 										<span
 											class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium
-												{val ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}"
+												{val ? 'bg-green-100 text-green-700' : 'bg-red-100 text-[var(--color-error)]'}"
 										>
 											{formatted}
 										</span>
@@ -311,7 +311,7 @@
 										onclick={() => setFieldStatus(fieldKey, 'wrong')}
 										class="inline-flex items-center gap-1 rounded-lg px-2.5 py-1 text-xs font-medium transition-all
 											{vStatus === 'wrong'
-											? 'bg-red-100 text-red-700 ring-1 ring-red-300'
+											? 'bg-red-100 text-[var(--color-error)] ring-1 ring-red-300'
 											: 'bg-gray-50 text-gray-400 hover:bg-red-50 hover:text-red-600'}"
 										title="Mark as wrong"
 									>

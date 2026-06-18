@@ -24,7 +24,7 @@
 		<div class="relative">
 			<div class="bg-opacity-50 absolute top-0 right-0 text-center text-white">
 				<Tooltip
-					linkName={`image source: <span class="underline">${sourceName}</span>`}
+					linkName={`image source: <span class="underline underline-offset-4">${sourceName}</span>`}
 					hoverLink={originalSource}
 				/>
 			</div>

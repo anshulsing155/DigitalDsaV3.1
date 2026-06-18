@@ -15,7 +15,7 @@
 			{
 				"btnName": "Book Appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full",
+				 "btnClass": "btn-secondary w-full",
 				"animation": true
 			},
 			{
@@ -38,7 +38,7 @@
 			{
 				"btnName": "Book Appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full",
+				 "btnClass": "btn-secondary w-full",
 				"animation": true
 			},
 			{

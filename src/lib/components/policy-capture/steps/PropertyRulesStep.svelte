@@ -276,7 +276,7 @@
 					onclick={() => update('restricted_zones', toggleMulti(form.restricted_zones, zone.value))}
 					class="rounded-lg px-3 py-2 text-xs font-medium transition-colors
 						{form.restricted_zones.includes(zone.value)
-						? 'bg-red-100 text-red-700 ring-1 ring-red-200'
+						? 'bg-red-100 text-[var(--color-error)] ring-1 ring-red-200'
 						: 'bg-white text-gray-600 hover:bg-gray-100'}"
 				>
 					{zone.label}

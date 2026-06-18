@@ -439,7 +439,7 @@ dispatch("pageData", pageData);
         promptly.
       </p>
       <div class="w-full lg:w-auto">
-        <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
+        <Button link="/contact"   btnClass= "btn-secondary w-full" btnName="Message us" />
       </div>
     </TwoColumnWithImage>
 

@@ -238,7 +238,7 @@
                 <div class="w-auto">
                   <Button
                     link="/contact"
-                    btnBorder="#4F4C4D"
+                      btnClass= "btn-secondary w-full"
                     btnName="Message us"
                   />
                 </div>
@@ -330,7 +330,7 @@
                     <div class="w-auto">
                       <Button
                         link="/contact"
-                        btnBorder="#4F4C4D"
+                          btnClass= "btn-secondary w-full"
                         btnName="Message us"
                       />
                     </div>

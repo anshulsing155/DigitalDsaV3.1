@@ -124,7 +124,7 @@
 
 							<!-- Old → New -->
 							<div class="mt-2 flex items-center gap-3 text-sm">
-								<span class="rounded bg-red-100 px-2 py-0.5 font-mono text-xs text-red-700 line-through">
+								<span class="rounded bg-red-100 px-2 py-0.5 font-mono text-xs text-[var(--color-error)] line-through">
 									{formatValue(delta.oldValue)}
 								</span>
 								<span class="text-gray-400">→</span>

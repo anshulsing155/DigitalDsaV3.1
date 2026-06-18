@@ -149,7 +149,7 @@
           <p class="typography-body-md text-[var(--form-text-secondary)]">
             {content.support.para}
           </p>
-          <Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
+          <Button link="/contact"   btnClass= "btn-secondary w-full" btnName="Message us" />
         </TwoColumnWithImage>
       </div>
 

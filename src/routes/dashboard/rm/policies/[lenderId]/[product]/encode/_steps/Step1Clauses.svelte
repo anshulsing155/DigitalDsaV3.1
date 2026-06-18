@@ -63,7 +63,7 @@
 	function confidenceBadge(confidence: number) {
 		if (confidence >= 0.8) return 'bg-green-100 text-green-700';
 		if (confidence >= 0.6) return 'bg-amber-100 text-amber-700';
-		return 'bg-red-100 text-red-700';
+		return 'bg-red-100 text-[var(--color-error)]';
 	}
 
 	function getDecisionLabel(decision: string | undefined) {

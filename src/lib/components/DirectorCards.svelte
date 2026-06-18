@@ -1551,7 +1551,7 @@
 					/>
 					<span
 						class="text-sm font-medium {totalOwnership > 100
-							? 'text-red-700 dark:text-red-400'
+							? 'text-[var(--color-error)] dark:text-red-400'
 							: 'text-stone-700 dark:text-stone-300'}"
 					>
 						{totalOwnership}% of ownership accounted for
@@ -1568,7 +1568,7 @@
 					class="mt-3 flex items-center gap-2 rounded-lg border border-red-300 bg-red-50 px-4 py-2.5 dark:border-red-700 dark:bg-red-900/20"
 				>
 					<AlertCircle class="h-4 w-4 shrink-0 text-red-500" />
-					<span class="text-sm text-red-700 dark:text-red-400">{globalErrors[companyId]}</span>
+					<span class="text-sm text-[var(--color-error)] dark:text-red-400">{globalErrors[companyId]}</span>
 				</div>
 			{/if}
 		</div>

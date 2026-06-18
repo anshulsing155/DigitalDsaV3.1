@@ -25,7 +25,7 @@
 
 	function cellTextColor(status: string) {
 		if (status === 'pass') return 'text-emerald-700 dark:text-emerald-300';
-		if (status === 'fail') return 'text-red-700 dark:text-red-300';
+		if (status === 'fail') return 'text-[var(--color-error)] dark:text-red-300';
 		if (status === 'warning') return 'text-amber-700 dark:text-amber-300';
 		if (status === 'pending') return 'text-gray-500 dark:text-gray-400';
 		return 'text-gray-300 dark:text-gray-700';
@@ -88,7 +88,7 @@
 			<div class="text-xs text-emerald-600 dark:text-emerald-500">Pass</div>
 		</div>
 		<div class="rounded-xl border border-red-200 bg-red-50 p-3 text-center dark:border-red-800 dark:bg-red-950/30">
-			<div class="text-2xl font-bold text-red-700 dark:text-red-400">{data.overall.fail}</div>
+			<div class="text-2xl font-bold text-[var(--color-error)] dark:text-red-400">{data.overall.fail}</div>
 			<div class="text-xs text-red-600 dark:text-red-500">Fail</div>
 		</div>
 		<div class="rounded-xl border border-amber-200 bg-amber-50 p-3 text-center dark:border-amber-800 dark:bg-amber-950/30">
@@ -219,7 +219,7 @@
 								{#if colTotal > 0}
 									<a
 										href="{ROUTES.DASHBOARD.ADMIN.QA}?employment={encodeURIComponent(employment)}"
-										class="inline-block rounded-lg border px-2 py-1 text-sm font-bold {colFail > 0 ? 'border-red-200 bg-red-50 text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-300' : colPass === colTotal ? 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/30 dark:text-emerald-300' : 'border-gray-200 bg-white text-gray-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300'}"
+										class="inline-block rounded-lg border px-2 py-1 text-sm font-bold {colFail > 0 ? 'border-red-200 bg-red-50 text-[var(--color-error)] dark:border-red-800 dark:bg-red-950/30 dark:text-red-300' : colPass === colTotal ? 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/30 dark:text-emerald-300' : 'border-gray-200 bg-white text-gray-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300'}"
 									>
 										{colTotal}
 									</a>
