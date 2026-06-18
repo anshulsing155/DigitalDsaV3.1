@@ -10,10 +10,10 @@
     "actionBtnsRequired": "Yes",
     "coverImage": "/images/home-cover.jpg",
     "classStyle": "object-cover xl:h-[90svh] 3xl:max-h-[60svh]",
-    "heading": "Find the Right Home Loan for You",
+    "heading": "Close More Home Loan Files. Grow Your DSA Business Faster.",
     "sourceName": "Digital DSA",
     "originalSource": "https://assets.undefined.com.au/is/image/undefined/family-new-home?$Responsive_Align_Center_Top$&fit=constrain&wid=978&dpr=off",
-    "para": "Looking to buy, refinance, or invest in a property? Our tools, guides, and expert insights help you navigate every step of the journey with confidence. Let’s make home ownership simple and stress-free.",
+    "para": "Help your customers get approved with the right bank on the first attempt. Compare lenders, identify eligible offers, connect with RMs, and increase your monthly disbursements through DigitalDSA.",
     "actionBtn": [
       {
         "btnName": "Download Guide",
@@ -66,68 +66,68 @@
     "borderBottom": true,
     "cards": [
       {
-        "heading": "Find the Best Offers in Just 10 Minutes",
-        "para": "Get access to the <a href=\"/get-started/how-can-we-help\" class=\"underline hover:no-underline underline-offset-4 text-[var(--ddsa-info-text)]\">best home loan options</a> tailored to your financial profile—quick, easy, and hassle-free.",
+        "heading": "Increase Loan Approvals",
+        "para": "Match every customer profile with the most suitable lender and reduce unnecessary rejections.",
         "icon": "/icons/clock.svg",
         "altName": "clock-icon"
       },
       {
-        "heading": "We Negotiate the Best Rates for You",
-        "para": "Digital DSA works directly with lenders, factoring in your profile, property type, and CIBIL score to secure the lowest possible interest rate.",
+        "heading": "Access Multiple Banks & NBFCs",
+        "para": "Expand beyond your existing lender network and offer more options to customers.",
         "icon": "/icons/negotiate.svg",
         "altName": "negotiate-icon"
       },
       {
-        "heading": "Your Data Stays Secure",
-        "para": "Our custom-built loan platform ensures that your personal and financial information remains protected at all times.",
+        "heading": "Save Time on File Processing",
+        "para": "Find lender eligibility, policies, and requirements without making dozens of calls.",
         "icon": "/icons/phoneConnection.svg",
         "altName": "phoneConnection-icon"
       },
       {
-        "heading": "Save More on Interest",
-        "para": "Reduce your loan burden by paying less interest and closing your loan faster. Always compare before applying!",
+        "heading": "Improve Customer Trust",
+        "para": "Provide transparent comparisons and better recommendations that strengthen long-term relationships.",
         "icon": "/icons/inte.svg",
         "altName": "inte-icon"
       },
       {
-        "heading": "Real-Time Application Tracking",
-        "para": "Stay updated at every stage, from submission to approval, with real-time tracking of your loan application.",
+        "heading": "Track Files in Real Time",
+        "para": "Monitor application status from submission to disbursement and proactively update customers.",
         "icon": "/icons/contact.svg",
         "altName": "contact-icon"
       },
       {
-        "heading": "Unlock Exclusive Rewards & Discounts",
-        "para": "Enjoy special offers, discounts, and earn up to ₹5000 for every successful referral—only with Digital DSA!",
+        "heading": "Scale Monthly Business",
+        "para": "Handle more files, serve more customers, and grow revenue without increasing operational effort.",
         "icon": "/icons/offers.svg",
         "altName": "offers-icon"
       }
     ]
   },
   "calculators": {
-    "heading": "Home Loan Calculators",
+    "heading": "DSA Productivity Tools",
     "xlGridCol": 4,
     "borderBottom": true,
     "cards": [
       {
-        "heading": "How Much Can I Borrow?",
+        "heading": "Check Customer Eligibility",
         "icon": "/icons/calc.svg",
         "iconAltName": "icon-calc",
         "url": "/calculators/eligibility-calculator"
       },
       {
-        "heading": "Home Loan Repayment Calculator",
+        "heading": "EMI & Repayment Analysis",
         "icon": "/icons/lap.svg",
         "iconAltName": "loan-icon",
         "url": "/planners/part-payment-planner"
       },
       {
-        "heading": "Stamp Duty Calculator",
+        "heading": "Stamp Duty & Cost Planning",
         "icon": "/icons/apply.svg",
         "iconAltName": "icons-apply",
         "url": "/calculators/stamp-duty-calculator"
       },
       {
-        "heading": "More Calculators & Tools",
+        "heading": "Complete Loan Toolkit",
         "icon": "/icons/calc.svg",
         "iconAltName": "icons-calc",
         "url": "/home-loan/home-loan-tools-calculator"
@@ -138,8 +138,8 @@
     {
       "icon": "/images/investInProperty-cover.jpg",
       "altName": "Couple saving for a home loan down payment",
-      "heading": "Smart Ways to Save for Your Down Payment",
-      "para": "Set clear savings goals, automate contributions, cut unnecessary expenses, and invest wisely to build your dream home fund!",
+      "heading": "How Top DSAs Achieve Higher Approval Rates",
+      "para": "Learn how successful DSAs identify the right lender before submitting applications.",
       "btnLink": "/home-loan/saving-for-deposit",
       "btnName": "Tell me more",
       "btnClass": "btn-secondary",
@@ -149,8 +149,8 @@
     {
       "icon": "/images/business-owners.jpg",
       "altName": "Two business owners discussing loan options with Digital DSA",
-      "heading": "Home Loan Solutions for Business Owners",
-      "para": "Are you self-employed? Our lending specialists can help you secure the right home loan for your property goals.",
+      "heading": "Home Loan Strategies for Self-Employed Customers",
+      "para": "Understand lender preferences and documentation requirements.",
       "btnLink": "/home-loan/home-loan-for-business",
       "btnName": "Learn more",
       "btnClass": "btn-secondary",
@@ -160,8 +160,8 @@
     {
       "icon": "/images/happy-indian-family-in-kitchen.jpg",
       "altName": "Indian family enjoying quality time in their kitchen",
-      "heading": "Should You Buy or Rent Your Home?",
-      "para": "Buying offers equity and long-term stability, while renting provides flexibility and lower upfront costs. Choose what fits your lifestyle and finances.",
+      "heading": "How to Build a Referral-Driven Loan Business",
+      "para": "Generate repeat customers and referral opportunities consistently.",
       "btnLink": "/home-loan/buy-or-rent",
       "btnName": "Let me decide",
       "btnClass": "btn-secondary",
@@ -170,33 +170,33 @@
     }
   ],
   "payFasterBanner": {
-    "heading": "Smart Ways to Pay Off Your Home Loan Faster",
-    "para": "Simple financial tweaks today can lead to significant savings on your home loan in the long run.",
-    "btnName": "Find out how",
+    "heading": "Help Customers Save More While Building Trust",
+    "para": "Guide customers with smarter repayment strategies and become their preferred loan advisor.",
+    "btnName": "Explore Planning Tools",
     "btnClass": "btn-secondary",
     "btnLink": "/planners/part-payment-planner"
   },
   "buyingNewHome": {
-    "heading": "Buying a New Home",
+    "heading": "Loan Scenarios We Help DSAs Serve",
     "xlGridCol": 3,
     "cards": [
       {
-        "heading": "Buying Your First Home",
-        "para": "Getting started can feel overwhelming, but with the right tools and support, you’ll be on your way with confidence.",
+        "heading": "First-Time Home Buyers",
+        "para": "Find lenders with flexible eligibility and competitive rates.",
         "btnName": "Tell me more",
         "btnClass": "btn-secondary",
         "btnLink": "/home-loan/buying-first-home"
       },
       {
-        "heading": "Buying Your Next Home",
-        "para": "Thinking about upsizing or a lifestyle change? The process may be different the second time around, but we have the resources to help you sell and move with ease.",
+        "heading": "Existing Homeowners",
+        "para": "Support upgrade, resale, and refinance opportunities.",
         "btnName": "Know more",
         "btnClass": "btn-secondary",
         "btnLink": "/home-loan/buying-next-home"
       },
       {
-        "heading": "Need Help with Home & Business Banking?",
-        "para": "Our specialists can assist you in managing both your home loan and business banking needs in one place.",
+        "heading": "Self-Employed Customers",
+        "para": "Discover lender options tailored to business owners and professionals.",
         "btnName": "Talk to us",
         "btnClass": "btn-secondary",
         "btnLink": "/appointment"
@@ -204,25 +204,25 @@
     ]
   },
   "itrBanner": {
-    "heading": "Need a Home Loan but Your ITR Shows <span class=\"underline decoration-primary underline-offset-4\">Low Profit</span>?",
+    "heading": "Customer Showing <span class=\"underline decoration-primary underline-offset-4\">Low Profit</span> in ITR?",
     "btnName": "Get Help",
     "btnClass": "btn-primary",
     "btnLink": "/appointment"
   },
   "startJourney": {
-    "heading": "Start Your Home Buying Journey with Us Today",
+    "heading": "Start Growing Your Loan Business Today",
     "cardData": [
       {
-        "title": "Apply for a Home Loan, Conditional Pre-Approval, or Balance Transfer",
-        "para": "Begin your home loan or balance transfer application online and, if eligible, receive a conditional approval.",
-        "btnName": "Compare Bank Offers",
+        "title": "Compare Lending Options",
+        "para": "Match customer profiles with the right banks and NBFCs.",
+        "btnName": "Find Best Match",
         "btnLink": "/get-started/how-can-we-help",
         "btnClass": "btn-primary"
       },
       {
-        "title": "Secure the Best Home Loan Deal",
-        "para": "Maximize your home loan benefits by booking a session with our Home Lending Specialist at your convenience.",
-        "btnName": "Book an Appointment",
+        "title": "Get Expert Lending Support",
+        "para": "Discuss complex cases with specialists and improve conversion rates.",
+        "btnName": "Book Consultation",
         "btnLink": "/appointment",
         "btnClass": "btn-secondary"
       }
@@ -279,13 +279,13 @@
     }
   ],
   "compareRatesBanner": {
-    "heading": "Compare all home loan interest rates",
-    "btnName": "Compare rates",
+    "heading": "Compare Home Loan Rates Across Multiple Lenders",
+    "btnName": "Compare Lenders",
     "btnClass": "btn-primary",
     "btnLink": "/get-started/how-can-we-help"
   },
   "support": {
-    "heading": "Home loan support",
+    "heading": "DSA Support Center",
     "secPara": "See what options are available to home loan customers needing financial assistance.",
     "linkName": "More on home loan support",
     "url": "/home-loan/home-loan-support"
@@ -299,7 +299,7 @@
       "originalSource": "www.digitaldsa.com",
       "reverse": false
     },
-    "para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly."
+    "para": "Need help selecting a lender or resolving a file issue? Our team is available to support your business growth and customer success."
   },
   "keyFactsBanner": {
     "heading": "Get the home loans Key Facts Sheet",
@@ -309,7 +309,7 @@
     "btnLink": "/planners/flexible-emi-planner"
   },
   "propertyGuides": {
-    "heading": "Property guides",
+    "heading": "DSA Knowledge Hub",
     "xlGridCol": 3,
     "borderBottom": true,
     "cards": [
@@ -367,7 +367,7 @@
           },
           {
             "heading": "Check loan offers",
-            "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+            "para": "In as little as 10 minutes and tailored exactly as per financial profile.",
             "icon": "/icons/manageLoan2.svg",
             "iconAltName": "manage Icon",
             "url": "/get-started/how-can-we-help"

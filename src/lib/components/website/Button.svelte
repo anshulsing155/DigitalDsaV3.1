@@ -27,7 +27,7 @@
 </script>
 
 {#if link}
-	<a href={link} class="inline-block">
+	<a href={link} class="inline-block text-[var(--form-text)]">
 		<button
 			type="button"
 			onclick={onClick}
@@ -52,7 +52,7 @@
 	<button
 		type="button"
 		onclick={onClick}
-		class={`typography-button w-full cursor-pointer rounded-full
+		class={`typography-button w-full cursor-pointer rounded-full text-[var(--form-text)]
 			px-8 py-3 transition-all
 			duration-300 hover:opacity-90 md:w-auto
 			${btnClass}
