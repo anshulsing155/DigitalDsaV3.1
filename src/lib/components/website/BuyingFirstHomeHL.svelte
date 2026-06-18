@@ -51,7 +51,7 @@
 				{
 					btnName: 'Compare rates',
 					btnLink: '/get-started/how-can-we-help',
-					btnClass: 'btn-primary text-black',
+					btnClass: 'btn-primary',
 					animation: true
 				}
 			]

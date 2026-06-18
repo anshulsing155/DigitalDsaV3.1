@@ -28,12 +28,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black"
+				"btnClass": "btn-primary"
 			}
 		]
 	},
