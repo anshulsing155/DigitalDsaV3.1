@@ -25,14 +25,14 @@
   },
   "subList": [
     {
-      "linkName": "Buying your first home",
+      "linkName": "Buying first home",
       "linkNameClass": "text-[var(--ddsa-info-text)]",
       "url": "/home-loan/buying-first-home",
       "icon": "/icons/home.svg",
       "altName": "loan-icon"
     },
     {
-      "linkName": "Buying your next home",
+      "linkName": "Buying next home",
       "linkNameClass": "text-[var(--ddsa-info-text)]",
       "url": "/home-loan/buying-next-home",
       "icon": "/icons/house.svg",
