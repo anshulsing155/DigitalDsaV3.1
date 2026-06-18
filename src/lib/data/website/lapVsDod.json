@@ -31,7 +31,7 @@
         "heading": "Fixed or Floating Interest Rate:<span class=\"typography-body-md\">Interest can be fixed or linked to market rates.</span>"
       }
     ],
-    "listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-btnBg\"><strong>💡Use case : </strong>Ideal for long-term financial needs like business expansion, medical expenses, or home renovation.</p>"
+    "listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-[var(--form-border)]\"><strong>💡Use case : </strong>Ideal for long-term financial needs like business expansion, medical expenses, or home renovation.</p>"
   },
   "dod": {
     "heading": "Drop-Line Overdraft (DOD)",
@@ -50,7 +50,7 @@
         "heading": "Flexible Repayment:   <span class=\"typography-body-md\">No fixed EMIs; you can repay as per your cash flow.</span>"
       }
     ],
-    "listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-btnBg\"><Strong>💡Use case :</Strong> Best for businesses needing working capital or individuals with fluctuating cash flow needs</p>"
+    "listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-[var(--form-border)]\"><Strong>💡Use case :</Strong> Best for businesses needing working capital or individuals with fluctuating cash flow needs</p>"
   },
   "comparison": {
     "heading": "LAP vs DOD",

@@ -25,7 +25,7 @@
 				"heading": "✅ DOD : <span class=\"typography-body-md\">Works as an overdraft facility with a dropping credit limit, offering flexibility but requiring frequent repayments.</span>"
 			}
 		],
-		"listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-btnBg\"><strong>💡Key Takeaway : </strong>Both options turn property into a financial tool—but choosing the right one depends on your business model.</p>"
+		"listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-[var(--form-border)]\"><strong>💡Key Takeaway : </strong>Both options turn property into a financial tool—but choosing the right one depends on your business model.</p>"
 	},
 	"maximizePotential": {
 		"heading": "How to Maximize Loan Amount & Terms",
@@ -40,7 +40,7 @@
 				"heading": "C. Negotiate Loan Terms with Multiple Lenders<ul class=\"list-disc list-inside typography-body-md my-4\"><li class=\"my-2\">Compare LTV (Loan-to-Value) ratios and interest rates across banks.</li></ul>"
 			}
 		],
-		"listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-btnBg\"><Strong>💡Tip :</Strong> Some lenders offer LAPs with tenures up to 20 years ideal for long-term planning.</p>"
+		"listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-[var(--form-border)]\"><Strong>💡Tip :</Strong> Some lenders offer LAPs with tenures up to 20 years ideal for long-term planning.</p>"
 	},
 	"strategicUses": {
 		"heading": "Strategic Uses of LAP & DOD for Business Growth",

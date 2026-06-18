@@ -472,7 +472,7 @@ notificationStore.set(null);
                     }
                   }}
                   id="message"
-                  class="border-1 peer block w-full appearance-none border border-[#0000003A] bg-white py-[0.6rem] pl-[3rem] pr-4 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
+                  class="border-1 peer block w-full appearance-none border border-[#0000003A] bg-white py-[0.6rem] pl-[3rem] pr-4 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md resize-none text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
                   placeholder="Describe your query atleast in 20 characters and 5 words."
                   rows="6"
                 ></textarea>
@@ -566,7 +566,7 @@ notificationStore.set(null);
                       {#each otp as digit, index}
                         <input
                           id={`otp-input-${index}`}
-                          class="h-12 w-12 rounded border border-[#0000003A] bg-white text-center typography-body-md text-black outline-none focus:border-btnBg"
+                          class="h-12 w-12 rounded border border-[#0000003A] bg-white text-center typography-body-md text-black outline-none focus:border-[var(--form-border)]"
                           type="number"
                           maxlength="1"
                           bind:value={otp[index]}

@@ -46,7 +46,7 @@
     {#each factors as factor, i}
       {#if visible}
         <div 
-          class="bg-[var(--landing-bg-card)] rounded-lg shadow-lg p-6 border-l-4 border-btnBg hover:shadow-xl transition-all duration-300"
+          class="bg-[var(--landing-bg-card)] rounded-lg shadow-lg p-6 border-l-4 border-[var(--form-border)] hover:shadow-xl transition-all duration-300"
           in:fly={{ y: 50, delay: i * 150, duration: 500 }}
         >
           <div class="flex items-start">

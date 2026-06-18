@@ -75,7 +75,7 @@
                     securing your future.
                 </p>
                 <div
-                    class="mt-8 p-6 bg-blue-50 border-l-4 border-btnBg italic text-gray-700 shadow-md rounded-lg"
+                    class="mt-8 p-6 bg-blue-50 border-l-4 border-[var(--form-border)] italic text-gray-700 shadow-md rounded-lg"
                 >
                 <p class="font-para typography-body-md mb-[2rem]">
                     <span class="font-semibold">Financial expert Neha Nagar</span> launched India's first Couple Finance Course, 
@@ -107,7 +107,7 @@
                 </p>
 
                 <div
-                    class="mt-8 p-6 bg-blue-50 border-l-4 border-btnBg italic text-gray-700 shadow-md rounded-lg"
+                    class="mt-8 p-6 bg-blue-50 border-l-4 border-[var(--form-border)] italic text-gray-700 shadow-md rounded-lg"
                 >
                 <p class="font-para typography-body-md">
                    <span class="font-semibold">A Reddit user</span> shared that they and their partner conduct a budgeting exercise every six months, 
@@ -132,7 +132,7 @@
                     most stable financial situation.
                 </p>
                 <div
-                    class="mt-8 p-6 bg-blue-50 border-l-4 border-btnBg italic text-gray-700 shadow-md rounded-lg"
+                    class="mt-8 p-6 bg-blue-50 border-l-4 border-[var(--form-border)] italic text-gray-700 shadow-md rounded-lg"
                 >
                 <p class="font-para typography-body-md">
                     The <span class="font-semibold">Reserve Bank of India</span> emphasizes the importance of having an

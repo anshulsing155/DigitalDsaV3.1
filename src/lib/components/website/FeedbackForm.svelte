@@ -324,7 +324,7 @@
                       name="ddsaOther"
                       bind:value={feedbackData.ddsaOtherReview}
                       id="ddsaOther"
-                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
+                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
                       placeholder=" "
                       rows="3"
                     ></textarea>
@@ -376,7 +376,7 @@
                       name="ddsaOther"
                       bind:value={feedbackData.ddsaOtherReview}
                       id="ddsaOther"
-                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
+                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
                       placeholder=" "
                       rows="3"
                     ></textarea>
@@ -414,7 +414,7 @@
                   <img
                     src={feedbackData.uploadedImage}
                     alt="Uploaded Preview"
-                    class="w-full h-full object-cover rounded-full shadow-md border border-btnBg transition-all"
+                    class="w-full h-full object-cover rounded-full shadow-md border border-[var(--form-border)] transition-all"
                   />
 
                   <!-- Remove Button -->
@@ -459,7 +459,7 @@
                 type="text"
                 name="userName"
                 bind:value={feedbackData.userName}
-                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-black outline-none focus:border-btnBg focus:ring-0 bg-transparent"
+                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-black outline-none focus:border-[var(--form-border)] focus:ring-0 bg-transparent"
               />
               <label
                 for="userName"
@@ -488,7 +488,7 @@
                 type="text"
                 name="userEmail"
                 bind:value={feedbackData.userEmail}
-                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-black outline-none focus:border-btnBg focus:ring-0"
+                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
                 placeholder=" "
               />
               <label
@@ -520,7 +520,7 @@
                     name="message"
                     bind:value={feedbackData.feedbackMsg}
                     id="message"
-                    class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-btnBg focus:ring-0"
+                    class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
                     placeholder=" "
                     rows="6"
                   ></textarea>

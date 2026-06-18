@@ -164,12 +164,12 @@
 <SecondPageLayout
   pageData={content.pageData}
 >
-  <div class="relative">
+  <div class="relative border border-[var(--landing-glass-border)]">
     <div class="grid sm:grid-cols-[20%_80%] gap-2">
       <!-- Category sidebar -->
       <div class="py-[0.5rem] lg:py-[4rem] pl-[1rem] lg:pl-[2rem] sticky top-0">
         <h3
-          class="hidden sm:block typography-body-lg !font-semibold text-[var(--form-text)] border-b border-btnBg pb-2 sm:pb-4"
+          class="hidden sm:block typography-body-lg !font-semibold text-[var(--form-text)] border-b border-[var(--form-border)] pb-2 sm:pb-4"
         >
           Categories
         </h3>
@@ -177,7 +177,7 @@
         <!-- Desktop search -->
         <div class="sm:block hidden mt-4 relative overflow-hidden">
           <input
-            class="w-full pl-2 pr-12 h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-[var(--form-text)] focus:ring-btnBg"
+            class="w-full pl-2 pr-12 h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-[var(--form-text)] focus:ring-primary"
             type="text"
             placeholder="Search blog titles..."
             bind:value={searchQuery}
@@ -267,7 +267,7 @@
           <!-- Mobile search -->
           <div class="block sm:hidden my-4 relative overflow-hidden w-full">
             <input
-              class="w-full pl-2 pr-12 h-8 sm:h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-[var(--form-text)] focus:ring-btnBg"
+              class="w-full pl-2 pr-12 h-8 sm:h-10 typography-body-md rounded-sm border border-[var(--landing-border)] bg-[var(--landing-bg-card)] text-[var(--form-text)] focus:ring-primary"
               type="text"
               placeholder="Search blog titles..."
               bind:value={searchQuery}
@@ -394,6 +394,7 @@
     <ThingsYouShould
       thinkKnow={content.thingsYouShould}
       disc="list-decimal"
+      containerClass="px-0"
     ></ThingsYouShould>
   </div>
 

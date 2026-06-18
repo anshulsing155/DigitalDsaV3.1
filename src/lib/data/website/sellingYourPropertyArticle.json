@@ -71,7 +71,7 @@
 					"heading": "✅ Set the Right Price – <span class=\"typography-body-md\">Research recent sales in your area. If the price is too high, it may sit on the market; too low, and you lose money.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> If you need valuation tools or real estate agents to assess your property, we can connect you with experts.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> If you need valuation tools or real estate agents to assess your property, we can connect you with experts.</p>"
 		}
 	},
 	"marketingBuyers": {
@@ -92,7 +92,7 @@
 					"heading": "📑 Highlight Unique Features – <span class=\"typography-body-md\">If your property has great views, extra amenities, or recent renovations, emphasize these!</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can guide you on how to market your property effectively and list it on popular platforms.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can guide you on how to market your property effectively and list it on popular platforms.</p>"
 		},
 		"negotiating": {
 			"heading": "Finding the Right Buyer & Negotiating Smartly 🤝",
@@ -108,7 +108,7 @@
 					"heading": "💬 Negotiate Smartly – <span class=\"typography-body-md\">Have a minimum price in mind and be ready to justify it. Don't rush—multiple offers may come in!</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can provide negotiation tips and connect you with legal advisors for safe dealings.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can provide negotiation tips and connect you with legal advisors for safe dealings.</p>"
 		}
 	},
 	"legal": {
@@ -132,7 +132,7 @@
 					"heading": "✅ Registration & Stamp Duty – <span class=\"typography-body-md\">Both buyer and seller must comply with local registration rules.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can guide you on necessary paperwork, legal checks, and expert contacts for smooth processing.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can guide you on necessary paperwork, legal checks, and expert contacts for smooth processing.</p>"
 		}
 	},
 	"closing": {
@@ -150,13 +150,13 @@
 					"heading": "<span class=\"typography-body-md\">Ensure proper tax filing for capital gains from the sale.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can provide tax-saving tips and investment strategies for your proceeds.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can provide tax-saving tips and investment strategies for your proceeds.</p>"
 		},
 		"final": {
 			"heading": "Final Thought: Selling Smart & Stress-Free 🪙",
 			"listTopPara": "Selling property is a major financial decision, and a structured approach ensures better results.<p class=\"typography-body-md text-[var(--form-text-secondary)] pt-2\"> With the right pricing, marketing, negotiation, and legal support, you can achieve a smooth and profitable sale.</p>",
 			"list": [],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">👉 Need help in the selling process?</span> Whether it’s valuation, legal guidance, or marketing tips, we're here to assist you!</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">👉 Need help in the selling process?</span> Whether it’s valuation, legal guidance, or marketing tips, we're here to assist you!</p>"
 		}
 	},
 	"common_components": {

@@ -243,7 +243,7 @@ handleSendMessage();
               bind:value={inputText}
               onkeypress={handleKeyPress}
               placeholder="Type your message..."
-              class="flex-1 px-4 py-2 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-btnBg focus:border-transparent transition-all duration-200 typography-caption text-[var(--form-text-secondary)]"
+              class="flex-1 px-4 py-2 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 typography-caption text-[var(--form-text-secondary)]"
             />
             <button
               onclick={handleSendMessage}

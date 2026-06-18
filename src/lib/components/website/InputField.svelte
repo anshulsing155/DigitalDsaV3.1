@@ -39,7 +39,7 @@
       oninput={(event) => onInputHandler(event)}
       onchange={(event) => onChangeHandler(event)}
       {disabled}
-      class="border-1 peer block w-full appearance-none border border-[#0000003A] py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-black outline-none focus:border-btnBg focus:ring-0 {disabled ? 'cursor-not-allowed bg-gray-100' : 'cursor-pointer bg-white'}"
+      class="border-1 peer block w-full appearance-none border border-[#0000003A] py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-black outline-none focus:border-[var(--form-border)] focus:ring-0 {disabled ? 'cursor-not-allowed bg-gray-100' : 'cursor-pointer bg-white'}"
       {...inputType === "password"
         ? { type: "password" }
         : inputType === "email"

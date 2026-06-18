@@ -159,7 +159,7 @@
                 <li>
                   {content.resources.para}
                 </li>
-                <li class="p-4 my-7 bg-grayColor border-l-4 border-btnBg">
+                <li class="p-4 my-7 bg-grayColor border-l-4 border-[var(--form-border)]">
                   <p>
                     <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
                       >Attribution :
@@ -272,7 +272,7 @@
                           {content.resources.para}
                         </li>
                         <li
-                          class="p-4 my-7 bg-grayColor border-l-4 border-btnBg"
+                          class="p-4 my-7 bg-grayColor border-l-4 border-[var(--form-border)]"
                         >
                           <p>
                             <span class="typography-body-lg !font-semibold text-[var(--form-text)]"

@@ -74,7 +74,7 @@
               id="business-type"
               bind:value={businessType}
               onchange={calculateEligibility}
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-primary focus:border-[var(--form-border)]"
             >
               <option value="retail">Retail Business</option>
               <option value="manufacturing">Manufacturing Business</option>
@@ -93,7 +93,7 @@
               oninput={calculateEligibility}
               min="10000"
               step="10000"
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-primary focus:border-[var(--form-border)]"
             />
           </div>
           
@@ -108,7 +108,7 @@
               oninput={calculateEligibility}
               min="5000"
               step="5000"
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-primary focus:border-[var(--form-border)]"
             />
           </div>
           
@@ -123,7 +123,7 @@
               oninput={calculateEligibility}
               min="100000"
               step="100000"
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-primary focus:border-[var(--form-border)]"
             />
           </div>
           
@@ -138,7 +138,7 @@
               oninput={calculateEligibility}
               min="50000"
               step="50000"
-              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-btnBg focus:border-btnBg"
+              class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-primary focus:border-[var(--form-border)]"
             />
           </div>
         </div>

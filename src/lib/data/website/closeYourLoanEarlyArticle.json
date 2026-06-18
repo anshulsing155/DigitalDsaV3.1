@@ -85,7 +85,7 @@
 					"heading": "Use bonuses, tax refunds, or other unexpected income to reduce your principal."
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Pro Tip:</span> Use our <a href=\"/planners/part-payment-planner\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Part Payment Planner</a> to see how even small contributions can help.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Pro Tip:</span> Use our <a href=\"/planners/part-payment-planner\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Part Payment Planner</a> to see how even small contributions can help.</p>"
 		},
 		"higherEmis": {
 			"heading": "Opt for Higher EMIs",
@@ -98,7 +98,7 @@
 					"heading": "Higher EMIs chip away at the principal amount faster, reducing tenure."
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Quick Tool:</span> Try our <a href=\"/planners/flexible-emi-planner\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Flexible EMI Planner</a> to calculate how higher EMIs impact your loan.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Quick Tool:</span> Try our <a href=\"/planners/flexible-emi-planner\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Flexible EMI Planner</a> to calculate how higher EMIs impact your loan.</p>"
 		},
 		"lumpSums": {
 			"heading": "Use Lump Sums Wisely",
@@ -125,7 +125,7 @@
 					"heading": "Allocate these savings toward your loan."
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Tip:</span> Use budgeting apps to identify areas for savings.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Tip:</span> Use budgeting apps to identify areas for savings.</p>"
 		},
 		"balanceTransfer": {
 			"heading": "Balance Transfers Can Save You Lakhs",
@@ -138,7 +138,7 @@
 					"heading": "Reassess tenure options to maximize savings."
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-btnBg\"><span class=\"mr-2 font-semibold\">Check out:</span> Our <a href=\"/calculators/balance-transfer-calculator\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Balance Transfer Calculator</a> to compare and save.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Check out:</span> Our <a href=\"/calculators/balance-transfer-calculator\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Balance Transfer Calculator</a> to compare and save.</p>"
 		},
 		"planStrategically": {
 			"heading": "Plan Strategically",

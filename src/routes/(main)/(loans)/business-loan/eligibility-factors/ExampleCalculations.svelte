@@ -180,7 +180,7 @@
               {#each ["cashIncome", "Monthly Average Balance", "gst", "profit"] as key}
                 <div
                   class="bg-[var(--landing-bg)] p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 {highlightFactors[activeTab].includes(key)
-                    ? 'border-2 border-btnBg'
+                    ? 'border-2 border-[var(--form-border)]'
                     : 'border border-[var(--form-border)]'}"
                   aria-label={highlightFactors[activeTab].includes(key)
                     ? 'Primary factor for loan eligibility'
@@ -197,7 +197,7 @@
             </div>
 
             <div class="border-t border-[var(--form-border)] pt-6">
-              <div class="bg-[var(--landing-bg)] border border-btnBg p-4 rounded-lg mb-4 shadow-sm">
+              <div class="bg-[var(--landing-bg)] border border-[var(--form-border)] p-4 rounded-lg mb-4 shadow-sm">
                 <p class="text-sm text-[var(--form-text-secondary)]">Estimated Loan Eligibility</p>
                 <p class="text-2xl font-bold text-btnBg">
                   {examples[activeTab].eligibility}
