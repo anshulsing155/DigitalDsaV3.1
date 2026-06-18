@@ -11,7 +11,7 @@
 		bottomPara?: string[];
 		btnName?: string;
 		btnBorder?: string;
-		btnColor?: string;
+		btnClass?: string;
 		btnLink?: string;
 		linkName?: string;
 		url?: string;
@@ -49,7 +49,7 @@
 		{/if}
 
 		<div
-			class={`typography-body-md col-span-12 text-[var(--form-text-secondary)] lg:col-span-8`}
+			class={`col-span-12 text-[var(--form-text-secondary)] lg:col-span-8`}
 		>
 			<div class="flex flex-col gap-6">
 				{#if thinkKnow.subHeading}
@@ -60,7 +60,7 @@
 
 				{#if thinkKnow.subPara}
 					{#each thinkKnow.subPara as para}
-						<p class="break-words">
+						<p class="typography-body-md">
 							{@html para}
 						</p>
 					{/each}
@@ -73,7 +73,7 @@
 				{#if thinkKnow.paraGraph}
 					<ul class={`list-disc space-y-4 pl-4 ${disc}`}>
 						{#each thinkKnow.paraGraph as para}
-							<li class="break-words">
+							<li class="typography-body-md">
 								{@html para}
 							</li>
 						{/each}
@@ -89,7 +89,7 @@
 				{#if thinkKnow.bottomList}
 					<ul class="list-disc space-y-4 pl-5">
 						{#each thinkKnow.bottomList as para}
-							<li class="break-words">
+							<li class="typography-body-md">
 								{@html para}
 							</li>
 						{/each}
@@ -99,7 +99,7 @@
 				{#if thinkKnow.bottomPara}
 					<div class="flex flex-col gap-4">
 						{#each thinkKnow.bottomPara as para}
-							<p class="break-words">
+							<p class="typography-body-md">
 								{@html para}
 							</p>
 						{/each}
@@ -109,7 +109,7 @@
 				{#if thinkKnow.btnName}
 					<Button
 						btnName={thinkKnow.btnName}
-						btnClass={thinkKnow.btnColor}
+						btnClass={thinkKnow.btnClass}
 						link={thinkKnow.btnLink}
 					/>
 				{/if}

@@ -25,7 +25,7 @@
       {
         "btnName": "Book an appointment",
         "btnLink": "/appointment",
-        "btnBorder": "#4F4C4D"
+        "btnClass":"btn-secondary"
       }
     ]
   },

@@ -42,7 +42,7 @@
 
 	<div class="flex flex-col gap-4">
 		{#if cardData.heading}
-			<h2 class="typography-body-md !font-semibold text-[var(--form-text)]">
+			<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
 				{@html cardData.heading}
 			</h2>
 		{/if}

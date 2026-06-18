@@ -78,8 +78,8 @@
 			>
 				<div class="">
 					<h2 class="typography-h2-md py-5 text-center text-[var(--form-text)]">
-						<span class="underline underline-offset-4 decoration-primary"> Secured </span> vs
-						<span class="underline underline-offset-4 decoration-primary"> Unsecured Loans</span>
+						<span class="underline decoration-primary underline-offset-4"> Secured </span> vs
+						<span class="underline decoration-primary underline-offset-4"> Unsecured Loans</span>
 					</h2>
 				</div>
 				<div class="">
@@ -90,7 +90,11 @@
 			</div>
 
 			<div id="eligibility" class="border-b border-[var(--form-border)]">
-				<ThingsYouShould thinkKnow={content.loanEligibilityCriteria} disc="list-disc" containerClass="px-0" />
+				<ThingsYouShould
+					thinkKnow={content.loanEligibilityCriteria}
+					disc="list-disc"
+					containerClass="px-0"
+				/>
 			</div>
 			<div class="border-b border-[var(--form-border)]">
 				<WhyChoose facilities={content.whyChooseUs} />

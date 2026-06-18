@@ -16,8 +16,8 @@
 		return () => window.removeEventListener('resize', checkScreenSize);
 	});
 </script>
-
-<section class="px-[1rem] py-[3rem] lg:px-[4rem]">
+<!-- px-4 lg:px-16 -->
+<section class=" py-[3rem]">
 	<div class="grid items-center justify-between gap-4 md:w-4/6 lg:grid-cols-4">
 		<p class="typography-body-md col-span-2 !font-semibold text-[var(--form-text)]">
 			Was the information on this page useful?

@@ -14,7 +14,7 @@
 
 <!-- class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full {contents.borderBottom ? 'lg:border-b' : 'border-b-0'} border-[var(--form-border)]" -->
 <section
-  class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+  class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 >
   <div class="flex flex-col gap-[2rem] w-full">
     <div class="flex flex-col gap-2">
@@ -51,7 +51,7 @@
       >
         {#each contents.list as listItem}
           <div
-            class="flex flex-col gap-4 items-start mt-4 pr-4 my-[4rem] group text-[var(--form-text)]"
+            class="flex flex-col gap-4 lg:gap-8 items-start mt-4 pr-4 my-[4rem] group text-[var(--form-text)]"
           >
             {#if listItem.icon}
               <img
