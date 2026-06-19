@@ -54,10 +54,10 @@
 		<NewPageLayout pageData={pageDataWithClicks}>
 			<Sublist subList={content.subList} />
 			<div class="px-[0.5rem] lg:px-16">
-				<AboveTitleWithTopIconCard contents={content.whyChoose} />
+				<AboveTitleWithTopIconCard contents={content.whyChoose} paddingClass="px-0" />
 
 				<div id="calc">
-					<AboveTitleWithBlackCard contents={content.calculators} />
+					<AboveTitleWithBlackCard contents={content.calculators} paddingClass="px-0" />
 				</div>
 
 				<div
@@ -68,11 +68,11 @@
 
 				<ButtonBanner contents={content.payFasterBanner} />
 
-				<AboveTitleWithoutIconCard contents={content.buyingNewHome} />
+				<AboveTitleWithoutIconCard contents={content.buyingNewHome} paddingClass="px-0" />
 
 				<ButtonBanner contents={content.itrBanner} />
 
-				<ThreeColumWithLeftHeading contents={content.startJourney} />
+				<ThreeColumWithLeftHeading contents={content.startJourney} paddingClass="px-0" />
 
 				<div
 					class="grid w-full gap-8 border-b border-[var(--form-border)] py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32"
@@ -86,7 +86,7 @@
 
 				<ButtonBanner contents={content.compareRatesBanner} />
 
-				<TwoColumnWithLeftHeading contents={content.support} />
+				<TwoColumnWithLeftHeading contents={content.support} paddingClass="px-0" />
 
 				<div class="border-b border-[var(--form-border)]">
 					<TwoColumn
@@ -106,10 +106,10 @@
 				<ButtonBanner contents={content.keyFactsBanner} />
 
 				<div id="propertyguide">
-					<AboveTitleWithTopIconCard contents={content.propertyGuides} />
+					<AboveTitleWithTopIconCard contents={content.propertyGuides} paddingClass="px-0" />
 				</div>
 
-				<FeedbackCheck />
+				<FeedbackCheck paddingClass="px-0"  />
 			</div>
 			<div slot="secondary">
 				<HelpList contents={content.common_components.helpList.contents} />

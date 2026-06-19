@@ -265,29 +265,29 @@
 		"borderBottom": true,
 		"cards": [
 			{
-				"heading": "Book an </br> appointment",
-				"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+				"heading": "Discuss a </br> customer case",
+				"para": "Book time with a lending specialist to discuss balance transfer opportunities, customer eligibility, and lender options.",
 				"icon": "/icons/appointment.svg",
 				"altName": "appointment Icon",
 				"url": "/appointment"
 			},
 			{
-				"heading": "Check loan offers",
-				"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+				"heading": "Compare lender offers",
+				"para": "Evaluate balance transfer programs from multiple banks and NBFCs based on your customer's profile.",
 				"icon": "/icons/manageLoan2.svg",
 				"altName": "Alert Icon",
 				"url": "/get-started/how-can-we-help"
 			},
 			{
-				"heading": "Contact us",
-				"para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+				"heading": "Contact our team",
+				"para": "Connect directly with DigitalDSA specialists for support on documentation, eligibility, and lender selection.",
 				"icon": "/icons/contact.svg",
 				"altName": "Alert Icon",
 				"url": "/contact"
 			},
 			{
 				"heading": "Message us",
-				"para": "Get instant help from our online assistants  or chat to a specialist.",
+				"para": "Get assistance with balance transfer cases, top-up opportunities, and customer-specific scenarios.",
 				"icon": "/icons/msg.svg",
 				"altName": "Alert Icon",
 				"url": "/contact"

@@ -150,7 +150,7 @@
 		<!-- desktop view -->
 		<div class="hidden lg:block">
 			<StickyNavbar navList={content.navList} {activeSection} />
-			<div class="px-[2rem] lg:px-[4rem]">
+			<div class="">
 				<section id="started" data-section="started" class="section">
 					<Journey journey={content.journey} />
 				</section>
@@ -176,11 +176,13 @@
 					data-section="whatDocs"
 					class="section border-b border-[var(--form-border)]"
 				>
-					<TwoColumn
-						cardImage={cardImg1}
-						cardAltName={cardAlt1}
-						cardHeading={cardHead1}
-						reverse={true}
+					<TwoColumnWithImage
+						contents={{
+							cardImage: cardImg1,
+							cardAltName: cardAlt1,
+							cardHeading: cardHead1,
+							reverse: true
+						}}
 					>
 						<div class="flex flex-col gap-4">
 							{#each content.documentsGuide as guide}
@@ -206,7 +208,7 @@
 								</div>
 							{/each}
 						</div>
-					</TwoColumn>
+					</TwoColumnWithImage>
 
 					<Guides guide={content.guide} />
 				</section>
@@ -214,7 +216,7 @@
 				<section
 					id="process"
 					data-section="process"
-					class="section border-b border-[var(--form-border)] py-[4rem]"
+					class="section border-b border-[var(--form-border)] py-[4rem] px-[0.5rem] lg:px-16"
 				>
 					{#each [content.verificationProcess] as verificationProcess}
 						<div class="grid grid-cols-3 gap-[2rem]">
@@ -274,7 +276,7 @@
 					{/each}
 				</section>
 
-				<section id="fees" data-section="fees" class="section py-[4rem]">
+				<section id="fees" data-section="fees" class="section py-[4rem] px-[0.5rem] lg:px-16">
 					<div class="grid grid-cols-3 gap-[2rem]">
 						<h2 class="typography-h2-md col-span-3 mt-4 text-[var(--form-text)] lg:col-span-1">
 							{content.rates.heading}
@@ -365,11 +367,13 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 							id="whatDocs"
 						>
-							<TwoColumn
-								cardImage={cardImg1}
-								cardAltName={cardAlt1}
-								cardHeading={cardHead1}
-								reverse={true}
+							<TwoColumnWithImage
+								contents={{
+									cardImage: cardImg1,
+									cardAltName: cardAlt1,
+									cardHeading: cardHead1,
+									reverse: true
+								}}
 							>
 								<div class="flex flex-col gap-4">
 									{#each content.documentsGuide as guide}
@@ -397,14 +401,13 @@
 										</div>
 									{/each}
 								</div>
-							</TwoColumn>
-
+							</TwoColumnWithImage>
 							<Guides guide={content.guide} />
 						</div>
 					{:else if index == 4}
 						<div
 							id="process"
-							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)] px-[0.5rem] lg:px-16"
 						>
 							{#each [content.verificationProcess] as verificationProcess}
 								<div class="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3">
@@ -464,7 +467,7 @@
 					{:else if index == 5}
 						<div
 							id="fees"
-							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)] px-[0.5rem] lg:px-16"
 						>
 							<div class="grid grid-cols-1 gap-[2rem]">
 								<h2 class="typography-h2-md text-[var(--form-text)]">
