@@ -478,7 +478,7 @@ notificationStore.set(null);
                 ></textarea>
                 <label
                   for="message"
-                  class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                  class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
                 >
                   Describe your query
                 </label>
@@ -608,7 +608,7 @@ notificationStore.set(null);
                           onclick={() => {
                             verifyOTP();}}
                           onkeydown={(e) => handleEnter(e, verifyOTP)}
-                          class="w-full rounded bg-btnBg py-[0.7rem] typography-body-md text-[var(--form-text-secondary)] hover:opacity-90"
+                          class="w-full rounded bg-primary py-[0.7rem] typography-body-md text-[var(--form-text-secondary)] hover:opacity-90"
                           >Verify OTP <span
                             ><i class="fa-regular fa-paper-plane"></i></span
                           ></button

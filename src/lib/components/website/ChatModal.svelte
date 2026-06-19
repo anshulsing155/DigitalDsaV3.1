@@ -174,7 +174,7 @@ handleSendMessage();
             >
               <div
                 class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-                class:bg-btnBg={message.sender === "user"}
+                class:bg-primary={message.sender === "user"}
                 class:bg-black={message.sender === "bot"}
               >
                 {#if message.sender === "user"}
@@ -190,7 +190,7 @@ handleSendMessage();
               >
                 <div
                   class="inline-block px-4 py-2 rounded-2xl"
-                  class:bg-btnBg={message.sender === "user"}
+                  class:bg-primary={message.sender === "user"}
                   class:text-black={message.sender === "user"}
                   class:bg-gray-100={message.sender === "bot"}
                   class:text-gray-800={message.sender === "bot"}

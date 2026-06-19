@@ -107,31 +107,31 @@
       label: "Very dissatisfied",
       icon: "fa-face-frown",
       color: "text-dangerColor",
-      star: "fa-solid fa-star text-btnBg",
+      star: "fa-solid fa-star text-primary",
     },
     2: {
       label: "Need Improvement",
       icon: "fa-face-meh",
       color: "text-dangerColor",
-      star: "fa-solid fa-star text-btnBg",
+      star: "fa-solid fa-star text-primary",
     },
     3: {
       label: "Average",
       icon: "fa-face-smile",
-      color: "text-btnBg",
-      star: "fa-solid fa-star text-btnBg",
+      color: "text-primary",
+      star: "fa-solid fa-star text-primary",
     },
     4: {
       label: "Very Good",
       icon: "fa-face-laugh",
-      color: "text-btnBg",
-      star: "fa-solid fa-star text-btnBg",
+      color: "text-primary",
+      star: "fa-solid fa-star text-primary",
     },
     5: {
       label: "Excellent",
       icon: "fa-face-grin-stars",
-      color: "text-btnBg",
-      star: "fa-solid fa-star text-btnBg",
+      color: "text-primary",
+      star: "fa-solid fa-star text-primary",
     },
   };
 
@@ -269,7 +269,7 @@
                   <i
                     class={feedbackData.ddsaRatingDetailsId >= star
                       ? ratingMap[star].star
-                      : "fa-regular fa-star text-btnBg"}
+                      : "fa-regular fa-star text-primary"}
                     id={String(star)}
                   ></i>
                 </button>
@@ -330,7 +330,7 @@
                     ></textarea>
                     <label
                       for="ddsaOther"
-                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
                     >
                       Other
                     </label>
@@ -382,7 +382,7 @@
                     ></textarea>
                     <label
                       for="ddsaOther"
-                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
                     >
                       Other
                     </label>
@@ -428,7 +428,7 @@
                   </button>
                 {:else}
                   <div
-                    class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500 text-3xl rounded-full ring-2 ring-btnBg transition-all"
+                    class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500 text-3xl rounded-full ring-2 ring-primary transition-all"
                   >
                     <i class="fa-solid fa-user"></i>
                   </div>
@@ -463,7 +463,7 @@
               />
               <label
                 for="userName"
-                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
               >
                 Enter name
               </label>
@@ -493,7 +493,7 @@
               />
               <label
                 for="userEmail"
-                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
               >
                 Enter email
               </label>
@@ -526,7 +526,7 @@
                   ></textarea>
                   <label
                     for="message"
-                    class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+                    class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
                   >
                     Message
                   </label>
@@ -589,7 +589,7 @@
           {#if isWaiting}
             <button
               type="button"
-              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
+              class="text-black bg-primary hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
               disabled
               aria-label="Submitting feedback"
             >
@@ -600,7 +600,7 @@
           {:else}
             <button
               type="submit"
-              class="text-black bg-btnBg hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
+              class="text-black bg-primary hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
               disabled={hasErrors || !recaptchaToken}
             >
               Submit

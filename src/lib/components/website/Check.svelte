@@ -18,7 +18,7 @@
 		groupId,
 		onChange = () => {},
 		className = "",
-		checkColor = "btnBg",
+		checkColor = "primary",
 		disabled = false
 	}: Props = $props();
 

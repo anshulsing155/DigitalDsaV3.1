@@ -102,7 +102,7 @@ link: "/message24",
 </ul>
 
     <div class="my-[3rem] text-center">
-<a href="/refer-&-earn" class="typography-button inline-block rounded-full border px-[2rem] py-3 border-[#4F4C4D] bg-btnBg text-black hover:bg-opacity-80">Start Referring & Earning Now!</a>
+<a href="/refer-&-earn" class="typography-button inline-block rounded-full border px-[2rem] py-3 border-[#4F4C4D] bg-primary text-black hover:bg-opacity-80">Start Referring & Earning Now!</a>
     </div>`,
     ],
   };

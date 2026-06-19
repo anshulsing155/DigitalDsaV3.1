@@ -148,7 +148,7 @@
           <div class="flex flex-col md:flex-row md:items-center justify-between">
             <div>
               <p class="typography-body-sm text-[var(--form-text-secondary)] mb-1">Estimated Range</p>
-              <p class="typography-h1 text-btnBg">
+              <p class="typography-h1 text-primary">
                 {formatCurrency(eligibilityRange.min)} - {formatCurrency(eligibilityRange.max)}
               </p>
             </div>

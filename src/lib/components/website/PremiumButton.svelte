@@ -18,7 +18,7 @@
 	}: Props = $props();
 </script>
 
-<!-- px-[4rem] py-4 ml-4 overflow-hidden rounded-full bg-btnBg border -->
+<!-- px-[4rem] py-4 ml-4 overflow-hidden rounded-full bg-primary border -->
 {#if premiumBtnName}
 	<a class="text-black" href={`${premiumBtnLink}`}>
 		<button

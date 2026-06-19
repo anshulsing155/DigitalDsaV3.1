@@ -71,7 +71,7 @@
   
   <div class="mt-8 text-center">
     <p class="text-[var(--form-text-secondary)]">
-      Have more questions? <a href="/contact" class="text-btnBg hover:underline">Contact our loan experts</a>
+      Have more questions? <a href="/contact" class="text-primary hover:underline">Contact our loan experts</a>
     </p>
   </div>
 </div>

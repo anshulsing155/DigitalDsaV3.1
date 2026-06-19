@@ -42,7 +42,7 @@
 			{ "name": "Tools & calculators", "targetId": "tools" }
 		],
 		"actionBtns": [
-			{ "btnName": "Book appointment", "btnLink": "/appointment",  btnClass= "btn-secondary w-full" },
+			{ "btnName": "Book appointment", "btnLink": "/appointment",  "btnClass": "btn-secondary w-full" },
 			{
 				"btnName": "Get best offers",
 				"btnLink": "/get-started/how-can-we-help",

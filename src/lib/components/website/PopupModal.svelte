@@ -56,7 +56,7 @@
             <button
               onclick={onClose}
               type="button"
-              class="w-full py-2 typography-button bg-btnBg text-black rounded-lg"
+              class="w-full py-2 typography-button bg-primary text-black rounded-lg"
             >
               OK
             </button>

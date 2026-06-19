@@ -139,7 +139,7 @@
               <button
                 class="px-6 py-3 text-sm font-medium transition-all duration-200 {activeTab ===
                 tab
-                  ? 'bg-btnBg text-black'
+                  ? 'bg-primary text-black'
                   : 'bg-[var(--landing-bg-card)] text-[var(--form-text-secondary)] hover:bg-[var(--landing-bg)]'} {index ===
                 0
                   ? 'rounded-l-lg'
@@ -166,7 +166,7 @@
           id={`panel-${activeTab}`}
           aria-labelledby={`tab-${activeTab}`}
         >
-          <div class="bg-btnBg p-6">
+          <div class="bg-primary p-6">
             <h3 class="text-2xl font-bold text-black">
               {examples[activeTab].title}
             </h3>
@@ -199,7 +199,7 @@
             <div class="border-t border-[var(--form-border)] pt-6">
               <div class="bg-[var(--landing-bg)] border border-[var(--form-border)] p-4 rounded-lg mb-4 shadow-sm">
                 <p class="text-sm text-[var(--form-text-secondary)]">Estimated Loan Eligibility</p>
-                <p class="text-2xl font-bold text-btnBg">
+                <p class="text-2xl font-bold text-primary">
                   {examples[activeTab].eligibility}
                 </p>
               </div>

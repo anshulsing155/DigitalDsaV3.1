@@ -137,7 +137,7 @@
                 <p class="font-para typography-body-md">
                     The <span class="font-semibold">Reserve Bank of India</span> emphasizes the importance of having an
                     <span class="font-semibold">emergency fund</span>—a financial buffer to cover unexpected expenses like job loss, 
-                    medical emergencies, or urgent repairs. It is recommended to save at least <span class="text-btnBg font-semibold">
+                    medical emergencies, or urgent repairs. It is recommended to save at least <span class="text-primary font-semibold">
                     3-6 months' worth of essential expenses</span> in an accessible account to prevent financial stress and avoid 
                     high-interest debt. By maintaining an emergency fund, individuals can ensure financial security and handle 
                     unforeseen situations without jeopardizing their long-term financial goals. 

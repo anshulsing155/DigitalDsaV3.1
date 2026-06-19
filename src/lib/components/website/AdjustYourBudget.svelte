@@ -8,7 +8,7 @@
       heading: "Review Your Budget and Expenses",
       subPara: [
         `Start by taking a close look at your current budget and monthly expenses. List all your income and spending to get a clear picture of where your money is going. This will help you identify areas where you can cut back or make adjustments.`,
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How it impacts budgeting: </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How it impacts budgeting: </span> `,
       ],
  
       paraGraph: [
@@ -35,7 +35,7 @@
       heading: "Prioritize Debt Repayment",
       subPara: [
         `After cutting back on non-essential expenses, allocate the money you’ve saved to your debt repayment. The more money you can put towards paying down your debts, the faster you’ll become debt-free.`,
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How it impacts budgeting: </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How it impacts budgeting: </span> `,
       ],
       paraGraph: [
         `<span class="font-semibold">Start with High-Interest Debt:</span> Use the extra funds to focus on paying off high-interest debts first. This will help you save money on interest in the long run.`,

@@ -48,7 +48,7 @@
     />
     <label
       for={name}
-      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 typography-body-md {disabled ? 'bg-gradient-to-t from-gray-100 via-gray-100 to-white text-black' : 'bg-white text-gray-500'} duration-300 peer-placeholder-shown:top-1 peer-focus:text-btnBg"
+      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 typography-body-md {disabled ? 'bg-gradient-to-t from-gray-100 via-gray-100 to-white text-black' : 'bg-white text-gray-500'} duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
     >
       {label}
     </label>

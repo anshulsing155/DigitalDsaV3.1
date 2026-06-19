@@ -9,7 +9,7 @@
       subPara: [
         `Mental accounting is the tendency to treat money differently depending on where it comes from or how it’s earmarked for certain purposes. For example, we might feel more willing to spend a “bonus” or “windfall” than regular income, even if both amounts are essentially the same.
         `,
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How it impacts budgeting : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How it impacts budgeting : </span> `,
       ],
 
       bottomPara: [
@@ -21,7 +21,7 @@
       subHeading: " Why We Struggle with Saving for the Future",
       subPara: [
         `One of the biggest challenges in budgeting is the “present bias,” where we prioritize short-term pleasures over long-term benefits. This is why it’s hard to save for retirement or build an emergency fund, even though we know it’s in our best interest.`,
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How it impacts budgeting : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How it impacts budgeting : </span> `,
       ],
       bottomPara: [
         `People often focus on immediate rewards (like dining out or buying the latest gadget) rather than investing in long-term financial goals. To overcome present bias, you can set up automatic transfers to savings accounts or retirement funds. This makes saving effortless and reduces the temptation to spend in the present.`,
@@ -32,7 +32,7 @@
       subHeading: " Why We Overvalue What We Own",
       subPara: [
         `The endowment effect occurs when we place a higher value on things we own compared to things we don’t. For instance, you might hang on to an old car or an unused subscription because you perceive them as more valuable than they actually are.`,
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How it impacts budgeting : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How it impacts budgeting : </span> `,
       ],
       bottomPara: [
         `This tendency can make it difficult to part with old, costly habits or financial decisions. It’s important to review your spending regularly and objectively assess the value of things you’re holding onto. If you find that your money could be better spent elsewhere, it’s time to make a change—even if letting go feels uncomfortable`,
@@ -43,7 +43,7 @@
       subHeading: "The Pain of Losing Money",
       subPara: [
         `According to behavioral science, we feel the pain of losing money twice as strongly as the pleasure of gaining the same amount. This concept, known as loss aversion, often makes us hold on to bad investments or avoid making financial decisions out of fear of losing money.`,
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How it impacts budgeting : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How it impacts budgeting : </span> `,
       ],
       bottomPara: [
         `Loss aversion can lead to procrastination in reviewing and adjusting your budget. You might avoid looking at investments or making necessary changes to your spending plan because of the fear of losses. Instead, try reframing the situation as a learning opportunity or a chance to protect your financial future. Reassess your goals and understand that taking calculated risks and making changes can lead to long-term rewards.`,
@@ -54,7 +54,7 @@
       subHeading: " How One Good Financial Decision Influences Others",
       subPara: [
         `The halo effect refers to the tendency to let one positive or negative experience influence our broader perception of a situation. For example, if you save money on a sale, you may feel more financially secure and start making other good financial choices as a result.`,
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How it impacts budgeting : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How it impacts budgeting : </span> `,
       ],
 
       bottomPara: [
@@ -66,7 +66,7 @@
       subHeading: "Feeling Like You Never Have Enough ",
       subPara: [
         `The scarcity mindset occurs when people believe there is never enough time, money, or resources. This mindset can lead to anxiety about finances and prevent you from thinking clearly about budgeting.`,
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How it impacts budgeting : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How it impacts budgeting : </span> `,
       ],
       bottomPara: [
         `A scarcity mindset often leads to poor decision-making, such as overspending in a moment of emotional distress or feeling like it’s impossible to save for the future. The solution is to create a clear financial plan that helps you focus on long-term goals, shift your mindset, and reinforce the idea that with careful planning, you can create financial security.`,
@@ -77,7 +77,7 @@
       subHeading: "Why We Stick to Financial Decisions",
       subPara: [
         `Commitment bias is the tendency to stick to previous decisions even when circumstances change. For example, if you’ve committed to paying off a certain debt in a specific timeline, you may feel obligated to continue following that plan, even if it’s no longer the best option for your current situation.`,
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How it impacts budgeting : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How it impacts budgeting : </span> `,
       ],
       bottomPara: [
         `Commitment bias can hinder financial progress because it makes you feel locked into decisions that might not be serving your best interests. When budgeting, it's important to revisit and adjust your plans as needed. Be flexible and willing to adapt your strategy, whether it's changing how much you save or revising your debt repayment plan.`,

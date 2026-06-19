@@ -8,7 +8,7 @@
       heading: "Set Clear Financial Goals",
       subHeading: `🎯 Your budget is a tool to help you reach your dreams, so start by defining them. `,
       subPara: [
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How to do it : </span> `,
       ],
       paraGraph: [
         "Short-Term Goals: Save for a vacation, clear a credit card bill, or create an emergency fund.",
@@ -23,7 +23,7 @@
       heading: "Track Every Penny ",
       subHeading: `🪙 You can’t manage what you don’t measure. Keeping track of every rupee you earn and spend is essential. `,
       subPara: [
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How to do it : </span> `,
       ],
 
       paraGraph: [
@@ -38,7 +38,7 @@
       heading: "Follow the 50/30/20 Rule ",
       subHeading: ` 📊 This simple budgeting formula is a great way to manage your income.`,
       subPara: [
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How It Works : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How It Works : </span> `,
       ],
       paraGraph: [
         "50% Needs: Essentials like rent, groceries, utilities.",
@@ -53,7 +53,7 @@
       heading: "Automate Your Savings ",
       subHeading: `🏦 Saving doesn’t have to be a chore. Automate it to make the process effortless.`,
       subPara: [
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How to do it : </span> `,
       ],
       paraGraph: [
         "Set up automatic transfers to a savings account on payday.",
@@ -68,7 +68,7 @@
       heading: "Plan for the Unexpected ",
       subHeading: `🌧️ Life is unpredictable, but your finances don’t have to be.`,
       subPara: [
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How to do it : </span> `,
       ],
       paraGraph: [
         "Build an emergency fund with 3-6 months of living expenses.",
@@ -83,7 +83,7 @@
       heading: "Regularly Review and Adjust Your Budget ",
       subHeading: ` 🔄 Your financial situation evolves, and your budget should too.`,
       subPara: [
-        `<span class="typography-h3 font-semibold bg-btnBg p-[.5rem]">How to do it : </span> `,
+        `<span class="typography-h3 font-semibold bg-primary p-[.5rem]">How to do it : </span> `,
       ],
       paraGraph: [
         "Review your budget monthly to see what’s working and what’s not.",

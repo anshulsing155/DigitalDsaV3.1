@@ -33,8 +33,8 @@
 		error = "",
 		icon = ``,
 		options = [],
-		iconBg = `bg-btnBg`,
-		optionListClass = `hover:bg-btnBg`,
+		iconBg = `bg-primary`,
+		optionListClass = `hover:bg-primary`,
 		optionClass = `border-l border-b border-[var(--form-border)] bg-white text-black`,
 		chevronColor = "text-gray-600",
 		nestedOptions = [],
@@ -162,7 +162,7 @@
 
         <label
           for={selectId}
-          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 typography-body-md {disabled ? 'bg-gray-100 text-black' : 'bg-white text-gray-500'} duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-btnBg"
+          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 typography-body-md {disabled ? 'bg-gray-100 text-black' : 'bg-white text-gray-500'} duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-primary"
         >
           {placeholder}
         </label>
@@ -198,7 +198,7 @@
 
         <label
           for={selectId}
-          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none {disabled ? 'bg-gradient-to-t from-gray-100 via-gray-100 to-white text-black' : 'bg-white text-gray-500'} px-2 typography-body-md duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-btnBg"
+          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none {disabled ? 'bg-gradient-to-t from-gray-100 via-gray-100 to-white text-black' : 'bg-white text-gray-500'} px-2 typography-body-md duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-primary"
         >
           {placeholder}
         </label>
@@ -241,7 +241,7 @@
         {:else if Array.isArray(nestedOptions) && nestedOptions.length}
           {#each nestedOptions as option, index}
             <li
-              class="hover:bg-btnBg hover:text-black {index < nestedOptions.length - 1 ? 'border-b' : ''} border-gray-200 p-3 transition-all ease-in-out duration-200"
+              class="hover:bg-primary hover:text-black {index < nestedOptions.length - 1 ? 'border-b' : ''} border-gray-200 p-3 transition-all ease-in-out duration-200"
               role="option"
               tabindex="0"
               aria-selected={option.value === selectedValue}

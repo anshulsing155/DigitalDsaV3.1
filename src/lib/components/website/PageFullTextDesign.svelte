@@ -31,7 +31,7 @@
           {/if}
         </div>
         <div
-          class="absolute left-0 top-1/2 h-1/2 w-2 -translate-y-1/2 transform bg-btnBg"
+          class="absolute left-0 top-1/2 h-1/2 w-2 -translate-y-1/2 transform bg-primary"
         ></div>
       </div>
     </div>

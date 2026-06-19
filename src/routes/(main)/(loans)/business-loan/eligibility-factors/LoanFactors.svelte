@@ -56,7 +56,7 @@
               <p class="text-[var(--form-text-secondary)] mb-3">{factor.description}</p>
               <div class="bg-[var(--landing-bg)] p-3 rounded-md">
                 <p class="text-sm font-medium text-[var(--form-text)]">
-                  <span class="text-btnBg font-bold">Important:</span> {factor.importance}
+                  <span class="text-primary font-bold">Important:</span> {factor.importance}
                 </p>
               </div>
             </div>

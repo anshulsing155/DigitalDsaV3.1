@@ -95,7 +95,7 @@
           {#if !referralLink}
             <button
               onclick={(e) => { e.preventDefault(); generateReferralLink(); }}
-              class="bg-btnBg p-4"
+              class="bg-primary p-4"
             >
               Generate Referral Link
             </button>
@@ -111,9 +111,9 @@
                 disabled={!referralLink}
               >
                 {#if copied}
-                  <i class="fa-solid fa-copy text-btnBg"></i>
+                  <i class="fa-solid fa-copy text-primary"></i>
                 {:else}
-                  <i class="fa-regular fa-copy text-btnBg"></i>
+                  <i class="fa-regular fa-copy text-primary"></i>
                 {/if}
               </button>
             </div>
