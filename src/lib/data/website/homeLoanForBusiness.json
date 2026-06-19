@@ -140,13 +140,52 @@
 			}
 		]
 	},
+
+	"verificationProcess": {
+		"heading": "Helping Business Owner Customers Get Approved",
+		"left": {
+			"title": "How DigitalDSA Helps",
+			"points": [
+				"Identify suitable lenders based on business profile, income pattern, and available documents.",
+				"Evaluate complex self-employed cases and explore alternative lending programs.",
+				"Connect with lending specialists for guidance on difficult files."
+			],
+			"button": {
+				"name": "Discuss Customer Case",
+				"link": "/appointment",
+				"class": "btn-primary"
+			}
+		},
+		"middle": {
+			"title": "Customers Commonly Eligible",
+			"points": [
+				"Self-employed professionals",
+				"Shopkeepers and traders",
+				"MSME and small business owners",
+				"Manufacturers and service providers",
+				"Customers with GST registration",
+				"Customers with regular banking transactions"
+			]
+		},
+		"right": {
+			"title": "Information Typically Required",
+			"points": [
+				"Bank statements for income assessment",
+				"ITR and financial statements (if available)",
+				"GST returns or business registration documents",
+				"Property details and ownership documents",
+				"Identity and address proof"
+			],
+			"note": "Documentation requirements vary by lender and customer profile. Additional information may be requested during assessment."
+		}
+	},
 	"guide": {
 		"heading": "Handling Customers With <br> Limited Documentation",
 		"para": "DigitalDSA helps DSAs evaluate alternative lending opportunities when customers do not have complete financial records.<br><ul class=\"list-disc pl-4 space-y-4 mt-4 typography-body-md text-[var(--form-text-secondary)]\"><li><span class=\"font-semibold\">Alternative Assessment Methods</span><br>- Bank statement analysis<br>- Cash-flow evaluation<br>- GST-based assessment<br>- Surrogate income programs<br>- Banking behavior review</li><li><span class=\"font-semibold\">Alternative Documents</span>- GST returns<br>- Shop establishment certificate<br>- Utility bills<br>- Business invoices<br>- Bank statements</li></ul>"
 	},
 	"getStart": {
-		"heading": "How to Get Started",
-		"para": "For individuals like shopkeepers, small vendors, or repair workers with no financial records:<br><ul class=\"list-disc pl-4 space-y-4 mt-4 typography-body-md text-[var(--form-text-secondary)]\"><li><span class=\"font-semibold\">Step 1: First Time Free Consultation</span><br>Speak with our Loan Specialists to discuss your needs and financial situation.</li><li><span class=\"font-semibold\">Step 2: Check Your Eligibility</span><br>Use our <a href=\"/calculators/eligibility-calculator\" class=\"underline underline-offset-4 hover:no-underline cursor-pointer text-[var(--ddsa-info-text)]\">Home Loan Eligibility Calculator</a> or connect with us to get a quick estimate.</li><li><span class=\"font-semibold\">Step 3: Submit Documents</span> Provide the necessary financial or alternate documents based on your business type.</li><li><span class=\"font-semibold\">Step 4: Choose Your Loan</span> We’ll match you with the best lenders and guide you through the application process.</li></ul>"
+		"heading": "DSA Workflow",
+		"para": "<ul class=\"list-disc pl-4 space-y-4 mt-4 typography-body-md text-[var(--form-text-secondary)]\"><li><span class=\"font-semibold\">Step 1: Add customer details.</span></li><li><span class=\"font-semibold\">Step 2: Check eligibility across multiple lenders.</span><br>Use our <a href=\"/calculators/eligibility-calculator\" class=\"underline underline-offset-4 hover:no-underline cursor-pointer text-[var(--ddsa-info-text)]\">Home Loan Eligibility Calculator</a> or connect with us to get a quick estimate.</li><li><span class=\"font-semibold\">Step 3: Identify the most suitable lender.</span></li><li><span class=\"font-semibold\">Step 4: Submit documents.</span><br>We’ll match you with the best lenders and guide you through the application process.</li><li><span class=\"font-semibold\">Step 5: Track approval and disbursement progress.</span> </li></ul>"
 	},
 	"documentsGuide": [
 		{
@@ -184,22 +223,23 @@
 		}
 	],
 	"rates": {
-		"heading": "Rate & fees",
+		"heading": "Lender Rates & Charges",
 		"left": [
 			{
-				"heading": "Interest Rates PA",
+				"heading": "Interest Rates",
 				"lists": [
-					"Starting from 8.10% p.a. for new home loans.",
-					"Flexible financing options with Loan-to-Value (LTV) ratios up to 80%–90%, depending on the lender."
+					"Interest rates vary across banks and NBFCs based on the customer's profile, credit score, income assessment, property type, and lender policies.",
+					"DigitalDSA helps DSAs compare multiple lender options to identify competitive rates and suitable loan programs for each customer."
 				]
 			}
 		],
 		"right": [
 			{
-				"heading": "Fees (10-15k)",
+				"heading": "Processing Fees & Charges",
 				"lists": [
-					"Processing Fee: ₹10,000–₹15,000 (varies by lender, often negotiable).",
-					"Service Charges: Detailed in your loan agreement based on the loan type and lender."
+					"Processing fees, legal charges, technical valuation fees, and other applicable costs vary by lender.",
+					"Some lenders may offer discounted or negotiable charges based on customer profile, loan amount, and ongoing lender programs.",
+					"Final charges are determined by the respective bank or NBFC at the time of application."
 				]
 			}
 		]
@@ -264,23 +304,31 @@
 		]
 	},
 	"frequentlyAskedQuestions": {
-		"heading": "Frequently asked questions",
+		"heading": "Frequently Asked Questions",
 		"accordions": [
 			{
-				"question": "What if I don’t have ITRs or profit & loss statements?",
-				"answer": "We can work with alternative documentation, such as:<br><ul class=\"list-disc pl-4\"><li>Bank statements showing cash flow.</li><li>Self-declared income affidavits.</li><li>Business-related certificates or invoices.</li></ul>"
+				"question": "My customer doesn't have ITRs or financial statements. Can the case still be evaluated?",
+				"answer": "Yes. Depending on the lender and customer profile, alternative income assessment methods may be available using bank statements, GST records, business activity, invoices, or other supporting documents."
 			},
 			{
-				"question": "Can I still apply if my business is less than a year old?",
-				"answer": "Yes! We have solutions tailored for new businesses based on current income and growth potential."
+				"question": "Can I process a home loan for a newly established business owner?",
+				"answer": "Many lenders consider customers with limited business vintage. Eligibility depends on factors such as income consistency, banking behaviour, business category, and available documentation."
 			},
 			{
-				"question": "What’s the maximum loan amount I can get?",
-				"answer": "Loan amounts depend on factors like your business cash flow, property value, and lender policies. Our Loan Specialists will help you estimate your eligibility."
+				"question": "Which lenders support low-profit ITR or surrogate income cases?",
+				"answer": "Lender policies vary significantly. DigitalDSA helps identify lenders whose credit policies align with the customer's profile, documentation, and income assessment requirements."
 			},
 			{
-				"question": "Can I combine my home loan with financing for my business?",
-				"answer": "Absolutely! We can help you explore options to combine your home and business loan financing for better management and savings."
+				"question": "How can I improve approval chances for self-employed customers?",
+				"answer": "Providing accurate income details, complete documentation, banking history, business proofs, and selecting the right lender based on policy fit can significantly improve approval probability."
+			},
+			{
+				"question": "Can DigitalDSA help with complex business-owner cases?",
+				"answer": "Yes. Our lending specialists assist DSAs in evaluating challenging files, understanding lender policies, and identifying suitable financing options for self-employed customers."
+			},
+			{
+				"question": "Can I compare multiple lenders before submitting a customer's application?",
+				"answer": "Yes. DigitalDSA helps DSAs compare lender options, eligibility criteria, interest rates, documentation requirements, and approval opportunities before filing the case."
 			}
 		]
 	}

@@ -216,28 +216,26 @@
 					data-section="process"
 					class="section border-b border-[var(--form-border)] py-[4rem]"
 				>
-					{#each [content.journey] as _}
+					{#each [content.verificationProcess] as verificationProcess}
 						<div class="grid grid-cols-3 gap-[2rem]">
 							<div>
 								<h3
-									class="typography-h2-md text-[var(--form-text)] mb-[1.5rem] !font-semibol md:text-start"
+									class="typography-h2-md !font-semibol mb-[1.5rem] text-[var(--form-text)] md:text-start"
 								>
-									Our simplified verification process
+									{verificationProcess.left.title}
 								</h3>
 								<ul class="mb-4 space-y-2">
-									<li class="typography-body-md text-[var(--form-text-secondary)]">
-										A simple application process for business owners with less documents to prove
-										your income.
-									</li>
-									<li class="typography-body-md text-[var(--form-text-secondary)]">
-										Get in touch with our Home Lending Specialists to discuss your options.
-									</li>
+									{#each verificationProcess.left.points as point}
+										<li class="typography-body-md text-[var(--form-text-secondary)]">
+											{point}
+										</li>
+									{/each}
 								</ul>
 								<div class="mb-[1.5rem]">
 									<PremiumButton
-										premiumBtnName="Book appointment"
-										premiumBtnLink="/appointment"
-										premiumBtnClass="btn-primary"
+										premiumBtnName={verificationProcess.left.button.name}
+										premiumBtnLink={verificationProcess.left.button.link}
+										premiumBtnClass={verificationProcess.left.button.class}
 									/>
 								</div>
 							</div>
@@ -245,35 +243,31 @@
 								<h3
 									class="typography-body-lg mb-[1.5rem] !font-semibold text-[var(--form-text)] md:text-start"
 								>
-									You may be eligible if:
+									{verificationProcess.middle.title}
 								</h3>
 								<ul class="mt-[1.5rem] mb-4 list-disc space-y-2 pl-4">
-									<li class="typography-body-md text-[var(--form-text-secondary)]">
-										You’re self-employed
-									</li>
-									<li class="typography-body-md text-[var(--form-text-secondary)]">
-										You pay yourself a regular salary from your business
-									</li>
+									{#each verificationProcess.middle.points as point}
+										<li class="typography-body-md text-[var(--form-text-secondary)]">
+											{point}
+										</li>
+									{/each}
 								</ul>
 							</div>
 							<div>
 								<h3
 									class="typography-body-lg mb-[1.5rem] !font-semibold text-[var(--form-text)] md:text-start"
 								>
-									If eligible, you'll need:
+									{verificationProcess.right.title}
 								</h3>
 								<ul class="mb-4 list-disc space-y-2 pl-4">
-									<li class="typography-body-md text-[var(--form-text-secondary)]">
-										Six months of salary credits in an account
-									</li>
-									<li class="typography-body-md text-[var(--form-text-secondary)]">
-										Financial records showing profit and loss for the last two years, with a profit
-										each year
-									</li>
+									{#each verificationProcess.right.points as point}
+										<li class="typography-body-md text-[var(--form-text-secondary)]">
+											{point}
+										</li>
+									{/each}
 								</ul>
 								<p class="typography-body-md mb-[1.5rem] text-[var(--form-text-secondary)]">
-									In some instances, we may need more information. Our Home Lending Specialists will
-									let you know.
+									{verificationProcess.right.note}
 								</p>
 							</div>
 						</div>
@@ -412,60 +406,60 @@
 							id="process"
 							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)]"
 						>
-							<div class="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3">
-								<div>
-									<h3 class="typography-h2-md mb-[1.5rem] text-[var(--form-text)] md:text-start">
-										Our simplified verification process
-									</h3>
-									<ul class="mb-4 space-y-2">
-										<li class="typography-body-md text-[var(--form-text-secondary)]">
-											A simple application process for business owners with less documents to prove
-											your income.
-										</li>
-										<li class="typography-body-md text-[var(--form-text-secondary)]">
-											Get in touch with our Home Lending Specialists to discuss your options.
-										</li>
-									</ul>
-									<div class="mb-[1.5rem]">
-										<PremiumButton
-											premiumBtnName="Book appointment"
-											premiumBtnLink="/appointment"
-											premiumBtnClass="btn-primary" 
-										/>
+							{#each [content.verificationProcess] as verificationProcess}
+								<div class="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3">
+									<div>
+										<h3 class="typography-h2-md mb-[1.5rem] text-[var(--form-text)] md:text-start">
+											{verificationProcess.left.title}
+										</h3>
+										<ul class="mb-4 space-y-2">
+											{#each verificationProcess.left.points as point}
+												<li class="typography-body-md text-[var(--form-text-secondary)]">
+													{point}
+												</li>
+											{/each}
+										</ul>
+										<div class="mb-[1.5rem]">
+											<PremiumButton
+												premiumBtnName={verificationProcess.left.button.name}
+												premiumBtnLink={verificationProcess.left.button.link}
+												premiumBtnClass={verificationProcess.left.button.class}
+											/>
+										</div>
+									</div>
+									<div>
+										<h3
+											class="typography-body-lg mb-[1.5rem] !font-semibold text-[var(--form-text)]"
+										>
+											{verificationProcess.middle.title}
+										</h3>
+										<ul class="mt-[1.5rem] list-disc space-y-2 pl-4 md:mb-4">
+											{#each verificationProcess.middle.points as point}
+												<li class="typography-body-md text-[var(--form-text-secondary)]">
+													{point}
+												</li>
+											{/each}
+										</ul>
+									</div>
+									<div>
+										<h3
+											class="typography-body-lg mb-[1.5rem] !font-semibold text-[var(--form-text)] md:text-start"
+										>
+											{verificationProcess.right.title}
+										</h3>
+										<ul class="mb-4 list-disc space-y-2 pl-4">
+											{#each verificationProcess.right.points as point}
+												<li class="typography-body-md text-[var(--form-text-secondary)]">
+													{point}
+												</li>
+											{/each}
+										</ul>
+										<p class="typography-body-md mb-[1.5rem] text-[var(--form-text-secondary)]">
+											{verificationProcess.right.note}
+										</p>
 									</div>
 								</div>
-								<div>
-									<h3 class="typography-body-lg mb-[1.5rem] !font-semibold text-[var(--form-text)]">
-										You may be eligible if:
-									</h3>
-									<ul class="mt-[1.5rem] list-disc space-y-2 pl-4 md:mb-4">
-										<li class="typography-body-md text-[var(--form-text-secondary)]">
-											You're self-employed
-										</li>
-										<li class="typography-body-md text-[var(--form-text-secondary)]">
-											You pay yourself a regular salary from your business
-										</li>
-									</ul>
-								</div>
-								<div>
-									<h3 class="typography-body-lg mb-[1.5rem] !font-semibold text-[var(--form-text)] md:text-start">
-										If eligible, you'll need:
-									</h3>
-									<ul class="mb-4 list-disc space-y-2 pl-4">
-										<li class="typography-body-md text-[var(--form-text-secondary)]">
-											Six months of salary credits in an account
-										</li>
-										<li class="typography-body-md text-[var(--form-text-secondary)]">
-											Financial records showing profit and loss for the last two years, with a
-											profit each year
-										</li>
-									</ul>
-									<p class="typography-body-md mb-[1.5rem] text-[var(--form-text-secondary)]">
-										In some instances, we may need more information. Our Home Lending Specialists
-										will let you know.
-									</p>
-								</div>
-							</div>
+							{/each}
 						</div>
 					{:else if index == 5}
 						<div
@@ -496,7 +490,7 @@
 										</h3>
 										<ul class="marker:black list-disc space-y-2 pl-4">
 											{#each content.rates.right[0].lists as list}
-												<li class="typography-body-sm text-[var(--form-text-secondary)]">
+												<li class="typography-body-md text-[var(--form-text-secondary)]">
 													{list}
 												</li>
 											{/each}
