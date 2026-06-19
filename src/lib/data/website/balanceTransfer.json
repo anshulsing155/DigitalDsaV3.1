@@ -13,21 +13,22 @@
 		"heroHeading": "Help Customers Save More with the Right Balance Transfer Opportunity",
 		"sourceName": "Freepik",
 		"originalSource": "https://www.freepik.com/free-photo/lovely-couple-looking-laptop_5123228.htm",
-		"actionBtns": [
-			{
-				"btnName": "Book appointment",
-				"btnLink": "/appointment",
-				"btnClass": "btn-secondary"
-			},
-			{
-				"btnName": "Check lowest rates",
-				"btnLink": "/get-started/how-can-we-help",
-				"animate": true,
-				"btnClass": "btn-primary"
-			}
-		],
+
 		"heroParagraph": "DigitalDSA helps DSAs identify customers who can benefit from a balance transfer, compare lender offers, calculate potential savings, and secure better loan terms through suitable lender matching."
 	},
+	"actionBtns": [
+		{
+			"btnName": "Book appointment",
+			"btnLink": "/appointment",
+			"btnClass": "btn-secondary"
+		},
+		{
+			"btnName": "Check lowest rates",
+			"btnLink": "/get-started/how-can-we-help",
+			"animate": true,
+			"btnClass": "btn-primary"
+		}
+	],
 	"navList": {
 		"items": [
 			{

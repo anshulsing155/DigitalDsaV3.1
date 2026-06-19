@@ -199,7 +199,7 @@
 />
 
 <section class="bg-mainBg mx-auto w-full xl:container">
-	<PageDesign {pageData}>
+	<PageDesign {pageData} actionBtns={content.actionBtns}>
 		<!-- desktop view -->
 		<div class="hidden lg:block">
 			<StickyNavbar navList={navListWithClicks} {activeSection} />

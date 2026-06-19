@@ -114,7 +114,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
                   {#each actionBtns as btn}
                     <Button
                       btnName={btn.btnName}
-                      btnColor={btn.btnColor}
+                      btnClass={btn.btnClass}
                       link={btn.btnLink}
                     />
                   {/each}
