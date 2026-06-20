@@ -1,0 +1,254 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Business Loan Eligibility Factors - Requirements & Criteria",
+    "image": "/images/business-loan.jpg",
+    "description": "Explore key business loan eligibility factors, including credit score, documentation, and financial metrics. Get tips to improve your approval chances.",
+    "url": "https://yourwebsite.com/business-loan-eligibility",
+    "keywords": "business loan eligibility, loan requirements, credit score, financial metrics, loan approval"
+  },
+  "pageData": {
+    "coverImage": "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "coverAlt": "Business loan eligibility factors",
+    "classStyle": "object-cover w-full h-[50vh] sm:h-[60vh] lg:h-[80vh] xl:h-[90vh] 3xl:max-h-[60vh]",
+    "heading": "Business Loan Eligibility Factors",
+    "subHeading": "Learn the critical factors that influence your business loan eligibility and actionable steps to strengthen your application."
+  },
+  "subList": [
+    {
+      "linkName": "Eligibility Factors",
+      "url": "#factors",
+      "icon": "/icons/businessInsights.svg",
+      "altName": "factors-icon"
+    },
+    {
+      "linkName": "Example Calculations",
+      "url": "#calculations",
+      "icon": "/icons/calc.svg",
+      "altName": "calc-icon"
+    },
+    {
+      "linkName": "Bank Comparison",
+      "url": "#comparison",
+      "icon": "/icons/comparison.svg",
+      "altName": "comparison-icon"
+    },
+    {
+      "linkName": "Calculator",
+      "url": "#calculator",
+      "icon": "/icons/calc.svg",
+      "altName": "calculator-icon"
+    },
+    {
+      "linkName": "FAQ",
+      "url": "#faq",
+      "icon": "/icons/faq.svg",
+      "altName": "faq-icon"
+    }
+  ],
+  "factorsSection": {
+    "heading": "Key Eligibility Factors",
+    "description": "Banks evaluate these four primary factors when determining your business loan eligibility. Understanding them can significantly improve your chances of approval.",
+    "factors": [
+      {
+        "icon": "/icons/coinHouse.svg",
+        "title": "Cash Income",
+        "description": "Banks assess your daily and monthly cash inflows through bank statements, determining your regular income patterns.",
+        "importance": "Primary factor for small retailers and service-based businesses without formal accounting."
+      },
+      {
+        "icon": "/icons/bank.svg",
+        "title": "Monthly Average Balance (MAB)",
+        "description": "Your account's average daily balance over a month shows financial stability and liquidity.",
+        "importance": "Critical for evaluating cash flow management and working capital efficiency."
+      },
+      {
+        "icon": "/icons/document.svg",
+        "title": "GST Turnover",
+        "description": "Your GSTR filings demonstrate business volume and formalization level, with banks typically offering 10-20% of annual turnover.",
+        "importance": "Highly weighted for registered businesses with consistent filing history."
+      },
+      {
+        "icon": "/icons/growth.svg",
+        "title": "Yearly Net Profit",
+        "description": "Income tax returns and financial statements reveal profitability, with loans typically capped at 3-6 times annual profit.",
+        "importance": "The gold standard for established businesses with proper financial records."
+      }
+    ]
+  },
+  "examplesSection": {
+    "heading": "Eligibility Calculation Examples",
+    "description": "Explore how banks assess loan eligibility for various business types based on key financial factors.",
+    "examples": {
+      "retail": {
+        "title": "Retail Business Example",
+        "business": "Local Grocery Store",
+        "cashIncome": "₹1,50,000 monthly",
+        "Monthly Average Balance": "₹75,000",
+        "gst": "₹18,00,000 annually",
+        "profit": "₹6,00,000 annually",
+        "eligibility": "₹18,00,000 to ₹24,00,000",
+        "explanation": "Based primarily on GST turnover (10-15%) and supported by consistent cash flow patterns."
+      },
+      "manufacturing": {
+        "title": "Manufacturing Business Example",
+        "business": "Small Textile Manufacturer",
+        "cashIncome": "₹4,50,000 monthly",
+        "Monthly Average Balance": "₹2,25,000",
+        "gst": "₹54,00,000 annually",
+        "profit": "₹12,00,000 annually",
+        "eligibility": "₹36,00,000 to ₹48,00,000",
+        "explanation": "Based on a combination of annual profit (3-4x) and GST turnover, with higher weight on formal financial statements."
+      },
+      "service": {
+        "title": "Service Business Example",
+        "business": "IT Consulting Firm",
+        "cashIncome": "₹3,00,000 monthly",
+        "Monthly Average Balance": "₹1,50,000",
+        "gst": "₹36,00,000 annually",
+        "profit": "₹15,00,000 annually",
+        "eligibility": "₹45,00,000 to ₹75,00,000",
+        "explanation": "Based primarily on annual profit (3-5x) due to high-margin nature of the business with minimal physical assets."
+      },
+      "hospitality": {
+        "title": "Hospitality Business Example",
+        "business": "Family Restaurant",
+        "cashIncome": "₹2,00,000 monthly",
+        "Monthly Average Balance": "₹1,00,000",
+        "gst": "₹24,00,000 annually",
+        "profit": "₹8,00,000 annually",
+        "eligibility": "₹20,00,000 to ₹28,00,000",
+        "explanation": "Based primarily on Cash Income due to high daily transactions, with GST turnover as a supporting factor."
+      },
+      "ecommerce": {
+        "title": "E-commerce Business Example",
+        "business": "Online Fashion Store",
+        "cashIncome": "₹2,50,000 monthly",
+        "Monthly Average Balance": "₹1,25,000",
+        "gst": "₹48,00,000 annually",
+        "profit": "₹10,00,000 annually",
+        "eligibility": "₹32,00,000 to ₹44,00,000",
+        "explanation": "Based primarily on GST turnover (10-15%) reflecting online sales volume, with MAB supporting financial stability."
+      },
+      "freelance": {
+        "title": "Freelance Business Example",
+        "business": "Graphic Design Studio",
+        "cashIncome": "₹1,00,000 monthly",
+        "Monthly Average Balance": "₹50,000",
+        "gst": "₹12,00,000 annually",
+        "profit": "₹9,00,000 annually",
+        "eligibility": "₹27,00,000 to ₹36,00,000",
+        "explanation": "Based primarily on annual profit (3-4x) due to irregular cash flows but strong profitability from project-based work."
+      }
+    },
+    "highlightFactors": {
+      "retail": ["gst"],
+      "manufacturing": ["gst", "profit"],
+      "service": ["profit"],
+      "hospitality": ["cashIncome"],
+      "ecommerce": ["gst"],
+      "freelance": ["profit"]
+    }
+  },
+  "calculatorSection": {
+    "heading": "Business Loan Eligibility Calculator",
+    "description": "Estimate how much business loan you might qualify for based on your financial details.",
+    "labels": {
+      "businessType": "Business Type",
+      "monthlyIncome": "Monthly Cash Income (₹)",
+      "averageBalance": "Average Monthly Balance (₹)",
+      "annualTurnover": "Annual GST Turnover (₹)",
+      "annualProfit": "Annual Net Profit (₹)"
+    },
+    "types": [
+      { "value": "retail", "label": "Retail Business" },
+      { "value": "manufacturing", "label": "Manufacturing Business" },
+      { "value": "service", "label": "Service Business" }
+    ],
+    "results": {
+      "title": "Estimated Loan Eligibility",
+      "rangeLabel": "Estimated Range",
+      "ctaBtn": "Get Personalized Offers",
+      "disclaimer": "This is an estimate based on the information provided. Actual loan eligibility may vary based on additional factors like credit score, business vintage, and lender policies."
+    }
+  },
+  "comparisonSection": {
+    "heading": "Compare Banks for Business Loans",
+    "description": "Explore varying eligibility criteria and features from top banks to find the best loan option for your business.",
+    "note": "Note: Information is indicative and may vary based on individual profiles and bank policies. Always verify with the bank.",
+    "banks": [
+      {
+        "name": "HDFC Bank",
+        "logo": "/bankList/HDFC-Bank.svg",
+        "minTurnover": "₹40 Lakhs",
+        "minBusinessAge": "3 years",
+        "maxLoanAmount": "Up to ₹50 Lakhs",
+        "interestRate": "14% - 19%",
+        "processingFee": "1.5% - 2%",
+        "uniqueFeature": "Overdraft facility available with business current account"
+      },
+      {
+        "name": "ICICI Bank",
+        "logo": "/bankList/ICICI-Bank.svg",
+        "minTurnover": "₹30 Lakhs",
+        "minBusinessAge": "2 years",
+        "maxLoanAmount": "Up to ₹40 Lakhs",
+        "interestRate": "15% - 18%",
+        "processingFee": "1% - 2%",
+        "uniqueFeature": "Pre-approved offers for existing customers"
+      },
+      {
+        "name": "SBI",
+        "logo": "/bankList/sbi-logo.svg",
+        "minTurnover": "₹20 Lakhs",
+        "minBusinessAge": "2 years",
+        "maxLoanAmount": "Up to ₹25 Lakhs",
+        "interestRate": "11% - 16%",
+        "processingFee": "0.5% - 1%",
+        "uniqueFeature": "Special schemes for MSME sector"
+      },
+      {
+        "name": "Axis Bank",
+        "logo": "/bankList/Axis-Bank.svg",
+        "minTurnover": "₹35 Lakhs",
+        "minBusinessAge": "3 years",
+        "maxLoanAmount": "Up to ₹30 Lakhs",
+        "interestRate": "14% - 17%",
+        "processingFee": "1% - 1.5%",
+        "uniqueFeature": "Digital approval process with minimal documentation"
+      }
+    ]
+  },
+  "faqSection": {
+    "heading": "Frequently Asked Questions",
+    "description": "Get answers to common questions about business loan eligibility criteria and application process.",
+    "ctaText": "Have more questions?",
+    "ctaLinkText": "Contact our loan experts",
+    "faqs": [
+      {
+        "question": "What is the minimum business vintage required for a business loan?",
+        "answer": "Most lenders require a minimum business vintage of 1-3 years. Established businesses with longer operating history typically qualify for larger loan amounts and better interest rates. Some specialized lenders offer startup loans for businesses with less than 1 year of operation, but these often come with higher interest rates and stricter eligibility criteria."
+      },
+      {
+        "question": "Do I need to provide collateral for a business loan?",
+        "answer": "It depends on the loan type and amount. Secured business loans require collateral (property, equipment, inventory), while unsecured loans don't. Unsecured loans typically have higher interest rates and lower maximum amounts. Many lenders offer both options, with secured loans providing more favorable terms for larger amounts."
+      },
+      {
+        "question": "How does my credit score affect business loan eligibility?",
+        "answer": "Your personal credit score significantly impacts business loan approval, especially for small businesses. Most lenders require a minimum CIBIL score of 700-750. A higher score improves your chances of approval, better interest rates, and higher loan amounts. Some lenders may consider business loans with lower scores but will typically charge higher interest rates to offset the perceived risk."
+      },
+      {
+        "question": "Can I get a business loan if my business is not GST registered?",
+        "answer": "Yes, but your options may be limited. Non-GST registered businesses can still qualify for loans based on bank statements, income tax returns, and financial statements. However, GST registration often opens up more loan options with better terms. Some specialized lenders and NBFCs offer specific loan products for non-GST registered businesses."
+      },
+      {
+        "question": "What documents are typically required for a business loan application?",
+        "answer": "Common documents include: Business registration proof (GST registration, shop establishment certificate), KYC documents (Aadhaar, PAN), bank statements (6-12 months), income tax returns (1-3 years), financial statements, business vintage proof, and address proof. Additional documents may be required based on loan type and amount."
+      },
+      {
+        "question": "How long does the business loan approval process take?",
+        "answer": "The approval timeline varies by lender and loan type. Digital lenders may approve loans within 24-48 hours, while traditional banks typically take 7-14 business days. Larger loan amounts and secured loans generally require more thorough verification and may take longer. Having all required documents ready can significantly speed up the process."
+      }
+    ]
+  }
+}

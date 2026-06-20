@@ -1,16 +1,19 @@
 <script>
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
+  import content from "$lib/data/website/businessLoanEligibility.json";
+
+  const { heading, description, labels, types, results } = content.calculatorSection;
   
-  let visible = false;
-  let monthlyIncome = 200000;
-  let averageBalance = 100000;
-  let annualTurnover = 2400000;
-  let annualProfit = 800000;
-  let businessType = "retail";
+  let visible = $state(false);
+  let monthlyIncome = $state(200000);
+  let averageBalance = $state(100000);
+  let annualTurnover = $state(2400000);
+  let annualProfit = $state(800000);
+  let businessType = $state("retail");
   
-  let eligibilityAmount = 0;
-  let eligibilityRange = { min: 0, max: 0 };
+  let eligibilityAmount = $state(0);
+  let eligibilityRange = $state({ min: 0, max: 0 });
   
   onMount(() => {
     visible = true;
@@ -58,9 +61,9 @@
 
 {#if visible}
   <div class="py-12 bg-[var(--landing-bg)] px-4 lg:px-16" in:fade={{ duration: 500 }}>
-    <h2 class="typography-h2 text-center mb-8 text-[var(--form-text)]">Business Loan Eligibility Calculator</h2>
+    <h2 class="typography-h2 text-center mb-8 text-[var(--form-text)]">{heading}</h2>
     <p class="typography-body-lg text-center max-w-3xl mx-auto mb-12 text-[var(--form-text-secondary)]">
-      Estimate how much business loan you might qualify for based on your financial details.
+      {description}
     </p>
     
     <div class="max-w-4xl mx-auto bg-[var(--landing-bg-card)] border border-[var(--form-border)] rounded-xl shadow-lg overflow-hidden">
@@ -68,7 +71,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label class="block typography-label text-[var(--form-text-secondary)] mb-2" for="business-type">
-              Business Type
+              {labels.businessType}
             </label>
             <select
               id="business-type"
@@ -76,15 +79,15 @@
               onchange={calculateEligibility}
               class="w-full typography-input px-3 py-2 border border-[var(--form-border)] rounded-xl shadow-sm bg-[var(--landing-bg)] text-[var(--form-text)] focus:outline-none focus:ring-primary focus:border-[var(--form-border)]"
             >
-              <option value="retail">Retail Business</option>
-              <option value="manufacturing">Manufacturing Business</option>
-              <option value="service">Service Business</option>
+              {#each types as type}
+                <option value={type.value}>{type.label}</option>
+              {/each}
             </select>
           </div>
           
           <div>
             <label class="block typography-label text-[var(--form-text-secondary)] mb-2" for="monthly-income">
-              Monthly Cash Income (₹)
+              {labels.monthlyIncome}
             </label>
             <input
               id="monthly-income"
@@ -99,7 +102,7 @@
           
           <div>
             <label class="block typography-label text-[var(--form-text-secondary)] mb-2" for="average-balance">
-              Average Monthly Balance (₹)
+              {labels.averageBalance}
             </label>
             <input
               id="average-balance"
@@ -114,7 +117,7 @@
           
           <div>
             <label class="block typography-label text-[var(--form-text-secondary)] mb-2" for="annual-turnover">
-              Annual GST Turnover (₹)
+              {labels.annualTurnover}
             </label>
             <input
               id="annual-turnover"
@@ -129,7 +132,7 @@
           
           <div>
             <label class="block typography-label text-[var(--form-text-secondary)] mb-2" for="annual-profit">
-              Annual Net Profit (₹)
+              {labels.annualProfit}
             </label>
             <input
               id="annual-profit"
@@ -144,22 +147,22 @@
         </div>
         
         <div class="mt-8 p-6 bg-[var(--landing-bg)] border border-[var(--form-border)] rounded-xl">
-          <h3 class="typography-h3 text-[var(--form-text)] mb-4">Estimated Loan Eligibility</h3>
+          <h3 class="typography-h3 text-[var(--form-text)] mb-4">{results.title}</h3>
           <div class="flex flex-col md:flex-row md:items-center justify-between">
             <div>
-              <p class="typography-body-sm text-[var(--form-text-secondary)] mb-1">Estimated Range</p>
+              <p class="typography-body-sm text-[var(--form-text-secondary)] mb-1">{results.rangeLabel}</p>
               <p class="typography-h1 text-primary">
                 {formatCurrency(eligibilityRange.min)} - {formatCurrency(eligibilityRange.max)}
               </p>
             </div>
             <div class="mt-4 md:mt-0">
               <a href="/get-started/how-can-we-help" class="btn btn-primary typography-button">
-                Get Personalized Offers
+                {results.ctaBtn}
               </a>
             </div>
           </div>
           <p class="mt-4 typography-body-sm text-[var(--form-text-secondary)]">
-            This is an estimate based on the information provided. Actual loan eligibility may vary based on additional factors like credit score, business vintage, and lender policies.
+            {results.disclaimer}
           </p>
         </div>
       </div>

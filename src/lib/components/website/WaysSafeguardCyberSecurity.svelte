@@ -10,6 +10,22 @@
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import HelpList from './HelpList.svelte';
 	import Seo from './Seo.svelte';
+	import content from '$lib/data/website/waysSafeguardCyberSecurity.json';
+
+	const {
+		seo,
+		pageData,
+		stickyNavBar,
+		navBarMedium,
+		mfa,
+		callerId,
+		telecomOptions,
+		callerIdServices,
+		passwordSecuring,
+		messageUs,
+		helpList,
+		thingsYouShouldKnow
+	} = content;
 
 	const toggleDropdown = (event, index) => {
 		event.preventDefault();
@@ -47,68 +63,6 @@
 	};
 
 	let activeSection = $state('');
-	let pageData = {
-		coverImage: '/images/ways-safeguard-blog.jpg',
-		coverAlt: 'hero-cover',
-		heading: 'Ways to safe your business',
-		para: 'Enhancing security is crucial—use multi-factor authentication, verify callers, create strong passwords, and stay cautious with links and attachments.',
-		actionBtns: [
-			{
-				btnName: 'Book appointment',
-				btnLink: '/appointment',
-				btnColor: '#ffcc00'
-			},
-			{
-				btnName: 'Compare rates',
-				btnLink: '/get-started/how-can-we-help'
-			}
-		]
-	};
-	let callerIdServices = [
-		{
-			heading: 'Jio Truecaller Integration & JioCall App',
-			Service: 'Reliance Jio collaborates with Truecaller for spam call identification.',
-			Features: 'JioCall app offers caller ID, call blocking, and spam reporting.',
-			'How to use':
-				'Truecaller integration is available for Jio users, and JioCall can be downloaded from app stores.'
-		},
-		{
-			heading: 'Airtel Call Manager & Smart Missed Call Alert',
-			Service: 'Airtel provides caller ID and spam call alerts through Smart Missed Call Alerts.',
-			Features: ' Call blocking, spam detection, and filtering of unwanted calls.',
-			'How to use': 'Airtel Thanks App offers settings for managing call preferences.'
-		},
-		{
-			heading: 'Vi (Vodafone Idea) Call Filter',
-			Service: 'Vodafone Idea (Vi) provides a Call Filter feature to detect spam and fraud calls.',
-			Features: ' Identifies spam numbers, blocks robocalls, and provides caller insights.',
-			'How to use': 'Available via the Vi App and Truecaller integration.'
-		},
-		{
-			heading: 'BSNL Do Not Disturb (DND) Service & Truecaller Integration',
-			Service: 'BSNL allows users to activate DND to avoid promotional calls and SMS spam.',
-			Features: 'Blocks telemarketing calls and filters fraud numbers.',
-			'How to use': 'Activate DND via BSNL customer service or mobile settings.'
-		},
-		{
-			heading: 'Truecaller and Google Dialer (Third-Party Services)',
-			Service:
-				'Though not provided directly by telecom operators, Truecaller and Google Dialer help identify spam calls.',
-			Features: 'Spam detection, caller identification, and community-based fraud reporting.',
-			'How to use': 'Install Truecaller or use Google Dialer’s built-in spam protection.'
-		},
-		{
-			heading: 'Additional Measures to Prevent Spam Calls in India:',
-			'Enable DND (Do Not Disturb)':
-				'service by dialing 1909 or using your service provider’s app.',
-			'Use spam call detection apps':
-				' like Truecaller, Hiya, and Google Dialer for additional protection',
-			'Report fraud calls and spam numbers ':
-				' via the National Cybercrime Helpline 1930 or TRAI’s complaint portal.'
-		}
-	];
-
-	// end-here
 
 	const initializeActiveSection = () => {
 		const firstSection = document.querySelector('[data-section]');
@@ -133,35 +87,30 @@
 		}
 	};
 
+	const dispatch = createEventDispatcher();
+
 	onMount(() => {
 		initializeActiveSection();
 		window.addEventListener('scroll', handleScroll);
+
+		setTimeout(() => {
+			const text = document.querySelector('.content')?.innerText || '';
+			dispatch('textExtracted', text);
+			dispatch('pageData', pageData);
+		}, 100);
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
-
-	//send data child to parent
-	const dispatch = createEventDispatcher();
-
-	$effect(() => {
-		onMount(() => {
-			setTimeout(() => {
-				const text = document.querySelector('.content')?.innerText || '';
-				dispatch('textExtracted', text);
-				dispatch('pageData', pageData);
-			}, 100); // Small delay to ensure DOM updates
-		});
-	});
 </script>
 
 <Seo
-	type="WebPage"
-	title="Secure Your Business: MFA, Caller ID & Password Protection"
-	image="/images/ways-safeguard-blog.jpg"
-	description="Protect your business with MFA, caller ID checks, telecom security, and strong passwords. Learn how to prevent fraud and secure your accounts."
-	keywords="Business security, Multi-Factor Authentication (MFA), Caller ID verification, Spam call protection, Telecom security options, Strong password tips, Cyber fraud prevention, Secure online banking, OTP authentication, Phishing protection, SIM swap fraud, Password manager, Digital security measures, Secure UPI transactions, Fraud prevention India"
+	type={seo.type}
+	title={seo.title}
+	image={seo.image}
+	description={seo.description}
+	keywords={seo.keywords}
 />
 
 <section class="content">
@@ -169,61 +118,26 @@
 		<!-- for desktop -->
 		<div class="hidden lg:block">
 			<StickyNavbar
-				navList={{
-					items: [
-						{
-							name: 'Multi-Factor authentication',
-							targetId: `MFA`
-						},
-						{
-							name: 'Caller ID check',
-							targetId: `caller`
-						},
-						{
-							name: 'Options with telecom companies',
-							targetId: `telecomCompanies`
-						},
-						{
-							name: 'Password securing',
-							targetId: `password`
-						}
-					]
-				}}
+				navList={stickyNavBar}
 				{activeSection}
 			></StickyNavbar>
-			<!-- <AnchorCounter /> -->
+
 			<div id="MFA" data-section="MFA" class="">
 				<ThingsYouShould
-					thinkKnow={{
-						heading: 'Multi-Factor Authentication (MFA)',
-						subPara: [
-							`Multi-Factor Authentication (MFA) is a security feature that adds an extra layer of protection to your online accounts, including banking, UPI apps, and email. Instead of just using a password, MFA requires at least one more verification step, such as an OTP, biometric scan, or security token.`,
-							`With the rise of cyber fraud in India, including phishing and SIM swap scams, relying only on passwords is risky. MFA makes it significantly harder for hackers to access your accounts, even if they steal your password. Indian banks, UPI apps like PhonePe, Google Pay, and Paytm, and Aadhaar services use MFA to verify users before granting access.`,
-							`To stay secure, enable 2-Step Verification on your banking and financial apps. Instead of relying only on SMS OTPs, consider using an authenticator app for better security. Also, activate biometric authentication on your devices where possible.`
-						]
-					}}
+					thinkKnow={mfa}
 					sectionBorder="true"
 				/>
 			</div>
 			<div id="caller" data-section="caller" class="">
 				<ThingsYouShould
-					thinkKnow={{
-						heading: 'Caller ID and spam protection',
-						subPara: [
-							`To verify if a caller claiming to be from your bank (e.g., SBI, HDFC, ICICI) is genuine, always use official security features provided by your bank’s mobile app. Some banks offer in-app verification methods to confirm the legitimacy of the caller, ensuring a safer authentication process.`,
-							`Banks like SBI, HDFC, ICICI, and others may occasionally call you regarding your account or banking services. To ensure security, it’s crucial that both you and the bank confirm each other's identity. Keeping your contact details updated helps protect your account from fraud.`,
-							`With the rise in scam and fraudulent calls, it can be difficult to verify if a caller is genuine. Some banks provide in-app verification methods to confirm their identity before discussing account details.`
-						]
-					}}
+					thinkKnow={callerId}
 					sectionBorder="true"
 				></ThingsYouShould>
 			</div>
 
 			<div id="telecomCompanies" data-section="telecomCompanies">
 				<ThingsYouShould
-					thinkKnow={{
-						heading: 'Options with telecom companies'
-					}}
+					thinkKnow={telecomOptions}
 					sectionBorder="true"
 				>
 					<div slot="list">
@@ -252,45 +166,15 @@
 			</div>
 
 			<div id="password" data-section="password" class="">
-				<ThreeColumWithLeftHeading
-					contents={{
-						heading: 'Creating and securing passwords',
-						cardData: [
-							{
-								title: 'Tips for Creating a Strong Password for Online Banking & Digital Accounts ',
-								para: `<ul class="list-disc pl-4">
-  <li><span class="font-semibold"> Use a mix</span> of letters, numbers, and symbols to increase security. </li>
-  <li> <span class="font-semibold">Make it as long as possible</span>—longer passwords are harder to crack. </li>
-  <li> <span class="font-semibold">Avoid easily guessable details</span>, such as your name, birthdate, or common phrases. </li>
-  <li>  <span class="font-semibold">Consider using a passphrase</span>—instead of a random string, create a memorable phrase that tells a story.</li>
-   </ul>
-  
-<span class="font-semibold">For example: </span> 
-"MyD0gL0v3sCh@seC@ts!" (It’s fun, unique, and hard to guess!)
-`
-							},
-							{
-								title: 'Password Security: Keep Your Accounts Safe',
-								para: `<ul class="list-disc pl-5">
-<li><span class="font-semibold">Never share your passwords</span> with anyone, including bank representatives.</li>
-<li><span class="font-semibold">Avoid writing passwords down</span>—store them securely using a password manager if needed.</li>
-<li><span class="font-semibold">Use unique passwords</span> for each account; reusing passwords increases the risk of multiple accounts being compromised in a data breach.</li>
-<li><span class="font-semibold">Consider passphrases</span> if managing complex passwords becomes difficult. A memorable phrase with numbers and symbols is both secure and easy to recall.</li>
-<li><span class="font-semibold">Enable multi-factor authentication (MFA)</span> wherever possible. This adds an extra layer of security, such as an OTP from an authenticator app on your phone.</li>
-</ul>
-`
-							}
-						]
-					}}
-				/>
+				<ThreeColumWithLeftHeading contents={passwordSecuring} />
 			</div>
 		</div>
 
 		<!-- for mobile -->
 		<div class="block lg:hidden">
-			{#each ['Multi-Factor authentication', ' Caller ID check', 'Options with telecom companies', 'Password securing'] as list, index}
+			{#each navBarMedium as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < 3
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < navBarMedium.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
@@ -312,43 +196,21 @@
 
 					{#if index == 0}
 						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]" id="MFA">
-							<ThingsYouShould
-								thinkKnow={{
-									heading: 'Multi-Factor Authentication (MFA)',
-									subPara: [
-										`Multi-Factor Authentication (MFA) is a security feature that adds an extra layer of protection to your online accounts, including banking, UPI apps, and email. Instead of just using a password, MFA requires at least one more verification step, such as an OTP, biometric scan, or security token.`,
-										`With the rise of cyber fraud in India, including phishing and SIM swap scams, relying only on passwords is risky. MFA makes it significantly harder for hackers to access your accounts, even if they steal your password. Indian banks, UPI apps like PhonePe, Google Pay, and Paytm, and Aadhaar services use MFA to verify users before granting access.`,
-										`To stay secure, enable 2-Step Verification on your banking and financial apps. Instead of relying only on SMS OTPs, consider using an authenticator app for better security. Also, activate biometric authentication on your devices where possible.`
-									]
-								}}
-							/>
+							<ThingsYouShould thinkKnow={mfa} />
 						</div>
 					{:else if index == 1}
 						<div
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 							id="caller"
 						>
-							<ThingsYouShould
-								thinkKnow={{
-									heading: 'Caller ID and spam protection',
-									subPara: [
-										`To verify if a caller claiming to be from your bank (e.g., SBI, HDFC, ICICI) is genuine, always use official security features provided by your bank’s mobile app. Some banks offer in-app verification methods to confirm the legitimacy of the caller, ensuring a safer authentication process.`,
-										`Banks like SBI, HDFC, ICICI, and others may occasionally call you regarding your account or banking services. To ensure security, it’s crucial that both you and the bank confirm each other's identity. Keeping your contact details updated helps protect your account from fraud.`,
-										`With the rise in scam and fraudulent calls, it can be difficult to verify if a caller is genuine. Some banks provide in-app verification methods to confirm their identity before discussing account details.`
-									]
-								}}
-							></ThingsYouShould>
+							<ThingsYouShould thinkKnow={callerId}></ThingsYouShould>
 						</div>
 					{:else if index == 2}
 						<div
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 							id="telecomCompanies"
 						>
-							<ThingsYouShould
-								thinkKnow={{
-									heading: 'Options with telecom companies'
-								}}
-							>
+							<ThingsYouShould thinkKnow={telecomOptions}>
 								<div slot="list">
 									<ul class="list-decimal space-y-5 pl-5">
 										{#each callerIdServices as item}
@@ -378,51 +240,14 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 							id="password-securing"
 						>
-							<ThreeColumWithLeftHeading
-								contents={{
-									heading: 'Creating and securing passwords',
-									cardData: [
-										{
-											title:
-												'Tips for Creating a Strong Password for Online Banking & Digital Accounts ',
-											para: `<ul class="list-disc pl-4">
-  <li><span class="font-semibold"> Use a mix</span> of letters, numbers, and symbols to increase security. </li>
-  <li> <span class="font-semibold">Make it as long as possible</span>—longer passwords are harder to crack. </li>
-  <li> <span class="font-semibold">Avoid easily guessable details</span>, such as your name, birthdate, or common phrases. </li>
-  <li>  <span class="font-semibold">Consider using a passphrase</span>—instead of a random string, create a memorable phrase that tells a story.</li>
-   </ul>
-        
-      <span class="font-semibold">For example: </span> 
-      "MyD0gL0v3sCh@seC@ts!" (It’s fun, unique, and hard to guess!)
-      `
-										},
-										{
-											title: 'Password Security: Keep Your Accounts Safe',
-											para: `<ul class="list-disc pl-5">
-      <li><span class="font-semibold">Never share your passwords</span> with anyone, including bank representatives.</li>
-      <li><span class="font-semibold">Avoid writing passwords down</span>—store them securely using a password manager if needed.</li>
-      <li><span class="font-semibold">Use unique passwords</span> for each account; reusing passwords increases the risk of multiple accounts being compromised in a data breach.</li>
-      <li><span class="font-semibold">Consider passphrases</span> if managing complex passwords becomes difficult. A memorable phrase with numbers and symbols is both secure and easy to recall.</li>
-      <li><span class="font-semibold">Enable multi-factor authentication (MFA)</span> wherever possible. This adds an extra layer of security, such as an OTP from an authenticator app on your phone.</li>
-      </ul>
-      `
-										}
-									]
-								}}
-							/>
+							<ThreeColumWithLeftHeading contents={passwordSecuring} />
 						</div>
 					{/if}
 				</details>
 			{/each}
 		</div>
 
-		<TwoColumnWithImage
-			contents={{
-				cardImage: `/images/message.jpg`,
-				cardAltName: `CardCover`,
-				cardHeading: `Message us 24/7`
-			}}
-		>
+		<TwoColumnWithImage contents={messageUs}>
 			<p>
 				Feel free to message us anytime for expert assistance with your loan needs. Our team is here
 				to provide professional advice, guide you through the loan process, and help you find the
@@ -435,56 +260,15 @@
 		</TwoColumnWithImage>
 
 		<div slot="secondary">
-			<HelpList
-				contents={{
-					heading: `We're here to help`,
-					xlGridCol: 4,
-					borderBottom: true,
-					cards: [
-						{
-							heading: 'Book an </br> appointment',
-							para: 'Book instantly to speak to a loan specialist at a time that suits you',
-							icon: '/icons/appointment.svg',
-							altName: 'appointment Icon',
-							url: '/appointment'
-						},
-						{
-							heading: 'Check loan offers',
-							para: 'In as little as 10 minutes and tailored exactly as per your financial profile.',
-							icon: '/icons/manageLoan2.svg',
-							altName: 'Alert Icon',
-							url: '/get-started/how-can-we-help'
-						},
-						{
-							heading: 'Contact us',
-							para: 'Fast-track your call and connect with a specialist in the Digital DSA.',
-							icon: '/icons/contact.svg',
-							altName: 'Alert Icon',
-							url: '/contact'
-						},
-						{
-							heading: 'Message us',
-							para: `Get instant help from our online assistants  or chat to a specialist.`,
-							icon: '/icons/msg.svg',
-							altName: 'Alert Icon',
-							url: '/contact'
-						}
-					]
-				}}
-			/>
+			<HelpList contents={helpList} />
 			<ThingsYouShould
-				thinkKnow={{
-					heading: 'Things you should know',
-					paraGraph: [
-						`<span class="font-semibold">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.`,
-						`<span class="font-semibold">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.`,
-						`<span class="font-semibold">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.`,
-						`<span class="font-semibold">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions.`
-					]
-				}}
+				thinkKnow={thingsYouShouldKnow}
 				disc="list-decimal"
-        containerClass="px-0"
+				containerClass="px-0"
 			></ThingsYouShould>
 		</div>
 	</NewPageLayout>
 </section>
+
+<style>
+</style>
