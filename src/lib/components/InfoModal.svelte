@@ -1,10 +1,9 @@
-﻿<script lang="ts">
+<script lang="ts">
 	import { modal, closeModal } from '$lib/stores/modal';
 	import { X } from '$lib/utils/iconRegistry';
 	import { registerModal, unregisterModal } from '$lib/stores/modalStack';
 	import { sanitizeHtml } from '$lib/utils/sanitizeHtml';
 	import { generateId } from '$lib/utils';
-	import { createIcons } from 'lucide';
 	import { tick } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 
@@ -20,6 +19,7 @@
 	// across questionBank files. Importing the full `icons` object would pull all
 	// ~1,948 icon definitions (~200KB) into the client bundle.
 	import {
+		createIcons,
 		AlertTriangle,
 		BadgePlus,
 		Pencil,

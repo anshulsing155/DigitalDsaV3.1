@@ -11,10 +11,22 @@
 		"heroParagraph": "We use cookies to keep our website running, provide customer support, learn how people are using our website and improve our services. Here’s more about what that actually means.."
 	},
 	"subList": [
-		{ "name": "What are cookies?", "targetId": "cookies" },
-		{ "name": "First party cookies", "targetId": "firstPartyCookies" },
-		{ "name": "Third Party cookies", "targetId": "thirdPartyCookies" },
-		{ "name": "How to delete cookies", "targetId": "deleteCookies" }
+		{
+			"name": "What are cookies?",
+			"targetId": "cookies"
+		},
+		{
+			"name": "First party cookies",
+			"targetId": "firstPartyCookies"
+		},
+		{
+			"name": "Third Party cookies",
+			"targetId": "thirdPartyCookies"
+		},
+		{
+			"name": "How to delete cookies",
+			"targetId": "deleteCookies"
+		}
 	],
 	"navBarMedium": [
 		"What are cookies?",
@@ -38,9 +50,9 @@
 		],
 		"paraGraph": [
 			"Strictly necessary : Essential to keep our website running on a basic level. They log you into your account and live chat, and help you make payments for some of our services.",
-			"Functional : 	Recognize you when you return to our website, so we can do things like remember your preferences from last time.",
-			"User identification :	We display ads on Facebook and other sites to track which ad led you to our website and how you interact with it once you’re here. This information helps us make the website and future ads more relevant to you. For example, we might show you information about Home Loan instead of Loan Against Property (LAP) or other Loans based on your interests.",
-			"Analytics, performance and research :	Recognize and count how many visitors we get and how they use our website. This helps us improve the way the website works – for example, making pages easier to find."
+			"Functional : Recognize you when you return to our website, so we can do things like remember your preferences from last time.",
+			"User identification : We display ads on Facebook and other sites to track which ad led you to our website and how you interact with it once you’re here. This information helps us make the website and future ads more relevant to you. For example, we might show you information about Home Loan instead of Loan Against Property (LAP) or other Loans based on your interests.",
+			"Analytics, performance and research : Recognize and count how many visitors we get and how they use our website. This helps us improve the way the website works – for example, making pages easier to find."
 		],
 		"bottomPara": [
 			"All the cookies we use play a part in fraud detection, prevention and investigation to help us keep our users secure. For example, cookies can help us identify if someone has accessed an account that doesn’t belong to them, and show us how they used that account."
@@ -72,10 +84,22 @@
 			"To change your web browser preferences:"
 		],
 		"links": [
-			{ "name": "HotStar", "url": "https://help.hotjar.com/hc/en-us/articles/6952777582999-Cookies-Set-by-the-Hotjar-Tracking-Code" },
-			{ "name": "Amplitude", "url": "https://amplitude.com/privacy" },
-			{ "name": "Google", "url": "https://policies.google.com/privacy" },
-			{ "name": "MicroSoft", "url": "https://www.microsoft.com/en-gb/privacy/privacystatement" }
+			{
+				"name": "HotStar",
+				"url": "https://help.hotjar.com/hc/en-us/articles/6952777582999-Cookies-Set-by-the-Hotjar-Tracking-Code"
+			},
+			{
+				"name": "Amplitude",
+				"url": "https://amplitude.com/privacy"
+			},
+			{
+				"name": "Google",
+				"url": "https://policies.google.com/privacy"
+			},
+			{
+				"name": "MicroSoft",
+				"url": "https://www.microsoft.com/en-gb/privacy/privacystatement"
+			}
 		]
 	},
 	"deleteCookies": {

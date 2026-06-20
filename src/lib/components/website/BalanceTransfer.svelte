@@ -351,19 +351,16 @@
 
 		<FeedbackCheck />
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow.thinkKnow}
 				disc={content.common_components.thinkYouShouldKnow.disc}
 				containerClass="lg:px-0"
 			/>
-		</div>
+		{/snippet}
 	</PageDesign>
 </section>
 
 <style>
-	.section {
-		scroll-margin-top: 4rem;
-	}
 </style>
