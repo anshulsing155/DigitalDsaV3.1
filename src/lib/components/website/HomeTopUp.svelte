@@ -203,17 +203,17 @@
 
 			<div class="">
 				<div id="started" data-section="started" class="">
-					<TwoColumnWithLeftHeading contents={content.started.intro} />
-					<AboveTitleWithTopIconCard contents={content.started.eligibility} />
+					<TwoColumnWithLeftHeading contents={content.started.intro} isBorder/>
+					<AboveTitleWithTopIconCard contents={content.started.eligibility} isBorder/>
 				</div>
 
 				<div id="fee" data-section="fee" class="section">
-					<TwoColumnWithLeftHeading contents={content.fee.tenure} />
-					<TwoColumnWithLeftHeading contents={content.fee.rates} />
+					<TwoColumnWithLeftHeading contents={content.fee.tenure} isBorder />
+					<TwoColumnWithLeftHeading contents={content.fee.rates} isBorder/>
 				</div>
 
 				<div id="step" data-section="step" class="section">
-					<TwoColumnWithImage contents={content.step.guide}>
+					<TwoColumnWithImage contents={content.step.guide} isBorder>
 						<div class="typography-body-md text-[var(--form-text-secondary)]">
 							<ul class="space-y-6">
 								{#each content.step.list as s}
@@ -238,12 +238,12 @@
 						</div>
 					</TwoColumnWithImage>
 
-					<ButtonBanner contents={content.step.buttonBanner} />
-					<ThreeColumWithLeftHeading contents={content.step.prosCons} />
+					<ButtonBanner contents={content.step.buttonBanner} isBorder/>
+					<ThreeColumWithLeftHeading contents={content.step.prosCons} isBorder/>
 				</div>
 
 				<div id="help" data-section="help" class="section">
-					<TwoColumnWithImage contents={content.help.contents}>
+					<TwoColumnWithImage contents={content.help.contents} isBorder>
 						<div>
 							<ul class="space-y-4">
 								{#each content.help.list as item}
@@ -268,9 +268,9 @@
 				</div>
 
 				<div id="tool" data-section="tool" class="section">
-					<ThreeColumWithLeftHeading contents={content.tool.threeColumn} />
+					<ThreeColumWithLeftHeading contents={content.tool.threeColumn} isBorder/>
 					<AboveTitleWithBlackCard contents={content.tool.blackCard} />
-					<AboveTitleWithTopIconCard contents={content.tool.topIconCard} />
+					<AboveTitleWithTopIconCard contents={content.tool.topIconCard} isBorder/>
 				</div>
 			</div>
 		</div>
@@ -300,19 +300,17 @@
 							id="started"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.started.intro} />
+							<TwoColumnWithLeftHeading contents={content.started.intro} isBorder/>
 							<AboveTitleWithTopIconCard contents={content.started.eligibility} />
 						</div>
 					{:else if index == 1}
 						<div id="fee" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<div class="border-b border-[var(--form-border)]">
-								<TwoColumnWithLeftHeading contents={content.fee.tenure} />
-							</div>
+								<TwoColumnWithLeftHeading contents={content.fee.tenure} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.fee.rates} />
 						</div>
 					{:else if index == 2}
 						<div id="step" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithImage contents={content.step.guide}>
+							<TwoColumnWithImage contents={content.step.guide} isBorder>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="space-y-6">
 										{#each content.step.list as s}
@@ -337,7 +335,7 @@
 								</div>
 							</TwoColumnWithImage>
 
-							<ButtonBanner contents={content.step.buttonBanner} />
+							<ButtonBanner contents={content.step.buttonBanner} isBorder/>
 							<ThreeColumWithLeftHeading contents={content.step.prosCons} />
 						</div>
 					{:else if index == 3}
@@ -371,9 +369,9 @@
 						</div>
 					{:else if index == 4}
 						<div id="tool" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<ThreeColumWithLeftHeading contents={content.tool.threeColumn} />
+							<ThreeColumWithLeftHeading contents={content.tool.threeColumn} isBorder/>
 							<AboveTitleWithBlackCard contents={content.tool.blackCard} />
-							<AboveTitleWithTopIconCard contents={content.tool.topIconCard} />
+							<AboveTitleWithTopIconCard contents={content.tool.topIconCard} isBorder />
 						</div>
 					{/if}
 				</details>
@@ -381,7 +379,7 @@
 		</div>
 
 		<!-- message us  -->
-		<TwoColumnWithImage contents={content.messageUs.contents}>
+		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
 			<p>{content.messageUs.para}</p>
 			<div class="w-auto">
 				<Button

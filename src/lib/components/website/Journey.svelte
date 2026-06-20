@@ -1,24 +1,26 @@
 <script lang="ts">
-type Props = {
+	type Props = {
 		journey?: any;
 		colSpan?: number;
 		colSpanDesc?: number;
 		gridColDesc?: number;
 		paddingClass?: string;
+		isBorder?: boolean;
 	};
 	let {
 		colSpan = 1,
 		colSpanDesc = 2,
 		gridColDesc = 2,
 		journey = {},
-		paddingClass = 'px-[0.5rem] lg:px-16'
+		paddingClass = 'px-[0.5rem] lg:px-16',
+		isBorder = false
 	}: Props = $props();
 
 	import Button from './Button.svelte';
 	import PremiumButton from './PremiumButton.svelte';
 </script>
 
-<section class="border-b border-[var(--form-border)] last:border-b-0 lg:last:border-b py-[4rem]">
+<section class="py-[4rem] {isBorder ? 'border-b border-[var(--form-border)]' : ''}">
 	<div class={`grid gap-[2rem] lg:grid-cols-3 ${paddingClass}`}>
 		<h2 class="col-span-3 lg:col-span-{colSpan} typography-h2-md text-[var(--form-text)]">
 			{journey.heading}

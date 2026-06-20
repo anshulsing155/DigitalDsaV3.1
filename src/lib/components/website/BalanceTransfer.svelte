@@ -205,15 +205,15 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="whyRefinance" data-section="whyRefinance">
-				<AboveTitleWithTopIconCard contents={content.whyRefinance.contents} />
+				<AboveTitleWithTopIconCard contents={content.whyRefinance.contents} isBorder/>
 			</div>
 
 			<div id="whenAvoid" data-section="whenAvoid">
-				<AboveTitleWithTopIconCard contents={content.whenAvoid.contents} />
+				<AboveTitleWithTopIconCard contents={content.whenAvoid.contents} isBorder/>
 			</div>
 
 			<div id="how" data-section="how">
-				<TwoColumnWithLeftHeading contents={content.how.contents} />
+				<TwoColumnWithLeftHeading contents={content.how.contents} isBorder/>
 
 				{#if content.how.exampleTableData}
 					<div class="border-b border-[var(--form-border)] px-[1rem] py-12 px-[0.5rem] lg:px-16">
@@ -226,11 +226,11 @@
 					</div>
 				{/if}
 
-				<ButtonBanner contents={content.how.buttonBanner} />
+				<ButtonBanner contents={content.how.buttonBanner} isBorder/>
 			</div>
 
 			<div id="help" data-section="help">
-				<TwoColumnWithImage contents={content.help.contents}>
+				<TwoColumnWithImage contents={content.help.contents} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="typography-body-md list-disc space-y-4 text-[var(--form-text-secondary)]">
 							{#each content.help.list as item}
@@ -248,9 +248,9 @@
 			</div>
 
 			<div id="tools" data-section="tools">
-				<ThreeColumWithLeftHeading contents={toolsThreeColumnWithClicks} />
+				<ThreeColumWithLeftHeading contents={toolsThreeColumnWithClicks} isBorder/>
 				<AboveTitleWithBlackCard contents={content.tools.blackCard} />
-				<AboveTitleWithTopIconCard contents={content.tools.topIconCard} />
+				<AboveTitleWithTopIconCard contents={content.tools.topIconCard} isBorder/>
 			</div>
 		</div>
 
@@ -291,7 +291,7 @@
 						</div>
 					{:else if index == 2}
 						<div id="how" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithLeftHeading contents={content.how.contents} />
+							<TwoColumnWithLeftHeading contents={content.how.contents} isBorder/>
 
 							{#if content.how.exampleTableData}
 								<div class="border-b border-[var(--form-border)] px-[0.5rem] lg:px-16 py-12">
@@ -328,9 +328,9 @@
 						</div>
 					{:else if index == 4}
 						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<ThreeColumWithLeftHeading contents={toolsThreeColumnWithClicks} />
+							<ThreeColumWithLeftHeading contents={toolsThreeColumnWithClicks} isBorder/>
 							<AboveTitleWithBlackCard contents={content.tools.blackCard} />
-							<AboveTitleWithTopIconCard contents={content.tools.topIconCard} />
+							<AboveTitleWithTopIconCard contents={content.tools.topIconCard} isBorder/>
 						</div>
 					{/if}
 				</details>
@@ -338,7 +338,7 @@
 		</div>
 
 		<!-- message us -->
-		<TwoColumnWithImage contents={content.messageUs.contents}>
+		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
 			<p class="typography-body-md text-[var(--form-text-secondary)]">{content.messageUs.para}</p>
 			<div class="w-auto">
 				<Button

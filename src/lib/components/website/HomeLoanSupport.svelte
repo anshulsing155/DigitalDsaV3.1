@@ -179,19 +179,19 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="types" data-section="types">
-				<TwoColumnWithLeftHeading contents={content.types.contents} />
+				<TwoColumnWithLeftHeading contents={content.types.contents} isBorder />
 			</div>
 
 			<div id="why" data-section="why">
-				<AboveTitleWithoutIconCard contents={content.why.contents} />
+				<AboveTitleWithoutIconCard contents={content.why.contents} isBorder />
 			</div>
 
 			<div id="challenges" data-section="challenges">
-				<TwoColumnWithLeftHeading contents={content.challenges.contents} />
+				<TwoColumnWithLeftHeading contents={content.challenges.contents} isBorder/>
 			</div>
 
 			<div id="steps" data-section="steps">
-				<TwoColumnWithImage contents={content.steps.contents}>
+				<TwoColumnWithImage contents={content.steps.contents} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="list-disc space-y-4">
 							{#each content.steps.list as item}
@@ -209,8 +209,8 @@
 					</div>
 				</TwoColumnWithImage>
 
-				<ButtonBanner contents={content.steps.buttonBanner} />
-				<AboveTitleWithoutIconCard contents={assistanceWithClicks} />
+				<ButtonBanner contents={content.steps.buttonBanner} isBorder/>
+				<AboveTitleWithoutIconCard contents={assistanceWithClicks} isBorder />
 			</div>
 
 			<div id="tools" data-section="tools">
@@ -256,7 +256,7 @@
 						</div>
 					{:else if index == 3}
 						<div id="steps" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithImage contents={content.steps.contents}>
+							<TwoColumnWithImage contents={content.steps.contents} isBorder>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="list-disc space-y-4">
 										{#each content.steps.list as item}
@@ -273,7 +273,7 @@
 							</TwoColumnWithImage>
 
 							<div class="w-full">
-								<ButtonBanner contents={content.steps.buttonBanner} />
+								<ButtonBanner contents={content.steps.buttonBanner} isBorder/>
 							</div>
 
 							<AboveTitleWithoutIconCard contents={assistanceWithClicks} />
@@ -288,7 +288,7 @@
 		</div>
 
 		<!-- message us -->
-		<TwoColumnWithImage contents={content.messageUs.contents}>
+		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
 			<p>{content.messageUs.para}</p>
 			<div class="w-auto">
 				<Button

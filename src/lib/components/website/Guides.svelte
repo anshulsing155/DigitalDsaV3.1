@@ -15,15 +15,18 @@
 			linkUrl?: string;
 		};
 		paddingClass?: string;
+		isBorder?: boolean;
 	};
-	let { guide = {}, paddingClass = 'px-[0.5rem] lg:px-16' }: Props = $props();
+	let { guide = {}, paddingClass = 'px-[0.5rem] lg:px-16', isBorder = false }: Props = $props();
 </script>
 
 <section
-	class="border-b border-[var(--form-border)] pt-[4rem] pb-[4rem] lg:pb-[8rem] "
+	class="pt-[4rem] pb-[4rem] lg:pb-[8rem] {isBorder ? 'border-b border-[var(--form-border)]' : ''}"
 >
 	<div class={`grid gap-4 md:gap-[2rem] lg:grid-cols-7 lg:gap-4 ${paddingClass}`}>
-		<div class="typography-h2-md text-[var(--form-text)]  justify-self-start  md:text-start lg:col-span-3">
+		<div
+			class="typography-h2-md justify-self-start text-[var(--form-text)] md:text-start lg:col-span-3"
+		>
 			{@html guide.heading}
 		</div>
 		<div class="grid gap-[2rem] lg:col-span-4">

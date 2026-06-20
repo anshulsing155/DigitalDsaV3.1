@@ -152,31 +152,20 @@
 			<StickyNavbar navList={content.navList} {activeSection} />
 			<div class="">
 				<section id="started" data-section="started" class="section">
-					<Journey journey={content.journey} />
+					<Journey journey={content.journey} isBorder />
 				</section>
 
-				<section
-					id="choose"
-					data-section="choose"
-					class="section border-b border-[var(--form-border)]"
-				>
-					<WhyChoose facilities={content.facilities} gridCol={3} />
+				<section id="choose" data-section="choose" class="section">
+					<WhyChoose facilities={content.facilities} gridCol={3} isBorder />
 				</section>
 
-				<section
-					id="loanOptions"
-					data-section="loanOptions"
-					class="section border-b border-[var(--form-border)]"
-				>
-					<WhyChoose facilities={content.homeLoanOptions} gridCol={3} />
+				<section id="loanOptions" data-section="loanOptions" class="section">
+					<WhyChoose facilities={content.homeLoanOptions} gridCol={3} isBorder />
 				</section>
 
-				<section
-					id="whatDocs"
-					data-section="whatDocs"
-					class="section border-b border-[var(--form-border)]"
-				>
+				<section id="whatDocs" data-section="whatDocs" class="section">
 					<TwoColumnWithImage
+						isBorder
 						contents={{
 							cardImage: cardImg1,
 							cardAltName: cardAlt1,
@@ -210,7 +199,7 @@
 						</div>
 					</TwoColumnWithImage>
 
-					<Guides guide={content.guide} />
+					<Guides guide={content.guide} isBorder/>
 				</section>
 
 				<section
@@ -276,7 +265,7 @@
 					{/each}
 				</section>
 
-				<section id="fees" data-section="fees" class="section px-[0.5rem] py-[4rem] lg:px-16">
+				<section id="fees" data-section="fees" class="section px-[0.5rem] py-[4rem] lg:px-16 border-b border-[var(--form-border)]">
 					<div class="grid grid-cols-3 gap-[2rem]">
 						<h2 class="typography-h2-md col-span-3 mt-4 text-[var(--form-text)] lg:col-span-1">
 							{content.rates.heading}
@@ -315,7 +304,7 @@
 
 				<section id="support" data-section="support" class="section">
 					<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
-					<Guides guide={content.getStart} />
+					<Guides guide={content.getStart} isBorder/>
 				</section>
 			</div>
 		</div>
@@ -367,7 +356,7 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 							id="whatDocs"
 						>
-							<TwoColumnWithImage
+							<TwoColumnWithImage isBorder
 								contents={{
 									cardImage: cardImg1,
 									cardAltName: cardAlt1,
@@ -508,7 +497,7 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
-							<Guides guide={content.getStart} />
+							<Guides guide={content.getStart} isBorder/>
 						</div>
 					{/if}
 				</details>
@@ -516,7 +505,7 @@
 		</div>
 
 		<!-- message us -->
-		<TwoColumnWithImage contents={content.messageUs.contents}>
+		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
 			<p class="typography-body-md text-[var(--form-text-secondary)]">{content.messageUs.para}</p>
 			<div class="w-auto">
 				<Button

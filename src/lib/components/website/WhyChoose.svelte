@@ -1,16 +1,24 @@
 <script lang="ts">
-type Props = {
-    facilities?: any;
-    gridCol?: number;
-    paddingClass?: string;
-  };
-	let { facilities = {}, gridCol = 3, paddingClass = 'px-[0.5rem] lg:px-16' }: Props = $props();
+	type Props = {
+		facilities?: any;
+		gridCol?: number;
+		paddingClass?: string;
+		isBorder?: boolean;
+	};
+	let {
+		facilities = {},
+		gridCol = 3,
+		paddingClass = 'px-[0.5rem] lg:px-16',
+		isBorder = false
+	}: Props = $props();
 
 	import Button from './Button.svelte';
 </script>
 
 <section
-	class="py-[4rem] text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+	class="py-[4rem] text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+		? 'border-b border-[var(--form-border)]'
+		: ''}"
 >
 	<div class={`grid gap-[2rem] ${paddingClass}`}>
 		<div class="space-y-5">

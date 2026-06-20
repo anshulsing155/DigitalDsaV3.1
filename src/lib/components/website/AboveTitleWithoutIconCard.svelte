@@ -1,11 +1,18 @@
 <script>
-	let { contents = {}, children = undefined, paddingClass = 'px-[0.5rem] lg:px-16' } = $props();
+	let {
+		contents = {},
+		children = undefined,
+		paddingClass = 'px-[0.5rem], isBorder = false lg:px-16',
+		isBorder = false
+	} = $props();
 
 	import CardWithoutIcon from './CardWithoutIcon.svelte';
 </script>
 
 <section
-	class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] last:border-b-0 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+	class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+		? 'border-b border-[var(--form-border)]'
+		: ''}"
 >
 	<div class={`flex w-full flex-col gap-[2rem] ${paddingClass}`}>
 		<div class="flex flex-col gap-2">
