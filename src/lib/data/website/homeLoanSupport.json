@@ -10,18 +10,18 @@
 		"coverImage": "/images/bridgingFinance-cover.jpg",
 		"coverAlt": "hero-cover",
 		"classStyle": "object-cover xl:h-[60svh] 3xl:max-h-[60svh]",
-		"heading": "Make Your Home Loan Journey Simple",
-		"para": "Need guidance on your home loan? Our expert team is here to assist with loan approvals, refinancing, balance transfers, and legal queries. Get personalized support and make informed decisions with ease.",
+		"heading": "Home Loan Solutions for DSAs:<br>Find the Right Lender for Every Client",
+		"para": "Help your clients secure the right home loan with confidence. DigitalDSA enables you to compare lender policies, evaluate eligibility, identify balance transfer opportunities, and streamline documentation requirements. Improve approval rates, reduce processing delays, and grow your loan business with access to multiple banks and NBFCs.",
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -53,89 +53,89 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
 	},
 	"types": {
 		"contents": {
-			"heading": "Types of Home Loans",
+			"heading": "Home Loan Products Every DSA Should Know",
 			"list": [
 				{
-					"heading": "Home Purchase Loan",
-					"desc": "Ideal for buying a new or resale property, subject to income verification, credit assessment, and property valuation."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Purchase Loan</span>",
+					"desc": "Suitable for clients purchasing a new or resale property. Compare lender eligibility criteria, approved projects, and repayment options to identify the best fit."
 				},
 				{
-					"heading": "Home Construction Loan",
-					"desc": "Designed for individuals constructing a house on their own land, with disbursement in phases as the construction progresses."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Construction Loan</span>",
+					"desc": "Designed for customers building a house on their own plot. Lenders typically disburse funds in stages based on construction progress."
 				},
 				{
-					"heading": "Home Renovation Loan",
-					"desc": "Funds home improvements, repairs, and remodeling projects."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Renovation Loan</span>",
+					"desc": "Helps existing homeowners finance repairs, upgrades, remodeling, or property improvements without taking a personal loan."
 				},
 				{
-					"heading": "Home Loan Balance Transfer",
-					"desc": "Allows you to switch your existing loan to another lender for lower interest rates and better repayment terms."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Loan Balance Transfer</span>",
+					"desc": "An opportunity to help existing borrowers move their loan to a lender offering lower interest rates, better terms, or additional funding options."
 				},
 				{
-					"heading": "Top-Up Home Loan",
-					"desc": "Provides extra funds over your existing home loan for personal needs or property enhancements."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Top-Up Home Loan</span>",
+					"desc": "Allows eligible borrowers to access additional funds over their existing home loan, creating repeat business opportunities and higher earning potential for DSAs."
 				}
 			]
 		}
 	},
 	"why": {
 		"contents": {
-			"heading": "Why Choose Us?",
+			"heading": "Why DSAs Choose DigitalDSA",
 			"xlGridCol": 3,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "Best Loan Deals from Multiple Lenders ",
-					"para": "Compare interest rates, loan terms, and repayment options from top banks and NBFCs to secure the most affordable home loan.",
-					"linkName": "Check your affordability",
+					"heading": "Access Multiple Lenders from One Platform",
+					"para": "Compare interest rates, eligibility criteria, loan programs, and approval requirements across leading banks and NBFCs to identify the most suitable lender for every client.",
+					"linkName": "Check client eligibility",
 					"url": "/calculators/affordability-calculator"
 				},
 				{
-					"heading": "Seamless & Hassle-Free Process",
-					"para": "From application to approval, we simplify the process with minimal paperwork, quick verification, and expert support at every step."
+					"heading": "Faster File Processing & Better Conversions",
+					"para": "Reduce time spent on lender research and paperwork. Streamline loan sourcing, documentation, and lender selection to improve approval rates and client satisfaction."
 				},
 				{
-					"heading": "100% Transparency & Trust",
-					"para": "No hidden fees, no spam calls—just honest guidance and clear loan terms to help you make the right financial decision."
+					"heading": "Transparent Guidance & Expert Support",
+					"para": "Get access to lender insights, eligibility guidance, and expert assistance for complex cases without hidden charges or misleading recommendations."
 				}
 			]
 		}
 	},
 	"challenges": {
 		"contents": {
-			"heading": "Challenges",
+			"heading": "Common Home Loan Challenges for DSAs",
 			"list": [
 				{
-					"heading": "Title & Ownership Concerns",
-					"desc": "Verify the property's legal history and ensure there are no disputes over ownership."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Lender Eligibility Mismatch</span>",
+					"desc": "Different banks and NBFCs have varying eligibility criteria. Submitting a file to the wrong lender can result in unnecessary rejections and delays."
 				},
 				{
-					"heading": "Outstanding Liabilities",
-					"desc": "Conduct an encumbrance check to confirm there are no unpaid dues, mortgages, or legal claims on the property."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Incomplete Documentation</span>",
+					"desc": "Missing income proofs, property papers, or KYC documents can slow down processing and impact approval chances."
 				},
 				{
-					"heading": "Hidden Expenses",
-					"desc": " Factor in additional costs like registration fees, property taxes, and maintenance charges to avoid budget surprises."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Property Approval Issues</span>",
+					"desc": "Some lenders may not approve certain projects, builders, or property categories, making lender selection critical."
 				},
 				{
-					"heading": "Project Delays",
-					"desc": "Developers may face financial or legal setbacks, causing possession delays. Always check RERA registration before investing."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Customer Affordability Constraints</span>",
+					"desc": "Existing loan obligations, low income eligibility, or high FOIR ratios can restrict the loan amount available to the customer."
 				},
 				{
-					"heading": "Loan Approval Challenges",
-					"desc": "Highlight your convenience factor, like document collection and processing from home."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Finding the Right Lender</span>",
+					"desc": "Comparing lender policies, interest rates, and approval requirements manually can be time-consuming and reduce conversion opportunities."
 				}
 			]
 		}
@@ -143,58 +143,58 @@
 	"steps": {
 		"contents": {
 			"cardImage": "/images/employees.jpg",
-			"cardAltName": "employees-figure",
-			"cardHeading": "Essential Steps Before Buying a Home"
+			"cardAltName": "loan dsa processing home loan applications",
+			"cardHeading": "Essential Steps for Successfully Processing Home Loan Files"
 		},
 		"list": [
 			{
-				"bold": "Verify Legal Ownership:",
-				"text": " Check government records to confirm the seller’s ownership."
+				"bold": "Assess Client Requirements:",
+				"text": " Understand the customer's loan purpose, income profile, property details, and funding requirements."
 			},
 			{
-				"bold": " Review Important Documents:",
-				"text": " Examine sale agreements, approvals, and historical records before proceeding."
+				"bold": "Evaluate Eligibility:",
+				"text": " Review income, credit profile, existing obligations, and repayment capacity before approaching lenders."
 			},
 			{
-				"bold": "Check Regulatory Clearances:",
-				"text": " Ensure compliance with zoning laws, environmental regulations, and land use approvals."
+				"bold": "Collect & Verify Documents:",
+				"text": " Ensure KYC, income proofs, property documents, and supporting records are complete and accurate."
 			},
 			{
-				"bold": "Work with Verified Builders & Brokers:",
-				"text": " Choose trusted real estate agents and developers to avoid fraudulent deals."
+				"bold": "Match the Client with the Right Lender:",
+				"text": " Compare lender eligibility criteria, interest rates, loan programs, and approval requirements to improve approval chances."
 			},
 			{
-				"bold": "Loan Approval Challenges:",
-				"text": " Highlight your convenience factor, like document collection and processing from home."
+				"bold": "Track Application & Approval Progress:",
+				"text": " Coordinate with lenders, monitor processing status, and assist clients until final sanction and disbursement."
 			}
 		],
 		"buttonBanner": {
-			"heading": "Smart loan planning",
-			"btnName": "Get Started",
+			"heading": "Find the Right Home Loan Solution for Your Client",
+			"btnName": "Explore Lenders",
 			"btnClass": "btn-secondary text-[var(--form-text)]",
 			"btnLink": "/get-started/how-can-we-help"
 		},
 		"assistance": {
-			"heading": "Financial Assistance for Your Home Loan",
+			"heading": "Additional Solutions for Your Clients",
 			"xlGridCol": 3,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "Need Help with the Down Payment?",
-					"para": "We connect you with financing options to ease your initial payment burden.​​",
-					"linkName": "Get Down Payment Support",
+					"heading": "Need Help with Down Payment Funding?",
+					"para": "Explore funding solutions for customers facing challenges in arranging the initial contribution required for property purchase.",
+					"linkName": "Explore Funding Options",
 					"url": "/arrange-down-payment"
 				},
 				{
-					"heading": "Struggling with EMI Payments?",
-					"para": "Our customized repayment plans help you manage EMIs smoothly.",
-					"linkName": "Explore Repayment Plans",
+					"heading": "High EMI Burden?",
+					"para": "Identify repayment restructuring, balance transfer opportunities, or tenure optimization options to improve affordability.",
+					"linkName": "Explore Repayment Solutions",
 					"url": "/planners/flexible-emi-planner"
 				},
 				{
-					"heading": "Looking for Additional Funding for Home Improvements?",
-					"para": "Get access to quick approvals and minimal paperwork for renovation or expansion loans.",
-					"linkName": "Apply for Additional Funding ",
+					"heading": "Need Additional Funding?",
+					"para": "Help eligible homeowners access renovation loans, top-up loans, or other financing solutions for property improvements and expansion.",
+					"linkName": "Explore Additional Funding",
 					"url": "/get-started/how-can-we-help"
 				}
 			]
@@ -202,30 +202,30 @@
 	},
 	"tools": {
 		"contents": {
-			"heading": "Smart Home Loan & Savings Tools",
+			"heading": "Home Loan Tools for DSAs",
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "How much can I borrow?",
+					"heading": "Check Client Eligibility",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icon-calc",
 					"url": "/calculators/eligibility-calculator"
 				},
 				{
-					"heading": "Part payment planner",
+					"heading": "Estimate EMI Impact",
 					"icon": "/icons/lap.svg",
 					"iconAltName": "loan-icon",
 					"url": "/planners/part-payment-planner"
 				},
 				{
-					"heading": "Stamp duty calculator",
+					"heading": "Calculate Property Costs",
 					"icon": "/icons/apply.svg",
 					"iconAltName": "icons-apply",
 					"url": "/calculators/stamp-duty-calculator"
 				},
 				{
-					"heading": "Balance transfer calculator",
+					"heading": "Compare Balance Transfer Benefits",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icons-calc",
 					"url": "/calculators/balance-transfer-calculator"
@@ -237,63 +237,61 @@
 		"contents": {
 			"cardImage": "/images/message.jpg",
 			"cardAltName": "CardCover",
-			"cardHeading": "Message us 24/7",
+			"cardHeading": "Why Wait? Let Us Help You Own Your Dream Home!",
 			"sourceName": "DigitalDSA",
 			"originalSource": "www.digitaldsa.com"
 		},
-		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"para": "At Digital DSA, we’re committed to making the loan process easier for self-employed individuals and business owners from all walks of life.",
 		"button": {
 			"link": "/contact",
-			"btnClass": "btn-secondary text-[var(--form-text)]",
-			"btnName": "Message us"
+			"btnClass": "btn-secondary",
+			"btnName": "Contact us today"
 		}
 	},
 	"common_components": {
 		"helpList": {
-			"contents": {
-				"heading": "We're here to help",
-				"xlGridCol": 4,
-				"borderBottom": true,
-				"cards": [
-					{
-						"heading": "Book an </br> appointment",
-						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
-						"icon": "/icons/appointment.svg",
-						"altName": "appointment Icon",
-						"url": "/appointment"
-					},
-					{
-						"heading": "Check loan offers",
-						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
-						"icon": "/icons/manageLoan2.svg",
-						"altName": "Alert Icon",
-						"url": "/get-started/how-can-we-help"
-					},
-					{
-						"heading": "Contact us",
-						"para": "Fast-track your call and connect with a specialist in the Digital DSA.",
-						"icon": "/icons/contact.svg",
-						"altName": "Alert Icon",
-						"url": "/contact"
-					},
-					{
-						"heading": "Message us",
-						"para": "Get instant help from our online assistants  or chat to a specialist.",
-						"icon": "/icons/msg.svg",
-						"altName": "Alert Icon",
-						"url": "/contact"
-					}
-				]
-			}
+			"heading": "We're here to help",
+			"xlGridCol": 4,
+			"borderBottom": true,
+			"cards": [
+				{
+					"heading": "Discuss a </br> customer case",
+					"para": "Book time with a lending specialist to discuss balance transfer opportunities, customer eligibility, and lender options.",
+					"icon": "/icons/appointment.svg",
+					"altName": "appointment Icon",
+					"url": "/appointment"
+				},
+				{
+					"heading": "Compare lender offers",
+					"para": "Evaluate balance transfer programs from multiple banks and NBFCs based on your customer's profile.",
+					"icon": "/icons/manageLoan2.svg",
+					"altName": "Alert Icon",
+					"url": "/get-started/how-can-we-help"
+				},
+				{
+					"heading": "Contact our team",
+					"para": "Connect directly with DigitalDSA specialists for support on documentation, eligibility, and lender selection.",
+					"icon": "/icons/contact.svg",
+					"altName": "Alert Icon",
+					"url": "/contact"
+				},
+				{
+					"heading": "Message us",
+					"para": "Get assistance with balance transfer cases, top-up opportunities, and customer-specific scenarios.",
+					"icon": "/icons/msg.svg",
+					"altName": "Alert Icon",
+					"url": "/contact"
+				}
+			]
 		},
 		"thinkYouShouldKnow": {
 			"thinkKnow": {
 				"heading": "Things you should know",
 				"paraGraph": [
-					"<span class=\"font-semibold\">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
-					"<span class=\"font-semibold\">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
-					"<span class=\"font-semibold\">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.",
-					"<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions."
+					"<span class=\"font-semibold\">Independent Facilitator:</span> Digital DSA serves as an independent loan facilitator, helping business owners connect with licensed banks and NBFCs for home loan solutions. We do not provide loans directly and are not a financial institution.",
+					"<span class=\"font-semibold\">Loan Approval:</span> Home loan approval for business owners depends entirely on the respective bank or NBFC's assessment of financial stability, income consistency, and creditworthiness. Digital DSA does not guarantee approval, as decisions are based on the lender’s policies, terms, and conditions. Interest rates, repayment options, and processing fees may vary accordingly.",
+					"<span class=\"font-semibold\">Liability:</span> Digital DSA is not responsible for any delays, rejections, or financial losses encountered during the loan application process. The final approval decision rests with the bank or NBFC, and their terms will apply.",
+					"<span class=\"font-semibold\">Important Information:</span> The details shared on this page are for informational purposes only and may not be suitable for every business owner. Home loan eligibility and benefits depend on various factors, including income stability, business history, and lender requirements. Exclusive loan offers may be available through Digital DSA, subject to specific eligibility criteria."
 				]
 			},
 			"disc": "list-decimal"

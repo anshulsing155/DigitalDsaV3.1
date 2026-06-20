@@ -15,8 +15,8 @@
 	import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
 	import FeedbackCheck from './FeedbackCheck.svelte';
 	import content from '$lib/data/website/homeTopUp.json';
-		import { ChevronDown } from '$lib/utils/iconRegistry';
-		import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 
 	interface ButtonProps {
 		btnName: string;
@@ -81,8 +81,6 @@
 			return btn;
 		})
 	});
-
-
 
 	let activeSection = $state('');
 
@@ -281,13 +279,12 @@
 		<div class="block lg:hidden">
 			{#each content.mobileNavbarTitle as list, index (list)}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
-					4
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < 4
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -307,18 +304,14 @@
 							<AboveTitleWithTopIconCard contents={content.started.eligibility} />
 						</div>
 					{:else if index == 1}
-						<div
-							id="fee"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<TwoColumnWithLeftHeading contents={content.fee.tenure} />
+						<div id="fee" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+							<div class="border-b border-[var(--form-border)]">
+								<TwoColumnWithLeftHeading contents={content.fee.tenure} />
+							</div>
 							<TwoColumnWithLeftHeading contents={content.fee.rates} />
 						</div>
 					{:else if index == 2}
-						<div
-							id="step"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="step" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithImage contents={content.step.guide}>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="space-y-6">
@@ -348,10 +341,7 @@
 							<ThreeColumWithLeftHeading contents={content.step.prosCons} />
 						</div>
 					{:else if index == 3}
-						<div
-							id="help"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="help" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithImage contents={content.help.contents}>
 								<div>
 									<ul class="space-y-4">
@@ -380,10 +370,7 @@
 							</TwoColumnWithImage>
 						</div>
 					{:else if index == 4}
-						<div
-							id="tool"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="tool" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.tool.threeColumn} />
 							<AboveTitleWithBlackCard contents={content.tool.blackCard} />
 							<AboveTitleWithTopIconCard contents={content.tool.topIconCard} />
