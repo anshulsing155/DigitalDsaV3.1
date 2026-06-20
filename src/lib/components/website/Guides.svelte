@@ -20,10 +20,10 @@
 </script>
 
 <section
-	class="grid gap-4 border-b border-[var(--form-border)] pt-[4rem] pb-[4rem] md:gap-[2rem] lg:grid-cols-7 lg:gap-4 lg:pb-[8rem]"
+	class="border-b border-[var(--form-border)] pt-[4rem] pb-[4rem] lg:pb-[8rem] "
 >
 	<div class={`grid gap-4 md:gap-[2rem] lg:grid-cols-7 lg:gap-4 ${paddingClass}`}>
-		<div class="typography-h2-md lg:typography-h2 grid font-semibold md:text-start lg:col-span-3">
+		<div class="typography-h2-md text-[var(--form-text)]  justify-self-start  md:text-start lg:col-span-3">
 			{@html guide.heading}
 		</div>
 		<div class="grid gap-[2rem] lg:col-span-4">

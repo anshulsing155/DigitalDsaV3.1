@@ -42,8 +42,8 @@
 
 <section
 	class="w-full {sectionBorder
-		? 'border-b border-[var(--form-border)]  pb-[4rem] lg:pb-[8rem]'
-		: 'border-b-0 lg:pb-0'} bg-[var(--landing-bg)] px-[0.5rem] py-16 lg:py-0 lg:pt-16 {containerClass}"
+		? 'border-b border-[var(--form-border)] '
+		: 'border-b-0'} bg-[var(--landing-bg)] px-[0.5rem] py-16 pb-[4rem] lg:py-0 lg:pt-16 lg:pb-[8rem] {containerClass}"
 >
 	<div class="grid gap-4 lg:grid-cols-12 lg:gap-8">
 		{#if thinkKnow.heading}

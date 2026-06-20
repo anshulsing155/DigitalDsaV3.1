@@ -63,10 +63,10 @@
 
 		<div class="hidden lg:block lg:px-[4rem]">
 			<div data-section="FinancialServicesGuides" id="FinancialServicesGuides">
-				<Guides guide={content.serviceGuide} />
+				<Guides guide={content.serviceGuide} paddingClass="px-0"/>
 			</div>
 			<div data-section="ProductDisclosureStatements" id="ProductDisclosureStatements">
-				<Guides guide={content.disclosure} />
+				<Guides guide={content.disclosure} paddingClass="px-0" />
 			</div>
 			<div
 				data-section="Productcategories"
