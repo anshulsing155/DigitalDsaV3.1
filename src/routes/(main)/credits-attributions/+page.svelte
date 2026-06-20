@@ -12,6 +12,7 @@
 	import content from '$lib/data/website/creditsAttributions.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import SectionIntro from '$lib/components/website/SectionIntro.svelte';
 
 	let activeSection = $state('');
 	let activeIndex = $state<number | null>(null);
@@ -68,19 +69,12 @@
 		<div class="hidden lg:block">
 			<StickyNavbar navList={content.stickyNavBar} {activeSection} />
 			<div class="px-[4rem]">
-				<div
-					data-section="attribution"
-					id="attribution"
-					class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 text-[var(--form-text)]"
-				>
-					<p class="typography-h3 mt-4 text-[var(--form-text)]">
-						{content.attributionText.heading}
-					</p>
-					<div class="typography-body-md grid gap-4 text-[var(--form-text-secondary)]">
-						<p>
-							{@html content.attributionText.para}
-						</p>
-					</div>
+				<div data-section="attribution" id="attribution">
+					<SectionIntro
+						heading={content.attributionText.heading}
+						para={content.attributionText.para}
+						containerClass="px-0"
+					/>
 				</div>
 
 				<div data-section="resources" id="resources" class="">
@@ -174,25 +168,17 @@
 						</div>
 					</summary>
 
-					<!-- {#if index == 0} -->
-					<!-- <div
-							transition:slide={{ duration: slideDuration, delay: 200 }}
-							class="dropdown-content"
-						> -->
 					{#if index == 0}
 						<div
+							data-section="attribution"
 							id="attribution"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pt-[4rem] pb-[4rem] text-[var(--form-text)] lg:pb-[8rem]"
+							class="bg-[var(--landing-bg)] px-[0.5rem] text-[var(--form-text)]"
 						>
-							<div class=" grid gap-4">
-								<p class="typography-h3 text-[var(--form-text)]">
-									{content.attributionText.heading}
-								</p>
-
-								<p class="typography-body-md text-[var(--form-text-secondary)]">
-									{@html content.attributionText.para}
-								</p>
-							</div>
+							<SectionIntro
+								heading={content.attributionText.heading}
+								para={content.attributionText.para}
+								containerClass="px-0"
+							/>
 						</div>
 					{:else if index == 1}
 						<div id="resources" class="bg-[var(--landing-bg)] px-[0.5rem] text-[var(--form-text)]">
@@ -265,8 +251,6 @@
 							<TwoColumnWithLeftHeading contents={content.compliance} />
 						</div>
 					{/if}
-					<!-- </div> -->
-					<!-- {/if} -->
 				</details>
 			{/each}
 		</div>
@@ -280,15 +264,8 @@
 			</div>
 		</TwoColumnWithImage>
 
-		<div slot="secondary" class="">
+		{#snippet secondary()}
 			<HelpList contents={content.help} />
-		</div>
+		{/snippet}
 	</SecondPageLayout>
 </section>
-
-<style>
-	.dropdown-content {
-		overflow: hidden;
-		transition: height 0.4s ease-in-out;
-	}
-</style>

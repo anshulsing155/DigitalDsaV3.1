@@ -1,9 +1,9 @@
 <script>
-	let { pageData = {} } = $props();
-
 	import { page } from '$app/state';
 	import TestBreadCrumb from './TestBreadCrumb.svelte';
 	import Tooltip from './Tooltip.svelte';
+
+	let { pageData = {}, secondary, children } = $props();
 
 	let shouldShowBreadcrumbs = $derived(
 		(() => {
@@ -13,7 +13,9 @@
 	);
 </script>
 
-<section class="w-full bg-[var(--landing-bg)] text-[var(--form-text)]  border border-[var(--landing-glass-border)]">
+<section
+	class="w-full border border-[var(--landing-glass-border)] bg-[var(--landing-bg)] text-[var(--form-text)]"
+>
 	<div id="parentDiv" class="relative mx-1 lg:mx-auto">
 		{#if shouldShowBreadcrumbs}
 			<div class="hidden py-4 pl-[4rem] lg:flex">
@@ -25,7 +27,7 @@
 			<img
 				src={pageData.coverImage}
 				alt={pageData.coverAlt}
-				class="border-[var(--form-border)] h-[30svh] w-full border-b-[1.5rem] object-cover object-top md:h-[50svh] lg:h-[70svh]"
+				class="h-[30svh] w-full border-b-[1.5rem] border-[var(--form-border)] object-cover object-top md:h-[50svh] lg:h-[70svh]"
 			/>
 			<div class="bg-opacity-50 absolute top-0 right-0 text-center text-white">
 				<Tooltip
@@ -53,15 +55,22 @@
 					{/if}
 				</div>
 			</div>
-			<div class="right-0 mx-auto h-full bg-[var(--landing-bg)] text-[var(--form-text)] border border-[var(--landing-glass-border)]">
-				<!-- svelte-ignore slot_element_deprecated -->
-				<slot />
+			<div
+				class="right-0 mx-auto h-full border border-[var(--landing-glass-border)] bg-[var(--landing-bg)] text-[var(--form-text)]"
+			>
+				{#if children}
+					{@render children()}
+				{/if}
 			</div>
 		</div>
 
 		<div class="relative -top-[3rem] md:-top-[5rem] lg:-top-[13rem] lg:p-[4rem]">
 			<!-- svelte-ignore slot_element_deprecated -->
-			<slot name="secondary" />
+			<!-- <slot name="secondary" /> -->
+
+			{#if secondary}
+				{@render secondary()}
+			{/if}
 		</div>
 	</div>
 </section>
