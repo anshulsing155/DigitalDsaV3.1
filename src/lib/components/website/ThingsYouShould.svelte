@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Button from './Button.svelte';
 
+	import type { Snippet } from 'svelte';
+
 	type ThinkKnow = {
 		heading?: string;
 		subHeading?: string;
@@ -24,6 +26,7 @@
 		sectionBorder?: boolean;
 		colSpan?: number;
 		containerClass?: string;
+		list?: Snippet;
 	};
 
 	const {
@@ -32,7 +35,8 @@
 		isBorder = false,
 		sectionBorder = false,
 		colSpan = 8,
-		containerClass = 'lg:px-16'
+		containerClass = 'lg:px-16',
+		list
 	}: Props = $props();
 </script>
 
@@ -123,7 +127,9 @@
 					</a>
 				{/if}
 
-				<slot name="list" />
+				{#if list}
+					{@render list()}
+				{/if}
 			</div>
 		</div>
 	</div>

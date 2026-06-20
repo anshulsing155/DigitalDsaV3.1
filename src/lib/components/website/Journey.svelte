@@ -1,12 +1,25 @@
-<script>
-	let { colSpan = 1, colSpanDesc = 2, gridColDesc = 2, journey = {} } = $props();
+<script lang="ts">
+type Props = {
+		journey?: any;
+		colSpan?: number;
+		colSpanDesc?: number;
+		gridColDesc?: number;
+		paddingClass?: string;
+	};
+	let {
+		colSpan = 1,
+		colSpanDesc = 2,
+		gridColDesc = 2,
+		journey = {},
+		paddingClass = 'px-[0.5rem] lg:px-16'
+	}: Props = $props();
 
 	import Button from './Button.svelte';
 	import PremiumButton from './PremiumButton.svelte';
 </script>
 
-<section class="border-b border-[var(--form-border)] py-[4rem]">
-	<div class="grid gap-[2rem] lg:grid-cols-3">
+<section class="border-b border-[var(--form-border)] last:border-b-0 lg:last:border-b py-[4rem]">
+	<div class={`grid gap-[2rem] lg:grid-cols-3 ${paddingClass}`}>
 		<h2 class="col-span-3 lg:col-span-{colSpan} typography-h2-md text-[var(--form-text)]">
 			{journey.heading}
 		</h2>
@@ -15,7 +28,7 @@
 				<div
 					class="col-span-2 grid gap-[2rem] pb-[3rem] md:col-span-1 md:pb-0 {index <
 					journey.items.length - 1
-						? 'border-[var(--form-border)] border-b md:border-r md:border-b-0'
+						? 'border-b border-[var(--form-border)] md:border-r md:border-b-0'
 						: ''}"
 				>
 					<div class="flex flex-col gap-4">

@@ -3,17 +3,16 @@
 
 	type Props = {
 		contents?: any;
-		paddingX?: number;
-		mobPaddingX?: number;
+		paddingClass?: string;
 	};
 
-	const { contents = {}, paddingX = 4, mobPaddingX = 1 }: Props = $props();
+	const { contents = {}, paddingClass = 'px-[0.5rem] lg:px-16' }: Props = $props();
 </script>
 
 <section
 	class={`w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] ${contents.borderBottom ? 'border-b border-[var(--form-border)]' : ''}`}
 >
-	<div class="flex w-full flex-col gap-12">
+	<div class={`flex w-full flex-col gap-12 ${paddingClass}`}>
 		<h2 class="typography-h2-md text-[var(--form-text)]">
 			{@html contents.heading}
 		</h2>

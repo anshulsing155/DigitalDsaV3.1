@@ -11,10 +11,22 @@
 		"heroParagraph": "We use cookies to keep our website running, provide customer support, learn how people are using our website and improve our services. Here’s more about what that actually means.."
 	},
 	"subList": [
-		{ "name": "What are cookies?", "targetId": "cookies" },
-		{ "name": "First party cookies", "targetId": "firstPartyCookies" },
-		{ "name": "Third Party cookies", "targetId": "thirdPartyCookies" },
-		{ "name": "How to delete cookies", "targetId": "deleteCookies" }
+		{
+			"name": "What are cookies?",
+			"targetId": "cookies"
+		},
+		{
+			"name": "First party cookies",
+			"targetId": "firstPartyCookies"
+		},
+		{
+			"name": "Third Party cookies",
+			"targetId": "thirdPartyCookies"
+		},
+		{
+			"name": "How to delete cookies",
+			"targetId": "deleteCookies"
+		}
 	],
 	"navBarMedium": [
 		"What are cookies?",

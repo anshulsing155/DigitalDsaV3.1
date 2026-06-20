@@ -103,14 +103,14 @@
 					{#if index == 0}
 						<div
 							id="Financial Services Guides"
-							class="bg-[var(--landing-bg)] px-[0.5rem] text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<Guides guide={content.serviceGuide} />
 						</div>
 					{:else if index == 1}
 						<div
 							id="Product Disclosure Statements"
-							class="bg-[var(--landing-bg)] px-[0.5rem] text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<Guides guide={content.disclosure} />
 						</div>

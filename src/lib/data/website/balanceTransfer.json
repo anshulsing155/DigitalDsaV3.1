@@ -9,24 +9,26 @@
 	"pageData": {
 		"coverImage": "/images/young-indian-couple-planning-loan-refinance-through-DigitalDSA.jpg",
 		"coverAlt": "photo of a young indian couple planning balance transfer through DigitalDSA",
-		"heading": "Transferring your home loan: When & how to do",
+		"classStyle": "object-cover xl:h-[60svh] 3xl:max-h-[70svh]",
+		"heroHeading": "Help Customers Save More with the Right Balance Transfer Opportunity",
 		"sourceName": "Freepik",
 		"originalSource": "https://www.freepik.com/free-photo/lovely-couple-looking-laptop_5123228.htm",
-		"actionBtns": [
-			{
-				"btnName": "Book appointment",
-				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
-			},
-			{
-				"btnName": "Check lowest rates",
-				"btnLink": "/get-started/how-can-we-help",
-				"animate": true,
-				"btnClass": "btn-primary text-white dark:text-black"
-			}
-		],
-		"para": "Transferring your home loan—also called a home loan balance transfer—can be a game changer if done at the right time. It allows you to move your outstanding loan amount to another bank or lender, usually at a lower interest rate or with better terms."
+
+		"heroParagraph": "DigitalDSA helps DSAs identify customers who can benefit from a balance transfer, compare lender offers, calculate potential savings, and secure better loan terms through suitable lender matching."
 	},
+	"actionBtns": [
+		{
+			"btnName": "Book appointment",
+			"btnLink": "/appointment",
+			"btnClass": "btn-secondary"
+		},
+		{
+			"btnName": "Check lowest rates",
+			"btnLink": "/get-started/how-can-we-help",
+			"animate": true,
+			"btnClass": "btn-primary"
+		}
+	],
 	"navList": {
 		"items": [
 			{
@@ -54,58 +56,58 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-white dark:text-black",
+				"btnClass": "btn-primary",
 				"animate": true
 			}
 		]
 	},
 	"whyRefinance": {
 		"contents": {
-			"heading": "When should you consider a home loan balance transfer?",
+			"heading": "When Should a DSA Recommend a Balance Transfer?",
 			"xlGridCol": 2,
 			"borderBottom": true,
 			"list": [
 				{
-					"heading": "When interest rates drop significantly",
-					"topPara": "If your current loan has a <span class=\"font-semibold\">high interest rate</span>, and a new lender is offering a much lower rate, <span class=\"font-semibold\">switching can save you lakhs</span> over time.<br><br><span class=\"font-semibold\">💡Example:</span>",
+					"heading": "Customer Is Paying a Higher Interest Rate",
+					"topPara": "If your customer is currently servicing a home loan at a <span class=\"font-semibold\">higher interest rate</span> and another lender offers a significantly lower rate, a balance transfer can create substantial savings and improve customer satisfaction.<br><br><span class=\"font-semibold\">💡Example:</span>",
 					"desc": [
 						"<span class=\"font-semibold\">Existing loan:</span> ₹50 lakh at 9.5% interest for 20 years.",
-						"<span class=\"font-semibold\">New offer:</span> 8.35% interest.",
-						"<span class=\"font-semibold\">Savings:</span> Over ₹6 lakh in total interest!"
+						"<span class=\"font-semibold\">New lender offer:</span> 8.35% interest.",
+						"<span class=\"font-semibold\">Potential savings:</span> Over ₹6 lakh in total interest."
 					],
 					"icon": "/icons/interestIcon.svg",
 					"altName": "interest-icon"
 				},
 				{
-					"heading": "When your credit score has improved",
-					"topPara": "If your <span class=\"font-semibold\">credit score was low</span> when you took the loan, you probably got a <span class=\"font-semibold\">higher interest rate</span>. But if you’ve built a <span class=\"font-semibold\">stronger credit history</span>, you may now qualify for <span class=\"font-semibold\">better loan terms</span> elsewhere.",
-					"para": "<span class=\"font-semibold\">💡Pro Tip:</span> Check your<span class=\"font-semibold\"> CIBIL score</span> before applying. <span class=\"font-semibold\">750+ is ideal</span> for the best rates!",
+					"heading": "Customer's Credit Profile Has Improved",
+					"topPara": "Customers who originally obtained their loan with a <span class=\"font-semibold\">lower credit score</span> may now qualify for <span class=\"font-semibold\">better rates and loan terms</span> after demonstrating a strong repayment track record.",
+					"para": "<span class=\"font-semibold\">💡DSA Tip:</span> Review the customer's latest <span class=\"font-semibold\">CIBIL score</span> before evaluating balance transfer opportunities. Customers with <span class=\"font-semibold\">750+ scores</span> often qualify for more competitive lender programs.",
 					"icon": "/icons/emiIcon.svg",
 					"altName": "emi-icon"
 				},
 				{
-					"heading": "When you want better loan features​",
-					"topPara": "<span class=\"font-semibold\">A new lender might offer:</span>",
+					"heading": "Customer Wants Better Loan Features",
+					"topPara": "<span class=\"font-semibold\">A new lender may provide additional benefits such as:</span>",
 					"desc": [
-						"<span class=\"font-semibold\">Lower or zero</span> processing fees.",
-						"<span class=\"font-semibold\">Flexible prepayment</span> options without penalties.",
-						"<span class=\"font-semibold\">Overdraft facilities</span> to reduce interest burden."
+						"<span class=\"font-semibold\">Lower processing fees</span> or promotional offers.",
+						"<span class=\"font-semibold\">Flexible prepayment options</span> without penalties.",
+						"<span class=\"font-semibold\">Overdraft facilities</span> to improve cash flow management."
 					],
-					"para": "<span class=\"font-semibold\">💡Pro Tip:</span> If your current bank charges high prepayment penalties, <span class=\"font-semibold\">consider switching to one that allows free prepayments!</span>",
+					"para": "<span class=\"font-semibold\">💡DSA Tip:</span> Don't compare interest rates alone. Evaluate overall loan features, charges, and repayment flexibility before recommending a transfer.",
 					"icon": "/icons/personalLoan.svg",
 					"altName": "loan-icon"
 				},
 				{
-					"heading": "If you need additional funds for renovation or other needs​",
-					"topPara": "You can also <span class=\"font-semibold\">combine a balance transfer with a top-up loan</span> to get <span class=\"font-semibold\">extra money</span> for:<br><br>✅ Home renovation <br> ✅ Business expansion <br> ✅ Higher education<br><br><span class=\"font-semibold\">💡Example:</span>",
+					"heading": "Customer Requires Additional Funding",
+					"topPara": "Balance transfer opportunities can also be used to secure a <span class=\"font-semibold\">top-up loan</span> for additional financial requirements such as:<br><br>✅ Home renovation<br>✅ Business expansion<br>✅ Higher education<br>✅ Personal financial goals<br><br><span class=\"font-semibold\">💡Example:</span>",
 					"desc": [
-						"Outstanding loan: ₹40 lakh",
-						"New lender offers ₹45 lakh (₹5 lakh top-up) at <span class=\"font-semibold\">same or lower interest rate Smart move? Absolutely! 🚀</span>"
+						"<span class=\"font-semibold\">Outstanding loan:</span> ₹40 lakh",
+						"<span class=\"font-semibold\">New lender offer:</span> ₹45 lakh including a ₹5 lakh top-up at the same or lower interest rate."
 					],
 					"icon": "/icons/renovateHome.svg",
 					"altName": "home-icon"
@@ -115,33 +117,33 @@
 	},
 	"whenAvoid": {
 		"contents": {
-			"heading": "When Should You AVOID a Balance Transfer?",
+			"heading": "When Should a DSA Avoid Recommending a Balance Transfer?",
 			"xlGridCol": 3,
 			"borderBottom": true,
 			"list": [
 				{
-					"heading": "If You Are in the Last Few Years of Your Loan",
-					"topPara": "Most of the interest is <span class=\"font-semibold\">paid in the first few years</span> of a loan. If you’ve already <span class=\"font-semibold\">paid 70-80% of the interest</span>, switching won’t save much.",
-					"para": "<span class=\"font-semibold\">💡Better Option:</span> Instead of transferring, <span class=\"font-semibold\">make part payments</span> to close the loan faster!",
+					"heading": "Customer Is Nearing Loan Closure",
+					"topPara": "Most home loans are interest-heavy during the initial years. If the customer has already completed a significant portion of the tenure and paid most of the interest, the potential savings from a balance transfer may be limited.",
+					"para": "<span class=\"font-semibold\">💡DSA Tip:</span> Consider discussing part-prepayment strategies instead of recommending a balance transfer.",
 					"icon": "/icons/riskFactor.svg",
 					"altName": "risk-icon"
 				},
 				{
-					"heading": "If the Processing Fees & Charges Are Too High​",
-					"topPara": "Some banks <span class=\"font-semibold\">advertise lower interest rates</span> but charge:",
+					"heading": "Transfer Costs Reduce Overall Savings",
+					"topPara": "Some lenders may offer attractive interest rates but also impose additional charges such as:",
 					"desc": [
-						"<span class=\"font-semibold\">High processing fees</span> (₹10,000 - ₹50,000!)",
-						"Legal & technical verification fees",
-						"Hidden charges."
+						"<span class=\"font-semibold\">Processing fees</span>",
+						"Legal and technical verification charges",
+						"Administrative or lender-specific fees"
 					],
-					"para": "<span class=\"font-semibold\">💡What to do:</span> Always calculate the net savings before switching.",
+					"para": "<span class=\"font-semibold\">💡DSA Tip:</span> Always compare total transfer costs against projected customer savings before recommending a switch.",
 					"icon": "/icons/features.svg",
 					"altName": "emi-icon"
 				},
 				{
-					"heading": "If Your Loan Is Fixed-Rate & Prepayment Charges Are High​",
-					"topPara": "Fixed-rate home loans often have <span class=\"font-semibold\">steep penalties</span> for early closure. In such cases,<span class=\"font-semibold\">transferring may not be beneficial</span>.",
-					"para": "<span class=\"font-semibold\">💡Pro Tip:</span> Check the terms & conditions carefully before proceeding!",
+					"heading": "Existing Loan Terms Are Already Competitive",
+					"topPara": "If the customer already has a competitive interest rate, flexible repayment options, and low servicing costs, a balance transfer may not provide meaningful financial benefits.",
+					"para": "<span class=\"font-semibold\">💡DSA Tip:</span> Focus on measurable savings and improved loan features rather than interest rate differences alone.",
 					"icon": "/icons/inte.svg",
 					"altName": "interest-icon"
 				}
@@ -150,40 +152,40 @@
 	},
 	"how": {
 		"contents": {
-			"heading": "Step-by-Step Guide",
+			"heading": "Balance Transfer Workflow for DSAs",
 			"list": [
 				{
-					"heading": "<span class=\"font-semibold\">Step 1: Compare Interest Rates & Savings</span>",
-					"desc": "✔️ Check the latest home loan rates from top lenders. <br> ✔️ Use a home loan balance transfer calculator (We can help! 😎). <br> ✔️ Ensure your savings outweigh the transfer costs. "
+					"heading": "<span class=\"font-semibold\">Step 1: Review the Customer's Existing Loan</span>",
+					"desc": "✔️ Collect details of the customer's outstanding balance, current interest rate, remaining tenure, and repayment history.<br>✔️ Identify whether a balance transfer can create meaningful savings or unlock better loan features.<br>✔️ Evaluate potential top-up loan opportunities if additional funding is required."
 				},
 				{
-					"heading": "<span class=\"font-semibold\">Step 2: Get a Loan Closure Letter from Your Current Lender</span>",
-					"desc": "Request a Foreclosure letter & LOD (List of Original Documents) from your existing lender."
+					"heading": "<span class=\"font-semibold\">Step 2: Compare Lender Programs</span>",
+					"desc": "Review balance transfer offers across multiple banks and NBFCs.<br>✔️ Compare interest rates.<br>✔️ Review processing fees and other charges.<br>✔️ Check lender-specific eligibility criteria and transfer benefits."
 				},
 				{
-					"heading": "<span class=\"font-semibold\">Step 3: Apply for a New Loan With the New Lender</span>",
-					"desc": "Submit the following documents: <br> 📌 KYC (Aadhaar, PAN, etc.) <br> 📌 Income proof (Salary slips, Form-16 or ITR) <br> 📌 Property documents <br> 📌 Foreclosure Letter & LOD from current lender"
+					"heading": "<span class=\"font-semibold\">Step 3: Calculate Potential Customer Savings</span>",
+					"desc": "Use balance transfer calculators and lender offers to estimate EMI reduction, interest savings, and overall financial benefit after considering transfer-related costs."
 				},
 				{
-					"heading": "<span class=\"font-semibold\">Step 4: Approval & Loan Disbursement</span>",
-					"desc": "✔️ Once approved, your new lender pays off the old loan directly. <br> ✔️ Your new loan starts with the new bank at a lower rate."
+					"heading": "<span class=\"font-semibold\">Step 4: Collect Documents & Submit the Application</span>",
+					"desc": "Gather the required documents including:<br>📌 KYC documents (PAN, Aadhaar, etc.)<br>📌 Income proof (Salary slips, Form 16, ITR, etc.)<br>📌 Property documents<br>📌 Foreclosure letter and loan account details from the existing lender."
 				},
 				{
-					"heading": "<span class=\"font-semibold\">Step 5: Start Paying Your New EMI & Enjoy Savings</span>",
-					"desc": "You’ll now pay lower EMIs or close the loan faster!"
+					"heading": "<span class=\"font-semibold\">Step 5: Track Approval & Disbursement</span>",
+					"desc": "Once approved, the new lender settles the existing loan and activates the new facility. Continue tracking the case until successful closure and customer onboarding."
 				}
 			]
 		},
-		"tableHeading": "How Much Can You Save? Let's See With an Example!",
+		"tableHeading": "Estimate Customer Savings Before Recommending a Balance Transfer",
 		"exampleTableData": [
 			{
 				"columnName": [
 					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'><img class='h-5' src='/icons/features.svg' alt='gear icon'> Loan Amount </div>",
-					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'><img class='h-5' src='/icons/plotLoans.svg' alt='plot icon'> Old Rate </div>",
+					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'><img class='h-5' src='/icons/plotLoans.svg' alt='plot icon'> Existing Rate </div>",
 					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'> <img class='h-5' src='/icons/inte.svg' alt='home icon'> New Rate </div>",
-					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'><img class='h-5' src='/icons/personalLoan.svg' alt='gear icon'> EMI Before </div>",
-					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'><img class='h-5' src='/icons/support.svg' alt='plot icon'> EMI After </div>",
-					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'> <img class='h-5' src='/icons/accessEnergy.svg' alt='home icon'> Total Savings (20 years) </div>"
+					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'><img class='h-5' src='/icons/personalLoan.svg' alt='gear icon'> Current EMI </div>",
+					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'><img class='h-5' src='/icons/support.svg' alt='plot icon'> Revised EMI </div>",
+					"<div class='flex lg:flex-row flex-col gap-2 lg:items-center items-start'> <img class='h-5' src='/icons/accessEnergy.svg' alt='home icon'> Potential Savings </div>"
 				],
 				"rowData": [
 					{
@@ -208,10 +210,10 @@
 			}
 		],
 		"buttonBanner": {
-			"heading": "Ways to pay off your home loan faster",
-			"para": "Small changes now can mean big differences later to how much of your home loan you end up repaying.",
-			"btnName": "Find out how",
-			"btnClass": "btn-secondary text-[var(--form-text)]",
+			"heading": "Help Customers Reduce Their Home Loan Costs",
+			"para": "The right balance transfer strategy can reduce EMIs, lower interest costs, and create long-term savings opportunities for your customers.",
+			"btnName": "Explore Repayment Strategies",
+			"btnClass": "btn-secondary",
 			"btnLink": "/planners/part-payment-planner"
 		}
 	},
@@ -219,77 +221,77 @@
 		"contents": {
 			"cardImage": "/images/DigitalDSA-executive-explains-loan-offers-on-video-call.jpg",
 			"cardAltName": "photo of an executive of DigitalDSA explaining loan offers on video call.jpg",
-			"cardHeading": "How we Help"
+			"cardHeading": "How DigitalDSA Helps DSAs"
 		},
 		"list": [
 			{
-				"bold": "Compare the best balance transfer offers.",
-				"text": " Help users choose the best interest rate and tenure."
+				"bold": "Compare multiple balance transfer offers.",
+				"text": " Identify lenders offering competitive rates, better loan features, and stronger approval opportunities."
 			},
 			{
-				"bold": "Calculate actual savings",
-				"text": " after all costs."
+				"bold": "Calculate actual customer savings.",
+				"text": " Evaluate potential EMI reduction and interest savings after considering all transfer-related costs."
 			},
 			{
-				"bold": "Guide you through the process step by step.",
-				"text": ""
+				"bold": "Support complex balance transfer cases.",
+				"text": " Get expert assistance for customers with unique profiles, special requirements, or challenging loan scenarios."
 			},
 			{
-				"bold": "Negotiate with lenders for better deals!",
-				"text": ""
+				"bold": "Identify top-up loan opportunities.",
+				"text": " Help customers access additional funds for renovation, business expansion, education, or other financial needs."
 			},
 			{
-				"bold": "Doorstep Services:",
-				"text": " Highlight your convenience factor, like document collection and processing from home."
+				"bold": "Simplify the balance transfer process.",
+				"text": " From lender selection and documentation guidance to approval tracking and disbursement support."
 			}
 		]
 	},
 	"tools": {
 		"threeColumn": {
-			"heading": "Take the First Step Towards Your Dream Home",
+			"heading": "Start Closing More Balance Transfer Opportunities",
 			"cardData": [
 				{
-					"title": "Secure best balance transfer offers",
-					"para": "Get the best balance transfer deals with lower interest rates and reduced EMIs. Secure your financial future by switching to a better loan option.",
-					"btnName": "Compare bank offers",
+					"title": "Compare Balance Transfer Offers Across Lenders",
+					"para": "Identify suitable balance transfer programs, compare lender offerings, and find opportunities that can help customers save more while improving approval chances.",
+					"btnName": "Compare Bank Offers",
 					"btnLink": "/get-started/how-can-we-help",
-					"btnClass": "btn-primary text-white dark:text-black",
+					"btnClass": "btn-primary",
 					"needLoanName": true
 				},
 				{
-					"title": "Get the best home loan deal",
-					"para": "Get the most from your home loan application process and book time with our Home Lending Specialist at a time that suits you.",
-					"btnName": "Book an appointment",
+					"title": "Discuss a Customer Case with an Expert",
+					"para": "Get guidance on complex balance transfer scenarios, top-up opportunities, lender policies, and customer eligibility before submitting the application.",
+					"btnName": "Book an Appointment",
 					"btnLink": "/appointment",
-					"btnClass": "btn-secondary text-[var(--form-text)]"
+					"btnClass": "btn-secondary"
 				}
 			]
 		},
 		"blackCard": {
-			"heading": "Home loan calculator",
+			"heading": "Balance Transfer Tools & Calculators",
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "Check offers from other banks",
+					"heading": "Compare Balance Transfer Offers",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icon-calc",
 					"url": "/calculators/balance-transfer-calculator"
 				},
 				{
-					"heading": " How much can I borrow?",
+					"heading": "Check Customer Eligibility",
 					"icon": "/icons/apply.svg",
 					"iconAltName": "icons-apply",
 					"url": "/calculators/eligibility-calculator"
 				},
 				{
-					"heading": " Home loan repayments calculator",
+					"heading": "Calculate EMI & Savings",
 					"icon": "/icons/lap.svg",
 					"iconAltName": "loan-icon",
 					"url": "/planners/part-payment-planner"
 				},
 				{
-					"heading": "Calculators & tools?",
+					"heading": "Explore More Loan Tools",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icons-calc",
 					"url": "/home-loan/home-loan-tools-calculator"
@@ -297,40 +299,40 @@
 			]
 		},
 		"topIconCard": {
-			"heading": "Smart savings calculators – Plan your future with confidence",
+			"heading": "Financial Planning Tools for Better Customer Advisory",
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "Know How Long Your Savings Will Last",
-					"para": "Determine how many years your savings can support your lifestyle.",
+					"heading": "Estimate Long-Term Savings Potential",
+					"para": "Help customers understand how savings and loan decisions impact their financial future.",
 					"icon": "/icons/clock.svg",
 					"altName": "clock-icon",
-					"linkName": "Check Your Savings Longevity",
+					"linkName": "Explore Savings Analysis",
 					"url": "/money-map/how-long-will-your-savings-support-you"
 				},
 				{
-					"heading": "Track Your Progress Towards Your Goal​",
-					"para": "Estimate the time required to reach your financial milestones.",
+					"heading": "Plan Financial Goals More Effectively",
+					"para": "Support customers in evaluating timelines for major financial milestones.",
 					"icon": "/icons/phoneConnection.svg",
 					"altName": "phoneConnection-icon",
-					"linkName": "Plan Your Savings Journey",
+					"linkName": "View Goal Planning Tool",
 					"url": "/money-map/how-long-will-it-take-to-save"
 				},
 				{
-					"heading": "Set a Target for Retirement Savings​​",
-					"para": "Calculate the amount needed for a secure and comfortable retirement.",
+					"heading": "Evaluate Future Financial Requirements",
+					"para": "Help customers estimate future funding and retirement planning needs.",
 					"icon": "/icons/negotiate.svg",
 					"altName": "negotiate-icon",
-					"linkName": "Plan Your Retirement Fund",
+					"linkName": "Explore Retirement Planning",
 					"url": "/money-map/how-much-to-save-by-retirement"
 				},
 				{
-					"heading": "Grow Your Savings with Consistency​",
-					"para": "See how regular contributions can maximize your savings over time.",
+					"heading": "Understand the Impact of Regular Savings",
+					"para": "Show customers how disciplined financial planning can improve long-term outcomes.",
 					"icon": "/icons/coinHouse.svg",
 					"altName": "coinHouse-icon",
-					"linkName": "Calculate Your Future Savings",
+					"linkName": "Calculate Future Savings",
 					"url": "/money-map/how-much-can-i-save-with-regular-contributions"
 				}
 			]
@@ -340,15 +342,15 @@
 		"contents": {
 			"cardImage": "/images/message.jpg",
 			"cardAltName": "CardCover",
-			"cardHeading": "Message us 24/7",
+			"cardHeading": "Dedicated Support for DSAs",
 			"sourceName": "DigitalDSA",
 			"originalSource": "www.digitaldsa.com"
 		},
-		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"para": "Need help with a balance transfer case? Our lending specialists can assist you with lender selection, eligibility evaluation, customer savings analysis, top-up opportunities, documentation requirements, and complex case scenarios. Whether you're comparing lender programs or looking to improve approval chances, we're here to support your business growth.",
 		"button": {
 			"link": "/contact",
 			"btnClass": "btn-secondary",
-			"btnName": "Message us"
+			"btnName": "Talk to an Expert"
 		}
 	},
 	"common_components": {
@@ -359,29 +361,29 @@
 				"borderBottom": true,
 				"cards": [
 					{
-						"heading": "Book an </br> appointment",
-						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+						"heading": "Discuss a </br> customer case",
+						"para": "Book time with a lending specialist to discuss balance transfer opportunities, customer eligibility, and lender options.",
 						"icon": "/icons/appointment.svg",
 						"altName": "appointment Icon",
 						"url": "/appointment"
 					},
 					{
-						"heading": "Check loan offers",
-						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"heading": "Compare lender offers",
+						"para": "Evaluate balance transfer programs from multiple banks and NBFCs based on your customer's profile.",
 						"icon": "/icons/manageLoan2.svg",
 						"altName": "Alert Icon",
 						"url": "/get-started/how-can-we-help"
 					},
 					{
-						"heading": "Contact us",
-						"para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+						"heading": "Contact our team",
+						"para": "Connect directly with DigitalDSA specialists for support on documentation, eligibility, and lender selection.",
 						"icon": "/icons/contact.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
 					},
 					{
 						"heading": "Message us",
-						"para": "Get instant help from our online assistants  or chat to a specialist.",
+						"para": "Get assistance with balance transfer cases, top-up opportunities, and customer-specific scenarios.",
 						"icon": "/icons/msg.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
@@ -391,12 +393,12 @@
 		},
 		"thinkYouShouldKnow": {
 			"thinkKnow": {
-				"heading": "Things you should know",
+				"heading": "Things You Should Know",
 				"paraGraph": [
-					"<span class=\"font-semibold\">Independent Facilitator:</span> Digital DSA acts as an independent loan facilitator, helping home loan borrowers explore balance transfer options with licensed banks and NBFCs. We do not provide loans directly and are not a financial institution.",
-					"<span class=\"font-semibold\">Balance Transfer Approval:</span> The approval of a home loan balance transfer depends entirely on the bank or NBFC where you apply. Digital DSA does not guarantee approval or influence the lender’s decision. All applications are subject to the lender’s credit assessment, eligibility criteria, interest rates, and applicable charges.",
-					"<span class=\"font-semibold\">Liability:</span> Digital DSA is not responsible for delays, rejections, or any financial losses arising during the balance transfer process. The final decision made by the bank or NBFC is binding on both the borrower and Digital DSA.",
-					"<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions."
+					"<span class=\"font-semibold\">Independent Facilitator:</span> DigitalDSA acts as an independent lending facilitator, helping DSAs and customers explore balance transfer opportunities with licensed banks and NBFCs. We do not directly provide loans or make lending decisions.",
+					"<span class=\"font-semibold\">Approval Is Determined by the Lender:</span> Every balance transfer application is subject to the bank or NBFC's credit policies, eligibility criteria, property assessment, documentation requirements, and internal approval process.",
+					"<span class=\"font-semibold\">No Approval Guarantee:</span> DigitalDSA helps identify suitable lender options and supports the application process, but final approval, pricing, and loan terms remain solely at the discretion of the lender.",
+					"<span class=\"font-semibold\">Important Information:</span> Interest rates, charges, eligibility criteria, and lender programs may change without prior notice. DSAs should evaluate customer requirements and lender terms carefully before proceeding with any recommendation."
 				]
 			},
 			"disc": "list-decimal"

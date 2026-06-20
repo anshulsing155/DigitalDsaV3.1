@@ -1,9 +1,15 @@
-<script>
+<script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { feedbackYes } from '$lib/stores/stores';
 	import { onMount } from 'svelte';
-	let feedback = '';
+	let feedback = $state('');
 	let isMobile = false;
+
+	type Props = {
+		paddingClass?: string;
+	};
+
+	const { paddingClass = 'px-[0.5rem] lg:px-16' }: Props = $props();
 
 	onMount(() => {
 		const checkScreenSize = () => {
@@ -16,8 +22,9 @@
 		return () => window.removeEventListener('resize', checkScreenSize);
 	});
 </script>
+
 <!-- px-4 lg:px-16 -->
-<section class=" py-[3rem]">
+<section class={`py-[3rem] ${paddingClass}`}>
 	<div class="grid items-center justify-between gap-4 md:w-4/6 lg:grid-cols-4">
 		<p class="typography-body-md col-span-2 !font-semibold text-[var(--form-text)]">
 			Was the information on this page useful?
@@ -52,7 +59,8 @@
 				onclick={() => {
 					$feedbackYes = 2;
 				}}
-				class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline">help us improve.</a
+				class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
+				>help us improve.</a
 			>
 		</p>
 	{:else if feedback == 'Yes'}

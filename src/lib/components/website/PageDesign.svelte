@@ -11,7 +11,9 @@
 		subList = [],
 		pageData = {},
 		actionBtns = [],
-		onClick = () => {}
+		onClick = () => {},
+		children,
+		secondary
 	} = $props();
 
   let isBelow1024 = $state(false);
@@ -114,7 +116,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
                   {#each actionBtns as btn}
                     <Button
                       btnName={btn.btnName}
-                      btnColor={btn.btnColor}
+                      btnClass={btn.btnClass}
                       link={btn.btnLink}
                     />
                   {/each}
@@ -173,12 +175,14 @@ window.removeEventListener("resize", updateSize); // Cleanup
       </div>
     </div>
     <div class="relative flex flex-col border border-[var(--form-border)] bg-[var(--landing-bg)]  z-20 mx-1 lg:mx-0">
-      <!-- svelte-ignore slot_element_deprecated -->
-      <slot />
+      {#if children}
+        {@render children()}
+      {/if}
     </div>
     <div class="lg:p-[4rem]">
-      <!-- svelte-ignore slot_element_deprecated -->
-      <slot name="secondary" />
+      {#if secondary}
+        {@render secondary()}
+      {/if}
     </div>
   </div>
 </section>
@@ -188,16 +192,10 @@ window.removeEventListener("resize", updateSize); // Cleanup
     #pageDesign {
       width: 1360px;
     }
-    #image {
-      height: calc(100% + 10%);
-    }
   }
   @media (min-width: 2560px) and (max-width: 3860px) {
     #pageDesign {
       width: 2000px;
-    }
-    #image {
-      height: calc(100% + 10%);
     }
     #sideCard {
       min-height: 25rem;
@@ -207,34 +205,14 @@ window.removeEventListener("resize", updateSize); // Cleanup
     #pageDesign {
       width: 3000px;
     }
-    #image {
-      height: calc(100% + 10%);
-    }
     #sideCard {
       min-height: 40rem;
-    }
-  }
-  @media (min-width: 1024px) {
-    #image {
-      height: calc(100% + 180px);
     }
   }
 
   @media (min-width: 1024px) and (max-width: 1400px) {
     #pageDesign {
       width: 95%; /* Shrinks to 90% of its original size */
-    }
-  }
-
-  @media (max-width: 1024px) {
-    #image {
-      height: calc(70%);
-    }
-  }
-
-  @media (max-width: 640px) {
-    #image {
-      height: 50%;
     }
   }
 </style>
