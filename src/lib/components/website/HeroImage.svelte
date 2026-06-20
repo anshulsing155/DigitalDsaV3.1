@@ -1,10 +1,17 @@
 <script lang="ts">
 	import Tooltip from './Tooltip.svelte';
 
-	export let coverImage: string;
-	export let coverAlt: string;
-	export let sourceName: string;
-	export let originalSource: string;
+	let {
+		coverImage,
+		coverAlt,
+		sourceName,
+		originalSource
+	}: {
+		coverImage: string;
+		coverAlt: string;
+		sourceName: string;
+		originalSource: string;
+	} = $props();
 </script>
 
 <div

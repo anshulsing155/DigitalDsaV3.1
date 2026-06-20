@@ -1,0 +1,173 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "image": "/images/career-faq-blog.jpg",
+    "title": "Careers at DigitalDSA | Hiring Process, Roles & FAQs",
+    "description": "Explore job openings, interview tips, and FAQs about working at DigitalDSA. Apply now and join a fast-growing fintech revolution!",
+    "keywords": "DigitalDSA careers, Fintech jobs in India, Fintech hiring process, DigitalDSA job openings, Startup job opportunities, Careers at DigitalDSA, Work at fintech startup, DigitalDSA interview process, Apply for fintech jobs, DigitalDSA internships, Remote fintech jobs, Freshers jobs fintech, Hiring process DigitalDSA, Fintech company recruitment, DigitalDSA onboarding process"
+  },
+  "pageData": {
+    "coverImage": "/images/career-faq-blog.jpg",
+    "altName": "hero-cover",
+    "heading": "Careers FAQs",
+    "para": "Got a question about working with us? Here are some of the most commonly asked questions about applying for a role at DigitalDSA."
+  },
+  "stickyNavBar": {
+    "items": [
+      {
+        "name": "Hiring process",
+        "targetId": "hiring"
+      },
+      {
+        "name": "Job opening",
+        "targetId": "opening"
+      },
+      {
+        "name": "Interview process",
+        "targetId": "process"
+      },
+      {
+        "name": "Background checks",
+        "targetId": "checks"
+      },
+      {
+        "name": "Other FAQs",
+        "targetId": "faq"
+      }
+    ]
+  },
+  "navBarMedium": [
+    "Hiring process",
+    "Job opening",
+    "Interview process",
+    "Background checks",
+    "Other FAQs"
+  ],
+  "thinkYouShouldKnow": {
+    "heading": "Things You Should Know",
+    "paraGraph": [
+      "Timelines vary: While we strive to move quickly, some roles may have longer processing times depending on the number of applicants and required background checks.",
+      "Stay connected: Keep an eye on your <a href=\"\"> email and phone </a> for updates regarding your application status.",
+      "Multiple applications? If you apply for multiple roles, each application will be assessed independently.",
+      "Need assistance? If you require accessibility accommodations, don’t hesitate to reach out – we’re here to support you."
+    ]
+  },
+  "hiring": {
+    "xlGridCol": 3,
+    "heading": "Our Hiring Process",
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Q. What is the recruitment process at DigitalDSA?",
+        "subHeading": "Find the right opportunity for you ",
+        "para": "<p class=\"mb-2\">Ans. <span class=\"font-semibold\" >Our hiring process is designed to be simple and efficient:</span></p> <ul class=\"list-decimal pl-4\"><li>Application Review – Our Talent Acquisition team reviews your application.</li><li>Initial Screening – If shortlisted, you'll be invited for a virtual/phone screening.</li><li>Interview Process – Depending on the role, you may have 1-2 interviews with team leads.</li><li>Assessment (if required) – Some roles may require an online test.</li><li>Offer & Onboarding – If selected, we’ll guide you through the onboarding process.</li></ul>"
+      },
+      {
+        "heading": "Q. How long does the hiring process take?​​",
+        "para": "Ans. Typically, the process takes <span class=\"font-semibold\"> 2-4 weeks </span> from application submission to offer."
+      },
+      {
+        "heading": "Q. How will I be updated about my application status?​",
+        "para": "Ans. You’ll receive email notifications at each stage. If selected, a recruiter will connect with you directly."
+      },
+      {
+        "heading": "Q. Can I apply for multiple roles?",
+        "para": "Ans. Yes! Feel free to apply for any roles that match your skills and interests.​​"
+      },
+      {
+        "heading": "Q. I’m having trouble submitting my application. What should I do?​",
+        "para": "Ans. If you face issues, email <span class=\"font-semibold\"> careers@digitaldsa.com </span> for assistance "
+      }
+    ]
+  },
+  "opening": {
+    "xlGridCol": 3,
+    "heading": "Job Openings & Applications",
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Q. Where can I find current job openings?",
+        "subHeading": "Find the right opportunity for you ",
+        "para": "Ans. Our latest job postings are available on our Careers Page ."
+      },
+      {
+        "heading": "Q. What roles are available at DigitalDSA?​​",
+        "para": "Ans. We are hiring in Sales, Operations, Marketing, Product, and IT Support ."
+      },
+      {
+        "heading": "Q. Do you offer remote or hybrid roles?",
+        "para": "Ans. Some roles are remote-friendly , while others may require on-site presence. The job description will specify the work model"
+      },
+      {
+        "heading": "Q. Do I need prior Fintech experience?",
+        "para": "Ans. It depends on the role. While Fintech experience is a plus, we value skills, adaptability, and a growth mindset.​"
+      },
+      {
+        "heading": "Q. Is there an age limit or specific qualifications required?​",
+        "para": "Ans. We welcome applicants from diverse backgrounds. Qualifications depend on the role, but passion and skills matter most! "
+      }
+    ]
+  },
+  "process": {
+    "xlGridCol": 3,
+    "heading": "Interview Process",
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Q. What should I expect in the interview?",
+        "subHeading": "Find the right opportunity for you ",
+        "para": "<p class=\"font-semibold mb-2\">Ans. Our interviews are role-specific and may include:</p> <ul class=\"list-decimal pl-4\"><li> A conversation about your experience & skills</li><li> A technical or case-study discussion (for Product/IT roles)</li><li> A problem-solving or sales scenario (for Sales/Marketing roles)</li></ul>"
+      },
+      {
+        "heading": "Q. What should I wear to the interview?",
+        "para": "Ans. Smart casual is fine, but feel free to dress in a way that makes you comfortable."
+      },
+      {
+        "heading": "Q. I’m nervous about my interview. Any tips?",
+        "para": "Ans. Be yourself, research DigitalDSA, and come prepared with questions about the role."
+      }
+    ]
+  },
+  "checks": {
+    "xlGridCol": 3,
+    "heading": "Background Checks & Offers",
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Q. Do you conduct background checks?",
+        "para": "Ans. Yes, we may verify employment history, education, and references."
+      },
+      {
+        "heading": "Q. Will I receive a formal job offer?",
+        "para": "Ans. Yes! If selected, you’ll receive an official offer letter via email with role details and benefits."
+      },
+      {
+        "heading": "Q. What benefits does DigitalDSA offer?",
+        "para": "Ans. Competitive salary, performance-based incentives, growth opportunities, and a dynamic startup culture! "
+      }
+    ]
+  },
+  "faq": {
+    "xlGridCol": 3,
+    "heading": "Other FAQs",
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Q. Can I apply if I’m a fresher?",
+        "para": "Ans. Absolutely! We welcome fresh talent with enthusiasm and a learning attitude."
+      },
+      {
+        "heading": "Q. I didn’t get selected. Can I reapply?",
+        "para": "Ans. Yes! You can reapply after 3 months for the same or other roles."
+      },
+      {
+        "heading": "Q. Do offer internships?",
+        "para": "Ans. Yes, we offer internships in Marketing, IT, and Product. Keep an eye on our careers page!"
+      },
+      {
+        "heading": "Q. I have a disability. Can I get support during the hiring process?",
+        "para": "Ans. Yes! Please email <span class=\"font-semibold\"> careers@digitaldsa.com </span> if you need accommodations."
+      }
+    ]
+  }
+}

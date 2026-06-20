@@ -1,112 +1,19 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { fade, slide } from "svelte/transition";
+  import content from "$lib/data/website/businessLoanEligibility.json";
 
-  // Define interfaces for type safety
-  interface Example {
-    [key: string]: string;
-    title: string;
-    business: string;
-    cashIncome: string;
-    "Monthly Average Balance": string;
-    gst: string;
-    profit: string;
-    eligibility: string;
-    explanation: string;
-  }
+  const { heading, description, examples, highlightFactors } = content.examplesSection;
 
-  interface Examples {
-    [key: string]: Example;
-  }
-
-  let activeTab: string = "retail";
-  let visible: boolean = false;
+  let activeTab = $state("retail");
+  let visible = $state(false);
 
   onMount(() => {
     visible = true;
     return () => {
-      visible = false; // Cleanup on unmount
+      visible = false;
     };
   });
-
-  const examples: Examples = {
-    retail: {
-      title: "Retail Business Example",
-      business: "Local Grocery Store",
-      cashIncome: "₹1,50,000 monthly",
-      "Monthly Average Balance": "₹75,000",
-      gst: "₹18,00,000 annually",
-      profit: "₹6,00,000 annually",
-      eligibility: "₹18,00,000 to ₹24,00,000",
-      explanation:
-        "Based primarily on GST turnover (10-15%) and supported by consistent cash flow patterns.",
-    },
-    manufacturing: {
-      title: "Manufacturing Business Example",
-      business: "Small Textile Manufacturer",
-      cashIncome: "₹4,50,000 monthly",
-      "Monthly Average Balance": "₹2,25,000",
-      gst: "₹54,00,000 annually",
-      profit: "₹12,00,000 annually",
-      eligibility: "₹36,00,000 to ₹48,00,000",
-      explanation:
-        "Based on a combination of annual profit (3-4x) and GST turnover, with higher weight on formal financial statements.",
-    },
-    service: {
-      title: "Service Business Example",
-      business: "IT Consulting Firm",
-      cashIncome: "₹3,00,000 monthly",
-      "Monthly Average Balance": "₹1,50,000",
-      gst: "₹36,00,000 annually",
-      profit: "₹15,00,000 annually",
-      eligibility: "₹45,00,000 to ₹75,00,000",
-      explanation:
-        "Based primarily on annual profit (3-5x) due to high-margin nature of the business with minimal physical assets.",
-    },
-    hospitality: {
-      title: "Hospitality Business Example",
-      business: "Family Restaurant",
-      cashIncome: "₹2,00,000 monthly",
-      "Monthly Average Balance": "₹1,00,000",
-      gst: "₹24,00,000 annually",
-      profit: "₹8,00,000 annually",
-      eligibility: "₹20,00,000 to ₹28,00,000",
-      explanation:
-        "Based primarily on Cash Income due to high daily transactions, with GST turnover as a supporting factor.",
-    },
-    ecommerce: {
-      title: "E-commerce Business Example",
-      business: "Online Fashion Store",
-      cashIncome: "₹2,50,000 monthly",
-      "Monthly Average Balance": "₹1,25,000",
-      gst: "₹48,00,000 annually",
-      profit: "₹10,00,000 annually",
-      eligibility: "₹32,00,000 to ₹44,00,000",
-      explanation:
-        "Based primarily on GST turnover (10-15%) reflecting online sales volume, with MAB supporting financial stability.",
-    },
-    freelance: {
-      title: "Freelance Business Example",
-      business: "Graphic Design Studio",
-      cashIncome: "₹1,00,000 monthly",
-      "Monthly Average Balance": "₹50,000",
-      gst: "₹12,00,000 annually",
-      profit: "₹9,00,000 annually",
-      eligibility: "₹27,00,000 to ₹36,00,000",
-      explanation:
-        "Based primarily on annual profit (3-4x) due to irregular cash flows but strong profitability from project-based work.",
-    },
-  };
-
-  // Map tabs to their primary factor(s) for highlighting
-  const highlightFactors: { [key: string]: string[] } = {
-    retail: ["gst"],
-    manufacturing: ["gst", "profit"],
-    service: ["profit"],
-    hospitality: ["cashIncome"],
-    ecommerce: ["gst"],
-    freelance: ["profit"],
-  };
 </script>
 
 <section
@@ -118,13 +25,12 @@
       id="eligibility-examples"
       class="text-4xl sm:text-5xl font-extrabold text-center text-[var(--form-text)] mb-6 tracking-tight"
     >
-      Eligibility Calculation Examples
+      {heading}
     </h2>
     <p
       class="text-lg sm:text-xl text-center text-[var(--form-text-secondary)] max-w-4xl mx-auto mb-12 leading-relaxed"
     >
-      Explore how banks assess loan eligibility for various business types based
-      on key financial factors.
+      {description}
     </p>
 
     {#if visible}

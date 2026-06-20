@@ -1,0 +1,194 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Cost of Living Guide: Expenses, Savings & Financial Support",
+    "image": "/images/indian-family-having-dinner-in-a-beautiful-home.jpg",
+    "description": "Discover key cost of living factors, budgeting tips, loan support, and exclusive deals to manage expenses efficiently. Get started today!",
+    "keywords": "cost of living, living expenses, financial planning, budgeting tips, loan support, home loan EMI, grocery costs, transportation costs, healthcare expenses, education costs, savings tips, balance transfer, personal loan, financial aid, loan offers, inflation impact, money management"
+  },
+  "pageData": {
+    "coverImage": "/images/indian-family-having-dinner-in-a-beautiful-home.jpg",
+    "coverAlt": "photo of an indian family having good time together representing daily life of indian middle class and cost of living",
+    "sourceName": "Freepik",
+    "originalSource": "https://www.freepik.com/free-photo/medium-shot-smiley-islamic-family-home_33808558.htm",
+    "classStyle": "object-cover xl:h-[90svh] 3xl:max-h-[70svh]",
+    "heroHeading": " Cost of Living",
+    "heroParagraph": "Explore a variety of tools, tips, and financial support options to ease the everyday cost of living."
+  },
+  "stickyNavBar": {
+    "items": [
+      {
+        "name": "What is cost of living",
+        "targetId": "costOfLiving"
+      },
+      {
+        "name": "Affecting factors",
+        "targetId": "affectingFactors"
+      },
+      {
+        "name": "Financial support",
+        "targetId": "financialSupport"
+      },
+      {
+        "name": "Offers and deals",
+        "targetId": "offerDeals"
+      },
+      {
+        "name": "Other resources",
+        "targetId": "otherResource"
+      }
+    ]
+  },
+  "navBarMedium": [
+    "What is cost of living",
+    "Affecting factors",
+    "Financial support",
+    "Offers and deals",
+    "Other resources"
+  ],
+  "costOfLiving": {
+    "heading": "What is cost of living?",
+    "subPara": [
+      "The cost of living refers to the total amount of  <span class=\"font-semibold\"> money required to maintain a basic standard of living </span> in a specific location. It includes essential expenses like housing, food, transportation, healthcare, education, utilities, and discretionary spending such as entertainment.",
+      "It varies significantly due to factors like location (metro vs. non-metro), lifestyle choices, family size, and inflation. While urban areas like <span class=\"font-semibold\">  Mumbai, Delhi, and Bangalore </span> have a high cost of living, smaller towns and villages offer a more affordable lifestyle."
+    ]
+  },
+  "keyfactors": {
+    "heading": "Affecting factors",
+    "items": [
+      {
+        "id": 1,
+        "title": "Housing (Rent & EMI)​",
+        "desc": "Housing costs take up a major chunk of your budget. In metro cities, a 1BHK can cost ₹15,000 - ₹50,000, while smaller cities offer lower rents at ₹8,000 - ₹20,000. <br> Home loan EMIs range from ₹30,000 - ₹80,000, making financial planning essential. Use <a  href='/calculators/emi-calculator' class=\"underline underline-offset-4 text-linkColor\">our Home Loan EMI Calculator </a>  to estimate and manage your payments.",
+        "icon": "/icons/ownership.svg",
+        "altName": "home-icon"
+      },
+      {
+        "id": 2,
+        "title": "Food & Groceries​",
+        "desc": "Food expenses can quickly add up. A family of four spends ₹5,000 - ₹15,000 monthly on groceries, and inflation makes essentials pricier. <br> Frequent dining out further increases costs. Track your food budget with <a href=\"/planners/budget-planner\" class=\"underline underline-offset-4 hover-no:underline\">our Budget Planner </a>   and make informed spending choices.",
+        "icon": "/icons/apply-pen.svg",
+        "altName": "apply-icon"
+      },
+      {
+        "id": 3,
+        "title": "Transportation (Fuel & Commuting)​",
+        "desc": "Transportation is another key expense. Public transport costs around ₹1,500/month, but car owners face fuel prices of ₹90-₹110 per litre, plus maintenance, tolls, and parking.",
+        "icon": "/icons/fuel.svg",
+        "altName": "fuel-icon"
+      },
+      {
+        "id": 4,
+        "title": "Healthcare & Medical Expenses",
+        "desc": "Healthcare expenses can be unpredictable. A doctor’s visit costs ₹500 - ₹1,500, while health insurance with ₹5L coverage costs ₹8,000 - ₹12,000 annually. Hospitalization can reach ₹2L - ₹5L.​",
+        "icon": "/icons/emergencyLoan.svg",
+        "altName": "health-icon"
+      },
+      {
+        "id": 5,
+        "title": "Education & Childcare",
+        "desc": "Education is a major investment. Private school fees range from ₹50,000 - ₹2L per year, and higher education can cost ₹10L - ₹25L. Coaching and tuition add to the burden. <br> Start building a secure financial future with smart savings—explore <a href=\"/money-map/how-long-will-your-savings-support-you\" class=\"underline underline-offset-4 hover:no-underline\">our Investment Plans </a>  to grow your funds steadily.",
+        "icon": "/icons/educationLoan.svg",
+        "altName": "education-icon"
+      },
+      {
+        "id": 6,
+        "title": "Utilities & Discretionary Spending",
+        "desc": "Utilities and lifestyle expenses—electricity, internet, shopping, and entertainment—add ₹3,000 - ₹8,000 to monthly budgets. Managing these wisely ensures financial stability. ",
+        "icon": "/icons/checklist.svg",
+        "altName": "list-icon"
+      }
+    ]
+  },
+  "repayments": {
+    "heading": "Financial support to manage your loans",
+    "data": [
+      {
+        "id": 1,
+        "title": "Are you experiencing financial difficulty?",
+        "desc": "Take a look at our range of options to help with your repayments.",
+        "btnText": "Get help",
+        "icon": "/icons/problem.svg",
+        "altTitle": "icons",
+        "btnColor": "#ffcc00",
+        "btnLink": "/finance-support/financial-hardship"
+      },
+      {
+        "id": 2,
+        "title": "Home loan & personal loan support",
+        "desc": " Find the right solution to manage your loans smarter and more efficient with top-ups, balance transfers, flexible EMIs and part payments.",
+        "btnText": "Get support",
+        "icon": "/icons/contact.svg",
+        "altTitle": "icons",
+        "btnLink": "/home-loan/home-loan-support"
+      }
+    ]
+  },
+  "offersAndDeals": {
+    "cardImg1": "/images/happy-indian-girl-with-head-phone.jpg",
+    "cardAlt1": "happy indian girl listening offeres from DigitalDSA on her headphone",
+    "cardHead1": "Latest offers & deals",
+    "sourceName": "Freepik",
+    "originalSource": "https://www.freepik.com/free-photo/young-woman-wearing-embroidered-shirt_25909555.htm",
+    "spreadWord": [
+      "Invite & earn exclusive bonuses",
+      "Each successful referral brings exciting perks.",
+      "The best things in life are shared—start referring today!"
+    ]
+  },
+  "messageUs": {
+    "cardImg2": "/images/message.jpg",
+    "cardAlt2": "CardCover",
+    "cardHead2": "Message us 24/7"
+  },
+  "support": {
+    "title": "Stay alert to scammers who exploit the cost of living crisis.",
+    "paraGraph": "As you explore ways to cut costs or earn extra cash amidst rising living expenses, scammers are finding new ways to exploit the situation.",
+    "link": "Learn more about scams safety",
+    "url": "/cyber-security-against-scams"
+  },
+  "helpList": {
+    "heading": "We're here to help",
+    "xlGridCol": 4,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Book an </br> appointment",
+        "para": "Book instantly to speak to a loan specialist at a time that suits you",
+        "icon": "/icons/appointment.svg",
+        "altName": "appointment Icon",
+        "url": "/appointment"
+      },
+      {
+        "heading": "Check loan offers",
+        "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+        "icon": "/icons/manageLoan2.svg",
+        "altName": "Alert Icon",
+        "url": "/get-started/how-can-we-help"
+      },
+      {
+        "heading": "Contact us",
+        "para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+        "icon": "/icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      },
+      {
+        "heading": "Message us",
+        "para": "Get instant help from our online assistants  or chat to a specialist.",
+        "icon": "/icons/msg.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      }
+    ]
+  },
+  "thinkKnow": {
+    "heading": "Things you should know",
+    "paraGraph": [
+      "This is general educational content. Assess its relevance to your needs before making decisions.",
+      "With over 50 lenders partnered, Digital DSA compares a wide range of loan options. Find the best rates, terms, and eligibility across multiple banks, ensuring you get the most suitable loan for your needs.",
+      "Activate offers through the app for cashback. Cashback is typically received within 14 business days after qualifying purchases.",
+      "Digital DSA arranges loans across 80+ cities. Terms and conditions may vary; check the latest details for your location."
+    ]
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Financial Hardship Support | Flexible Loan Solutions",
+    "image": "/images/financial-stress.jpg",
+    "description": "Struggling with loan repayments? Get financial hardship support, flexible EMI plans & tailored solutions at Digital DSA. Contact us today!",
+    "keywords": "Financial hardship support, Loan repayment assistance, Flexible EMI plans, Hardship loan arrangements, Debt relief options, Loan restructuring solutions, Business financial support, EMI planning tools, Missed EMI help, CIBIL score protection, Loan deferral assistance, Digital DSA financial aid"
+  },
+  "pageData": {
+    "coverImage": "/images/financial-stress.jpg",
+    "coverAlt": "photo of a man in financial stress",
+    "heading": "Financial hardship",
+    "actionBtns": [
+      {
+        "btnName": "Contact us online",
+        "btnLink": "/appointment",
+        "btnColor": "#ffcc00"
+      }
+    ],
+    "para": "At Digital DSA, we understand that unexpected circumstances can create challenges in managing your finances. We're here to help you explore alternative options to ease your financial burden."
+  },
+  "stickyNavBar": {
+    "items": [
+      { "name": "When to Get Help", "targetId": "getHelp" },
+      {
+        "name": "Financial Hardship Arrangements",
+        "targetId": "arrangement"
+      },
+      { "name": "Ways to Contact Us", "targetId": "callUs" },
+      { "name": "How We Can Help", "targetId": "canHelp" },
+      { "name": "Support for Businesses", "targetId": "businessSupport" }
+    ],
+    "actionBtns": [
+      {
+        "btnName": "Contact us online",
+        "btnLink": "/appointment",
+        "btnColor": "#ffcc00"
+      }
+    ]
+  },
+  "navBarMedium": [
+    "When to Get Help",
+    "Financial Hardship Arrangements",
+    "Ways to Contact Us",
+    "How We Can Help",
+    "Support for Businesses"
+  ],
+  "getHelp": {
+    "heading": "When to Get Help",
+    "para": "If you're worried about missing a payment or struggling to manage your ongoing repayments, <a href=\"/contact\" class=\"underline underline-offset-4 hover:no-underline\"> reach out to us</a> as soon as possible. Early communication can help reduce stress, and we can work together to find the right solutions for your situation.",
+    "xlGridCol": 3,
+    "cards": [
+      {
+        "heading": "Reach out for support early",
+        "para": "Unexpected increases in daily expenses, such as <a href=\"/finance-support/cost-of-living\" class=\"underline underline-offset-4 hover:no-underline\">cost-of-living pressures</a>, may require you to adjust your budget. </br> </br>\n       If you're struggling with <span class=\"font-semibold\">EMI payments</span> or concerned about <span class=\"font-semibold\"> managing running loan,</span> don’t wait—reach out to us as soon as possible. </br> </br> \n        "
+      },
+      {
+        "heading": "Why you may need financial support",
+        "para": "There are many situations where you might find it difficult to keep up with your loan repayments, such as: </br> </br>\n          \n          <ul class=\"list-disc flex flex-col gap-2 list-inside\">\n            <li>Cost of living pressures</li>\n            <li>Unemployment or changes in income</li>\n             <li>Death of an earning member</li>\n              <li>   (e.g. flood, fire, earthquake)</li>\n               <li>(e.g. divorce, domestic violence)  </li>\n                <li>Unexpected expenses or loss in business   </li>\n            </ul>"
+      },
+      {
+        "heading": "Missed or late payments?",
+        "para": "<div class=\"flex flex-col gap-4\">\n          \n    <p>\n       \n        If you’re worried that you’ll miss an EMI or will be unable to meet your ongoing EMIs, please contact us.\n    </p>\n   <div>\n     <p>\n      Even if the issue is short-term, contacting us early allows us to explore solutions together and help you:\n\n      </p>\n    \n    \n    <ul class=\"list-disc list-inside\">\n        <li>Avoid <span class=\"font-semibold\">late payments</span> fees or penalties.</li>\n        <li>Protect your <span class=\"font-semibold\">credit score</span> in CIBIL.</li>\n    </ul></div>\n          </div>"
+      }
+    ]
+  },
+  "hardshipArrangement": {
+    "heading": "What is a financial hardship arrangement?",
+    "cardData": [
+      {
+        "title": "What is a financial hardship arrangement?",
+        "para": "<div class=\"flex flex-col gap-4\">\n              <p>If you’re finding it difficult to keep up with repayments (loan EMIs, credit card bills), a \"financial hardship arrangement\" can offer support during challenging times</p>\n              <div>\n                <p> We can work with you to create an alternative payment plan, such as:</p>\n\n                <ul class=\"list-disc list-inside\"><li>Temporarily deferring your repayments.</li>\n                  <li>Allowing reduced payments for a set period.</li></ul>\n                </div>\n                <p>This arrangement can help prevent you from falling too far behind on your credit card or loan repayments.</p>\n              <p>You can also checkout our <a href=\"/planners/flexible-emi-planner\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline underline-offset-4 hover:no-underline text-linkColor\">Flexible EMI Planner</a> for better understanding and planning.</p>\n            </div>"
+      },
+      {
+        "title": "Can a hardship arrangement impact your credit score?",
+        "para": "<div class=\"flex flex-col gap-4\">\n              <p>When a borrower enters into a <span class=\"font-semibold\">financial hardship arrangement</span> or avails of <span class=\"font-semibold\">loan restructuring</span>, it can have an impact on their <span class=\"font-semibold\">CIBIL score</span> (or <span class=\"font-semibold\">credit score</span> in general), although the extent of the impact depends on the nature of the arrangement and how it's reported.</p>\n             \n                <p>Entering into an arrangement is <span class=\"font-semibold\">recommended</span> as it demonstrates your commitment to getting back on track. If you cannot make your repayments and do not enter an arrangement, it may negatively impact your credit score.</p>\n                <p>\n                   Here's how different types of financial support arrangements may affect your CIBIL score </p>\n            </div>"
+      }
+    ]
+  },
+  "callUs": {
+    "cardImage": "/images/contact-us-DigitalDSA.jpg",
+    "cardAltName": "Photo of a young female executive from DigitalDSA",
+    "cardHeading": "Ways to contact us",
+    "sourceName": "Freepik",
+    "originalSource": "https://www.freepik.com/free-photo/young-entrepreneur-talking-phone-quietly_962020.htm",
+    "reverse": true
+  },
+  "canHelp": {
+    "heading": "We have a range of options",
+    "cardData": [
+      {
+        "title": "Tailored Loan Solutions",
+        "para": "<ul class=\"list-disc pl-4 flex flex-col gap-2\">\n          <li>Flexible Repayment Plans (Reduced payments, deferrals)</li>\n          <li> Fee & Penalty Waivers (For eligible cases)</li>\n         <li>Loan Refinancing Options (Better terms, lower EMIs)</li>\n         <li>Partial Prepayment Choices (Reduce future EMIs)</li>\n         <li>EMI Planning Tools (Visualize repayment adjustments)</li>\n         </ul>"
+      },
+      {
+        "title": "Assistance Requirements",
+        "para": "<ul class=\"list-disc pl-4 flex flex-col gap-2\">\n          <li>Financial Overview (Income & expenses details)</li>\n          <li>Hardship Documents (Medical/employment proof)</li>\n\n         </ul>"
+      }
+    ]
+  },
+  "businessSupport": {
+    "cardImage": "/images/support-for-business-pexel.jpg",
+    "cardAltName": "photo of an young businessman infront of his shop",
+    "cardHeading": "Support for Businesses",
+    "reverse": false,
+    "sourceName": "pexel",
+    "originalSource": ""
+  },
+  "helpList": {
+    "heading": "We're here to help",
+    "xlGridCol": 4,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Book an </br> appointment",
+        "para": "Book instantly to speak to a loan specialist at a time that suits you",
+        "icon": "/icons/appointment.svg",
+        "altName": "appointment Icon",
+        "url": "/appointment"
+      },
+      {
+        "heading": "Check loan offers",
+        "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+        "icon": "/icons/manageLoan2.svg",
+        "altName": "Alert Icon",
+        "url": "/get-started/how-can-we-help"
+      },
+      {
+        "heading": "Contact us",
+        "para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+        "icon": "/icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      },
+      {
+        "heading": "Message us",
+        "para": "Get instant help from our online assistants  or chat to a specialist.",
+        "icon": "/icons/msg.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      }
+    ]
+  },
+  "youKnowlists": [
+    {
+      "heading": "Information Accuracy & Subject to Change",
+      "para": "While we strive to provide accurate and up-to-date details, financial hardship solutions, eligibility criteria, and lender policies may change over time. The information provided should not be considered final or absolute, and we encourage you to verify details with our support team or financial institutions."
+    },
+    {
+      "heading": "Impact on Credit Score & Financial History",
+      "para": "Engaging in a <span class=\"font-semibold\">financial hardship arrangement</span> (such as loan restructuring or EMI deferrals) may impact your <span class=\"font-semibold\">CIBIL score</span> or overall credit profile. While such arrangements may help in the short term, they could also affect your future loan eligibility and borrowing capacity. We recommend consulting a <span class=\"font-semibold\">financial advisor</span> or <span class=\"font-semibold\">credit bureau</span> before making a decision."
+    },
+    {
+      "heading": "No Guarantee of Approval",
+      "para": "Digital DSA provides assistance and guidance, but we <span class=\"font-semibold\">do not guarantee</span> approval for hardship relief, loan restructuring, or any other financial modifications. Approval is subject to lender discretion, financial assessment, and relevant eligibility criteria."
+    },
+    {
+      "heading": "Personal Responsibility & Decision-Making",
+      "para": "Financial decisions should be made after <span class=\"font-semibold\">careful evaluation</span> of your situation. The information provided here is for <span class=\"font-semibold\">general informational purposes only</span> and should <span class=\"font-semibold\">not</span> replace professional financial, legal, or tax advice. Always consider seeking independent advice before proceeding with any financial commitments."
+    },
+    {
+      "heading": "Liability Limitation & Risk Acknowledgment",
+      "para": "Digital DSA is <span class=\"font-semibold\">not responsible</span> for any <span class=\"font-semibold\">direct, indirect, incidental, or consequential</span> losses, damages, or financial impacts resulting from the use of this information or any decisions made based on it. The responsibility for financial actions lies solely with the user."
+    },
+    {
+      "heading": "Alternative Financial Support May Be Available",
+      "para": "In some cases, additional financial aid options such as <span class=\"font-semibold\">government assistance programs, debt consolidation, or refinancing solutions</span> may be more suitable. It is advisable to explore all available options before committing to a hardship arrangement."
+    },
+    {
+      "heading": "Third-Party Involvement & Lender Policies",
+      "para": "Digital DSA acts as a facilitator for financial solutions but does <span class=\"font-semibold\">not</span> control lender policies, approval decisions, or repayment terms. Each lender may have different criteria and procedures for handling financial hardship cases."
+    },
+    {
+      "heading": "Confidentiality & Data Usage",
+      "para": "Any personal or financial information shared with Digital DSA is handled with <span class=\"font-semibold\">strict confidentiality</span> and used only for the purpose of assessing and assisting with financial hardship requests. However, we recommend reviewing our <span class=\"font-semibold\">privacy policy</span> for details on data handling and third-party interactions."
+    }
+  ]
+}

@@ -1,45 +1,20 @@
 <script>
   import { onMount } from 'svelte';
-  import { fade, fly } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
+  import content from "$lib/data/website/businessLoanEligibility.json";
   
-  let visible = false;
+  const { heading, description, factors } = content.factorsSection;
+  let visible = $state(false);
   
   onMount(() => {
     visible = true;
   });
-  
-  const factors = [
-    {
-      icon: "/icons/coinHouse.svg",
-      title: "Cash Income",
-      description: "Banks assess your daily and monthly cash inflows through bank statements, determining your regular income patterns.",
-      importance: "Primary factor for small retailers and service-based businesses without formal accounting."
-    },
-    {
-      icon: "/icons/bank.svg",
-      title: "Monthly Average Balance (MAB)",
-      description: "Your account's average daily balance over a month shows financial stability and liquidity.",
-      importance: "Critical for evaluating cash flow management and working capital efficiency."
-    },
-    {
-      icon: "/icons/document.svg",
-      title: "GST Turnover",
-      description: "Your GSTR filings demonstrate business volume and formalization level, with banks typically offering 10-20% of annual turnover.",
-      importance: "Highly weighted for registered businesses with consistent filing history."
-    },
-    {
-      icon: "/icons/growth.svg",
-      title: "Yearly Net Profit",
-      description: "Income tax returns and financial statements reveal profitability, with loans typically capped at 3-6 times annual profit.",
-      importance: "The gold standard for established businesses with proper financial records."
-    }
-  ];
 </script>
 
 <div class="py-12">
-  <h2 class="text-3xl font-bold text-center mb-8">Key Eligibility Factors</h2>
+  <h2 class="text-3xl font-bold text-center mb-8">{heading}</h2>
   <p class="text-lg text-center max-w-3xl mx-auto mb-12">
-    Banks evaluate these four primary factors when determining your business loan eligibility. Understanding them can significantly improve your chances of approval.
+    {description}
   </p>
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">

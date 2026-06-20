@@ -1,0 +1,169 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "image": "/images/familyWorkWithSmile.jpg",
+    "title": "Working with Us - Careers at DigitalDSA",
+    "description": "Discover what it's like to work at DigitalDSA. Learn about our purpose, core values, expectations, and leadership principles."
+  },
+  "pageData": {
+    "coverImage": "/images/familyWorkWithSmile.jpg",
+    "altName": "hero-cover",
+    "heading": "Working with Us",
+    "para": "We’re not just another fintech—we’re on a mission to revolutionize the loan and financial advisory space with transparency, innovation, and customer-first solutions. When you join us, you become part of a team that’s reshaping the way people access financial products, making it simpler, smarter, and stress-free."
+  },
+  "stickyNavBar": {
+    "items": [
+      {
+        "name": "Our purpose",
+        "targetId": "purpose"
+      },
+      {
+        "name": "Our core",
+        "targetId": "core"
+      },
+      {
+        "name": "First Philosophy",
+        "targetId": "philosophy"
+      },
+      {
+        "name": "Our People",
+        "targetId": "people"
+      },
+      {
+        "name": "Our Code",
+        "targetId": "code"
+      },
+      {
+        "name": "Leadership",
+        "targetId": "leadership"
+      }
+    ]
+  },
+  "navBarMedium": [
+    "Our purpose",
+    "Our core",
+    "First Philosophy",
+    "Our People",
+    "Our Code ",
+    "Leadership "
+  ],
+  "purpose": {
+    "heading": "Our Purpose",
+    "subheading": "Empowering financial freedom through innovation.",
+    "subPara": [
+      "Every day, we wake up with one goal: to help people make better financial decisions by providing clear, unbiased, and tech-driven solutions. Our platform is designed to remove the confusion, middlemen, and hidden charges from financial products, giving customers full control over their financial choices."
+    ]
+  },
+  "coreValues": {
+    "heading": "Our Core Values",
+    "subHeading": "Our culture is built on three key pillars:",
+    "xlGridCol": 3,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Care ",
+        "para": "We genuinely care about our customers and teammates, fostering an environment of trust, humility, and collaboration",
+        "icon": "/icons/search.svg",
+        "altName": "icons-search"
+      },
+      {
+        "heading": "Courage ​​",
+        "para": "We challenge the status quo, embrace change, and take bold steps toward innovation and customer satisfaction.",
+        "icon": "/icons/apply.svg",
+        "altName": "icons-apply"
+      },
+      {
+        "heading": "Commitment ",
+        "para": "We are relentless in our mission to simplify finance, ensuring every decision and action aligns with our purpose.",
+        "icon": "/icons/apply-pen.svg",
+        "altName": "icons-apply-pen"
+      }
+    ]
+  },
+  "philosophy": {
+    "heading": "Customer-First Philosophy: T.E.S. Approach",
+    "xlGridCol": 3,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Transparency  ",
+        "para": "No hidden terms, no misleading sales tactics—just clear and honest financial advice.",
+        "icon": "/icons/search.svg",
+        "altName": "icons-search"
+      },
+      {
+        "heading": "Empowerment  ​​",
+        "para": "Giving users the tools and knowledge to make informed financial choices <span class=\"font-semibold\" without pressure or spam calls.</span>",
+        "icon": "/icons/apply.svg",
+        "altName": "icons-apply"
+      },
+      {
+        "heading": "Simplicity  ",
+        "para": "Making loans, financial planning, and investment decisions as easy as a few clicks.",
+        "icon": "/icons/apply-pen.svg",
+        "altName": "icons-apply-pen"
+      }
+    ]
+  },
+  "peoplePromise": {
+    "heading": "Our People Promise",
+    "para": "We don’t just build financial solutions—we build careers that matter. You can expect an environment where you’ll be challenged, supported, and empowered to do your best work.",
+    "tableHeader": {
+      "left": "What You Can Expect from Us",
+      "right": "What We Expect from You"
+    },
+    "tableData": [
+      [
+        "Impactful Work – See how your contributions directly transform financial experiences for thousands of users.",
+        "Ownership Mindset – Treat challenges as opportunities, take initiative, and own your work end-to-end."
+      ],
+      [
+        "Growth & Learning – Stay ahead in fintech with access to cutting-edge tech, mentorship, and continuous learning opportunities.",
+        "Curiosity & Agility – Stay adaptable, question the norm, and be ready to pivot when necessary."
+      ],
+      [
+        "Collaboration & Respect – Work with a team that values your ideas, respects your individuality, and fosters a culture of open feedback and innovation.",
+        "Team Spirit – Work together, lift others up, and share knowledge to achieve collective success."
+      ]
+    ]
+  },
+  "codeOfTrust": {
+    "heading": "Our Code of Trust",
+    "subHeading": "Doing What’s Right, Always!",
+    "subPara": [
+      "Our Code of Trust guides every decision we make. It ensures we uphold the highest ethical standards, prioritize customer-first solutions, and navigate challenges with integrity. When in doubt, we ask ourselves “Is this truly in the best interest of our users?” If the answer isn’t a clear yes, we go back to the drawing board."
+    ]
+  },
+  "leadership": {
+    "heading": "Our Leadership Principles",
+    "xlGridCol": 4,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Customer-First Obsession",
+        "para": "<ul class=\"list-disc pl-4 space-y-2\"><li> Put customers at the heart of every decision.</li><li> Continuously improve their experience.</li><li> Anticipate needs and create solutions before they ask.</li></ul>",
+        "icon": "/icons/search.svg",
+        "altName": "icons-search"
+      },
+      {
+        "heading": "Lead as an owner",
+        "para": "<ul class=\"list-disc pl-4 space-y-2\"><li>Simplify complexity, build clarity, and align teams.</li><li>Take smart risks and focus on long-term value.</li><li>Seek out obstacles and turn them into opportunities.</li></ul>",
+        "icon": "/icons/apply.svg",
+        "altName": "icons-apply"
+      },
+      {
+        "heading": "Stay Humble, Stay Curious",
+        "para": "<ul class=\"list-disc pl-4 space-y-2\"><li>Never stop learning—ask, listen, reflect, and evolve.</li><li>Embrace feedback and use it to grow.</li><li>Set ambitious goals and persist until they’re achieved.</li></ul>",
+        "icon": "/icons/apply-pen.svg",
+        "altName": "icons-apply-pen"
+      },
+      {
+        "heading": "Build \"A-Teams\"",
+        "subHeading": "Great people create exceptional companies. We hire smart, ambitious individuals and help them unlock their full potential.",
+        "para": "<ul class=\"list-disc pl-4 space-y-2\"><li>Never stop learning—ask, listen, reflect, and evolve.</li><li>Embrace feedback and use it to grow.</li><li>Set ambitious goals and persist until they’re achieved.</li></ul>",
+        "icon": "/icons/contact.svg",
+        "altName": "icons-contact"
+      }
+    ]
+  }
+}

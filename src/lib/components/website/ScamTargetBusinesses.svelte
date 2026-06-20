@@ -1,9 +1,5 @@
 <script>
-	let {
-		data
-	} = $props();
-
-
+  let { data } = $props();
 
   import Button from "./Button.svelte";
   import ThingsYouShould from "$lib/components/website/ThingsYouShould.svelte";
@@ -17,6 +13,21 @@
   import AboveTitleWithoutIconCard from "./AboveTitleWithoutIconCard.svelte";
   import TwoColumn from "./TwoColumn.svelte";
   import Seo from "./Seo.svelte";
+  import content from "$lib/data/website/scamTargetBusinesses.json";
+
+  const {
+    seo,
+    pageData,
+    stickyNavBar,
+    navBarMedium,
+    preventScams,
+    emailCompromise,
+    remoteAccess,
+    warningSignsAndWhatToDo,
+    helpline,
+    helpList,
+    thingsYouShouldKnow
+  } = content;
 
   const toggleDropdown = (event, index) => {
     event.preventDefault();
@@ -26,58 +37,39 @@
 
     // Close all dropdowns except the clicked one
     document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-const otherIcon = otherDetails.querySelector(".faq-icon");
+      const otherIcon = otherDetails.querySelector(".faq-icon");
 
-if (idx !== index) {
-otherDetails.removeAttribute("open");
-if (otherIcon) {
-otherIcon.classList.remove("fa-angle-up");
-otherIcon.classList.add("fa-angle-down");
-}
-}
+      if (idx !== index) {
+        otherDetails.removeAttribute("open");
+        if (otherIcon) {
+          otherIcon.classList.remove("fa-angle-up");
+          otherIcon.classList.add("fa-angle-down");
+        }
+      }
     });
 
     // Toggle current dropdown open/close state
     const isOpen = detailsElement.hasAttribute("open");
     if (isOpen) {
-detailsElement.removeAttribute("open");
-icon.classList.remove("fa-angle-up");
-icon.classList.add("fa-angle-down");
+      detailsElement.removeAttribute("open");
+      icon.classList.remove("fa-angle-up");
+      icon.classList.add("fa-angle-down");
     } else {
-detailsElement.setAttribute("open", "true");
-icon.classList.remove("fa-angle-down");
-icon.classList.add("fa-angle-up");
+      detailsElement.setAttribute("open", "true");
+      icon.classList.remove("fa-angle-down");
+      icon.classList.add("fa-angle-up");
     }
     setTimeout(() => {
-detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
 
   let activeSection = $state("");
-  let pageData = {
-    coverImage: "/images/protect-business-from-scam-blog.jpg",
-    coverAlt: "descriptive photo of a person trying to scam a young lady",
-    heading: "Scams that target businesses",
-    para: "Learn the main types of scams your staff should be able to recognise in order to protect your business.",
-    actionBtns: [
-{
-btnName: "Book appointment",
-btnLink: "/appointment",
-btnColor: "#ffcc00",
-},
-{
-btnName: "Compare offers ",
-btnLink: "/get-started/how-can-we-help",
-},
-    ],
-  };
-
-  // end-here
 
   const initializeActiveSection = () => {
     const firstSection = document.querySelector("[data-section]");
     if (firstSection) {
-activeSection = firstSection.id;
+      activeSection = firstSection.id;
     }
   };
 
@@ -86,46 +78,41 @@ activeSection = firstSection.id;
     let currentSection = "";
 
     sections.forEach((section) => {
-const rect = section.getBoundingClientRect();
-if (rect.top <= 200 && rect.bottom >= 200) {
-currentSection = section.id;
-}
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 200 && rect.bottom >= 200) {
+        currentSection = section.id;
+      }
     });
 
     if (currentSection) {
-activeSection = currentSection;
+      activeSection = currentSection;
     }
   };
+
+  const dispatch = createEventDispatcher();
 
   onMount(() => {
     initializeActiveSection();
     window.addEventListener("scroll", handleScroll);
 
+    setTimeout(() => {
+      const text = document.querySelector(".content")?.innerText || "";
+      dispatch("textExtracted", text);
+      dispatch("pageData", pageData);
+    }, 100);
+
     return () => {
-window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  });
-
-  //send data child to parent
-  const dispatch = createEventDispatcher();
-
-  $effect(() => {
-    onMount(() => {
-setTimeout(() => {
-const text = document.querySelector(".content")?.innerText || "";
-dispatch("textExtracted", text);
-dispatch("pageData", pageData);
-}, 100); // Small delay to ensure DOM updates
-    });
   });
 </script>
 
 <Seo
-  type="WebPage"
-  title="Protect Your Business from Scams | Fraud Prevention Tips"
-  image="/images/protect-business-from-scam-blog.jpg"
-  description="Learn how to prevent scams like BEC & remote access fraud. Protect your business with strong security measures & report scams at 1930."
-  keywords="Business scams, Fraud prevention, Business email compromise (BEC), Remote access scams, Digital arrest fraud, Cybercrime helpline India, Protect business from scams, Cyber fraud prevention, Avoid financial fraud, Scam warning signs, Cybersecurity for businesses, Payment fraud detection, Secure business transactions, How to report scams, Government helpline for cybercrime"
+  type={seo.type}
+  title={seo.title}
+  image={seo.image}
+  description={seo.description}
+  keywords={seo.keywords}
 />
 
 <section class="content">
@@ -133,79 +120,16 @@ dispatch("pageData", pageData);
     <!-- for desktop -->
     <div class="hidden lg:block">
       <StickyNavbar
-        navList={{
-          items: [
-            {
-              name: "Prevent scams",
-              targetId: `prevent`,
-            },
-            {
-              name: " Email compromises",
-              targetId: `email`,
-            },
-
-            {
-              name: "Remote access scams",
-              targetId: `remote`,
-            },
-
-            {
-              name: "Help-line",
-              targetId: `helpline`,
-            },
-          ],
-        }}
+        navList={stickyNavBar}
         {activeSection}
       ></StickyNavbar>
-      <!-- <AnchorCounter /> -->
 
       <div id="prevent" data-section="prevent">
-        <AboveTitleWithLeftIconCard
-          contents={{
-            heading: `How to prevent scams`,
-            xlGridCol: 4,
-            borderBottom: true,
-            cards: [
-              {
-                heading: "Call first",
-                para: "Before you make a first-time payment for any amount you're not prepared to lose, call the payee using a verified phone number to check it’s really them requesting payment.",
-                icon: "/icons/contact.svg",
-                altName: "icons-contact",
-              },
-              {
-                heading: "Set strong, unique passwords",
-                para: "Ensure all of your accounts, especially email accounts, have strong, unique passwords and are setup with second-factor authentication (e.g. SMS).",
-                icon: "/icons/lock&key.svg",
-                altName: "icons-lock",
-              },
-              {
-                heading: "Use an approval process",
-                para: "Setup a payments approval process for your business, preferably requiring multiple approvers, with no exceptions.",
-                icon: "/icons/apply-pen.svg",
-                altName: "icons-apply-pen",
-              },
-              {
-                heading: "A culture of questioning",
-                para: "Encourage a culture where staff are comfortable to question a payment instruction even if it’s from a senior executive.    ",
-                icon: "/icons/search.svg",
-                altName: "icons-search",
-              },
-            ],
-          }}
-        />
+        <AboveTitleWithLeftIconCard contents={preventScams} />
       </div>
 
       <div id="email" data-section="email">
-        <TwoColumnWithImage
-          contents={{
-            reverse: false,
-            cardImage: "/images/businessman-holding-his-head-while-working-desktop-pc-office.jpg",
-            cardAltName: "photo of a businessman holding his head as his email has been hacked due to negligence",
-            cardHeading: "Business email compromise (BEC)",
-            sourceName:"Freepik",
-            originalSource:"https://www.freepik.com/free-photo/exhausted-businessman-holding-his-head-pain-while-working-desktop-pc-office_26346604.htm"
-          }}
-        >
+        <TwoColumnWithImage contents={emailCompromise}>
           <p class="typography-body-md text-[var(--form-text-secondary)]">
             Business email compromise scams target businesses of all sizes. They
             involve emails from a compromised email address, or emails made to
@@ -231,15 +155,7 @@ dispatch("pageData", pageData);
 
       <div data-section="remote" id="remote" class="section">
         <div class="px-[4rem]">
-          <TwoColumn
-          reverse
-           
-            cardImage="/images/digital-arrest-scam.jpg"
-            cardAltName="photo of a digitally scammed girl who is in panic mood"
-            cardHeading="Remote access / Digital arrest scams"
-            sourceName="Freepik"
-            originalSource="https://www.freepik.com/free-photo/young-woman-sitting-cafe-with-her-laptop-stressful-wor_1025751.htm"
-          >
+          <TwoColumn {...remoteAccess}>
             <p class="typography-body-md text-[var(--form-text-secondary)]">
               Remote access scams begin as a phone impersonation scam, then the
               scammer gains access to your all Bank account using your own
@@ -266,9 +182,7 @@ dispatch("pageData", pageData);
                   </span> to appear legitimate.
                 </li>
                 <li>
-                  🚫 Victims are falsely accused of <span
-                    class="font-semibold"
-                  >
+                  🚫 Victims are falsely accused of <span class="font-semibold">
                     money laundering, cybercrimes, or tax fraud
                   </span> .
                 </li>
@@ -282,43 +196,10 @@ dispatch("pageData", pageData);
           </TwoColumn>
         </div>
 
-        <AboveTitleWithoutIconCard
-          contents={{
-            xlGridCol: 2,
-            cards: [
-              {
-                heading: " Warning Signs",
-
-                para: `<ul class="space-y-6"> 
-                  <li> ⚠️ Unexpected calls claiming you're under investigation.</li>
-                   <li>  ⚠️Threats of <span class="font-semibold"> immediate arrest or legal action </span> . </li>
-                    <li> ⚠️ Requests for <span class="font-semibold"> payments via cryptocurrency, gift cards, or wire transfers </span> .  </li>
-                     <li> ⚠️ Pressure to keep the conversation <span class="font-semibold"> secret</span>  from family or the bank.  </li>
-              </ul> `,
-              },
-              {
-                heading: "What to Do",
-                para: `<ul class="space-y-6"> 
-               <li> ✅   <span class="font-semibold"> Stay Calm</span>  – Real police don’t demand instant payments.</li>
-                  <li > ✅ <span class="font-semibold"> Hang Up & Verify</span>  – Call official government or law enforcement numbers.</li>
-                   <li>  ✅ <span class="font-semibold"> Never Pay</span>  – Authorities never ask for money over the phone.</li>
-                    <li> ✅ <span class="font-semibold"> Report the Scam</span>  – Notify law enforcement or cybersecurity agencies. </li>
-                    
-              </ul> `,
-              },
-            ],
-          }}
-        />
+        <AboveTitleWithoutIconCard contents={warningSignsAndWhatToDo} />
       </div>
       <div id="helpline" data-section="helpline">
-        <TwoColumnWithImage
-          contents={{
-            cardImage: "/images/call1930.png",
-            cardAltName: "housing-figure",
-            cardHeading: "Cyber crime help-line",
-            reverse: false,
-          }}
-        >
+        <TwoColumnWithImage contents={helpline}>
           <p class="typography-body-md text-[var(--form-text-secondary)]">
             The Government of India has set up a dedicated National Cybercrime
             Helpline at 1930, where victims can seek assistance and take action
@@ -332,9 +213,9 @@ dispatch("pageData", pageData);
 
     <!-- for mobile -->
     <div class="lg:hidden block">
-      {#each ["Prevent scams", "Email scams", "Remote access scams", "Help-line"] as list, index}
+      {#each navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}"
+          class="dropdown col-span-3 bg-darkColor text-white {index < navBarMedium.length - 1 ? 'border-b' : ''}"
         >
           <summary
             class="col-span-3 list-none px-[1rem] py-[1.5rem]"
@@ -349,53 +230,12 @@ dispatch("pageData", pageData);
           </summary>
 
           {#if index == 0}
-            <div class="bg-white text-black">
-              <AboveTitleWithLeftIconCard
-                contents={{
-                  heading: `How to prevent scams`,
-                  xlGridCol: 4,
-                  borderBottom: true,
-                  cards: [
-                    {
-                      heading: "Call first",
-                      para: "Before you make a first-time payment for any amount you're not prepared to lose, call the payee using a verified phone number to check it’s really them requesting payment.",
-                      icon: "/icons/contact.svg",
-                      altName: "icons-contact",
-                    },
-                    {
-                      heading: "Set strong, unique passwords",
-                      para: "Ensure all of your accounts, especially email accounts, have strong, unique passwords and are setup with second-factor authentication (e.g. SMS).",
-                      icon: "/icons/lock&key.svg",
-                      altName: "icons-lock",
-                    },
-                    {
-                      heading: "Use an approval process",
-                      para: "Setup a payments approval process for your business, preferably requiring multiple approvers, with no exceptions.",
-                      icon: "/icons/apply-pen.svg",
-                      altName: "icons-apply-pen",
-                    },
-                    {
-                      heading: "A culture of questioning",
-                      para: "Encourage a culture where staff are comfortable to question a payment instruction even if it’s from a senior executive.    ",
-                      icon: "/icons/search.svg",
-                      altName: "icons-search",
-                    },
-                  ],
-                }}
-              />
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]">
+              <AboveTitleWithLeftIconCard contents={preventScams} />
             </div>
           {:else if index == 1}
-            <div class="bg-white text-black">
-              <TwoColumnWithImage
-                contents={{
-                  reverse: false,
-                  cardImage: "/images/businessman-holding-his-head-while-working-desktop-pc-office.jpg",
-                  cardAltName: "photo of a businessman holding his head as his email has been hacked due to negligence",
-                  cardHeading: "Business email compromise (BEC)",
-                  sourceName:"Freepik",
-                  originalSource:"https://www.freepik.com/free-photo/exhausted-businessman-holding-his-head-pain-while-working-desktop-pc-office_26346604.htm"
-                }}
-              >
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]">
+              <TwoColumnWithImage contents={emailCompromise}>
                 <p class="typography-body-md text-[var(--form-text-secondary)]">
                   Business email compromise scams target businesses of all
                   sizes. They involve emails from a compromised email address,
@@ -420,16 +260,9 @@ dispatch("pageData", pageData);
               </TwoColumnWithImage>
             </div>
           {:else if index == 2}
-            <div class="bg-white text-black px-[0.5rem]">
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]" px-[0.5rem]">
               <div>
-                <TwoColumn
-                  reverse           
-                  cardImage="/images/digital-arrest-scam.jpg"
-                  cardAltName="photo of a digitally scammed girl who is in panic mood"
-                  cardHeading="Remote access / Digital arrest scams"
-                  sourceName="Freepik"
-                  originalSource="https://www.freepik.com/free-photo/young-woman-sitting-cafe-with-her-laptop-stressful-wor_1025751.htm"
-                >
+                <TwoColumn {...remoteAccess}>
                   <p class="typography-body-md text-[var(--form-text-secondary)]">
                     Remote access scams begin as a phone impersonation scam,
                     then the scammer gains access to your all Bank account using
@@ -447,9 +280,7 @@ dispatch("pageData", pageData);
                     <h2 class="font-semibold">How It Works</h2>
                     <ul class="space-y-3 typography-body-md text-[var(--form-text-secondary)]">
                       <li>
-                        🚫 Scammers contact victims via <span
-                          class="font-semibold"
-                        >
+                        🚫 Scammers contact victims via <span class="font-semibold">
                           video calls, emails, or phone calls
                         </span> , claiming to be from the police or government.
                       </li>
@@ -459,9 +290,7 @@ dispatch("pageData", pageData);
                         </span> to appear legitimate.
                       </li>
                       <li>
-                        🚫 Victims are falsely accused of <span
-                          class="font-semibold"
-                        >
+                        🚫 Victims are falsely accused of <span class="font-semibold">
                           money laundering, cybercrimes, or tax fraud
                         </span> .
                       </li>
@@ -475,44 +304,11 @@ dispatch("pageData", pageData);
                 </TwoColumn>
               </div>
 
-              <AboveTitleWithoutIconCard
-                contents={{
-                  xlGridCol: 2,
-                  cards: [
-                    {
-                      heading: " Warning Signs",
-
-                      para: `<ul class="space-y-6"> 
-                        <li> ⚠️ Unexpected calls claiming you're under investigation.</li>
-                         <li>  ⚠️Threats of <span class="font-semibold"> immediate arrest or legal action </span> . </li>
-                          <li> ⚠️ Requests for <span class="font-semibold"> payments via cryptocurrency, gift cards, or wire transfers </span> .  </li>
-                           <li> ⚠️ Pressure to keep the conversation <span class="font-semibold"> secret</span>  from family or the bank.  </li>
-                    </ul> `,
-                    },
-                    {
-                      heading: "What to Do",
-                      para: `<ul class="space-y-6"> 
-                     <li> ✅   <span class="font-semibold"> Stay Calm</span>  – Real police don’t demand instant payments.</li>
-                        <li > ✅ <span class="font-semibold"> Hang Up & Verify</span>  – Call official government or law enforcement numbers.</li>
-                         <li>  ✅ <span class="font-semibold"> Never Pay</span>  – Authorities never ask for money over the phone.</li>
-                          <li> ✅ <span class="font-semibold"> Report the Scam</span>  – Notify law enforcement or cybersecurity agencies. </li>
-                          
-                    </ul> `,
-                    },
-                  ],
-                }}
-              />
+              <AboveTitleWithoutIconCard contents={warningSignsAndWhatToDo} />
             </div>
           {:else if index == 3}
-            <div class="bg-white text-black">
-              <TwoColumnWithImage
-                contents={{
-                  cardImage: "/images/call1930.png",
-                  cardAltName: "housing-figure",
-                  cardHeading: "Cyber crime help-line",
-                  reverse: false,
-                }}
-              >
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]">
+              <TwoColumnWithImage contents={helpline}>
                 <p class="typography-body-md text-[var(--form-text-secondary)]">
                   The Government of India has set up a dedicated National
                   Cybercrime Helpline at 1930, where victims can seek assistance
@@ -529,63 +325,11 @@ dispatch("pageData", pageData);
     </div>
 
     <div slot="secondary">
-      <HelpList
-        contents={{
-          heading: `We're here to help`,
-          xlGridCol: 4,
-          borderBottom: true,
-          cards: [
-            {
-              heading: "Book an </br> appointment",
-              para: "Book instantly to speak to a loan specialist at a time that suits you",
-              icon: "/icons/appointment.svg",
-              altName: "appointment Icon",
-              url: "/appointment",
-            },
-            {
-              heading: "Check loan offers",
-              para: "In as little as 10 minutes and tailored exactly as per your financial profile.",
-              icon: "/icons/manageLoan2.svg",
-              altName: "Alert Icon",
-              url: "/get-started/how-can-we-help",
-            },
-            {
-              heading: "Contact us",
-              para: "Fast-track your call and connect with a specialist in the Digital DSA.",
-              icon: "/icons/contact.svg",
-              altName: "Alert Icon",
-              url: "/contact",
-            },
-            {
-              heading: "Message us",
-              para: `Get instant help from our online assistants  or chat to a specialist.`,
-              icon: "/icons/msg.svg",
-              altName: "Alert Icon",
-              url: "/contact",
-            },
-          ],
-        }}
-      />
+      <HelpList contents={helpList} />
       <ThingsYouShould
-        thinkKnow={{
-          heading: "Things You Should Know",
-          paraGraph: [
-            `<span class="font-semibold">DigitalDSA’s Role:</span> DigitalDSA is an independent loan facilitator and web aggregator, connecting users with licensed banks and NBFCs. We do not provide loans directly and do not guarantee approval. All loan terms, conditions, and decisions are solely at the discretion of the respective lender.`,
-
-            `<span class="font-semibold">Beware of Fraud & Scams:</span> DigitalDSA does not ask for payments, OTPs, or banking credentials at any stage. If you receive such requests claiming to be from DigitalDSA, do not respond and report them immediately.`,
-
-            `<span class="font-semibold">Fake Loan Offers & Business Email Scams:</span> Scammers may impersonate banks, financial institutions, or DigitalDSA representatives to trick users into making payments or sharing confidential details. Always verify loan offers directly with the lender through official contact details. DigitalDSA is not responsible for financial losses due to third-party fraud.`,
-
-            `<span class="font-semibold">Remote Access & Digital Arrest Scams:</span> Fraudsters may pretend to be law enforcement or financial regulators, falsely accusing users of financial crimes and demanding payments. DigitalDSA or its partners will never ask for payments through cryptocurrency, gift cards, or wire transfers. If you receive such threats, **hang up and verify through official channels.**`,
-
-            `<span class="font-semibold">User Responsibility & Security:</span> Users are responsible for verifying the authenticity of any loan-related communication. Protect your personal and financial information by using strong passwords, enabling two-factor authentication, and verifying any payment requests before proceeding. DigitalDSA is not liable for losses due to phishing, scams, or user negligence.`,
-
-            `<span class="font-semibold">Report Fraud:</span> If you suspect a scam, report it immediately. The Government of India’s **National Cybercrime Helpline (1930)** provides assistance to victims of cyber fraud. Reporting scams early improves the chances of recovery and prevents further fraud.`,
-          ],
-        }}
+        thinkKnow={thingsYouShouldKnow}
         disc="list-decimal"
-></ThingsYouShould>
-
+      ></ThingsYouShould>
     </div>
   </NewPageLayout>
 </section>

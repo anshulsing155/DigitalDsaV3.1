@@ -1,6 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
+  import content from "$lib/data/website/businessLoanEligibility.json";
+
+  const { heading, description, note, banks } = content.comparisonSection;
 
   // Define interface for type safety
   interface Bank {
@@ -17,50 +20,6 @@
   let visible = $state(false);
   let sortKey = $state<keyof Bank | null>(null);
   let sortDirection = $state<'asc' | 'desc'>('asc');
-
-  // Bank data
-  const banks: Bank[] = [
-    {
-      name: 'HDFC Bank',
-      logo: '/bankList/HDFC-Bank.svg',
-      minTurnover: '₹40 Lakhs',
-      minBusinessAge: '3 years',
-      maxLoanAmount: 'Up to ₹50 Lakhs',
-      interestRate: '14% - 19%',
-      processingFee: '1.5% - 2%',
-      uniqueFeature: 'Overdraft facility available with business current account',
-    },
-    {
-      name: 'ICICI Bank',
-      logo: '/bankList/ICICI-Bank.svg',
-      minTurnover: '₹30 Lakhs',
-      minBusinessAge: '2 years',
-      maxLoanAmount: 'Up to ₹40 Lakhs',
-      interestRate: '15% - 18%',
-      processingFee: '1% - 2%',
-      uniqueFeature: 'Pre-approved offers for existing customers',
-    },
-    {
-      name: 'SBI',
-      logo: '/bankList/sbi-logo.svg',
-      minTurnover: '₹20 Lakhs',
-      minBusinessAge: '2 years',
-      maxLoanAmount: 'Up to ₹25 Lakhs',
-      interestRate: '11% - 16%',
-      processingFee: '0.5% - 1%',
-      uniqueFeature: 'Special schemes for MSME sector',
-    },
-    {
-      name: 'Axis Bank',
-      logo: '/bankList/Axis-Bank.svg',
-      minTurnover: '₹35 Lakhs',
-      minBusinessAge: '3 years',
-      maxLoanAmount: 'Up to ₹30 Lakhs',
-      interestRate: '14% - 17%',
-      processingFee: '1% - 1.5%',
-      uniqueFeature: 'Digital approval process with minimal documentation',
-    },
-  ];
 
   // Derived sorting
   let sortedBanks = $derived.by(() => {
@@ -96,10 +55,10 @@
 <section class="py-16" aria-labelledby="bank-comparison">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <h2 id="bank-comparison" class="text-4xl sm:text-5xl font-extrabold text-center text-[var(--form-text)] mb-6 tracking-tight">
-      Compare Banks for Business Loans
+      {heading}
     </h2>
     <p class="text-lg sm:text-xl text-center text-[var(--form-text-secondary)] max-w-4xl mx-auto mb-12 leading-relaxed">
-      Explore varying eligibility criteria and features from top banks to find the best loan option for your business.
+      {description}
     </p>
 
     {#if visible}
@@ -158,7 +117,7 @@
 
       <div class="mt-8 text-center">
         <p class="text-sm text-[var(--form-text-secondary)] italic">
-          Note: Information is indicative and may vary based on individual profiles and bank policies. Always verify with the bank.
+          {note}
         </p>
       </div>
     {/if}
