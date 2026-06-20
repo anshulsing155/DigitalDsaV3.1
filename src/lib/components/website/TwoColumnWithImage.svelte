@@ -10,6 +10,7 @@
 			originalSource?: string;
 			reverse?: boolean;
 		};
+		isBorder?: boolean;
 		children?: import('svelte').Snippet;
 	};
 
@@ -22,12 +23,15 @@
 			originalSource: '',
 			reverse: false
 		},
+		isBorder = false,
 		children
 	}: Props = $props();
 </script>
 
 <div
-	class="relative grid items-start gap-8 space-x-20 border-b border-[var(--form-border)] px-2 py-16 md:gap-12 lg:grid-cols-2 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
+	class="relative grid items-start gap-8 space-x-20 {isBorder
+		? 'border-b border-[var(--form-border)]'
+		: ''} px-2 py-16 md:gap-12 lg:grid-cols-2 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
 >
 	<!-- Image -->
 	<div
@@ -56,7 +60,7 @@
 	<!-- Content -->
 	<div class="flex flex-col gap-2 justify-self-start" class:lg\:order-first={contents.reverse}>
 		{#if contents.cardHeading}
-			<h3 class="typography-h2-md text-[var(--form-text)] mb-8">
+			<h3 class="typography-h2-md mb-8 text-[var(--form-text)]">
 				{@html contents.cardHeading}
 			</h3>
 		{/if}

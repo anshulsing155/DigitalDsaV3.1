@@ -216,7 +216,7 @@
 				<section
 					id="process"
 					data-section="process"
-					class="section border-b border-[var(--form-border)] py-[4rem] px-[0.5rem] lg:px-16"
+					class="section border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-16"
 				>
 					{#each [content.verificationProcess] as verificationProcess}
 						<div class="grid grid-cols-3 gap-[2rem]">
@@ -276,7 +276,7 @@
 					{/each}
 				</section>
 
-				<section id="fees" data-section="fees" class="section py-[4rem] px-[0.5rem] lg:px-16">
+				<section id="fees" data-section="fees" class="section px-[0.5rem] py-[4rem] lg:px-16">
 					<div class="grid grid-cols-3 gap-[2rem]">
 						<h2 class="typography-h2-md col-span-3 mt-4 text-[var(--form-text)] lg:col-span-1">
 							{content.rates.heading}
@@ -407,7 +407,7 @@
 					{:else if index == 4}
 						<div
 							id="process"
-							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)] px-[0.5rem] lg:px-16"
+							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)] lg:px-16"
 						>
 							{#each [content.verificationProcess] as verificationProcess}
 								<div class="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3">
@@ -467,7 +467,7 @@
 					{:else if index == 5}
 						<div
 							id="fees"
-							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)] px-[0.5rem] lg:px-16"
+							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)] lg:px-16"
 						>
 							<div class="grid grid-cols-1 gap-[2rem]">
 								<h2 class="typography-h2-md text-[var(--form-text)]">
@@ -527,10 +527,15 @@
 			</div>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
+		<!-- <div slot="secondary">
 			<HelpList contents={content.helpList}></HelpList>
 			<ThingsYouShould thinkKnow={content.thinkKnow} disc="list-decimal" containerClass="lg:px-0"
 			></ThingsYouShould>
-		</div>
+		</div> -->
+
+		{#snippet secondary()}
+			<HelpList contents={content.helpList} />
+			<ThingsYouShould thinkKnow={content.thinkKnow} disc="list-decimal" containerClass="lg:px-0" />
+		{/snippet}
 	</PageDesign>
 </section>

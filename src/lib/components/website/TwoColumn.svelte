@@ -9,11 +9,12 @@
 		sourceName = '',
 		originalSource = '',
 		reverse = false,
-		imageHeight = 4
+		imageHeight = 4,
+		isBorder = false
 	} = $props();
 </script>
 
-<div class="relative grid items-start gap-[3rem] py-[4rem] lg:grid-cols-2 lg:gap-0">
+<div class="relative grid items-start gap-[3rem] pt-[4rem] pb-[4rem] lg:pb-[8rem] lg:grid-cols-2 lg:gap-0 {isBorder ? 'border-b border-[var(--form-border)]' : ''}">
 	<!-- Left div (Image) -->
 	<div
 		class="top-0 w-full transform lg:relative"
@@ -39,7 +40,7 @@
 	<!-- Right div (Content) -->
 	<div class="flex flex-col gap-[2.5rem] justify-self-start" class:lg:order-first={reverse}>
 		{#if cardHeading}
-			<h3 class="typography-h2-md text-black md:text-start dark:text-white">
+			<h3 class="typography-h2-md text-[var(--form-text)] md:text-start">
 				{@html cardHeading}
 			</h3>
 		{/if}

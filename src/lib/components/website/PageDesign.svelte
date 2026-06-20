@@ -179,7 +179,7 @@ window.removeEventListener("resize", updateSize); // Cleanup
         {@render children()}
       {/if}
     </div>
-    <div class="lg:p-[4rem]">
+    <div class="lg:p-[4rem] px-[0.5rem]">
       {#if secondary}
         {@render secondary()}
       {/if}

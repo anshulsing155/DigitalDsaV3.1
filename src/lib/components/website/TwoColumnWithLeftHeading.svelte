@@ -1,12 +1,19 @@
 <script>
-	let { contents = {}, children = undefined, paddingClass = 'px-[0.5rem] lg:px-16' } = $props();
+	let {
+		contents = {},
+		children = undefined,
+		paddingClass = 'px-[0.5rem] lg:px-16',
+		isBorder = false
+	} = $props();
 
 	import Anchor from './Anchor.svelte';
 	import Button from './Button.svelte';
 </script>
 
 <section
-	class="border-[var(--form-border)] py-[4rem] text-[var(--form-text)] lg:border-b lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+	class="py-[4rem] text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+		? 'border-b border-[var(--form-border)]'
+		: ''}"
 >
 	<div class={`grid items-start gap-[2rem] lg:grid-cols-12 lg:gap-[4rem] ${paddingClass}`}>
 		<!-- left-heading  -->

@@ -13,7 +13,7 @@
 	);
 </script>
 
-<section class="w-full bg-[var(--landing-bg)] text-[var(--form-text)]">
+<section class="w-full bg-[var(--landing-bg)] text-[var(--form-text)]  border border-[var(--landing-glass-border)]">
 	<div id="parentDiv" class="relative mx-1 lg:mx-auto">
 		{#if shouldShowBreadcrumbs}
 			<div class="hidden py-4 pl-[4rem] lg:flex">
@@ -53,7 +53,7 @@
 					{/if}
 				</div>
 			</div>
-			<div class="right-0 mx-auto h-full bg-[var(--landing-bg)] text-[var(--form-text)]">
+			<div class="right-0 mx-auto h-full bg-[var(--landing-bg)] text-[var(--form-text)] border border-[var(--landing-glass-border)]">
 				<!-- svelte-ignore slot_element_deprecated -->
 				<slot />
 			</div>
