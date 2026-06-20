@@ -17,7 +17,7 @@
 
 <!-- class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full {contents.borderBottom ? 'lg:border-b' : 'border-b-0'} border-[var(--form-border)]" -->
 <section
-	class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+	class="w-full border-b border-[var(--form-border)] lg:last:border-b last:border-b-0 px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 >
 	<div class={`flex w-full flex-col gap-[2rem] ${paddingClass}`}>
 		<div class="flex flex-col gap-2">

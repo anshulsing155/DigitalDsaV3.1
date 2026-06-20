@@ -1,13 +1,13 @@
 <script>
-	let { contents = {}, children = undefined } = $props();
+	let { contents = {}, children = undefined, paddingClass = 'px-[0.5rem] lg:px-16' } = $props();
 
 	import CardWithoutIcon from './CardWithoutIcon.svelte';
 </script>
 
 <section
-	class="w-full border-b last:border-b-0 border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+	class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] last:border-b-0 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 >
-	<div class="flex w-full flex-col gap-[2rem]">
+	<div class={`flex w-full flex-col gap-[2rem] ${paddingClass}`}>
 		<div class="flex flex-col gap-2">
 			{#if contents.heading}
 				<h2 class="typography-h2-md text-[var(--form-text)]">

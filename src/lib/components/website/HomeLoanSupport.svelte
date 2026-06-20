@@ -302,7 +302,7 @@
 		<FeedbackCheck />
 
 		<div slot="secondary">
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow.thinkKnow}
 				disc={content.common_components.thinkYouShouldKnow.disc}

@@ -11,21 +11,21 @@
 		"coverAlt": "DigitalDSA executive explains top-up loan offers",
 		"sourceName": "Freepik",
 		"originalSource": "https://www.freepik.com/free-photo/young-beautiful-woman-works-office-speak-video-call-laptop_20082710.htm",
-		"heading": "Home Loan Top-Up:<br> Everything You Need to Know",
+		"heading": "Home Loan Top-Up Opportunities for DSAs:<br>Increase Approvals & Earn More Commissions",
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		],
-		"para": "A <span class='font-semibold'>Home Loan Top-Up</span> is an additional loan that you can avail over and above your existing home loan. It is a great option for borrowers who need extra funds for renovation, education, medical emergencies, or even a new investment. Since the loan is given against an existing home loan, the processing is simpler and faster than other loan types."
+		"para": "A <span class='font-semibold'>Home Loan Top-Up</span> allows DSAs to unlock new business opportunities from existing home loan customers. Instead of sourcing a completely new loan file, you can help eligible borrowers access additional funding based on their repayment history and available property value. With DigitalDSA, you can compare lender policies, identify the right bank or NBFC, reduce rejection risks, and maximize both customer value and commission earnings."
 	},
 	"navList": {
 		"items": [
@@ -54,68 +54,68 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Check lowest rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
 	},
 	"started": {
 		"intro": {
-			"heading": "What is a Home Loan Top-Up?",
-			"secPara": "A <span class=\"font-semibold\">home loan top-up</span> is an additional amount that can be borrowed over an existing home loan, without the need for a fresh property mortgage. This means you can access extra funds without going through the hassle of a new loan application.",
-			"listTopPara": "Key Features:",
+			"heading": "What is a Home Loan Top-Up Opportunity for DSAs?",
+			"secPara": "A <span class=\"font-semibold\">Home Loan Top-Up</span> enables DSAs to generate additional business from existing home loan customers who require extra funding. Instead of sourcing a fresh secured loan, eligible borrowers can access additional funds based on their repayment history and available property value. This creates a faster, higher-conversion opportunity for DSAs while helping clients meet their financial needs.",
+			"listTopPara": "<span class=\"font-semibold\">Why Top-Up Loans Matter for DSAs:</span>",
 			"list": [
 				{
-					"heading": "Available only to existing home loan borrowers."
+					"heading": "<span class=\"font-normal text-[var(--form-text-secondary)]\">Generate repeat business from existing home loan customers.</span>"
 				},
 				{
-					"heading": "Loan amount depends on the current outstanding loan and property value."
+					"heading": "<span class=\"font-normal text-[var(--form-text-secondary)]\">Identify funding opportunities based on property value appreciation and outstanding loan balance.</span>"
 				},
 				{
-					"heading": "No restrictions on end-use (except speculative purposes like stock market trading)."
+					"heading": "<span class=\"font-normal text-[var(--form-text-secondary)]\">Help customers access additional funds without a fresh property mortgage.</span>"
 				},
 				{
-					"heading": "Interest rates are lower than personal loans."
+					"heading": "<span class=\"font-normal text-[var(--form-text-secondary)]\">Offer a lower-interest alternative compared to personal loans.</span>"
 				},
 				{
-					"heading": "Processing is faster compared to new loans."
+					"heading": "<span class=\"font-normal text-[var(--form-text-secondary)]\">Benefit from faster processing and higher approval potential compared to new loan applications.</span>"
 				}
 			]
 		},
 		"eligibility": {
-			"heading": "Eligibility Criteria for a Top-Up Loan",
+			"heading": "How DSAs Can Identify Eligible Top-Up Loan Customers",
 			"xlGridCol": 3,
 			"list": [
 				{
 					"icon": "/icons/checklist.svg",
 					"iconAltName": "check Icon",
-					"heading": "Good Repayment History",
+					"heading": "Strong Repayment Track Record",
 					"desc": [
-						"Most lenders require <span class=\"font-semibold\">at least 12 months</span> of timely EMI payments on your existing home loan.",
-						"No missed or delayed payments in recent months."
+						"Target customers who have completed <span class=\"font-semibold\">at least 12 months</span> of regular EMI payments on their existing home loan.",
+						"A clean repayment history improves approval chances and reduces lender risk concerns."
 					]
 				},
 				{
 					"icon": "/icons/apply-pen.svg",
 					"iconAltName": "pen Icon",
-					"heading": "Sufficient Loan Eligibility",
+					"heading": "Available Lending Capacity",
 					"desc": [
-						"Banks will check your <span class=\"font-semibold\">loan-to-value (LTV) ratio</span> to ensure the total loan amount (existing loan + top-up) does not exceed 75%-80% of the property value.",
-						"Your <span class=\"font-semibold\">monthly income</span> and <span class=\"font-semibold\">debt-to-income ratio</span> also determine your eligibility."
+						"Evaluate the customer's <span class=\"font-semibold\">Loan-to-Value (LTV) ratio</span> to determine whether additional funding can be accommodated within lender limits.",
+						"Assess income, existing obligations, and repayment capacity before recommending a lender."
 					]
 				},
 				{
 					"icon": "/icons/ownership.svg",
 					"iconAltName": "home Icon",
-					"heading": "Clean Property Title & Ownership",
+					"heading": "Property & Documentation Readiness",
 					"desc": [
-						"The property should be <span class=\"font-semibold\">legally clear</span> with no pending disputes.",
-						"The property should already be <span class=\"font-semibold\">registered in your name</span>."
+						"Ensure the property has a <span class=\"font-semibold\">clear legal title</span> and is free from ownership disputes.",
+						"Verify that all property and existing loan documents are available to avoid processing delays."
 					]
 				}
 			]
@@ -123,104 +123,107 @@
 	},
 	"fee": {
 		"tenure": {
-			"heading": "Loan Amount & Tenure",
+			"heading": "Top-Up Loan Limits & Lending Parameters",
 			"list": [
 				{
-					"desc": "<span class=\"font-semibold\">Minimum Loan– </span> ₹2 lakh (varies by bank)"
+					"desc": "<span class=\"font-semibold\">Minimum Top-Up Amount– </span> Usually starts from ₹2 lakh (varies by lender)."
 				},
 				{
-					"desc": "<span class=\"font-semibold\">Maximum Loan– </span> Up to ₹1 crore (or as per bank policy)"
+					"desc": "<span class=\"font-semibold\">Maximum Top-Up Amount– </span> Can go up to ₹1 crore or more depending on lender policy, property value, and customer eligibility."
 				},
 				{
-					"desc": "<span class=\"font-semibold\">Loan Tenure– </span> Up to 15-20 years (varies by lender)"
+					"desc": "<span class=\"font-semibold\">Repayment Tenure– </span> Typically aligned with the remaining home loan tenure and may extend up to 15–20 years."
 				},
 				{
-					"desc": "<span class=\"font-semibold\">Loan-to-Value (LTV)– </span> Total loan (existing + top-up) should not exceed 80% of property value."
+					"desc": "<span class=\"font-semibold\">Loan-to-Value (LTV) Limit– </span> Total exposure (existing home loan + top-up) generally should not exceed 75%-80% of the property's market value."
 				}
 			]
 		},
 		"rates": {
-			"heading": "Interest Rates & Processing Fees",
+			"heading": "Interest Rates, Fees & Charges",
 			"list": [
 				{
-					"desc": "<span class=\"font-semibold\">Interest Rate– </span> Generally 0.5%-1% higher than your existing home loan rate."
+					"desc": "<span class=\"font-semibold\">Interest Rates– </span> Usually 0.5%-1% higher than the customer's existing home loan rate, depending on lender policy."
 				},
 				{
-					"desc": "<span class=\"font-semibold\">Processing Fees– </span> 0.5% - 1% of loan amount (some banks offer discounts)."
+					"desc": "<span class=\"font-semibold\">Processing Fees– </span> Generally range from 0.5%-1% of the sanctioned amount, with occasional lender-specific offers."
 				},
 				{
-					"desc": "<span class=\"font-semibold\">Prepayment Charges– </span> Nil for floating-rate loans, may apply for fixed-rate loans."
+					"desc": "<span class=\"font-semibold\">Prepayment Charges– </span> Generally not applicable on floating-rate loans; lender-specific conditions may apply for fixed-rate loans."
 				},
 				{
-					"desc": "<span class=\"font-semibold\">Other Charges– </span> Legal, valuation, and documentation charges may apply."
+					"desc": "<span class=\"font-semibold\">Additional Charges– </span> Property valuation, legal verification, technical assessment, and documentation charges may apply."
 				}
 			],
-			"listSecPara": "<span class=\"font-semibold\">💡 Tip:</span> If you have an existing home loan at a <span class=\"font-semibold\">higher interest rate</span>, consider transferring your loan to a lower rate before taking a top-up."
+			"listSecPara": "<span class=\"font-semibold\">💡 DSA Tip:</span> Before recommending a top-up, evaluate whether a <span class=\"font-semibold\">Balance Transfer + Top-Up</span> option can help the customer secure a lower interest rate and a higher eligible loan amount."
 		}
 	},
 	"step": {
 		"guide": {
 			"cardImage": "/images/step-by-step.jpg",
-			"cardAltName": "Photo pf a couple descending step-by-step to represent a step-by-step process of top-up loans",
-			"cardHeading": "Home Loan Top-Up Processing: <br> Step-by-Step Guide"
+			"cardAltName": "DSA processing a home loan top-up application step by step",
+			"cardHeading": "Home Loan Top-Up Sourcing Process:<br> A DSA's Step-by-Step Guide"
 		},
 		"list": [
 			{
-				"title": "1️⃣ Check Your Loan Eligibility",
+				"title": "1️⃣ Identify Eligible Customers",
 				"bullets": [
-					"Use an Eligibility Calculator (We can help! 😉).",
-					"Check your remaining loan balance and current property value."
+					"Review existing home loan customers with strong repayment records.",
+					"Check outstanding loan balance, property value, and top-up eligibility.",
+					"Use DigitalDSA tools to compare lender-specific criteria."
 				]
 			},
 			{
-				"title": "2️⃣ Submit Application & Documents",
+				"title": "2️⃣ Collect Client Documents",
 				"bullets": [
-					"KYC Documents (Aadhaar, PAN, Passport, Voter ID)",
-					"Income Proof (Salary Slips, ITR, Bank Statements)",
-					"Property Papers (Registry, Approved Plan)",
-					"Existing Loan Details (Sanction Letter, EMI Schedule)"
+					"Gather KYC documents (Aadhaar, PAN, Passport, Voter ID).",
+					"Collect income documents such as salary slips, ITRs, and bank statements.",
+					"Obtain property documents and existing loan details.",
+					"Verify documentation completeness before submission."
 				]
 			},
 			{
-				"title": "3️⃣ Bank Verification & Processing",
+				"title": "3️⃣ Match the Client with the Right Lender",
 				"bullets": [
-					"The lender will verify your documents.",
-					"A property re-evaluation may be done.",
-					"Loan amount is decided based on eligibility."
+					"Compare lender policies, LTV limits, and eligibility requirements.",
+					"Evaluate interest rates, fees, and approval criteria.",
+					"Submit the application to the lender with the highest approval potential."
 				]
 			},
 			{
-				"title": "4️⃣ Loan Approval & Offer Letter",
+				"title": "4️⃣ Coordinate Verification & Approval",
 				"bullets": [
-					"Once approved, you’ll receive a sanction letter with loan details.",
-					"Carefully check interest rates, tenure, and charges."
+					"Assist the customer during lender verification and document checks.",
+					"Track property valuation and technical review status.",
+					"Follow up with the lender or RM to ensure smooth processing."
 				]
 			},
 			{
-				"title": "5️⃣ Disbursement of Funds",
+				"title": "5️⃣ Sanction & Disbursement",
 				"bullets": [
-					"The loan amount is credited to your bank account.",
-					"The EMIs start from the next billing cycle."
+					"Review the sanction terms with the customer.",
+					"Ensure all final documentation is completed.",
+					"Support the customer until funds are successfully disbursed."
 				]
 			}
 		],
-		"processingTime": "Generally takes 3-7 working days if all documents are in order.",
+		"processingTime": "Most top-up loan applications can be processed within 3–7 working days when documentation and eligibility requirements are met.",
 		"buttonBanner": {
-			"heading": "See our home loan budget planner",
-			"btnName": "Explore now",
+			"heading": "Estimate your client's repayment capacity",
+			"btnName": "Explore calculators",
 			"btnLink": "/planners/budget-planner",
-			"btnClass": "btn-secondary text-[var(--form-text)]"
+			"btnClass": "btn-secondary"
 		},
 		"prosCons": {
-			"heading": "Pros & Cons of a Home Loan Top-Up",
+			"heading": "Why DSAs Should Offer Home Loan Top-Ups",
 			"cardData": [
 				{
-					"title": "✅ Pros:",
-					"para": "1️⃣ Lower Interest Rates than personal loans. <br><br> 2️⃣ No Collateral Needed (same property mortgage is used). <br><br> 3️⃣ Longer Tenure (up to 20 years). <br><br> 4️⃣ Quick Processing since you're an existing borrower. <br><br> 5️⃣ No Restrictions on Fund Usage (except speculative purposes)."
+					"title": "✅ Benefits for DSAs",
+					"para": "1️⃣ Generate additional revenue from existing customers.<br><br>2️⃣ Faster processing compared to fresh home loan files.<br><br>3️⃣ Higher approval potential due to established repayment history.<br><br>4️⃣ Opportunity to cross-sell Balance Transfer + Top-Up solutions.<br><br>5️⃣ Improve customer retention through repeat business and ongoing financial support."
 				},
 				{
-					"title": "❌ Cons:",
-					"para": "1️⃣ Increases EMI Burden if not planned properly. <br><br> 2️⃣ Higher Interest than Home Loans (usually 0.5%-1% extra)."
+					"title": "⚠️ Points to Evaluate",
+					"para": "1️⃣ Customer repayment capacity should be assessed before recommending a top-up.<br><br>2️⃣ LTV limits and lender policies may restrict eligible loan amounts.<br><br>3️⃣ Interest rates are typically slightly higher than the customer's existing home loan rate.<br><br>4️⃣ Incomplete documentation can delay approvals and disbursement."
 				}
 			]
 		}
@@ -228,79 +231,79 @@
 	"help": {
 		"contents": {
 			"cardImage": "/images/how-we-help.jpg",
-			"cardAltName": "photo of DigitalDSA executive helping customer on phone",
-			"cardHeading": "How we Help",
+			"cardAltName": "DigitalDSA helping loan DSAs find suitable top-up loan opportunities",
+			"cardHeading": "How DigitalDSA Helps Loan DSAs",
 			"reverse": true
 		},
 		"list": [
 			{
-				"bold": "Compare Top-Up Loan Offers",
-				"text": " from multiple banks."
+				"bold": "Compare Multiple Lenders",
+				"text": " to identify the most suitable top-up loan options for your clients."
 			},
 			{
-				"bold": "Instant Eligibility Check",
-				"text": " with our tools."
+				"bold": "Pre-Check Eligibility",
+				"text": " to reduce rejection rates before submitting a file."
 			},
 			{
-				"bold": "Lower Interest Rate Guidance",
-				"text": "(Balance Transfer + Top-Up)."
+				"bold": "Balance Transfer + Top-Up Analysis",
+				"text": " to help clients secure better rates and higher eligible funding."
 			},
 			{
-				"bold": "Negotiate with lenders for better deals!",
-				"text": ""
+				"bold": "Access Lender-Specific Insights",
+				"text": " including eligibility criteria, LTV limits, and processing requirements."
 			},
 			{
-				"bold": "Paperwork Assistance",
-				"text": " to speed up approval."
+				"bold": "Streamline Documentation",
+				"text": " to improve turnaround times and speed up approvals."
 			}
 		],
-		"tip": "📌 Want to check your eligibility? Visit our Home Loan Top-Up Page or call us for personalized assistance."
+		"tip": "<span class=\"font-semibold\">📌 Looking for the right lender for your client's top-up loan requirement? Use DigitalDSA to compare lender policies, evaluate eligibility, and identify the best approval opportunity.</span>"
 	},
 	"tool": {
 		"threeColumn": {
-			"heading": "Unlock the Door to Your New Home",
+			"heading": "Grow Your Top-Up Loan Business with DigitalDSA",
 			"cardData": [
 				{
-					"title": "Secure the Best Top-Up Loan Offers",
-					"para": "Get the best top-up loan deals with competitive interest rates and flexible repayment options. Enhance your financial stability by accessing additional funds on your existing loan.",
-					"btnName": "Compare bank offers",
+					"title": "Find the Right Lender for Every Client",
+					"para": "Compare top-up loan offers across multiple banks and NBFCs. Identify lenders based on eligibility, LTV limits, interest rates, and approval criteria to improve conversion rates.",
+					"btnName": "Compare lender offers",
 					"btnLink": "/get-started/how-can-we-help",
-					"btnClass": "btn-primary text-[var(--form-text)]"
+					"btnClass": "btn-primary"
 				},
 				{
-					"title": "Get the best home loan deal",
-					"para": "Get the most from your home loan application process and book time with our Home Lending Specialist at a time that suits you.",
+					"title": "Get Expert Support for Complex Cases",
+					"para": "Connect with our lending specialists for guidance on balance transfer + top-up opportunities, lender selection, documentation, and approval strategies.",
 					"btnName": "Book an appointment",
 					"btnLink": "/appointment",
-					"btnClass": "btn-secondary text-[var(--form-text)]"
+					"btnClass": "btn-secondary"
 				}
 			]
 		},
 		"blackCard": {
-			"heading": "Home loan calculator",
+			"heading": "Top-Up Loan Tools for DSAs",
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "Check offers from other banks",
+					"heading": "Compare Balance Transfer Opportunities",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icon-calc",
 					"url": "/calculators/balance-transfer-calculator"
 				},
 				{
-					"heading": " How much can I borrow?",
+					"heading": "Check Client Eligibility",
 					"icon": "/icons/apply.svg",
 					"iconAltName": "icons-apply",
 					"url": "/calculators/eligibility-calculator"
 				},
 				{
-					"heading": " Home loan repayments calculator",
+					"heading": "Estimate EMI Impact",
 					"icon": "/icons/lap.svg",
 					"iconAltName": "loan-icon",
 					"url": "/planners/part-payment-planner"
 				},
 				{
-					"heading": "Calculators & tools?",
+					"heading": "Explore All Loan Tools",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icons-calc",
 					"url": "/home-loan/home-loan-tools-calculator"
@@ -308,41 +311,41 @@
 			]
 		},
 		"topIconCard": {
-			"heading": "Smart savings calculators – Plan your future with confidence",
+			"heading": "Additional Loan Planning Tools",
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "Know How Long Your Savings Will Last",
-					"para": "Determine how many years your savings can support your lifestyle.",
+					"heading": "Check Top-Up Loan Eligibility",
+					"para": "Evaluate whether your client qualifies for additional funding based on income, obligations, and lender criteria.",
 					"icon": "/icons/clock.svg",
-					"altName": "clock-icon",
-					"linkName": "Check Your Savings Longevity",
-					"url": "/money-map/how-long-will-your-savings-support-you"
+					"altName": "eligibility-icon",
+					"linkName": "Check Eligibility",
+					"url": "/calculators/eligibility-calculator"
 				},
 				{
-					"heading": "Track Your Progress Towards Your Goal​",
-					"para": "Estimate the time required to reach your financial milestones.",
+					"heading": "Compare Balance Transfer Benefits",
+					"para": "Identify opportunities to reduce interest costs and unlock higher top-up eligibility.",
 					"icon": "/icons/phoneConnection.svg",
-					"altName": "phoneConnection-icon",
-					"linkName": "Plan Your Savings Journey",
-					"url": "/money-map/how-long-will-it-take-to-save"
+					"altName": "balance-transfer-icon",
+					"linkName": "Compare Options",
+					"url": "/calculators/balance-transfer-calculator"
 				},
 				{
-					"heading": "Set a Target for Retirement Savings​​",
-					"para": "Calculate the amount needed for a secure and comfortable retirement.",
+					"heading": "Estimate EMI Affordability",
+					"para": "Assess how an additional loan amount may impact your client's monthly repayment obligations.",
 					"icon": "/icons/negotiate.svg",
-					"altName": "negotiate-icon",
-					"linkName": "Plan Your Retirement Fund",
-					"url": "/money-map/how-much-to-save-by-retirement"
+					"altName": "emi-icon",
+					"linkName": "Calculate EMI Impact",
+					"url": "/planners/part-payment-planner"
 				},
 				{
-					"heading": "Grow Your Savings with Consistency​",
-					"para": "See how regular contributions can maximize your savings over time.",
+					"heading": "Explore All Loan Tools",
+					"para": "Access calculators, planners, and resources to help place the right loan product with the right lender.",
 					"icon": "/icons/coinHouse.svg",
-					"altName": "coinHouse-icon",
-					"linkName": "Calculate Your Future Savings",
-					"url": "/money-map/how-much-can-i-save-with-regular-contributions"
+					"altName": "tools-icon",
+					"linkName": "View All Tools",
+					"url": "/home-loan/home-loan-tools-calculator"
 				}
 			]
 		}
@@ -350,49 +353,49 @@
 	"messageUs": {
 		"contents": {
 			"cardImage": "/images/message.jpg",
-			"cardAltName": "CardCover",
-			"cardHeading": "Message us 24/7",
+			"cardAltName": "DigitalDSA support team assisting loan DSAs",
+			"cardHeading": "Talk to Our Lending Experts",
 			"sourceName": "DigitalDSA",
-			"originalSource": "www.digitaldsa.com"
+			"originalSource": "[www.digitaldsa.com](http://www.digitaldsa.com)"
 		},
-		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"para": "Need help finding the right lender for a top-up loan case? Our team can assist with lender selection, eligibility assessment, documentation requirements, balance transfer opportunities, and approval strategies. Whether you're handling a straightforward application or a complex case, DigitalDSA is here to help you improve conversions and close more business.",
 		"button": {
 			"link": "/contact",
-			"btnClass": "btn-secondary text-[var(--form-text)]",
-			"btnName": "Message us"
+			"btnClass": "btn-secondary",
+			"btnName": "Contact our team"
 		}
 	},
 	"common_components": {
 		"helpList": {
 			"contents": {
-				"heading": "We're here to help",
+				"heading": "We're Here to Support Your Loan Business",
 				"xlGridCol": 4,
 				"borderBottom": true,
 				"cards": [
 					{
 						"heading": "Book an </br> appointment",
-						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+						"para": "Schedule a discussion with our lending specialists for guidance on lender selection, eligibility, and complex loan cases.",
 						"icon": "/icons/appointment.svg",
 						"altName": "appointment Icon",
 						"url": "/appointment"
 					},
 					{
-						"heading": "Check loan offers",
-						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"heading": "Compare lender offers",
+						"para": "Evaluate loan products from multiple banks and NBFCs to find the best approval opportunities for your clients.",
 						"icon": "/icons/manageLoan2.svg",
 						"altName": "Alert Icon",
 						"url": "/get-started/how-can-we-help"
 					},
 					{
-						"heading": "Contact us",
-						"para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+						"heading": "Contact our team",
+						"para": "Connect directly with DigitalDSA experts for support on documentation, lender policies, and loan processing.",
 						"icon": "/icons/contact.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
 					},
 					{
 						"heading": "Message us",
-						"para": "Get instant help from our online assistants  or chat to a specialist.",
+						"para": "Get quick assistance on loan cases, eligibility queries, and lender recommendations from our support team.",
 						"icon": "/icons/msg.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
@@ -404,10 +407,10 @@
 			"thinkKnow": {
 				"heading": "Things you should know",
 				"paraGraph": [
-					"<span class=\"font-semibold\">Independent Facilitator:</span> Digital DSA acts as an independent loan facilitator, helping home loan borrowers explore balance transfer options with licensed banks and NBFCs. We do not provide loans directly and are not a financial institution.",
-					"<span class=\"font-semibold\">Balance Transfer Approval:</span> The approval of a home loan balance transfer depends entirely on the bank or NBFC where you apply. Digital DSA does not guarantee approval or influence the lender’s decision. All applications are subject to the lender’s credit assessment, eligibility criteria, interest rates, and applicable charges.",
-					"<span class=\"font-semibold\">Liability:</span> Digital DSA is not responsible for delays, rejections, or any financial losses arising during the balance transfer process. The final decision made by the bank or NBFC is binding on both the borrower and Digital DSA.",
-					"<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions."
+					"<span class=\"font-semibold\">Independent Facilitator:</span> Digital DSA serves as an independent loan facilitator, helping business owners connect with licensed banks and NBFCs for home loan solutions. We do not provide loans directly and are not a financial institution.",
+					"<span class=\"font-semibold\">Loan Approval:</span> Home loan approval for business owners depends entirely on the respective bank or NBFC's assessment of financial stability, income consistency, and creditworthiness. Digital DSA does not guarantee approval, as decisions are based on the lender’s policies, terms, and conditions. Interest rates, repayment options, and processing fees may vary accordingly.",
+					"<span class=\"font-semibold\">Liability:</span> Digital DSA is not responsible for any delays, rejections, or financial losses encountered during the loan application process. The final approval decision rests with the bank or NBFC, and their terms will apply.",
+					"<span class=\"font-semibold\">Important Information:</span> The details shared on this page are for informational purposes only and may not be suitable for every business owner. Home loan eligibility and benefits depend on various factors, including income stability, business history, and lender requirements. Exclusive loan offers may be available through Digital DSA, subject to specific eligibility criteria."
 				]
 			},
 			"disc": "list-decimal"
