@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Button from './Button.svelte';
-
 	import type { Snippet } from 'svelte';
 
 	type ThinkKnow = {

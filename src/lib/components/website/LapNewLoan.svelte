@@ -248,7 +248,7 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
 							<ThreeColumWithLeftHeading contents={content.tools.moneyMap} />
-							<div class="px-[0.5rem] lg:px-[4rem] border-t border-[var(--form-border)]">
+							<div class="border-t border-[var(--form-border)] px-[0.5rem] lg:px-[4rem]">
 								<AccordionWithLeftHeading contents={content.tools.faq} />
 							</div>
 						</div>
@@ -259,13 +259,13 @@
 
 		<FeedbackCheck />
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>

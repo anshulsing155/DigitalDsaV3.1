@@ -8,6 +8,8 @@
 	import WhyChoose from '$lib/components/website/WhyChoose.svelte';
 	import { onMount } from 'svelte';
 	import content from '$lib/data/website/financialWellbeing.json';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 
 	let activeSection = $state(''); // Initially no section is active
 
@@ -45,43 +47,6 @@
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
-
-	const toggleDropdown = (event: any, index: any) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			icon.classList.remove('fa-angle-up');
-			icon.classList.add('fa-angle-down');
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			icon.classList.remove('fa-angle-down');
-			icon.classList.add('fa-angle-up');
-
-			// Scroll the opened accordion into view
-			setTimeout(() => {
-				detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}, 100);
-		}
-	};
 </script>
 
 <Seo
@@ -98,9 +63,13 @@
 			<StickyNavbar navList={content.stickyNavBar} {activeSection}></StickyNavbar>
 		</div>
 
-		<div class="hidden px-[2rem] lg:block lg:px-[4rem]">
-			<div class="relative pb-[14rem]" data-section="wellbeing" id="wellbeing">
-				<ThingsYouShould thinkKnow={content.wellBeing} disc="list-decimal" />
+		<div class="hidden px-[0.5rem] lg:block lg:px-[4rem]">
+			<div
+				class="relative border-b border-[var(--form-border)] pb-[14rem]"
+				data-section="wellbeing"
+				id="wellbeing"
+			>
+				<ThingsYouShould thinkKnow={content.wellBeing} disc="list-decimal" containerClass="px-0" />
 				<div class="absolute top-[50%] grid grid-cols-3 gap-[2rem]">
 					{#each content.wellBeingCards as card}
 						<div
@@ -121,22 +90,28 @@
 					{/each}
 				</div>
 			</div>
-			<div data-section="measured" id="measured" class="border-y border-[var(--form-border)]">
-				<ThingsYouShould thinkKnow={content.measured} disc="list-disc">
-					<p slot="list" class="font-minParaFont text-[.8rem]">
-						97% of our first time visitor have taken this survey.
-					</p>
+
+			<div data-section="measured" id="measured">
+				<ThingsYouShould
+					thinkKnow={content.measured}
+					disc="list-disc"
+					containerClass="px-0"
+					sectionBorder={true}
+				>
+					{#snippet list()}
+						<p class="font-minParaFont text-[.8rem]">
+							97% of our first time visitor have taken this survey.
+						</p>
+					{/snippet}
 				</ThingsYouShould>
 			</div>
-			<div
-				id="assessment"
-				data-section="assessment"
-				class="flex flex-col border-b border-[var(--form-border)] pt-[4rem] pb-[8rem]"
-			>
+
+			<div id="assessment" data-section="assessment">
 				<TwoColumn
 					cardImage={content.assessment.cardImage}
 					cardAltName={content.assessment.cardAltName}
 					cardHeading={content.assessment.cardHeading}
+					isBorder={true}
 				>
 					<div
 						class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]"
@@ -155,22 +130,27 @@
 			</div>
 
 			<div data-section="resources" id="resources">
-				<WhyChoose facilities={content.resources} />
+				<WhyChoose facilities={content.resources} paddingClass="px-0" />
 			</div>
 		</div>
 
 		<div class="lg:hidden">
 			{#each content.navBarMedium as list, index}
 				<details
-					class="border-spanColor dropdown bg-darkColor col-span-3 text-white {index <
+					class="dropdown border-bgBtn bg-darkColor col-span-3 text-white {index <
 					content.navBarMedium.length - 1
-						? 'border-b'
+						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
-					<summary class="list-none px-6 py-4" onclick={(e) => toggleDropdown(e, index)}>
-						<div class="flex items-center justify-between">
-							<h2>{list}</h2>
-							<span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+					<summary
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
 						</div>
 					</summary>
 
@@ -227,7 +207,7 @@
 							</TwoColumn>
 						</div>
 					{:else if index == 3}
-						<div id="resources" class="bg-[var(--landing-bg)] px-[0.5rem] text-[var(--form-text)]">
+						<div id="resources" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<WhyChoose facilities={content.resources} />
 						</div>
 					{/if}
@@ -235,9 +215,9 @@
 			{/each}
 		</div>
 
-		<div slot="secondary" class="">
+		{#snippet secondary()}
 			<HelpList contents={content.help} />
-			<ThingsYouShould thinkKnow={content.thinkKnow} disc="list-disc" />
-		</div>
+			<ThingsYouShould thinkKnow={content.thinkKnow} disc="list-disc" containerClass="px-0" />
+		{/snippet}
 	</NewPageLayout>
 </section>

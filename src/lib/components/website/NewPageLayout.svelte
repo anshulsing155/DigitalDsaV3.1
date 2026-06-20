@@ -5,13 +5,16 @@
 	import TestBreadCrumb from './TestBreadCrumb.svelte';
 	import Tooltip from './Tooltip.svelte';
 	import HeroImage from './HeroImage.svelte';
-
+	import type { Snippet } from 'svelte';
+	
 	type Props = {
 		pageData?: any;
 		actionBtns?: any[];
+		secondary?: Snippet;
+		children?: Snippet;
 	};
 
-	const { pageData = {}, actionBtns = [] }: Props = $props();
+	const { pageData = {}, actionBtns = [], secondary, children }: Props = $props();
 
 	let isPageLoaded = $state(false);
 	let isBelow1024 = $state(false);
@@ -133,12 +136,16 @@
 			class="relative z-10 mx-2 flex flex-col border border-[var(--form-border)] bg-[var(--landing-bg)] lg:mx-0"
 		>
 			<!-- svelte-ignore slot_element_deprecated -->
-			<slot />
+			{#if children}
+				{@render children()}
+			{/if}
 		</div>
 
 		<div class="lg:p-16">
 			<!-- svelte-ignore slot_element_deprecated -->
-			<slot name="secondary" />
+			{#if secondary}
+				{@render secondary()}
+			{/if}
 		</div>
 	</div>
 </section>
