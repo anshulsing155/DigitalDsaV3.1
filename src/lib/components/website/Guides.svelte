@@ -5,9 +5,9 @@
 </script>
 
 <section
-	class="grid gap-4 border-b border-[var(--form-border)] pt-[4rem] pb-[4rem] text-black md:gap-[2rem] lg:grid-cols-7 lg:gap-4 lg:pb-[8rem] dark:text-white"
+	class="grid gap-4 border-b border-[var(--form-border)] pt-[4rem] pb-[4rem] md:gap-[2rem] lg:grid-cols-7 lg:gap-4 lg:pb-[8rem]"
 >
-	<div class="typography-h2-md lg:typography-h2 grid font-semibold md:text-start lg:col-span-3">
+	<div class="typography-h2-md text-[var(--form-text)] grid font-semibold md:text-start lg:col-span-3">
 		{@html guide.heading}
 	</div>
 	<div class="grid gap-[2rem] lg:col-span-4">

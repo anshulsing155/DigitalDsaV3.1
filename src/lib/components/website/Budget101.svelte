@@ -280,25 +280,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="mt-[4rem] col-span-12 md:col-span-3 md:justify-self-end">
-          <h2 class="text-2xl font-semibold">Related Budget Blogs</h2>
-          <ul class="mt-2 grid grid-cols-2 md:grid-cols-1 gap-2">
-          {#each budgetBlogs as blog}
-            {#if blog.slug !== blogData.slug}
-              <li class="w-full md:max-w-[20rem]">
-                <button
-                  class="w-full bg-black text-white p-4 text-center"
-                  onclick={() => {
-                    goto(`/knowledge/budget/${blog.slug}`);
-                  }}
-                >
-                  {blog.title}
-                </button>
-              </li>
-            {/if}
-          {/each}
-        </ul>
-        </div> -->
+        
       </div>
     </div>
   </NewPageLayout>

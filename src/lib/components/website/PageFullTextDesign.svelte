@@ -14,18 +14,18 @@
 </script>
 
 <!--  -->
-<section class="mx-auto w-full">
-  <div id="pageDesign" class="relative mx-1 lg:mx-auto">
-    <div class="relative z-20 lg:mx-0">
+<section class="w-full bg-[var(--landing-bg)]">
+  <div id="pageDesign" class="relative mx-1 lg:mx-auto ">
+    <div class="relative z-20 lg:mx-0 border border-[var(--landing-glass-border)] border-b-0">
       <div class="relative w-full bg-[var(--landing-bg)] text-[var(--form-text)] px-[2rem] py-[3rem] lg:p-[4rem]">
         <div class="flex flex-col gap-4 sm:gap-[2rem] lg:w-2/3">
           <h1
-            class="typography-h3 font-semibold typography-h2 sm:text-mobHeadFont lg:text-headFont"
+            class="typography-h1 text-[var(--form-text)]"
           >
             {pageData.heroHeading}
           </h1>
           {#if pageData.heroParagraph}
-            <p class="typography-body-sm md:typography-body-md">
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               {@html pageData.heroParagraph}
             </p>
           {/if}
@@ -35,7 +35,7 @@
         ></div>
       </div>
     </div>
-    <div class="relative flex flex-col bg-[var(--landing-bg)]">
+    <div class="relative flex flex-col bg-[var(--landing-bg)] border border-[var(--form-border)]">
       <!-- svelte-ignore slot_element_deprecated -->
       <slot />
     </div>

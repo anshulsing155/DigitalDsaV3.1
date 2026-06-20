@@ -94,7 +94,7 @@
       "<p class=\"flex items-center gap-2\"> <span><img src=\"/icons/circle-check.svg\" alt=\"circle-check-icon\" class=\"h-4\" /></span> Receive personalized tips to enhance financial security </p>"
     ],
     "btnName": "Measure your score",
-    "btnClass": "btn-primary w-full"
+    "btnClass": "btn-primary w-full",
     "btnLink": "/financial-wellbeing/form"
   },
   "assessment": {

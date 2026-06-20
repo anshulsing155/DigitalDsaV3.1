@@ -29,18 +29,17 @@
 			"It’s like the website writes a reminder on a tiny, virtual post it note, and sticks it onto you. That note might be something like: “This person has a teddy bear in their shopping basket” or “This person wants to stay logged in.”",
 			"Cookies are how websites seem to magically remember who you are. When you go back to a website, it checks your computer for the cookies it left there – reminding itself who you are, what pages you’ve visited, the account settings you chose, things like that.",
 			"Almost everything you do on the internet involves cookies in some way.Here's more about cookies and how they work."
-		]
+		],
+		"sectionBorder": true
 	},
 	"firstPartyCookies": {
 		"heading": "First party cookies (cookies set on Digital DSA’s website)",
-		"subPara": [
-			"Type of Cookies and What these cookies do :"
-		],
+		"subPara": ["Type of Cookies and What these cookies do :"],
 		"paraGraph": [
-			"Strictly necessary : Essential to keep our website running on a basic level. They log you into your account and live chat, and help you make payments for some of our services.",
-			"Functional : 	Recognize you when you return to our website, so we can do things like remember your preferences from last time.",
-			"User identification :	We display ads on Facebook and other sites to track which ad led you to our website and how you interact with it once you’re here. This information helps us make the website and future ads more relevant to you. For example, we might show you information about Home Loan instead of Loan Against Property (LAP) or other Loans based on your interests.",
-			"Analytics, performance and research :	Recognize and count how many visitors we get and how they use our website. This helps us improve the way the website works – for example, making pages easier to find."
+			"<strong>Strictly necessary:</strong> Essential to keep our website running on a basic level. They log you into your account and live chat, and help you make payments for some of our services.",
+			"<strong>Functional:</strong> Recognize you when you return to our website, so we can do things like remember your preferences from last time.",
+			"<strong>User identification:</strong> We display ads on Facebook and other sites to track which ad led you to our website and how you interact with it once you're here. This information helps us make the website and future ads more relevant to you. For example, we might show you information about Home Loan instead of Loan Against Property (LAP) or other loans based on your interests.",
+			"<strong>Analytics, performance and research:</strong> Recognize and count how many visitors we get and how they use our website. This helps us improve the way the website works—for example, making pages easier to find."
 		],
 		"bottomPara": [
 			"All the cookies we use play a part in fraud detection, prevention and investigation to help us keep our users secure. For example, cookies can help us identify if someone has accessed an account that doesn’t belong to them, and show us how they used that account."
@@ -72,7 +71,10 @@
 			"To change your web browser preferences:"
 		],
 		"links": [
-			{ "name": "HotStar", "url": "https://help.hotjar.com/hc/en-us/articles/6952777582999-Cookies-Set-by-the-Hotjar-Tracking-Code" },
+			{
+				"name": "HotStar",
+				"url": "https://help.hotjar.com/hc/en-us/articles/6952777582999-Cookies-Set-by-the-Hotjar-Tracking-Code"
+			},
 			{ "name": "Amplitude", "url": "https://amplitude.com/privacy" },
 			{ "name": "Google", "url": "https://policies.google.com/privacy" },
 			{ "name": "MicroSoft", "url": "https://www.microsoft.com/en-gb/privacy/privacystatement" }

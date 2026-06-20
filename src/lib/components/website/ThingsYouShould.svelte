@@ -21,6 +21,7 @@
 		thinkKnow?: ThinkKnow;
 		disc?: string;
 		isBorder?: boolean;
+		sectionBorder?: boolean;
 		colSpan?: number;
 		containerClass?: string;
 	};
@@ -29,17 +30,18 @@
 		thinkKnow = {},
 		disc = 'list-disc',
 		isBorder = false,
+		sectionBorder = false,
 		colSpan = 8,
 		containerClass = 'lg:px-16'
 	}: Props = $props();
 </script>
 
 <section
-	class="w-full {isBorder
-		? 'border-b border-[var(--form-border)]'
-		: 'border-b-0'} bg-[var(--landing-bg)] px-[0.5rem] py-16 pb-4 lg:py-0 lg:pt-16 lg:pb-0 {containerClass}"
+	class="w-full {sectionBorder
+		? 'border-b border-[var(--form-border)]  pb-[4rem] lg:pb-[8rem]'
+		: 'border-b-0 lg:pb-0'} bg-[var(--landing-bg)] px-[0.5rem] py-16 lg:py-0 lg:pt-16 {containerClass}"
 >
-	<div class="grid lg:grid-cols-12 gap-4 lg:gap-8">
+	<div class="grid gap-4 lg:grid-cols-12 lg:gap-8">
 		{#if thinkKnow.heading}
 			<div class="col-span-12 lg:col-span-4">
 				<h2 class="typography-h2-md text-[var(--form-text)]">
@@ -48,9 +50,7 @@
 			</div>
 		{/if}
 
-		<div
-			class={`col-span-12 text-[var(--form-text-secondary)] lg:col-span-8`}
-		>
+		<div class={`col-span-12 text-[var(--form-text-secondary)] lg:col-span-8`}>
 			<div class="flex flex-col gap-6">
 				{#if thinkKnow.subHeading}
 					<h3 class="typography-body-lg font-semibold text-[var(--form-text)]">

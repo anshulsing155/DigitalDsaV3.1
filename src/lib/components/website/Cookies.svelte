@@ -1,258 +1,236 @@
 <script>
-  import ThingsYouShould from "./ThingsYouShould.svelte";
-  import WeAreHereHelp from "./WeAreHereHelp.svelte";
-  import StickyNavbar from "./StickyNavbar.svelte";
-  import PageFullTextDesign from "./PageFullTextDesign.svelte";
-  import Payments from "./Payments.svelte";
-  import { onMount } from "svelte";
-  import Seo from "./Seo.svelte";
-  import content from "$lib/data/website/cookies.json";
+	import ThingsYouShould from './ThingsYouShould.svelte';
+	import WeAreHereHelp from './WeAreHereHelp.svelte';
+	import StickyNavbar from './StickyNavbar.svelte';
+	import PageFullTextDesign from './PageFullTextDesign.svelte';
+	import Payments from './Payments.svelte';
+	import { onMount } from 'svelte';
+	import Seo from './Seo.svelte';
+	import content from '$lib/data/website/cookies.json';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 
-  let pageData = content.pageData;
-  let subList = content.subList;
-  let navBarMedium = content.navBarMedium;
-  let cookies = content.cookies;
-  let firstPartyCookies = content.firstPartyCookies;
-  let thirdPartyCookies = content.thirdPartyCookies;
-  let deleteCookies = content.deleteCookies;
-  let help = content.help;
+	let pageData = content.pageData;
+	let subList = content.subList;
+	let navBarMedium = content.navBarMedium;
+	let cookies = content.cookies;
+	let firstPartyCookies = content.firstPartyCookies;
+	let thirdPartyCookies = content.thirdPartyCookies;
+	let deleteCookies = content.deleteCookies;
+	let help = content.help;
 
-  const toggleDropdown = (event, index) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement;
+	// logic for second nav bar which is not working yet
+	let activeSection = $state(''); // Initially no section is active
 
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
+	// This function sets the first section as active on initial load
+	const initializeActiveSection = () => {
+		const firstSection = document.querySelector('[data-section]');
+		if (firstSection) {
+			activeSection = firstSection.id;
+		}
+	};
 
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
+	// Handle scroll event to dynamically update the active section
+	const handleScroll = () => {
+		const sections = document.querySelectorAll('[data-section]');
+		let currentSection = '';
 
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      icon.classList.remove("fa-angle-up");
-      icon.classList.add("fa-angle-down");
-    } else {
-      detailsElement.setAttribute("open", "true");
-      icon.classList.remove("fa-angle-down");
-      icon.classList.add("fa-angle-up");
-    }
-    setTimeout(() => {
-      detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  };
+		sections.forEach((section) => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top <= 200 && rect.bottom >= 200) {
+				currentSection = section.id;
+			}
+		});
 
-  // logic for second nav bar which is not working yet
-  let activeSection = $state(''); // Initially no section is active
+		if (currentSection) {
+			activeSection = currentSection; // Update the active section dynamically
+		}
+	};
 
-  // This function sets the first section as active on initial load
-  const initializeActiveSection = () => {
-    const firstSection = document.querySelector("[data-section]");
-    if (firstSection) {
-      activeSection = firstSection.id;
-    }
-  };
+	// Initialize the first active section when the component loads
+	onMount(() => {
+		initializeActiveSection();
+		window.addEventListener('scroll', handleScroll);
 
-  // Handle scroll event to dynamically update the active section
-  const handleScroll = () => {
-    const sections = document.querySelectorAll("[data-section]");
-    let currentSection = "";
-
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= 200 && rect.bottom >= 200) {
-        currentSection = section.id;
-      }
-    });
-
-    if (currentSection) {
-      activeSection = currentSection; // Update the active section dynamically
-    }
-  };
-
-  // Initialize the first active section when the component loads
-  onMount(() => {
-    initializeActiveSection();
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
 <Seo
-  type="WebPage"
-  title={content.seo.title}
-  description={content.seo.description}
-  keywords={content.seo.keywords}
+	type="WebPage"
+	title={content.seo.title}
+	description={content.seo.description}
+	keywords={content.seo.keywords}
 />
 
 <section>
-  <PageFullTextDesign {pageData}>
-    <div class="hidden lg:block">
-      <StickyNavbar navList={subList} {activeSection} />
-      <div class="px-[2rem] lg:px-[4rem]">
-        <div
-          id="cookies"
-          class="border-b border-dividerColor"
-          data-section="cookies"
-        >
-          <ThingsYouShould thinkKnow={cookies} />
-        </div>
+	<PageFullTextDesign {pageData}>
+		<div class="hidden lg:block">
+			<StickyNavbar navList={subList} {activeSection} />
+			<div class="lg:px-[4rem]">
+				<div id="cookies" data-section="cookies">
+					<ThingsYouShould
+						thinkKnow={cookies}
+						sectionBorder={cookies.sectionBorder}
+						containerClass="px-0"
+					/>
+				</div>
 
-        <div
-          data-section="firstPartyCookies"
-          id="firstPartyCookies"
-          class="py-[2rem] border-b border-[var(--form-border)]"
-        >
-          <Payments supportHeading="Different types of cookies">
-            <div class="grid grid-cols-2 gap-[2rem]">
-              {#each firstPartyCookies.types as type}
-                <div class="flex flex-col col-span-1 gap-[2rem]">
-                  <h2 class="typography-h3 font-semibold text-text-main">
-                    {type.title}
-                  </h2>
-                  <p>
-                    {type.desc}
-                  </p>
-                </div>
-              {/each}
-            </div>
-          </Payments>
-        </div>
+				<div data-section="firstPartyCookies" id="firstPartyCookies">
+					<Payments supportHeading="Different types of cookies" isBorder={true}>
+						<div class="grid grid-cols-2 gap-[2rem]">
+							{#each firstPartyCookies.types as type}
+								<div class="col-span-1 flex flex-col gap-[2rem]">
+									<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+										{type.title}
+									</h2>
+									<p class="typography-body-md text-[var(--form-text-secondary)]">
+										{type.desc}
+									</p>
+								</div>
+							{/each}
+						</div>
+					</Payments>
+				</div>
 
-        <div
-          data-section="thirdPartyCookies"
-          id="thirdPartyCookies"
-          class="border-b border-dividerColor"
-        >
-          <ThingsYouShould thinkKnow={thirdPartyCookies} disc="list-disc">
-            <ul slot="list" class="list-disc ml-5">
-              {#each thirdPartyCookies.links as link}
-                <a class="underline underline-offset-4 hover:no-underline" href={link.url}><li>{link.name}</li></a>
-              {/each}
-            </ul>
-          </ThingsYouShould>
-        </div>
+				<div data-section="thirdPartyCookies" id="thirdPartyCookies">
+					<ThingsYouShould
+						thinkKnow={thirdPartyCookies}
+						disc="list-disc"
+						sectionBorder={true}
+						containerClass="px-0"
+					>
+						<ul slot="list" class="ml-5 list-disc">
+							{#each thirdPartyCookies.links as link}
+								<a
+									class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
+									href={link.url}><li>{link.name}</li></a
+								>
+							{/each}
+						</ul>
+					</ThingsYouShould>
+				</div>
 
-        <div id="deleteCookies" data-section="deleteCookies" class="py-[2rem]">
-          <Payments supportHeading={deleteCookies.heading}>
-            <div class="flex flex-col gap-[2rem]">
-              {#each deleteCookies.subPara.slice(0, 3) as paragraph}
-                <p>{paragraph}</p>
-              {/each}
-              <p>{deleteCookies.subPara[3]}</p>
-              {#each deleteCookies.browserInstructions as browser}
-                <div class="flex flex-col gap-4">
-                  <h2 class="typography-h3 font-semibold text-text-main">{browser.heading}</h2>
-                  <div class="flex flex-col gap-4">
-                    <p>{@html browser.para}</p>
-                    <p>
-                      For more instructions visit <span
-                        class="underline underline-offset-4 hover:no-underline"
-                        ><a href={browser.link.url}>{browser.link.text}</a></span
-                      >.
-                    </p>
-                  </div>
-                </div>
-              {/each}
-            </div>
-          </Payments>
-        </div>
-      </div>
-    </div>
-    <div class="lg:hidden">
-      {#each navBarMedium as list, index}
-        <details
-          class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < navBarMedium.length - 1 ? 'border-b' : ''}"
-        >
-          <summary
-            class="list-none px-[1rem] py-[1.5rem]"
-            onclick={(e) => { e.preventDefault(); toggleDropdown(e, index); }}
-          >
-            <div class="flex justify-between items-center">
-              <h2>{list}</h2>
-              <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
-            </div>
-          </summary>
-          {#if index == 0}
-            <div id="cookies" class="text-black bg-white">
-              <ThingsYouShould thinkKnow={cookies} />
-            </div>
-          {:else if index == 1}
-            <div
-              id="firstPartyCookies"
-              class="text-black bg-white px-[0.5rem]"
-            >
-              <Payments supportHeading="Different types of cookies">
-                <div class="grid md:grid-cols-2 gap-[2rem]">
-                  {#each firstPartyCookies.types as type}
-                    <div class="flex flex-col col-span-1 gap-[2rem]">
-                      <h2 class="typography-h3 font-semibold text-text-main">
-                        {type.title}
-                      </h2>
-                      <p>
-                        {type.desc}
-                      </p>
-                    </div>
-                  {/each}
-                </div>
-              </Payments>
-            </div>
-          {:else if index == 2}
-            <div id="thirdPartyCookies" class="text-black bg-white">
-              <ThingsYouShould thinkKnow={thirdPartyCookies} disc="list-disc">
-                <ul slot="list" class="list-disc ml-5">
-                  {#each thirdPartyCookies.links as link}
-                    <a class="underline underline-offset-4 hover:no-underline" href={link.url}><li>{link.name}</li></a>
-                  {/each}
-                </ul>
-              </ThingsYouShould>
-            </div>
-          {:else if index == 3}
-            <div
-              id="deleteCookies"
-              class="text-black bg-white px-[0.5rem]"
-            >
-              <Payments supportHeading={deleteCookies.heading}>
-                <div class="flex flex-col gap-[2rem]">
-                  {#each deleteCookies.subPara.slice(0, 3) as paragraph}
-                    <p>{paragraph}</p>
-                  {/each}
-                  <p>{deleteCookies.subPara[3]}</p>
-                  {#each deleteCookies.browserInstructions as browser}
-                    <div class="flex flex-col gap-2">
-                      <h2 class="typography-h3 font-semibold text-text-main">
-                        {browser.heading}
-                      </h2>
-                      <div class="flex flex-col py-[1rem] gap-4">
-                        <p>{@html browser.para}</p>
-                        <p>
-                          For more instructions visit <span
-                            class="underline underline-offset-4 hover:no-underline"
-                            ><a href={browser.link.url}>{browser.link.text}</a></span
-                          >.
-                        </p>
-                      </div>
-                    </div>
-                  {/each}
-                </div>
-              </Payments>
-            </div>
-          {/if}
-        </details>
-      {/each}
-    </div>
-  </PageFullTextDesign>
+				<div id="deleteCookies" data-section="deleteCookies" class="py-[2rem]">
+					<Payments supportHeading={deleteCookies.heading}>
+						<div class="flex flex-col gap-[2rem]">
+							{#each deleteCookies.subPara.slice(0, 3) as paragraph}
+								<p>{paragraph}</p>
+							{/each}
+							<p>{deleteCookies.subPara[3]}</p>
+							{#each deleteCookies.browserInstructions as browser}
+								<div class="flex flex-col gap-4">
+									<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+										{browser.heading}
+									</h2>
+									<div class="flex flex-col gap-4">
+										<p>{@html browser.para}</p>
+										<p>
+											For more instructions visit <span
+												class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
+												><a href={browser.link.url}>{browser.link.text}</a></span
+											>.
+										</p>
+									</div>
+								</div>
+							{/each}
+						</div>
+					</Payments>
+				</div>
+			</div>
+		</div>
+		<div class="lg:hidden">
+			{#each navBarMedium as list, index}
+				<details
+					class="dropdown border-bgBtn bg-darkColor col-span-3 text-white {index <
+					content.navBarMedium.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
+				>
+					<summary
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
+
+					{#if index == 0}
+						<div id="cookies" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<ThingsYouShould thinkKnow={cookies} />
+						</div>
+					{:else if index == 1}
+						<div
+							id="firstPartyCookies"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-[4rem] text-[var(--form-text)]"
+						>
+							<Payments supportHeading="Different types of cookies">
+								<div class="grid gap-[2rem] md:grid-cols-2">
+									{#each firstPartyCookies.types as type}
+										<div class="col-span-1 flex flex-col gap-[2rem]">
+											<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+												{type.title}
+											</h2>
+											<p>
+												{type.desc}
+											</p>
+										</div>
+									{/each}
+								</div>
+							</Payments>
+						</div>
+					{:else if index == 2}
+						<div id="thirdPartyCookies" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<ThingsYouShould thinkKnow={thirdPartyCookies} disc="list-disc">
+								<ul slot="list" class="ml-5 list-disc">
+									{#each thirdPartyCookies.links as link}
+										<a
+											class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
+											href={link.url}><li>{link.name}</li></a
+										>
+									{/each}
+								</ul>
+							</ThingsYouShould>
+						</div>
+					{:else if index == 3}
+						<div
+							id="deleteCookies"
+							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+						>
+							<Payments supportHeading={deleteCookies.heading}>
+								<div class="flex flex-col gap-[2rem]">
+									{#each deleteCookies.subPara.slice(0, 3) as paragraph}
+										<p>{paragraph}</p>
+									{/each}
+									<p>{deleteCookies.subPara[3]}</p>
+									{#each deleteCookies.browserInstructions as browser}
+										<div class="flex flex-col gap-2">
+											<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+												{browser.heading}
+											</h2>
+											<div class="flex flex-col gap-4 py-[1rem]">
+												<p>{@html browser.para}</p>
+												<p>
+													For more instructions visit <span
+														class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
+														><a href={browser.link.url}>{browser.link.text}</a></span
+													>.
+												</p>
+											</div>
+										</div>
+									{/each}
+								</div>
+							</Payments>
+						</div>
+					{/if}
+				</details>
+			{/each}
+		</div>
+	</PageFullTextDesign>
 </section>

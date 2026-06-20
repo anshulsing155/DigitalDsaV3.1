@@ -35,6 +35,7 @@ import {
 	ArrowLeft,
 	Play,
 	Copy,
+	CopyCheck,
 	Archive,
 	MoveLeft,
 	Info,
@@ -261,7 +262,7 @@ import {
 	FlaskConical,
 
 	// Submission / confirm-modal redesign (LEND-1 stack pop, 2026-06-02)
-	Send,
+	Send
 } from 'lucide-svelte';
 
 // Re-export all icons for direct imports
@@ -288,6 +289,7 @@ export {
 	ArrowLeft,
 	Play,
 	Copy,
+	CopyCheck,
 	Archive,
 	MoveLeft,
 	Info,
@@ -454,6 +456,8 @@ export {
 // Keys are PascalCase icon names as used in the codebase
 const iconRegistry: Record<string, typeof User> = {
 	// Navigation & UI
+	Copy,
+	CopyCheck,
 	SquareCheck,
 	CircleUserRound,
 	Sun,

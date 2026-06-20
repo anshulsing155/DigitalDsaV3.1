@@ -1,35 +1,32 @@
 <script>
 	let {
-		supportHeading = "",
-		supportpara = "",
+		supportHeading = '',
+		supportpara = '',
 		colSpan = 1,
-		colSpanText = 2
+		colSpanText = 2,
+		isBorder = false
 	} = $props();
-
-
-
-  //s
-
-
 </script>
 
-<section class="grid lg:grid-cols-3 gap-[2rem] items-start pt-[4rem] pb-[8rem]">
-  <div class="lg:col-span-{colSpan} grid gap-4">
-    {#if supportHeading}
-      <p
-        class="typography-h3 font-semibold md:text-start md:typography-h2-md lg:typography-h2"
-      >
-        {supportHeading}
-      </p>
-    {/if}
-    <!-- svelte-ignore slot_element_deprecated -->
-    <slot name="para" />
-  </div>
+<section
+	class="grid items-start gap-[2rem] pt-[4rem] pb-4 lg:pb-[8rem] lg:grid-cols-3 {isBorder
+		? 'border-[var(--form-border)] border-b'
+		: ''}"
+>
+	<div class="lg:col-span-{colSpan} grid gap-4">
+		{#if supportHeading}
+			<p class="typography-h2-md text-[var(--form-text)] md:text-start">
+				{supportHeading}
+			</p>
+		{/if}
+		<!-- svelte-ignore slot_element_deprecated -->
+		<slot name="para" />
+	</div>
 
-  <div
-    class="lg:col-span-{colSpanText} grid md:gap-[2rem] typography-body-md text-[var(--form-text-secondary)] justify-self-end"
-  >
-    <!-- svelte-ignore slot_element_deprecated -->
-    <slot />
-  </div>
+	<div
+		class="lg:col-span-{colSpanText} typography-body-md grid justify-self-end text-[var(--form-text-secondary)] md:gap-[2rem]"
+	>
+		<!-- svelte-ignore slot_element_deprecated -->
+		<slot />
+	</div>
 </section>
