@@ -14,8 +14,8 @@
 	import { onMount } from 'svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/homeLoanToolsandCalculator.json';
-		import { toggleDropdown } from '$lib/utils/toggleDropdown';
-			import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -33,9 +33,7 @@
 		actionBtns: ButtonProps[];
 	}
 
-	let {
-		pageData = content.pageData
-	}: { pageData?: PageDataProps } = $props();
+	let { pageData = content.pageData }: { pageData?: PageDataProps } = $props();
 
 	// Inject store update callbacks dynamically for get-started actions
 	const pageDataWithClicks = $derived({
@@ -109,30 +107,28 @@
 		};
 	});
 
-	
-
 	// JSON-LD Structured Data Schema for Breadcrumbs
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		'itemListElement': [
+		itemListElement: [
 			{
 				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://www.digitaldsa.com'
+				position: 1,
+				name: 'Home',
+				item: 'https://www.digitaldsa.com'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Home Loan',
-				'item': 'https://www.digitaldsa.com/home-loan'
+				position: 2,
+				name: 'Home Loan',
+				item: 'https://www.digitaldsa.com/home-loan'
 			},
 			{
 				'@type': 'ListItem',
-				'position': 3,
-				'name': 'Home Loan Tools & Calculators',
-				'item': 'https://www.digitaldsa.com/home-loan/home-loan-tools-calculator'
+				position: 3,
+				name: 'Home Loan Tools & Calculators',
+				item: 'https://www.digitaldsa.com/home-loan/home-loan-tools-calculator'
 			}
 		]
 	};
@@ -159,18 +155,18 @@
 			</div>
 
 			<div id="Calculators" data-section="Calculators" class="section">
-				<AboveTitleWithoutIconCard contents={content.calculators.contents} />
+				<AboveTitleWithoutIconCard contents={content.calculators.contents} isBorder />
 			</div>
 
 			<div id="Tools" data-section="Tools" class="section">
 				<AboveTitleWithBlackCard contents={content.tools.moneyMap} />
-				<AboveTitleWithoutIconCard contents={content.tools.planners} />
+				<AboveTitleWithoutIconCard contents={content.tools.planners} isBorder />
 				<AboveTitleWithLeftIconCard contents={content.tools.journey} />
 			</div>
 
 			<div id="guides" data-section="guides" class="section">
-				<ButtonBanner contents={content.guides.buttonBanner} />
-				<AboveTitleWithTopIconCard contents={content.guides.topIconCards} />
+				<ButtonBanner contents={content.guides.buttonBanner} isBorder />
+				<AboveTitleWithTopIconCard contents={content.guides.topIconCards} isBorder/>
 			</div>
 		</div>
 
@@ -184,7 +180,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -196,19 +192,25 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="Calculators" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div
+							id="Calculators"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
+						>
 							<AboveTitleWithoutIconCard contents={content.calculators.contents} />
 						</div>
 					{:else if index === 1}
-						<div id="Tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="Tools" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<AboveTitleWithBlackCard contents={content.tools.moneyMap} />
-							<AboveTitleWithoutIconCard contents={content.tools.planners} />
+							<AboveTitleWithoutIconCard contents={content.tools.planners} isBorder/>
 							<AboveTitleWithLeftIconCard contents={content.tools.journey} />
 						</div>
 					{:else if index === 2}
-						<div id="guides" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<ButtonBanner contents={content.guides.buttonBanner} />
-							<AboveTitleWithTopIconCard contents={content.guides.topIconCards} />
+						<div
+							id="guides"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
+						>
+							<ButtonBanner contents={content.guides.buttonBanner} isBorder/>
+							<AboveTitleWithTopIconCard contents={content.guides.topIconCards} isBorder/>
 						</div>
 					{/if}
 				</details>
@@ -224,8 +226,8 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary" >
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder/>
 
 			<ThingsYouShould
 				thinkKnow={{
@@ -235,7 +237,7 @@
 				disc="list-decimal"
 				containerClass="lg:px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

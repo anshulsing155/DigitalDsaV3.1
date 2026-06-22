@@ -163,31 +163,33 @@
 			</div>
 
 			<div id="equity" data-section="equity" class="section">
-				<ThingsYouShould
-					thinkKnow={{
-						heading: content.equity.heading,
-						subPara: content.equity.subPara,
-						paraGraph: content.equity.paraGraph
-					}}
-					isBorder={content.equity.isBorder}
-					disc="list-disc"
-				/>
+				<div class="border-b border-[var(--form-border)]">
+					<ThingsYouShould
+						thinkKnow={{
+							heading: content.equity.heading,
+							subPara: content.equity.subPara,
+							paraGraph: content.equity.paraGraph
+						}}
+						isBorder={content.equity.isBorder}
+						disc="list-disc"
+					/>
+				</div>
 			</div>
 
 			<div id="topup" data-section="topup" class="section">
-				<AboveTitleWithoutIconCard contents={content.topup.contents} />
+				<AboveTitleWithoutIconCard contents={content.topup.contents} isBorder />
 				<AboveTitleWithBlackCard contents={content.topup.calculators} />
 			</div>
 
 			<div id="lap" data-section="lap" class="section">
-				<AboveTitleWithoutIconCard contents={content.lap.contents} />
+				<AboveTitleWithoutIconCard contents={content.lap.contents} isBorder />
 			</div>
 
 			<div id="difference" data-section="difference" class="section">
 				<div
-					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+					class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
-					<h2 class="typography-h2 py-5 text-center text-text-main dark:text-white">
+					<h2 class="typography-body-lg mb-6 !font-semibold text-[var(--form-text)]">
 						{content.difference.heading}
 					</h2>
 					<div>
@@ -199,7 +201,7 @@
 			</div>
 
 			<div id="howUseEquity" data-section="howUseEquity" class="section">
-				<ThreeColumWithLeftHeading contents={content.howUseEquity} />
+				<ThreeColumWithLeftHeading contents={content.howUseEquity} isBorder />
 			</div>
 
 			<div id="apply" data-section="apply" class="section">
@@ -212,7 +214,7 @@
 						disc="list-disc"
 					/>
 				</div>
-				<ButtonBanner contents={content.apply.buttonBanner} />
+				<ButtonBanner contents={content.apply.buttonBanner} isBorder />
 			</div>
 		</div>
 
@@ -226,7 +228,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -249,17 +251,17 @@
 							/>
 						</div>
 					{:else if index === 1}
-						<div id="topup" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
-							<AboveTitleWithoutIconCard contents={content.topup.contents} />
+						<div id="topup" class="bg-[var(--landing-bg)] pb-4">
+							<AboveTitleWithoutIconCard contents={content.topup.contents} isBorder />
 							<AboveTitleWithBlackCard contents={content.topup.calculators} />
 						</div>
 					{:else if index === 2}
-						<div id="lap" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
+						<div id="lap" class="bg-[var(--landing-bg)] pb-4">
 							<AboveTitleWithoutIconCard contents={content.lap.contents} />
 						</div>
 					{:else if index === 3}
-						<div id="difference" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
-							<div class="w-full px-[0.5rem] py-[2rem]">
+						<div id="difference" class="bg-[var(--landing-bg)] pb-4">
+							<div class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]">
 								<h2 class="typography-h2 py-5 text-center text-text-main dark:text-white">
 									{content.difference.heading}
 								</h2>
@@ -271,19 +273,21 @@
 							</div>
 						</div>
 					{:else if index === 4}
-						<div id="howUseEquity" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
+						<div id="howUseEquity" class="bg-[var(--landing-bg)] pb-4">
 							<ThreeColumWithLeftHeading contents={content.howUseEquity} />
 						</div>
 					{:else if index === 5}
-						<div id="apply" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
-							<ThingsYouShould
-								thinkKnow={{
-									heading: content.apply.heading,
-									paraGraph: content.apply.paraGraph
-								}}
-								disc="list-disc"
-							/>
-							<ButtonBanner contents={content.apply.buttonBanner} />
+						<div id="apply" class="bg-[var(--landing-bg)] pb-4">
+							<div class="border-b border-[var(--form-border)]">
+								<ThingsYouShould
+									thinkKnow={{
+										heading: content.apply.heading,
+										paraGraph: content.apply.paraGraph
+									}}
+									disc="list-disc"
+								/>
+							</div>
+							<ButtonBanner contents={content.apply.buttonBanner} isBorder/>
 						</div>
 					{/if}
 				</details>
@@ -299,8 +303,8 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 
 			<ThingsYouShould
 				thinkKnow={{
@@ -310,7 +314,7 @@
 				disc="list-decimal"
 				containerClass="lg:px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

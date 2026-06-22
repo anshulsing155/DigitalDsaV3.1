@@ -216,7 +216,7 @@
 				<TwoColumnWithLeftHeading contents={content.how.contents} isBorder/>
 
 				{#if content.how.exampleTableData}
-					<div class="border-b border-[var(--form-border)] px-[1rem] py-12 px-[0.5rem] lg:px-16">
+					<div class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]">
 						<h3 class="typography-body-lg mb-6 !font-semibold text-[var(--form-text)]">
 							{content.how.tableHeading}
 						</h3>
@@ -294,7 +294,7 @@
 							<TwoColumnWithLeftHeading contents={content.how.contents} isBorder/>
 
 							{#if content.how.exampleTableData}
-								<div class="border-b border-[var(--form-border)] px-[0.5rem] lg:px-16 py-12">
+								<div class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] border-b border-[var(--form-border)]">
 									<h3 class="typography-body-lg mb-6 !font-semibold text-[var(--form-text)]">
 										{content.how.tableHeading}
 									</h3>

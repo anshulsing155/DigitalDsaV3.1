@@ -146,9 +146,9 @@
 
 			<section id="whychoose" data-section="whychoose" class="section">
 				<div
-					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+					class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
-					<h2 class="typography-h2-md mb-6 text-center font-semibold text-[var(--form-text)]">
+					<h2 class="typography-body-lg mb-6 !font-semibold text-[var(--form-text)]">
 						{content.whychoose.heading}
 					</h2>
 					<div>
@@ -202,9 +202,9 @@
 					{:else if index == 2}
 						<div id="whychoose" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<div
-								class="w-full overflow-x-auto border-b border-[var(--form-border)] px-[0.5rem] py-[4rem]"
+								class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 							>
-								<h2 class="typography-h3 mb-[4rem] grid text-center font-semibold">
+								<h2 class="typography-h2 py-5 text-center text-text-main dark:text-white">
 									{content.whychoose.heading}
 								</h2>
 								<div>

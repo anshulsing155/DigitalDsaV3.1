@@ -158,13 +158,11 @@
 
 			<div id="compare" data-section="compare" class="section">
 				<div
-					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+					class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
-					<div class="">
 						{#each content.compare.exampleTableData as tableData}
 							<PaymentTable {tableData} />
 						{/each}
-					</div>
 					<p class="typography-body-md mt-4 text-[var(--form-text-secondary)]">
 						{@html content.compare.funFact}
 					</p>
@@ -251,7 +249,7 @@
 					{:else if index === 1}
 						<div id="compare" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<div
-								class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+								class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] border-b border-[var(--form-border)]"
 							>
 								<div class="">
 									{#each content.compare.exampleTableData as tableData}
