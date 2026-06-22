@@ -41,7 +41,6 @@
 					{#if step.btnName}
 						<Button
 							btnName={step.btnName}
-							btnBorder={step.btnBorder}
 							btnClass={step.btnClass}
 							link={step.btnLink}
 						/>
