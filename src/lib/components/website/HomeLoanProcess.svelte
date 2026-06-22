@@ -167,7 +167,7 @@
 			</div>
 
 			<div id="document" data-section="document" class="section">
-				<AboveTitleWithoutIconCard contents={content.document.contents}>
+				<AboveTitleWithoutIconCard contents={content.document.contents} isBorder>
 					<p class="typography-body-md text-[var(--form-text-secondary)]">
 						{@html content.document.proTip}
 					</p>
@@ -211,7 +211,7 @@
 			</div>
 
 			<div id="pitfalls" data-section="pitfalls" class="section">
-				<TwoColumnWithImage contents={content.pitfalls}>
+				<TwoColumnWithImage contents={content.pitfalls} isBorder>
 					<div class="typography-body-md flex flex-col gap-4 text-[var(--form-text-secondary)]">
 						<p>{content.pitfalls.para}</p>
 						<div class="space-y-4">
@@ -266,7 +266,7 @@
 							disc="list-disc"
 						/>
 					{:else if index === 1}
-						<div id="document" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
+						<div id="document" class="bg-[var(--landing-bg)] pb-4">
 							<AboveTitleWithoutIconCard contents={content.document.contents}>
 								<p class="typography-body-md text-[var(--form-text-secondary)]">
 									{@html content.document.proTip}
@@ -307,8 +307,8 @@
 							disc="list-disc"
 						/>
 					{:else if index === 4}
-						<div id="pitfalls" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
-							<TwoColumnWithImage contents={content.pitfalls}>
+						<div id="pitfalls" class="bg-[var(--landing-bg)] pb-4">
+							<TwoColumnWithImage contents={content.pitfalls} isBorder>
 								<div class="typography-body-md space-y-6 text-[var(--form-text-secondary)]">
 									<p>{content.pitfalls.para}</p>
 									<div class="space-y-4">
@@ -332,8 +332,8 @@
 			{/each}
 		</div>
 
-		<div slot="secondary">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder/>
 
 			<ThingsYouShould
 				thinkKnow={{
@@ -343,7 +343,7 @@
 				disc="list-decimal"
 				containerClass="lg:px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 
