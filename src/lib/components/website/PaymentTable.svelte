@@ -49,12 +49,12 @@
 </script>
 
 {#if tableData.heading || tableData.para || tableData.linkName}
-	<div class="flex flex-col gap-[2rem]">
+	<div class="flex flex-col gap-[3rem]">
 		{#if tableData.heading}
-			<h2 class="typography-h2-md text-[var(--form-text)]">{@html tableData.heading}</h2>
+			<h2 class="text-center typography-h2-md text-[var(--form-text)]">{@html tableData.heading}</h2>
 		{/if}
 
-		<div class="mb-[2rem] flex items-center justify-between">
+		<div class="flex items-center justify-between">
 			{#if tableData.para}
 				<p class="typography-body-md text-[var(--form-text)]">{@html tableData.para}</p>
 			{/if}
@@ -70,18 +70,18 @@
 	</div>
 {/if}
 <div class="overflow-x-auto">
-	<table class="typography-body-md min-w-full border border-[var(--form-border)] text-black">
+	<table class="typography-body-md min-w-full border border-[var(--form-border)] text-[var(--form-text)]">
 		<thead class="bg-ddsa-gradient-primary">
 			<tr>
 				{#each tableData.columnName as column}
-					<th class="typography-body-md px-4 py-4 text-left text-white">{@html column}</th>
+					<th class="typography-body-md px-4 py-4 text-left !font-semibold">{@html column}</th>
 				{/each}
 			</tr>
 		</thead>
 		<tbody>
 			{#each tableData.rowData as row, i}
 				<tr
-					class={`${i % 2 === 0 ? 'bg-[var(--ddsa-accent-100)]' : 'bg-[var(--ddsa-accent-50)]'} typography-body-sm !text-black`}
+					class={`${i % 2 === 0 ? 'bg-[var(--ddsa-accent-100)]' : 'bg-[var(--ddsa-accent-50)]'} typography-body-sm`}
 				>
 					<td class="border-y border-[var(--form-border)] p-4 text-left">
 						{@html Object.keys(row)}
