@@ -54,11 +54,7 @@
 		<NewPageLayout pageData={pageDataWithClicks}>
 			<Sublist subList={content.subList} />
 			<div class="px-[0.5rem] lg:px-16">
-				<AboveTitleWithTopIconCard
-					contents={content.whyChoose}
-					paddingClass="px-0"
-					isBorder={true}
-				/>
+				<AboveTitleWithTopIconCard contents={content.whyChoose} paddingClass="px-0" isBorder />
 
 				<div id="calc">
 					<AboveTitleWithBlackCard contents={content.calculators} paddingClass="px-0" />
@@ -70,21 +66,13 @@
 					<NewBlogCard blogLists={content.blogCard1} />
 				</div>
 
-				<ButtonBanner contents={content.payFasterBanner} isBorder={true} />
+				<ButtonBanner contents={content.payFasterBanner} isBorder />
 
-				<AboveTitleWithoutIconCard
-					contents={content.buyingNewHome}
-					paddingClass="px-0"
-					isBorder={true}
-				/>
+				<AboveTitleWithoutIconCard contents={content.buyingNewHome} paddingClass="px-0" isBorder />
 
-				<ButtonBanner contents={content.itrBanner} isBorder={true} />
+				<ButtonBanner contents={content.itrBanner} isBorder />
 
-				<ThreeColumWithLeftHeading
-					contents={content.startJourney}
-					paddingClass="px-0"
-					isBorder={true}
-				/>
+				<ThreeColumWithLeftHeading contents={content.startJourney} paddingClass="px-0" isBorder />
 
 				<div
 					class="grid w-full gap-8 border-b border-[var(--form-border)] py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32"
@@ -96,9 +84,9 @@
 					</div>
 				</div>
 
-				<ButtonBanner contents={content.compareRatesBanner} isBorder={true} />
+				<ButtonBanner contents={content.compareRatesBanner} isBorder />
 
-				<TwoColumnWithLeftHeading contents={content.support} paddingClass="px-0" isBorder={true} />
+				<TwoColumnWithLeftHeading contents={content.support} paddingClass="px-0" isBorder />
 
 				<div class="border-b border-[var(--form-border)]">
 					<TwoColumn
@@ -115,19 +103,18 @@
 						<Button link="/contact" btnClass="btn-secondary" btnName="Message us" />
 					</TwoColumn>
 				</div>
-				<ButtonBanner contents={content.keyFactsBanner} isBorder={true} />
+				<ButtonBanner contents={content.keyFactsBanner} isBorder />
 
 				<div id="propertyguide">
 					<AboveTitleWithTopIconCard
 						contents={content.propertyGuides}
 						paddingClass="px-0"
-						isBorder={true}
+						isBorder
 					/>
 				</div>
 
 				<FeedbackCheck paddingClass="px-0" />
 			</div>
-
 			{#snippet secondary()}
 				<HelpList contents={content.common_components.helpList.contents} />
 				<ThingsYouShould

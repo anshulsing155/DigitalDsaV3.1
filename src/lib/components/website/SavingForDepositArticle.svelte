@@ -14,6 +14,7 @@
 	import content from '$lib/data/website/savingForDepositArticle.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import SectionIntro from '$lib/components/website/SectionIntro.svelte';
 
 	interface ButtonProps {
 		btnName: string;
@@ -153,33 +154,29 @@
 			</div>
 
 			<div id="intro" data-section="intro" class="section-1">
-				<TwoColumnWithLeftHeading contents={content.intro} />
+				<TwoColumnWithLeftHeading contents={content.intro} isBorder />
 			</div>
 
 			<div id="understand-spending" data-section="understand-spending" class="section">
-				<TwoColumnWithLeftHeading contents={content.understandSpending.habits} />
-				<TwoColumnWithLeftHeading contents={content.understandSpending.budget} />
-				<TwoColumnWithLeftHeading contents={content.understandSpending.debts} />
+				<TwoColumnWithLeftHeading contents={content.understandSpending.habits} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.understandSpending.budget} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.understandSpending.debts} isBorder/>
 			</div>
 
 			<div id="start-saving" data-section="start-saving" class="section">
-				<TwoColumnWithLeftHeading contents={content.startSaving.strategic} />
-				<TwoColumnWithLeftHeading contents={content.startSaving.assistance} />
-				<TwoColumnWithLeftHeading contents={content.startSaving.education} />
+				<TwoColumnWithLeftHeading contents={content.startSaving.strategic} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.startSaving.assistance} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.startSaving.education} isBorder/>
 			</div>
 
 			<div id="guidance" data-section="guidance" class="section">
-				<TwoColumnWithLeftHeading contents={content.guidance.advisors} />
-				<TwoColumnWithLeftHeading contents={content.guidance.steps} />
-
-				<div class="items-center border-b border-[var(--form-border)] px-2 py-8 md:p-16">
-					<h2 class="typography-h2-md mb-4 text-[var(--form-text)]">
-						{content.guidance.finalThoughts.heading}
-					</h2>
-					<p class="typography-body-md text-[var(--form-text-secondary)]">
-						{content.guidance.finalThoughts.para}
-					</p>
-				</div>
+				<TwoColumnWithLeftHeading contents={content.guidance.advisors} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.guidance.steps} isBorder/>
+				<SectionIntro
+					heading={content.guidance.finalThoughts.heading}
+					para={content.guidance.finalThoughts.para}
+					isBorder={true}
+				/>
 			</div>
 		</div>
 
@@ -193,7 +190,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -213,8 +210,8 @@
 							id="understand-spending"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.understandSpending.habits} />
-							<TwoColumnWithLeftHeading contents={content.understandSpending.budget} />
+							<TwoColumnWithLeftHeading contents={content.understandSpending.habits} isBorder/>
+							<TwoColumnWithLeftHeading contents={content.understandSpending.budget} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.understandSpending.debts} />
 						</div>
 					{:else if index === 2}
@@ -222,8 +219,8 @@
 							id="start-saving"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.startSaving.strategic} />
-							<TwoColumnWithLeftHeading contents={content.startSaving.assistance} />
+							<TwoColumnWithLeftHeading contents={content.startSaving.strategic} isBorder/>
+							<TwoColumnWithLeftHeading contents={content.startSaving.assistance} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.startSaving.education} />
 						</div>
 					{:else if index === 3}
@@ -231,16 +228,13 @@
 							id="guidance"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.guidance.advisors} />
-							<TwoColumnWithLeftHeading contents={content.guidance.steps} />
-							<div class="items-center border-b border-[var(--form-border)] px-2 py-8 md:p-16">
-								<h2 class="typography-h2-md mb-4 text-[var(--form-text)]">
-									{content.guidance.finalThoughts.heading}
-								</h2>
-								<p class="typography-body-md text-[var(--form-text-secondary)]">
-									{content.guidance.finalThoughts.para}
-								</p>
-							</div>
+							<TwoColumnWithLeftHeading contents={content.guidance.advisors} isBorder/>
+							<TwoColumnWithLeftHeading contents={content.guidance.steps} isBorder/>
+							<SectionIntro
+								heading={content.guidance.finalThoughts.heading}
+								para={content.guidance.finalThoughts.para}
+								isBorder={true}
+							/>
 						</div>
 					{/if}
 				</details>
@@ -248,13 +242,10 @@
 		</div>
 
 		<!-- blog/related resources section -->
-		<div class="px-[0.5rem] py-[4rem] lg:px-[4rem]">
-			<h2 class="typography-h2-md mb-5 text-[var(--form-text)]">
+		<div class="px-[0.5rem] py-[4rem] lg:px-[4rem] border-b border-[var(--form-border)]">
+			<h2 class="typography-h2-md mb-8 text-[var(--form-text)]">
 				{content.verticalBlog.heading}
 			</h2>
-			<p class="typography-body-lg mb-4 !font-semibold text-[var(--form-text)]">
-				{content.verticalBlog.sub}
-			</p>
 			<div class="flex flex-col gap-4 md:flex-row">
 				<VerticalBlog blogLists={content.verticalBlog.blogLists} />
 			</div>
@@ -271,8 +262,8 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary" class="">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
@@ -280,8 +271,7 @@
 						<li>{@html bullet}</li>
 					{/each}
 				</ul>
-				
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
