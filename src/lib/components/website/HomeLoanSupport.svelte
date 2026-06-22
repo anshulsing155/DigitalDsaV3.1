@@ -302,7 +302,7 @@
 		<FeedbackCheck />
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList} />
+			<HelpList contents={content.common_components.helpList} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow.thinkKnow}
 				disc={content.common_components.thinkYouShouldKnow.disc}

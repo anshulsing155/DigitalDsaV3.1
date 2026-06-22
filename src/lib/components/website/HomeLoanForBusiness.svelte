@@ -199,7 +199,7 @@
 						</div>
 					</TwoColumnWithImage>
 
-					<Guides guide={content.guide} isBorder/>
+					<Guides guide={content.guide} isBorder />
 				</section>
 
 				<section
@@ -265,7 +265,11 @@
 					{/each}
 				</section>
 
-				<section id="fees" data-section="fees" class="section px-[0.5rem] py-[4rem] lg:px-16 border-b border-[var(--form-border)]">
+				<section
+					id="fees"
+					data-section="fees"
+					class="section border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-16"
+				>
 					<div class="grid grid-cols-3 gap-[2rem]">
 						<h2 class="typography-h2-md col-span-3 mt-4 text-[var(--form-text)] lg:col-span-1">
 							{content.rates.heading}
@@ -304,7 +308,7 @@
 
 				<section id="support" data-section="support" class="section">
 					<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
-					<Guides guide={content.getStart} isBorder/>
+					<Guides guide={content.getStart} isBorder />
 				</section>
 			</div>
 		</div>
@@ -338,17 +342,11 @@
 							<Journey journey={content.journey} />
 						</div>
 					{:else if index == 1}
-						<div
-							id="choose"
-							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
-						>
+						<div id="choose" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<WhyChoose facilities={content.facilities} gridCol={4} />
 						</div>
 					{:else if index == 2}
-						<div
-							id="loanOptions"
-							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
-						>
+						<div id="loanOptions" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<WhyChoose facilities={content.homeLoanOptions} gridCol={3} />
 						</div>
 					{:else if index == 3}
@@ -356,7 +354,8 @@
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 							id="whatDocs"
 						>
-							<TwoColumnWithImage isBorder
+							<TwoColumnWithImage
+								isBorder
 								contents={{
 									cardImage: cardImg1,
 									cardAltName: cardAlt1,
@@ -492,12 +491,9 @@
 							</div>
 						</div>
 					{:else if index == 6}
-						<div
-							id="support"
-							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
-						>
+						<div id="support" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
-							<Guides guide={content.getStart} isBorder/>
+							<Guides guide={content.getStart} isBorder />
 						</div>
 					{/if}
 				</details>
@@ -516,14 +512,8 @@
 			</div>
 		</TwoColumnWithImage>
 
-		<!-- <div slot="secondary">
-			<HelpList contents={content.helpList}></HelpList>
-			<ThingsYouShould thinkKnow={content.thinkKnow} disc="list-decimal" containerClass="lg:px-0"
-			></ThingsYouShould>
-		</div> -->
-
 		{#snippet secondary()}
-			<HelpList contents={content.helpList} />
+			<HelpList contents={content.helpList} isBorder />
 			<ThingsYouShould thinkKnow={content.thinkKnow} disc="list-decimal" containerClass="lg:px-0" />
 		{/snippet}
 	</PageDesign>

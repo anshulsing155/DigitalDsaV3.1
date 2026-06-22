@@ -263,7 +263,7 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList} />
+			<HelpList contents={content.common_components.helpList} isBorder />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">

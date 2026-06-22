@@ -192,30 +192,21 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="intro" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="intro" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.intro} />
 						</div>
 					{:else if index === 1}
-						<div
-							id="advantages"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="advantages" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.advantages.contents} />
 						</div>
 					{:else if index === 2}
-						<div
-							id="preparation"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="preparation" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.preparation.assess} isBorder />
 							<TwoColumnWithLeftHeading contents={content.preparation.apply} isBorder />
 							<TwoColumnWithLeftHeading contents={content.preparation.after} />
 						</div>
 					{:else if index === 3}
-						<div
-							id="guidance"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="guidance" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.guidance.whyChoose} isBorder />
 						</div>
 					{/if}
@@ -237,7 +228,7 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
