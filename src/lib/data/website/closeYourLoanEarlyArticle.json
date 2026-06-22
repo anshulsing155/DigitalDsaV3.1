@@ -9,17 +9,17 @@
 		"coverImage": "/images/SmartWaystoCloseYourHOmeLOanEarly.jpg",
 		"coverAlt": "hero-cover",
 		"heading": "Smart Ways to Close Your Loan Early",
-		"para": "Take control of your finances and save money by closing your loan ahead of schedule. By making strategic financial decisions and leveraging available resources, you can significantly reduce your loan tenure and interest payments.",
+		"para": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)]\">Take control of your finances and save money by closing your loan ahead of schedule. By making strategic financial decisions and leveraging available resources, you can significantly reduce your loan tenure and interest payments.<p>",
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -47,12 +47,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			}
 		]
 	},
@@ -79,36 +79,36 @@
 			"listTopPara": "Small extra payments can make a big difference:",
 			"list": [
 				{
-					"heading": "Add one or two EMIs as part-payments every year."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Add one or two EMIs as part-payments every year.</span>"
 				},
 				{
-					"heading": "Use bonuses, tax refunds, or other unexpected income to reduce your principal."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Use bonuses, tax refunds, or other unexpected income to reduce your principal.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Pro Tip:</span> Use our <a href=\"/planners/part-payment-planner\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Part Payment Planner</a> to see how even small contributions can help.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Pro Tip:</span> Use our <a href=\"/planners/part-payment-planner\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Part Payment Planner</a> to see how even small contributions can help.</p>"
 		},
 		"higherEmis": {
 			"heading": "Opt for Higher EMIs",
 			"listTopPara": "Boost your EMI to pay off your loan faster:",
 			"list": [
 				{
-					"heading": "Increase your EMI by 5-10% annually, if your income allows."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Increase your EMI by 5-10% annually, if your income allows.</span>"
 				},
 				{
-					"heading": "Higher EMIs chip away at the principal amount faster, reducing tenure."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Higher EMIs chip away at the principal amount faster, reducing tenure.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Quick Tool:</span> Try our <a href=\"/planners/flexible-emi-planner\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Flexible EMI Planner</a> to calculate how higher EMIs impact your loan.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Quick Tool:</span> Try our <a href=\"/planners/flexible-emi-planner\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Flexible EMI Planner</a> to calculate how higher EMIs impact your loan.</p>"
 		},
 		"lumpSums": {
 			"heading": "Use Lump Sums Wisely",
 			"listTopPara": "Channel large sums toward your loan:",
 			"list": [
 				{
-					"heading": "Use your savings, FDs, or returns from investments."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Use your savings, FDs, or returns from investments.</span>"
 				},
 				{
-					"heading": "Consider this especially when interest rates on your savings are lower than loan rates."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Consider this especially when interest rates on your savings are lower than loan rates.</span>"
 				}
 			]
 		}
@@ -119,36 +119,36 @@
 			"listTopPara": "Prioritize debt repayment by cutting unnecessary costs:",
 			"list": [
 				{
-					"heading": "Track your spending and create a budget."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Track your spending and create a budget.</span>"
 				},
 				{
-					"heading": "Allocate these savings toward your loan."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Allocate these savings toward your loan.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Tip:</span> Use budgeting apps to identify areas for savings.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Tip:</span> Use budgeting apps to identify areas for savings.</p>"
 		},
 		"balanceTransfer": {
 			"heading": "Balance Transfers Can Save You Lakhs",
 			"listTopPara": "Switch to a lender offering lower interest rates:",
 			"list": [
 				{
-					"heading": "Transfer your remaining balance to a bank with a better deal."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Transfer your remaining balance to a bank with a better deal.</span>"
 				},
 				{
-					"heading": "Reassess tenure options to maximize savings."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Reassess tenure options to maximize savings.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Check out:</span> Our <a href=\"/calculators/balance-transfer-calculator\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Balance Transfer Calculator</a> to compare and save.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Check out:</span> Our <a href=\"/calculators/balance-transfer-calculator\" class=\"underline cursor-pointer hover:no-underline text-[var(--ddsa-info-text)]\">Balance Transfer Calculator</a> to compare and save.</p>"
 		},
 		"planStrategically": {
 			"heading": "Plan Strategically",
 			"listTopPara": "Take advantage of financial tools to achieve your goal:",
 			"list": [
 				{
-					"heading": "Use a combination of part-payments and increased EMIs."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Use a combination of part-payments and increased EMIs.</span>"
 				},
 				{
-					"heading": "Set a clear target for closing the loan."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Set a clear target for closing the loan.</span>"
 				}
 			]
 		}
@@ -177,7 +177,7 @@
 		"contents": {
 			"heading": "Ready to Close Your Loan Early?",
 			"btnName": "Speak to an Expert",
-			"btnClass": "btn-secondary text-[var(--form-text)]",
+			"btnClass": "btn-secondary",
 			"btnLink": "/appointment"
 		}
 	},
