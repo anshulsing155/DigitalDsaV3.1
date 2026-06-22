@@ -9,7 +9,7 @@
 </script>
 
 <section
-	class={`w-full px-2 py-16 lg:px-0 ${ contents.borderBottom ? 'border-b border-[var(--form-border)]' : '' }`}
+	class={`w-full  py-16 lg:px-0 ${contents.borderBottom ? 'border-b border-[var(--form-border)]' : ''}`}
 >
 	<div class="flex w-full flex-col gap-4">
 		<h2 class="typography-h2-md text-[var(--form-text)]">
@@ -18,7 +18,7 @@
 
 		{#if contents.cards}
 			<div
-				class={`grid gap-4 md:grid-cols-2 ${ contents.xlGridCol === 4 ? 'xl:grid-cols-4' : 'lg:grid-cols-3' }`}
+				class={`grid gap-4 md:grid-cols-2 ${contents.xlGridCol === 4 ? 'xl:grid-cols-4' : 'lg:grid-cols-3'}`}
 			>
 				{#each contents.cards as card, index}
 					<a href={card.url} class="group">
