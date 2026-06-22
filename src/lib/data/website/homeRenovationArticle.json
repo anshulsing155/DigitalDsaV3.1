@@ -9,17 +9,17 @@
 		"coverImage": "/images/home-renovation-blog.jpg",
 		"coverAlt": "hero-cover",
 		"heading": "Home Renovation: Smart Upgrades That Add Value",
-		"para": "Home renovation isn’t just about aesthetics—it’s about enhancing comfort, increasing functionality, and boosting your property’s value. Smart renovations can give you the best return on investment (ROI). But not all upgrades are worth the money! Let’s explore the smartest home upgrades and how to finance them wisely.",
+		"para": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)]\">Home renovation isn’t just about aesthetics—it’s about enhancing comfort, increasing functionality, and boosting your property’s value. Smart renovations can give you the best return on investment (ROI). But not all upgrades are worth the money! Let’s explore the smartest home upgrades and how to finance them wisely.</p>",
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -47,12 +47,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -63,63 +63,63 @@
 			"listTopPara": "A modern, functional kitchen is a major selling point for buyers. Even if you’re not selling, upgrading your kitchen makes daily life more enjoyable.",
 			"list": [
 				{
-					"heading": "✅ Modular kitchen – <span class=\"typography-body-md\">Smart storage & sleek finishes.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Modular kitchen – <span class=\"font-normal\">Smart storage & sleek finishes.</span></p>"
 				},
 				{
-					"heading": "✅ Quartz/Granite countertops – <span class=\"typography-body-md\">Durable & elegant.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Quartz/Granite countertops – <span class=\"font-normal\">Durable & elegant.</span></p>"
 				},
 				{
-					"heading": "✅ Energy-efficient appliances – <span class=\"typography-body-md\">Reduce electricity bills.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Energy-efficient appliances – <span class=\"font-normal\">Reduce electricity bills.</span></p>"
 				},
 				{
-					"heading": "✅ Soft-close cabinets & drawers – <span class=\"typography-body-md\">Adds a premium feel.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Soft-close cabinets & drawers – <span class=\"font-normal\">Adds a premium feel.</span></p>"
 				},
 				{
-					"heading": "❌ Avoid: <span class=\"typography-body-md\">Over the top luxury kitchen designs buyers won’t pay extra for them!</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">❌ Avoid: <span class=\"font-normal\">Over the top luxury kitchen designs buyers won’t pay extra for them!</span></p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Financing Tip:</span> A home renovation loan can cover major kitchen remodels.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Financing Tip:</span> A home renovation loan can cover major kitchen remodels.</p>"
 		},
 		"bathroom": {
 			"heading": "Bathroom Makeover: Luxury & Functionality 🚿",
 			"listTopPara": "A clean, modern bathroom instantly increases your home’s value.",
 			"list": [
 				{
-					"heading": "✅ Rain shower & glass partition – <span class=\"typography-body-md\">Looks premium & prevents water spills.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Rain shower & glass partition – <span class=\"font-normal\">Looks premium & prevents water spills.</span></p>"
 				},
 				{
-					"heading": "✅ Anti-skid flooring – <span class=\"typography-body-md\">Safety + durability.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Anti-skid flooring – <span class=\"font-normal\">Safety + durability.</span></p>"
 				},
 				{
-					"heading": "✅ Wall-mounted storage – <span class=\"typography-body-md\">Maximizes space.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Wall-mounted storage – <span class=\"font-normal\">Maximizes space.</span></p>"
 				},
 				{
-					"heading": "✅ Smart toilets & sensor taps – <span class=\"typography-body-md\">Adds a touch of luxury.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Smart toilets & sensor taps – <span class=\"font-normal\">Adds a touch of luxury.</span></p>"
 				},
 				{
-					"heading": "❌ Avoid: <span class=\"typography-body-md\">Overspending on fancy bathtubs they rarely get used!</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">❌ Avoid: <span class=\"font-normal\">Overspending on fancy bathtubs they rarely get used!</span></p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need financial assistance for bathroom renovations? We can guide you on affordable home improvement loans.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need financial assistance for bathroom renovations? We can guide you on affordable home improvement loans.</p>"
 		},
 		"flooring": {
 			"heading": "Flooring: The Game Changer 🏠",
 			"listTopPara": "Flooring completely transforms the look and feel of your home.",
 			"list": [
 				{
-					"heading": "✅ Vitrified tiles – <span class=\"typography-body-md\">Durable & low-maintenance.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Vitrified tiles – <span class=\"font-normal\">Durable & low-maintenance.</span></p>"
 				},
 				{
-					"heading": "✅ Wooden flooring (engineered wood) –<span class=\"typography-body-md\"> Gives a premium look.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Wooden flooring (engineered wood) –<span class=\"font-normal\"> Gives a premium look.</span></p>"
 				},
 				{
-					"heading": "✅ Marble/Granite – <span class=\"typography-body-md\">Expensive but long-lasting.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Marble/Granite – <span class=\"font-normal\">Expensive but long-lasting.</span></p>"
 				},
 				{
-					"heading": "❌ Avoid: Going for cheap laminate flooring it looks great initially but wears out fast!"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">❌ Avoid: Going for cheap laminate flooring it looks great initially but wears out fast!</p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> We can help you estimate the cost vs. benefit of different flooring options.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> We can help you estimate the cost vs. benefit of different flooring options.</p>"
 		}
 	},
 	"aesthetics": {
@@ -128,38 +128,38 @@
 			"listTopPara": "A fresh coat of paint can revive any home without a huge expense.",
 			"list": [
 				{
-					"heading": "✅ Neutral tones (Beige, Greige, Pastels) – <span class=\"typography-body-md\">Timeless & elegant.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Neutral tones (Beige, Greige, Pastels) – <span class=\"font-normal\">Timeless & elegant.</span></p>"
 				},
 				{
-					"heading": "✅ Earthy greens & blues – <span class=\"typography-body-md\">Creates a calming effect.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Earthy greens & blues – <span class=\"font-normal\">Creates a calming effect.</span></p>"
 				},
 				{
-					"heading": "✅ Textured wall panels – <span class=\"typography-body-md\">Adds depth & character.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Textured wall panels – <span class=\"font-normal\">Adds depth & character.</span></p>"
 				},
 				{
-					"heading": "❌ Avoid: Bright or experimental colors buyers prefer neutral tones."
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">❌ Avoid: Bright or experimental colors buyers prefer neutral tones.</p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Financing Tip:</span> If you’re low on budget, start with one room at a time.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Financing Tip:</span> If you’re low on budget, start with one room at a time.</p>"
 		},
 		"balcony": {
 			"heading": "Adding a Balcony or Outdoor Space 🌿",
 			"listTopPara": "If you have space, a small balcony or deck can significantly boost property value.",
 			"list": [
 				{
-					"heading": "✅ French windows or sliding doors – <span class=\"typography-body-md\">Brings in natural light.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ French windows or sliding doors – <span class=\"font-normal\">Brings in natural light.</span></p>"
 				},
 				{
-					"heading": "✅ Balcony garden – <span class=\"typography-body-md\">Increases aesthetic appeal.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Balcony garden – <span class=\"font-normal\">Increases aesthetic appeal.</span></p>"
 				},
 				{
-					"heading": "✅ Wooden deck or patio – <span class=\"typography-body-md\">Great for relaxation & resale value.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Wooden deck or patio – <span class=\"font-normal\">Great for relaxation & resale value.</span></p>"
 				},
 				{
-					"heading": "❌ Avoid: Over-building make sure your structure can support additional weight."
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">❌ Avoid: Over-building make sure your structure can support additional weight.</p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need loan assistance for bigger renovations? We can help with financial planning.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need loan assistance for bigger renovations? We can help with financial planning.</p>"
 		}
 	},
 	"structure": {
@@ -168,38 +168,38 @@
 			"listTopPara": "Before cosmetic upgrades, fix the basics!",
 			"list": [
 				{
-					"heading": "✅ Leak-proofing & damp-proofing – <span class=\"typography-body-md\">Avoid future damage.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Leak-proofing & damp-proofing – <span class=\"font-normal\">Avoid future damage.</span></p>"
 				},
 				{
-					"heading": "✅ Crack repairs – <span class=\"typography-body-md\">Prevents structural issues.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Crack repairs – <span class=\"font-normal\">Prevents structural issues.</span></p>"
 				},
 				{
-					"heading": "✅ Roof repairs & insulation – <span class=\"typography-body-md\">Keeps your home energy-efficient.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Roof repairs & insulation – <span class=\"font-normal\">Keeps your home energy-efficient.</span></p>"
 				},
 				{
-					"heading": "❌ Avoid: Ignoring hidden problems small leaks now can lead to big expenses later!"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">❌ Avoid: Ignoring hidden problems small leaks now can lead to big expenses later!</p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need funds for essential repairs? We can guide you on home renovation loans.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> Need funds for essential repairs? We can guide you on home renovation loans.</p>"
 		},
 		"smartHome": {
 			"heading": "Smart Home Upgrades: The Future of Living 💡",
 			"listTopPara": "Home automation is no longer a luxury it’s becoming a necessity.",
 			"list": [
 				{
-					"heading": "✅ Smart locks & security cameras – <span class=\"typography-body-md\">Enhances safety.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Smart locks & security cameras – <span class=\"font-normal\">Enhances safety.</span></p>"
 				},
 				{
-					"heading": "✅ Motion-sensor lights – <span class=\"typography-body-md\">Saves electricity.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Motion-sensor lights – <span class=\"font-normal\">Saves electricity.</span></p>"
 				},
 				{
-					"heading": "✅ Smart thermostats & AC controls – <span class=\"typography-body-md\">Increases energy efficiency.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Smart thermostats & AC controls – <span class=\"font-normal\">Increases energy efficiency.</span></p>"
 				},
 				{
-					"heading": "✅ Solar panels – <span class=\"typography-body-md\">Cuts down power bills.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Solar panels – <span class=\"font-normal\">Cuts down power bills.</span></p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Pro Tip:</span> A small investment in automation can give you big savings in the long run.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Pro Tip:</span> A small investment in automation can give you big savings in the long run.</p>"
 		}
 	},
 	"financing": {
@@ -208,29 +208,29 @@
 			"listTopPara": "Home improvements can be expensive, but there are smart ways to manage costs.",
 			"list": [
 				{
-					"heading": "🪙 Home Renovation Loan – <span class=\"typography-body-md\">Low interest, flexible repayment.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">🪙 Home Renovation Loan – <span class=\"font-normal\">Low interest, flexible repayment.</span></p>"
 				},
 				{
-					"heading": "🏦 Top-Up Loan on Home Loan – <span class=\"typography-body-md\">If you have an existing home loan, get extra funds.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">🏦 Top-Up Loan on Home Loan – <span class=\"font-normal\">If you have an existing home loan, get extra funds.</span></p>"
 				},
 				{
-					"heading": "💳 Personal Loan – <span class=\"typography-body-md\">Quick disbursal but higher interest.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">💳 Personal Loan – <span class=\"font-normal\">Quick disbursal but higher interest.</span></p>"
 				},
 				{
-					"heading": "⭐ Using Savings – <span class=\"typography-body-md\">Ideal for small upgrades.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">⭐ Using Savings – <span class=\"font-normal\">Ideal for small upgrades.</span></p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> We can guide you on cost-effective financing options tailored to your needs.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">Where We Can Help:</span> We can guide you on cost-effective financing options tailored to your needs.</p>"
 		},
 		"final": {
 			"heading": "Final Thought:<br> Is Home Renovation Worth It?",
 			"listTopPara": "Whatever your goal, renovate wisely & invest where it truly matters!",
 			"list": [
 				{
-					"heading": "✅ <span class=\"typography-body-md\">If you’re staying long-term, renovate for comfort & functionality.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ <span class=\"font-normal\">If you’re staying long-term, renovate for comfort & functionality.</span></p>"
 				},
 				{
-					"heading": "✅ <span class=\"typography-body-md\">If you’re planning to sell, focus on high-ROI renovations that boost resale value.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ <span class=\"font-normal\">If you’re planning to sell, focus on high-ROI renovations that boost resale value.</span></p>"
 				}
 			]
 		}

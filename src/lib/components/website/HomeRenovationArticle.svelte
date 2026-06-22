@@ -151,24 +151,24 @@
 			</div>
 
 			<div id="interior" data-section="interior" class="section">
-				<TwoColumnWithLeftHeading contents={content.interior.kitchen} />
-				<TwoColumnWithLeftHeading contents={content.interior.bathroom} />
-				<TwoColumnWithLeftHeading contents={content.interior.flooring} />
+				<TwoColumnWithLeftHeading contents={content.interior.kitchen} isBorder />
+				<TwoColumnWithLeftHeading contents={content.interior.bathroom} isBorder />
+				<TwoColumnWithLeftHeading contents={content.interior.flooring} isBorder />
 			</div>
 
 			<div id="aesthetics" data-section="aesthetics" class="section">
-				<TwoColumnWithLeftHeading contents={content.aesthetics.painting} />
-				<TwoColumnWithLeftHeading contents={content.aesthetics.balcony} />
+				<TwoColumnWithLeftHeading contents={content.aesthetics.painting} isBorder />
+				<TwoColumnWithLeftHeading contents={content.aesthetics.balcony} isBorder />
 			</div>
 
 			<div id="structure" data-section="structure" class="section">
-				<TwoColumnWithLeftHeading contents={content.structure.repairs} />
-				<TwoColumnWithLeftHeading contents={content.structure.smartHome} />
+				<TwoColumnWithLeftHeading contents={content.structure.repairs} isBorder />
+				<TwoColumnWithLeftHeading contents={content.structure.smartHome} isBorder />
 			</div>
 
 			<div id="financing" data-section="financing" class="section">
-				<TwoColumnWithLeftHeading contents={content.financing.methods} />
-				<TwoColumnWithLeftHeading contents={content.financing.final} />
+				<TwoColumnWithLeftHeading contents={content.financing.methods} isBorder />
+				<TwoColumnWithLeftHeading contents={content.financing.final} isBorder />
 			</div>
 		</div>
 
@@ -182,7 +182,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -194,36 +194,24 @@
 					</summary>
 
 					{#if index === 0}
-						<div
-							id="interior"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<TwoColumnWithLeftHeading contents={content.interior.kitchen} />
-							<TwoColumnWithLeftHeading contents={content.interior.bathroom} />
+						<div id="interior" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading contents={content.interior.kitchen} isBorder />
+							<TwoColumnWithLeftHeading contents={content.interior.bathroom} isBorder />
 							<TwoColumnWithLeftHeading contents={content.interior.flooring} />
 						</div>
 					{:else if index === 1}
-						<div
-							id="aesthetics"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<TwoColumnWithLeftHeading contents={content.aesthetics.painting} />
+						<div id="aesthetics" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading contents={content.aesthetics.painting} isBorder />
 							<TwoColumnWithLeftHeading contents={content.aesthetics.balcony} />
 						</div>
 					{:else if index === 2}
-						<div
-							id="structure"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<TwoColumnWithLeftHeading contents={content.structure.repairs} />
+						<div id="structure" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading contents={content.structure.repairs} isBorder />
 							<TwoColumnWithLeftHeading contents={content.structure.smartHome} />
 						</div>
 					{:else if index === 3}
-						<div
-							id="financing"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<TwoColumnWithLeftHeading contents={content.financing.methods} />
+						<div id="financing" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading contents={content.financing.methods} isBorder />
 							<TwoColumnWithLeftHeading contents={content.financing.final} />
 						</div>
 					{/if}
@@ -231,7 +219,7 @@
 			{/each}
 		</div>
 
-		<div slot="secondary" class="px-2">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
@@ -241,7 +229,7 @@
 					{/each}
 				</ul>
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 
