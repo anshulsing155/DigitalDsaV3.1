@@ -150,9 +150,9 @@
       <StickyNavbar navList={navListWithClicks} {activeSection} />
 
       <div id="equity" data-section="equity" class="section">
-        <TwoColumnWithLeftHeading contents={content.equity} />
-        <TwoColumnWithLeftHeading contents={content.howItWorks} />
-        <ButtonBanner contents={content.purchasedPlotBanner} />
+        <TwoColumnWithLeftHeading contents={content.equity} isBorder />
+        <TwoColumnWithLeftHeading contents={content.howItWorks} isBorder/>
+        <ButtonBanner contents={content.purchasedPlotBanner} isBorder/>
 
         <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
           <div class="">
@@ -169,12 +169,12 @@
       </div>
 
       <div id="benefits" data-section="benefits" class="section">
-        <TwoColumnWithLeftHeading contents={content.benefits} />
+        <TwoColumnWithLeftHeading contents={content.benefits} isBorder/>
 
         <div id="bt">
-          <TwoColumnWithLeftHeading contents={content.bt.contents} />
+          <TwoColumnWithLeftHeading contents={content.bt.contents} isBorder />
         </div>
-        <ThreeColumWithLeftHeading contents={dreamPlotWithClicks} />
+        <ThreeColumWithLeftHeading contents={dreamPlotWithClicks} isBorder />
       </div>
 
       <div id="plotEquity" data-section="plotEquity" class="section">
@@ -193,7 +193,7 @@
       </div>
 
       <div id="help" data-section="help" class="section">
-        <TwoColumnWithImage contents={content.howWeHelp.contents}>
+        <TwoColumnWithImage contents={content.howWeHelp.contents} isBorder>
           <div class="typography-body-md text-[var(--form-text-secondary)]">
             <ul class="list-disc space-y-4">
               {#each content.howWeHelp.list as item}
@@ -208,12 +208,12 @@
           </div>
         </TwoColumnWithImage>
 
-        <TwoColumnWithLeftHeading contents={content.exploreMore} />
+        <TwoColumnWithLeftHeading contents={content.exploreMore}  isBorder/>
       </div>
 
       <div id="tools" data-section="tools" class="section">
-        <AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
-        <AboveTitleWithBlackCard contents={content.tools.calculators} />
+        <AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
+        <AboveTitleWithBlackCard contents={content.tools.calculators} isBorder/>
       </div>
     </div>
 
@@ -319,14 +319,14 @@
       </div>
     </TwoColumnWithImage>
 
-    <div slot="secondary">
+   {#snippet secondary()}
       <HelpList contents={content.common_components.helpList.contents} />
       <ThingsYouShould
         thinkKnow={content.common_components.thinkYouShouldKnow}
         disc="list-decimal"
         containerClass="px-0"
       />
-    </div>
+    {/snippet}
   </NewPageLayout>
 </section>
 

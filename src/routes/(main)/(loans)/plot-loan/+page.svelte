@@ -52,7 +52,7 @@
 			<Sublist subList={content.subList} />
 			<div class="px-[0.5rem] lg:px-16">
 				<!-- plot categories -->
-				<TwoColumnWithLeftHeading contents={content.plotCategories} paddingClass="px-0" />
+				<TwoColumnWithLeftHeading contents={content.plotCategories} paddingClass="px-0" isBorder />
 
 				<!-- diff b/w plot & home -->
 				<div
@@ -74,7 +74,7 @@
 				</div>
 
 				<!-- why choose us -->
-				<AboveTitleWithTopIconCard contents={content.whyChooseUs} />
+				<AboveTitleWithTopIconCard contents={content.whyChooseUs}  isBorder paddingClass="px-0"/>
 
 				<!-- balance transfer -->
 				<div id="bt">
@@ -93,21 +93,21 @@
 						</div>
 					</div>
 
-					<AboveTitleWithoutIconCard contents={content.chargesAndSavings} />
+					<AboveTitleWithoutIconCard contents={content.chargesAndSavings} isBorder paddingClass="px-0" />
 
-					<AboveTitleWithTopIconCard contents={content.thingsToConsider} />
+					<AboveTitleWithTopIconCard contents={content.thingsToConsider} isBorder paddingClass="px-0" />
 				</div>
 
 				<!-- money map -->
-				<AboveTitleWithTopIconCard contents={content.savingsCalculators} />
+				<AboveTitleWithTopIconCard contents={content.savingsCalculators} isBorder paddingClass="px-0" />
 
 				<!-- plot loan calc -->
 				<div id="calc">
-					<AboveTitleWithBlackCard contents={content.plotLoanCalculators} />
+					<AboveTitleWithBlackCard contents={content.plotLoanCalculators} isBorder paddingClass="px-0" />
 				</div>
 
 				<!-- ways to pay off -->
-				<ButtonBanner contents={content.waysToPayOffFaster} />
+				<ButtonBanner contents={content.waysToPayOffFaster} isBorder />
 
 				<!-- journey -->
 				<TwoColumnWithLeftHeading
@@ -117,6 +117,8 @@
 							$applicationData.LoanName = 'Plot Loan';
 						}
 					}}
+					isBorder
+					paddingClass="px-0"
 				/>
 
 				<div class="border-b border-[var(--form-border)]">
@@ -134,7 +136,7 @@
 				</div>
 
 				<!-- plot loan support -->
-				<TwoColumnWithLeftHeading contents={content.plotLoanSupportBanner} />
+				<TwoColumnWithLeftHeading contents={content.plotLoanSupportBanner} isBorder paddingClass="px-0" />
 
 				<!-- message us  -->
 				<div class="border-b border-[var(--form-border)]">
@@ -154,17 +156,17 @@
 					</TwoColumn>
 				</div>
 
-				<FeedbackCheck />
+				<FeedbackCheck  paddingClass="px-0"/>
 			</div>
 
-			<div slot="secondary">
+			{#snippet secondary()}
 				<HelpList contents={content.help} />
 				<ThingsYouShould
 					thinkKnow={content.common_components.thingsYouShouldKnow}
 					disc="list-decimal"
 					containerClass="px-0"
 				></ThingsYouShould>
-			</div>
+			{/snippet}
 		</NewPageLayout>
 	</section>
 {:else}
