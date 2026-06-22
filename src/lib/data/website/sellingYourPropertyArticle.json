@@ -14,12 +14,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -47,12 +47,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			}
 		]
 	},

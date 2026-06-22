@@ -9,12 +9,12 @@
 			{
 				"btnName": "Speak with a Loan Expert",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare Loan Offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -42,12 +42,12 @@
 			{
 				"btnName": "Connect with us",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Check latest offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black"
+				"btnClass": "btn-primary"
 			}
 		]
 	},
@@ -273,8 +273,7 @@
 			"heading": "Compare Multiple Home Loan Offers for Your Clients",
 			"para": "Access lender programs, interest rates, eligibility criteria, and financing options from multiple banks and NBFCs through a single platform.",
 			"btnName": "Compare Loan Offers",
-			"btnClass": "btn-secondary",
-			"btnClass": "btn-primary w-full",
+			"btnClass": "btn-primary",
 			"btnLink": "/get-started/how-can-we-help"
 		}
 	},
@@ -324,7 +323,7 @@
 		"button": {
 			"link": "/contact",
 			"btnName": "Talk to an Expert",
-			"btnClass": "btn-primary text-white dark:text-black"
+			"btnClass": "btn-primary"
 		}
 	},
 	"common_components": {

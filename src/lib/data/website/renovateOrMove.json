@@ -59,22 +59,22 @@
 	"renovation": {
 		"contents": {
 			"heading": "Home Renovation:<br> <span class=\"underline decoration-primary underline-offset-4\">The Smart Upgrade</span>",
-			"listTopPara": "<p class=\"typography-body-md text-[var(--form-text)] !font-semibold\">Renovating your existing home can give it a fresh new feel without the hassle of moving. You can add new features, modernize spaces, and create the dream home you’ve always wanted right where you are. <br><br>Here are some benefits of home renovation:</p>",
+			"listTopPara": "<p class=\"text-[var(--form-text-secondary)] !font-semibold\">Renovating your existing home can give it a fresh new feel without the hassle of moving. You can add new features, modernize spaces, and create the dream home you’ve always wanted right where you are. <br><br>Here are some benefits of home renovation:</p>",
 			"list": [
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Cost-Effective</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Cost-Effective</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Personalized Upgrades</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Personalized Upgrades</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Save on Moving Costs</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Save on Moving Costs</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Increased Property Value</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Increased Property Value</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Stay in a Familiar Environment</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Stay in a Familiar Environment</span>"
 				}
 			]
 		}
@@ -82,22 +82,22 @@
 	"buying": {
 		"contents": {
 			"heading": "Buying a New Home: <br><span class=\"underline decoration-primary underline-offset-4\">The Fresh Start</span>",
-			"listTopPara": "<p class=\"typography-body-md text-[var(--form-text)] !font-semibold\">On the other hand, buying a new home allows you to start afresh, with the amenities and features you’ve always dreamed of. Whether it’s more space, better location, or modern designs, moving can provide a whole new lifestyle.<br><br> Here’s why buying a new home could be the better option for some:</p>",
+			"listTopPara": "<p class=\"text-[var(--form-text-secondary)] !font-semibold\">On the other hand, buying a new home allows you to start afresh, with the amenities and features you’ve always dreamed of. Whether it’s more space, better location, or modern designs, moving can provide a whole new lifestyle.<br><br> Here’s why buying a new home could be the better option for some:</p>",
 			"list": [
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Modern Features and Amenities</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Modern Features and Amenities</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">No Renovation Hassles</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">No Renovation Hassles</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Better Location or Neighborhood</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Better Location or Neighborhood</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">Increased Energy Efficiency</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Increased Energy Efficiency</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md text-[var(--form-text-secondary)] !font-semibold\">No Need for Future Renovations</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">No Need for Future Renovations</span>"
 				}
 			]
 		}
@@ -105,11 +105,7 @@
 	"comparison": {
 		"firstTableData": [
 			{
-				"columnName": [
-					"Feature",
-					"Home Renovation",
-					"New Home Purchase"
-				],
+				"columnName": ["Feature", "Home Renovation", "New Home Purchase"],
 				"rowData": [
 					{
 						"<span class='font-semibold'>Cost</span>": [
@@ -175,13 +171,13 @@
 			"listTopPara": "<p>Choosing between Home Renovation and Buying a New Home depends on:</p>",
 			"list": [
 				{
-					"heading": "<span class=\"typography-body-md\"><strong>Budget:</strong> Renovating is cost-effective, while buying offers modern features with less effort.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">Budget: <span class=\"font-normal\">Renovating is cost-effective, while buying offers modern features with less effort.</span></p>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\"><strong>Preferences:</strong> Renovate if you love your current home and neighborhood; buy if you want a fresh start.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">Preferences: <span class=\"font-normal\">Renovate if you love your current home and neighborhood; buy if you want a fresh start.</span></p>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\"><strong>Long-Term Goals:</strong> Stay longer? Renovate to add value. Relocating soon? Buying might be better.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">Long-Term Goals: <span class=\"font-normal\">Stay longer? Renovate to add value. Relocating soon? Buying might be better.</span></p>"
 				}
 			]
 		},
@@ -190,10 +186,10 @@
 			"listTopPara": "<p>The choice ultimately comes down to your budget, personal priorities, and long-term plans.</p>",
 			"list": [
 				{
-					"heading": "<span class=\"typography-body-md\"><strong>Renovation:</strong> Keeps the comfort of your current home and community intact, while allowing you to customize and upgrade. It’s ideal if you value familiarity and have a limited budget.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">Renovation: <span class=\"font-normal\">Keeps the comfort of your current home and community intact, while allowing you to customize and upgrade. It’s ideal if you value familiarity and have a limited budget.</span></p>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\"><strong>Buying a New Home:</strong> Offers fresh opportunities with modern amenities, better energy efficiency, and a potential lifestyle shift. It’s the way to go if you’re ready for change and can manage higher upfront costs.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">Buying a New Home: <span class=\"font-normal\">Offers fresh opportunities with modern amenities, better energy efficiency, and a potential lifestyle shift. It’s the way to go if you’re ready for change and can manage higher upfront costs.</span></p>"
 				}
 			]
 		}

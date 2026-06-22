@@ -136,45 +136,39 @@
 			<StickyNavbar navList={content.navList} {activeSection} />
 
 			<section id="renovation" data-section="renovation" class="section">
-				<TwoColumnWithLeftHeading contents={content.renovation.contents} />
+				<TwoColumnWithLeftHeading contents={content.renovation.contents} isBorder />
 			</section>
 
 			<section id="buying" data-section="buying" class="section">
-				<TwoColumnWithLeftHeading contents={content.buying.contents} />
+				<TwoColumnWithLeftHeading contents={content.buying.contents} isBorder />
 			</section>
 
 			<section id="comparision" data-section="comparision" class="section">
-				<div class="border-b border-[#E5E5E5] pb-[8rem]">
-					<div class="mt-[4rem]">
-						<div class="mb-[4rem] grid text-center">
-							<h2 class="typography-h2-md mb-[1rem] text-[var(--form-text)]">
-								The Ultimate Comparison
-							</h2>
-							<p class="typography-body-md text-[var(--form-text-secondary)]">
-								Here’s a detailed comparison of the <span
-									class="font-semibold underline decoration-primary underline-offset-4"
-									>Home Renovation</span
-								>
-								and
-								<span class="font-semibold underline decoration-primary underline-offset-4"
-									>New Home Purchase</span
-								> options, including financial, emotional, and practical considerations:
-							</p>
-						</div>
-					</div>
-					<div class="px-[4rem]">
-						{#each content.comparison.firstTableData as tableData}
-							<PaymentTable {tableData} />
-						{/each}
-					</div>
+				<div class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-12 lg:px-16">
+					<h2 class="typography-body-lg mb-2 text-center !font-semibold text-[var(--form-text)]">
+						The Ultimate Comparison
+					</h2>
+					<p class="typography-body-md mb-6 text-center text-[var(--form-text-secondary)]">
+						Here’s a detailed comparison of the <span
+							class="font-semibold underline decoration-primary underline-offset-4"
+							>Home Renovation</span
+						>
+						and
+						<span class="font-semibold underline decoration-primary underline-offset-4"
+							>New Home Purchase</span
+						> options, including financial, emotional, and practical considerations:
+					</p>
+					{#each content.comparison.firstTableData as tableData}
+						<PaymentTable {tableData} />
+					{/each}
 				</div>
 
-				<ButtonBanner contents={content.comparison.buttonBanner} />
+				<ButtonBanner contents={content.comparison.buttonBanner} isBorder />
 			</section>
 
 			<section id="option" data-section="option" class="section">
-				<TwoColumnWithLeftHeading contents={content.option.contents1} />
-				<TwoColumnWithLeftHeading contents={content.option.contents2} />
+				<TwoColumnWithLeftHeading contents={content.option.contents1} isBorder />
+				<TwoColumnWithLeftHeading contents={content.option.contents2} isBorder/>
 			</section>
 		</div>
 
@@ -188,7 +182,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -202,52 +196,48 @@
 					{#if index === 0}
 						<div
 							id="renovation"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.renovation.contents} />
 						</div>
 					{:else if index === 1}
 						<div
 							id="buying"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.buying.contents} />
 						</div>
 					{:else if index === 2}
-						<div
-							id="comparision"
-							class="overflow-x-auto bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<div>
-								<div class="mt-[4rem]">
-									<h2 class="typography-h2 mb-[4rem] grid text-center text-text-main">
-										<p class="mb-[1rem]">The Ultimate Comparison</p>
-										<span class="typography-body-sm text-[var(--form-text-secondary)]"
-											>Here's a detailed comparison of the <span
-												class="decoration-primary underline underline-offset-4">Home Renovation</span
-											>
-											and
-											<span class="decoration-primary underline underline-offset-4"
-												>New Home Purchase</span
-											> options, including financial, emotional, and practical considerations:</span
-										>
-									</h2>
-								</div>
-								<div class="px-1">
-									{#each content.comparison.firstTableData as tableData}
-										<PaymentTable {tableData} />
-									{/each}
-								</div>
+						<div id="comparision" class="pb-4">
+							<div class="border-b border-[var(--form-border)] px-[0.5rem] lg:px-16 py-12">
+								<h2
+									class="typography-body-lg mb-2 text-center !font-semibold text-[var(--form-text)]"
+								>
+									The Ultimate Comparison
+								</h2>
+								<p class="typography-body-md mb-6 text-center text-[var(--form-text-secondary)]">
+									Here’s a detailed comparison of the <span
+										class="font-semibold underline decoration-primary underline-offset-4"
+										>Home Renovation</span
+									>
+									and
+									<span class="font-semibold underline decoration-primary underline-offset-4"
+										>New Home Purchase</span
+									> options, including financial, emotional, and practical considerations:
+								</p>
+								{#each content.comparison.firstTableData as tableData}
+									<PaymentTable {tableData} />
+								{/each}
 							</div>
 							<ButtonBanner contents={content.comparison.buttonBanner} />
 						</div>
 					{:else if index === 3}
 						<div
 							id="option"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.option.contents1} />
-							<TwoColumnWithLeftHeading contents={content.option.contents2} />
+							<TwoColumnWithLeftHeading contents={content.option.contents1} isBorder/>
+							<TwoColumnWithLeftHeading contents={content.option.contents2} isBorder/>
 						</div>
 					{/if}
 				</details>
@@ -266,13 +256,13 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder/>
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow.contents}
 				disc={content.common_components.thinkYouShouldKnow.disc}
 				containerClass="lg:px-0"
 			></ThingsYouShould>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
