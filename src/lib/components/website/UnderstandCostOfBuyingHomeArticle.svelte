@@ -195,21 +195,21 @@
 					{#if index === 0}
 						<div
 							id="taxes-fees"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.taxesFees.contents} />
 						</div>
 					{:else if index === 1}
 						<div
 							id="inspections"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.inspections.contents} />
 						</div>
 					{:else if index === 2}
 						<div
 							id="setup-cost"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.setupCost.insurance} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.setupCost.legal} isBorder/>
@@ -220,7 +220,7 @@
 					{:else if index === 3}
 						<div
 							id="guidance"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.guidance.help} isBorder/>
 						</div>
@@ -229,7 +229,7 @@
 			{/each}
 		</div>
 
-		<div class="px-1 py-4 md:p-16 border-b border-[var(--form-border)]">
+		<div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-16 border-b border-[var(--form-border)]">
 			<h2 class="typography-h2-md mb-8 text-[var(--form-text)]">
 				{content.verticalBlog.heading}
 			</h2>
@@ -240,7 +240,7 @@
 
 		<ThreeColumWithLeftHeading contents={content.tools} isBorder/>
 
-		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
+		<TwoColumnWithImage contents={content.messageUs.contents}>
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
@@ -250,7 +250,7 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
