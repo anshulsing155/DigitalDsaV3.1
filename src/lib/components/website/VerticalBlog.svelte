@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="w-full h-full px-2 flex items-center text-start">
-        <h3 class="!font-semibold typography-body-md text-[var(--form-text)]">
+        <h3 class="!font-semibold typography-body-md text-[var(--form-text-secondary)]">
           {@html blog.heading}
         </h3>
       </div>

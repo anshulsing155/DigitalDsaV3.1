@@ -301,13 +301,13 @@
 
 		<FeedbackCheck />
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow.thinkKnow}
 				disc={content.common_components.thinkYouShouldKnow.disc}
 				containerClass="lg:px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
