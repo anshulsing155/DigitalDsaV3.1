@@ -20,8 +20,8 @@
 	let navigatingBeyond = content.navigatingBeyond;
 	let amendments = content.amendments;
 
-	// logic for second nav bar which is not working yet
-	let activeSection = ''; // Initially no section is active
+	// logic for second nav bar which is working in Svelte 5
+	let activeSection = $state(''); // Initially no section is active
 
 	// This function sets the first section as active on initial load
 	const initializeActiveSection = () => {
@@ -74,7 +74,7 @@
 				<div class="" id="aboutPrivacy" data-section="aboutPrivacy">
 					<ThingsYouShould thinkKnow={aboutPrivacy} sectionBorder={true} containerClass="px-0" />
 				</div>
-				<div id="dataProcessing" data-section="aboutPrivacy">
+				<div id="dataProcessing" data-section="dataProcessing">
 					<div>
 						<ThingsYouShould
 							thinkKnow={dataProcessing}
@@ -92,7 +92,7 @@
 						/>
 					</div>
 				</div>
-				<div id="usage" data-section="aboutPrivacy">
+				<div id="usage" data-section="usage">
 					<ThingsYouShould
 						thinkKnow={usageInformation}
 						disc="list-disc"
@@ -100,7 +100,7 @@
 						containerClass="px-0"
 					/>
 				</div>
-				<div id="disclosure" data-section="aboutPrivacy">
+				<div id="disclosure" data-section="disclosure">
 					<ThingsYouShould
 						thinkKnow={disclosure}
 						disc="list-disc"
@@ -108,7 +108,7 @@
 						containerClass="px-0"
 					/>
 				</div>
-				<div id="right" data-section="aboutPrivacy">
+				<div id="right" data-section="right">
 					<ThingsYouShould
 						thinkKnow={privacyRight}
 						disc="list-disc"
@@ -116,7 +116,7 @@
 						containerClass="px-0"
 					/>
 				</div>
-				<div id="navigation" data-section="aboutPrivacy">
+				<div id="navigation" data-section="navigation">
 					<div>
 						<ThingsYouShould
 							thinkKnow={navigatingBeyond}

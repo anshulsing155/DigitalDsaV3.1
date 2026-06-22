@@ -38,15 +38,15 @@ export const blogs = [
   },
   {
     path: "/knowledge/budgeting-101",
-    title: "Cybersecurity Tips for Indian Businesses",
+    title: "Budgeting 101: The Basics of Money Management",
     description:
-      "Learn how Indian businesses can fight cyber threats with smart tips, real cases & free tools from the Govt of India.",
-    coverImage: "/images/cyber-security-tips-blog.jpg",
-    coverAlt: "scam cover image",
+      "Learn the fundamentals of budgeting. Master the 50/30/20 rule, track your expenses, build an emergency fund, and secure your financial future.",
+    coverImage: "/images/budgeting-tips-blog.jpg",
+    coverAlt: "budget cover image",
     sourceName: "freepik",
     originalSource:
-      "https://www.freepik.com/free-photo/standard-quality-control-concept-m_36027734.htm#fromView=search&page=1&position=6&uuid=988c93f9-ff71-445b-815c-012d9c6e50e7&query=cyber+security",
-    categoryType: "cyber security",
+      "https://www.freepik.com/free-photo/financial-plan-retirement-investment-diagram-concept_16459699.htm#fromView=keyword&page=1&position=4&uuid=1c41750c-f14d-4ab6-9aa3-89b103b9bb14&query=Budgeting+Tips",
+    categoryType: "finance support",
   },
   {
     path: "/cyber-security-against-scams/scam-target-business",
