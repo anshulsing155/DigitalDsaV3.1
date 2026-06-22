@@ -172,7 +172,7 @@
 	keywords="Home loan, Home loan eligibility, Best home loan rates, Home loan approval, Compare home loans, Home loan refinancing, Balance transfer loan, Affordable home loan, Housing loan guide, Home loan process, Loan for home purchase, Home loan EMI calculator, Home renovation loan, Top-up home loan, Down payment assistance"
 />
 
-<section class="bg-mainBg mx-auto w-full xl:container">
+<section class="bg-mainBg mx-auto w-full">
 	<NewPageLayout pageData={pageDataWithClicks}>
 		<!-- desktop view -->
 		<div class="hidden lg:block">
@@ -240,22 +240,22 @@
 					</summary>
 
 					{#if index == 0}
-						<div id="types" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="types" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.types.contents} />
 						</div>
 					{:else if index == 1}
-						<div id="why" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="why" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<AboveTitleWithoutIconCard contents={content.why.contents} />
 						</div>
 					{:else if index == 2}
 						<div
 							id="challenges"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.challenges.contents} />
 						</div>
 					{:else if index == 3}
-						<div id="steps" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="steps" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithImage contents={content.steps.contents} isBorder>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="list-disc space-y-4">
@@ -279,7 +279,7 @@
 							<AboveTitleWithoutIconCard contents={assistanceWithClicks} />
 						</div>
 					{:else if index == 4}
-						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<AboveTitleWithBlackCard contents={content.tools.contents} />
 						</div>
 					{/if}

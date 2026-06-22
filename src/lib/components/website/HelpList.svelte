@@ -9,7 +9,7 @@
 </script>
 
 <section
-	class={`w-full  py-16 lg:px-0 ${contents.borderBottom ? 'border-b border-[var(--form-border)]' : ''}`}
+	class={`w-full px-[0.5rem] py-16 lg:px-0 ${contents.borderBottom ? 'border-b border-[var(--form-border)]' : ''}`}
 >
 	<div class="flex w-full flex-col gap-4">
 		<h2 class="typography-h2-md text-[var(--form-text)]">
