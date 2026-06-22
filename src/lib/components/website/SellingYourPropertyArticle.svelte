@@ -151,20 +151,20 @@
 			</div>
 
 			<div id="preparation" data-section="preparation" class="section">
-				<TwoColumnWithLeftHeading contents={content.preparation.prep} />
+				<TwoColumnWithLeftHeading contents={content.preparation.prep} isBorder/>
 			</div>
 
 			<div id="marketing-buyers" data-section="marketing-buyers" class="section">
-				<TwoColumnWithLeftHeading contents={content.marketingBuyers.marketing} />
-				<TwoColumnWithLeftHeading contents={content.marketingBuyers.negotiating} />
+				<TwoColumnWithLeftHeading contents={content.marketingBuyers.marketing} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.marketingBuyers.negotiating} isBorder/>
 			</div>
 
 			<div id="legal" data-section="legal" class="section">
-				<TwoColumnWithLeftHeading contents={content.legal.docs} />
+				<TwoColumnWithLeftHeading contents={content.legal.docs} isBorder/>
 			</div>
 
 			<div id="closing" data-section="closing" class="section">
-				<TwoColumnWithLeftHeading contents={content.closing.close} />
+				<TwoColumnWithLeftHeading contents={content.closing.close} isBorder/>
 				<TwoColumnWithLeftHeading contents={content.closing.final} />
 			</div>
 		</div>
@@ -193,28 +193,28 @@
 					{#if index === 0}
 						<div
 							id="preparation"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.preparation.prep} />
 						</div>
 					{:else if index === 1}
 						<div
 							id="marketing-buyers"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.marketingBuyers.marketing} />
+							<TwoColumnWithLeftHeading contents={content.marketingBuyers.marketing} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.marketingBuyers.negotiating} />
 						</div>
 					{:else if index === 2}
-						<div id="legal" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="legal" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.legal.docs} />
 						</div>
 					{:else if index === 3}
 						<div
 							id="closing"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.closing.close} />
+							<TwoColumnWithLeftHeading contents={content.closing.close} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.closing.final} />
 						</div>
 					{/if}
@@ -222,8 +222,8 @@
 			{/each}
 		</div>
 
-		<div slot="secondary" class="px-2">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder/>
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
@@ -232,7 +232,7 @@
 					{/each}
 				</ul>
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

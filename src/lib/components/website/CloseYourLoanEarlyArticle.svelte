@@ -189,7 +189,7 @@
 				<TwoColumnWithLeftHeading contents={content.savingsTransfer.planStrategically} isBorder />
 			</div>
 
-			<div id="success-stories" data-section="success-stories" class="section py-[4rem]">
+			<div id="success-stories" data-section="success-stories" class="section pt-[4rem]">
 				<p class="typography-h2-md text-center text-[var(--form-text)]">
 					<span class="underline decoration-primary underline-offset-4"> Inspiration:</span>
 					Real Stories of Success
@@ -275,7 +275,7 @@
 							<TwoColumnWithLeftHeading contents={content.savingsTransfer.planStrategically} />
 						</div>
 					{:else if index === 3}
-						<div id="success-stories" class="bg-[var(--landing-bg)] py-[4rem]">
+						<div id="success-stories" class="bg-[var(--landing-bg)] pt-[4rem]">
 							<p class="typography-h2-md text-center text-[var(--form-text)]">
 								Real Stories of Success
 							</p>

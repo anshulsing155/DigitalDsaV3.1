@@ -9,7 +9,7 @@
 		"coverImage": "/images/selling-your-property-blog.jpg",
 		"coverAlt": "hero-cover",
 		"heading": "Selling Your Property: <br> A Complete Guide to a Smooth Sale",
-		"para": "Selling a property is more than just finding a buyer—it’s about getting the right price, handling legal formalities, and ensuring a hassle-free transaction. Whether you're selling to upgrade, relocate, or liquidate an investment, this guide will help you maximize your property's value and minimize potential risks.",
+		"para": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)]\">Selling a property is more than just finding a buyer—it’s about getting the right price, handling legal formalities, and ensuring a hassle-free transaction. Whether you're selling to upgrade, relocate, or liquidate an investment, this guide will help you maximize your property's value and minimize potential risks.</p>",
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
@@ -62,16 +62,16 @@
 			"listTopPara": "First impressions matter! Here’s how to make your property more appealing:",
 			"list": [
 				{
-					"heading": "✅ Declutter & Clean – <span class=\"typography-body-md\">A well-maintained house sells faster. Deep cleaning, repainting, and fixing minor issues can boost your property's value.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Declutter & Clean – <span class=\"font-normal\">A well-maintained house sells faster. Deep cleaning, repainting, and fixing minor issues can boost your property's value.</span></p>"
 				},
 				{
-					"heading": "✅ Renovation vs. Quick Sale – <span class=\"typography-body-md\">If your property is in poor condition, should you renovate or sell as-is? Minor upgrades (paint, lighting, and plumbing fixes) can increase value without a huge cost.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Renovation vs. Quick Sale – <span class=\"font-normal\">If your property is in poor condition, should you renovate or sell as-is? Minor upgrades (paint, lighting, and plumbing fixes) can increase value without a huge cost.</span></p>"
 				},
 				{
-					"heading": "✅ Set the Right Price – <span class=\"typography-body-md\">Research recent sales in your area. If the price is too high, it may sit on the market; too low, and you lose money.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Set the Right Price – <span class=\"font-normal\">Research recent sales in your area. If the price is too high, it may sit on the market; too low, and you lose money.</span></p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> If you need valuation tools or real estate agents to assess your property, we can connect you with experts.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> If you need valuation tools or real estate agents to assess your property, we can connect you with experts.</p>"
 		}
 	},
 	"marketingBuyers": {
@@ -80,35 +80,35 @@
 			"listTopPara": "Attracting the right buyers requires a strong marketing strategy:",
 			"list": [
 				{
-					"heading": "📸 Professional Photos & Videos – <span class=\"typography-body-md\">High-quality visuals can make a difference in online listings.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">📸 Professional Photos & Videos – <span class=\"font-normal\">High-quality visuals can make a difference in online listings.</span></p>"
 				},
 				{
-					"heading": "📢 Online Listings & Social Media – <span class=\"typography-body-md\">Platforms like 99acres, MagicBricks, and Facebook groups help reach potential buyers.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">📢 Online Listings & Social Media – <span class=\"font-normal\">Platforms like 99acres, MagicBricks, and Facebook groups help reach potential buyers.</span></p>"
 				},
 				{
-					"heading": "🏡 Hosting Open Houses – <span class=\"typography-body-md\">Arrange visits for interested buyers. Staging your home well can leave a lasting impression.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">🏡 Hosting Open Houses – <span class=\"font-normal\">Arrange visits for interested buyers. Staging your home well can leave a lasting impression.</span></p>"
 				},
 				{
-					"heading": "📑 Highlight Unique Features – <span class=\"typography-body-md\">If your property has great views, extra amenities, or recent renovations, emphasize these!</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">📑 Highlight Unique Features – <span class=\"font-normal\">If your property has great views, extra amenities, or recent renovations, emphasize these!</span></p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can guide you on how to market your property effectively and list it on popular platforms.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can guide you on how to market your property effectively and list it on popular platforms.</p>"
 		},
 		"negotiating": {
 			"heading": "Finding the Right Buyer & Negotiating Smartly 🤝",
 			"listTopPara": "Once you get inquiries, filtering serious buyers is key:",
 			"list": [
 				{
-					"heading": "🔍 Verify Buyer’s Financial Readiness – <span class=\"typography-body-md\">Check if they have loan approval or sufficient funds.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">🔍 Verify Buyer’s Financial Readiness – <span class=\"font-normal\">Check if they have loan approval or sufficient funds.</span></p>"
 				},
 				{
-					"heading": "📜 Understand Buyer Psychology – <span class=\"typography-body-md\">Are they looking for a deal, or do they want a move-in-ready property? Adjust your pitch accordingly.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">📜 Understand Buyer Psychology – <span class=\"font-normal\">Are they looking for a deal, or do they want a move-in-ready property? Adjust your pitch accordingly.</span></p>"
 				},
 				{
-					"heading": "💬 Negotiate Smartly – <span class=\"typography-body-md\">Have a minimum price in mind and be ready to justify it. Don't rush—multiple offers may come in!</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">💬 Negotiate Smartly – <span class=\"font-normal\">Have a minimum price in mind and be ready to justify it. Don't rush—multiple offers may come in!</span></p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can provide negotiation tips and connect you with legal advisors for safe dealings.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can provide negotiation tips and connect you with legal advisors for safe dealings.</p>"
 		}
 	},
 	"legal": {
@@ -117,22 +117,22 @@
 			"listTopPara": "A property sale is incomplete without proper legal formalities:",
 			"list": [
 				{
-					"heading": "✅ Title Deed Verification – <span class=\"typography-body-md\">Ensure you have a clear title and all ownership documents.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Title Deed Verification – <span class=\"font-normal\">Ensure you have a clear title and all ownership documents.</span></p>"
 				},
 				{
-					"heading": "✅ Encumbrance Certificate (EC) – <span class=\"typography-body-md\">Confirms there are no legal disputes or outstanding loans on the property.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Encumbrance Certificate (EC) – <span class=\"font-normal\">Confirms there are no legal disputes or outstanding loans on the property.</span></p>"
 				},
 				{
-					"heading": "✅ Sale Agreement – <span class=\"typography-body-md\">Draft a clear contract covering price, payment schedule, and transfer date.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Sale Agreement – <span class=\"font-normal\">Draft a clear contract covering price, payment schedule, and transfer date.</span></p>"
 				},
 				{
-					"heading": "✅ Property Tax Clearance – <span class=\"typography-body-md\">Ensure all past dues are cleared.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Property Tax Clearance – <span class=\"font-normal\">Ensure all past dues are cleared.</span></p>"
 				},
 				{
-					"heading": "✅ Registration & Stamp Duty – <span class=\"typography-body-md\">Both buyer and seller must comply with local registration rules.</span>"
+					"heading": "<p class=\"text-[var(--form-text-secondary)]\">✅ Registration & Stamp Duty – <span class=\"font-normal\">Both buyer and seller must comply with local registration rules.</span></p>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can guide you on necessary paperwork, legal checks, and expert contacts for smooth processing.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can guide you on necessary paperwork, legal checks, and expert contacts for smooth processing.</p>"
 		}
 	},
 	"closing": {
@@ -141,22 +141,22 @@
 			"listTopPara": "Once everything is finalized:",
 			"list": [
 				{
-					"heading": "<span class=\"typography-body-md\">Collect the payment securely (preferably through a bank transaction).</span>"
+					"heading": "<span class=\"font-normal\">Collect the payment securely (preferably through a bank transaction).</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">Complete final handover, including keys, documents, and utilities transfer.</span>"
+					"heading": "<span class=\"font-normal\">Complete final handover, including keys, documents, and utilities transfer.</span>"
 				},
 				{
-					"heading": "<span class=\"typography-body-md\">Ensure proper tax filing for capital gains from the sale.</span>"
+					"heading": "<span class=\"font-normal\">Ensure proper tax filing for capital gains from the sale.</span>"
 				}
 			],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can provide tax-saving tips and investment strategies for your proceeds.</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">💡 Where We Can Help:</span> We can provide tax-saving tips and investment strategies for your proceeds.</p>"
 		},
 		"final": {
 			"heading": "Final Thought: Selling Smart & Stress-Free 🪙",
 			"listTopPara": "Selling property is a major financial decision, and a structured approach ensures better results.<p class=\"typography-body-md text-[var(--form-text-secondary)] pt-2\"> With the right pricing, marketing, negotiation, and legal support, you can achieve a smooth and profitable sale.</p>",
 			"list": [],
-			"listSecPara": "<p class=\"p-4 bg-[var(--color-bg-alt)] border-l-4 border-[var(--form-border)]\"><span class=\"mr-2 font-semibold\">👉 Need help in the selling process?</span> Whether it’s valuation, legal guidance, or marketing tips, we're here to assist you!</p>"
+			"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><span class=\"mr-2 font-semibold\">👉 Need help in the selling process?</span> Whether it’s valuation, legal guidance, or marketing tips, we're here to assist you!</p>"
 		}
 	},
 	"common_components": {

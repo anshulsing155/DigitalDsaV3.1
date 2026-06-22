@@ -1,20 +1,11 @@
 <script lang="ts">
 	type Props = {
 		journey?: any;
-		colSpan?: number;
-		colSpanDesc?: number;
-		gridColDesc?: number;
 		paddingClass?: string;
 		isBorder?: boolean;
 	};
-	let {
-		colSpan = 1,
-		colSpanDesc = 2,
-		gridColDesc = 2,
-		journey = {},
-		paddingClass = 'px-[0.5rem] lg:px-16',
-		isBorder = false
-	}: Props = $props();
+
+	let { journey = {}, paddingClass = 'px-[0.5rem] lg:px-16', isBorder = false }: Props = $props();
 
 	import Button from './Button.svelte';
 	import PremiumButton from './PremiumButton.svelte';
@@ -22,28 +13,34 @@
 
 <section class="py-[4rem] {isBorder ? 'border-b border-[var(--form-border)]' : ''}">
 	<div class={`grid gap-[2rem] lg:grid-cols-3 ${paddingClass}`}>
-		<h2 class="col-span-3 lg:col-span-{colSpan} typography-h2-md text-[var(--form-text)]">
-			{journey.heading}
-		</h2>
-		<div class="col-span-{colSpanDesc} grid grid-cols-{gridColDesc} gap-[2rem]">
+		<!-- Heading -->
+		<div>
+			<h2 class="typography-h2-md text-[var(--form-text)]">
+				{journey.heading}
+			</h2>
+		</div>
+
+		<!-- Content -->
+		<div class="grid gap-[2rem] md:grid-cols-2 lg:col-span-2">
 			{#each journey.items as step, index (step)}
 				<div
-					class="col-span-2 grid gap-[2rem] pb-[3rem] md:col-span-1 md:pb-0 {index <
-					journey.items.length - 1
+					class="grid gap-[2rem] pb-[3rem] md:pb-0
+					{index < journey.items.length - 1
 						? 'border-b border-[var(--form-border)] md:border-r md:border-b-0'
 						: ''}"
 				>
 					<div class="flex flex-col gap-4">
-						<p class="typography-body-lg !font-semibold text-[var(--form-text)]">{step.title}</p>
-						<p class="typography-body-md text-[var(--form-text-secondary)]">{@html step.desc}</p>
+						<p class="typography-body-lg !font-semibold text-[var(--form-text)]">
+							{step.title}
+						</p>
+
+						<p class="typography-body-md text-[var(--form-text-secondary)]">
+							{@html step.desc}
+						</p>
 					</div>
 
 					{#if step.btnName}
-						<Button
-							btnName={step.btnName}
-							btnClass={step.btnClass}
-							link={step.btnLink}
-						/>
+						<Button btnName={step.btnName} btnClass={step.btnClass} link={step.btnLink} />
 					{/if}
 
 					{#if step.premiumBtnName}

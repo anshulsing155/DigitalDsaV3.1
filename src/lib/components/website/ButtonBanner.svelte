@@ -9,7 +9,7 @@
 	const { contents = {}, isBorder = false }: Props = $props();
 </script>
 
-<section class="w-full py-12 px-[0.5rem] lg:px-16 {isBorder
+<section class="w-full py-[4rem] px-[0.5rem] lg:px-16 {isBorder
 		? 'border-b border-[var(--form-border)]'
 		: ''}">
 	{#if !contents.para}

@@ -274,7 +274,7 @@
 						<h2 class="typography-h2-md col-span-3 mt-4 text-[var(--form-text)] lg:col-span-1">
 							{content.rates.heading}
 						</h2>
-
+ 
 						<div class="col-span-3 lg:col-span-2">
 							<div class="grid grid-cols-2 gap-[2rem] pt-4">
 								<div class="space-y-4">
@@ -337,7 +337,7 @@
 					{#if index == 0}
 						<div
 							id="started"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
 							<Journey journey={content.journey} />
 						</div>
@@ -351,7 +351,7 @@
 						</div>
 					{:else if index == 3}
 						<div
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 							id="whatDocs"
 						>
 							<TwoColumnWithImage
