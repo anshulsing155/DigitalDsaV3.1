@@ -216,10 +216,10 @@
 			{
 				"columnName": [
 					"Feature",
-					"Resale property (<span class=\"text-green-400\">✅ Pros</span>)",
-					"Resale property (<span class=\"text-red-400\">❌ Cons</span>)",
-					"Direct purchase from builder (<span class=\"text-green-400\">✅ Pros</span>)",
-					"Direct purchase from builder (<span class=\"text-red-400\">❌ Cons</span>)"
+					"Resale property (Pros)",
+					"Resale property (Cons)",
+					"Direct purchase from builder (Pros)",
+					"Direct purchase from builder (Cons)"
 				],
 				"rowData": [
 					{

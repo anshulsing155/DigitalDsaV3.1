@@ -130,25 +130,25 @@
 			<StickyNavbar navList={content.navList} {activeSection} />
 
 			<section id="started" data-section="started" class="section">
-				<ThreeColumWithLeftHeading contents={content.started.contents} />
+				<ThreeColumWithLeftHeading contents={content.started.contents} isBorder />
 			</section>
 
 			<section id="whybuy" data-section="whybuy" class="section">
-				<AboveTitleWithTopIconCard listGridAboveLg="2" contents={content.whybuy.contents} />
-				<AboveTitleWithTopIconCard contents={content.considerations.contents} />
-				<div class="border-b border-[var(--form-border)]">
-					<AboveTitleWithTopIconCard contents={content.benefits.contents} />
-				</div>
-				<AboveTitleWithTopIconCard listGridAboveLg="2" contents={content.steps.contents} />
+				<AboveTitleWithTopIconCard
+					listGridAboveLg="2"
+					contents={content.whybuy.contents}
+					isBorder
+				/>
+				<AboveTitleWithTopIconCard contents={content.considerations.contents} isBorder />
+				<AboveTitleWithTopIconCard contents={content.benefits.contents} isBorder />
+				<AboveTitleWithTopIconCard listGridAboveLg="2" contents={content.steps.contents} isBorder />
 			</section>
 
 			<section id="whychoose" data-section="whychoose" class="section">
 				<div
 					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
-					<h2
-						class="typography-h2-md mb-[4rem] grid text-center font-semibold text-[var(--form-text)]"
-					>
+					<h2 class="typography-h2-md mb-6 text-center font-semibold text-[var(--form-text)]">
 						{content.whychoose.heading}
 					</h2>
 					<div>
@@ -158,8 +158,8 @@
 					</div>
 				</div>
 
-				<TwoColumnWithLeftHeading contents={content.whychoose.makeHomeCount} />
-				<ButtonBanner contents={content.whychoose.buttonBanner} />
+				<TwoColumnWithLeftHeading contents={content.whychoose.makeHomeCount} isBorder />
+				<ButtonBanner contents={content.whychoose.buttonBanner} isBorder />
 			</section>
 
 			<section id="calculators" data-section="calculators" class="section">
@@ -177,7 +177,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -189,30 +189,21 @@
 					</summary>
 
 					{#if index == 0}
-						<div
-							id="started"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="started" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.started.contents} />
 						</div>
 					{:else if index == 1}
-						<div
-							id="whybuy"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<AboveTitleWithTopIconCard contents={content.whybuy.contents} />
-							<AboveTitleWithTopIconCard contents={content.considerations.contents} />
-							<div class="border-b border-[var(--form-border)]">
-								<AboveTitleWithTopIconCard contents={content.benefits.contents} />
-							</div>
+						<div id="whybuy" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.whybuy.contents} isBorder />
+							<AboveTitleWithTopIconCard contents={content.considerations.contents} isBorder />
+							<AboveTitleWithTopIconCard contents={content.benefits.contents} isBorder />
 							<AboveTitleWithTopIconCard contents={content.steps.contents} />
 						</div>
 					{:else if index == 2}
-						<div
-							id="whychoose"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<div class="w-full overflow-x-auto border-b border-[var(--form-border)] py-[4rem]">
+						<div id="whychoose" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<div
+								class="w-full overflow-x-auto border-b border-[var(--form-border)] px-[0.5rem] py-[4rem]"
+							>
 								<h2 class="typography-h3 mb-[4rem] grid text-center font-semibold">
 									{content.whychoose.heading}
 								</h2>
@@ -222,14 +213,11 @@
 									{/each}
 								</div>
 							</div>
-							<TwoColumnWithLeftHeading contents={content.whychoose.makeHomeCount} />
+							<TwoColumnWithLeftHeading contents={content.whychoose.makeHomeCount} isBorder/>
 							<ButtonBanner contents={content.whychoose.buttonBanner} />
 						</div>
 					{:else if index == 3}
-						<div
-							id="calculators"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="calculators" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<AboveTitleWithBlackCard contents={content.calculators.contents} />
 						</div>
 					{/if}
@@ -249,13 +237,13 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder/>
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow.contents}
 				disc={content.common_components.thinkYouShouldKnow.disc}
 				containerClass="lg:px-0"
 			></ThingsYouShould>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
