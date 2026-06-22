@@ -28,8 +28,8 @@
 	let standard = content.standard;
 	let indemnification = content.indemnification;
 
-	// logic for second nav bar which is not working yet
-	let activeSection = ''; // Initially no section is active
+	// logic for second nav bar which is working in Svelte 5
+	let activeSection = $state(''); // Initially no section is active
 
 	// This function sets the first section as active on initial load
 	const initializeActiveSection = () => {
