@@ -2,19 +2,19 @@
 	"mobileNavbarTitle": ["Introduction", "Understand spending", "Start saving", "Guidance"],
 	"pageData": {
 		"coverImage": "/images/investInProperty-cover.jpg",
-		"coverAlt": "photo of a couple investing for downpayment of home loan",
-		"heading": "Saving for a Down Payment",
-		"para": "Saving for a down payment may seem challenging, but with the right plan, it’s completely doable. Small changes in your spending, a smart budget, and consistent savings can bring you closer to your dream home. Plus, with the right guidance and support, the journey becomes much easier. <br><br> Start today, and step by step, you’ll get there!",
+		"coverAlt": "photo of a couple planning finances for a home purchase",
+		"heading": "Down Payment Challenges:<br> A Key Opportunity for DSAs",
+		"para": "Many home loan applicants have the income and eligibility required for a home loan but struggle to arrange the down payment needed to complete the property purchase. Understanding this challenge helps DSAs guide clients more effectively, identify alternative funding options, and improve the chances of successful loan closures. By helping customers prepare financially before applying, you can reduce delays and increase conversion rates.",
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -42,156 +42,156 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
 	},
 	"intro": {
-		"heading": "Ways to Save for a Down Payment",
-		"secPara": "<p class=\"typography-body-md text-miniSubHead mb-8\">Turning your dream of owning your first home into reality starts here.✨</p><p class=\"mb-4\">Owning your first home is a major milestone—but we know it can also feel overwhelming, especially when you’re navigating the world of <a href=\"/finance-support/financial-hardship\" class=\"underline text-[var(--ddsa-info-text)]\">financial planning</a> and <a href=\"/home-loan\" class=\"underline text-[var(--ddsa-info-text)]\">home loans</a> for the first time. That’s where we come in. At Digital DSA, we’re not just advisors; we’re partners in your journey, here to ensure you feel informed, confident, and supported every step of the way.</p><p>🚀 Let’s start with some practical steps to help you save for your down payment.</p>"
+		"heading": "Helping Clients Prepare for a Down Payment",
+		"secPara": "<p class=\"typography-body-md mb-8\">Understanding down payment challenges can help you close more home loan opportunities.✨</p><p class=\"mb-4\">One of the most common reasons home loan applications are delayed or abandoned is the inability to arrange the required down payment. As a DSA, helping clients plan their finances early can improve loan readiness and increase approval chances. Understanding the relationship between <a href=\"/finance-support/financial-hardship\" class=\"underline text-[var(--ddsa-info-text)]\">financial planning</a> and <a href=\"/home-loan\" class=\"underline text-[var(--ddsa-info-text)]\">home loans</a> allows you to guide clients more effectively and identify suitable funding solutions when needed.</p><p>🚀 Explore practical strategies that can help your clients become financially prepared for home ownership.</p>"
 	},
 	"understandSpending": {
 		"habits": {
-			"listTopPara": "<p>Before creating a savings plan, it’s essential to have a clear picture of your finances.</p>",
-			"heading": "Understand Your Current Spending Habits ",
+			"listTopPara": "<p>Before recommending a home loan solution, it's important to understand your client's financial readiness and down payment capacity.</p>",
+			"heading": "Assess Your Client's Financial Position",
 			"list": [
 				{
-					"heading": "Track your spending :",
-					"desc": "List your monthly income and expenses to identify areas where your money is going."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Review income and expenses:</span>",
+					"desc": "Evaluate the customer's monthly income, existing obligations, and recurring expenses to understand their ability to manage a home loan."
 				},
 				{
-					"heading": "Analyze habits :",
-					"desc": "Are there subscriptions you’re not using? Could you reduce discretionary spending on eating out or entertainment?"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Identify funding gaps:</span>",
+					"desc": "Determine whether the customer has sufficient funds for the required down payment or may need additional financial planning before proceeding."
 				}
 			],
-			"listSecPara": "<p>✅ By understanding your spending patterns, you can pinpoint where to make changes.</p>"
+			"listSecPara": "<p>✅ A clear understanding of a client's financial position helps improve lender matching, reduce application issues, and increase approval chances.</p>"
 		},
 		"budget": {
-			"listTopPara": "<p>Saving for a down payment isn’t about drastic sacrifices—it’s about consistency.</p>",
-			"heading": "Create a Realistic Budget",
+			"listTopPara": "<p>Many home loan applications are delayed because customers are not financially prepared for the required down payment.</p>",
+			"heading": "Help Clients Plan for Their Down Payment",
 			"list": [
 				{
-					"heading": "Start with small changes :",
-					"desc": "Cutting out daily coffees might save ₹2,000 a month, but bigger changes like reducing rent costs or sharing a living space temporarily could save significantly more."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Identify financial gaps early:</span>",
+					"desc": "Work with clients to understand their available savings and expected down payment requirement. Early planning can reduce delays during the home loan process."
 				},
 				{
-					"heading": "Simulate your future home loan :",
-					"desc": "Start saving an amount similar to your expected loan EMI. This will not only help you build a down payment but also prepare you for managing repayments later."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Assess repayment readiness:</span>",
+					"desc": "Review whether the customer can comfortably manage future EMIs alongside their existing financial obligations. This helps identify suitable loan amounts and lenders."
 				}
 			],
-			"listSecPara": "<p><span class=\"font-semibold\">💡Remember :</span> Slow and steady wins the race. Aim for a sustainable budget you can stick to over the long term.</p>"
+			"listSecPara": "<p><span class=\"font-semibold\">💡DSA Insight :</span> Customers who prepare their down payment and repayment strategy in advance are often more loan-ready and have a smoother approval journey.</p>"
 		},
 		"debts": {
-			"listTopPara": "<p>Banks favor borrowers with minimal or manageable debts. If you’re juggling multiple loans or credit cards:</p>",
-			"heading": "Tackle Your Debts",
+			"listTopPara": "<p>Existing liabilities can significantly impact a customer's home loan eligibility and repayment capacity.</p>",
+			"heading": "Evaluate Existing Debt Obligations",
 			"list": [
 				{
-					"heading": "Consolidate your debts :",
-					"desc": "Consider combining debts into one with a lower interest rate to reduce payments."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Review debt-to-income ratio:</span>",
+					"desc": "Assess the customer's ongoing loan EMIs, credit card obligations, and other liabilities to understand their borrowing capacity."
 				},
 				{
-					"heading": "Clear smaller debts first :",
-					"desc": "The fewer liabilities you have, the better your financial profile will look to lenders."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Identify opportunities to reduce financial burden:</span>",
+					"desc": "Customers with lower debt obligations often have stronger eligibility profiles and may qualify for higher loan amounts or better lender options."
 				}
 			]
 		}
 	},
 	"startSaving": {
 		"strategic": {
-			"listTopPara": "<p>The more you save, the less you’ll need to borrow—and that means lower interest payments over time.</p>",
-			"heading": "Start Saving Strategically",
+			"listTopPara": "<p>Well-prepared customers are more likely to qualify for suitable home loan options and experience a smoother approval process.</p>",
+			"heading": "Help Clients Prepare Financially",
 			"list": [
 				{
-					"heading": "Automate savings :",
-					"desc": "Set up an auto-transfer to a dedicated savings account each payday."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Encourage disciplined financial planning:</span>",
+					"desc": "Customers with consistent savings habits and documented financial stability are often viewed more favorably during lender assessments."
 				},
 				{
-					"heading": "Explore savings tools :",
-					"desc": "Look for high-yield savings accounts or term deposits to grow your down payment faster."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Identify suitable funding and savings options:</span>",
+					"desc": "Guide clients toward financial strategies that can help them build the required down payment and strengthen their overall loan profile."
 				},
 				{
-					"heading": "Plan for additional costs :",
-					"desc": "Beyond the down payment, remember to budget for upfront costs like <span class=\"font-semibold\">stamp duty</span>, <span class=\"font-semibold\">registration charges</span>, or <span class=\"font-semibold\">legal fees.</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Prepare for property-related expenses:</span>",
+					"desc": "Help clients account for additional costs such as <span class=\"font-semibold\">stamp duty</span>, <span class=\"font-semibold\">registration charges</span>, and <span class=\"font-semibold\">legal fees</span> to avoid last-minute funding gaps."
 				}
 			]
 		},
 		"assistance": {
-			"listTopPara": "<p>As a first-time homebuyer, you may be eligible for support programs:</p>",
-			"heading": "Leverage Available Assistance",
+			"listTopPara": "<p>Clients who face down payment challenges may still have viable pathways to home loan approval when the right solutions are identified early.</p>",
+			"heading": "Explore Available Funding Solutions",
 			"list": [
 				{
-					"heading": "Home Guarantee Schemes :",
-					"desc": "Many state or national programs allow you to buy with as little as 5% down payment, saving years of effort."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Alternative Funding Options:</span>",
+					"desc": "Evaluate available financing solutions that can help bridge funding gaps and support a client's property purchase journey."
 				},
 				{
-					"heading": "Family Assistance :",
-					"desc": "Explore if a family member could help with a financial gift or offer to co-sign your loan."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Family or Co-Applicant Support:</span>",
+					"desc": "Some customers may strengthen their eligibility through financial support from family members or by adding a suitable co-applicant."
 				},
 				{
-					"heading": "First Home Buyer Grants :",
-					"desc": "Check if your state offers incentives or subsidies for first-time buyers."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Government & Housing Schemes:</span>",
+					"desc": "Identify applicable government-backed housing initiatives, subsidies, or affordable housing programs that may benefit eligible customers."
 				}
 			]
 		},
 		"education": {
-			"listTopPara": "<p>Navigating financial jargon, choosing the right property, and understanding loan options can feel intimidating. Our Home Loan Resources Hub is designed to simplify the process with tools like:</p>",
-			"heading": "Educate Yourself on Home Loans",
+			"listTopPara": "<p>Successful DSAs understand lender requirements, customer eligibility factors, and loan structuring strategies. DigitalDSA provides tools and resources to help you make better lending decisions and improve client outcomes.</p>",
+			"heading": "Resources for Loan DSAs",
 			"list": [
 				{
-					"heading": "Affordability Calculators :",
-					"desc": "Find out how much you can comfortably borrow. 🔍<a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\">(Check Here)</a>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Eligibility & Affordability Tools:</span>",
+					"desc": "Assess borrowing capacity, affordability, and loan readiness before submitting an application. 🔍<a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\">(Check Here)</a>"
 				},
 				{
-					"heading": "Step-by-Step Loan Guidance :",
-					"desc": "We walk you through everything, from choosing the right loan to understanding repayment options."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Loan Knowledge Hub:</span>",
+					"desc": "Understand lender requirements, loan products, documentation needs, and approval factors to better guide your clients."
 				},
 				{
-					"heading": "Loan Planners :",
-					"desc": "Learn how part payments or rate changes impact your finances. 🔍<a href=\"/planners/part-payment-planner\" class=\"underline text-[var(--ddsa-info-text)]\">(Check Here)</a>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Loan Planning Tools:</span>",
+					"desc": "Evaluate how EMI structures, part payments, and loan scenarios impact customer affordability and lender eligibility. 🔍<a href=\"/planners/part-payment-planner\" class=\"underline text-[var(--ddsa-info-text)]\">(Check Here)</a>"
 				}
 			]
 		}
 	},
 	"guidance": {
 		"advisors": {
-			"listTopPara": "<p>At Digital DSA, we know that first-time buyers often face challenges like dealing with brokers, builders, and complex financial terms. That’s why we offer:</p>",
-			"heading": "Secure Guidance from Trusted Advisors",
+			"listTopPara": "<p>DigitalDSA helps loan DSAs navigate lender requirements, evaluate customer eligibility, and identify the most suitable loan opportunities. Our goal is to help you improve approval rates and deliver a better experience for your clients.</p>",
+			"heading": "Get Support from Lending Experts",
 			"list": [
 				{
-					"heading": "Personalized support :",
-					"desc": "Our team doesn’t just assist; we educate you on every detail of the process."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Expert guidance:</span>",
+					"desc": "Receive assistance with lender selection, eligibility assessment, documentation requirements, and complex loan scenarios."
 				},
 				{
-					"heading": "Transparency :",
-					"desc": "No hidden fees, no unnecessary calls—just honest advice."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Transparent recommendations:</span>",
+					"desc": "Access lender insights and product comparisons based on customer profiles, without hidden conditions or misleading information."
 				},
 				{
-					"heading": "Tools to empower you :",
-					"desc": "Use our <a href=\"/calculators/emi-calculator\" class=\"font-semibold underline\">Calculators</a> and <a href=\"/planners/part-payment-planner\" class=\"font-semibold underline\">Planners</a> to make informed decisions."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Tools to improve approvals:</span>",
+					"desc": "Use our <a href=\"/calculators/emi-calculator\" class=\"font-semibold underline text-[var(--ddsa-info-text)]\">Calculators</a> and <a href=\"/planners/part-payment-planner\" class=\"font-semibold underline text-[var(--ddsa-info-text)]\">Planners</a> to evaluate affordability, repayment scenarios, and lender suitability."
 				}
 			]
 		},
 		"steps": {
-			"listTopPara": "<p>Saving for a down payment  is just the beginning of your journey. With proper planning and the right guidance, your dream of homeownership is closer than you think.</p>",
-			"heading": "Take Small, Confident Steps Toward Your Goal",
+			"listTopPara": "<p>Helping clients become financially prepared is only the first step. The right guidance, lender selection, and documentation strategy can significantly improve the chances of home loan approval.</p>",
+			"heading": "Help Clients Move Closer to Home Loan Approval",
 			"list": [
 				{
-					"heading": "Set clear goals :",
-					"desc": "Define how much you need to save and set a timeline to keep yourself on track."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Assess loan readiness:</span>",
+					"desc": "Evaluate the customer's financial profile, down payment preparedness, and repayment capacity before approaching lenders."
 				},
 				{
-					"heading": "Monitor progress :",
-					"desc": "Regularly review your savings and adjust your plan as needed to stay on course."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Track application progress:</span>",
+					"desc": "Monitor documentation, eligibility requirements, and lender responses to ensure a smooth application journey."
 				},
 				{
-					"heading": "Stay motivated :",
-					"desc": "Celebrate small milestones along the way to keep your spirits high."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Guide clients at every stage:</span>",
+					"desc": "Support customers from initial planning through loan approval and disbursement to build trust and improve conversion rates."
 				}
 			]
 		},
@@ -202,7 +202,6 @@
 	},
 	"verticalBlog": {
 		"heading": "Explore More Resources 📖",
-		"sub": "Related Articles:",
 		"blogLists": [
 			{
 				"icon": "/images/TheSharmaFamilyStory.jpg",
@@ -233,17 +232,17 @@
 				"links": [
 					{
 						"id": 1,
-						"secLinkName": "How much can I borrow?",
+						"secLinkName": "Check Client Eligibility",
 						"secUrl": "/calculators/eligibility-calculator"
 					},
 					{
 						"id": 2,
-						"secLinkName": "What would my repayments be?",
+						"secLinkName": "What would repayments be?",
 						"secUrl": "/planners/part-payment-planner"
 					},
 					{
 						"id": 3,
-						"secLinkName": "What would my upfront costs be?",
+						"secLinkName": "What would upfront costs be?",
 						"secUrl": "/calculators/balance-transfer-calculator"
 					}
 				]
@@ -276,47 +275,45 @@
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
 		"button": {
 			"link": "/contact",
-			"btnClass": "btn-secondary text-[var(--form-text)]",
+			"btnClass": "btn-secondary",
 			"btnName": "Message us"
 		}
 	},
 	"common_components": {
 		"helpList": {
-			"contents": {
-				"heading": "We're here to help",
-				"xlGridCol": 4,
-				"borderBottom": false,
-				"cards": [
-					{
-						"heading": "Know your borrowing power",
-						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
-						"icon": "/icons/appointment.svg",
-						"altName": "appointment Icon",
-						"url": "/appointment"
-					},
-					{
-						"heading": "Check loan offers",
-						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
-						"icon": "/icons/manageLoan2.svg",
-						"altName": "Alert Icon",
-						"url": "/get-started/how-can-we-help"
-					},
-					{
-						"heading": "Contact us",
-						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
-						"icon": "/icons/contact.svg",
-						"altName": "Alert Icon",
-						"url": "/contact"
-					},
-					{
-						"heading": "Message us",
-						"para": "Get instant help from our online assistants  or chat to a specialist.",
-						"icon": "/icons/msg.svg",
-						"altName": "Alert Icon",
-						"url": "/contact"
-					}
-				]
-			}
+			"heading": "We're here to help",
+			"xlGridCol": 4,
+			"borderBottom": true,
+			"cards": [
+				{
+					"heading": "Book an </br> appointment",
+					"para": "Book instantly to speak to a business loan specialist at a time that suits you",
+					"icon": "/icons/appointment.svg",
+					"iconAltName": "appointment Icon",
+					"url": "/appointment"
+				},
+				{
+					"heading": "Check loan offers",
+					"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+					"icon": "/icons/manageLoan2.svg",
+					"iconAltName": "Alert Icon",
+					"url": "/get-started/how-can-we-help"
+				},
+				{
+					"heading": "Contact us",
+					"para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+					"icon": "/icons/contact.svg",
+					"iconAltName": "Alert Icon",
+					"url": "/contact"
+				},
+				{
+					"heading": "Message us",
+					"para": "Get instant help from our online assistants or chat to a specialist.",
+					"icon": "/icons/msg.svg",
+					"iconAltName": "Alert Icon",
+					"url": "/contact"
+				}
+			]
 		},
 		"thinkYouShouldKnow": {
 			"bullets": [

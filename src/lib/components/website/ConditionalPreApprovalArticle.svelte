@@ -152,21 +152,21 @@
 			</div>
 
 			<div id="intro" data-section="intro" class="section">
-				<TwoColumnWithLeftHeading contents={content.intro} />
+				<TwoColumnWithLeftHeading contents={content.intro} isBorder />
 			</div>
 
 			<div id="advantages" data-section="advantages" class="section">
-				<TwoColumnWithLeftHeading contents={content.advantages.contents} />
+				<TwoColumnWithLeftHeading contents={content.advantages.contents} isBorder />
 			</div>
 
 			<div id="preparation" data-section="preparation" class="section">
-				<TwoColumnWithLeftHeading contents={content.preparation.assess} />
-				<TwoColumnWithLeftHeading contents={content.preparation.apply} />
-				<TwoColumnWithLeftHeading contents={content.preparation.after} />
+				<TwoColumnWithLeftHeading contents={content.preparation.assess} isBorder />
+				<TwoColumnWithLeftHeading contents={content.preparation.apply} isBorder />
+				<TwoColumnWithLeftHeading contents={content.preparation.after} isBorder />
 			</div>
 
 			<div id="guidance" data-section="guidance" class="section">
-				<TwoColumnWithLeftHeading contents={content.guidance.whyChoose} />
+				<TwoColumnWithLeftHeading contents={content.guidance.whyChoose} isBorder />
 			</div>
 		</div>
 
@@ -180,7 +180,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -207,8 +207,8 @@
 							id="preparation"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.preparation.assess} />
-							<TwoColumnWithLeftHeading contents={content.preparation.apply} />
+							<TwoColumnWithLeftHeading contents={content.preparation.assess} isBorder />
+							<TwoColumnWithLeftHeading contents={content.preparation.apply} isBorder />
 							<TwoColumnWithLeftHeading contents={content.preparation.after} />
 						</div>
 					{:else if index === 3}
@@ -216,7 +216,7 @@
 							id="guidance"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.guidance.whyChoose} />
+							<TwoColumnWithLeftHeading contents={content.guidance.whyChoose} isBorder />
 						</div>
 					{/if}
 				</details>
@@ -224,7 +224,7 @@
 		</div>
 
 		<div data-section="calculators" id="calculators">
-			<ThreeColumWithLeftHeading contents={content.tools} />
+			<ThreeColumWithLeftHeading contents={content.tools} isBorder />
 		</div>
 
 		<TwoColumnWithImage contents={content.messageUs.contents}>
@@ -236,7 +236,7 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary" class="">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
@@ -246,7 +246,7 @@
 					{/each}
 				</ul>
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

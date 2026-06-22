@@ -16,7 +16,7 @@
 
 <a href={cardData.url}>
   <div
-    class="h-[15rem] lg:h-[30rem] lg:max-h-[30rem] flex flex-col justify-center items-center gap-6 group transition-all duration-300 {cardData.color ? 'bg-[#222222]/80' : 'bg-[#222222]'}"
+    class="h-[15rem] lg:h-[30rem] lg:max-h-[30rem] flex flex-col justify-center items-center gap-6 group transition-all duration-300 card"
   >
     {#if cardData.icon}
       <img
@@ -27,7 +27,7 @@
     {/if}
 
     <h2
-      class="text-center typography-h3 text-primary text-wrap"
+      class="text-center typography-body-lg !font-semibold text-primary text-wrap"
     >
       {@html cardData.heading}
     </h2>

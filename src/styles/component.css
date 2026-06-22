@@ -330,6 +330,23 @@
 	opacity: 0.9;
 }
 
+.card {
+	border-radius: 1rem;
+	border: 1px solid var(--landing-glass-border);
+	background: var(--landing-glass-bg);
+	padding: 2rem;
+	/* backdrop-filter: blur(var(--landing-glass-blur)); */
+	/* -webkit-backdrop-filter: blur(var(--landing-glass-blur)); */
+	box-shadow: var(--landing-shadow-glass);
+	/* transition: all 0.3s ease; */
+}
+
+.card:hover {
+	box-shadow: var(--landing-shadow-glass-hover);
+	border-color: var(--ddsa-primary);
+	/* transform: translateY(-2px); */
+}
+
 .modal-btn {
 	background: linear-gradient(135deg, var(--ddsa-primary-500) 0%, var(--ddsa-accent-500) 100%);
 	margin-top: 1rem;
