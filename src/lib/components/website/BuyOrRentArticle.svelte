@@ -210,12 +210,12 @@
 					</TwoColumnWithImage>
 				</div>
 
-				<TwoColumnWithLeftHeading contents={content.compare.costs} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.compare.costs} isBorder />
 			</div>
 
 			<div id="prosCons" class="section" data-section="prosCons">
-				<TwoColumnWithLeftHeading contents={content.prosCons} isBorder/>
-				<TwoColumnWithLeftHeading contents={content.prosCons.unsure} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.prosCons} isBorder />
+				<TwoColumnWithLeftHeading contents={content.prosCons.unsure} isBorder />
 			</div>
 
 			<div id="calculators" data-section="calculators" class="section">
@@ -245,14 +245,11 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="right" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="right" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.right.contents} />
 						</div>
 					{:else if index === 1}
-						<div
-							id="compare"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="compare" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<div
 								class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 							>
@@ -301,18 +298,12 @@
 							<TwoColumnWithLeftHeading contents={content.compare.costs} />
 						</div>
 					{:else if index === 2}
-						<div
-							id="prosCons"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<TwoColumnWithLeftHeading contents={content.prosCons} isBorder/>
+						<div id="prosCons" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading contents={content.prosCons} isBorder />
 							<TwoColumnWithLeftHeading contents={content.prosCons.unsure} />
 						</div>
 					{:else if index === 3}
-						<div
-							id="calculators"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="calculators" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<AboveTitleWithBlackCard contents={content.tools.contents} />
 						</div>
 					{/if}
@@ -330,7 +321,7 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">

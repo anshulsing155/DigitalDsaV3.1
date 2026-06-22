@@ -196,35 +196,35 @@
 					{#if index === 0}
 						<div
 							id="resale"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.resale.contents} />
 						</div>
 					{:else if index === 1}
 						<div
 							id="direct"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.direct.contents} />
 						</div>
 					{:else if index === 2}
 						<div
 							id="considerations"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.considerations.contents} />
 						</div>
 					{:else if index === 3}
 						<div
 							id="whatWorks"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.whatWorks.contents} />
 						</div>
 					{:else if index === 4}
 						<div
 							id="calculators"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<AboveTitleWithBlackCard contents={content.tools.contents} />
 						</div>
@@ -233,7 +233,7 @@
 			{/each}
 		</div>
 
-		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
+		<TwoColumnWithImage contents={content.messageUs.contents}>
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
@@ -243,7 +243,7 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">

@@ -162,9 +162,7 @@
 						<div class="flex items-center justify-center">
 							<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
 								{#each content.benefits.cards as card}
-									<div
-										class="rounded-sm bg-[var(--landing-bg-card)] p-8 text-center shadow-lg"
-									>
+									<div class="text-center card">
 										<h3 class="typography-body-lg pb-5 !font-semibold text-[var(--form-text)]">
 											{card.heading}
 										</h3>
@@ -246,9 +244,7 @@
 								</h2>
 								<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
 									{#each content.benefits.cards as card}
-										<div
-											class="rounded-sm bg-[var(--landing-bg-card)] p-8 text-center shadow-lg"
-										>
+										<div class="rounded-sm bg-[var(--landing-bg-card)] p-8 text-center shadow-lg">
 											<h3 class="typography-body-lg pb-5 !font-semibold text-[var(--form-text)]">
 												{card.heading}
 											</h3>
@@ -261,28 +257,25 @@
 							</div>
 						</div>
 					{:else if index === 1}
-						<div
-							id="strategies"
-							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
-						>
-							<TwoColumnWithLeftHeading contents={content.strategies.extraPayments} isBorder/>
-							<TwoColumnWithLeftHeading contents={content.strategies.higherEmis} isBorder/>
+						<div id="strategies" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading contents={content.strategies.extraPayments} isBorder />
+							<TwoColumnWithLeftHeading contents={content.strategies.higherEmis} isBorder />
 							<TwoColumnWithLeftHeading contents={content.strategies.lumpSums} />
 						</div>
 					{:else if index === 2}
-						<div
-							id="savings-transfer"
-							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
-						>
-							<TwoColumnWithLeftHeading contents={content.savingsTransfer.reduceExpenses} isBorder/>
-							<TwoColumnWithLeftHeading contents={content.savingsTransfer.balanceTransfer} isBorder/>
+						<div id="savings-transfer" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading
+								contents={content.savingsTransfer.reduceExpenses}
+								isBorder
+							/>
+							<TwoColumnWithLeftHeading
+								contents={content.savingsTransfer.balanceTransfer}
+								isBorder
+							/>
 							<TwoColumnWithLeftHeading contents={content.savingsTransfer.planStrategically} />
 						</div>
 					{:else if index === 3}
-						<div
-							id="success-stories"
-							class="bg-[var(--landing-bg)] py-[4rem]"
-						>
+						<div id="success-stories" class="bg-[var(--landing-bg)] py-[4rem]">
 							<p class="typography-h2-md text-center text-[var(--form-text)]">
 								Real Stories of Success
 							</p>
@@ -309,7 +302,7 @@
 		<ButtonBanner contents={content.buttonBanner.contents} />
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">

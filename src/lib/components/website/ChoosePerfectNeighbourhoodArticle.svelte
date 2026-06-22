@@ -74,7 +74,7 @@
 		</div>
 
 		{#snippet secondary()}
-			<div class="px-2 lg:px-0 py-16">
+			<div class="px-2 lg:px-0 py-16 border-b border-[var(--form-border)]">
 				<h2 class="typography-h2-md mb-8 text-[var(--form-text)]">
 					{content.resonateWithYou.heading}
 				</h2>
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 
 			<ThingsYouKnow contents={{ heading: `Things you should know` }}>
 				<ul class="flex list-disc flex-col gap-4 px-2 pl-4">

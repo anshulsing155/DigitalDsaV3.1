@@ -163,13 +163,13 @@
 			"listTopPara": "Renting or buying, there’s no one-size-fits-all answer. <br>It depends on:",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your financial situation</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your financial situation</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your lifestyle preferences</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your lifestyle preferences</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your long-term goals</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your long-term goals</span>"
 				}
 			],
 			"listSecPara": "<div>💡 Want help figuring it out? Explore our tools and guides to make an informed decision! <br><p class=\"mt-8\"> <button class=\"typography-button w-full cursor-pointer rounded-full px-8 py-3 transition-all duration-300 hover:opacity-90 md:w-auto btn-primary text-black\" href=\"/appointment\">Contact Us</button></p></div>"
