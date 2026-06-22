@@ -12,8 +12,8 @@
 	import Seo from './Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/understandCostOfBuyingHomeArticle.json';
-		import { ChevronDown } from '$lib/utils/iconRegistry';
-		import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 
 	interface ButtonProps {
 		btnName: string;
@@ -103,8 +103,6 @@
 		};
 	});
 
-	
-
 	// JSON-LD Structured Data Schema for Breadcrumbs
 	const breadcrumbSchema = {
 		'@context': 'https://schema.org',
@@ -153,23 +151,23 @@
 			</div>
 
 			<div id="taxes-fees" data-section="taxes-fees" class="section">
-				<TwoColumnWithLeftHeading contents={content.taxesFees.contents} />
+				<TwoColumnWithLeftHeading contents={content.taxesFees.contents} isBorder/>
 			</div>
 
 			<div id="inspections" data-section="inspections" class="section">
-				<TwoColumnWithLeftHeading contents={content.inspections.contents} />
+				<TwoColumnWithLeftHeading contents={content.inspections.contents} isBorder/>
 			</div>
 
 			<div id="setup-cost" data-section="setup-cost" class="section">
-				<TwoColumnWithLeftHeading contents={content.setupCost.insurance} />
-				<TwoColumnWithLeftHeading contents={content.setupCost.legal} />
-				<TwoColumnWithLeftHeading contents={content.setupCost.moving} />
-				<TwoColumnWithLeftHeading contents={content.setupCost.loanCosts} />
-				<TwoColumnWithLeftHeading contents={content.setupCost.subsidy} />
+				<TwoColumnWithLeftHeading contents={content.setupCost.insurance} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.setupCost.legal} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.setupCost.moving} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.setupCost.loanCosts} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.setupCost.subsidy} isBorder />
 			</div>
 
 			<div id="guidance" data-section="guidance" class="section">
-				<TwoColumnWithLeftHeading contents={content.guidance.help} />
+				<TwoColumnWithLeftHeading contents={content.guidance.help} isBorder/>
 			</div>
 		</div>
 
@@ -183,7 +181,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -213,10 +211,10 @@
 							id="setup-cost"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.setupCost.insurance} />
-							<TwoColumnWithLeftHeading contents={content.setupCost.legal} />
-							<TwoColumnWithLeftHeading contents={content.setupCost.moving} />
-							<TwoColumnWithLeftHeading contents={content.setupCost.loanCosts} />
+							<TwoColumnWithLeftHeading contents={content.setupCost.insurance} isBorder/>
+							<TwoColumnWithLeftHeading contents={content.setupCost.legal} isBorder/>
+							<TwoColumnWithLeftHeading contents={content.setupCost.moving} isBorder/>
+							<TwoColumnWithLeftHeading contents={content.setupCost.loanCosts} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.setupCost.subsidy} />
 						</div>
 					{:else if index === 3}
@@ -224,26 +222,25 @@
 							id="guidance"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.guidance.help} />
+							<TwoColumnWithLeftHeading contents={content.guidance.help} isBorder/>
 						</div>
 					{/if}
 				</details>
 			{/each}
 		</div>
 
-		<div class="px-1 py-4 md:p-16">
-			<h2 class="typography-h2-md mb-5 text-[var(--form-text)]">
+		<div class="px-1 py-4 md:p-16 border-b border-[var(--form-border)]">
+			<h2 class="typography-h2-md mb-8 text-[var(--form-text)]">
 				{content.verticalBlog.heading}
 			</h2>
-			<p class="mb-4 typography-body-lg !font-semibold text-[var(--form-text)]">{content.verticalBlog.sub}</p>
 			<div class="flex flex-col gap-4 md:flex-row">
 				<VerticalBlog blogLists={content.verticalBlog.blogLists} />
 			</div>
 		</div>
 
-		<ThreeColumWithLeftHeading contents={content.tools} />
+		<ThreeColumWithLeftHeading contents={content.tools} isBorder/>
 
-		<TwoColumnWithImage contents={content.messageUs.contents}>
+		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
@@ -252,7 +249,7 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary" class="px-2">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
@@ -262,7 +259,7 @@
 					{/each}
 				</ul>
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

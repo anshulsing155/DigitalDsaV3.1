@@ -1,10 +1,5 @@
 {
-	"mobileNavbarTitle": [
-		"Introduction",
-		"Advantages",
-		"Preparation",
-		"Guidance"
-	],
+	"mobileNavbarTitle": ["Introduction", "Advantages", "Preparation", "Guidance"],
 	"pageData": {
 		"coverImage": "/images/couple-looking-at-dream-home.jpg",
 		"coverAlt": "couple looking at dream home",
@@ -14,12 +9,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -47,12 +42,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -67,19 +62,19 @@
 			"listTopPara": "Here are some key benefits of obtaining conditional pre-approval:",
 			"list": [
 				{
-					"heading": "Gives You a Clear Budget :",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Gives You a Clear Budget:</span>",
 					"desc": "Pre-approval helps you understand how much you can borrow, letting you focus on properties within your price range. This saves you time and energy by narrowing down your search."
 				},
 				{
-					"heading": "Makes You a Serious Buyer :",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Makes You a Serious Buyer:</span>",
 					"desc": "Conditional pre-approval demonstrates to sellers that you’re prepared and capable of securing finance, giving you a competitive edge in negotiations."
 				},
 				{
-					"heading": "Saves Time When It Matters Most :",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Saves Time When It Matters Most:</span>",
 					"desc": "If you find your dream home, being pre-approved can expedite the loan approval process. Sellers are more likely to favor buyers who are ready to move forward quickly."
 				},
 				{
-					"heading": "Adapts to Changing Situations :",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Adapts to Changing Situations:</span>",
 					"desc": "If your financial circumstances or property preferences change, you can renew your pre-approval to reflect your updated position."
 				}
 			]
@@ -91,16 +86,16 @@
 			"listTopPara": "When applying for conditional pre-approval, lenders typically assess:",
 			"list": [
 				{
-					"heading": "The price range of properties you’re considering."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">The price range of properties you’re considering.</span>"
 				},
 				{
-					"heading": "Your current savings for a down payment."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your current savings for a down payment.</span>"
 				},
 				{
-					"heading": "Your income and employment stability."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your income and employment stability.</span>"
 				},
 				{
-					"heading": "Your monthly living expenses."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your monthly living expenses.</span>"
 				}
 			],
 			"listSecPara": "✅ Keep in mind that pre-approval is usually valid for 3-6 months. If you don’t find a property within that timeframe, you may need to reapply."
@@ -110,34 +105,34 @@
 			"listTopPara": "Unlike traditional lenders or banks, Digital DSA simplifies the process with:",
 			"list": [
 				{
-					"heading": "Online Eligibility Checks: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Online Eligibility Checks:</span>",
 					"desc": "Our platform helps you quickly calculate how much you can borrow based on your financial details."
 				},
 				{
-					"heading": "Expert Guidance: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Expert Guidance:</span>",
 					"desc": "We provide start-to-finish support, ensuring you understand the process and submit all required documents correctly."
 				},
 				{
-					"heading": "No Spam Calls: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">No Spam Calls:</span>",
 					"desc": "We respect your privacy while offering you personalized solutions."
 				}
 			],
-			"listSecPara": "<p class=\"font-semibold text-miniSubHead\">Here’s how to get started :</p><ul class=\"space-y-4 list-disc mt-4\"><p>✅ Use our Home Loan Eligibility Calculator to get an estimate.</p><p>✅ Provide basic financial information like your income, expenses, and down payment savings.</p><p>✅ Let our advisors guide you through the pre-approval process, ensuring everything is in place for when you find the perfect property.</p></ul>"
+			"listSecPara": "<p class=\"font-semibold\">Here’s how to get started :</p><ul class=\"space-y-4 list-disc mt-4\"><p>✅ Use our Home Loan Eligibility Calculator to get an estimate.</p><p>✅ Provide basic financial information like your income, expenses, and down payment savings.</p><p>✅ Let our advisors guide you through the pre-approval process, ensuring everything is in place for when you find the perfect property.</p></ul>"
 		},
 		"after": {
 			"heading": "What Happens After Pre-Approval?",
 			"listTopPara": "Once you’re conditionally pre-approved :",
 			"list": [
 				{
-					"heading": "Continue Your Property Search: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Continue Your Property Search:</span>",
 					"desc": "With a clearer budget, you can confidently explore properties within your range."
 				},
 				{
-					"heading": "Formal Loan Approval : ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Formal Loan Approval:</span>",
 					"desc": "After you find your ideal home, the lender will verify your financial position and property details before providing formal approval."
 				},
 				{
-					"heading": "Make an Offer with Confidence : ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Make an Offer with Confidence:</span>",
 					"desc": "Knowing your finances are in place gives you the upper hand during negotiations."
 				}
 			]
@@ -149,13 +144,13 @@
 			"listTopPara": "At Digital DSA, we focus on empowering first-time buyers by offering :",
 			"list": [
 				{
-					"heading": "Transparent advice with no hidden charges. "
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Transparent advice with no hidden charges.</span>"
 				},
 				{
-					"heading": "Tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\"> Affordability Calculator</a> to refine your search."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\"> Affordability Calculator</a> to refine your search.</span>"
 				},
 				{
-					"heading": "A no-pressure approach with zero processing fees and no spam calls. "
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">A no-pressure approach with zero processing fees and no spam calls.</span>"
 				}
 			]
 		}
@@ -212,7 +207,7 @@
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
 		"button": {
 			"link": "/contact",
-			"btnClass": "btn-secondary text-[var(--form-text)]",
+			"btnClass": "btn-secondary",
 			"btnName": "Message us"
 		}
 	},

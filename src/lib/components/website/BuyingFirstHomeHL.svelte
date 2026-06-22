@@ -153,7 +153,7 @@
 			<StickyNavbar navList={content.navList} {activeSection} />
 
 			<section id="ready" data-section="ready" class="section">
-				<ThreeColumWithLeftHeading contents={content.ready.contents} />
+				<ThreeColumWithLeftHeading contents={content.ready.contents} isBorder />
 			</section>
 
 			<section id="start" data-section="start" class="section">
@@ -161,8 +161,8 @@
 			</section>
 
 			<section id="next" data-section="next" class="section">
-				<ThreeColumWithLeftHeading contents={content.next.contents} />
-				<ButtonBanner contents={content.next.buttonBanner} />
+				<ThreeColumWithLeftHeading contents={content.next.contents} isBorder/>
+				<ButtonBanner contents={content.next.buttonBanner} isBorder/>
 			</section>
 
 			<section id="calculators" data-section="calculators" class="section">
@@ -201,7 +201,7 @@
 						</div>
 					{:else if index == 2}
 						<div id="next" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<ThreeColumWithLeftHeading contents={content.next.contents} />
+							<ThreeColumWithLeftHeading contents={content.next.contents} isBorder/>
 							<ButtonBanner contents={content.next.buttonBanner} />
 						</div>
 					{:else if index == 3}
@@ -228,13 +228,13 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow.contents}
 				disc={content.common_components.thinkYouShouldKnow.disc}
 				containerClass="lg:px-0"
 			></ThingsYouShould>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>

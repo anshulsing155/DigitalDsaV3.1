@@ -1,10 +1,5 @@
 {
-	"mobileNavbarTitle": [
-		"Taxes & Fees",
-		"Inspections",
-		"Setup Cost & Subsidy",
-		"Guidance"
-	],
+	"mobileNavbarTitle": ["Taxes & Fees", "Inspections", "Setup Cost & Subsidy", "Guidance"],
 	"pageData": {
 		"coverImage": "/images/cost-of-buying-home-blog.jpg",
 		"coverAlt": "photo of a indian couple understanding all the factors about buying a new home from the DigitalDSA portal",
@@ -14,12 +9,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -47,12 +42,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -63,15 +58,15 @@
 			"listTopPara": "When buying a home in India, you’ll need to account for various taxes and fees, including:",
 			"list": [
 				{
-					"heading": "Stamp Duty: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Stamp Duty:</span>",
 					"desc": "<p class=\"mb-2\">Stamp duty is one of the biggest additional expenses when buying a home. This state government tax is calculated based on the property’s market value or purchase price, whichever is higher. It varies from state to state, typically ranging from 5% to 7% of the property’s value.</p><p><span class=\"font-semibold mr-2\">💡 Tip:</span> First-time homebuyers in some states may be eligible for concessions or rebates on stamp duty. Check with your state government for specific benefits.</p><p><span class=\"font-semibold mr-2\">💡 Payment Deadline:</span> It’s usually paid before property registration.</p>"
 				},
 				{
-					"heading": "Property Registration Charges: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Property Registration Charges:</span>",
 					"desc": "<p class=\"mb-2\">In addition to stamp duty, registration fees (around 1% of the property’s value) are payable to register the property in your name with the state’s Land Registration Department.</p>"
 				},
 				{
-					"heading": "Goods and Services Tax (GST): ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Goods and Services Tax (GST):</span>",
 					"desc": "<p class=\"mb-2\">If you’re purchasing a new under-construction property, GST applies at a rate of:</p><ul class=\"list-disc list-inside\"><li>1% for affordable housing.</li><li>5% for non-affordable housing.</li></ul><p class=\"mt-4\">✅ Completed or ready-to-move properties are exempt from GST.</p>"
 				}
 			]
@@ -83,11 +78,11 @@
 			"listTopPara": "Before finalizing your home purchase, it’s crucial to conduct thorough inspections and valuations to ensure you’re making a sound investment. Here are the key steps to consider:",
 			"list": [
 				{
-					"heading": "Legal & Technical Verification: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Legal & Technical Verification: </span>",
 					"desc": "<p class=\"mb-2\">Before buying, ensure the property has a clear title and all necessary approvals. A lawyer or real estate consultant can help verify the documents, including sale deed, encumbrance certificate, and RERA registration.</p><p><span class=\"font-semibold mr-2\">🪙 Cost Range :</span> ₹10,000–₹25,000 depending on the complexity of the verification.</p>"
 				},
 				{
-					"heading": "Home Valuation: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Valuation:</span>",
 					"desc": "<p class=\"mb-2\">A professional valuation ensures that the property’s market value aligns with the purchase price, which is especially important if you’re applying for a home loan.</p><p><span class=\"font-semibold mr-2\">🪙 Cost Range :</span>  ₹3,000–₹7,000.</p>"
 				}
 			]
@@ -99,11 +94,11 @@
 			"listTopPara": "Protecting your home and finances is essential when buying a property. Here are the key insurance costs to consider:",
 			"list": [
 				{
-					"heading": "Home Loan Insurance: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Loan Insurance:</span>",
 					"desc": "Home loan insurance (also called loan protection insurance) is a policy that covers your outstanding home loan in case of death, disability, or job loss. If something unfortunate happens to you, the insurance company repays your home loan, so your family doesn’t have to worry about EMI payments."
 				},
 				{
-					"heading": "Home Insurance: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Insurance:</span>",
 					"desc": "Also know as Property Insurance. After buying your home, protecting it from risks like fire, theft, and natural disasters is essential. Home insurance policies typically cover the structure and its contents."
 				}
 			]
@@ -113,15 +108,15 @@
 			"listTopPara": "You’ll need professional help to handle the legal and administrative aspects of your property purchase:",
 			"list": [
 				{
-					"heading": "Conveyancing Fees: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Conveyancing Fees:</span>",
 					"desc": "To transfer ownership and prepare legal documents."
 				},
 				{
-					"heading": "Legal Fees: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Legal Fees:</span>",
 					"desc": "For contract reviews and advice."
 				},
 				{
-					"heading": "Cost Estimate: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Cost Estimate:</span>",
 					"desc": "₹10,000–₹30,000 depending on the location and complexity of the transaction."
 				}
 			]
@@ -131,19 +126,19 @@
 			"listTopPara": "Once you’ve finalized the purchase, you’ll need to factor in the costs of moving into your new home or preparing it for use:",
 			"list": [
 				{
-					"heading": "Movers or Packers Charges: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Movers or Packers Charges:</span>",
 					"desc": "₹10,000–₹30,000 depending on the distance and volume of items."
 				},
 				{
-					"heading": "Utility Connections: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Utility Connections:</span>",
 					"desc": "Initial costs for setting up electricity, water, gas, DTH, and broadband services."
 				},
 				{
-					"heading": "Municipal Taxes & Maintenance Charges: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Municipal Taxes & Maintenance Charges:</span>",
 					"desc": "These include property taxes, society maintenance, and possible parking fees in gated communities."
 				},
 				{
-					"heading": "Interior Setup: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Interior Setup:</span>",
 					"desc": "If your home is unfurnished, budget for furniture, appliances, and décor."
 				}
 			]
@@ -153,15 +148,15 @@
 			"listTopPara": "When taking a home loan, there are additional costs beyond your monthly EMI:",
 			"list": [
 				{
-					"heading": "Loan Processing Fee: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Loan Processing Fee:</span>",
 					"desc": "Typically 0.25% to 1% of the loan amount."
 				},
 				{
-					"heading": "Pre-EMI Interest: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Pre-EMI Interest:</span>",
 					"desc": "If your loan disbursement happens in stages (common for under-construction properties), you’ll need to pay interest on the amount disbursed until the entire loan is released."
 				},
 				{
-					"heading": "Miscellaneous Charges: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Miscellaneous Charges:</span>",
 					"desc": "These include legal fees, valuation charges, and administrative fees by the lender."
 				}
 			],
@@ -179,15 +174,15 @@
 			"listTopPara": "At Digital DSA, we understand the unique needs of first-time homebuyers in India and aim to make the journey as smooth as possible.<p>Here’s how we can assist:</p>",
 			"list": [
 				{
-					"heading": "Transparency : ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Transparency :</span>",
 					"desc": "Get a clear breakdown of all costs and charges before making a commitment."
 				},
 				{
-					"heading": "Customized Calculators: ",
-					"desc": "Plan your home loan with our <a href=\"/calculators/affordability-calculator\" class=\"underline\">Affordability Calculator</a> and see how part-payments or EMI changes can reduce your burden."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Customized Calculators:</span>",
+					"desc": "Plan your home loan with our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\">Affordability Calculator</a> and see how part-payments or EMI changes can reduce your burden."
 				},
 				{
-					"heading": "Expert Guidance: ",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Expert Guidance:</span>",
 					"desc": "Our team is here to simplify legal processes and help you access government benefits like <span class=\"font-semibold\" >PMAY.</span>"
 				}
 			]
@@ -195,7 +190,6 @@
 	},
 	"verticalBlog": {
 		"heading": "Explore More Resources",
-		"sub": "Related Articles:",
 		"blogLists": [
 			{
 				"icon": "/images/investInProperty-cover.jpg",
@@ -269,7 +263,7 @@
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
 		"button": {
 			"link": "/contact",
-			"btnClass": "btn-secondary text-[var(--form-text)]",
+			"btnClass": "btn-secondary",
 			"btnName": "Message us"
 		}
 	},

@@ -39,29 +39,29 @@
 	},
 	"ready": {
 		"contents": {
-			"heading": "Getting ready to buy",
+			"heading": "Helping Clients Prepare for a Home Loan",
 			"cardData": [
 				{
-					"title": "Home buying made simple",
-					"para": "Guide customers through every stage of the home-buying journey, from planning and budgeting to loan approval and property purchase.",
+					"title": "Home Loan Guidance Made Simple",
+					"para": "Support clients throughout their home loan journey, from understanding funding requirements and eligibility criteria to selecting the right lender and securing approval.",
 					"url": ""
 				},
 				{
-					"title": "Saving for a deposit",
-					"para": "Help borrowers understand how much down payment they need and how to build a savings strategy.",
-					"linkName": "Learn more about down payment planning",
+					"title": "Down Payment Planning",
+					"para": "Help clients understand down payment requirements and explore solutions when they need assistance arranging the initial contribution.",
+					"linkName": "Explore down payment solutions",
 					"url": "/home-loan/saving-for-deposit"
 				},
 				{
-					"title": "Should you get conditional pre-approval?",
-					"para": "Pre-approved customers often move faster and have stronger negotiating power when selecting properties.",
-					"linkName": "Explore conditional pre-approval",
+					"title": "Conditional Pre-Approval",
+					"para": "Guide eligible clients through the pre-approval process to strengthen their buying position and streamline final loan approval.",
+					"linkName": "Learn about pre-approval",
 					"url": "/home-loan/conditional-pre-approval"
 				},
 				{
-					"title": "Understand the costs",
-					"para": "Help borrowers prepare for stamp duty, registration charges, legal fees, and other property-related expenses.",
-					"linkName": "Learn about home buying costs",
+					"title": "Understanding Property Purchase Costs",
+					"para": "Educate clients about stamp duty, registration charges, legal fees, and other property-related expenses that impact affordability.",
+					"linkName": "Explore property buying costs",
 					"url": "/home-loan/understand-cost-of-buying-home"
 				}
 			]
@@ -69,77 +69,82 @@
 	},
 	"start": {
 		"contents": {
-			"heading": "Start your home buying journey with us today",
+			"heading": "Everything You Need to Close More Home Loan Cases",
 			"xlGridCol": 3,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "Know your borrowing power",
-					"para": "Understand loan eligibility and affordability before beginning the property search.",
-					"linkName": "Check borrowing eligibility"
+					"heading": "Check Client Eligibility",
+					"para": "Assess your client's borrowing capacity, affordability, and lender eligibility before submitting a home loan application.",
+					"linkName": "Check eligibility",
+					"url": "/calculators/eligibility-calculator"
 				},
 				{
-					"heading": "Apply for a loan",
-					"para": "Compare multiple lender offers and identify financing solutions that suit the customer's profile.",
-					"linkName": "Compare lender offers"
+					"heading": "Compare Lender Offers",
+					"para": "Evaluate home loan programs from multiple banks and NBFCs to identify the most suitable lender for every client profile.",
+					"linkName": "Compare lender offers",
+					"url": "/get-started/how-can-we-help"
 				},
 				{
-					"heading": "Ask a Lending expert",
-					"para": "Get personalized support throughout the home loan process from application to disbursement.",
-					"linkName": "Book an appointment"
+					"heading": "Get Expert Case Support",
+					"para": "Connect with our lending specialists for assistance with lender selection, documentation, complex cases, and approval strategies.",
+					"linkName": "Book an appointment",
+					"url": "/appointment"
 				}
 			]
 		}
 	},
 	"next": {
 		"contents": {
-			"heading": "What's next?",
+			"heading": "What's Next?",
 			"cardData": [
 				{
-					"title": "Understanding the home loan process",
-					"para": "Help borrowers understand every stage of the journey from application and approval to final loan disbursement.",
-					"linkName": "Tell me more"
+					"title": "Master the Home Loan Process",
+					"para": "Understand each stage of home loan sourcing, lender evaluation, documentation, approval, and disbursement to serve clients more effectively.",
+					"linkName": "Learn more",
+					"url": "/home-loan/understanding-home-loan-process"
 				},
 				{
-					"title": "Compare home loan offers",
-					"para": "Evaluate multiple lender programs to identify the most suitable option for the borrower.",
-					"linkName": "Check offers"
+					"title": "Compare Lender Opportunities",
+					"para": "Explore lender programs, eligibility requirements, and loan offerings to identify the best approval opportunities for your clients.",
+					"linkName": "Compare lenders",
+					"url": "/get-started/how-can-we-help"
 				}
 			]
 		},
 		"buttonBanner": {
-			"heading": "Explore Home Loan Opportunities",
+			"heading": "Explore More Home Loan Opportunities",
 			"btnName": "Explore now",
 			"btnLink": "/home-loan",
-			"btnClass": "btn-primary text-black"
+			"btnClass": "btn-primary"
 		}
 	},
 	"calculators": {
 		"contents": {
-			"heading": "Home loan calculator",
+			"heading": "Home Loan Tools for DSAs",
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": "How much can I borrow?",
+					"heading": "Check Client Eligibility",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icon-calc",
 					"url": "/calculators/eligibility-calculator"
 				},
 				{
-					"heading": "Home loan repayments calculator",
+					"heading": "Estimate EMI Affordability",
 					"icon": "/icons/lap.svg",
 					"iconAltName": "loan-icon",
 					"url": "/calculators/emi-calculator"
 				},
 				{
-					"heading": "Stamp duty calculator",
+					"heading": "Calculate Property Costs",
 					"icon": "/icons/apply.svg",
 					"iconAltName": "icons-apply",
 					"url": "/calculators/stamp-duty-calculator"
 				},
 				{
-					"heading": "Calculators & tools?",
+					"heading": "Explore All Loan Tools",
 					"icon": "/icons/calc.svg",
 					"iconAltName": "icons-calc",
 					"url": "/home-loan/home-loan-tools-calculator"
@@ -156,50 +161,57 @@
 			"originalSource": "www.digitaldsa.com",
 			"reverse": true
 		},
-		"para": "Need help with first-time buyer financing, eligibility assessment, lender selection, or documentation support? Our specialists can help borrowers move confidently through every stage of the home loan journey.",
+		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
 		"button": {
 			"link": "/contact",
 			"btnName": "Message us",
-			"btnClass": "btn-primary text-white dark:text-black"
+			"btnClass": "btn-primary"
 		}
 	},
 	"common_components": {
 		"helpList": {
-			"contents": {
-				"heading": "We're here to help",
-				"xlGridCol": 4,
-				"borderBottom": true,
-				"cards": [
-					{
-						"heading": "Book an </br> appointment",
-						"para": "Connect with home loan specialists to discuss first-time buyer opportunities."
-					},
-					{
-						"heading": "Check loan offers",
-						"para": "Compare financing solutions from multiple lenders based on borrower eligibility."
-					},
-					{
-						"heading": "Contact us",
-						"para": "Receive support for documentation, approvals, and lender selection."
-					},
-					{
-						"heading": "Message us",
-						"para": "Get quick assistance for home loan and property financing questions."
-					}
-				]
-			}
+			"heading": "We're here to help",
+			"xlGridCol": 4,
+			"borderBottom": true,
+			"cards": [
+				{
+					"heading": "Book an </br> appointment",
+					"para": "Book instantly to speak to a business loan specialist at a time that suits you",
+					"icon": "/icons/appointment.svg",
+					"iconAltName": "appointment Icon",
+					"url": "/appointment"
+				},
+				{
+					"heading": "Check loan offers",
+					"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+					"icon": "/icons/manageLoan2.svg",
+					"iconAltName": "Alert Icon",
+					"url": "/get-started/how-can-we-help"
+				},
+				{
+					"heading": "Contact us",
+					"para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+					"icon": "/icons/contact.svg",
+					"iconAltName": "Alert Icon",
+					"url": "/contact"
+				},
+				{
+					"heading": "Message us",
+					"para": "Get instant help from our online assistants or chat to a specialist.",
+					"icon": "/icons/msg.svg",
+					"iconAltName": "Alert Icon",
+					"url": "/contact"
+				}
+			]
 		},
 		"thinkYouShouldKnow": {
-			"contents": {
-				"heading": "Things you should know",
-				"paraGraph": [
-					"<span class=\"font-FourthHead\">Down Payment Planning Matters:</span> A stronger down payment often improves eligibility and reduces borrowing requirements.",
-					"<span class=\"font-FourthHead\">Pre-Approval Can Accelerate Buying Decisions:</span> Borrowers with conditional approval are often better positioned when negotiating with sellers and developers.",
-					"<span class=\"font-FourthHead\">Total Purchase Costs Go Beyond Property Price:</span> Registration charges, stamp duty, legal fees, and insurance should be considered during planning.",
-					"<span class=\"font-FourthHead\">Loan Eligibility Depends on Multiple Factors:</span> Income, credit profile, employment stability, and existing liabilities influence approval outcomes."
-				]
-			},
-			"disc": "list-decimal"
+			"heading": "Things you should know",
+			"paraGraph": [
+				"<span class=\"font-semibold\">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
+				"<span class=\"font-semibold\">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
+				"<span class=\"font-semibold\">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.",
+				"<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions."
+			]
 		}
 	}
 }
