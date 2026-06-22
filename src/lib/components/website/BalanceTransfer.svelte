@@ -278,19 +278,19 @@
 					{#if index == 0}
 						<div
 							id="whyRefinance"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<AboveTitleWithTopIconCard contents={content.whyRefinance.contents} />
 						</div>
 					{:else if index == 1}
 						<div
 							id="whenAvoid"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<AboveTitleWithTopIconCard contents={content.whenAvoid.contents} />
 						</div>
 					{:else if index == 2}
-						<div id="how" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="how" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.how.contents} isBorder/>
 
 							{#if content.how.exampleTableData}
@@ -307,7 +307,7 @@
 							<ButtonBanner contents={content.how.buttonBanner} />
 						</div>
 					{:else if index == 3}
-						<div id="help" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="help" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithImage contents={content.help.contents}>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul
@@ -327,7 +327,7 @@
 							</TwoColumnWithImage>
 						</div>
 					{:else if index == 4}
-						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={toolsThreeColumnWithClicks} isBorder/>
 							<AboveTitleWithBlackCard contents={content.tools.blackCard} />
 							<AboveTitleWithTopIconCard contents={content.tools.topIconCard} isBorder/>

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+
 	interface Props {
 		contents?: {
 			heading?: string;
@@ -34,16 +36,21 @@
 		{#if contents.accordions && contents.accordions.length > 0}
 			<div class="flex flex-col gap-[1.5rem] lg:col-span-8">
 				{#each contents.accordions as accordion, index}
-					<details class="border-b border-[var(--form-border)] py-[1rem]" open={index === 0}>
-						<summary class="flex cursor-pointer items-center justify-between gap-4">
-							<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+					<details
+						class="group border-b border-[var(--form-border)] py-4 select-none"
+						open={index === 0}
+					>
+						<summary class="flex cursor-pointer items-start justify-between gap-4">
+							<h2 class="typography-body-md !font-semibold text-[var(--form-text)]">
 								{accordion.question}
 							</h2>
-							<div class="icon-container">
-								<i class="fa-solid fa-angle-down transition-transform duration-300"></i>
-							</div>
+
+							<ChevronDown
+								class="h-5 w-5 transition-transform duration-300 group-open:rotate-180"
+							/>
 						</summary>
-						<div class="typography-body-md grid gap-4 pt-[1rem] text-[var(--form-text-secondary)]">
+
+						<div class="typography-body-sm grid gap-4 pt-[1rem] text-[var(--form-text-secondary)]">
 							<p>{@html accordion.answer}</p>
 						</div>
 					</details>
@@ -53,19 +60,4 @@
 	</div>
 </div>
 
-<style>
-	details summary {
-		display: flex;
-		align-items: center;
-		width: 100%;
-	}
 
-	.icon-container {
-		display: flex;
-		align-items: center;
-	}
-
-	details[open] .icon-container i {
-		transform: rotate(180deg);
-	}
-</style>
