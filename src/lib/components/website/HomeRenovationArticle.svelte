@@ -168,7 +168,7 @@
 
 			<div id="financing" data-section="financing" class="section">
 				<TwoColumnWithLeftHeading contents={content.financing.methods} isBorder />
-				<TwoColumnWithLeftHeading contents={content.financing.final} isBorder />
+				<TwoColumnWithLeftHeading contents={content.financing.final}  />
 			</div>
 		</div>
 
@@ -220,7 +220,7 @@
 		</div>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
