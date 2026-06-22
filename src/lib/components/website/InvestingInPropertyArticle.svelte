@@ -151,23 +151,23 @@
 			</div>
 
 			<div id="goals-types" data-section="goals-types" class="section">
-				<TwoColumnWithLeftHeading contents={content.goalsTypes.goal} />
-				<TwoColumnWithLeftHeading contents={content.goalsTypes.resVsComm} />
+				<TwoColumnWithLeftHeading contents={content.goalsTypes.goal} isBorder />
+				<TwoColumnWithLeftHeading contents={content.goalsTypes.resVsComm} isBorder />
 			</div>
 
 			<div id="location-timing" data-section="location-timing" class="section">
-				<TwoColumnWithLeftHeading contents={content.locationTiming.location} />
-				<TwoColumnWithLeftHeading contents={content.locationTiming.constructionVsReady} />
+				<TwoColumnWithLeftHeading contents={content.locationTiming.location} isBorder />
+				<TwoColumnWithLeftHeading contents={content.locationTiming.constructionVsReady} isBorder />
 			</div>
 
 			<div id="financials-tax" data-section="financials-tax" class="section">
-				<TwoColumnWithLeftHeading contents={content.financialsTax.loanVsCash} />
-				<TwoColumnWithLeftHeading contents={content.financialsTax.rentalYield} />
-				<TwoColumnWithLeftHeading contents={content.financialsTax.taxBenefits} />
+				<TwoColumnWithLeftHeading contents={content.financialsTax.loanVsCash} isBorder />
+				<TwoColumnWithLeftHeading contents={content.financialsTax.rentalYield} isBorder />
+				<TwoColumnWithLeftHeading contents={content.financialsTax.taxBenefits} isBorder />
 			</div>
 
 			<div id="scenarios" data-section="scenarios" class="section">
-				<TwoColumnWithLeftHeading contents={content.scenarios.cases} />
+				<TwoColumnWithLeftHeading contents={content.scenarios.cases} isBorder />
 				<TwoColumnWithLeftHeading contents={content.scenarios.help} />
 			</div>
 		</div>
@@ -196,34 +196,34 @@
 					{#if index === 0}
 						<div
 							id="goals-types"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.goalsTypes.goal} />
+							<TwoColumnWithLeftHeading contents={content.goalsTypes.goal} isBorder />
 							<TwoColumnWithLeftHeading contents={content.goalsTypes.resVsComm} />
 						</div>
 					{:else if index === 1}
 						<div
 							id="location-timing"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.locationTiming.location} />
+							<TwoColumnWithLeftHeading contents={content.locationTiming.location} isBorder />
 							<TwoColumnWithLeftHeading contents={content.locationTiming.constructionVsReady} />
 						</div>
 					{:else if index === 2}
 						<div
 							id="financials-tax"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.financialsTax.loanVsCash} />
-							<TwoColumnWithLeftHeading contents={content.financialsTax.rentalYield} />
+							<TwoColumnWithLeftHeading contents={content.financialsTax.loanVsCash} isBorder />
+							<TwoColumnWithLeftHeading contents={content.financialsTax.rentalYield} isBorder />
 							<TwoColumnWithLeftHeading contents={content.financialsTax.taxBenefits} />
 						</div>
 					{:else if index === 3}
 						<div
 							id="scenarios"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.scenarios.cases} />
+							<TwoColumnWithLeftHeading contents={content.scenarios.cases} isBorder />
 							<TwoColumnWithLeftHeading contents={content.scenarios.help} />
 						</div>
 					{/if}
@@ -231,8 +231,8 @@
 			{/each}
 		</div>
 
-		<div slot="secondary" class="px-2">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder/>
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
@@ -241,7 +241,7 @@
 					{/each}
 				</ul>
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 
