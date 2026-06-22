@@ -18,11 +18,15 @@
 		</h2>
 
 		{#if contents.cards}
-			<div class="grid gap-8 {contents.xlGridCol === 4 ? 'xl:grid-cols-4' : 'lg:grid-cols-3'}">
+			<div
+				class="grid lg:grid-cols-2 gap-8  {contents.xlGridCol === 4
+					? 'xl:grid-cols-4'
+					: ' '}"
+			>
 				{#each contents.cards as card, index}
 					<div
 						class={index < contents.cards.length - 1
-							? 'border-b border-[var(--form-border)] pb-16 md:border-b-0'
+							? 'border-b border-[var(--form-border)] md:border-b-0 pb-16 sm:pb-0'
 							: ''}
 					>
 						<BlackCard cardData={card} />

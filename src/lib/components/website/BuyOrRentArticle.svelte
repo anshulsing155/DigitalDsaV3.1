@@ -153,7 +153,7 @@
 			</div>
 
 			<div id="right" data-section="right" class="section">
-				<TwoColumnWithLeftHeading contents={content.right.contents} />
+				<TwoColumnWithLeftHeading contents={content.right.contents} isBorder />
 			</div>
 
 			<div id="compare" data-section="compare" class="section">
@@ -161,19 +161,11 @@
 					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
 					<div class="">
-						<h2 class="typography-h2-md mb-[4rem] grid text-center text-[var(--form-text)]">
-							<p>Renting vs Buying</p>
-							<span class="underline decoration-primary decoration-4 underline-offset-4"
-								>The Breakdown</span
-							>
-						</h2>
-					</div>
-					<div class="">
 						{#each content.compare.exampleTableData as tableData}
 							<PaymentTable {tableData} />
 						{/each}
 					</div>
-					<p class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]">
+					<p class="typography-body-md mt-4 text-[var(--form-text-secondary)]">
 						{@html content.compare.funFact}
 					</p>
 				</div>
@@ -186,7 +178,7 @@
 							>Here’s what people like you did and why</span
 						>
 					</p>
-					<TwoColumnWithImage contents={content.compare.buyerStory.contents}>
+					<TwoColumnWithImage contents={content.compare.buyerStory.contents} isBorder>
 						<div class="mt-4 text-center">
 							<blockquote
 								class="typography-body-md relative text-[var(--form-text-secondary)] italic"
@@ -198,7 +190,7 @@
 						</div>
 					</TwoColumnWithImage>
 
-					<TwoColumnWithImage contents={content.compare.renterStory.contents}>
+					<TwoColumnWithImage contents={content.compare.renterStory.contents} isBorder>
 						<div class="mt-4 text-center">
 							<blockquote
 								class="typography-body-md relative text-[var(--form-text-secondary)] italic"
@@ -218,12 +210,12 @@
 					</TwoColumnWithImage>
 				</div>
 
-				<TwoColumnWithLeftHeading contents={content.compare.costs} />
+				<TwoColumnWithLeftHeading contents={content.compare.costs} isBorder/>
 			</div>
 
 			<div id="prosCons" class="section" data-section="prosCons">
-				<TwoColumnWithLeftHeading contents={content.prosCons} />
-				<TwoColumnWithLeftHeading contents={content.prosCons.unsure} />
+				<TwoColumnWithLeftHeading contents={content.prosCons} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.prosCons.unsure} isBorder/>
 			</div>
 
 			<div id="calculators" data-section="calculators" class="section">
@@ -241,7 +233,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -265,19 +257,11 @@
 								class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 							>
 								<div class="">
-									<h2 class="typography-h2-md mb-[4rem] grid text-center text-[var(--form-text)]">
-										<p>Renting vs Buying</p>
-										<span class="underline decoration-primary decoration-4 underline-offset-4"
-											>The Breakdown</span
-										>
-									</h2>
-								</div>
-								<div class="">
 									{#each content.compare.exampleTableData as tableData}
 										<PaymentTable {tableData} />
 									{/each}
 								</div>
-								<p class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]">
+								<p class="typography-body-md mt-4 text-[var(--form-text-secondary)]">
 									{@html content.compare.funFact}
 								</p>
 							</div>
@@ -290,7 +274,7 @@
 										>Here’s what people like you did and why</span
 									>
 								</p>
-								<TwoColumnWithImage contents={content.compare.buyerStory.contents}>
+								<TwoColumnWithImage contents={content.compare.buyerStory.contents} isBorder>
 									<div class="mt-4 text-center">
 										<blockquote class="relative italic">
 											{content.compare.buyerStory.quote}
@@ -298,13 +282,15 @@
 									</div>
 								</TwoColumnWithImage>
 
-								<TwoColumnWithImage contents={content.compare.renterStory.contents}>
+								<TwoColumnWithImage contents={content.compare.renterStory.contents} isBorder>
 									<div class="mt-4 text-center">
 										<blockquote class="relative italic">
 											{content.compare.renterStory.quote}
 										</blockquote>
 										<p class="mt-10">
-											<a href={content.compare.renterStory.linkUrl} class="underline underline-offset-4"
+											<a
+												href={content.compare.renterStory.linkUrl}
+												class="underline underline-offset-4"
 												>{content.compare.renterStory.linkText}</a
 											>
 										</p>
@@ -319,7 +305,7 @@
 							id="prosCons"
 							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.prosCons} />
+							<TwoColumnWithLeftHeading contents={content.prosCons} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.prosCons.unsure} />
 						</div>
 					{:else if index === 3}
@@ -343,7 +329,7 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary" class="px-2">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
@@ -353,7 +339,7 @@
 					{/each}
 				</ul>
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

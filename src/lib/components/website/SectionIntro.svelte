@@ -1,14 +1,20 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	type Props = {
-		heading: string;
-		para: string;
+		heading?: string;
+		para?: string;
 		isBorder?: boolean;
 		containerClass?: string;
 		children?: Snippet;
 	};
 
-	let { heading, para, isBorder = false, containerClass = 'lg:px-16', children }: Props = $props();
+	let {
+		heading,
+		para,
+		isBorder = false,
+		containerClass = 'lg:px-16',
+		children
+	}: Props = $props();
 </script>
 
 <div
@@ -19,6 +25,8 @@
 	</p>
 
 	<div class="typography-body-md grid gap-4 text-[var(--form-text-secondary)]">
+		
+
 		<p>
 			{@html para}
 		</p>

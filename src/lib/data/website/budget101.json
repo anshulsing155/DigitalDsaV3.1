@@ -1,0 +1,109 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Budgeting 101: Guide to Financial Management & Savings",
+    "image": "/images/budgeting-tips-blog.jpg",
+    "description": "Learn the fundamentals of budgeting. Master the 50/30/20 rule, track your expenses, build an emergency fund, and secure your financial future.",
+    "keywords": "Budgeting 101, Personal finance basics, How to make a budget, 50 30 20 rule, Tracking monthly expenses, Emergency fund planning India, Financial security tips, Smart money management, Savings calculator, Budgeting for beginners India"
+  },
+  "pageData": {
+    "coverImage": "/images/budgeting-tips-blog.jpg",
+    "coverAlt": "budgeting-cover",
+    "heading": "Budgeting 101: The Basics of Money Management",
+    "para": "Mastering personal finance starts with a single, crucial step: creating a budget. A budget isn't a restriction on your freedom—it is a roadmap to achieving your financial goals."
+  },
+  "whyMatters": {
+    "title": "Why Budgeting Matters",
+    "description": "Imagine having complete control over your money, knowing exactly where every rupee goes, and feeling secure about your financial future. That is the power of budgeting. A budget is simply a tool that aligns your spending with your values and long-term goals."
+  },
+  "benefits": {
+    "title": "Benefits of Having a Budget",
+    "items": [
+      "✅ Track where your money goes and eliminate unnecessary expenses.",
+      "✅ Reduce stress by planning for monthly bills and unexpected expenses.",
+      "✅ Build a substantial savings corpus for retirement, travel, or buying a home.",
+      "✅ Gain financial freedom by breaking the paycheck-to-paycheck cycle."
+    ]
+  },
+  "steps": [
+    {
+      "heading": "Calculate Your Net Income",
+      "desc": "Determine the exact amount of money coming into your bank account each month after taxes, deductions, and PF contributions. Use this net income as the foundation of your budget."
+    },
+    {
+      "heading": "Track Your Expenses",
+      "desc": "Keep a record of everything you spend money on. Group them into fixed expenses (rent, loan EMIs, utilities) and variable expenses (dining out, entertainment, shopping)."
+    },
+    {
+      "heading": "Apply the 50/30/20 Rule",
+      "desc": "A popular framework for allocating your net income: 50% for Needs (essential bills, rent, groceries), 30% for Wants (lifestyle, entertainment, dining out), and 20% for Savings and debt repayment."
+    },
+    {
+      "heading": "Build an Emergency Fund",
+      "desc": "The Reserve Bank of India recommends having 3-6 months' worth of living expenses saved in a highly accessible account. This acts as a buffer during job loss or medical emergencies."
+    }
+  ],
+  "actions": {
+    "title": "Steps to Start Your Budget Today",
+    "points": [
+      "Review your bank statements from the last three months to understand your habits.",
+      "Write down your financial goals (e.g., clearing debt, buying a house, emergency fund).",
+      "Choose a budgeting tool—whether it's our built-in Budget Planner or a simple spreadsheet.",
+      "Track your expenses weekly and adjust your spending as needed."
+    ]
+  },
+  "finalThoughts": {
+    "paragraphs": [
+      "Budgeting is a personal journey. The best budget is the one you can stick to consistently over time. Start small, stay disciplined, and make adjustments when life changes.",
+      "Take control of your money today. Your future self will thank you for making smart, proactive decisions about your financial well-being."
+    ]
+  },
+  "messageUs": {
+    "cardImage": "/images/message.jpg",
+    "cardAltName": "message-us",
+    "cardHeading": "Message us 24/7"
+  },
+  "helpList": {
+    "heading": "We're here to help",
+    "xlGridCol": 4,
+    "borderBottom": false,
+    "cards": [
+      {
+        "heading": "Book an </br> appointment",
+        "para": "Book instantly to speak to a loan specialist at a time that suits you",
+        "icon": "/icons/appointment.svg",
+        "altName": "appointment Icon",
+        "url": "/appointment"
+      },
+      {
+        "heading": "Check loan offers",
+        "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+        "icon": "/icons/manageLoan2.svg",
+        "altName": "Alert Icon",
+        "url": "/get-started/how-can-we-help"
+      },
+      {
+        "heading": "Contact us",
+        "para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+        "icon": "/icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      },
+      {
+        "heading": "Message us",
+        "para": "Get instant help from our online assistants or chat to a specialist.",
+        "icon": "/icons/msg.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      }
+    ]
+  },
+  "thingsYouShouldKnow": {
+    "heading": "Things you should know",
+    "paraGraph": [
+      "Budgeting advice provided here is for general financial awareness. It does not constitute professional investment or tax consulting services.",
+      "Different financial goals require tailored financial planning. Consider consulting with a certified financial planner for complex investment schemes.",
+      "The 50/30/20 rule is a guiding framework and can be adjusted dynamically based on your unique financial situation and liabilities."
+    ]
+  }
+}

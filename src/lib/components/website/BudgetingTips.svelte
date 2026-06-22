@@ -5,6 +5,8 @@
   import ThingsYouShould from "./ThingsYouShould.svelte";
   import Seo from "./Seo.svelte";
   import content from "$lib/data/website/budgetingTips.json";
+  import SectionIntro from '$lib/components/website/SectionIntro.svelte';
+
 
   const { seo, pageData, tips, finalThoughts } = content;
 </script>
@@ -17,25 +19,29 @@
   keywords={seo.keywords}
 />
 
-<section class="py-12">
+<section class="content">
   <NewPageLayout {pageData}>
-    <div class="px-0 lg:px-[4rem]">
+    <div class="border-b border-[var(--form-border)]">
       {#each tips as tip}
         <div class="border-b border-[var(--form-border)]">
           <ThingsYouShould thinkKnow={tip} disc="list-disc" />
         </div>
       {/each}
     </div>
-    <div
-      class="flex flex-col py-[2rem] lg:py-[4rem] px-[0.5rem] lg:px-[4rem] gap-[1rem]"
+   <!-- <div
+      class="flex flex-col py-[2rem] lg:py-[4rem] px-[1rem] lg:px-[4rem] gap-[1rem]"
     >
       <h2 class="typography-h2 text-text-main">
-        {finalThoughts.heading}
+        {fina.heading}
       </h2>
+      
       <p class="typography-body-md text-[var(--form-text-secondary)]">
         {finalThoughts.para}
       </p>
-    </div>
+    </div> -->
+
+    <SectionIntro heading={finalThoughts.heading} para={finalThoughts.para} isBorder={true} />
+
   </NewPageLayout>
 </section>
 

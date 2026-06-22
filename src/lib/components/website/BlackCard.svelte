@@ -1,5 +1,5 @@
 <script>
-  export let cardData = {
+  let { cardData = {
     heading: "",
     para: "",
     icon: "",
@@ -11,7 +11,7 @@
     btnColor: "",
     btnBorder: "",
     color: ""
-  };
+  } } = $props();
 </script>
 
 <a href={cardData.url}>

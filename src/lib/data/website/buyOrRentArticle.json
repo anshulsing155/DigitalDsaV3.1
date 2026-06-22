@@ -1,10 +1,5 @@
 {
-	"mobileNavbarTitle": [
-		"What's right",
-		"Compare",
-		"Pros & cons",
-		"Tools & calculators"
-	],
+	"mobileNavbarTitle": ["What's right", "Compare", "Pros & cons", "Tools & calculators"],
 	"pageData": {
 		"coverImage": "/images/happy-indian-family-in-kitchen.jpg",
 		"coverAlt": "indian family enjoying in their kitchen",
@@ -14,12 +9,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -47,12 +42,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary text-black",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -63,23 +58,25 @@
 			"listTopPara": "Answer these 3 quick questions to find out!",
 			"list": [
 				{
-					"heading": "What’s your current financial situation?",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">What’s your current financial situation?</span>",
 					"desc": "<ul class=\"list-decimal list-inside mb-2 mt-2\"><li>Saving for a future home</li><li>Ready to invest</li><li>Still figuring things out</li></ul>"
 				},
 				{
-					"heading": "What’s your lifestyle preference?",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">What’s your lifestyle preference?</span>",
 					"desc": "<ul class=\"list-decimal list-inside mb-2 mt-2\"><li>Flexibility (I want to move easily)</li><li>Stability (I love being rooted)</li><li>A mix of both</li></ul>"
 				},
 				{
-					"heading": "Do you prefer maintaining a home or having someone else take care of it?",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Do you prefer maintaining a home or having someone else take care of it?</span>",
 					"desc": "<ul class=\"list-decimal list-inside mb-2 mt-2\"><li>DIY homeowner vibes!</li><li>I’d rather call my landlord.</li><li>Not sure yet.</li></ul>"
 				}
 			]
 		}
 	},
 	"compare": {
-		"tableHeading": "Renting vs Buying The Breakdown",
 		"exampleTableData": [
+			{
+				"heading": "Renting vs Buying<br><span class=\"underline decoration-primary decoration-4 underline-offset-4\">The Breakdown</span>"
+			},
 			{
 				"columnName": [
 					"<div class='flex gap-2 items-center'><img class='h-5' src='/icons/features.svg' alt='gear icon'> Feature </div>",
@@ -147,11 +144,11 @@
 			"listTopPara": "Wondering what costs are involved? Let’s simplify them:",
 			"list": [
 				{
-					"heading": "Renting Costs",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Renting Costs</span>",
 					"desc": "<ul class=\"list-disc list-inside mb-2 mt-2\"><li><span class=\"font-semibold mr-1\">Monthly Rent :</span> Depends on location, property size, and amenities—calculate based on your budget.</li><li><span class=\"font-semibold mr-1\">Security Deposit :</span> Typically 1-3 months' rent, varying by landlord and city.</li></ul>"
 				},
 				{
-					"heading": "Buying Costs",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Buying Costs</span>",
 					"desc": "<ul class=\"list-disc list-inside mb-2 mt-2\"><li><span class=\"font-semibold mr-1\">Down Payment :</span> 10-20% of the property value</li><li><span class=\"font-semibold mr-1\">Registration and Stamp Duty :</span> Varies by state</li><li><span class=\"font-semibold mr-1\">Maintenance :</span> Annual upkeep and repairs</li></ul>"
 				}
 			],
@@ -166,13 +163,13 @@
 			"listTopPara": "Renting or buying, there’s no one-size-fits-all answer. <br>It depends on:",
 			"list": [
 				{
-					"heading": "Your financial situation"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your financial situation</span>"
 				},
 				{
-					"heading": "Your lifestyle preferences"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your lifestyle preferences</span>"
 				},
 				{
-					"heading": "Your long-term goals"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your long-term goals</span>"
 				}
 			],
 			"listSecPara": "<div>💡 Want help figuring it out? Explore our tools and guides to make an informed decision! <br><p class=\"mt-8\"> <button class=\"typography-button w-full cursor-pointer rounded-full px-8 py-3 transition-all duration-300 hover:opacity-90 md:w-auto btn-primary text-black\" href=\"/appointment\">Contact Us</button></p></div>"
@@ -221,7 +218,7 @@
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
 		"button": {
 			"link": "/contact",
-			"btnClass": "btn-secondary text-[var(--form-text)]",
+			"btnClass": "btn-secondary",
 			"btnName": "Message us"
 		}
 	},
