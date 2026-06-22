@@ -136,7 +136,7 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="search" data-section="search" class="section">
-				<TwoColumnWithLeftHeading contents={content.search} />
+				<TwoColumnWithLeftHeading contents={content.search}  isBorder/>
 			</div>
 
 			<div id="challenges" data-section="challenges" class="section">
@@ -161,11 +161,11 @@
 			</div>
 
 			<div id="chances" data-section="chances" class="section">
-				<TwoColumnWithLeftHeading contents={content.chances} />
+				<TwoColumnWithLeftHeading contents={content.chances}  isBorder/>
 			</div>
 
 			<div id="alternate" data-section="alternate" class="section">
-				<AboveTitleWithTopIconCard contents={content.alternate.contents} />
+				<AboveTitleWithTopIconCard contents={content.alternate.contents} isBorder/>
 
 				<div
 					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
@@ -184,14 +184,14 @@
 					</div>
 				</div>
 
-				<ButtonBanner contents={content.tools.buttonBanner} />
-				<AboveTitleWithoutIconCard contents={content.risks.contents} />
-				<TwoColumnWithLeftHeading contents={journeyWithClicks} />
+				<ButtonBanner contents={content.tools.buttonBanner} isBorder/>
+				<AboveTitleWithoutIconCard contents={content.risks.contents} isBorder/>
+				<TwoColumnWithLeftHeading contents={journeyWithClicks} isBorder />
 			</div>
 
 			<div id="tools" data-section="tools" class="section">
-				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
-				<AboveTitleWithBlackCard contents={content.tools.calculators} />
+				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
+				<AboveTitleWithBlackCard contents={content.tools.calculators}  isBorder/>
 			</div>
 		</div>
 
@@ -298,14 +298,14 @@
 			</div>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

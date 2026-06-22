@@ -149,10 +149,10 @@
 
 			<div id="type" data-section="type" class="section">
 				<!-- check loan type -->
-				<TwoColumnWithLeftHeading contents={content.type.loanTypes} />
+				<TwoColumnWithLeftHeading contents={content.type.loanTypes}  isBorder/>
 
 				<!-- we help -->
-				<TwoColumnWithImage contents={content.type.howWeHelp}>
+				<TwoColumnWithImage contents={content.type.howWeHelp} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="list-disc space-y-4">
 							{#each content.type.howWeHelp.items as item}
@@ -167,11 +167,11 @@
 			</div>
 
 			<div id="challenges" data-section="challenges" class="section">
-				<TwoColumnWithLeftHeading contents={content.challenges.contents} />
+				<TwoColumnWithLeftHeading contents={content.challenges.contents}  isBorder/>
 			</div>
 
 			<div id="steps" data-section="steps" class="section">
-				<AboveTitleWithTopIconCard contents={content.steps.awareness} />
+				<AboveTitleWithTopIconCard contents={content.steps.awareness} isBorder/>
 
 				<!-- apply -->
 				<TwoColumnWithLeftHeading
@@ -184,23 +184,24 @@
 							});
 						}
 					}}
+					isBorder
 				/>
 			</div>
 
 			<div id="support" data-section="support" class="section">
 				<!-- financial support -->
-				<AboveTitleWithoutIconCard contents={supportWithClicks} />
+				<AboveTitleWithoutIconCard contents={supportWithClicks}  isBorder/>
 			</div>
 
 			<div id="tools" data-section="tools" class="section">
 				<!-- money map -->
-				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder/>
 
 				<!-- plot loan calc -->
-				<AboveTitleWithBlackCard contents={content.tools.calculators} />
+				<AboveTitleWithBlackCard contents={content.tools.calculators} isBorder/>
 
 				<!-- ways to pay off -->
-				<ButtonBanner contents={content.tools.buttonBanner} />
+				<ButtonBanner contents={content.tools.buttonBanner} isBorder/>
 			</div>
 		</div>
 
@@ -286,7 +287,7 @@
 		</div>
 
 		<!-- message us -->
-		<TwoColumnWithImage contents={content.messageUs.contents}>
+		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
 			<p>{content.messageUs.para}</p>
 			<div class="w-auto">
 				<Button
@@ -299,14 +300,14 @@
 
 		<FeedbackCheck />
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

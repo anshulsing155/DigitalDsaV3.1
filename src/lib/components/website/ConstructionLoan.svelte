@@ -142,19 +142,19 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="features" data-section="features" class="section">
-				<TwoColumnWithLeftHeading contents={content.features} />
+				<TwoColumnWithLeftHeading contents={content.features} isBorder />
 			</div>
 
 			<div id="benefits" data-section="benefits" class="section">
-				<TwoColumnWithLeftHeading contents={content.benefits} />
+				<TwoColumnWithLeftHeading contents={content.benefits} isBorder />
 			</div>
 
 			<div id="eligibility" data-section="eligibility" class="section">
-				<ButtonBanner contents={content.willApprove} />
-				<AboveTitleWithTopIconCard contents={content.eligibility.contents} />
+				<ButtonBanner contents={content.willApprove} isBorder />
+				<AboveTitleWithTopIconCard contents={content.eligibility.contents} isBorder/>
 
 				<div id="bt">
-					<TwoColumnWithLeftHeading contents={content.bt.contents} />
+					<TwoColumnWithLeftHeading contents={content.bt.contents}  isBorder/>
 					<div
 						class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem]"
 					>
@@ -171,11 +171,11 @@
 					</div>
 				</div>
 
-				<ThreeColumWithLeftHeading contents={visionBannerWithClicks} />
+				<ThreeColumWithLeftHeading contents={visionBannerWithClicks} isBorder/>
 			</div>
 
 			<div id="steps" data-section="steps" class="section">
-				<TwoColumnWithImage contents={content.steps.contents}>
+				<TwoColumnWithImage contents={content.steps.contents} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="list-disc space-y-4">
 							{#each content.steps.list as item}
@@ -193,9 +193,9 @@
 			</div>
 
 			<div id="tools" data-section="tools" class="section">
-				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
 				<AboveTitleWithBlackCard contents={content.tools.calculators} />
-				<ButtonBanner contents={content.tools.buttonBanner} />
+				<ButtonBanner contents={content.tools.buttonBanner}  isBorder/>
 			</div>
 		</div>
 
@@ -309,14 +309,14 @@
 			</div>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
         containerClass="px-0"
 />
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

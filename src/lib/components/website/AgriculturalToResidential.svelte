@@ -147,7 +147,7 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="benefits" data-section="benefits" class="section">
-				<ThreeColumWithLeftHeading contents={content.benefits} />
+				<ThreeColumWithLeftHeading contents={content.benefits} isBorder/>
 
 				<div
 					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
@@ -187,7 +187,7 @@
 			</div>
 
 			<div id="process" data-section="process" class="section">
-				<TwoColumnWithImage contents={content.process.contents}>
+				<TwoColumnWithImage contents={content.process.contents} isBorder>
 					<ul class="list-disc space-y-4">
 						{#each content.process.list as item}
 							<li class="flex items-start gap-1">
@@ -200,19 +200,19 @@
 					</ul>
 				</TwoColumnWithImage>
 
-				<TwoColumnWithLeftHeading contents={visionBannerWithClicks} />
+				<TwoColumnWithLeftHeading contents={visionBannerWithClicks} isBorder />
 			</div>
 
 			<div id="challenges" data-section="challenges" class="section">
-				<TwoColumnWithLeftHeading contents={content.challenges.contents} />
-				<AboveTitleWithoutIconCard contents={content.finances.contents} />
-				<AboveTitleWithTopIconCard contents={content.deniedOptions.contents} />
+				<TwoColumnWithLeftHeading contents={content.challenges.contents} isBorder />
+				<AboveTitleWithoutIconCard contents={content.finances.contents} isBorder/>
+				<AboveTitleWithTopIconCard contents={content.deniedOptions.contents}  isBorder/>
 			</div>
 
 			<div id="tools" data-section="tools" class="section">
-				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
-				<AboveTitleWithBlackCard contents={content.tools.calculators} />
-				<ButtonBanner contents={content.tools.buttonBanner} />
+				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder/>
+				<AboveTitleWithBlackCard contents={content.tools.calculators} isBorder />
+				<ButtonBanner contents={content.tools.buttonBanner} isBorder/>
 			</div>
 		</div>
 
@@ -330,14 +330,14 @@
 			</div>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

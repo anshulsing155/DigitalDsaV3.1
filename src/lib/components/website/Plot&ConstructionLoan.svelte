@@ -151,16 +151,16 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="guide" data-section="guide" class="section">
-				<ThreeColumWithLeftHeading contents={content.guide} />
-				<TwoColumnWithLeftHeading contents={content.keyAdvantages} />
+				<ThreeColumWithLeftHeading contents={content.guide} isBorder />
+				<TwoColumnWithLeftHeading contents={content.keyAdvantages} isBorder />
 			</div>
 
 			<div id="eligibility" data-section="eligibility" class="section">
-				<AboveTitleWithTopIconCard contents={content.eligibility.contents} />
-				<AboveTitleWithoutIconCard contents={content.disbursement.contents} />
+				<AboveTitleWithTopIconCard contents={content.eligibility.contents} isBorder />
+				<AboveTitleWithoutIconCard contents={content.disbursement.contents} isBorder />
 
 				<div id="bt">
-					<TwoColumnWithLeftHeading contents={content.balanceTransfer.contents} />
+					<TwoColumnWithLeftHeading contents={content.balanceTransfer.contents}  isBorder/>
 					<div
 						class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem]"
 					>
@@ -177,11 +177,11 @@
 					</div>
 				</div>
 
-				<ThreeColumWithLeftHeading contents={consultationWithClicks} />
+				<ThreeColumWithLeftHeading contents={consultationWithClicks} isBorder/>
 			</div>
 
 			<div id="help" data-section="help" class="section">
-				<TwoColumnWithImage contents={content.howWeHelp.contents}>
+				<TwoColumnWithImage contents={content.howWeHelp.contents} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="list-disc space-y-4">
 							{#each content.howWeHelp.list as item}
@@ -197,13 +197,13 @@
 					</div>
 				</TwoColumnWithImage>
 
-				<TwoColumnWithLeftHeading contents={content.exploreMore} />
+				<TwoColumnWithLeftHeading contents={content.exploreMore} isBorder />
 			</div>
 
 			<div id="tools" data-section="tools" class="section">
-				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
-				<AboveTitleWithBlackCard contents={content.tools.calculators} />
-				<ButtonBanner contents={content.tools.buttonBanner} />
+				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder/>
+				<AboveTitleWithBlackCard contents={content.tools.calculators} isBorder/>
+				<ButtonBanner contents={content.tools.buttonBanner} isBorder/>
 			</div>
 		</div>
 
@@ -314,14 +314,14 @@
 			</div>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
 				containerClass="lg:px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 
