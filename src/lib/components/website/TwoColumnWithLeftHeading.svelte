@@ -72,13 +72,13 @@
 				<div class="space-y-[2rem]">
 					{#if contents.listTopPara}
 						<div class="">
-							<p class="typography-body-md text-[var(--form-text-secondary)]">
+							<p class="typography-body-md !font-bold text-[var(--form-text-secondary)]">
 								{@html contents.listTopPara}
 							</p>
 						</div>
 					{/if}
 
-					<ul class="ml-[1rem] list-disc space-y-6">
+					<ul class="ml-[1rem] list-disc space-y-4">
 						{#each contents.list as listItem}
 							<li class="typography-body-md text-[var(--form-text-secondary)]">
 								<div class="flex flex-col gap-2">

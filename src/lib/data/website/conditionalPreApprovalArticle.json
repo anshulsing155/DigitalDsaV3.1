@@ -86,16 +86,16 @@
 			"listTopPara": "When applying for conditional pre-approval, lenders typically assess:",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">The price range of properties you’re considering.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">The price range of properties you’re considering.</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your current savings for a down payment.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your current savings for a down payment.</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your income and employment stability.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your income and employment stability.</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Your monthly living expenses.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your monthly living expenses.</span>"
 				}
 			],
 			"listSecPara": "✅ Keep in mind that pre-approval is usually valid for 3-6 months. If you don’t find a property within that timeframe, you may need to reapply."
@@ -144,13 +144,13 @@
 			"listTopPara": "At Digital DSA, we focus on empowering first-time buyers by offering :",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Transparent advice with no hidden charges.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Transparent advice with no hidden charges.</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\"> Affordability Calculator</a> to refine your search.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\"> Affordability Calculator</a> to refine your search.</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">A no-pressure approach with zero processing fees and no spam calls.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">A no-pressure approach with zero processing fees and no spam calls.</span>"
 				}
 			]
 		}
