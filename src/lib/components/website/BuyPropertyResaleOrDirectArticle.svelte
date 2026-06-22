@@ -152,19 +152,19 @@
 			</div>
 
 			<div id="resale" data-section="resale" class="section">
-				<TwoColumnWithLeftHeading contents={content.resale.contents} />
+				<TwoColumnWithLeftHeading contents={content.resale.contents} isBorder/>
 			</div>
 
 			<div id="direct" data-section="direct" class="section">
-				<TwoColumnWithLeftHeading contents={content.direct.contents} />
+				<TwoColumnWithLeftHeading contents={content.direct.contents} isBorder/>
 			</div>
 
 			<div id="considerations" data-section="considerations" class="section">
-				<TwoColumnWithLeftHeading contents={content.considerations.contents} />
+				<TwoColumnWithLeftHeading contents={content.considerations.contents} isBorder/>
 			</div>
 
 			<div id="whatWorks" data-section="whatWorks" class="section">
-				<TwoColumnWithLeftHeading contents={content.whatWorks.contents} />
+				<TwoColumnWithLeftHeading contents={content.whatWorks.contents} isBorder/>
 			</div>
 
 			<div id="calculators" data-section="calculators" class="section">
@@ -182,7 +182,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -233,7 +233,7 @@
 			{/each}
 		</div>
 
-		<TwoColumnWithImage contents={content.messageUs.contents}>
+		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
 			<p>{content.messageUs.para}</p>
 			<Button
 				link={content.messageUs.button.link}
@@ -242,7 +242,7 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary" class="px-2">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
@@ -252,7 +252,7 @@
 					{/each}
 				</ul>
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

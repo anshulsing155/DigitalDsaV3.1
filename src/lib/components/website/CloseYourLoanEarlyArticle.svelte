@@ -156,14 +156,14 @@
 					class="border-b border-[var(--form-border)] py-[4rem] text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
 					<div class="px-[0.5rem] lg:px-[4rem]">
-						<h2 class="typography-h2-md mb-[5rem] text-center text-[var(--form-text)]">
+						<h2 class="typography-h2-md mb-[3rem] text-center text-[var(--form-text)]">
 							{content.benefits.heading}
 						</h2>
 						<div class="flex items-center justify-center">
-							<div class="flex gap-10">
+							<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
 								{#each content.benefits.cards as card}
 									<div
-										class="max-w-xs rounded-sm bg-[var(--landing-bg-card)] p-8 text-center shadow-lg"
+										class="rounded-sm bg-[var(--landing-bg-card)] p-8 text-center shadow-lg"
 									>
 										<h3 class="typography-body-lg pb-5 !font-semibold text-[var(--form-text)]">
 											{card.heading}
@@ -180,39 +180,37 @@
 			</div>
 
 			<div id="strategies" data-section="strategies" class="section">
-				<TwoColumnWithLeftHeading contents={content.strategies.extraPayments} />
-				<TwoColumnWithLeftHeading contents={content.strategies.higherEmis} />
-				<TwoColumnWithLeftHeading contents={content.strategies.lumpSums} />
+				<TwoColumnWithLeftHeading contents={content.strategies.extraPayments} isBorder />
+				<TwoColumnWithLeftHeading contents={content.strategies.higherEmis} isBorder />
+				<TwoColumnWithLeftHeading contents={content.strategies.lumpSums} isBorder />
 			</div>
 
 			<div id="savings-transfer" data-section="savings-transfer" class="section">
-				<TwoColumnWithLeftHeading contents={content.savingsTransfer.reduceExpenses} />
-				<TwoColumnWithLeftHeading contents={content.savingsTransfer.balanceTransfer} />
-				<TwoColumnWithLeftHeading contents={content.savingsTransfer.planStrategically} />
+				<TwoColumnWithLeftHeading contents={content.savingsTransfer.reduceExpenses} isBorder />
+				<TwoColumnWithLeftHeading contents={content.savingsTransfer.balanceTransfer} isBorder />
+				<TwoColumnWithLeftHeading contents={content.savingsTransfer.planStrategically} isBorder />
 			</div>
 
-			<div id="success-stories" data-section="success-stories" class="section">
-				<div class="py-[4rem] text-[var(--form-text)]">
-					<p class="typography-h2-md mb-[2rem] text-center text-[var(--form-text)]">
-						<span class="underline decoration-primary underline-offset-4"> Inspiration:</span>
-						Real Stories of Success
-					</p>
-					<TwoColumnWithImage contents={content.successStories.neha.contents}>
-						<div class="mt-4">
-							<p class="typography-body-md relative text-[var(--form-text-secondary)]">
-								{content.successStories.neha.para}
-							</p>
-						</div>
-					</TwoColumnWithImage>
+			<div id="success-stories" data-section="success-stories" class="section py-[4rem]">
+				<p class="typography-h2-md text-center text-[var(--form-text)]">
+					<span class="underline decoration-primary underline-offset-4"> Inspiration:</span>
+					Real Stories of Success
+				</p>
+				<TwoColumnWithImage contents={content.successStories.neha.contents} isBorder>
+					<div class="">
+						<p class="typography-body-md relative text-[var(--form-text-secondary)]">
+							{content.successStories.neha.para}
+						</p>
+					</div>
+				</TwoColumnWithImage>
 
-					<TwoColumnWithImage contents={content.successStories.sharma.contents}>
-						<div class="mt-4">
-							<p class="typography-body-md relative text-[var(--form-text-secondary)]">
-								{content.successStories.sharma.para}
-							</p>
-						</div>
-					</TwoColumnWithImage>
-				</div>
+				<TwoColumnWithImage contents={content.successStories.sharma.contents} isBorder>
+					<div class="">
+						<p class="typography-body-md relative text-[var(--form-text-secondary)]">
+							{content.successStories.sharma.para}
+						</p>
+					</div>
+				</TwoColumnWithImage>
 			</div>
 		</div>
 
@@ -226,7 +224,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -240,65 +238,63 @@
 					{#if index === 0}
 						<div
 							id="benefits"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] px-[0.5rem] py-[4rem] text-[var(--form-text)]"
 						>
-							<div class="py-[2rem]">
-								<h2 class="typography-h2-md mb-[5rem] text-center text-[var(--form-text)]">
+							<div class="">
+								<h2 class="typography-h2-md mb-[3rem] text-[var(--form-text)]">
 									{content.benefits.heading}
 								</h2>
-								<div class="flex items-center justify-center">
-									<div class="flex gap-10">
-										{#each content.benefits.cards as card}
-											<div
-												class="max-w-xs rounded-sm bg-[var(--landing-bg-card)] p-8 text-center shadow-lg"
-											>
-												<h3 class="typography-body-lg pb-5 !font-semibold text-[var(--form-text)]">
-													{card.heading}
-												</h3>
-												<p class="typography-body-md text-[var(--form-text-secondary)]">
-													{card.desc}
-												</p>
-											</div>
-										{/each}
-									</div>
+								<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+									{#each content.benefits.cards as card}
+										<div
+											class="rounded-sm bg-[var(--landing-bg-card)] p-8 text-center shadow-lg"
+										>
+											<h3 class="typography-body-lg pb-5 !font-semibold text-[var(--form-text)]">
+												{card.heading}
+											</h3>
+											<p class="typography-body-md text-[var(--form-text-secondary)]">
+												{card.desc}
+											</p>
+										</div>
+									{/each}
 								</div>
 							</div>
 						</div>
 					{:else if index === 1}
 						<div
 							id="strategies"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.strategies.extraPayments} />
-							<TwoColumnWithLeftHeading contents={content.strategies.higherEmis} />
+							<TwoColumnWithLeftHeading contents={content.strategies.extraPayments} isBorder/>
+							<TwoColumnWithLeftHeading contents={content.strategies.higherEmis} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.strategies.lumpSums} />
 						</div>
 					{:else if index === 2}
 						<div
 							id="savings-transfer"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.savingsTransfer.reduceExpenses} />
-							<TwoColumnWithLeftHeading contents={content.savingsTransfer.balanceTransfer} />
+							<TwoColumnWithLeftHeading contents={content.savingsTransfer.reduceExpenses} isBorder/>
+							<TwoColumnWithLeftHeading contents={content.savingsTransfer.balanceTransfer} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.savingsTransfer.planStrategically} />
 						</div>
 					{:else if index === 3}
 						<div
 							id="success-stories"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] py-[4rem]"
 						>
-							<p class="typography-h2-md mb-[2rem] pt-4 text-center text-[var(--form-text)]">
+							<p class="typography-h2-md text-center text-[var(--form-text)]">
 								Real Stories of Success
 							</p>
-							<TwoColumnWithImage contents={content.successStories.neha.contents}>
-								<div class="mt-4">
+							<TwoColumnWithImage contents={content.successStories.neha.contents} isBorder>
+								<div class="">
 									<p class="typography-body-md relative text-[var(--form-text-secondary)]">
 										{content.successStories.neha.para}
 									</p>
 								</div>
 							</TwoColumnWithImage>
-							<TwoColumnWithImage contents={content.successStories.sharma.contents}>
-								<div class="mt-4">
+							<TwoColumnWithImage contents={content.successStories.sharma.contents} isBorder>
+								<div class="">
 									<p class="typography-body-md relative text-[var(--form-text-secondary)]">
 										{content.successStories.sharma.para}
 									</p>
@@ -312,7 +308,7 @@
 
 		<ButtonBanner contents={content.buttonBanner.contents} />
 
-		<div slot="secondary" class="px-2">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
 
 			<ThingsYouKnow contents={{ heading: 'Things you should know' }}>
@@ -322,7 +318,7 @@
 					{/each}
 				</ul>
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 

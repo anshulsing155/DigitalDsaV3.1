@@ -15,7 +15,7 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
@@ -52,7 +52,7 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary text-[var(--form-text)]"
+				"btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare rates",
@@ -75,15 +75,15 @@
 			"listTopPara": "Why Choose Direct Purchase?",
 			"list": [
 				{
-					"heading": "Customization Options:",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Customization Options:</span>",
 					"desc": "Buyers can select layouts, finishes, or even floors in under-construction properties."
 				},
 				{
-					"heading": "No Previous Ownership:",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">No Previous Ownership:</span>",
 					"desc": "You’ll be the first owner, and everything from fittings to interiors will be brand new."
 				},
 				{
-					"heading": "Builder Discounts & Offers:",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Builder Discounts & Offers:</span>",
 					"desc": "Builders often provide festival discounts, subvention schemes, or reduced interest rates."
 				}
 			]
@@ -95,19 +95,19 @@
 			"listTopPara": "Whether you're buying through resale or directly from a builder, keep these factors in mind:",
 			"list": [
 				{
-					"heading": "Property Registration Status:",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Property Registration Status:</span>",
 					"desc": "Ensure the property is either registered or has clear ownership documents."
 				},
 				{
-					"heading": "Legal Due Diligence:",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Legal Due Diligence:</span>",
 					"desc": "Verify the title deed, encumbrance certificate, and applicable approvals."
 				},
 				{
-					"heading": "Stamp Duty & Registration Charges:",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Stamp Duty & Registration Charges:</span>",
 					"desc": "Factor in these costs for registered properties."
 				},
 				{
-					"heading": "Builder Reputation:",
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Builder Reputation:</span>",
 					"desc": "When purchasing directly, research the builder's past projects, delivery timelines, and reviews."
 				}
 			]
@@ -162,7 +162,7 @@
 		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
 		"button": {
 			"link": "/contact",
-			"btnClass": "btn-secondary text-[var(--form-text)]",
+			"btnClass": "btn-secondary",
 			"btnName": "Message us"
 		}
 	},

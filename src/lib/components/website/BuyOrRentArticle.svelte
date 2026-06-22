@@ -179,7 +179,7 @@
 						>
 					</p>
 					<TwoColumnWithImage contents={content.compare.buyerStory.contents} isBorder>
-						<div class="mt-4 text-center">
+						<div class="text-center">
 							<blockquote
 								class="typography-body-md relative text-[var(--form-text-secondary)] italic"
 							>
@@ -191,7 +191,7 @@
 					</TwoColumnWithImage>
 
 					<TwoColumnWithImage contents={content.compare.renterStory.contents} isBorder>
-						<div class="mt-4 text-center">
+						<div class="text-center">
 							<blockquote
 								class="typography-body-md relative text-[var(--form-text-secondary)] italic"
 							>
@@ -275,7 +275,7 @@
 									>
 								</p>
 								<TwoColumnWithImage contents={content.compare.buyerStory.contents} isBorder>
-									<div class="mt-4 text-center">
+									<div class="text-center">
 										<blockquote class="relative italic">
 											{content.compare.buyerStory.quote}
 										</blockquote>
@@ -283,7 +283,7 @@
 								</TwoColumnWithImage>
 
 								<TwoColumnWithImage contents={content.compare.renterStory.contents} isBorder>
-									<div class="mt-4 text-center">
+									<div class="text-center">
 										<blockquote class="relative italic">
 											{content.compare.renterStory.quote}
 										</blockquote>
