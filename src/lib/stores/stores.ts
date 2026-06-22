@@ -133,3 +133,7 @@ export async function validateAndRefreshToken(): Promise<boolean> {
 // Feedback tracking stores
 export const feedbackYes: Writable<number> = writable(0);
 
+// Appointment wizard store
+export const appointmentData: Writable<Record<string, any>> = writable({});
+
+

@@ -1,0 +1,149 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Protect Your Business from Cyber Threats | Digital DSA",
+    "image": "/images/cyber-threat-blog.jpg",
+    "description": "Cyber threats are rising in India. Learn how to protect your business with expert tips, safe practices & Digital DSA’s security solutions.",
+    "keywords": "Cybersecurity for Indian businesses, Cyber threats India 2025, Data breach protection India, Business cyber security tips, Ransomware attacks India, Indian cyber laws compliance, Small business data protection, Digital security for SMEs, Cybersecurity awareness India, Digital DSA cybersecurity"
+  },
+  "pageData": {
+    "heading": "Take Control of Your Business’s Cybersecurity – Before Hackers Do",
+    "coverImage": "/images/cyber-threat-blog.jpg",
+    "coverAlt": "images-altName"
+  },
+  "stickyNavBar": {
+    "items": [
+      { "name": "Cyber Threat", "targetId": "cyberThreat" },
+      { "name": "Real Life Incidents", "targetId": "realLife" },
+      { "name": "Safe Practices", "targetId": "safe" },
+      { "name": "Digital DSA Commitment", "targetId": "commitment" },
+      { "name": "Final Thoughts", "targetId": "final" }
+    ]
+  },
+  "navBarMedium": [
+    "Cyber Threat",
+    "Real Life Incidents",
+    "Safe Practices",
+    "Digital DSA Commitment",
+    "Final Thoughts"
+  ],
+  "cyberThreats": {
+    "heading": "Cyber Threats Are Growing – Is Your Business Ready?",
+    "para": "Imagine waking up to find your business's sensitive data compromised, customer trust shattered, and operations at a standstill. This isn't a distant nightmare; it's a reality many Indian businesses have faced. <br><br> In today's digital landscape, cyber criminals are becoming increasingly sophisticated. With India's rapid digital expansion, protecting your business from cyber threats is not just an option—it's a necessity."
+  },
+  "trueCost": {
+    "heading": "The True Cost of Cyber Attacks: More Than Just Money",
+    "para": "Cyber attacks can have devastating effects beyond financial losses. They can disrupt operations, lead to legal consequences, and severely damage your reputation.",
+    "listItems": [
+      {
+        "heading": "Escalating Threats:",
+        "desc": "In 2024, India emerged as the second most targeted nation for cyber attacks globally, with 95 entities falling victim to data theft. <a href=\"https://timesofindia.indiatimes.com/india/india-ranked-second-in-global-cyber-attack-targets-report/articleshow/116893292.cms?utm_source=chatgpt.com\" class=\"text-linkColor\">(Source)</a>"
+      },
+      {
+        "heading": "Frequent Incidents:",
+        "desc": "A study revealed that 83% of Indian organizations experienced at least one cybersecurity incident in the past year, with 48% facing ten or more attacks. <a href=\"https://timesofindia.indiatimes.com/gadgets-news/over-80-indian-companies-hit-with-cyber-attacks-last-year-report/articleshow/103394017.cms?utm_source=chatgpt.com\" class=\"text-linkColor\">(Source)</a>"
+      }
+    ]
+  },
+  "realLife": {
+    "heading": "Real-Life Cyber Incidents in India",
+    "listItems": [
+      {
+        "heading": "Star Health's Ransom Demand:",
+        "desc": "In October 2024, India's largest health insurer, Star Health, faced a significant data breach. A hacker leaked customer data and medical records, demanding a ransom of $68,000. <a href=\"https://www.reuters.com/world/india/indias-star-health-says-it-received-68k-ransom-demand-after-data-leak-2024-10-12/?utm_source=chatgpt.com\" class=\"text-linkColor\">(Source)</a>"
+      },
+      {
+        "heading": "Ransomware Attack on Small Indian Banks:",
+        "desc": "In July 2024, a ransomware attack on C-Edge Technologies, a service provider for small Indian banks, disrupted operations across nearly 300 banks. <a href=\"https://www.reuters.com/technology/cybersecurity/ransomware-attack-forces-hundreds-small-indian-banks-offline-sources-say-2024-07-31/?utm_source=chatgpt.com\" class=\"text-linkColor\">(Source)</a>"
+      }
+    ]
+  },
+  "howToMake": {
+    "heading": "How to Make Cyber Security a Part of Your Daily Business Routine",
+    "para": "Think of cyber security as locking your office doors at the end of the day—you wouldn't leave them open for anyone to walk in. The same vigilance is required online. Here's how you can protect your business:",
+    "listItems": [
+      {
+        "heading": "Invest in Cyber Security:",
+        "desc": "Prevention is better than cure; allocate resources to robust security measures"
+      },
+      {
+        "heading": "Employee Training:",
+        "desc": "Educate staff on phishing, social engineering, and span password practices."
+      },
+      {
+        "heading": "Regular System Updates:",
+        "desc": "Keep software up to date and use multi-factor authentication."
+      },
+      {
+        "heading": "Protect Customer Data:",
+        "desc": "Encrypt sensitive information and follow Indian cyber security regulations."
+      }
+    ]
+  },
+  "digital": {
+    "heading": "Digital DSA’s Commitment to Cyber Security",
+    "para": "At <span class=\"font-semibold\">Digital DSA</span>, we recognize that security is the foundation of trust in financial services. As a leading loan comparison platform, we are dedicated to:",
+    "listItems": [
+      {
+        "heading": "Advanced Encryption:",
+        "desc": "Safeguarding user data with cutting-edge encryption technologies."
+      },
+      {
+        "heading": "Regular Security Audits:",
+        "desc": "Conducting frequent assessments to identify vulnerabilities."
+      },
+      {
+        "heading": "Regulatory Compliance:",
+        "desc": "Ensuring adherence to Indian cyber laws for transparency and trust."
+      }
+    ]
+  },
+  "finalThoughts": {
+    "heading": "Final Thoughts: Stay One Step Ahead of Cyber Criminals",
+    "para": "Cyber threats are evolving rapidly. Businesses that proactively strengthen their cyber security measures today will be better positioned to face the challenges of tomorrow. Don't wait for an attack to take action. <br><br> <span class=\"font-semibold\">Stay secure, stay vigilant, and let's build a cyber-resilient India together!</span><br><br> For more insights and expert tips on protecting your business, follow <span class=\"font-semibold\">Digital DSA</span> and stay informed."
+  },
+  "helpList": {
+    "heading": "We're here to help",
+    "xlGridCol": 4,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Book an </br> appointment",
+        "para": "Book instantly to speak to a loan specialist at a time that suits you",
+        "icon": "/icons/appointment.svg",
+        "altName": "appointment Icon",
+        "url": "/appointment"
+      },
+      {
+        "heading": "Check loan offers",
+        "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+        "icon": "/icons/manageLoan2.svg",
+        "altName": "Alert Icon",
+        "url": "/get-started/how-can-we-help"
+      },
+      {
+        "heading": "Contact us",
+        "para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+        "icon": "/icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      },
+      {
+        "heading": "Message us",
+        "para": "Get instant help from our online assistants  or chat to a specialist.",
+        "icon": "/icons/msg.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      }
+    ]
+  },
+  "thingsYouShouldKnow": {
+    "heading": "Things you should know",
+    "paraGraph": [
+      "<span class=\"font-semibold\">Independent Facilitator:</span> Digital DSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
+      "<span class=\"font-semibold\">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. Digital DSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
+      "<span class=\"font-semibold\">Liability:</span> Digital DSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and Digital DSA.",
+      "<span class=\"font-semibold\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through Digital DSA and meet specific conditions."
+    ]
+  }
+}
