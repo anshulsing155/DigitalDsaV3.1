@@ -45,7 +45,7 @@
     {#if cardData.links}
       <div class="flex flex-col gap-2">
         {#each cardData.links as link}
-          <ul class="grid list-disc pl-5 marker:text-black dark:marker:text-white">
+          <ul class="grid list-disc pl-5 marker:text-primary dark:marker:text-white">
             <li>
               <Anchor link={link.secUrl} linkName={link.secLinkName} />
             </li>

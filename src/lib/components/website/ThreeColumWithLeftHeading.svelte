@@ -74,7 +74,7 @@
 							{#if card.links}
 								<div class="flex flex-col gap-2">
 									{#each card.links as link}
-										<ul class="grid list-disc pl-5 marker:text-black">
+										<ul class="grid list-disc pl-5 marker:text-primary">
 											<li>
 												<Anchor
 													link={link.secUrl}

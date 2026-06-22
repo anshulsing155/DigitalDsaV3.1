@@ -238,7 +238,7 @@
 
                         <div class="flex flex-col gap-2">
                           {#each item.links as link, idx}
-                            <ul class="list-disc marker:text-black pl-4">
+                            <ul class="list-disc marker:text-primary pl-4">
                               {#if idx < item.links.length - 1}
                                 <li class="underline text-linkColor hover:no-underline">
                                   <a href={link.url}>{link.name}</a>
@@ -391,7 +391,7 @@
 
                           <div class="flex flex-col gap-2">
                             {#each item.links as link, i}
-                              <ul class="list-disc marker:text-black pl-4">
+                              <ul class="list-disc marker:text-primary pl-4">
                                 {#if i < item.links.length - 1}
                                   <li class="underline text-linkColor hover:no-underline">
                                     <a href={link.url}>{link.name}</a>

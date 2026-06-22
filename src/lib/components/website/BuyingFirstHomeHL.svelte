@@ -161,8 +161,8 @@
 			</section>
 
 			<section id="next" data-section="next" class="section">
-				<ThreeColumWithLeftHeading contents={content.next.contents} isBorder/>
-				<ButtonBanner contents={content.next.buttonBanner} isBorder/>
+				<ThreeColumWithLeftHeading contents={content.next.contents} isBorder />
+				<ButtonBanner contents={content.next.buttonBanner} isBorder />
 			</section>
 
 			<section id="calculators" data-section="calculators" class="section">
@@ -180,7 +180,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -192,22 +192,22 @@
 					</summary>
 
 					{#if index == 0}
-						<div id="ready" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="ready" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.ready.contents} />
 						</div>
 					{:else if index == 1}
-						<div id="start" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="start" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<AboveTitleWithLeftIconCard contents={content.start.contents} />
 						</div>
 					{:else if index == 2}
-						<div id="next" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<ThreeColumWithLeftHeading contents={content.next.contents} isBorder/>
+						<div id="next" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<ThreeColumWithLeftHeading contents={content.next.contents} isBorder />
 							<ButtonBanner contents={content.next.buttonBanner} />
 						</div>
 					{:else if index == 3}
 						<div
 							id="calculators"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<AboveTitleWithBlackCard contents={content.calculators.contents} />
 						</div>
@@ -229,10 +229,9 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList} />
 			<ThingsYouShould
-				thinkKnow={content.common_components.thinkYouShouldKnow.contents}
-				disc={content.common_components.thinkYouShouldKnow.disc}
+				thinkKnow={content.common_components.thinkYouShouldKnow}
 				containerClass="lg:px-0"
 			></ThingsYouShould>
 		{/snippet}

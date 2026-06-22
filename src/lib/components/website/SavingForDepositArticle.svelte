@@ -202,13 +202,13 @@
 					</summary>
 
 					{#if index === 0}
-						<div id="intro" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="intro" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.intro} />
 						</div>
 					{:else if index === 1}
 						<div
 							id="understand-spending"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.understandSpending.habits} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.understandSpending.budget} isBorder/>
@@ -217,7 +217,7 @@
 					{:else if index === 2}
 						<div
 							id="start-saving"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.startSaving.strategic} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.startSaving.assistance} isBorder/>
@@ -226,7 +226,7 @@
 					{:else if index === 3}
 						<div
 							id="guidance"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.guidance.advisors} isBorder/>
 							<TwoColumnWithLeftHeading contents={content.guidance.steps} isBorder/>
@@ -251,7 +251,7 @@
 			</div>
 		</div>
 
-		<ThreeColumWithLeftHeading contents={content.tools} />
+		<ThreeColumWithLeftHeading contents={content.tools} isBorder />
 
 		<TwoColumnWithImage contents={content.messageUs.contents}>
 			<p>{content.messageUs.para}</p>

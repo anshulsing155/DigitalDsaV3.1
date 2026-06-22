@@ -206,7 +206,7 @@
                             </h3>
                             <div class="flex flex-col gap-2">
                               {#each details.links as link}
-                                <ul class="list-disc marker:text-black pl-4">
+                                <ul class="list-disc marker:text-primary pl-4">
                                   <li class="underline text-linkColor hover:no-underline">
                                     <a href={link.url}>{link.name}</a>
                                   </li>

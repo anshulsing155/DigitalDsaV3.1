@@ -29,7 +29,7 @@
 				{/if}
 
 				{#if content.links}
-					<ul class="grid list-disc gap-2 pl-5 marker:text-black dark:marker:text-white">
+					<ul class="grid list-disc gap-2 pl-5 marker:text-primary dark:marker:text-white">
 						{#each content.links as link}
 							<li
 								class="typography-body-md"
