@@ -13,6 +13,7 @@
 	import content from '$lib/data/website/businessFinancialHealth.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import SectionIntro from './SectionIntro.svelte';
 
 	let { pageData = content.pageData }: { pageData?: any } = $props();
 
@@ -102,7 +103,7 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="metrics" data-section="metrics">
-				<ThreeColumWithLeftHeading contents={content.metrics} />
+				<ThreeColumWithLeftHeading contents={content.metrics} isBorder />
 			</div>
 
 			<div class="border-b border-[var(--form-border)]" id="evaluation" data-section="evaluation">
@@ -110,7 +111,7 @@
 			</div>
 
 			<div id="action" data-section="action">
-				<AboveTitleWithTopIconCard contents={content.action} />
+				<AboveTitleWithTopIconCard contents={content.action} isBorder />
 			</div>
 		</div>
 
@@ -136,18 +137,18 @@
 					</summary>
 
 					{#if index == 0}
-						<div id="ready" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="ready" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.metrics} />
 						</div>
 					{:else if index == 1}
 						<div
 							id="challenges"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
 							<ThingsYouShould thinkKnow={content.evaluation} disc="list-disc" />
 						</div>
 					{:else if index == 2}
-						<div id="help" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="help" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<AboveTitleWithTopIconCard contents={content.action} />
 						</div>
 					{/if}
@@ -155,29 +156,25 @@
 			{/each}
 		</div>
 
-		<TwoColumnWithImage contents={content.messageUs}>
+		<TwoColumnWithImage contents={content.messageUs} isBorder>
 			<p>{content.messageUs.text}</p>
 			<div class="w-auto">
 				<Button link="/contact" btnClass="btn-secondary" btnName="Message us" />
 			</div>
 		</TwoColumnWithImage>
 
-		<div
-			class="flex flex-col gap-[1rem] px-[0.5rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
-		>
-			<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
-				{content.conclusion.heading}
-			</h2>
-			<p class="typography-body-sm text-[var(--form-text-secondary)]">{content.conclusion.text}</p>
-		</div>
+		<SectionIntro
+			heading={content.conclusion.heading}
+			para={content.conclusion.text}
+		/>
 
-		<div slot="secondary">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
