@@ -240,11 +240,11 @@
 					{#if index == 0}
 						<div
 							id="benefits"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
-							<ThreeColumWithLeftHeading contents={content.benefits} />
+							<ThreeColumWithLeftHeading contents={content.benefits} isBorder />
 
-							<div class="w-full px-[0.5rem] py-[2rem]">
+							<div class="w-full px-[0.5rem] py-[4rem]">
 								<div class="space-y-[3rem]">
 									<h2 class="typography-h2-md text-center font-semibold text-[var(--form-text)]">
 										Key Factors to Consider Before <br />
@@ -279,9 +279,9 @@
 					{:else if index == 1}
 						<div
 							id="process"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)]text-[var(--form-text)]"
 						>
-							<TwoColumnWithImage contents={content.process.contents}>
+							<TwoColumnWithImage contents={content.process.contents} isBorder>
 								<div class="">
 									<ul class="list-disc space-y-4">
 										{#each content.process.list as item}
@@ -301,17 +301,17 @@
 					{:else if index == 2}
 						<div
 							id="challenges"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
-							<TwoColumnWithLeftHeading contents={content.challenges.contents} />
-							<AboveTitleWithoutIconCard contents={content.finances.contents} />
+							<TwoColumnWithLeftHeading contents={content.challenges.contents} isBorder />
+							<AboveTitleWithoutIconCard contents={content.finances.contents} isBorder />
 							<AboveTitleWithTopIconCard contents={content.deniedOptions.contents} />
 						</div>
 					{:else if index == 3}
-						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+						<div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
 							<AboveTitleWithBlackCard contents={content.tools.calculators} />
-							<ButtonBanner contents={content.tools.buttonBanner} />
+							<ButtonBanner contents={content.tools.buttonBanner} isBorder />
 						</div>
 					{/if}
 				</details>
@@ -331,7 +331,7 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
