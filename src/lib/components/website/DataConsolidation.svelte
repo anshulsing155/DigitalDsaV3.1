@@ -111,22 +111,22 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="debtConsolidation" data-section="debtConsolidation">
-				<TwoColumnWithLeftHeading contents={content.what} />
-				<AboveTitleWithoutIconCard contents={content.popularOptions} />
+				<TwoColumnWithLeftHeading contents={content.what} isBorder />
+				<AboveTitleWithoutIconCard contents={content.popularOptions} isBorder />
 			</div>
 
 			<div id="benefitConsolidation" data-section="benefitConsolidation">
-				<TwoColumnWithLeftHeading contents={content.benefits} />
+				<TwoColumnWithLeftHeading contents={content.benefits} isBorder />
 			</div>
 
 			<div id="drawbacks" data-section="drawbacks">
-				<TwoColumnWithLeftHeading contents={content.drawbacks} />
+				<TwoColumnWithLeftHeading contents={content.drawbacks} isBorder />
 			</div>
 
 			<div id="isRight" data-section="isRight">
-				<TwoColumnWithLeftHeading contents={content.isRight} />
+				<TwoColumnWithLeftHeading contents={content.isRight} isBorder />
 
-				<TwoColumnWithImage contents={content.getStarted.contents}>
+				<TwoColumnWithImage contents={content.getStarted.contents} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						{@html content.getStarted.text}
 						<Button
@@ -137,7 +137,7 @@
 					</div>
 				</TwoColumnWithImage>
 
-				<TwoColumnWithLeftHeading contents={content.conclusion} />
+				<TwoColumnWithLeftHeading contents={content.conclusion} isBorder />
 			</div>
 		</div>
 
@@ -162,39 +162,25 @@
 					</summary>
 
 					{#if index == 0}
-						<div
-							id="debtConsolidation"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<div class="border-b border-[var(--form-border)]">
-								<TwoColumnWithLeftHeading contents={content.what} />
-							</div>
+						<div id="debtConsolidation" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading contents={content.what} isBorder />
 							<AboveTitleWithoutIconCard contents={content.popularOptions} />
 						</div>
 					{:else if index == 1}
 						<div
 							id="benefitConsolidation"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.benefits} />
 						</div>
 					{:else if index == 2}
-						<div
-							id="drawbacks"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="drawbacks" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.drawbacks} />
 						</div>
 					{:else if index == 3}
-						<div
-							id="isRight"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<div class="border-b border-[var(--form-border)]">
-								<TwoColumnWithLeftHeading contents={content.isRight} />
-							</div>
-							<div class="border-b border-[var(--form-border)]">
-								<TwoColumnWithImage contents={content.getStarted.contents}>
+						<div id="isRight" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+								<TwoColumnWithLeftHeading contents={content.isRight} isBorder/>
+								<TwoColumnWithImage contents={content.getStarted.contents} isBorder>
 									<div class="typography-body-md text-[var(--form-text-secondary)]">
 										{@html content.getStarted.text}
 										<Button
@@ -204,10 +190,7 @@
 										/>
 									</div>
 								</TwoColumnWithImage>
-							</div>
-							<div class="border-b border-[var(--form-border)]">
-								<TwoColumnWithLeftHeading contents={content.conclusion} />
-							</div>
+								<TwoColumnWithLeftHeading contents={content.conclusion} isBorder/>
 						</div>
 					{/if}
 				</details>
@@ -223,8 +206,8 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
