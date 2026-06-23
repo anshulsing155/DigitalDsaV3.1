@@ -56,7 +56,7 @@
 
 				<!-- diff b/w plot & home -->
 				<div
-					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] text-[var(--form-text)] lg:px-0 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+					class="w-full border-b border-[var(--form-border)] px-[0.5rem] lg:px-0 py-[4rem] text-[var(--form-text)] lg:px-0 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
 					<div class="">
 						<h2 class="typography-h2-md py-5 text-center text-[var(--form-text)]">

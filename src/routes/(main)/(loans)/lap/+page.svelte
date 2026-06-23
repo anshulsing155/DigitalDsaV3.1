@@ -31,7 +31,7 @@
 			<WhyChoose facilities={content.facilities} paddingClass="lg:px-0" isBorder />
 
 			<div
-				class="grid w-full gap-8 px-[0.5rem] py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32"
+				class="grid w-full gap-8 px-[0.5rem] lg:px-0 py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32"
 			>
 				<NewBlogCard blogLists={content.blogs} />
 			</div>
