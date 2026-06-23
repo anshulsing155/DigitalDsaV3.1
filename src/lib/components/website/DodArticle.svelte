@@ -20,21 +20,11 @@
 
 <section>
 	<NewPageLayout {pageData}>
-		<div class="border-b border-[var(--form-border)] lg:border-b-0">
-			<TwoColumnWithLeftHeading contents={content.howItWorks} />
-		</div>
-		<div class="border-b border-[var(--form-border)] lg:border-b-0">
-			<TwoColumnWithLeftHeading contents={content.benefits} />
-		</div>
-		<div class="border-b border-[var(--form-border)] lg:border-b-0">
-			<TwoColumnWithLeftHeading contents={content.features} />
-		</div>
-		<div class="border-b border-[var(--form-border)] lg:border-b-0">
-			<TwoColumnWithLeftHeading contents={content.whenToUse} />
-		</div>
-		<div class="border-b border-[var(--form-border)] lg:border-b-0">
-			<TwoColumnWithLeftHeading contents={content.conclusion} />
-		</div>
+		<TwoColumnWithLeftHeading contents={content.howItWorks} isBorder/>
+		<TwoColumnWithLeftHeading contents={content.benefits} isBorder/>
+		<TwoColumnWithLeftHeading contents={content.features} isBorder/>
+		<TwoColumnWithLeftHeading contents={content.whenToUse} isBorder/>
+		<TwoColumnWithLeftHeading contents={content.conclusion} isBorder/>
 
 		<TwoColumnWithImage contents={content.messageUs}>
 			<p class="typography-body-md text-[var(--form-text-secondary)]">{content.messageUs.text}</p>
@@ -45,8 +35,8 @@
 			/>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>

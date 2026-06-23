@@ -19,14 +19,14 @@
 
 <section>
 	<NewPageLayout {pageData}>
-		<TwoColumnWithLeftHeading contents={content.understandingRole} />
-		<TwoColumnWithLeftHeading contents={content.maximizePotential} />
-		<ThreeColumWithLeftHeading contents={content.strategicUses} />
-		<ThreeColumWithLeftHeading contents={content.caseStudy} />
+		<TwoColumnWithLeftHeading contents={content.understandingRole} isBorder/>
+		<TwoColumnWithLeftHeading contents={content.maximizePotential} isBorder/>
+		<ThreeColumWithLeftHeading contents={content.strategicUses} isBorder/>
+		<ThreeColumWithLeftHeading contents={content.caseStudy} isBorder/>
 		<TwoColumnWithLeftHeading contents={content.conclusion} />
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.common_components.helpList.contents} />
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>

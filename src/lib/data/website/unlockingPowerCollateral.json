@@ -12,35 +12,35 @@
 		"originalSource": "https://www.freepik.com/search?format=search&img=1&last_filter=query&last_value=story+of+loan+cpmplette+early+girl&query=story+of+loan+cpmplette+early+girl",
 		"coverAlt": "hero-cover",
 		"heading": "Unlocking the Power of Collateral",
-		"para": "<p class=\"p-[1rem] bg-gray-100\">Many business owners sit on a valuable financial asset their property but fail to leverage it effectively. Loan Against Property (LAP) and Dropline Overdraft (DOD) are two financing tools that allow businesses to unlock their property’s potential for growth, expansion, or working capital needs. <br>But how do you <strong>maximize your financing potential</strong> without overburdening your business?<br> Let’s break it down.</p>"
+		"para": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)]\">Many business owners sit on a valuable financial asset their property but fail to leverage it effectively. Loan Against Property (LAP) and Dropline Overdraft (DOD) are two financing tools that allow businesses to unlock their property’s potential for growth, expansion, or working capital needs. <br>But how do you <strong>maximize your financing potential</strong> without overburdening your business?<br> Let’s break it down.</p>"
 	},
 	"understandingRole": {
 		"heading": "Understanding the Role of Collateral in Business Financing",
 		"listTopPara": "When you pledge your property as collateral, banks assess its market value, ownership clarity, and title history before determining the loan amount.",
 		"list": [
 			{
-				"heading": "✅ LAP : <span class=\"typography-body-md\">Provides a lump-sum loan based on 50–75% of your property value, with repayment over 10–20 years.</span>"
+				"desc": "<span class=\"font-semibold\">✅ LAP :</span> Provides a lump-sum loan based on 50–75% of your property value, with repayment over 10–20 years."
 			},
 			{
-				"heading": "✅ DOD : <span class=\"typography-body-md\">Works as an overdraft facility with a dropping credit limit, offering flexibility but requiring frequent repayments.</span>"
+				"desc": "<span class=\"font-semibold\">✅ DOD : </span>Works as an overdraft facility with a dropping credit limit, offering flexibility but requiring frequent repayments."
 			}
 		],
-		"listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-[var(--form-border)]\"><strong>💡Key Takeaway : </strong>Both options turn property into a financial tool—but choosing the right one depends on your business model.</p>"
+		"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><strong>💡Key Takeaway : </strong>Both options turn property into a financial tool—but choosing the right one depends on your business model.</p>"
 	},
 	"maximizePotential": {
 		"heading": "How to Maximize Loan Amount & Terms",
 		"list": [
 			{
-				"heading": "A. Choose the Right Property Type<ul class=\"list-disc list-inside typography-body-md my-4\"><li class=\"my-2\">Banks prefer commercial properties over residential ones for business loans.</li><li>If pledging residential property, ensure it has a clear title and is in a high-value location.</li></ul>"
+				"heading": "<span class=\"text-[var(--form-text-secondary)]\">A. Choose the Right Property Type</span><ul class=\"text-[var(--form-text-secondary)] list-disc list-inside typography-body-md my-4 space-y-2\"><li>Banks prefer commercial properties over residential ones for business loans.</li><li>If pledging residential property, ensure it has a clear title and is in a high-value location.</li></ul>"
 			},
 			{
-				"heading": "B. Improve Your Credit Profile<ul class=\"list-disc list-inside typography-body-md my-4\"><li class=\"my-2\">Maintain a CIBIL score of 700+ for better loan terms.</li><li>Reduce existing debts before applying.</li></ul>"
+				"heading": "<span class=\"text-[var(--form-text-secondary)]\">B. Improve Your Credit Profile</span><ul class=\"text-[var(--form-text-secondary)] list-disc list-inside typography-body-md my-4\"><li class=\"my-2\">Maintain a CIBIL score of 700+ for better loan terms.</li><li>Reduce existing debts before applying.</li></ul>"
 			},
 			{
-				"heading": "C. Negotiate Loan Terms with Multiple Lenders<ul class=\"list-disc list-inside typography-body-md my-4\"><li class=\"my-2\">Compare LTV (Loan-to-Value) ratios and interest rates across banks.</li></ul>"
+				"heading": "<span class=\"text-[var(--form-text-secondary)]\">C. Negotiate Loan Terms with Multiple Lenders</span><ul class=\"text-[var(--form-text-secondary)] list-disc list-inside typography-body-md my-4\"><li class=\"my-2\">Compare LTV (Loan-to-Value) ratios and interest rates across banks.</li></ul>"
 			}
 		],
-		"listSecPara": "<p class=\"p-4 bg-gray-100 border-l-4 border-[var(--form-border)]\"><Strong>💡Tip :</Strong> Some lenders offer LAPs with tenures up to 20 years ideal for long-term planning.</p>"
+		"listSecPara": "<p class=\"p-4 bg-[var(--ddsa-gray-50)] dark:bg-[var(--ddsa-gray-700)] border-l-4\"><Strong>💡Tip :</Strong> Some lenders offer LAPs with tenures up to 20 years ideal for long-term planning.</p>"
 	},
 	"strategicUses": {
 		"heading": "Strategic Uses of LAP & DOD for Business Growth",
