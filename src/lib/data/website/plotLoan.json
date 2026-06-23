@@ -197,7 +197,7 @@
 						"❌ No",
 						"- Resident Indians aged 18-70 years \n              <br>\n              - Salaried or self-employed individuals\n              <br>\n              - Credit score of 750 or above",
 						"- Not applicable for balance transfer \n              <br>\n              - Can finance up to 80% of plot value\n              <br>\n             - Flexible tenure up to 20 years",
-						"<a href=\"/plot-loan/plot-only-loan/#bt\">Know more</a>"
+						"<a href=\"/plot-loan/plot-only-loan/#bt\" class='text-[var(--ddsa-info-text)]'>Know more</a>"
 					]
 				},
 				{
@@ -205,7 +205,7 @@
 						"✅ Yes",
 						"- Existing home construction loan \n              <br>\n              - Good credit history\n              <br>\n              - Proof of income and employment",
 						"- Potential for lower interest rates \n              <br>\n              - Extended repayment tenure\n              <br>\n            - Reduced EMI burden\n            <br>\n            - top-up facility",
-						"<a href=\"/plot-loan/construction-loan/#bt\">Know more</a>"
+						"<a href=\"/plot-loan/construction-loan/#bt\" class='text-[var(--ddsa-info-text)]'>Know more</a>"
 					]
 				},
 				{
@@ -213,7 +213,7 @@
 						"✅ Yes",
 						"- Resident Indians aged 18-70 years \n              <br>\n              - Salaried or self-employed\n              <br>\n              - Credit score of 750 or above\n              <br>\n              - Approved construction plan\n              ",
 						"- Single loan for both plot purchase and construction\n              <br>\n             - Possible interest rate reduction\n              <br>\n            - Streamlined repayment process\n            <br>\n            - top-up facility",
-						"<a href=\"/plot-loan/plot-and-construction-loan/#bt\">Know more</a>"
+						"<a href=\"/plot-loan/plot-and-construction-loan/#bt\" class='text-[var(--ddsa-info-text)]'>Know more</a>"
 					]
 				},
 				{
@@ -221,7 +221,7 @@
 						"❌ No",
 						"- Typically not offered as a combined product \n              <br>\n              - Separate eligibility for plot loan and loan against property",
 						"- Not applicable for balance transfer\n              <br>\n            - May need to refinance through separate loans",
-						"<a href=\"/plot-loan/plot-and-equity-loan/#bt\">Know more</a>"
+						"<a href=\"/plot-loan/plot-and-equity-loan/#bt\" class='text-[var(--ddsa-info-text)]'>Know more</a>"
 					]
 				}
 			]
