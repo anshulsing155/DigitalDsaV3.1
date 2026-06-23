@@ -7,12 +7,13 @@
 	import WhyChoose from '$lib/components/website/WhyChoose.svelte';
 	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
 	import Button from '$lib/components/website/Button.svelte';
-	import BlogCard from '$lib/components/website/BlogCard.svelte';
+	import NewBlogCard from '$lib/components/website/NewBlogCard.svelte';
 	import Sublist from '$lib/components/website/Sublist.svelte';
 	import ButtonBanner from '$lib/components/website/ButtonBanner.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import HelpList from '$lib/components/website/HelpList.svelte';
 	import content from '$lib/data/website/lap.json';
+	import FeedbackCheck from '$lib/components/website/FeedbackCheck.svelte';
 </script>
 
 <Seo
@@ -27,22 +28,10 @@
 	<NewPageLayout pageData={content.pageData}>
 		<Sublist subList={content.subList} />
 		<div class="px-[0.5rem] lg:px-16">
-			<div class="border-b border-[var(--form-border)]">
-				<WhyChoose facilities={content.facilities} />
-			</div>
+			<WhyChoose facilities={content.facilities} paddingClass="px-0" isBorder />
 
-			<div class="grid gap-[2rem] py-[2rem] lg:grid-cols-3 lg:gap-[2rem] lg:py-[4rem]">
-				{#each content.blogs as blog (blog.title)}
-					<BlogCard
-						icon={blog.icon}
-						altName={blog.altName}
-						title={blog.title}
-						paragraph={blog.paragraph}
-						btnName={blog.linkName}
-						link={blog.link}
-						btnClass="btn-secondary"
-					/>
-				{/each}
+			<div class="grid w-full gap-8 py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32">
+				<NewBlogCard blogLists={content.blogs} />
 			</div>
 
 			<Ways ways={content.ways} />
@@ -50,7 +39,7 @@
 				<NewHome steps={content.steps} />
 			</div>
 
-			<ButtonBanner contents={content.buttonBanner} />
+			<ButtonBanner contents={content.buttonBanner} isBorder />
 			<div class="border-b border-[var(--form-border)]">
 				<TwoColumn
 					cardImage={content.businessHealthCard.cardImage}
@@ -64,7 +53,7 @@
 						</li>
 						<li>
 							<a
-								class="underline underline-offset-4 hover:no-underline"
+								class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
 								href={content.businessHealthCard.link}
 							>
 								{content.businessHealthCard.linkName}
@@ -91,7 +80,7 @@
 					</ul>
 				</TwoColumn>
 			</div>
-			<Information />
+			<FeedbackCheck paddingClass="px-0" />
 		</div>
 
 		<div slot="secondary">

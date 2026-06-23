@@ -117,26 +117,35 @@
 		{
 			"icon": "/images/business-growth-blog.jpg",
 			"altName": "icon-name",
-			"title": "Unlocking the Power of Collateral – How to Use Your Property to Maximize Business Financing",
-			"paragraph": "Discover how leveraging your property as collateral can help you secure better financing options for your business. Learn the benefits, risks, and strategies to maximize your funding potential while ensuring financial stability.",
-			"link": "lap/unlocking-power-of-collateral",
-			"linkName": "Want to know more"
+			"heading": "Unlocking the Power of Collateral – How to Use Your Property to Maximize Business Financing",
+			"para": "Discover how leveraging your property as collateral can help you secure better financing options for your business. Learn the benefits, risks, and strategies to maximize your funding potential while ensuring financial stability.",
+			"btnLink": "lap/unlocking-power-of-collateral",
+			"btnName": "Want to know more",
+			"btnClass": "btn-secondary",
+			"sourceName": "",
+			"originalSource": ""
 		},
 		{
 			"icon": "/images/BuyPropertyResaleorDirect.jpg",
 			"altName": "icon-name",
-			"title": "Dropline Overdraft (DOD): Smart, Flexible Financing for Your Business",
-			"paragraph": "Understand how Dropline Overdraft (DOD) provides businesses with a flexible credit limit that decreases over time. Get insights into how DOD works, its benefits, and why it’s ideal for short-term financial needs.",
-			"link": "/lap/dropline-overdraft",
-			"linkName": "Learn more"
+			"heading": "Dropline Overdraft (DOD): Smart, Flexible Financing for Your Business",
+			"para": "Understand how Dropline Overdraft (DOD) provides businesses with a flexible credit limit that decreases over time. Get insights into how DOD works, its benefits, and why it’s ideal for short-term financial needs.",
+			"btnLink": "/lap/dropline-overdraft",
+			"btnName": "Learn more",
+			"btnClass": "btn-secondary",
+			"sourceName": "",
+			"originalSource": ""
 		},
 		{
 			"icon": "/images/lap-vs-dod-blog.jpg",
 			"altName": "icon-name",
-			"title": "LAP vs. DOD: Which Funding Option Works Best for Your Business?",
-			"paragraph": "Confused between LAP and DOD? This guide compares both financial tools, breaking down their benefits, repayment structures, and suitability based on your business needs.",
-			"link": "/lap/LAPvsDOD",
-			"linkName": "Find out"
+			"heading": "LAP vs. DOD: Which Funding Option Works Best for Your Business?",
+			"para": "Confused between LAP and DOD? This guide compares both financial tools, breaking down their benefits, repayment structures, and suitability based on your business needs.",
+			"btnLink": "/lap/LAPvsDOD",
+			"btnName": "Find out",
+			"btnClass": "btn-secondary",
+			"sourceName": "",
+			"originalSource": ""
 		}
 	],
 	"ways": {
