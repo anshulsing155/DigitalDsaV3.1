@@ -162,20 +162,7 @@
 
 				<div id="bt">
 					<TwoColumnWithLeftHeading contents={content.balanceTransfer.contents} isBorder />
-					<div
-						class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem]"
-					>
-						<div class="flex w-full flex-col items-center justify-center gap-8 md:gap-16 lg:w-auto">
-							<h2 class="typography-h2-md text-center text-[var(--form-text)]">
-								{content.topUp.heading}
-							</h2>
-							<p
-								class="typography-body-md text-center text-[var(--form-text-secondary)] lg:w-8/12 lg:justify-self-end"
-							>
-								{content.topUp.para}
-							</p>
-						</div>
-					</div>
+					<SectionIntro heading={content.topUp.heading} para={content.topUp.para} isBorder />
 				</div>
 
 				<ThreeColumWithLeftHeading contents={consultationWithClicks} isBorder />

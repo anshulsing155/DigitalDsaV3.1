@@ -149,7 +149,7 @@
 
 			<div id="type" data-section="type" class="section">
 				<!-- check loan type -->
-				<TwoColumnWithLeftHeading contents={content.type.loanTypes}  isBorder/>
+				<TwoColumnWithLeftHeading contents={content.type.loanTypes} isBorder />
 
 				<!-- we help -->
 				<TwoColumnWithImage contents={content.type.howWeHelp} isBorder>
@@ -167,11 +167,11 @@
 			</div>
 
 			<div id="challenges" data-section="challenges" class="section">
-				<TwoColumnWithLeftHeading contents={content.challenges.contents}  isBorder/>
+				<TwoColumnWithLeftHeading contents={content.challenges.contents} isBorder />
 			</div>
 
 			<div id="steps" data-section="steps" class="section">
-				<AboveTitleWithTopIconCard contents={content.steps.awareness} isBorder/>
+				<AboveTitleWithTopIconCard contents={content.steps.awareness} isBorder />
 
 				<!-- apply -->
 				<TwoColumnWithLeftHeading
@@ -190,18 +190,18 @@
 
 			<div id="support" data-section="support" class="section">
 				<!-- financial support -->
-				<AboveTitleWithoutIconCard contents={supportWithClicks}  isBorder/>
+				<AboveTitleWithoutIconCard contents={supportWithClicks} isBorder />
 			</div>
 
 			<div id="tools" data-section="tools" class="section">
 				<!-- money map -->
-				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder/>
+				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
 
 				<!-- plot loan calc -->
-				<AboveTitleWithBlackCard contents={content.tools.calculators} isBorder/>
+				<AboveTitleWithBlackCard contents={content.tools.calculators} isBorder />
 
 				<!-- ways to pay off -->
-				<ButtonBanner contents={content.tools.buttonBanner} isBorder/>
+				<ButtonBanner contents={content.tools.buttonBanner} isBorder />
 			</div>
 		</div>
 
@@ -215,20 +215,20 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="typography-label">{list}</h2>
 							<div class="justify-self-end">
-								<ChevronDown class="faq-icon transition-transform duration-300" />
+								<ChevronDown class="faq-icon shrink-0 transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index == 0}
-						<div id="type" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithLeftHeading contents={content.type.loanTypes} />
+						<div id="type" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading contents={content.type.loanTypes} isBorder />
 
 							<!-- we help -->
 							<TwoColumnWithImage contents={content.type.howWeHelp}>
@@ -247,13 +247,13 @@
 					{:else if index == 1}
 						<div
 							id="challenges"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.challenges.contents} />
 						</div>
 					{:else if index == 2}
-						<div id="steps" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<AboveTitleWithTopIconCard contents={content.steps.awareness} />
+						<div id="steps" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.steps.awareness} isBorder />
 
 							<!-- apply -->
 							<TwoColumnWithLeftHeading
@@ -271,15 +271,15 @@
 					{:else if index == 3}
 						<div
 							id="support"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<AboveTitleWithoutIconCard contents={supportWithClicks} />
 						</div>
 					{:else if index == 4}
-						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+						<div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
 							<AboveTitleWithBlackCard contents={content.tools.calculators} />
-							<ButtonBanner contents={content.tools.buttonBanner} />
+							<ButtonBanner contents={content.tools.buttonBanner} isBorder />
 						</div>
 					{/if}
 				</details>
@@ -301,7 +301,7 @@
 		<FeedbackCheck />
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"

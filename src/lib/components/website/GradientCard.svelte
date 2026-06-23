@@ -14,7 +14,7 @@
 >
 	<!-- Content -->
 	<div class="flex-1 p-4">
-		<h2 class="typography-h2-md text-[var(--form-text)]">
+		<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
 			{@html heading}
 		</h2>
 

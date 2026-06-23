@@ -213,7 +213,7 @@
 
       <div id="tools" data-section="tools" class="section">
         <AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
-        <AboveTitleWithBlackCard contents={content.tools.calculators} isBorder/>
+        <AboveTitleWithBlackCard contents={content.tools.calculators} />
       </div>
     </div>
 
@@ -236,12 +236,12 @@
 					</summary>
 
           {#if index == 0}
-            <div id="equity" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-              <TwoColumnWithLeftHeading contents={content.equity} />
-              <TwoColumnWithLeftHeading contents={content.howItWorks} />
-              <ButtonBanner contents={content.purchasedPlotBanner} />
+            <div id="equity" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+              <TwoColumnWithLeftHeading contents={content.equity} isBorder />
+              <TwoColumnWithLeftHeading contents={content.howItWorks} isBorder />
+              <ButtonBanner contents={content.purchasedPlotBanner} isBorder />
 
-              <div class="py-[4rem] px-[1rem] w-full border-b border-[var(--form-border)]">
+              <div class="py-[4rem] px-[0.5rem] w-full border-b border-[var(--form-border)]">
                 <div class="">
                   <h2 class="typography-h2-md text-center font-semibold text-[var(--form-text)] mb-[4rem]">
                     Comparison of Different Plot Loan Types
@@ -255,19 +255,19 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="benefits" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-              <TwoColumnWithLeftHeading contents={content.benefits} />
+            <div id="benefits" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+              <TwoColumnWithLeftHeading contents={content.benefits} isBorder />
 
               <div id="bt">
-                <TwoColumnWithLeftHeading contents={content.bt.contents} />
+                <TwoColumnWithLeftHeading contents={content.bt.contents} isBorder />
               </div>
               <ThreeColumWithLeftHeading contents={dreamPlotWithClicks} />
             </div>
           {:else if index == 2}
-            <div id="plotEquity" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+            <div id="plotEquity" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
               <div class="py-[4rem] px-[0.5rem] w-full">
                 <div class="">
-                  <h2 class="typography-h2-md text-center font-semibold text-[var(--form-text)] mb-[4rem]">
+                  <h2 class="typography-h2-md text-center font-semibold text-[var(--form-text)] mb-[2rem]">
                     Plot + Equity Loan vs. Only Plot Equity Loan
                   </h2>
                 </div>
@@ -279,8 +279,8 @@
               </div>
             </div>
           {:else if index == 3}
-            <div id="help" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-              <TwoColumnWithImage contents={content.howWeHelp.contents}>
+            <div id="help" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+              <TwoColumnWithImage contents={content.howWeHelp.contents} isBorder>
                 <div class="typography-body-md text-[var(--form-text-secondary)]">
                   <ul class="list-disc space-y-4">
                     {#each content.howWeHelp.list as item}
@@ -298,8 +298,8 @@
               <TwoColumnWithLeftHeading contents={content.exploreMore} />
             </div>
           {:else if index == 4}
-            <div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-              <AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+            <div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+              <AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
               <AboveTitleWithBlackCard contents={content.tools.calculators} />
             </div>
           {/if}

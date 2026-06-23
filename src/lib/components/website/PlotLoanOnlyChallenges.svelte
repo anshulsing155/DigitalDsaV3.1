@@ -191,7 +191,7 @@
 
 			<div id="tools" data-section="tools" class="section">
 				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
-				<AboveTitleWithBlackCard contents={content.tools.calculators}  isBorder/>
+				<AboveTitleWithBlackCard contents={content.tools.calculators} />
 			</div>
 		</div>
 
@@ -219,14 +219,14 @@
 					{#if index == 0}
 						<div
 							id="search"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)]  text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.search} />
 						</div>
 					{:else if index == 1}
 						<div
 							id="challenges"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)]  text-[var(--form-text)]"
 						>
 							<div class="w-full px-[0.5rem] py-[4rem]">
 								<div class="flex flex-col gap-[2rem] lg:gap-[4rem]">
@@ -248,20 +248,20 @@
 					{:else if index == 2}
 						<div
 							id="chances"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.chances} />
 						</div>
 					{:else if index == 3}
 						<div
 							id="alternate"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
-							<AboveTitleWithTopIconCard contents={content.alternate.contents} />
+							<AboveTitleWithTopIconCard contents={content.alternate.contents} isBorder />
 
 							<div class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem]">
 								<div class="">
-									<h2 class="typography-h2 mb-[4rem] grid text-center text-text-main">
+									<h2 class="typography-h2 mb-[2rem] grid text-center text-text-main">
 										Comparison of Alternative Financing Options for Buying a Plot
 									</h2>
 								</div>
@@ -272,13 +272,13 @@
 								</div>
 							</div>
 
-							<ButtonBanner contents={content.tools.buttonBanner} />
-							<AboveTitleWithoutIconCard contents={content.risks.contents} />
+							<ButtonBanner contents={content.tools.buttonBanner} isBorder />
+							<AboveTitleWithoutIconCard contents={content.risks.contents} isBorder />
 							<TwoColumnWithLeftHeading contents={journeyWithClicks} />
 						</div>
 					{:else if index == 4}
-						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+						<div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
 							<AboveTitleWithBlackCard contents={content.tools.calculators} />
 						</div>
 					{/if}
@@ -299,7 +299,7 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
