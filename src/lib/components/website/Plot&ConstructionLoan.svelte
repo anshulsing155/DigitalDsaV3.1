@@ -17,6 +17,7 @@
 	import content from '$lib/data/website/plotConstructionLoan.json';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
+	import SectionIntro from './SectionIntro.svelte';
 
 	interface ButtonProps {
 		btnName: string;
@@ -160,7 +161,7 @@
 				<AboveTitleWithoutIconCard contents={content.disbursement.contents} isBorder />
 
 				<div id="bt">
-					<TwoColumnWithLeftHeading contents={content.balanceTransfer.contents}  isBorder/>
+					<TwoColumnWithLeftHeading contents={content.balanceTransfer.contents} isBorder />
 					<div
 						class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem]"
 					>
@@ -177,7 +178,7 @@
 					</div>
 				</div>
 
-				<ThreeColumWithLeftHeading contents={consultationWithClicks} isBorder/>
+				<ThreeColumWithLeftHeading contents={consultationWithClicks} isBorder />
 			</div>
 
 			<div id="help" data-section="help" class="section">
@@ -201,9 +202,9 @@
 			</div>
 
 			<div id="tools" data-section="tools" class="section">
-				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder/>
-				<AboveTitleWithBlackCard contents={content.tools.calculators} isBorder/>
-				<ButtonBanner contents={content.tools.buttonBanner} isBorder/>
+				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
+				<AboveTitleWithBlackCard contents={content.tools.calculators} isBorder />
+				<ButtonBanner contents={content.tools.buttonBanner} isBorder />
 			</div>
 		</div>
 
@@ -217,7 +218,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -229,45 +230,27 @@
 					</summary>
 
 					{#if index == 0}
-						<div id="guide" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<ThreeColumWithLeftHeading contents={content.guide} />
-						<div class="border-t border-[var(--form-border)]">
-								<TwoColumnWithLeftHeading contents={content.keyAdvantages} />
-						</div>
+						<div id="guide" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<ThreeColumWithLeftHeading contents={content.guide} isBorder />
+
+							<TwoColumnWithLeftHeading contents={content.keyAdvantages} />
 						</div>
 					{:else if index == 1}
-						<div
-							id="eligibility"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<AboveTitleWithTopIconCard contents={content.eligibility.contents} />
-							<AboveTitleWithoutIconCard contents={content.disbursement.contents} />
+						<div id="eligibility" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.eligibility.contents} isBorder />
+							<AboveTitleWithoutIconCard contents={content.disbursement.contents} isBorder />
 
 							<div id="bt">
-								<TwoColumnWithLeftHeading contents={content.balanceTransfer.contents} />
-								<div
-									class="w-full border-b border-[var(--form-border)] px-[0.5rem] lg:px-[4rem] pb-[4rem]"
-								>
-									<div
-										class="flex w-full flex-col items-center justify-center gap-8 md:gap-16 lg:w-auto"
-									>
-										<h2 class="typography-h2-md text-center text-[var(--form-text)]">
-											{content.topUp.heading}
-										</h2>
-										<p
-											class="typography-body-md text-center text-[var(--form-text-secondary)] lg:w-8/12 lg:justify-self-end"
-										>
-											{content.topUp.para}
-										</p>
-									</div>
-								</div>
+								<TwoColumnWithLeftHeading contents={content.balanceTransfer.contents} isBorder />
+
+								<SectionIntro heading={content.topUp.heading} para={content.topUp.para} isBorder />
 							</div>
 
 							<ThreeColumWithLeftHeading contents={consultationWithClicks} />
 						</div>
 					{:else if index == 2}
-						<div id="help" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithImage contents={content.howWeHelp.contents}>
+						<div id="help" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<TwoColumnWithImage contents={content.howWeHelp.contents} isBorder>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="list-disc space-y-4">
 										{#each content.howWeHelp.list as item}
@@ -287,15 +270,13 @@
 								</div>
 							</TwoColumnWithImage>
 
-							<div class="border-t border-[var(--form-border)]">
-								<TwoColumnWithLeftHeading contents={content.exploreMore} />
-							</div>
+							<TwoColumnWithLeftHeading contents={content.exploreMore} />
 						</div>
 					{:else if index == 3}
-						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+						<div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
 							<AboveTitleWithBlackCard contents={content.tools.calculators} />
-							<ButtonBanner contents={content.tools.buttonBanner} />
+							<ButtonBanner contents={content.tools.buttonBanner} isBorder />
 						</div>
 					{/if}
 				</details>
@@ -315,7 +296,7 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"

@@ -151,10 +151,10 @@
 
 			<div id="eligibility" data-section="eligibility" class="section">
 				<ButtonBanner contents={content.willApprove} isBorder />
-				<AboveTitleWithTopIconCard contents={content.eligibility.contents} isBorder/>
+				<AboveTitleWithTopIconCard contents={content.eligibility.contents} isBorder />
 
 				<div id="bt">
-					<TwoColumnWithLeftHeading contents={content.bt.contents}  isBorder/>
+					<TwoColumnWithLeftHeading contents={content.bt.contents} isBorder />
 					<div
 						class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem]"
 					>
@@ -171,7 +171,7 @@
 					</div>
 				</div>
 
-				<ThreeColumWithLeftHeading contents={visionBannerWithClicks} isBorder/>
+				<ThreeColumWithLeftHeading contents={visionBannerWithClicks} isBorder />
 			</div>
 
 			<div id="steps" data-section="steps" class="section">
@@ -195,7 +195,7 @@
 			<div id="tools" data-section="tools" class="section">
 				<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
 				<AboveTitleWithBlackCard contents={content.tools.calculators} />
-				<ButtonBanner contents={content.tools.buttonBanner}  isBorder/>
+				<ButtonBanner contents={content.tools.buttonBanner} isBorder />
 			</div>
 		</div>
 
@@ -209,7 +209,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -223,27 +223,27 @@
 					{#if index == 0}
 						<div
 							id="features"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.features} />
 						</div>
 					{:else if index == 1}
 						<div
 							id="benefits"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<TwoColumnWithLeftHeading contents={content.benefits} />
 						</div>
 					{:else if index == 2}
 						<div
 							id="eligibility"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
-							<ButtonBanner contents={content.willApprove} />
-							<AboveTitleWithTopIconCard contents={content.eligibility.contents} />
+							<ButtonBanner contents={content.willApprove} isBorder />
+							<AboveTitleWithTopIconCard contents={content.eligibility.contents} isBorder />
 
 							<div id="bt">
-								<TwoColumnWithLeftHeading contents={content.bt.contents} />
+								<TwoColumnWithLeftHeading contents={content.bt.contents} isBorder />
 								<div
 									class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem]"
 								>
@@ -265,7 +265,7 @@
 							<ThreeColumWithLeftHeading contents={visionBannerWithClicks} />
 						</div>
 					{:else if index == 3}
-						<div id="steps" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="steps" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<TwoColumnWithImage contents={content.steps.contents}>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="list-disc space-y-4">
@@ -287,10 +287,10 @@
 							</TwoColumnWithImage>
 						</div>
 					{:else if index == 4}
-						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+						<div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
 							<AboveTitleWithBlackCard contents={content.tools.calculators} />
-							<ButtonBanner contents={content.tools.buttonBanner} />
+							<ButtonBanner contents={content.tools.buttonBanner} isBorder />
 						</div>
 					{/if}
 				</details>
@@ -310,12 +310,12 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
-        containerClass="px-0"
-/>
+				containerClass="px-0"
+			/>
 		{/snippet}
 	</NewPageLayout>
 </section>
