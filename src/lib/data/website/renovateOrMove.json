@@ -59,22 +59,22 @@
 	"renovation": {
 		"contents": {
 			"heading": "Home Renovation:<br> <span class=\"underline decoration-primary underline-offset-4\">The Smart Upgrade</span>",
-			"listTopPara": "<p class=\"text-[var(--form-text-secondary)] !font-semibold\">Renovating your existing home can give it a fresh new feel without the hassle of moving. You can add new features, modernize spaces, and create the dream home you’ve always wanted right where you are. <br><br>Here are some benefits of home renovation:</p>",
+			"listTopPara": "<p class=\"!font-regular \">Renovating your existing home can give it a fresh new feel without the hassle of moving. You can add new features, modernize spaces, and create the dream home you’ve always wanted right where you are. <br><br>Here are some benefits of home renovation:</p>",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Cost-Effective</span>"
+					"desc": "<span class=\"\">Cost-Effective</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Personalized Upgrades</span>"
+					"desc": "<span class=\"\">Personalized Upgrades</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Save on Moving Costs</span>"
+					"desc": "<span class=\"\">Save on Moving Costs</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Increased Property Value</span>"
+					"desc": "<span class=\"\">Increased Property Value</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Stay in a Familiar Environment</span>"
+					"desc": "<span class=\"\">Stay in a Familiar Environment</span>"
 				}
 			]
 		}
@@ -82,22 +82,22 @@
 	"buying": {
 		"contents": {
 			"heading": "Buying a New Home: <br><span class=\"underline decoration-primary underline-offset-4\">The Fresh Start</span>",
-			"listTopPara": "<p class=\"text-[var(--form-text-secondary)] !font-semibold\">On the other hand, buying a new home allows you to start afresh, with the amenities and features you’ve always dreamed of. Whether it’s more space, better location, or modern designs, moving can provide a whole new lifestyle.<br><br> Here’s why buying a new home could be the better option for some:</p>",
+			"listTopPara": "<p class=\"!font-regular\">On the other hand, buying a new home allows you to start afresh, with the amenities and features you’ve always dreamed of. Whether it’s more space, better location, or modern designs, moving can provide a whole new lifestyle.<br><br> Here’s why buying a new home could be the better option for some:</p>",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Modern Features and Amenities</span>"
+					"desc": "<span>Modern Features and Amenities</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">No Renovation Hassles</span>"
+					"desc": "<span>No Renovation Hassles</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Better Location or Neighborhood</span>"
+					"desc": "<span>Better Location or Neighborhood</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">Increased Energy Efficiency</span>"
+					"desc": "<span>Increased Energy Efficiency</span>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)] !font-semibold\">No Need for Future Renovations</span>"
+					"desc": "<span>No Need for Future Renovations</span>"
 				}
 			]
 		}

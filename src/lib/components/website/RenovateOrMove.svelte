@@ -145,7 +145,7 @@
 
 			<section id="comparision" data-section="comparision" class="section">
 				<div class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-12 lg:px-16">
-					<h2 class="typography-body-lg mb-2 text-center !font-semibold text-[var(--form-text)]">
+					<h2 class="typography-h2-md mb-2 text-center !font-semibold text-[var(--form-text)]">
 						The Ultimate Comparison
 					</h2>
 					<p class="typography-body-md mb-6 text-center text-[var(--form-text-secondary)]">

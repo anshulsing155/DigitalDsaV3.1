@@ -72,7 +72,7 @@
 				<div class="space-y-[2rem]">
 					{#if contents.listTopPara}
 						<div class="">
-							<p class="typography-body-md !font-bold text-[var(--form-text-secondary)]">
+							<p class="typography-body-md font-bold text-[var(--form-text-secondary)]">
 								{@html contents.listTopPara}
 							</p>
 						</div>
