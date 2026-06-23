@@ -15,12 +15,12 @@
 			{
 				"btnName": "Compare LAP Offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			},
 			{
 				"btnName": "Check Your Savings",
 				"btnLink": "/calculators/balance-transfer-calculator",
-				 "btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary"
 			}
 		]
 	},
@@ -47,12 +47,12 @@
 			{
 				"btnName": "Compare LAP Offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			},
 			{
 				"btnName": "Check Your Savings",
 				"btnLink": "/calculators/balance-transfer-calculator",
-				 "btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary"
 			}
 		]
 	},
@@ -75,7 +75,7 @@
 		"heading": "Looking to Transfer Your LAP for Better Rates?",
 		"btnName": "Compare Best Offers",
 		"btnLink": "/get-started/how-can-we-help",
-		"btnClass": "btn-primary w-full"
+		"btnClass": "btn-primary"
 	},
 	"howWeHelp": {
 		"contents": {

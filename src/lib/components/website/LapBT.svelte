@@ -112,12 +112,12 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="whyBalanceTransfer" data-section="whyBalanceTransfer">
-				<ThreeColumWithLeftHeading contents={content.whyBT} />
-				<ButtonBanner contents={buttonBannerWithClicks} />
+				<ThreeColumWithLeftHeading contents={content.whyBT} isBorder />
+				<ButtonBanner contents={buttonBannerWithClicks} isBorder />
 			</div>
 
 			<div id="howDSAHelp" data-section="howDSAHelp">
-				<TwoColumnWithImage contents={content.howWeHelp.contents}>
+				<TwoColumnWithImage contents={content.howWeHelp.contents} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="typography-body-md list-disc space-y-4">
 							{#each content.howWeHelp.list as item}
@@ -135,15 +135,15 @@
 				<div class="border-b border-[var(--form-border)]">
 					<ThingsYouShould thinkKnow={content.documents} disc="list-disc" />
 				</div>
-				<ButtonBanner contents={content.buttonBannerITR} />
+				<ButtonBanner contents={content.buttonBannerITR} isBorder />
 			</div>
 
 			<div id="thingConsider" data-section="thingConsider">
-				<ThreeColumWithLeftHeading contents={content.things} />
+				<ThreeColumWithLeftHeading contents={content.things} isBorder />
 			</div>
 
 			<div id="calculators" data-section="calculators">
-				<ThreeColumWithLeftHeading contents={content.tools} />
+				<ThreeColumWithLeftHeading contents={content.tools} isBorder />
 			</div>
 		</div>
 
@@ -169,14 +169,14 @@
 					</summary>
 
 					{#if index == 0}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.whyBT} />
 							<div class="border-t border-[var(--form-border)]">
 								<ButtonBanner contents={buttonBannerWithClicks} />
 							</div>
 						</div>
 					{:else if index == 1}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithImage contents={content.howWeHelp.contents}>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul
@@ -202,12 +202,12 @@
 							</div>
 						</div>
 					{:else if index == 2}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.things} />
 						</div>
 					{:else if index == 3}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<ThreeColumWithLeftHeading contents={content.tools} />
+						<div class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<ThreeColumWithLeftHeading contents={content.tools} isBorder/>
 						</div>
 					{/if}
 				</details>
@@ -216,13 +216,13 @@
 
 		<FeedbackCheck />
 
-		<div slot="secondary">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder/>
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
