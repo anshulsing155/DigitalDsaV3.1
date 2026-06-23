@@ -53,29 +53,29 @@
 	<section class="content">
 		<NewPageLayout pageData={pageDataWithClicks}>
 			<Sublist subList={content.subList} />
-			<div class="px-[0.5rem] lg:px-16">
-				<AboveTitleWithTopIconCard contents={content.whyChoose} paddingClass="px-0" isBorder />
+			<div class="lg:px-16">
+				<AboveTitleWithTopIconCard contents={content.whyChoose} paddingClass="lg:px-0" isBorder />
 
 				<div id="calc">
-					<AboveTitleWithBlackCard contents={content.calculators} paddingClass="px-0" />
+					<AboveTitleWithBlackCard contents={content.calculators} paddingClass="lg:px-0" />
 				</div>
 
 				<div
-					class="grid w-full gap-8 border-b border-[var(--form-border)] py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32"
+					class="grid w-full gap-8 py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32 lg:border-b border-[var(--form-border)]"
 				>
 					<NewBlogCard blogLists={content.blogCard1} />
 				</div>
 
 				<ButtonBanner contents={content.payFasterBanner} isBorder />
 
-				<AboveTitleWithoutIconCard contents={content.buyingNewHome} paddingClass="px-0" isBorder />
+				<AboveTitleWithoutIconCard contents={content.buyingNewHome} paddingClass="lg:px-0" isBorder />
 
 				<ButtonBanner contents={content.itrBanner} isBorder />
 
-				<ThreeColumWithLeftHeading contents={content.startJourney} paddingClass="px-0" isBorder />
+				<ThreeColumWithLeftHeading contents={content.startJourney} paddingClass="lg:px-0" isBorder />
 
 				<div
-					class="grid w-full gap-8 border-b border-[var(--form-border)] py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32"
+					class="grid w-full gap-8 py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32 lg:border-b border-[var(--form-border)]"
 				>
 					<NewBlogCard blogLists={content.blogCard2} />
 
@@ -86,7 +86,7 @@
 
 				<ButtonBanner contents={content.compareRatesBanner} isBorder />
 
-				<TwoColumnWithLeftHeading contents={content.support} paddingClass="px-0" isBorder />
+				<TwoColumnWithLeftHeading contents={content.support} paddingClass="lg:px-0" isBorder />
 
 				<div class="border-b border-[var(--form-border)]">
 					<TwoColumn
@@ -108,15 +108,15 @@
 				<div id="propertyguide">
 					<AboveTitleWithTopIconCard
 						contents={content.propertyGuides}
-						paddingClass="px-0"
+						paddingClass="lg:px-0"
 						isBorder
 					/>
 				</div>
 
-				<FeedbackCheck paddingClass="px-0" />
+				<FeedbackCheck paddingClass="lg:px-0" />
 			</div>
 			{#snippet secondary()}
-				<HelpList contents={content.common_components.helpList.contents} />
+				<HelpList contents={content.common_components.helpList.contents} isBorder/>
 				<ThingsYouShould
 					thinkKnow={content.common_components.thinkYouShouldKnow}
 					disc="list-decimal"

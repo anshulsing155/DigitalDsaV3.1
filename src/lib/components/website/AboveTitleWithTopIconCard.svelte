@@ -13,11 +13,10 @@
 		paddingClass = 'lg:px-16',
 		isBorder = false
 	}: Props = $props();
-
 </script>
 
 <section
-	class="w-full px-[0.5rem]  py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+	class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
 		? 'border-b border-[var(--form-border)]'
 		: ''}"
 >
@@ -52,9 +51,12 @@
 			<div
 				class="grid md:grid-cols-2 lg:grid-cols-{listGridAboveLg} xl:grid-cols-{contents.xlGridCol} gap-4"
 			>
-				{#each contents.list as listItem}
+				{#each contents.list as listItem, index}
 					<div
-						class="group my-[4rem] mt-4 flex flex-col items-start gap-4 pr-4 text-[var(--form-text)] lg:gap-8"
+						class="group my-[4rem] mt-4 flex flex-col items-start gap-4 pr-4 text-[var(--form-text)] lg:gap-8 {index <
+						contents.list.length - 1
+							? 'border-b border-[var(--form-border)] pb-[4rem] md:border-b-0 md:pb-0'
+							: ''}"
 					>
 						{#if listItem.icon}
 							<img

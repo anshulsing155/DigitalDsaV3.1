@@ -10,13 +10,13 @@
 
 	const {
 		contents = {},
-		paddingClass = 'px-[0.5rem] lg:px-16',
+		paddingClass = 'lg:px-16',
 		isBorder = false
 	}: Props = $props();
 </script>
 
 <section
-	class=" text-[var(--form-text)] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+	class=" text-[var(--form-text)] px-[0.5rem]  py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
 		? 'border-b border-[var(--form-border)]'
 		: ''}"
 >

@@ -501,7 +501,7 @@
 		</div>
 
 		<!-- message us -->
-		<TwoColumnWithImage contents={content.messageUs.contents} isBorder>
+		<TwoColumnWithImage contents={content.messageUs.contents}>
 			<p class="typography-body-md text-[var(--form-text-secondary)]">{content.messageUs.para}</p>
 			<div class="w-auto">
 				<Button
