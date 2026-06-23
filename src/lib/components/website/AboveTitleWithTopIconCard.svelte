@@ -10,16 +10,14 @@
 	let {
 		contents = {},
 		listGridAboveLg = '3',
-		paddingClass = 'px-[0.5rem] lg:px-16',
+		paddingClass = 'lg:px-16',
 		isBorder = false
 	}: Props = $props();
 
-	// import { content } from "./Def.svelte";
 </script>
 
-<!-- class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full {contents.borderBottom ? 'lg:border-b' : 'border-b-0'} border-[var(--form-border)]" -->
 <section
-	class="w-full py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+	class="w-full px-[0.5rem]  py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
 		? 'border-b border-[var(--form-border)]'
 		: ''}"
 >

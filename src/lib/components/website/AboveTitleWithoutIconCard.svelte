@@ -2,7 +2,7 @@
 	let {
 		contents = {},
 		children = undefined,
-		paddingClass = 'px-[0.5rem], isBorder = false lg:px-16',
+		paddingClass = 'lg:px-16',
 		isBorder = false
 	} = $props();
 
@@ -42,8 +42,13 @@
 
 		{#if contents.list}
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-{contents.xlGridCol} gap-4">
-				{#each contents.list as listItem}
-					<div class="group my-[4rem] mt-4 flex flex-col items-start gap-2 pr-4">
+				{#each contents.list as listItem, index}
+					<div
+						class="group my-[4rem] mt-4 flex flex-col items-start gap-2 {index <
+						contents.list.length - 1
+							? 'border-b border-[var(--form-border)] pb-[4rem] md:border-b-0 md:pb-0'
+							: ''}"
+					>
 						{#if listItem.heading}
 							<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
 								{@html listItem.heading}

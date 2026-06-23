@@ -50,13 +50,13 @@
 	<section class="content">
 		<NewPageLayout {pageData}>
 			<Sublist subList={content.subList} />
-			<div class="px-[0.5rem] lg:px-16">
+			<div class="lg:px-16">
 				<!-- plot categories -->
-				<TwoColumnWithLeftHeading contents={content.plotCategories} paddingClass="px-0" isBorder />
+				<TwoColumnWithLeftHeading contents={content.plotCategories} isBorder paddingClass="lg:px-0" />
 
 				<!-- diff b/w plot & home -->
 				<div
-					class="w-full border-b border-[var(--form-border)] py-8 text-[var(--form-text)] lg:py-0 lg:pt-16 lg:pb-32"
+					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] text-[var(--form-text)] lg:px-0 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
 					<div class="">
 						<h2 class="typography-h2-md py-5 text-center text-[var(--form-text)]">
@@ -74,12 +74,12 @@
 				</div>
 
 				<!-- why choose us -->
-				<AboveTitleWithTopIconCard contents={content.whyChooseUs}  isBorder paddingClass="px-0"/>
+				<AboveTitleWithTopIconCard contents={content.whyChooseUs} isBorder paddingClass="lg:px-0" />
 
 				<!-- balance transfer -->
 				<div id="bt">
 					<div
-						class="w-full border-b border-[var(--form-border)] py-8 text-[var(--form-text)] lg:py-0 lg:pt-16 lg:pb-32"
+						class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] text-[var(--form-text)] lg:px-0 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 					>
 						<div class="">
 							<h2 class="typography-h2-md py-5 text-center text-[var(--form-text)]">
@@ -93,17 +93,33 @@
 						</div>
 					</div>
 
-					<AboveTitleWithoutIconCard contents={content.chargesAndSavings} isBorder paddingClass="px-0" />
+					<AboveTitleWithoutIconCard
+						contents={content.chargesAndSavings}
+						isBorder
+						paddingClass="px-0"
+					/>
 
-					<AboveTitleWithTopIconCard contents={content.thingsToConsider} isBorder paddingClass="px-0" />
+					<AboveTitleWithTopIconCard
+						contents={content.thingsToConsider}
+						isBorder
+						paddingClass="px-0"
+					/>
 				</div>
 
 				<!-- money map -->
-				<AboveTitleWithTopIconCard contents={content.savingsCalculators} isBorder paddingClass="px-0" />
+				<AboveTitleWithTopIconCard
+					contents={content.savingsCalculators}
+					isBorder
+					paddingClass="lg:px-0"
+				/>
 
 				<!-- plot loan calc -->
 				<div id="calc">
-					<AboveTitleWithBlackCard contents={content.plotLoanCalculators} isBorder paddingClass="px-0" />
+					<AboveTitleWithBlackCard
+						contents={content.plotLoanCalculators}
+						isBorder
+						paddingClass="lg:px-0"
+					/>
 				</div>
 
 				<!-- ways to pay off -->
@@ -118,7 +134,7 @@
 						}
 					}}
 					isBorder
-					paddingClass="px-0"
+					paddingClass="lg:px-0"
 				/>
 
 				<div class="border-b border-[var(--form-border)]">
@@ -136,7 +152,11 @@
 				</div>
 
 				<!-- plot loan support -->
-				<TwoColumnWithLeftHeading contents={content.plotLoanSupportBanner} isBorder paddingClass="px-0" />
+				<TwoColumnWithLeftHeading
+					contents={content.plotLoanSupportBanner}
+					isBorder
+					paddingClass="lg:px-0"
+				/>
 
 				<!-- message us  -->
 				<div class="border-b border-[var(--form-border)]">
@@ -156,11 +176,11 @@
 					</TwoColumn>
 				</div>
 
-				<FeedbackCheck  paddingClass="px-0"/>
+				<FeedbackCheck paddingClass="lg:px-0" />
 			</div>
 
 			{#snippet secondary()}
-				<HelpList contents={content.help} />
+				<HelpList contents={content.help} isBorder />
 				<ThingsYouShould
 					thinkKnow={content.common_components.thingsYouShouldKnow}
 					disc="list-decimal"

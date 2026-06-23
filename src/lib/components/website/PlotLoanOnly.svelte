@@ -194,7 +194,7 @@
 			</div>
 
 			<div id="challenges" data-section="challenges" class="section">
-				<TwoColumnWithLeftHeading contents={content.challenges.contents} isBorder  />
+				<TwoColumnWithLeftHeading contents={content.challenges.contents} isBorder />
 				<AboveTitleWithLeftIconCard contents={content.categories.contents} isBorder />
 
 				<div
@@ -216,7 +216,7 @@
 				</div>
 
 				<div id="bt">
-					<TwoColumnWithLeftHeading contents={content.bt.contents}  isBorder/>
+					<TwoColumnWithLeftHeading contents={content.bt.contents} isBorder />
 				</div>
 
 				<ThreeColumWithLeftHeading contents={dreamPlotWithClicks} isBorder />
@@ -259,7 +259,7 @@
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] bg-ddsa-gradient-primary text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -271,17 +271,17 @@
 					</summary>
 
 					{#if index == 0}
-						<div id="ready" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4">
+						<div id="ready" class="bg-[var(--landing-bg)]">
 							<ThreeColumWithLeftHeading contents={content.ready} />
 						</div>
 					{:else if index == 1}
-						<div
-							id="challenges"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<TwoColumnWithLeftHeading contents={content.challenges.contents} />
-							<AboveTitleWithLeftIconCard contents={content.categories.contents} />
-
+						<div id="challenges" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<div class=" border-b border-[var(--form-border)]">
+								<TwoColumnWithLeftHeading contents={content.challenges.contents} />
+							</div>
+							<div class=" border-b border-[var(--form-border)]">
+								<AboveTitleWithLeftIconCard contents={content.categories.contents} />
+							</div>
 							<div class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem]">
 								<div class="">
 									<h2 class="typography-h2-md mb-[4rem] grid text-center text-[var(--form-text)]">
@@ -300,15 +300,15 @@
 								</div>
 							</div>
 
-							<div id="bt">
+							<div id="bt" class="border-b border-[var(--form-border)]">
 								<TwoColumnWithLeftHeading contents={content.bt.contents} />
 							</div>
 
 							<ThreeColumWithLeftHeading contents={dreamPlotWithClicks} />
 						</div>
 					{:else if index == 2}
-						<div id="help" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<TwoColumnWithImage contents={content.howWeHelp.contents}>
+						<div id="help" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<TwoColumnWithImage contents={content.howWeHelp.contents} isBorder>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="list-disc space-y-4">
 										{#each content.howWeHelp.list as item}
@@ -331,10 +331,10 @@
 							<TwoColumnWithLeftHeading contents={content.exploreMore} />
 						</div>
 					{:else if index == 3}
-						<div id="tools" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} />
+						<div id="tools" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
+							<AboveTitleWithTopIconCard contents={content.tools.moneyMap} isBorder />
 							<AboveTitleWithBlackCard contents={content.tools.calculators} />
-							<ButtonBanner contents={content.tools.buttonBanner} />
+							<ButtonBanner contents={content.tools.buttonBanner} isBorder />
 						</div>
 					{/if}
 				</details>
@@ -354,13 +354,13 @@
 		</TwoColumnWithImage>
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
-				containerClass="pl-0"
+				containerClass="px-0"
 			/>
-	{/snippet}
+		{/snippet}
 	</NewPageLayout>
 </section>
 
