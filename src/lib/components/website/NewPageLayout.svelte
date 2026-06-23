@@ -53,7 +53,7 @@
 			<div class="mx-2 lg:mx-0">
 				<div
 					id="sideCard"
-					class="relative w-full border border-[var(--landing-glass-border)] bg-[var(--landing-bg)] px-6 py-12 lg:w-1/2 lg:p-12 2xl:p-16"
+					class="relative w-full border border-[var(--landing-glass-border)] bg-[var(--landing-bg)] px-2 py-12 lg:w-1/2 lg:p-12 2xl:p-16"
 				>
 					<div class="flex flex-col gap-4 sm:gap-8">
 						<h1 class="typography-h1 text-[var(--form-text)]">
