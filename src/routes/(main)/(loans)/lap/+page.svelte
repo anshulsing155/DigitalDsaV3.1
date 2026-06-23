@@ -27,19 +27,21 @@
 <section class="content">
 	<NewPageLayout pageData={content.pageData}>
 		<Sublist subList={content.subList} />
-		<div class="px-[0.5rem] lg:px-16">
-			<WhyChoose facilities={content.facilities} paddingClass="px-0" isBorder />
+		<div class="lg:px-16">
+			<WhyChoose facilities={content.facilities} paddingClass="lg:px-0" isBorder />
 
-			<div class="grid w-full gap-8 py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32">
+			<div
+				class="grid w-full gap-8 px-[0.5rem] py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32"
+			>
 				<NewBlogCard blogLists={content.blogs} />
 			</div>
 
 			<Ways ways={content.ways} />
-			<div class="border-b border-[var(--form-border)]">
-				<NewHome steps={content.steps} />
-			</div>
+
+			<NewHome steps={content.steps} isBorder paddingClass="lg:px-0" />
 
 			<ButtonBanner contents={content.buttonBanner} isBorder />
+			
 			<div class="border-b border-[var(--form-border)]">
 				<TwoColumn
 					cardImage={content.businessHealthCard.cardImage}
@@ -84,7 +86,7 @@
 		</div>
 
 		{#snippet secondary()}
-			<HelpList contents={content.help} isBorder/>
+			<HelpList contents={content.help} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thingsYouShouldKnow}
 				disc="list-decimal"

@@ -9,7 +9,7 @@
 </script>
 
 <section
-  class="flex flex-col items-center justify-center gap-[2rem] border-y border-[var(--form-border)] py-[4rem]"
+  class="flex flex-col items-center px-[0.5rem] lg:px-0 justify-center gap-[2rem] border-y border-[var(--form-border)] py-[4rem]"
 >
   {#if ways.heading}
     <h2

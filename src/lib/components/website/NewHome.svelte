@@ -1,11 +1,15 @@
 <script>
-	let { steps = {} } = $props();
+	let { steps = {}, isBorder = false, paddingClass = 'lg:px-16' } = $props();
 
 	import Button from './Button.svelte';
 </script>
 
-<section class="pt-[4rem] pb-[8rem]">
-	<div class="grid grid-cols-3 gap-[2rem]">
+<section
+	class="px-[0.5rem] py-[4rem] text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+		? 'border-b border-[var(--form-border)]'
+		: ''}"
+>
+	<div class="grid grid-cols-3 gap-[2rem] {paddingClass}">
 		<div class="col-span-3 lg:col-span-1">
 			{#if steps.heading}
 				<p class="typography-h2-md text-[var(--form-text)]">{steps.heading}</p>
@@ -17,7 +21,7 @@
 		</div>
 		<div class="col-span-3 grid grid-cols-2 gap-[4rem] lg:col-span-2">
 			{#each steps.data as step}
-				<div class="col-span-2 grid gap-[2rem] md:col-span-1">
+				<div class="col-span-2 grid gap-[2rem] md:col-span-1 border-b last:border-b-0 border-[var(--form-border)] lg:border-b-0 pb-[4rem] last:pb-0 lg:pb-0">
 					{#if step.icon}
 						<img src={step.icon} alt={step.altTitle} class="h-10" />
 					{/if}

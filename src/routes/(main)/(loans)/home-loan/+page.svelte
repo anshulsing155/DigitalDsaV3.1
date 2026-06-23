@@ -61,7 +61,7 @@
 				</div>
 
 				<div
-					class="grid w-full gap-8 py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32 lg:border-b border-[var(--form-border)]"
+					class="grid w-full gap-8 px-[0.5rem]  py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32 lg:border-b border-[var(--form-border)]"
 				>
 					<NewBlogCard blogLists={content.blogCard1} />
 				</div>
@@ -75,7 +75,7 @@
 				<ThreeColumWithLeftHeading contents={content.startJourney} paddingClass="lg:px-0" isBorder />
 
 				<div
-					class="grid w-full gap-8 py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32 lg:border-b border-[var(--form-border)]"
+					class="grid w-full gap-8 px-[0.5rem]  py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 lg:pt-16 lg:pb-32 lg:border-b border-[var(--form-border)]"
 				>
 					<NewBlogCard blogLists={content.blogCard2} />
 

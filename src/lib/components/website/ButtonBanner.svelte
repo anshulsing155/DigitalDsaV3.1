@@ -20,7 +20,7 @@
 				{@html contents.heading}
 			</h2>
 
-			<div class="w-full flex justify-center md:w-auto lg:col-span-4 lg:justify-self-start">
+			<div class="w-full flex justify-center lg:w-auto lg:justify-self-start">
 				<Button
 					btnName={contents.btnName}
 					link={contents.btnLink}

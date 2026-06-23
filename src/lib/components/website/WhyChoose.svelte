@@ -8,7 +8,7 @@
 	let {
 		facilities = {},
 		gridCol = 3,
-		paddingClass = 'px-[0.5rem] lg:px-16',
+		paddingClass = 'lg:px-16',
 		isBorder = false
 	}: Props = $props();
 
@@ -16,7 +16,7 @@
 </script>
 
 <section
-	class="py-[4rem] text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+	class="py-[4rem] px-[0.5rem] text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
 		? 'border-b border-[var(--form-border)]'
 		: ''}"
 >

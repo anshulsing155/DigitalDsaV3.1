@@ -180,7 +180,7 @@
 		"heading": "Discover the Best Loan Against Property Options",
 		"btnName": "Explore Now",
 		"btnLink": "/get-started/how-can-we-help",
-		"btnClass": "btn-primary"
+		"btnClass": "btn-primary w-full"
 	},
 	"businessHealthCard": {
 		"cardImage": "/images/cardImage.jpg",
