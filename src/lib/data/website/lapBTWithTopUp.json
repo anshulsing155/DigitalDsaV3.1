@@ -20,7 +20,7 @@
 			{
 				"btnName": "Compare best rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			}
 		]
 	},
@@ -52,7 +52,7 @@
 			{
 				"btnName": "Compare best rates",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			}
 		]
 	},
