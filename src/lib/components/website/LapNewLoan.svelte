@@ -135,17 +135,17 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="what" data-section="what">
-				<ThreeColumWithLeftHeading contents={featuresWithClicks} />
+				<ThreeColumWithLeftHeading contents={featuresWithClicks} isBorder/>
 			</div>
 
 			<div id="benefits" data-section="benefits">
-				<TwoColumnWithLeftHeading contents={content.benefits} />
+				<TwoColumnWithLeftHeading contents={content.benefits} isBorder/>
 			</div>
 
 			<div id="whoCanApply" data-section="whoCanApply">
-				<ThreeColumWithLeftHeading contents={content.eligibility.contents} />
+				<ThreeColumWithLeftHeading contents={content.eligibility.contents} isBorder/>
 
-				<TwoColumnWithImage contents={content.eligibility.whatWeProvide.contents}>
+				<TwoColumnWithImage contents={content.eligibility.whatWeProvide.contents} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="list-disc space-y-4 pl-2">
 							{#each content.eligibility.whatWeProvide.list as item}
@@ -161,19 +161,17 @@
 					</div>
 				</TwoColumnWithImage>
 
-				<ButtonBanner contents={buttonBannerWithClicks} />
+				<ButtonBanner contents={buttonBannerWithClicks} isBorder/>
 			</div>
 
 			<div id="things" data-section="things">
-				<ThreeColumWithLeftHeading contents={content.things} />
+				<ThreeColumWithLeftHeading contents={content.things} isBorder/>
 			</div>
 
 			<div id="calculators" data-section="calculators">
-				<ThreeColumWithLeftHeading contents={content.tools.moneyMap} />
+				<ThreeColumWithLeftHeading contents={content.tools.moneyMap} isBorder/>
 
-				<div class="px-[0.5rem] lg:px-[4rem]">
 					<AccordionWithLeftHeading contents={content.tools.faq} />
-				</div>
 			</div>
 		</div>
 
@@ -199,7 +197,7 @@
 					</summary>
 
 					{#if index == 0}
-						<div id="ready" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="ready" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={featuresWithClicks} />
 						</div>
 					{:else if index == 1}
@@ -207,13 +205,13 @@
 							<TwoColumnWithLeftHeading contents={content.benefits} />
 						</div>
 					{:else if index == 2}
-						<div id="next" class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div id="next" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.eligibility.contents} />
 
 							<div class="border-t border-[var(--form-border)]">
 								<TwoColumnWithImage contents={content.eligibility.whatWeProvide.contents}>
 									<div class="typography-body-md text-[var(--form-text-secondary)]">
-										<ul class="list-disc space-y-4 pl-2">
+										<ul class="list-disc space-y-4">
 											{#each content.eligibility.whatWeProvide.list as item}
 												<li class="flex items-start gap-1">
 													<img
@@ -238,14 +236,14 @@
 					{:else if index == 3}
 						<div
 							id="things"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
 							<ThreeColumWithLeftHeading contents={content.things} />
 						</div>
 					{:else if index == 4}
 						<div
 							id="calculators"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
 						>
 							<ThreeColumWithLeftHeading contents={content.tools.moneyMap} />
 							<div class="border-t border-[var(--form-border)] px-[0.5rem] lg:px-[4rem]">
@@ -260,7 +258,7 @@
 		<FeedbackCheck />
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} />
+			<HelpList contents={content.common_components.helpList.contents} isBorder/>
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"

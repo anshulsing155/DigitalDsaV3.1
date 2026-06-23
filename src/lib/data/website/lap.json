@@ -17,13 +17,13 @@
 			{
 				"btnName": "Compare LAP offers online",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full",
+				"btnClass": "btn-primary",
 				"animation": true
 			},
 			{
 				"btnName": "Book an appointment",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full",
+				"btnClass": "btn-secondary",
 				"animation": true
 			}
 		]
@@ -153,7 +153,7 @@
 		"para": "Making small financial changes today can lead to significant savings on your loan in the long run. Learn how to reduce interest payments and close your loan sooner.",
 		"btnName": "Find Out How",
 		"btnLink": "/planners/part-payment-planner",
-		"btnClass": "btn-secondary w-full",
+		"btnClass": "btn-secondary",
 		"animation": true
 	},
 	"steps": {
@@ -164,7 +164,7 @@
 				"title": "Get a New LAP or DOD",
 				"desc": "Not sure where to start? Whether you're looking for a Loan Against Property (LAP) or a Dropline Overdraft (DOD), we provide the right tools and support to help you move forward with confidence.",
 				"btnText": "Compare LAP Offers Online",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			},
 			{
 				"id": 2,
@@ -172,7 +172,7 @@
 				"desc": "Thinking about transferring your current Loan Against Property (LAP) to get better terms? We make the process smooth with expert guidance and support.",
 				"btnText": "Talk to Us",
 				"btnLink": "/appointment",
-				"btnClass": "btn-secondary w-full"
+				"btnClass": "btn-secondary"
 			}
 		]
 	},
@@ -180,7 +180,7 @@
 		"heading": "Discover the Best Loan Against Property Options",
 		"btnName": "Explore Now",
 		"btnLink": "/get-started/how-can-we-help",
-		"btnClass": "btn-primary w-full"
+		"btnClass": "btn-primary"
 	},
 	"businessHealthCard": {
 		"cardImage": "/images/cardImage.jpg",
