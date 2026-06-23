@@ -135,15 +135,15 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="what" data-section="what">
-				<ThreeColumWithLeftHeading contents={featuresWithClicks} isBorder/>
+				<ThreeColumWithLeftHeading contents={featuresWithClicks} isBorder />
 			</div>
 
 			<div id="benefits" data-section="benefits">
-				<TwoColumnWithLeftHeading contents={content.benefits} isBorder/>
+				<TwoColumnWithLeftHeading contents={content.benefits} isBorder />
 			</div>
 
 			<div id="whoCanApply" data-section="whoCanApply">
-				<ThreeColumWithLeftHeading contents={content.eligibility.contents} isBorder/>
+				<ThreeColumWithLeftHeading contents={content.eligibility.contents} isBorder />
 
 				<TwoColumnWithImage contents={content.eligibility.whatWeProvide.contents} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
@@ -161,17 +161,17 @@
 					</div>
 				</TwoColumnWithImage>
 
-				<ButtonBanner contents={buttonBannerWithClicks} isBorder/>
+				<ButtonBanner contents={buttonBannerWithClicks} isBorder />
 			</div>
 
 			<div id="things" data-section="things">
-				<ThreeColumWithLeftHeading contents={content.things} isBorder/>
+				<ThreeColumWithLeftHeading contents={content.things} isBorder />
 			</div>
 
 			<div id="calculators" data-section="calculators">
-				<ThreeColumWithLeftHeading contents={content.tools.moneyMap} isBorder/>
+				<ThreeColumWithLeftHeading contents={content.tools.moneyMap} isBorder />
 
-					<AccordionWithLeftHeading contents={content.tools.faq} />
+				<AccordionWithLeftHeading contents={content.tools.faq} />
 			</div>
 		</div>
 
@@ -234,17 +234,11 @@
 							</div>
 						</div>
 					{:else if index == 3}
-						<div
-							id="things"
-							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
-						>
+						<div id="things" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.things} />
 						</div>
 					{:else if index == 4}
-						<div
-							id="calculators"
-							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
-						>
+						<div id="calculators" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.tools.moneyMap} />
 							<div class="border-t border-[var(--form-border)] px-[0.5rem] lg:px-[4rem]">
 								<AccordionWithLeftHeading contents={content.tools.faq} />
@@ -258,7 +252,7 @@
 		<FeedbackCheck />
 
 		{#snippet secondary()}
-			<HelpList contents={content.common_components.helpList.contents} isBorder/>
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"

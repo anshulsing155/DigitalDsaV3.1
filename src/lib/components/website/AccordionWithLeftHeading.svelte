@@ -10,11 +10,11 @@
 		paddingClass?: string;
 	}
 
-	let { contents = {}, paddingClass = 'px-[0.5rem] lg:px-16' }: Props = $props();
+	let { contents = {}, paddingClass = 'lg:px-16' }: Props = $props();
 </script>
 
 <div
-	class="py-[4rem] text-[var(--form-text)] lg:border-b lg:border-[var(--form-border)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+	class="px-[0.5rem] py-[4rem] text-[var(--form-text)] lg:border-b lg:border-[var(--form-border)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 >
 	<div class={`grid gap-[2rem] lg:grid-cols-12 lg:gap-[4rem]  ${paddingClass}`}>
 		<!-- Left Column (Heading & Description) -->
@@ -45,9 +45,11 @@
 								{accordion.question}
 							</h2>
 
-							<ChevronDown
-								class="h-5 w-5 transition-transform duration-300 group-open:rotate-180"
-							/>
+							<div>
+								<ChevronDown
+									class="h-5 w-5 transition-transform duration-300 group-open:rotate-180 shrink-0"
+								/>
+							</div>
 						</summary>
 
 						<div class="typography-body-sm grid gap-4 pt-[1rem] text-[var(--form-text-secondary)]">
@@ -59,5 +61,3 @@
 		{/if}
 	</div>
 </div>
-
-
