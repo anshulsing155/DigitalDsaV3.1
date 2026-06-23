@@ -83,13 +83,13 @@
 			<FeedbackCheck paddingClass="px-0" />
 		</div>
 
-		<div slot="secondary">
-			<HelpList contents={content.help} />
+		{#snippet secondary()}
+			<HelpList contents={content.help} isBorder/>
 			<ThingsYouShould
 				thinkKnow={content.common_components.thingsYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			></ThingsYouShould>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
