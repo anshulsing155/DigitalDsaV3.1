@@ -149,7 +149,7 @@
 						</div>
 					{:else if index == 2}
 						<div id="help" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
-							<AboveTitleWithTopIconCard contents={content.action} />
+							<AboveTitleWithTopIconCard contents={content.action} isBorder />
 						</div>
 					{/if}
 				</details>
