@@ -114,23 +114,23 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="what-why" data-section="what-why">
-				<TwoColumnWithLeftHeading contents={content.what} />
-				<ThreeColumWithLeftHeading contents={content.why} />
-				<ThreeColumWithLeftHeading contents={content.keyBenefits} />
+				<TwoColumnWithLeftHeading contents={content.what} isBorder />
+				<ThreeColumWithLeftHeading contents={content.why} isBorder />
+				<ThreeColumWithLeftHeading contents={content.keyBenefits} isBorder />
 			</div>
 
 			<div id="eligibility" data-section="eligibility">
-				<ThreeColumWithLeftHeading contents={content.eligibility} />
-				<ThreeColumWithLeftHeading contents={content.documents} />
+				<ThreeColumWithLeftHeading contents={content.eligibility} isBorder />
+				<ThreeColumWithLeftHeading contents={content.documents} isBorder />
 			</div>
 
 			<div id="process" data-section="process">
-				<TwoColumnWithLeftHeading contents={content.process} />
+				<TwoColumnWithLeftHeading contents={content.process} isBorder />
 			</div>
 
 			<div id="when-to-opt" data-section="when-to-opt">
-				<ThreeColumWithLeftHeading contents={content.whenToOpt} />
-				<ButtonBanner contents={whenToOptBannerWithClicks} />
+				<ThreeColumWithLeftHeading contents={content.whenToOpt} isBorder />
+				<ButtonBanner contents={whenToOptBannerWithClicks} isBorder />
 			</div>
 		</div>
 
@@ -156,44 +156,26 @@
 					</summary>
 
 					{#if index == 0}
-						<div
-							id="what-why"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<div class="border-b border-[var(--form-border)]">
-								<TwoColumnWithLeftHeading contents={content.what} />
-							</div>
-							<div class="border-b border-[var(--form-border)]">
-								<ThreeColumWithLeftHeading contents={content.why} />
-							</div>
+						<div id="what-why" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<TwoColumnWithLeftHeading contents={content.what} isBorder />
+							<ThreeColumWithLeftHeading contents={content.why} isBorder />
 							<ThreeColumWithLeftHeading contents={content.keyBenefits} />
 						</div>
 					{:else if index == 1}
-						<div
-							id="eligibility"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="eligibility" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<div class="border-b border-[var(--form-border)]">
-								<ThreeColumWithLeftHeading contents={content.eligibility} />
+								<ThreeColumWithLeftHeading contents={content.eligibility} isBorder />
 							</div>
 							<ThreeColumWithLeftHeading contents={content.documents} />
 						</div>
 					{:else if index == 2}
-						<div
-							id="process"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
+						<div id="process" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithLeftHeading contents={content.process} />
 						</div>
 					{:else if index == 3}
-						<div
-							id="when-to-opt"
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
-						>
-							<div class="border-b border-[var(--form-border)]">
-								<ThreeColumWithLeftHeading contents={content.whenToOpt} />
-							</div>
-							<ButtonBanner contents={whenToOptBannerWithClicks} />
+						<div id="when-to-opt" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<ThreeColumWithLeftHeading contents={content.whenToOpt} isBorder />
+							<ButtonBanner contents={whenToOptBannerWithClicks} isBorder/>
 						</div>
 					{/if}
 				</details>
@@ -203,17 +185,17 @@
 		<TwoColumnWithImage contents={content.messageUs}>
 			<p>{content.messageUs.text}</p>
 			<div class="w-full lg:w-auto">
-				<Button link="/contact" btnClass="btn-primary w-full" btnName="Message us" />
+				<Button link="/contact" btnClass="btn-primary" btnName="Message us" />
 			</div>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
