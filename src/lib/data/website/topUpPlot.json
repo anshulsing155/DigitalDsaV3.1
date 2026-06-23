@@ -16,12 +16,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				 "btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare Bank offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			}
 		]
 	},
@@ -52,12 +52,12 @@
 			{
 				"btnName": "Book appointment",
 				"btnLink": "/appointment",
-				 "btnClass": "btn-secondary w-full"
+				 "btnClass": "btn-secondary"
 			},
 			{
 				"btnName": "Compare Bank offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			}
 		]
 	},
@@ -185,7 +185,7 @@
 					"para": "Explore personalized top-up loan options on your Loan Against Property and choose the best deal for your needs.",
 					"btnName": "View loan offers",
 					"btnLink": "/get-started/how-can-we-help",
-					"btnClass": "btn-primary w-full"
+					"btnClass": "btn-primary"
 				},
 				{
 					"title": "Still confused?  ",

@@ -121,7 +121,7 @@
 			<StickyNavbar navList={navListWithClicks} {activeSection} />
 
 			<div id="requirement" data-section="requirement">
-				<ThreeColumWithLeftHeading contents={content.requirement} />
+				<ThreeColumWithLeftHeading contents={content.requirement} isBorder />
 			</div>
 			<div class="border-b border-[var(--form-border)]" id="benefits" data-section="benefits">
 				<ThingsYouShould thinkKnow={content.benefits} disc="list-disc" />
@@ -130,11 +130,11 @@
 			<AboveTitleWithBlackCard contents={content.calculators} />
 
 			<div id="eligibility" data-section="eligibility">
-				<ThreeColumWithLeftHeading contents={content.eligibility} />
+				<ThreeColumWithLeftHeading contents={content.eligibility} isBorder />
 			</div>
 
 			<div id="process" data-section="process">
-				<TwoColumnWithImage contents={content.process.contents}>
+				<TwoColumnWithImage contents={content.process.contents} isBorder>
 					<div class="typography-body-md text-[var(--form-text-secondary)]">
 						<ul class="typography-body-md list-disc space-y-4">
 							{#each content.process.list as item}
@@ -156,7 +156,7 @@
 					<ThingsYouShould thinkKnow={content.consider.things} disc="list-disc" />
 				</div>
 
-				<ThreeColumWithLeftHeading contents={exploreWithClicks} />
+				<ThreeColumWithLeftHeading contents={exploreWithClicks} isBorder />
 			</div>
 		</div>
 
@@ -181,20 +181,22 @@
 					</summary>
 
 					{#if index == 0}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.requirement} />
 						</div>
 					{:else if index == 1}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<ThingsYouShould thinkKnow={content.benefits} disc="list-disc" />
+						<div class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+							<div class="border-b border-[var(--form-border)]">
+								<ThingsYouShould thinkKnow={content.benefits} disc="list-disc" />
+							</div>
 							<AboveTitleWithBlackCard contents={content.calculators} />
 						</div>
 					{:else if index == 2}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<ThreeColumWithLeftHeading contents={content.eligibility} />
 						</div>
 					{:else if index == 3}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
+						<div class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<TwoColumnWithImage contents={content.process.contents}>
 								<div class="typography-body-md text-[var(--form-text-secondary)]">
 									<ul class="typography-body-md list-disc space-y-4">
@@ -212,11 +214,11 @@
 							</TwoColumnWithImage>
 						</div>
 					{:else if index == 4}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]">
-							<ThingsYouShould thinkKnow={content.consider.things} disc="list-disc" />
+						<div class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
 							<div class="border-b border-[var(--form-border)]">
-								<ThreeColumWithLeftHeading contents={exploreWithClicks} />
+								<ThingsYouShould thinkKnow={content.consider.things} disc="list-disc" />
 							</div>
+							<ThreeColumWithLeftHeading contents={exploreWithClicks} isBorder/>
 						</div>
 					{/if}
 				</details>
@@ -238,13 +240,13 @@
 			</TwoColumnWithImage>
 		</div>
 
-		<div slot="secondary" class="p-[0.5rem] lg:p-0">
-			<HelpList contents={content.common_components.helpList.contents} />
+		{#snippet secondary()}
+			<HelpList contents={content.common_components.helpList.contents} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thinkYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			/>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
