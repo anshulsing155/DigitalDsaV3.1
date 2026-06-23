@@ -41,47 +41,46 @@
 			<NewHome steps={content.steps} isBorder paddingClass="lg:px-0" />
 
 			<ButtonBanner contents={content.buttonBanner} isBorder />
-			
-			<div class="border-b border-[var(--form-border)]">
-				<TwoColumn
-					cardImage={content.businessHealthCard.cardImage}
-					cardAltName={content.businessHealthCard.cardAltName}
-					cardHeading={content.businessHealthCard.cardHeading}
-					reverse={content.businessHealthCard.reverse}
-				>
-					<ul class="typography-body-md grid gap-4 text-[var(--form-text-secondary)]" slot="list">
-						<li>
-							{content.businessHealthCard.para}
-						</li>
-						<li>
-							<a
-								class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
-								href={content.businessHealthCard.link}
-							>
-								{content.businessHealthCard.linkName}
-							</a>
-						</li>
-					</ul>
-				</TwoColumn>
-			</div>
 
-			<div class="border-b border-[var(--form-border)]">
-				<TwoColumn
-					cardImage={content.messageUsCard.cardImage}
-					cardAltName={content.messageUsCard.cardAltName}
-					cardHeading={content.messageUsCard.cardHeading}
-				>
-					<ul class="typography-body-md grid gap-8 text-[var(--form-text-secondary)]" slot="list">
-						<li>
-							{content.messageUsCard.para}
-						</li>
+			<TwoColumn
+				cardImage={content.businessHealthCard.cardImage}
+				cardAltName={content.businessHealthCard.cardAltName}
+				cardHeading={content.businessHealthCard.cardHeading}
+				reverse={content.businessHealthCard.reverse}
+				isBorder
+			>
+				<ul class="typography-body-md grid gap-4 text-[var(--form-text-secondary)]" slot="list">
+					<li>
+						{content.businessHealthCard.para}
+					</li>
+					<li>
+						<a
+							class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
+							href={content.businessHealthCard.link}
+						>
+							{content.businessHealthCard.linkName}
+						</a>
+					</li>
+				</ul>
+			</TwoColumn>
 
-						<div class="w-auto">
-							<Button link="/contact" btnClass="btn-secondary" btnName="Message Us" />
-						</div>
-					</ul>
-				</TwoColumn>
-			</div>
+			<TwoColumn
+				cardImage={content.messageUsCard.cardImage}
+				cardAltName={content.messageUsCard.cardAltName}
+				cardHeading={content.messageUsCard.cardHeading}
+				isBorder
+			>
+				<ul class="typography-body-md grid gap-8 text-[var(--form-text-secondary)]" slot="list">
+					<li>
+						{content.messageUsCard.para}
+					</li>
+
+					<div class="w-auto">
+						<Button link="/contact" btnClass="btn-secondary" btnName="Message Us" />
+					</div>
+				</ul>
+			</TwoColumn>
+
 			<FeedbackCheck paddingClass="px-0" />
 		</div>
 
