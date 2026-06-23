@@ -16,7 +16,8 @@
 		Funnel,
 		Search,
 		ChevronLeft,
-		ChevronRight
+		ChevronRight,
+		X
 	} from '$lib/utils/iconRegistry.ts';
 
 	// Blog categories from Code 1 structure
@@ -439,11 +440,11 @@
 		</TwoColumnWithImage>
 	</div>
 
-	<div slot="secondary">
-		<HelpList contents={content.help} />
+	{#snippet secondary()}
+		<HelpList contents={content.help} isBorder />
 		<ThingsYouShould thinkKnow={content.thingsYouShould} disc="list-decimal" containerClass="px-0"
 		></ThingsYouShould>
-	</div>
+	{/snippet}
 
 	<!-- Mobile category sidebar -->
 	<div class="block w-full sm:hidden">
@@ -460,7 +461,7 @@
 					onclick={() => (mobileCategoryBar = false)}
 					aria-label="Close categories"
 				>
-					<i class="fa-solid fa-xmark"></i>
+					<X />
 				</button>
 			</div>
 
