@@ -272,6 +272,7 @@
 										cardAltName: realLifeScenarios.policeOfficerStory.cardAltName,
 										cardHeading: realLifeScenarios.policeOfficerStory.cardHeading
 									}}
+									isBorder
 								>
 									<div class="text-center">
 										<blockquote class="relative italic">
