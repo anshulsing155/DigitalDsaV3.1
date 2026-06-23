@@ -15,13 +15,13 @@
 			{
 				"btnName": "Book Appointment",
 				"btnLink": "/appointment",
-				 "btnClass": "btn-secondary w-full",
+				 "btnClass": "btn-secondary",
 				"animation": true
 			},
 			{
 				"btnName": "Compare loan offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full",
+				"btnClass": "btn-primary",
 				"animation": true
 			}
 		]
@@ -38,13 +38,13 @@
 			{
 				"btnName": "Book Appointment",
 				"btnLink": "/appointment",
-				 "btnClass": "btn-secondary w-full",
+				 "btnClass": "btn-secondary",
 				"animation": true
 			},
 			{
 				"btnName": "Compare loan offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			}
 		]
 	},
@@ -72,7 +72,7 @@
 				"para": "Generally lower than personal loans or credit card debts, making it a cost-effective borrowing option.",
 				"btnName": "Compare LAP Offers",
 				"btnLink": "/get-started/how-can-we-help",
-				"btnClass": "btn-primary w-full"
+				"btnClass": "btn-primary"
 			}
 		]
 	},
@@ -85,7 +85,7 @@
 	},
 	"eligibility": {
 		"contents": {
-			"heading": "Eligibility & Documents Required",
+			"heading": "Eligibility & Documents<br>Required",
 			"cardData": [
 				{
 					"id": "1",
@@ -133,11 +133,11 @@
 			"heading": "Unlock the Value of Your Property!",
 			"btnName": "Compare & Apply Now",
 			"btnLink": "/get-started/how-can-we-help",
-			"btnClass": "btn-primary w-full"
+			"btnClass": "btn-primary"
 		}
 	},
 	"things": {
-		"heading": "Important Considerations Before Applying",
+		"heading": "Important Considerations<br>Before Applying",
 		"cardData": [
 			{
 				"id": "1",
