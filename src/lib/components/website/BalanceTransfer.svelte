@@ -217,7 +217,7 @@
 
 				{#if content.how.exampleTableData}
 					<div class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]">
-						<h3 class="typography-body-lg mb-6 !font-semibold text-[var(--form-text)]">
+						<h3 class="typography-h2-md mb-6 !font-semibold text-[var(--form-text)]">
 							{content.how.tableHeading}
 						</h3>
 						{#each content.how.exampleTableData as table}
@@ -295,7 +295,7 @@
 
 							{#if content.how.exampleTableData}
 								<div class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] border-b border-[var(--form-border)]">
-									<h3 class="typography-body-lg mb-6 !font-semibold text-[var(--form-text)]">
+									<h3 class="typography-h2-md mb-6 !font-semibold text-[var(--form-text)]">
 										{content.how.tableHeading}
 									</h3>
 									{#each content.how.exampleTableData as table}

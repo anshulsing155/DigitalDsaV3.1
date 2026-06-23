@@ -13,6 +13,8 @@
 	import ThingsYouKnow from './ThingsYouKnow.svelte';
 	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/policeLawyersLoan.json';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+	// import { toggleDropdown } from '$lib/utils/toggleDropdown';
 
 	const {
 		seo,
@@ -116,40 +118,31 @@
 		<!-- desktop view -->
 		<div class="hidden lg:block">
 			<div>
-				<StickyNavbar
-					navList={stickyNavBar}
-					{activeSection}
-				></StickyNavbar>
+				<StickyNavbar navList={stickyNavBar} {activeSection}></StickyNavbar>
 			</div>
 
 			<div id="issue" data-section="issue" class="section">
-				<TwoColumnWithLeftHeading contents={whySayNo} />
+				<TwoColumnWithLeftHeading contents={whySayNo} isBorder />
 			</div>
 
 			<div id="compare" data-section="compare" class="section">
 				<div
-					class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+					class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
-					<div class="">
-						<h2 class="typography-h2 mb-[4rem] grid text-center text-text-main">
-							<p>Lending Risks</p>
-							<span class="underline decoration-primary decoration-4 underline-offset-4"
-								>The Breakdown</span
-							>
-						</h2>
-					</div>
-					<div class="">
-						{#each firstTableData as tableData}
-							<PaymentTable {tableData} />
-						{/each}
-					</div>
-					<p class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]">
+					<h2 class="typography-h2-md mb-6 text-center !font-semibold text-[var(--form-text)]">
+						<p>Lending Risks</p>
+						<span class="underline decoration-primary underline-offset-4">The Breakdown</span>
+					</h2>
+					{#each firstTableData as tableData}
+						<PaymentTable {tableData} />
+					{/each}
+					<p class="typography-body-md mt-4 text-center text-[var(--form-text-secondary)]">
 						{@html lendingRisksFunFact}
 					</p>
 				</div>
 
 				<div class="mt-[4rem]">
-					<p class="typography-h2 mb-[2rem] text-center text-text-main">
+					<p class="typography-h2-md mb-[2rem] text-center text-[var(--form-text)]">
 						{realLifeScenarios.heading}
 						<br /><span
 							class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]"
@@ -162,9 +155,12 @@
 							cardAltName: realLifeScenarios.policeOfficerStory.cardAltName,
 							cardHeading: realLifeScenarios.policeOfficerStory.cardHeading
 						}}
+						isBorder
 					>
 						<div class="mt-4 text-center">
-							<blockquote class="relative text-gray-800 italic">
+							<blockquote
+								class="typography-body-md relative text-[var(--form-text-secondary)] italic"
+							>
 								<span class="absolute -top-3 -left-12 font-serif text-4xl">“</span>
 								{realLifeScenarios.policeOfficerStory.quote}
 								<span class="absolute -right-4 -bottom-6 font-serif text-4xl">”</span>
@@ -179,16 +175,19 @@
 							cardHeading: realLifeScenarios.lawyerStory.cardHeading,
 							reverse: realLifeScenarios.lawyerStory.reverse
 						}}
+						isBorder
 					>
-						<div class="mt-4 text-center">
-							<blockquote class="relative text-gray-800 italic">
+						<div class="text-center">
+							<blockquote
+								class="typography-body-md relative text-[var(--form-text-secondary)] italic"
+							>
 								<span class="absolute -top-3 -left-8 font-serif text-4xl">“</span>
 								{realLifeScenarios.lawyerStory.quote}
 								<span class="absolute -right-2 -bottom-6 font-serif text-4xl">”</span>
 							</blockquote>
 							<p class="mt-10">
 								<a
-									class="underline underline-offset-4 hover:no-underline"
+									class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
 									href={realLifeScenarios.lawyerStory.linkUrl}
 									>{realLifeScenarios.lawyerStory.linkText}</a
 								>
@@ -199,7 +198,7 @@
 			</div>
 
 			<div id="solutions" class="section" data-section="solutions">
-				<TwoColumnWithLeftHeading contents={improveChances} />
+				<TwoColumnWithLeftHeading contents={improveChances} isBorder />
 			</div>
 
 			<div data-section="resources" id="resources" class="section">
@@ -211,51 +210,56 @@
 		<div class="block lg:hidden">
 			{#each navBarMedium as list, index}
 				<details
-					class="dropdown bg-darkColor col-span-3 text-white {index < navBarMedium.length - 1
-						? 'border-b'
+					class="ropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					navBarMedium.length - 1
+						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="col-span-3 list-none px-[1rem] py-[1.5rem]"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-navFont">{list}</h2>
-							<div class="icon-container typography-h3 justify-self-end">
-								<span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index === 0}
-						<div id="issue" data-section="issue" class="section bg-[var(--landing-bg)] text-[var(--landing-text)]">
+						<div
+							id="issue"
+							data-section="issue"
+							class="section bg-[var(--landing-bg)] text-[var(--form-text)]"
+						>
 							<TwoColumnWithLeftHeading contents={whySayNo} />
 						</div>
 					{:else if index === 1}
-						<div id="compare" data-section="compare" class="section bg-[var(--landing-bg)] text-[var(--landing-text)]">
+						<div
+							id="compare"
+							data-section="compare"
+							class="section bg-[var(--landing-bg)] text-[var(--form-text)]"
+						>
 							<div
-								class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+								class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 							>
-								<div class="">
-									<h2 class="typography-h2 mb-[4rem] grid text-center text-text-main">
-										<p>Lending Risks</p>
-										<span class="underline decoration-primary decoration-4 underline-offset-4"
-											>The Breakdown</span
-										>
-									</h2>
-								</div>
-								<div class="">
-									{#each firstTableData as tableData}
-										<PaymentTable {tableData} />
-									{/each}
-								</div>
+								<h2
+									class="typography-h2-md mb-6 text-center !font-semibold text-[var(--form-text)]"
+								>
+									<p>Lending Risks</p>
+									<span class="underline decoration-primary underline-offset-4">The Breakdown</span>
+								</h2>
+								{#each firstTableData as tableData}
+									<PaymentTable {tableData} />
+								{/each}
 								<p class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]">
 									{@html lendingRisksFunFact}
 								</p>
 							</div>
 
 							<div class="mt-[4rem]">
-								<p class="typography-h2 mb-[2rem] text-center text-text-main">
+								<p class="typography-h2-md mb-[2rem] text-center text-[var(--form-text)]">
 									{realLifeScenarios.heading}
 									<br /><span
 										class="typography-body-md mt-14 text-center text-[var(--form-text-secondary)]"
@@ -269,8 +273,8 @@
 										cardHeading: realLifeScenarios.policeOfficerStory.cardHeading
 									}}
 								>
-									<div class="mt-4 md:text-center">
-										<blockquote class="relative text-gray-800 italic">
+									<div class="text-center">
+										<blockquote class="relative italic">
 											{realLifeScenarios.policeOfficerStory.quote}
 										</blockquote>
 									</div>
@@ -284,14 +288,14 @@
 										reverse: realLifeScenarios.lawyerStory.reverse
 									}}
 								>
-									<div class="mt-4 md:text-center">
-										<blockquote class="relative text-gray-800 italic">
+									<div class="text-center">
+										<blockquote class="relative italic">
 											{realLifeScenarios.lawyerStory.quote}
 										</blockquote>
 										<p class="mt-10">
 											<a
 												href={realLifeScenarios.lawyerStory.linkUrl}
-												class="underline underline-offset-4"
+												class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
 												>{realLifeScenarios.lawyerStory.linkText}</a
 											>
 										</p>
@@ -300,11 +304,19 @@
 							</div>
 						</div>
 					{:else if index === 2}
-						<div id="solutions" class="section bg-[var(--landing-bg)] text-[var(--landing-text)]" data-section="solutions">
+						<div
+							id="solutions"
+							class="section bg-[var(--landing-bg)] text-[var(--landing-text)]"
+							data-section="solutions"
+						>
 							<TwoColumnWithLeftHeading contents={improveChances} />
 						</div>
 					{:else if index === 3}
-						<div data-section="resources" id="resources" class="section bg-[var(--landing-bg)] text-[var(--landing-text)]">
+						<div
+							data-section="resources"
+							id="resources"
+							class="section bg-[var(--landing-bg)] text-[var(--landing-text)]"
+						>
 							<AboveTitleWithBlackCard contents={toolsAndCalculators} />
 						</div>
 					{/if}
@@ -318,18 +330,18 @@
 			</p>
 			<Button link="/contact" btnClass="btn-secondary w-full" btnName="Message us" />
 		</TwoColumnWithImage>
-		<div slot="secondary" class="px-2">
-			<HelpList contents={helpList} />
+		{#snippet secondary()}
+			<HelpList contents={helpList} isBorder />
 
 			<ThingsYouKnow contents={{ heading: `Things you should know` }}>
 				<ul class="flex list-decimal flex-col gap-4 px-2 pl-4">
 					{#each thingsYouShouldKnow.points as point}
 						<li>{point}</li>
-					{"\n"}
+						{'\n'}
 					{/each}
 				</ul>
 			</ThingsYouKnow>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 
