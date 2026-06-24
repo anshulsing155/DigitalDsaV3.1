@@ -21,7 +21,8 @@
       },
       {
         "btnName": "Compare Loan Offers, Securely",
-        "btnLink": "/get-started/how-can-we-help"
+        "btnLink": "/get-started/how-can-we-help",
+        "btnClass": "btn-secondary w-full"
       }
     ]
   },
@@ -48,7 +49,8 @@
     "actionBtns": [
       {
         "btnName": "Book appointment",
-        "btnLink": "/appointment"
+        "btnLink": "/appointment",
+         "btnClass": "btn-secondary w-full"
       },
       {
         "btnName": "Compare Loan Offers, Securely",

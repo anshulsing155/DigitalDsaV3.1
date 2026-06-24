@@ -13,11 +13,13 @@
 	import PaymentTable from './PaymentTable.svelte';
 	import ButtonBanner from './ButtonBanner.svelte';
 	import { applicationData } from '$lib/stores/stores';
-	import { ChevronDown } from '$lib/utils/iconRegistry';
+	
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
 	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/plotLoanOnly.json';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	interface ButtonProps {
 		btnName: string;
@@ -129,50 +131,7 @@
 		};
 	});
 
-	const toggleDropdown = (event: Event, index: number) => {
-		event.preventDefault();
-
-		const summaryElement = event.currentTarget as HTMLElement;
-		const icon = summaryElement.querySelector('.faq-icon') as HTMLElement;
-		const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
-
-		// Close all other dropdowns
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon') as HTMLElement;
-
-			if (idx !== index) {
-				(otherDetails as HTMLDetailsElement).removeAttribute('open');
-
-				if (otherIcon) {
-					otherIcon.style.transform = 'rotate(0deg)';
-				}
-			}
-		});
-
-		// Toggle current dropdown
-		const isOpen = detailsElement.hasAttribute('open');
-
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-
-			if (icon) {
-				icon.style.transform = 'rotate(0deg)';
-			}
-		} else {
-			detailsElement.setAttribute('open', '');
-
-			if (icon) {
-				icon.style.transform = 'rotate(180deg)';
-			}
-		}
-
-		setTimeout(() => {
-			detailsElement.scrollIntoView({
-				behavior: 'smooth',
-				block: 'start'
-			});
-		}, 100);
-	};
+	
 </script>
 
 <Seo

@@ -23,7 +23,7 @@
         "targetId": "protecting"
       },
       {
-        "name": "More information",
+        "name": "More information", 
         "targetId": "information"
       }
     ],
@@ -31,7 +31,7 @@
       {
         "btnName": "Book appointment",
         "btnLink": "/appointment",
-        "btnColor": "#ffcc00"
+         "btnClass": "btn-primary w-full"
       }
     ]
   },

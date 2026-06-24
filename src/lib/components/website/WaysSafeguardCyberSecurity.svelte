@@ -11,6 +11,8 @@
 	import HelpList from './HelpList.svelte';
 	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/waysSafeguardCyberSecurity.json';
+ 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	const {
 		seo,
@@ -27,40 +29,7 @@
 		thingsYouShouldKnow
 	} = content;
 
-	const toggleDropdown = (event, index) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			icon.classList.remove('fa-angle-up');
-			icon.classList.add('fa-angle-down');
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			icon.classList.remove('fa-angle-down');
-			icon.classList.add('fa-angle-up');
-		}
-		setTimeout(() => {
-			detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}, 100);
-	};
+	
 
 	let activeSection = $state('');
 
@@ -140,33 +109,35 @@
 					thinkKnow={telecomOptions}
 					sectionBorder="true"
 				>
-					<div slot="list">
+					{#snippet list()}
 						<ul class="list-decimal space-y-5 pl-5">
-							{#each callerIdServices as item}
-								<li class="text-miniSubHead space-y-2 font-semibold">
-									<h3>{item.heading}</h3>
-									{#each Object.entries(item) as [key, value], i}
-										{#if key != 'heading'}
-											<ul
-												class="typography-body-md list-disc space-y-3 pl-4 text-[var(--form-text-secondary)]"
-											>
-												<li>
-													<span class="font-semibold">
-														{key} :
-													</span>{value}
-												</li>
-											</ul>
-										{/if}
-									{/each}
-								</li>
-							{/each}
-						</ul>
-					</div>
+		{#each callerIdServices as item}
+			<li class="text-miniSubHead space-y-2 font-semibold">
+				<h3>{item.heading}</h3>
+
+				<ul
+					class="typography-body-md list-disc space-y-3 pl-4 text-[var(--form-text-secondary)]"
+				>
+					{#each Object.entries(item) as [key, value]}
+						{#if key !== 'heading'}
+							<li>
+								<span class="font-semibold">
+									{key}:
+								</span>
+								{value}
+							</li>
+						{/if}
+					{/each}
+				</ul>
+			</li>
+		{/each}
+	</ul>
+					{/snippet}
 				</ThingsYouShould>
 			</div>
 
 			<div id="password" data-section="password" class="">
-				<ThreeColumWithLeftHeading contents={passwordSecuring} />
+				<ThreeColumWithLeftHeading contents={passwordSecuring} isBorder />
 			</div>
 		</div>
 
@@ -174,44 +145,41 @@
 		<div class="block lg:hidden">
 			{#each navBarMedium as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < navBarMedium.length - 1
+					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)]  {index < navBarMedium.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem]"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
 							<h2 class="typography-label">{list}</h2>
-							<div class="icon-container typography-h3 justify-self-end">
-								<span
-									><i
-										class="fa-solid fa-angle-down faq-icon text-[var(--form-text)] transition-transform duration-300"
-									></i></span
-								>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index == 0}
-						<div class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]" id="MFA">
+						<div class="bg-[var(--landing-bg)]  pb-4 text-[var(--form-text)]" id="MFA">
 							<ThingsYouShould thinkKnow={mfa} />
 						</div>
 					{:else if index == 1}
 						<div
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)]  pb-4 text-[var(--form-text)]"
 							id="caller"
 						>
 							<ThingsYouShould thinkKnow={callerId}></ThingsYouShould>
 						</div>
 					{:else if index == 2}
 						<div
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)]  pb-4 text-[var(--form-text)]"
 							id="telecomCompanies"
 						>
 							<ThingsYouShould thinkKnow={telecomOptions}>
-								<div slot="list">
+								
+								{#snippet list()}
 									<ul class="list-decimal space-y-5 pl-5">
 										{#each callerIdServices as item}
 											<li class="text-miniSubHead space-y-2 font-semibold">
@@ -232,15 +200,16 @@
 											</li>
 										{/each}
 									</ul>
-								</div>
+									{/snippet}
+								
 							</ThingsYouShould>
 						</div>
 					{:else if index == 3}
 						<div
-							class="bg-[var(--landing-bg)] px-[0.5rem] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)]  pb-4 text-[var(--form-text)]"
 							id="password-securing"
 						>
-							<ThreeColumWithLeftHeading contents={passwordSecuring} />
+							<ThreeColumWithLeftHeading contents={passwordSecuring} isBorder />
 						</div>
 					{/if}
 				</details>
@@ -259,14 +228,14 @@
 			</div>
 		</TwoColumnWithImage>
 
-		<div slot="secondary">
-			<HelpList contents={helpList} />
+		{#snippet secondary()}
+			<HelpList contents={helpList} isBorder />
 			<ThingsYouShould
 				thinkKnow={thingsYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			></ThingsYouShould>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>
 
