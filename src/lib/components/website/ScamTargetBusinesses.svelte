@@ -119,7 +119,7 @@
 			</div>
 
 			<div data-section="remote" id="remote" class="section">
-				<div class="px-[4rem]">
+				<div >
 					<TwoColumn {...remoteAccess} isBorder>
 						<p class="typography-body-md text-[var(--form-text-secondary)]">
 							Remote access scams begin as a phone impersonation scam, then the scammer gains access
@@ -133,7 +133,7 @@
 						</p>
 
 						<div class="space-y-3">
-							<h2 class="font-semibold">How It Works</h2>
+							<h2 class="!font-semibold text-[var(--form-text-secondary)]">How It Works</h2>
 							<ul class="typography-body-md space-y-3 text-[var(--form-text-secondary)]">
 								<li>
 									🚫 Scammers contact victims via <span class="font-semibold">

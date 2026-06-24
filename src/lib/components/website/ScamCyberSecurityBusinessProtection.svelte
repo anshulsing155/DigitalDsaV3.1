@@ -15,6 +15,7 @@
   import content from "$lib/data/website/cyberSecurityScams.json";
   import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
+  import TwoColumn from "./TwoColumn.svelte";
 
 
  
@@ -140,23 +141,29 @@
 
       <div id="protectbusiness" data-section="protectbusiness">
         <div>
-          <TwoColumnWithImage
-            contents={content.messageUs}
+          <TwoColumn
+
+            cardHeading={content.protectYourBusiness.cardHeading}
+            cardImage={content.protectYourBusiness.cardImage}
+						cardAltName={content.protectYourBusiness.cardAltName}
+						sourceName={content.protectYourBusiness.sourceName}
             isBorder
+            reverse ={true}
           >
+          <h2 class="typography-body-md text-[var(--form-text)] !font-semibold">
+            {content.protectYourBusiness.subHeading}
+            </h2>
           
             <p class="typography-body-md text-[var(--form-text-secondary)]">
-              Cybercriminals may try and scam your business through email, text
-              messages, phone calls and social media. They will often pretend to
-              be a person or organisation you trust. We will never ask you to
-              transfer funds, share your screen or reveal your passwords.
-            </p>
+							{content.protectYourBusiness.para}
+						</p>
             <Button
               btnName="Scams that target businesses"
               link="/cyber-security-against-scams/scam-target-business"
               btnClass= "btn-primary w-full"
             />
-          </TwoColumnWithImage>
+          </TwoColumn
+          >
         </div>
         <div
           class="pt-[4rem] pb-[8rem] border-b border-[var(--form-border)] px-[0.5rem] lg:px-[4rem] space-y-6"
@@ -278,26 +285,29 @@
           {:else if index == 1}
             <div id="protectbusiness" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
               <div>
-                <TwoColumnWithImage
-                  contents={content.messageUs}
-                  isBorder
-                >
-                  <p class="font-semibold typography-body-md">
-                    Stay one step ahead of scams
-                  </p>
-                  <p>
-                    Cybercriminals may try and scam your business through email,
-                    text messages, phone calls and social media. They will often
-                    pretend to be a person or organisation you trust. We will
-                    never ask you to transfer funds, share your screen or reveal
-                    your passwords.
-                  </p>
-                  <Button
-                    btnName="Scams that target businesses"
-                    link="/cyber-security-against-scams/scam-target-business",
-                    btnClass="btn-primary w-full"
-                  />
-                </TwoColumnWithImage>
+               <TwoColumn
+
+            cardHeading={content.protectYourBusiness.cardHeading}
+            cardImage={content.protectYourBusiness.cardImage}
+						cardAltName={content.protectYourBusiness.cardAltName}
+						sourceName={content.protectYourBusiness.sourceName}
+            isBorder
+            reverse ={true}
+          >
+          <h2 class="typography-body-md text-[var(--form-text)] !font-semibold">
+            {content.protectYourBusiness.subHeading}
+            </h2>
+          
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
+							{content.protectYourBusiness.para}
+						</p>
+            <Button
+              btnName="Scams that target businesses"
+              link="/cyber-security-against-scams/scam-target-business"
+              btnClass= "btn-primary w-full"
+            />
+          </TwoColumn
+          >
               </div>
               <div
                 class="py-[4rem] px-[0.5rem] space-y-6"

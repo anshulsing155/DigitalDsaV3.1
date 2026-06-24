@@ -125,6 +125,14 @@
       "link": "https://isea.gov.in/ "
     }
   ],
+  "protectYourBusiness" :{
+ "cardImage": "/images/business-man-working-on-laptop.jpg",
+ "cardAltName": "photo of laptop screen showing contact details of DigitalDSA",
+    "sourceName": "DigitalDSA",
+ "cardHeading": "Protect your business",
+ "para": "Cybercriminals may try and scam your business through email, text messages, phone calls and social media. They will often pretend to be a person or organisation you trust. We will never ask you to transfer funds, share your screen or reveal your passwords.",
+  "subHeading" :"Stay one step ahead of scams"
+  },
   "messageUs": {
     "cardImage": "/images/message.jpg",
     "cardAltName": "photo of laptop screen showing contact details of DigitalDSA",
@@ -132,6 +140,7 @@
     "originalSource": "www.DigitalDSA.com",
     "cardHeading": "Message us 24/7",
     "para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly."
+   
   },
   "help": {
     "heading": "We're here to help",
