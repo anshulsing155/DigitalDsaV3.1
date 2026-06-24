@@ -17,7 +17,7 @@
       "heading": "Review Your Budget and Expenses",
       "subPara": [
         "Start by taking a close look at your current budget and monthly expenses. List all your income and spending to get a clear picture of where your money is going. This will help you identify areas where you can cut back or make adjustments.",
-        "<span class=\"typography-h3 font-semibold bg-primary p-[.5rem]\">How it impacts budgeting: </span> "
+        "<span class=\"typography-body-md text-[var(--form-text)] !font-semibold bg-ddsa-gradient-primary p-2\">How it impacts budgeting: </span> "
       ],
       "paraGraph": [
         "Are you spending more on non-essential items like dining out, entertainment, or shopping?",
@@ -42,7 +42,7 @@
       "heading": "Prioritize Debt Repayment",
       "subPara": [
         "After cutting back on non-essential expenses, allocate the money you’ve saved to your debt repayment. The more money you can put towards paying down your debts, the faster you’ll become debt-free.",
-        "<span class=\"typography-h3 font-semibold bg-primary p-[.5rem]\">How it impacts budgeting: </span> "
+        "<span class=\"typography-body-md text-[var(--form-text)] !font-semibold bg-ddsa-gradient-primary p-2\">How it impacts budgeting: </span> "
       ],
       "paraGraph": [
         "<span class=\"font-semibold\">Start with High-Interest Debt:</span> Use the extra funds to focus on paying off high-interest debts first. This will help you save money on interest in the long run.",
@@ -65,7 +65,7 @@
       "heading": "Use Budgeting Tools to Help",
       "subPara": [
         "Using budgeting tools can make managing your finances and tracking your expenses much easier. If you’re not sure where to start, tools like our Affordability Calculator or Strategic Planner can help you create a budget tailored to your financial goals.",
-        "<span class=\"typography-h3 font-semibold\">Tools to Help You Adjust Your Budget: </span> ",
+        "<span class=\"typography-body-md !font-semibold\">Tools to Help You Adjust Your Budget: </span> ",
         "If you’re looking for tools to assist you in budgeting and tracking your expenses, here are some options:"
       ],
       "paraGraph": [
