@@ -82,7 +82,7 @@
 								</p>
 
 								<div class="bg-[var(--ddsa-gray-50)] p-2 dark:bg-[var(--ddsa-gray-700)]">
-									<p class="typography-body-md text-[var(--form-text-secondary)]">
+									<p class="typography-body-sm text-[var(--form-text-secondary)]">
 										<span class="font-semibold text-primary">Important:</span>
 										{factor.importance}
 									</p>
