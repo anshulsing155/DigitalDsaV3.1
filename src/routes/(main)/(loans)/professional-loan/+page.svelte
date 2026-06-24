@@ -26,25 +26,26 @@
 <section class="content">
 	<NewPageLayout pageData={content.pageData}>
 		<Sublist subList={content.subList} />
-		<div class="px-[0.5rem] lg:px-16">
-			<div id="type" class="border-b border-[var(--form-border)]">
-				<WhyChoose facilities={content.professionalLoanType} />
+		<div class="lg:px-16">
+			<div id="type">
+				<WhyChoose facilities={content.professionalLoanType} paddingClass="lg:px-0" isBorder />
 			</div>
-			<div class="border-b border-[var(--form-border)]" id="balanceTransfer">
-				<WhyChoose facilities={content.balanceTransferTopup} />
+			<div id="balanceTransfer">
+				<WhyChoose facilities={content.balanceTransferTopup} paddingClass="lg:px-0" isBorder />
 			</div>
-			<ButtonBanner contents={content.balanceTransferBanner} />
+			<ButtonBanner contents={content.balanceTransferBanner} isBorder />
 
 			<div class="" id="calculator">
-				<ThreeColumWithLeftHeading contents={content.calculators} paddingClass="px-0" />
+				<ThreeColumWithLeftHeading contents={content.calculators} paddingClass="lg:px-0" isBorder />
 			</div>
 
-			<div id="repayment" class="border-b border-[var(--form-border)]">
+			<div id="repayment">
 				<TwoColumn
 					cardImage={content.repaymentsCard.cardImage}
 					cardAltName={content.repaymentsCard.cardAltName}
 					cardHeading={content.repaymentsCard.cardHeading}
 					reverse={content.repaymentsCard.reverse}
+					isBorder
 				>
 					<div class="flex flex-col gap-2">
 						<p class="typography-body-md text-[var(--form-text-secondary)]">
@@ -68,11 +69,15 @@
 				</TwoColumn>
 			</div>
 
-			<ThreeColumWithLeftHeading contents={content.wealthCalculators} paddingClass="px-0" />
+			<ThreeColumWithLeftHeading
+				contents={content.wealthCalculators}
+				paddingClass="lg:px-0"
+				isBorder
+			/>
 
 			<div
 				id="securedUnsecured"
-				class="w-full border-b border-[var(--form-border)] py-8 text-[var(--form-text)] lg:py-0 lg:pt-16 lg:pb-32"
+				class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-8 text-[var(--form-text)] lg:px-0 lg:py-0 lg:pt-16 lg:pb-32"
 			>
 				<div class="">
 					<h2 class="typography-h2 py-5 text-center text-[var(--form-text)]">
@@ -88,20 +93,25 @@
 			</div>
 
 			<div id="eligibility">
-				<ThreeColumWithLeftHeading contents={content.eligibilitySection} paddingClass="px-0" />
+				<ThreeColumWithLeftHeading
+					contents={content.eligibilitySection}
+					paddingClass="lg:px-0"
+					isBorder
+				/>
 			</div>
 
-			<div class="border-b border-[var(--form-border)]">
-				<WhyChoose facilities={content.whyChooseUs} />
+			<div>
+				<WhyChoose facilities={content.whyChooseUs} paddingClass="lg:px-0" isBorder />
 			</div>
 
-			<ThreeColumWithLeftHeading contents={content.exploreBanner} paddingClass="px-0" />
+			<ThreeColumWithLeftHeading contents={content.exploreBanner} paddingClass="lg:px-0" isBorder />
 
-			<div class="border-b border-[var(--form-border)]">
+			<div>
 				<TwoColumn
 					cardImage={content.messageCard.cardImage}
 					cardAltName={content.messageCard.cardAltName}
 					cardHeading={content.messageCard.cardHeading}
+					isBorder
 				>
 					<ul class="typography-body-md grid gap-8 text-[var(--form-text-secondary)]" slot="list">
 						<li>
@@ -120,13 +130,13 @@
 			</div>
 		</div>
 
-		<div slot="secondary">
+		{#snippet secondary()}
 			<HelpList contents={content.help} />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thingsYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			></ThingsYouShould>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>

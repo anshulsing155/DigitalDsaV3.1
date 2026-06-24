@@ -184,7 +184,7 @@
 				You’ll need Digital DSA app notifications turned on so you know when you’ve received a reply.
 			</p>
 			<div class="w-auto">
-				<Button link="/contact" btnBorder="#4F4C4D" btnName="Message us" />
+				<Button link="/contact" btnClass="btn-secondary" btnName="Message us" />
 			</div>
 		</TwoColumnWithImage>
 
