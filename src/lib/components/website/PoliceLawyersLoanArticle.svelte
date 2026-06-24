@@ -14,7 +14,7 @@
 	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/policeLawyersLoan.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
-	// import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 
 	const {
 		seo,
@@ -33,44 +33,6 @@
 	} = content;
 
 	let activeSection = $state('');
-
-	const toggleDropdown = (event, index) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			icon.classList.remove('fa-angle-up');
-			icon.classList.add('fa-angle-down');
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			icon.classList.remove('fa-angle-down');
-			icon.classList.add('fa-angle-up');
-		}
-		setTimeout(() => {
-			detailsElement.scrollIntoView({
-				behavior: 'smooth',
-				block: 'start'
-			});
-		}, 100);
-	};
 
 	const initializeActiveSection = () => {
 		const firstSection = document.querySelector('[data-section]');
@@ -210,7 +172,7 @@
 		<div class="block lg:hidden">
 			{#each navBarMedium as list, index}
 				<details
-					class="ropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					navBarMedium.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
