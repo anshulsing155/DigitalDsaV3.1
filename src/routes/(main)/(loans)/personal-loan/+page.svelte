@@ -12,7 +12,7 @@
 	import ButtonBanner from '$lib/components/website/ButtonBanner.svelte';
 	import PaymentTable from '$lib/components/website/PaymentTable.svelte';
 	import content from '$lib/data/website/personalLoan.json';
-	import HelpList from '$lib/components/HelpList.svelte';
+	import HelpList from '$lib/components/website/HelpList.svelte';
 	import FeedbackCheck from '$lib/components/website/FeedbackCheck.svelte';
 </script>
 
@@ -81,7 +81,7 @@
 
 			<div
 				id="securedUnsecured"
-				class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+				class="border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-0 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 			>
 				<h2
 					class="typography-h2-md mb-6 text-center !font-semibold text-[var(--form-text)] underline decoration-primary underline-offset-4"
@@ -126,13 +126,13 @@
 			<FeedbackCheck paddingClass="px-0" />
 		</div>
 
-		<div slot="secondary">
-			<HelpList contents={content.help} />
+		{#snippet secondary()}
+			<HelpList contents={content.help} isBorder />
 			<ThingsYouShould
 				thinkKnow={content.common_components.thingsYouShouldKnow}
 				disc="list-decimal"
 				containerClass="px-0"
 			></ThingsYouShould>
-		</div>
+		{/snippet}
 	</NewPageLayout>
 </section>

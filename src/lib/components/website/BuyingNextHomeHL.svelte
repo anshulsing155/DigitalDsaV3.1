@@ -146,7 +146,7 @@
 
 			<section id="whychoose" data-section="whychoose" class="section">
 				<div
-					class="border-b border-[var(--form-border)] px-[0.5rem] px-[1rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
+					class="border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 				>
 					<h2 class="typography-h2-md mb-6 !font-semibold text-[var(--form-text)]">
 						{content.whychoose.heading}
