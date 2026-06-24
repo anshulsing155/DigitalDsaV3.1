@@ -99,7 +99,7 @@
                     {step.id}
                   </div>
                   <div class="flex flex-col gap-4 col-span-5 md:col-span-9">
-                    <h2 class="typography-h3 text-[var(--form-text)]">{step.title}</h2>
+                    <h2 class="typography-body-md text-[var(--form-text)]">{step.title}</h2>
                     <p class="typography-body-md text-[var(--form-text-secondary)]">{step.desc}</p>
                   </div>
                 </div>
@@ -146,7 +146,7 @@
                           {step.id}
                         </div>
                         <div class="flex flex-col gap-4 col-span-5 md:col-span-9">
-                          <h2 class="typography-h3 text-[var(--form-text)]">
+                          <h2 class="typography-body-md text-[var(--form-text)]">
                             {step.title}
                           </h2>
                           <p class="typography-body-md text-[var(--form-text-secondary)]">

@@ -56,7 +56,7 @@
 		<div class={`col-span-12 text-[var(--form-text-secondary)] lg:col-span-8`}>
 			<div class="flex flex-col gap-6">
 				{#if thinkKnow.subHeading}
-					<h3 class="typography-body-lg font-semibold text-[var(--form-text)]">
+					<h3 class="typography-body-lg !font-semibold !text-[var(--form-text)]">
 						{@html thinkKnow.subHeading}
 					</h3>
 				{/if}
