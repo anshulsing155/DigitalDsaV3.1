@@ -337,21 +337,21 @@
 					{#if index == 0}
 						<div
 							id="started"
-							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 						>
 							<Journey journey={content.journey} />
 						</div>
 					{:else if index == 1}
-						<div id="choose" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+						<div id="choose" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<WhyChoose facilities={content.facilities} gridCol={4} />
 						</div>
 					{:else if index == 2}
-						<div id="loanOptions" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+						<div id="loanOptions" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<WhyChoose facilities={content.homeLoanOptions} gridCol={3} />
 						</div>
 					{:else if index == 3}
 						<div
-							class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]"
+							class="bg-[var(--landing-bg)] text-[var(--form-text)]"
 							id="whatDocs"
 						>
 							<TwoColumnWithImage
@@ -491,7 +491,7 @@
 							</div>
 						</div>
 					{:else if index == 6}
-						<div id="support" class="bg-[var(--landing-bg)] pb-4 text-[var(--form-text)]">
+						<div id="support" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
 							<AccordionWithLeftHeading contents={content.frequentlyAskedQuestions} />
 							<Guides guide={content.getStart} isBorder />
 						</div>
