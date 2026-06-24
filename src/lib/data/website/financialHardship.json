@@ -14,7 +14,7 @@
       {
         "btnName": "Contact us online",
         "btnLink": "/appointment",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary"
       }
     ],
     "para": "At Digital DSA, we understand that unexpected circumstances can create challenges in managing your finances. We're here to help you explore alternative options to ease your financial burden."
@@ -34,7 +34,7 @@
       {
         "btnName": "Contact us online",
         "btnLink": "/appointment",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary"
       }
     ]
   },
@@ -47,12 +47,12 @@
   ],
   "getHelp": {
     "heading": "When to Get Help",
-    "para": "If you're worried about missing a payment or struggling to manage your ongoing repayments, <a href=\"/contact\" class=\"underline underline-offset-4 hover:no-underline\"> reach out to us</a> as soon as possible. Early communication can help reduce stress, and we can work together to find the right solutions for your situation.",
+    "para": "If you're worried about missing a payment or struggling to manage your ongoing repayments, <a href=\"/contact\" class=\"underline underline-offset-4 hover:no-underline text-[var(--ddsa-info-text)]\"> reach out to us</a> as soon as possible. Early communication can help reduce stress, and we can work together to find the right solutions for your situation.",
     "xlGridCol": 3,
     "cards": [
       {
         "heading": "Reach out for support early",
-        "para": "Unexpected increases in daily expenses, such as <a href=\"/finance-support/cost-of-living\" class=\"underline underline-offset-4 hover:no-underline\">cost-of-living pressures</a>, may require you to adjust your budget. </br> </br>\n       If you're struggling with <span class=\"font-semibold\">EMI payments</span> or concerned about <span class=\"font-semibold\"> managing running loan,</span> don’t wait—reach out to us as soon as possible. </br> </br> \n        "
+        "para": "Unexpected increases in daily expenses, such as <a href=\"/finance-support/cost-of-living\" class=\"underline underline-offset-4 hover:no-underline text-[var(--ddsa-info-text)]\">cost-of-living pressures</a>, may require you to adjust your budget. </br> </br>\n       If you're struggling with <span class=\"font-semibold\">EMI payments</span> or concerned about <span class=\"font-semibold\"> managing running loan,</span> don’t wait—reach out to us as soon as possible. </br> </br> \n        "
       },
       {
         "heading": "Why you may need financial support",
@@ -69,7 +69,7 @@
     "cardData": [
       {
         "title": "What is a financial hardship arrangement?",
-        "para": "<div class=\"flex flex-col gap-4\">\n              <p>If you’re finding it difficult to keep up with repayments (loan EMIs, credit card bills), a \"financial hardship arrangement\" can offer support during challenging times</p>\n              <div>\n                <p> We can work with you to create an alternative payment plan, such as:</p>\n\n                <ul class=\"list-disc list-inside\"><li>Temporarily deferring your repayments.</li>\n                  <li>Allowing reduced payments for a set period.</li></ul>\n                </div>\n                <p>This arrangement can help prevent you from falling too far behind on your credit card or loan repayments.</p>\n              <p>You can also checkout our <a href=\"/planners/flexible-emi-planner\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline underline-offset-4 hover:no-underline text-linkColor\">Flexible EMI Planner</a> for better understanding and planning.</p>\n            </div>"
+        "para": "<div class=\"flex flex-col gap-4\">\n              <p>If you’re finding it difficult to keep up with repayments (loan EMIs, credit card bills), a \"financial hardship arrangement\" can offer support during challenging times</p>\n              <div>\n                <p> We can work with you to create an alternative payment plan, such as:</p>\n\n                <ul class=\"list-disc list-inside\"><li>Temporarily deferring your repayments.</li>\n                  <li>Allowing reduced payments for a set period.</li></ul>\n                </div>\n                <p>This arrangement can help prevent you from falling too far behind on your credit card or loan repayments.</p>\n              <p>You can also checkout our <a href=\"/planners/flexible-emi-planner\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline underline-offset-4 hover:no-underline text-[var(--ddsa-info-text)]\">Flexible EMI Planner</a> for better understanding and planning.</p>\n            </div>"
       },
       {
         "title": "Can a hardship arrangement impact your credit score?",

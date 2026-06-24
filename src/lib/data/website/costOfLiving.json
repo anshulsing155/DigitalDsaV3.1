@@ -59,14 +59,14 @@
       {
         "id": 1,
         "title": "Housing (Rent & EMI)​",
-        "desc": "Housing costs take up a major chunk of your budget. In metro cities, a 1BHK can cost ₹15,000 - ₹50,000, while smaller cities offer lower rents at ₹8,000 - ₹20,000. <br> Home loan EMIs range from ₹30,000 - ₹80,000, making financial planning essential. Use <a  href='/calculators/emi-calculator' class=\"underline underline-offset-4 text-linkColor\">our Home Loan EMI Calculator </a>  to estimate and manage your payments.",
+        "desc": "Housing costs take up a major chunk of your budget. In metro cities, a 1BHK can cost ₹15,000 - ₹50,000, while smaller cities offer lower rents at ₹8,000 - ₹20,000. <br> Home loan EMIs range from ₹30,000 - ₹80,000, making financial planning essential. Use <a  href='/calculators/emi-calculator' class=\"underline underline-offset-4 text-[var(--ddsa-info-text)]\">our Home Loan EMI Calculator </a>  to estimate and manage your payments.",
         "icon": "/icons/ownership.svg",
         "altName": "home-icon"
       },
       {
         "id": 2,
         "title": "Food & Groceries​",
-        "desc": "Food expenses can quickly add up. A family of four spends ₹5,000 - ₹15,000 monthly on groceries, and inflation makes essentials pricier. <br> Frequent dining out further increases costs. Track your food budget with <a href=\"/planners/budget-planner\" class=\"underline underline-offset-4 hover-no:underline\">our Budget Planner </a>   and make informed spending choices.",
+        "desc": "Food expenses can quickly add up. A family of four spends ₹5,000 - ₹15,000 monthly on groceries, and inflation makes essentials pricier. <br> Frequent dining out further increases costs. Track your food budget with <a href=\"/planners/budget-planner\" class=\"underline underline-offset-4 hover-no:underline text-[var(--ddsa-info-text)]\">our Budget Planner </a>   and make informed spending choices.",
         "icon": "/icons/apply-pen.svg",
         "altName": "apply-icon"
       },
@@ -87,7 +87,7 @@
       {
         "id": 5,
         "title": "Education & Childcare",
-        "desc": "Education is a major investment. Private school fees range from ₹50,000 - ₹2L per year, and higher education can cost ₹10L - ₹25L. Coaching and tuition add to the burden. <br> Start building a secure financial future with smart savings—explore <a href=\"/money-map/how-long-will-your-savings-support-you\" class=\"underline underline-offset-4 hover:no-underline\">our Investment Plans </a>  to grow your funds steadily.",
+        "desc": "Education is a major investment. Private school fees range from ₹50,000 - ₹2L per year, and higher education can cost ₹10L - ₹25L. Coaching and tuition add to the burden. <br> Start building a secure financial future with smart savings—explore <a href=\"/money-map/how-long-will-your-savings-support-you\" class=\"underline underline-offset-4 hover:no-underline text-[var(--ddsa-info-text)]\">our Investment Plans </a>  to grow your funds steadily.",
         "icon": "/icons/educationLoan.svg",
         "altName": "education-icon"
       },
@@ -110,18 +110,19 @@
         "btnText": "Get help",
         "icon": "/icons/problem.svg",
         "altTitle": "icons",
-        "btnColor": "#ffcc00",
+        "btnClass": "btn-primary",
         "btnLink": "/finance-support/financial-hardship"
       },
       {
-        "id": 2,
-        "title": "Home loan & personal loan support",
-        "desc": " Find the right solution to manage your loans smarter and more efficient with top-ups, balance transfers, flexible EMIs and part payments.",
-        "btnText": "Get support",
-        "icon": "/icons/contact.svg",
-        "altTitle": "icons",
-        "btnLink": "/home-loan/home-loan-support"
-      }
+				"id": 2,
+				"title": "Home loan & personal loan support",
+				"desc": " Find the right solution to manage your loans smarter and more efficient with top-ups, balance transfers, flexible EMIs and part payments.",
+				"btnText": "Get support",
+				"icon": "/icons/contact.svg",
+				"altTitle": "icons",
+				"btnClass": "btn-secondary",
+				"btnLink": "/home-loan/home-loan-support"
+			}
     ]
   },
   "offersAndDeals": {
@@ -142,9 +143,9 @@
     "cardHead2": "Message us 24/7"
   },
   "support": {
-    "title": "Stay alert to scammers who exploit the cost of living crisis.",
-    "paraGraph": "As you explore ways to cut costs or earn extra cash amidst rising living expenses, scammers are finding new ways to exploit the situation.",
-    "link": "Learn more about scams safety",
+    "heading": "Stay alert to scammers who exploit the cost of living crisis.",
+    "secPara": "As you explore ways to cut costs or earn extra cash amidst rising living expenses, scammers are finding new ways to exploit the situation.",
+    "linkName": "Learn more about scams safety",
     "url": "/cyber-security-against-scams"
   },
   "helpList": {

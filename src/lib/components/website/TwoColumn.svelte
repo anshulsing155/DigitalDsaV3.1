@@ -14,7 +14,7 @@
 	} = $props();
 </script>
 
-<div class="relative grid items-start gap-[3rem] px-[0.5rem] lg:px-0 py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] lg:grid-cols-2 lg:gap-0 {isBorder ? 'border-b border-[var(--form-border)]' : ''}">
+<div class="relative grid items-start gap-[3rem] px-[0.5rem] lg:px-16 py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] lg:grid-cols-2 lg:gap-0 {isBorder ? 'border-b border-[var(--form-border)]' : ''}">
 	<!-- Left div (Image) -->
 	<div
 		class="top-0 w-full transform lg:relative"
