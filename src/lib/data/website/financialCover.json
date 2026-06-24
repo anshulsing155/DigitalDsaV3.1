@@ -116,19 +116,19 @@
     "bullets": [
       {
         "title": "Loans Without Labels",
-        "desc": "<strong>Salaried</strong>, <strong>self-employed</strong>, <strong>freelancer</strong>, or somewhere in between? We don’t do stereotypes—our loans fit <em>your profile</em>, not the other way around."
+        "desc": "<span class=\"font-semibold\">Salaried</span>, <span class=\"font-semibold\">self-employed</span>, <span class=\"font-semibold\">freelancer</span>, or somewhere in between? We don’t do stereotypes—our loans fit <em>your profile</em>, not the other way around."
       },
       {
         "title": "For NRIs: Homecoming Without Headaches",
-        "desc": "Buying a home in India shouldn’t feel like an <em>immigration checkpoint</em>. We simplify the process so you get the <strong>best loan</strong> without the <em>red tape</em>."
+        "desc": "Buying a home in India shouldn’t feel like an <em>immigration checkpoint</em>. We simplify the process so you get the <span class=\"font-semibold\">best loan</span> without the <em>red tape</em>."
       },
       {
         "title": "First-Time Borrower? We’ve Got You",
-        "desc": "Confused by <em>bank jargon</em>? Don't worry, we keep it simple—<strong>real numbers</strong>, <strong>clear guidance</strong>, and no <em>hidden fees lurking</em> in the fine print."
+        "desc": "Confused by <em>bank jargon</em>? Don't worry, we keep it simple—<span class=\"font-semibold\">real numbers</span>, <span class=\"font-semibold\">clear guidance</span>, and no <em>hidden fees lurking</em> in the fine print."
       },
       {
         "title": "100% Digital, 0% Spam",
-        "desc": "Compare loans, check eligibility, and apply without your number ending up in a <em>million marketing lists</em>. <strong>Your privacy</strong>, our priority."
+        "desc": "Compare loans, check eligibility, and apply without your number ending up in a <em>million marketing lists</em>. <span class=\"font-semibold\">Your privacy</span>, our priority."
       }
     ],
     "bulletsMobile": [

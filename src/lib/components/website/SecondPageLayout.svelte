@@ -27,7 +27,7 @@
 			<img
 				src={pageData.coverImage}
 				alt={pageData.coverAlt}
-				class="h-[30svh] w-full border-b-[1.5rem] border-[var(--form-border)] object-cover object-top md:h-[50svh] lg:h-[70svh]"
+				class="h-[30svh] w-full border-b-[1.5rem] border-primary object-cover object-top md:h-[50svh] lg:h-[70svh]"
 			/>
 			<div class="bg-opacity-50 absolute top-0 right-0 text-center text-white">
 				<Tooltip
@@ -39,7 +39,7 @@
 
 		<div
 			id="pageDesign"
-			class="relative -top-[3rem] mx-auto w-full md:-top-[5rem] lg:-top-[13rem] lg:px-0"
+			class="relative -top-[3rem] mx-auto w-full md:-top-[5rem] lg:-top-[16rem] lg:px-0"
 		>
 			<div
 				class="relative z-40 mx-auto flex items-center justify-center border border-b border-[var(--landing-glass-border)] bg-[var(--landing-bg)] p-6 text-center text-[var(--form-text)] sm:p-8 lg:w-[80%]"
