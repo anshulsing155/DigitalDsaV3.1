@@ -21,11 +21,9 @@
 <section class="content">
 	<NewPageLayout {pageData}>
 		{#each tips as tip}
-			<div class="border-b border-[var(--form-border)]">
-				<ThingsYouShould thinkKnow={tip} disc="list-disc" />
-			</div>
+			<ThingsYouShould thinkKnow={tip} disc="list-disc" sectionBorder />
 		{/each}
-		<SectionIntro heading={conclusion.heading} para={conclusion.para} isBorder={true} />
+		<SectionIntro heading={conclusion.heading} para={conclusion.para} />
 	</NewPageLayout>
 </section>
 

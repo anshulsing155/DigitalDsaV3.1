@@ -24,7 +24,7 @@
 			<ThingsYouShould thinkKnow={tip} disc="list-disc" sectionBorder />
 		{/each}
 
-		<SectionIntro heading={finalThoughts.heading} para={finalThoughts.para} isBorder={true} />
+		<SectionIntro heading={finalThoughts.heading} para={finalThoughts.para} />
 	</NewPageLayout>
 </section>
 
