@@ -2,6 +2,7 @@
 	import type { Snippet } from 'svelte';
 	type Props = {
 		heading?: string;
+		subHeading?: string;
 		para?: string;
 		isBorder?: boolean;
 		containerClass?: string;
@@ -10,6 +11,7 @@
 
 	let {
 		heading,
+		subHeading,
 		para,
 		isBorder = false,
 		containerClass = 'lg:px-16',
@@ -25,7 +27,9 @@
 	</p>
 
 	<div class="typography-body-md grid gap-4 text-[var(--form-text-secondary)]">
-		
+		<p class="!font-semibold">
+			{@html subHeading}
+		</p>
 
 		<p>
 			{@html para}
