@@ -1,4 +1,4 @@
-{
+ {
   "seo": {
     "type": "WebPage",
     "title": "Secure Your Business: MFA, Caller ID & Password Protection",
@@ -15,11 +15,12 @@
       {
         "btnName": "Book appointment",
         "btnLink": "/appointment",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-secondary w-full"
       },
       {
         "btnName": "Compare rates",
-        "btnLink": "/get-started/how-can-we-help"
+        "btnLink": "/get-started/how-can-we-help",
+        "btnClass": "btn-primary w-full"
       }
     ]
   },

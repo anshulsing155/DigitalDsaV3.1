@@ -15,43 +15,12 @@
   import AboveTitleWithoutIconCard from "./AboveTitleWithoutIconCard.svelte";
   import Seo from "./Seo.svelte";
   import content from "$lib/data/website/protectFromScams.json";
+  	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+
 
   const { seo, pageData, stickyNavBar, navBarMedium, commonScams, steps, protectingYourself, moreInfo, messageUs, help, thingsYouShould } = content;
 
-  const toggleDropdown = (event, index) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement;
-
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
-
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
-
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      icon.classList.remove("fa-angle-up");
-      icon.classList.add("fa-angle-down");
-    } else {
-      detailsElement.setAttribute("open", "true");
-      icon.classList.remove("fa-angle-down");
-      icon.classList.add("fa-angle-up");
-    }
-    setTimeout(() => {
-      detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  };
 
   let activeSection = $state("");
 
@@ -119,7 +88,7 @@
       ></StickyNavbar>
       
       <div id="scamType" data-section="scamType" class="">
-        <AboveTitleWithTopIconCard contents={commonScams} />
+        <AboveTitleWithTopIconCard contents={commonScams} isBorder />
         
         <div class="px-[4rem] border-b border-[var(--form-border)]">
           <Payments supportHeading="Remember 3 simple steps: Stop. Check. Reject.">
@@ -141,10 +110,10 @@
       </div>
 
       <div id="protecting" data-section="protecting">
-        <AboveTitleWithoutIconCard contents={protectingYourself} />
+        <AboveTitleWithoutIconCard contents={protectingYourself} isBorder />
       </div>
       
-      <div class="px-[4rem] border-b border-[var(--form-border)]" id="information" data-section="information">
+      <div class=" border-b border-[var(--form-border)]" id="information" data-section="information">
         <ThingsYouShould thinkKnow={moreInfo} />
       </div>
     </div>
@@ -152,23 +121,23 @@
     <!-- for mobile -->
     <div class="lg:hidden block">
       {#each navBarMedium as list, index}
-        <details class="dropdown col-span-3 bg-darkColor text-white {index < list.length - 1 ? 'border-b' : ''}" >
-          <summary
-            class="col-span-3 list-none px-[1rem] py-[1.5rem]"
-            onclick={(e) => toggleDropdown(e, index)}
-          >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end text-[var(--form-text)]">
-                <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
-              </div>
-            </div>
-          </summary>
+        <details class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < list.length - 1 ? 'border-b border-[var(--form-border)]' : ''}" >
+        <summary
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
 
           {#if index == 0}
             <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]">
-              <AboveTitleWithTopIconCard contents={commonScams} />
-              <div class="border-b border-[var(--form-border)]">
+              <AboveTitleWithTopIconCard contents={commonScams} isBorder/>
+              <div class="px-[0.5rem]">
                 <Payments supportHeading="Remember 3 simple steps: Stop. Check. Reject.">
                   <div class="grid gap-[2rem]">
                     {#each steps as step}
@@ -196,7 +165,7 @@
             </div>
           {:else if index == 2}
             <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]" id="password">
-              <ThingsYouShould thinkKnow={moreInfo} />
+              <ThingsYouShould thinkKnow={moreInfo}  />
             </div>
           {/if}
         </details>
@@ -216,9 +185,10 @@
       </div>
     </TwoColumnWithImage>
 
-    <div slot="secondary">
-      <HelpList contents={help} />
-      <ThingsYouShould thinkKnow={thingsYouShould} disc="list-decimal" />
-    </div>
+    {#snippet secondary()}
+       <HelpList contents={help} isBorder/>
+      <ThingsYouShould thinkKnow={thingsYouShould} disc="list-decimal" containerClass="px-0" />
+    {/snippet}
+     
   </NewPageLayout>
 </section>

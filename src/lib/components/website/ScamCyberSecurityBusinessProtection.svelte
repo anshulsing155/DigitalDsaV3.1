@@ -13,41 +13,11 @@
   import HelpList from "./HelpList.svelte";
   import Seo from "./Seo.svelte";
   import content from "$lib/data/website/cyberSecurityScams.json";
+  import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
-  const toggleDropdown = (event, index) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement;
 
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
-
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
-
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      icon.classList.remove("fa-angle-up");
-      icon.classList.add("fa-angle-down");
-    } else {
-      detailsElement.setAttribute("open", "true");
-      icon.classList.remove("fa-angle-down");
-      icon.classList.add("fa-angle-up");
-    }
-    setTimeout(() => {
-      detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  };
+ 
 
   let activeSection = $state("");
 
@@ -110,6 +80,7 @@
       }, 100); // Small delay to ensure DOM updates
     });
   });
+  
 </script>
 
 <Seo
@@ -127,20 +98,20 @@
       <StickyNavbar
         navList={content.stickyNavBar}
         {activeSection}
-      ></StickyNavbar>
+      />
 
       <div
         id="howProtect"
         data-section="howProtect"
-        class="flex flex-col lg:grid lg:grid-cols-3 px-[0.5rem] lg:px-[4rem] gap-[2rem] pt-[4rem] pb-[8rem] border-b"
+        class="flex flex-col lg:grid lg:grid-cols-3  gap-[2rem] py-[4rem] px-[0.5rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]  border-b border-[var(--form-border)]"
       >
         <div>
           <h2
-            class="md:text-start typography-h2 text-text-main"
+            class="typography-h2-md text-[var(--form-text)]"
           >
             Protect yourself from scams
           </h2>
-          <p class="typography-body-md text-[var(--form-text-secondary)] py-[1rem]">
+          <p class="typography-body-md text-[var(--form-text-secondary)] pt-[1rem]">
             Remember three simple steps: <br><span class="font-semibold">
                Stop.   Check.  Reject.
             </span>
@@ -155,7 +126,7 @@
                 {index + 1}
               </p>
               <div class="col-span-11">
-                <p>
+                <p class="typography-body-md text-[var(--form-text-secondary)]">
                   <span class="font-semibold">
                     {item.title}-
                   </span>
@@ -171,11 +142,10 @@
         <div>
           <TwoColumnWithImage
             contents={content.messageUs}
+            isBorder
           >
-            <p class="font-semibold typography-body-md">
-              Stay one step ahead of scams
-            </p>
-            <p>
+          
+            <p class="typography-body-md text-[var(--form-text-secondary)]">
               Cybercriminals may try and scam your business through email, text
               messages, phone calls and social media. They will often pretend to
               be a person or organisation you trust. We will never ask you to
@@ -184,14 +154,15 @@
             <Button
               btnName="Scams that target businesses"
               link="/cyber-security-against-scams/scam-target-business"
+              btnClass= "btn-primary w-full"
             />
           </TwoColumnWithImage>
         </div>
         <div
-          class="pt-[4rem] pb-[8rem] border-b px-[0.5rem] lg:px-[4rem] space-y-6"
+          class="pt-[4rem] pb-[8rem] border-b border-[var(--form-border)] px-[0.5rem] lg:px-[4rem] space-y-6"
         >
           <h2
-            class="md:text-start typography-h2 text-text-main"
+            class="md:text-start typography-h2-md text-[var(--form-text)]"
           >
             4 ways to safeguard your business
           </h2>
@@ -199,7 +170,7 @@
             {#each content.safeguardWays as item, index}
               <a href={item.link}>
                 <div
-                  class="border flex p-8 shadow-md hover:shadow-xl gap-[2rem]"
+                  class="border border-[var(--form-border)] typography-body-md text-[var(--form-text-secondary)] flex p-8  gap-[2rem]"
                 >
                   <img src={item.icons} alt={item.altIcons} class="h-10" />
                   <h3>{item.title}</h3>
@@ -213,21 +184,21 @@
       <div
         id="resources"
         data-section="resources"
-        class="flex flex-col lg:grid lg:grid-cols-3 px-[0.5rem] lg:px-[4rem] pt-[4rem] pb-[6rem] border-b gap-[2rem]"
+        class="flex flex-col lg:grid lg:grid-cols-3  gap-[2rem] py-[4rem] px-[0.5rem] lg:px-16 lg:py-0 lg:pt-[4rem] lg:pb-[8rem]  border-b border-[var(--form-border)]"
       >
         <h2
-          class="md:text-start typography-h2 text-text-main"
+          class="md:text-start typography-h2-md text-[var(--form-text)] "
         >
           More resources for your business
         </h2>
         <div class="col-span-2">
           {#each content.moreResources as itemObj, index}
             <div
-              class="flex flex-col md:flex-row gap-[2rem] {content.moreResources.length > index + 1 ? 'border-b' : ''} py-[2rem]"
+              class="flex flex-col md:flex-row gap-[2rem] {content.moreResources.length > index + 1 ? 'border-b border-[var(--form-border)]' : ''} {index === 0 ? 'pt-0 pb-[2rem]' : 'py-[2rem]'} "
             >
               <img src={itemObj.image} alt={itemObj.alt} class="h-[8rem]" />
               <div class="flex flex-col gap-[2rem]">
-                <h2 class="font-semibold typography-h3">
+                <h2 class="font-semibold typography-h3 text-[var(--form-text)]">
                   {itemObj.heading}
                 </h2>
                 <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -249,24 +220,25 @@
     <div class="lg:hidden block">
       {#each content.navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-darkColor text-white {index < content.navBarMedium.length - 1 ? 'border-b' : ''}"
+          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
-          <summary
-            class="col-span-3 list-none px-[1rem] py-[1.5rem]"
-            onclick={(e) => toggleDropdown(e, index)}
-          >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end typography-h3">
-                <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
-              </div>
-            </div>
-          </summary>
+           <summary
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
+
 
           {#if index == 0}
-            <div id="howProtect" class="bg-white text-black">
+            <div id="howProtect" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
               <div
-                class="flex flex-col lg:grid lg:grid-cols-3 px-[0.5rem] gap-[2rem] py-[4rem] border-b"
+                class="flex flex-col lg:grid lg:grid-cols-3 px-[0.5rem] gap-[2rem] py-[4rem] border-b border-[var(--form-border)]"
               >
                 <div class="space-y-[2rem]">
                   <h2
@@ -304,10 +276,11 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="protectbusiness" class="bg-white text-black">
+            <div id="protectbusiness" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
               <div>
                 <TwoColumnWithImage
                   contents={content.messageUs}
+                  isBorder
                 >
                   <p class="font-semibold typography-body-md">
                     Stay one step ahead of scams
@@ -321,7 +294,8 @@
                   </p>
                   <Button
                     btnName="Scams that target businesses"
-                    link="/cyber-security-against-scams/scam-target-business"
+                    link="/cyber-security-against-scams/scam-target-business",
+                    btnClass="btn-primary w-full"
                   />
                 </TwoColumnWithImage>
               </div>
@@ -329,7 +303,7 @@
                 class="py-[4rem] px-[0.5rem] space-y-6"
               >
                 <h2
-                  class="md:text-start typography-h2 text-text-main"
+                  class="md:text-start typography-h2-md"
                 >
                   4 ways to safeguard your business
                 </h2>
@@ -337,7 +311,7 @@
                   {#each content.safeguardWays as item, index}
                     <a href={item.link}>
                       <div
-                        class="border flex p-8 shadow-md hover:shadow-xl gap-[2rem]"
+                        class="border border-[var(--form-border)] flex p-8 shadow-md hover:shadow-xl gap-[2rem]"
                       >
                         <img
                           src={item.icons}
@@ -352,19 +326,19 @@
               </div>
             </div>
           {:else if index == 2}
-            <div id="resources" class="bg-white text-black">
+            <div id="resources" class="bg-[var(--landing-bg)] text-[var(--landing-text)] border-b border-[var(--form-border)]">
               <div
                 class="flex flex-col px-[0.5rem] py-[4rem] gap-[2rem]"
               >
                 <h2
-                  class="md:text-start typography-h2 text-text-main"
+                  class="md:text-start typography-h2-md text-text-main"
                 >
                   More resources for your business
                 </h2>
                 <div class="col-span-2">
                   {#each content.moreResources as itemObj, index}
                     <div
-                      class="flex flex-col md:flex-row gap-[2rem] {content.moreResources.length > index + 1 ? 'border-b' : ''} py-[2rem]"
+                      class="flex flex-col md:flex-row gap-[2rem] {content.moreResources.length > index + 1 ? 'border-b border-[var(--form-border)]' : ''} py-[2rem]"
                     >
                       <img
                         src={itemObj.image}
@@ -406,15 +380,17 @@
       </div>
     </TwoColumnWithImage>
 
-    <div slot="secondary">
+   {#snippet secondary()}
       <HelpList
         contents={content.help}
+        isBorder
       />
       <ThingsYouShould
         thinkKnow={content.thingsYouShould}
         disc="list-decimal"
+       containerClass="px-0"
       ></ThingsYouShould>
-    </div>
+   {/snippet}
   </NewPageLayout>
 </section>
 
