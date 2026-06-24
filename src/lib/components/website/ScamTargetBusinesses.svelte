@@ -14,6 +14,8 @@
 	import TwoColumn from './TwoColumn.svelte';
 	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/scamTargetBusinesses.json';
+ import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
 	const {
 		seo,
@@ -29,40 +31,7 @@
 		thingsYouShouldKnow
 	} = content;
 
-	const toggleDropdown = (event, index) => {
-		event.preventDefault();
-		const summaryElement = event.currentTarget;
-		const icon = summaryElement.querySelector('.faq-icon');
-		const detailsElement = summaryElement.parentElement;
-
-		// Close all dropdowns except the clicked one
-		document.querySelectorAll('.dropdown').forEach((otherDetails, idx) => {
-			const otherIcon = otherDetails.querySelector('.faq-icon');
-
-			if (idx !== index) {
-				otherDetails.removeAttribute('open');
-				if (otherIcon) {
-					otherIcon.classList.remove('fa-angle-up');
-					otherIcon.classList.add('fa-angle-down');
-				}
-			}
-		});
-
-		// Toggle current dropdown open/close state
-		const isOpen = detailsElement.hasAttribute('open');
-		if (isOpen) {
-			detailsElement.removeAttribute('open');
-			icon.classList.remove('fa-angle-up');
-			icon.classList.add('fa-angle-down');
-		} else {
-			detailsElement.setAttribute('open', 'true');
-			icon.classList.remove('fa-angle-down');
-			icon.classList.add('fa-angle-up');
-		}
-		setTimeout(() => {
-			detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}, 100);
-	};
+	
 
 	let activeSection = $state('');
 
@@ -122,11 +91,11 @@
 			<StickyNavbar navList={stickyNavBar} {activeSection}></StickyNavbar>
 
 			<div id="prevent" data-section="prevent">
-				<AboveTitleWithLeftIconCard contents={preventScams} />
+				<AboveTitleWithLeftIconCard contents={preventScams} isBorder />
 			</div>
 
 			<div id="email" data-section="email">
-				<TwoColumnWithImage contents={emailCompromise}>
+				<TwoColumnWithImage contents={emailCompromise} isBorder>
 					<p class="typography-body-md text-[var(--form-text-secondary)]">
 						Business email compromise scams target businesses of all sizes. They involve emails from
 						a compromised email address, or emails made to look like they are from someone you know,
@@ -151,7 +120,7 @@
 
 			<div data-section="remote" id="remote" class="section">
 				<div class="px-[4rem]">
-					<TwoColumn {...remoteAccess}>
+					<TwoColumn {...remoteAccess} isBorder>
 						<p class="typography-body-md text-[var(--form-text-secondary)]">
 							Remote access scams begin as a phone impersonation scam, then the scammer gains access
 							to your all Bank account using your own computer, through the use of remote access
@@ -190,7 +159,7 @@
 					</TwoColumn>
 				</div>
 
-				<AboveTitleWithoutIconCard contents={warningSignsAndWhatToDo} />
+				<AboveTitleWithoutIconCard contents={warningSignsAndWhatToDo} isBorder/>
 			</div>
 			<div id="helpline" data-section="helpline">
 				<TwoColumnWithImage contents={helpline}>
@@ -200,7 +169,7 @@
 						fraud promptly increases the chances of recovering lost funds and helps prevent further
 						scams
 					</p>
-					<Button link="tel: 1930" btnName="Call 1930" />
+					<Button link="tel: 1930" btnName="Call 1930"  btnClass="btn-primary w-full" />
 				</TwoColumnWithImage>
 			</div>
 		</div>
@@ -209,25 +178,25 @@
 		<div class="block lg:hidden">
 			{#each navBarMedium as list, index}
 				<details
-					class="dropdown bg-darkColor col-span-3 text-white {index < navBarMedium.length - 1
-						? 'border-b'
+					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < navBarMedium.length - 1
+						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
-					<summary
-						class="col-span-3 list-none px-[1rem] py-[1.5rem]"
+					   <summary
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
-							<h2 class="text-navFont">{list}</h2>
-							<div class="icon-container justify-self-end text-[var(--form-text)]">
-								<span><i class="fa-solid fa-angle-down faq-icon"></i></span>
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
 							</div>
 						</div>
 					</summary>
 
 					{#if index == 0}
 						<div class="bg-[var(--landing-bg)] text-[var(--landing-text)]">
-							<AboveTitleWithLeftIconCard contents={preventScams} />
+							<AboveTitleWithLeftIconCard contents={preventScams}  />
 						</div>
 					{:else if index == 1}
 						<div class="bg-[var(--landing-bg)] text-[var(--landing-text)]">
@@ -256,7 +225,7 @@
 					{:else if index == 2}
 						<div class="bg-[var(--landing-bg)] text-[var(--landing-text)]">
 							<div>
-								<TwoColumn {...remoteAccess}>
+								<TwoColumn {...remoteAccess} isBorder>
 									<p class="typography-body-md text-[var(--form-text-secondary)]">
 										Remote access scams begin as a phone impersonation scam, then the scammer gains
 										access to your all Bank account using your own computer, through the use of
@@ -295,7 +264,7 @@
 								</TwoColumn>
 							</div>
 
-							<AboveTitleWithoutIconCard contents={warningSignsAndWhatToDo} />
+							<AboveTitleWithoutIconCard contents={warningSignsAndWhatToDo}  />
 						</div>
 					{:else if index == 3}
 						<div class="bg-[var(--landing-bg)] text-[var(--landing-text)]">
@@ -306,7 +275,7 @@
 									Reporting fraud promptly increases the chances of recovering lost funds and helps
 									prevent further scams
 								</p>
-								<Button link="tel: 1930" btnName="Call 1930" />
+								<Button link="tel: 1930" btnName="Call 1930"  btnClass="btn-primary w-full" />
 							</TwoColumnWithImage>
 						</div>
 					{/if}
@@ -314,10 +283,12 @@
 			{/each}
 		</div>
 
-		<div slot="secondary">
-			<HelpList contents={helpList} />
-			<ThingsYouShould thinkKnow={thingsYouShouldKnow} disc="list-decimal"></ThingsYouShould>
-		</div>
+		
+		{#snippet secondary()}
+			<HelpList contents={helpList} isBorder />
+			<ThingsYouShould thinkKnow={thingsYouShouldKnow} disc="list-decimal"  containerClass="px-0"/>
+			{/snippet}
+		
 	</NewPageLayout>
 </section>
 

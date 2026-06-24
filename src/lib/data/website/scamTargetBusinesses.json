@@ -15,11 +15,12 @@
       {
         "btnName": "Book appointment",
         "btnLink": "/appointment",
-        "btnColor": "#ffcc00"
+         "btnClass": "btn-primary w-full"
       },
       {
         "btnName": "Compare offers ",
-        "btnLink": "/get-started/how-can-we-help"
+        "btnLink": "/get-started/how-can-we-help",
+         "btnClass": "btn-secondary w-full"
       }
     ]
   },
@@ -97,7 +98,7 @@
     "originalSource": "https://www.freepik.com/free-photo/young-woman-sitting-cafe-with-her-laptop-stressful-wor_1025751.htm"
   },
   "warningSignsAndWhatToDo": {
-    "xlGridCol": 2,
+    "xlGridCol": 3,
     "cards": [
       {
         "heading": " Warning Signs",
@@ -106,7 +107,11 @@
       {
         "heading": "What to Do",
         "para": "<ul class=\"space-y-6\"> \n               <li> ✅   <span class=\"font-semibold\"> Stay Calm</span>  – Real police don’t demand instant payments.</li>\n                  <li > ✅ <span class=\"font-semibold\"> Hang Up & Verify</span>  – Call official government or law enforcement numbers.</li>\n                   <li>  ✅ <span class=\"font-semibold\"> Never Pay</span>  – Authorities never ask for money over the phone.</li>\n                    <li> ✅ <span class=\"font-semibold\"> Report the Scam</span>  – Notify law enforcement or cybersecurity agencies. </li>\n                    \n              </ul> "
-      }
+      },
+      {
+"heading": "How Scammers Manipulate Victims",
+"para": "<ul class=\"space-y-6\"> \n <li> 🎭 They impersonate police officers, government agencies, or investigators.</li>\n <li> ⏳ They create a false sense of urgency to stop you from thinking clearly.</li>\n <li> 🔒 They insist that the matter is confidential and must not be discussed with anyone.</li>\n <li> 💰 They use fear and intimidation to pressure victims into sending money.</li>\n </ul>"
+}
     ]
   },
   "helpline": {
