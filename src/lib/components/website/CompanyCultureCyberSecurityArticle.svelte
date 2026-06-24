@@ -1,326 +1,191 @@
 <script lang="ts">
-  import ThingsYouShould from "$lib/components/website/ThingsYouShould.svelte";
-  import { onMount } from "svelte";
-  import HelpList from "$lib/components/website/HelpList.svelte";
-  import Seo from "$lib/components/Seo.svelte";
-  import SecondPageLayout from "$lib/components/website/SecondPageLayout.svelte";
-  import StickyNavbar from "$lib/components/website/StickyNavbar.svelte";
-  import content from "$lib/data/website/companyCulture.json";
+	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
+	import { onMount } from 'svelte';
+	import HelpList from '$lib/components/website/HelpList.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import SecondPageLayout from '$lib/components/website/SecondPageLayout.svelte';
+	import StickyNavbar from '$lib/components/website/StickyNavbar.svelte';
+	import content from '$lib/data/website/companyCulture.json';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import SectionIntro from './SectionIntro.svelte';
 
-  const {
-    seo,
-    pageData,
-    stickyNavBar,
-    navBarMedium,
-    storyData,
-    everyone,
-    example,
-    fun,
-    empowerment,
-    investing,
-    team,
-    final,
-    helpList,
-    thingsYouShouldKnow
-  } = content;
+	const {
+		seo,
+		pageData,
+		stickyNavBar,
+		navBarMedium,
+		storyData,
+		everyone,
+		example,
+		fun,
+		empowerment,
+		investing,
+		team,
+		final,
+		helpList,
+		thingsYouShouldKnow
+	} = content;
 
-  const toggleDropdown = (event: MouseEvent, index: number) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget as HTMLElement;
-    const icon = summaryElement.querySelector(".faq-icon") as HTMLElement;
-    const detailsElement = summaryElement.parentElement as HTMLDetailsElement;
+	let activeSection = $state(''); // Svelte 5 state rune
 
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon") as HTMLElement;
+	// This function sets the first section as active on initial load
+	const initializeActiveSection = () => {
+		const firstSection = document.querySelector('[data-section]');
+		if (firstSection) {
+			activeSection = firstSection.id;
+		}
+	};
 
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
+	// Handle scroll event to dynamically update the active section
+	const handleScroll = () => {
+		const sections = document.querySelectorAll('[data-section]');
+		let currentSection = '';
 
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      icon.classList.remove("fa-angle-up");
-      icon.classList.add("fa-angle-down");
-    } else {
-      detailsElement.setAttribute("open", "true");
-      icon.classList.remove("fa-angle-down");
-      icon.classList.add("fa-angle-up");
+		sections.forEach((section) => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top <= 200 && rect.bottom >= 200) {
+				currentSection = section.id;
+			}
+		});
 
-      // Scroll the opened accordion into view
-      setTimeout(() => {
-        detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
-    }
-  };
+		if (currentSection) {
+			activeSection = currentSection; // Update the active section dynamically
+		}
+	};
 
-  let activeSection = $state(""); // Svelte 5 state rune
+	// Initialize the first active section when the component loads
+	onMount(() => {
+		initializeActiveSection();
+		window.addEventListener('scroll', handleScroll);
 
-  // This function sets the first section as active on initial load
-  const initializeActiveSection = () => {
-    const firstSection = document.querySelector("[data-section]");
-    if (firstSection) {
-      activeSection = firstSection.id;
-    }
-  };
-
-  // Handle scroll event to dynamically update the active section
-  const handleScroll = () => {
-    const sections = document.querySelectorAll("[data-section]");
-    let currentSection = "";
-
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= 200 && rect.bottom >= 200) {
-        currentSection = section.id;
-      }
-    });
-
-    if (currentSection) {
-      activeSection = currentSection; // Update the active section dynamically
-    }
-  };
-
-  // Initialize the first active section when the component loads
-  onMount(() => {
-    initializeActiveSection();
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
 <Seo
-  type={seo.type}
-  title={seo.title}
-  image={seo.image}
-  description={seo.description}
-  keywords={seo.keywords}
+	type={seo.type}
+	title={seo.title}
+	image={seo.image}
+	description={seo.description}
+	keywords={seo.keywords}
 />
 
 <section class="mx-auto w-full">
-  <SecondPageLayout {pageData}>
-    <div class="hidden lg:block">
-      <StickyNavbar
-        navList={stickyNavBar}
-        {activeSection}
-      />
+	<SecondPageLayout {pageData}>
+		<div class="hidden lg:block">
+			<StickyNavbar navList={stickyNavBar} {activeSection} />
 
-      <!-- story -->
-      <div data-section="first" id="first" class="">
-        <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-          <h2 class="typography-h2 text-text-main">
-            {storyData.heading}
-          </h2>
-          <p class="typography-body-sm text-[var(--form-text-secondary)]">
-            {@html storyData.para}
-          </p>
-        </div>
-        <!-- everyone's job -->
-        <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-          <h2 class="typography-h2 text-text-main">
-            {everyone.heading}
-          </h2>
-          <p class="typography-body-sm text-[var(--form-text-secondary)]">
-            {@html everyone.para}
-          </p>
-        </div>
-        <!-- example -->
-        <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-          <h2 class="typography-h2 text-text-main">
-            {example.heading}
-          </h2>
-          <p class="typography-body-sm text-[var(--form-text-secondary)]">
-            {@html example.para}
-          </p>
-        </div>
-      </div>
+			<div data-section="first" id="first">
+				<SectionIntro heading={storyData.heading} para={storyData.para} isBorder />
 
-      <!-- smart defense -->
-      <div data-section="smart" id="smart" class="">
-        <!-- making fun -->
-        <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-          <h2 class="typography-h2 text-text-main">
-            {fun.heading}
-          </h2>
-          <p class="typography-body-sm text-[var(--form-text-secondary)]">
-            {fun.firstPara}
-          </p>
-          <ul class="space-y-6">
-            {#each fun.listItems as item}
-              <li class="space-y-2">
-                <h3 class="font-semibold typography-body-md text-text-main">{item.heading}</h3>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">{@html item.desc}</p>
-              </li>
-            {/each}
-          </ul>
-          <p class="typography-body-sm text-[var(--form-text-secondary)]">
-            {fun.secPara}
-          </p>
-        </div>
-        <!-- empowerment -->
-        <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-          <h2 class="typography-h2 text-text-main">
-            {empowerment.heading}
-          </h2>
-          <p class="typography-body-sm text-[var(--form-text-secondary)]">
-            {@html empowerment.para}
-          </p>
-        </div>
-      </div>
+				<SectionIntro heading={everyone.heading} para={everyone.para} isBorder />
 
-      <!-- cyber awareness -->
-      <div data-section="awareness" id="awareness" class="">
-        <!-- investing -->
-        <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-          <h2 class="typography-h2 text-text-main">
-            {investing.heading}
-          </h2>
-          <p class="typography-body-sm text-[var(--form-text-secondary)]">
-            {@html investing.para}
-          </p>
-        </div>
-        <!-- team -->
-        <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-          <h2 class="typography-h2 text-text-main">
-            {team.heading}
-          </h2>
-          <p class="typography-body-sm text-[var(--form-text-secondary)]">
-            {@html team.para}
-          </p>
-        </div>
-      </div>
+				<SectionIntro heading={example.heading} para={example.para} isBorder />
+			</div>
 
-      <!-- final thoughts -->
-      <div data-section="final" id="final" class="">
-        <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-          <h2 class="typography-h2 text-text-main">
-            {final.heading}
-          </h2>
-          <p class="typography-body-sm text-[var(--form-text-secondary)]">
-            {@html final.para}
-          </p>
-        </div>
-      </div>
-    </div>
+			<!-- smart defense -->
+			<div data-section="smart" id="smart">
+				<SectionIntro heading={fun.heading} para={fun.firstPara} isBorder>
+					<ul class="space-y-6">
+						{#each fun.listItems as list}
+							<li class="space-y-2">
+								<h3 class="typography-h3 !font-semibold text-[var(--form-text)]">{list.heading}</h3>
+								<p class="typography-body-md text-[var(--form-text-secondary)]">
+									{@html list.desc}
+								</p>
+							</li>
+						{/each}
+					</ul>
+					<p class="typography-body-sm text-[var(--form-text-secondary)]">
+						{fun.secPara}
+					</p>
+				</SectionIntro>
 
-    <div class="block lg:hidden">
-      {#each navBarMedium as list, index}
-        <details class="border-spanColor dropdown col-span-3 mx-1 bg-darkColor text-white {index < navBarMedium.length - 1 ? 'border-b' : ''}">
-          <summary
-            class="col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer"
-            onclick={(e) => { e.preventDefault(); toggleDropdown(e, index); }}
-          >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="text-navFont">{list}</h2>
-              <div class="icon-container justify-self-end typography-h3">
-                <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
-              </div>
-            </div>
-          </summary>
-          {#if index == 0}
-            <div id="first" class="bg-white text-black">
-              <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-                <h2 class="typography-h2 text-text-main">
-                  {storyData.heading}
-                </h2>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">
-                  {@html storyData.para}
-                </p>
-              </div>
-              <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-                <h2 class="typography-h2 text-text-main">
-                  {everyone.heading}
-                </h2>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">
-                  {@html everyone.para}
-                </p>
-              </div>
-              <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-                <h2 class="typography-h2 text-text-main">
-                  {example.heading}
-                </h2>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">
-                  {@html example.para}
-                </p>
-              </div>
-            </div>
-          {:else if index == 1}
-            <div id="smart" class="bg-white text-black">
-              <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-                <h2 class="typography-h2 text-text-main">
-                  {fun.heading}
-                </h2>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">
-                  {fun.firstPara}
-                </p>
-                <ul class="space-y-6">
-                  {#each fun.listItems as item}
-                    <li class="space-y-2">
-                      <h3 class="font-semibold typography-body-md text-text-main">{item.heading}</h3>
-                      <p class="typography-body-sm text-[var(--form-text-secondary)]">{@html item.desc}</p>
-                    </li>
-                  {/each}
-                </ul>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">
-                  {fun.secPara}
-                </p>
-              </div>
-              <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-                <h2 class="typography-h2 text-text-main">
-                  {empowerment.heading}
-                </h2>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">
-                  {@html empowerment.para}
-                </p>
-              </div>
-            </div>
-          {:else if index == 2}
-            <div id="awareness" class="bg-white text-black">
-              <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-                <h2 class="typography-h2 text-text-main">
-                  {investing.heading}
-                </h2>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">
-                  {@html investing.para}
-                </p>
-              </div>
-              <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-                <h2 class="typography-h2 text-text-main">
-                  {team.heading}
-                </h2>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">
-                  {@html team.para}
-                </p>
-              </div>
-            </div>
-          {:else if index == 3}
-            <div id="final" class="bg-white text-black">
-              <div class="flex flex-col gap-[2rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
-                <h2 class="typography-h2 text-text-main">
-                  {final.heading}
-                </h2>
-                <p class="typography-body-sm text-[var(--form-text-secondary)]">
-                  {@html final.para}
-                </p>
-              </div>
-            </div>
-          {/if}
-        </details>
-      {/each}
-    </div>
-    <div slot="secondary">
-      <HelpList contents={helpList} />
-      <ThingsYouShould thinkKnow={thingsYouShouldKnow} disc="list-decimal" containerClass="px-0" />
-    </div>
-  </SecondPageLayout>
+				<SectionIntro heading={empowerment.heading} para={empowerment.para} isBorder />
+			</div>
+
+			<!-- cyber awareness -->
+			<div data-section="awareness" id="awareness">
+				<SectionIntro heading={investing.heading} para={investing.para} isBorder />
+
+				<SectionIntro heading={team.heading} para={team.para} isBorder />
+			</div>
+
+			<!-- final thoughts -->
+			<div data-section="final" id="final">
+				<SectionIntro heading={final.heading} para={final.para} />
+			</div>
+		</div>
+
+		<div class="block lg:hidden">
+			{#each navBarMedium as list, index}
+				<details
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					navBarMedium.length - 1
+						? 'border-b border-[var(--form-border)]'
+						: ''}"
+				>
+					<summary
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
+					{#if index == 0}
+						<div id="first" class="bg-[var(--landing-bg)]">
+							<SectionIntro heading={storyData.heading} para={storyData.para} isBorder />
+
+							<SectionIntro heading={everyone.heading} para={everyone.para} isBorder />
+
+							<SectionIntro heading={example.heading} para={example.para} />
+						</div>
+					{:else if index == 1}
+						<div id="smart" class="bg-[var(--landing-bg)]">
+							<SectionIntro heading={fun.heading} para={fun.firstPara} isBorder>
+								<ul class="space-y-6">
+									{#each fun.listItems as list}
+										<li class="space-y-2">
+											<h3 class="typography-h3 !font-semibold text-[var(--form-text)]">
+												{list.heading}
+											</h3>
+											<p class="typography-body-md text-[var(--form-text-secondary)]">
+												{@html list.desc}
+											</p>
+										</li>
+									{/each}
+								</ul>
+								<p class="typography-body-sm text-[var(--form-text-secondary)]">
+									{fun.secPara}
+								</p>
+							</SectionIntro>
+
+							<SectionIntro heading={empowerment.heading} para={empowerment.para} />
+						</div>
+					{:else if index == 2}
+						<div id="awareness" class="bg-[var(--landing-bg)]">
+							<SectionIntro heading={investing.heading} para={investing.para} isBorder />
+
+							<SectionIntro heading={team.heading} para={team.para} />
+						</div>
+					{:else if index == 3}
+						<div id="final" class="bg-[var(--landing-bg)]">
+							<SectionIntro heading={final.heading} para={final.para} />
+						</div>
+					{/if}
+				</details>
+			{/each}
+		</div>
+		{#snippet secondary()}
+			<HelpList contents={helpList} isBorder />
+			<ThingsYouShould thinkKnow={thingsYouShouldKnow} disc="list-decimal" containerClass="px-0" />
+		{/snippet}
+	</SecondPageLayout>
 </section>
