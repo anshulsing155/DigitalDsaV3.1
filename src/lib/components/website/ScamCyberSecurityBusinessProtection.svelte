@@ -238,22 +238,22 @@
           {#if index == 0}
             <div id="howProtect" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
               <div
-                class="flex flex-col lg:grid lg:grid-cols-3 px-[0.5rem] gap-[2rem] py-[4rem] border-b border-[var(--form-border)]"
+                class="flex flex-col lg:grid lg:grid-cols-3 px-[0.5rem] gap-[2rem] py-[4rem]"
               >
                 <div class="space-y-[2rem]">
                   <h2
-                    class="md:text-start typography-h2 text-[var(--form-text)]"
+                    class="md:text-start typography-h2-md text-[var(--form-text)]"
                   >
                     Protect your business from scams
                   </h2>
-                  <p class="typography-body-sm text-[var(--form-text-secondary)]">
+                  <p class="typography-body-md text-[var(--form-text-secondary)]">
                     Remember three simple <span class="font-semibold">
                       steps: Stop. Check. Reject.
                     </span>
                   </p>
                 </div>
                 <div class="col-span-2 space-y-4">
-                  <h2 class="typography-h3 font-semibold">Stop. Check. Reject.</h2>
+                  <h2 class="typography-body-lg !font-semibold">Stop. Check. Reject.</h2>
 
                   {#each content.stopCheckReject as item, index}
                     <div class="grid grid-cols-12">
@@ -263,7 +263,7 @@
                         {index + 1}
                       </p>
                       <div class="col-span-11">
-                        <p>
+                        <p class="typography-body-md text-[var(--form-text-secondary)]">
                           <span class="font-semibold">
                             {item.title}-
                           </span>
