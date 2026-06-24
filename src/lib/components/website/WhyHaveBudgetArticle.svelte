@@ -1,69 +1,163 @@
 <script lang="ts">
-  import Seo from "$lib/components/Seo.svelte";
-  import Tooltip from "$lib/components/website/Tooltip.svelte";
-  import content from "$lib/data/website/whyHaveBudget.json";
+	import Seo from '$lib/components/Seo.svelte';
+	import Tooltip from '$lib/components/website/Tooltip.svelte';
+	import content from '$lib/data/website/whyHaveBudget.json';
+	import SecondPageLayout from './SecondPageLayout.svelte';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
+	import StickyNavbar from '../StickyNavbar.svelte';
+	import { onMount } from 'svelte';
+	import SectionIntro from './SectionIntro.svelte';
+	import HelpList from '$lib/components/website/HelpList.svelte';
 
-  const { seo, pageData, extraIntro, sections } = content;
-  let originalSource = "";
-  let sourceName = "undefined";
+	// const { seo, pageData, extraIntro, sections, helpList, thingsYouShouldKnow } = content;
+	const {
+		seo,
+		pageData,
+		intro,
+		myths,
+		gettingStarted,
+		importance,
+		final,
+		helpList,
+		thingsYouShouldKnow,
+		stickyNavBar,
+		navBarMedium
+	} = content;
+	let originalSource = '';
+	let sourceName = 'undefined';
+
+	let activeSection = $state(''); // Svelte 5 state rune
+	// This function sets the first section as active on initial load
+	const initializeActiveSection = () => {
+		const firstSection = document.querySelector('[data-section]');
+		if (firstSection) {
+			activeSection = firstSection.id;
+		}
+	};
+
+	// Handle scroll event to dynamically update the active section
+	const handleScroll = () => {
+		const sections = document.querySelectorAll('[data-section]');
+		let currentSection = '';
+
+		sections.forEach((section) => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top <= 200 && rect.bottom >= 200) {
+				currentSection = section.id;
+			}
+		});
+
+		if (currentSection) {
+			activeSection = currentSection; // Update the active section dynamically
+		}
+	};
+
+	// Initialize the first active section when the component loads
+	onMount(() => {
+		initializeActiveSection();
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
 <Seo
-  type={seo.type}
-  title={seo.title}
-  image={seo.image}
-  description={seo.description}
-  keywords={seo.keywords}
+	type={seo.type}
+	title={seo.title}
+	image={seo.image}
+	description={seo.description}
+	keywords={seo.keywords}
 />
 
-<section class="w-full px-1">
-  <div id="pageDesign" class="mx-auto bg-white">
-    <div class="grid items-center lg:grid-cols-2 gap-[4rem] py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-[var(--form-border)]">
-      <div class="order-2 lg:order-1">
-        <h1 class="mb-[3rem] typography-h2 text-text-main">
-          {pageData.heading}
-        </h1>
-        <p class="mb-[2rem] font-para typography-body-md">
-          {pageData.para}
-        </p>
-        <p class="font-para typography-body-md">
-          {extraIntro}
-        </p>
-      </div>
-      <div class="order-1 lg:order-2 relative">
-        <div class="absolute top-0 right-0 bg-opacity-50 text-white text-center">
-          <Tooltip
-            linkName={`image source: <span class="underline underline-offset-4">${sourceName}</span>`}
-            hoverLink={originalSource}
-          />
-        </div>
-        <img
-          src={pageData.coverImage}
-          alt={pageData.coverAlt}
-          class="aspect-[5/3] w-full object-cover object-top h-[15rem] lg:h-full"
-        />
-      </div>
-    </div>
+<SecondPageLayout {pageData}>
+	<div class="hidden lg:block">
+		<StickyNavbar navList={stickyNavBar} {activeSection} />
 
-    {#each sections as section}
-      <div class="py-[4rem] lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] border-b border-[var(--form-border)]">
-        <h2 class="typography-h2 text-text-main mb-[3rem]">
-          {section.title}
-        </h2>
-        {#each section.paragraphs as para, i}
-          {#if i === 0}
-            <p class="font-para typography-body-md mb-[2rem]">
-              {para}
-            </p>
-          {:else}
-            <div class="mt-8 p-6 bg-blue-50 border-l-4 border-[var(--form-border)] italic text-gray-700 shadow-md rounded-lg">
-              <p class="font-para typography-body-md">
-                {para}
-              </p>
-            </div>
-          {/if}
-        {/each}
-      </div>
-    {/each}
-  </div>
-</section>
+		<div data-section="myths" id="myths">
+			<SectionIntro heading={intro.heading} para={intro.para} isBorder>
+				<p>{@html intro.extraIntro}</p>
+			</SectionIntro>
+
+			<SectionIntro heading={myths.heading} para={myths.para} isBorder>
+				<p>{@html myths.extraPara}</p>
+				<p>{@html myths.source}</p>
+			</SectionIntro>
+		</div>
+
+		<div data-section="gettingStarted" id="gettingStarted">
+			<SectionIntro heading={gettingStarted.heading} para={gettingStarted.para} isBorder>
+				<p>{@html gettingStarted.extraPara}</p>
+			</SectionIntro>
+		</div>
+
+		<div data-section="importance" id="importance">
+			<SectionIntro heading={importance.heading} para={importance.para} isBorder>
+				<p>{@html importance.extraPara}</p>
+			</SectionIntro>
+		</div>
+		<div data-section="final" id="final">
+			<SectionIntro heading={final.heading} para={final.para} />
+		</div>
+	</div>
+
+	<div class="block lg:hidden">
+		{#each navBarMedium as list, index}
+			<details
+				class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+				navBarMedium.length - 1
+					? 'border-b border-[var(--form-border)]'
+					: ''}"
+			>
+				<summary
+					class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+					onclick={(e) => toggleDropdown(e, index)}
+				>
+					<div class="mx-auto flex w-full items-center justify-between gap-4">
+						<h2 class="typography-label">{list}</h2>
+						<div class="justify-self-end">
+							<ChevronDown class="faq-icon transition-transform duration-300" />
+						</div>
+					</div>
+				</summary>
+
+				{#if index == 0}
+					<div data-section="myths" id="myths" class="bg-[var(--landing-bg)]">
+						<SectionIntro heading={intro.heading} para={intro.para} isBorder>
+							<p>{@html intro.extraIntro}</p>
+						</SectionIntro>
+
+						<SectionIntro heading={myths.heading} para={myths.para} isBorder>
+							<p>{@html myths.extraPara}</p>
+							<p>{@html myths.source}</p>
+						</SectionIntro>
+					</div>
+				{:else if index == 1}
+					<div data-section="gettingStarted" id="gettingStarted" class="bg-[var(--landing-bg)]">
+						<SectionIntro heading={gettingStarted.heading} para={gettingStarted.para} isBorder>
+							<p>{@html gettingStarted.extraPara}</p>
+						</SectionIntro>
+					</div>
+				{:else if index == 2}
+					<div data-section="importance" id="importance" class="bg-[var(--landing-bg)]">
+						<SectionIntro heading={importance.heading} para={importance.para} isBorder>
+							<p>{@html importance.extraPara}</p>
+						</SectionIntro>
+					</div>
+				{:else if index == 3}
+					<div data-section="final" id="final" class="bg-[var(--landing-bg)]">
+						<SectionIntro heading={final.heading} para={final.para} />
+					</div>
+				{/if}
+			</details>
+		{/each}
+	</div>
+
+	{#snippet secondary()}
+		<HelpList contents={helpList} isBorder />
+		<ThingsYouShould thinkKnow={thingsYouShouldKnow} disc="list-decimal" containerClass="px-0" />
+	{/snippet}
+</SecondPageLayout>
