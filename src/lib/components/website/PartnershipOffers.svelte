@@ -146,7 +146,7 @@
           <div id="shop" data-section="shop" class="section">
             <div class="border-b border-dividerColor grid gap-4 py-[4rem] lg:grid-cols-5">
               <div class="md:col-span-2 space-y-4">
-                <h2 class="typography-h2 text-text-main">
+                <h2 class="typography-h2 text-[var(--form-text)]">
                   Shop till you drop
                 </h2>
                 <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -207,7 +207,7 @@
           <div id="likeHome" data-section="likeHome" class="section">
             <div class="border-b border-dividerColor grid gap-4 py-[4rem] lg:grid-cols-5">
               <div class="md:col-span-2 space-y-4">
-                <h2 class="typography-h2 text-text-main">
+                <h2 class="typography-h2 text-[var(--form-text)]">
                   There’s no place like home
                 </h2>
                 <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -265,7 +265,7 @@
           <div id="control" data-section="control" class="section">
             <div class="border-b border-dividerColor grid gap-4 py-[4rem] lg:grid-cols-5">
               <div class="md:col-span-2 space-y-4">
-                <h2 class="typography-h2 text-text-main">
+                <h2 class="typography-h2 text-[var(--form-text)]">
                   Control what matters to you
                 </h2>
                 <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -360,7 +360,7 @@
             {#if index == 0}
               <div id="offers" class="bg-white text-black px-[2rem]">
                 <div class="grid gap-4 border-b border-[var(--form-border)] py-[4rem]">
-                  <h2 class="typography-h2 text-text-main">
+                  <h2 class="typography-h2 text-[var(--form-text)]">
                     Current offers
                   </h2>
                   <div class="grid md:grid-cols-2 gap-4">
@@ -382,7 +382,7 @@
               <div id="shop" class="bg-white text-black px-[2rem]">
                 <div class="border-b border-dividerColor grid gap-4 py-[4rem]">
                   <div class="space-y-4">
-                    <h2 class="typography-h2 text-text-main">
+                    <h2 class="typography-h2 text-[var(--form-text)]">
                       Shop till you drop
                     </h2>
                     <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -443,7 +443,7 @@
               <div id="likeHome" class="bg-white text-black px-[2rem]">
                 <div class="border-b border-dividerColor grid gap-4 py-[4rem]">
                   <div class="space-y-4">
-                    <h2 class="typography-h2 text-text-main">
+                    <h2 class="typography-h2 text-[var(--form-text)]">
                       There’s no place like home
                     </h2>
                     <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -501,7 +501,7 @@
               <div id="control" class="bg-white text-black px-[2rem]">
                 <div class="border-b border-dividerColor grid gap-4 py-[4rem]">
                   <div class="space-y-4">
-                    <h2 class="typography-h2 text-text-main">
+                    <h2 class="typography-h2 text-[var(--form-text)]">
                       Control what matters to you
                     </h2>
                     <p class="typography-body-sm text-[var(--form-text-secondary)]">

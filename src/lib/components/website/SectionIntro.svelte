@@ -23,7 +23,7 @@
 	class={`flex w-full flex-col gap-8 ${isBorder ? 'border-b border-[var(--form-border)]' : ''} px-[0.5rem] py-[4rem] text-[var(--form-text)]  lg:pt-[4rem] lg:pb-[8rem] ${containerClass}`}
 >
 	<p class="typography-h2-md text-[var(--form-text)]">
-		{heading}
+		{@html heading}
 	</p>
 
 	<div class="typography-body-md grid gap-4 text-[var(--form-text-secondary)]">

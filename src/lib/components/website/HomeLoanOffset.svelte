@@ -174,7 +174,7 @@
                 {#each content.switchList as switchItems}
                   {#each switchItems.lists as list}
                     <ul class="flex flex-col gap-4">
-                      <h3 class="mb-4 typography-h3 font-semibold text-text-main">
+                      <h3 class="mb-4 typography-h3 font-semibold text-[var(--form-text)]">
                         {list.heading}
                       </h3>
                       {#each list.listItems as item}
@@ -201,7 +201,7 @@
 
           <div id="benefits" data-section="benefits" class="section">
             <div class="pt-[2rem] lg:pt-[4rem] border-b border-[var(--form-border)]">
-              <h2 class="md:text-start typography-h2 text-text-main">
+              <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                 Looking for a home
               </h2>
               <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
@@ -214,7 +214,7 @@
 
           <div id="offset" data-section="offset" class="section">
             <div class="pt-[2rem] lg:pt-[4rem] border-b border-[var(--form-border)]">
-              <h2 class="md:text-start typography-h2 text-text-main">
+              <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                 Home loans with an offset account
               </h2>
               <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
@@ -232,7 +232,7 @@
                   {#if index == 0 || index == 2}
                     <div class="border-2 border-[var(--form-border)] min-h-[25svh] p-[2rem] flex flex-col gap-[3rem]">
                       <div class="flex flex-col gap-4">
-                        <h3 class="typography-h3 font-semibold text-text-main">
+                        <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                           {item.title}
                         </h3>
 
@@ -328,7 +328,7 @@
                     {#each content.switchList as switchItems}
                       {#each switchItems.lists as list}
                         <ul class="flex flex-col gap-4">
-                          <h3 class="mb-4 typography-h3 font-semibold text-text-main">
+                          <h3 class="mb-4 typography-h3 font-semibold text-[var(--form-text)]">
                             {list.heading}
                           </h3>
                           {#each list.listItems as item}
@@ -355,7 +355,7 @@
             {:else if index == 2}
               <div id="benefits" class="bg-white text-black px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem]">
-                  <h2 class="md:text-start typography-h2 text-text-main">
+                  <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     Looking for a home
                   </h2>
                   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
@@ -368,7 +368,7 @@
             {:else if index == 3}
               <div id="offset" class="bg-white text-black px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem]">
-                  <h2 class="md:text-start typography-h2 text-text-main">
+                  <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     Home loans with an offset account
                   </h2>
                   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
@@ -385,7 +385,7 @@
                     {#if idx == 0 || idx == 2}
                       <div class="border-2 border-[var(--form-border)] min-h-[25svh] p-[2rem] flex flex-col gap-[3rem]">
                         <div class="flex flex-col gap-4">
-                          <h3 class="typography-h3 font-semibold text-text-main">
+                          <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                             {item.title}
                           </h3>
 

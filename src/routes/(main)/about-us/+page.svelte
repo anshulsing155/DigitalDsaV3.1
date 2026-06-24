@@ -146,7 +146,7 @@
                     slot="list"
                   >
                     <div class="grid gap-4">
-                      <li class="typography-h3 font-semibold text-text-main">
+                      <li class="typography-h3 font-semibold text-[var(--form-text)]">
                         {member.roleShort}
                       </li>
                       <li>
@@ -222,7 +222,7 @@
                 slot="list"
               >
                 <div class="grid gap-4">
-                  <li class="typography-h3 font-semibold text-text-main">{member.role}</li>
+                  <li class="typography-h3 font-semibold text-[var(--form-text)]">{member.role}</li>
                   <li>
                     {member.para}
                   </li>

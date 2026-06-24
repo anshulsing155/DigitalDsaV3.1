@@ -395,7 +395,7 @@ dispatch("textExtracted", text);
             {#if cardDataList.length > 0}
               <div class="pt-[4rem]">
                 <h3
-                  class="md:text-start typography-h2 text-text-main"
+                  class="md:text-start typography-h2 text-[var(--form-text)]"
                 >
                   {IconCardHeading}
                 </h3>
@@ -433,7 +433,7 @@ dispatch("textExtracted", text);
           >
             {#if forHome.length > 0}
               <h2
-                class="md:text-start typography-h2 text-text-main"
+                class="md:text-start typography-h2 text-[var(--form-text)]"
               >
                 Looking for a home
               </h2>
@@ -471,7 +471,7 @@ dispatch("textExtracted", text);
             <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
               {#if whatNext.length > 0}
                 <h2
-                  class="md:text-start typography-h2 text-text-main"
+                  class="md:text-start typography-h2 text-[var(--form-text)]"
                 >
                   What's next?
                 </h2>
@@ -496,7 +496,7 @@ dispatch("textExtracted", text);
           <div data-section="calculators" id="calculators" class="section">
             <div class="border-b grid gap-4 md:grid-cols-3">
               <h2
-                class="col-span-1 py-[3rem] typography-h2 text-text-main"
+                class="col-span-1 py-[3rem] typography-h2 text-[var(--form-text)]"
               >
                 Tools & calculators
               </h2>
@@ -537,7 +537,7 @@ dispatch("textExtracted", text);
                 {#if cardDataList.length > 0}
                   <div class="pt-[2rem]">
                     <h3
-                      class="md:text-start typography-h2 text-text-main"
+                      class="md:text-start typography-h2 text-[var(--form-text)]"
                     >
                       {IconCardHeading}
                     </h3>
@@ -573,7 +573,7 @@ dispatch("textExtracted", text);
               >
                 {#if forHome.length > 0}
                   <h2
-                    class="md:text-start typography-h2 text-text-main"
+                    class="md:text-start typography-h2 text-[var(--form-text)]"
                   >
                     Looking for a home
                   </h2>
@@ -609,7 +609,7 @@ dispatch("textExtracted", text);
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
                   {#if whatNext.length > 0}
                     <h2
-                      class="md:text-start typography-h2 text-text-main"
+                      class="md:text-start typography-h2 text-[var(--form-text)]"
                     >
                       What's next?
                     </h2>
@@ -636,7 +636,7 @@ dispatch("textExtracted", text);
               >
                 <div class="grid lg:grid-cols-3">
                   <h2
-                    class="lg:col-span-1 pt-[3rem] lg:pb-[3rem] pb-0 typography-h2 text-text-main"
+                    class="lg:col-span-1 pt-[3rem] lg:pb-[3rem] pb-0 typography-h2 text-[var(--form-text)]"
                   >
                     Tools & calculators
                   </h2>

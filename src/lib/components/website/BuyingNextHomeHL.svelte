@@ -204,7 +204,7 @@
 							<div
 								class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 							>
-								<h2 class="typography-h2 py-5 text-center text-text-main dark:text-white">
+								<h2 class="typography-h2 py-5 text-center text-[var(--form-text)] dark:text-white">
 									{content.whychoose.heading}
 								</h2>
 								<div>

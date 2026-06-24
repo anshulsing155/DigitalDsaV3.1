@@ -430,7 +430,7 @@
 		<div class="overlay bg-mainBg">
 			<div class="mx-auto h-screen w-11/12 md:w-10/12 lg:w-9/12">
 				<div class="flex flex-col gap-[2rem] p-[2rem]">
-					<h2 class="typography-h3 font-semibold text-black text-text-main">Popular searches</h2>
+					<h2 class="typography-h3 font-semibold text-black text-[var(--form-text)]">Popular searches</h2>
 					<div class="grid md:grid-cols-2 md:gap-[3rem]">
 						<div class="col-span-1 grid">
 							{#each searches.slice(0, 3) as search}

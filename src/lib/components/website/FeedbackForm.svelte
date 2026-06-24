@@ -237,7 +237,7 @@
   <div class="space-y-6 w-full mx-auto">
     <div class="flex flex-col gap-2 py-5">
       <h2
-        class="md:text-center typography-h2 text-text-main"
+        class="md:text-center typography-h2 text-[var(--form-text)]"
       >
         Feedback matters!
       </h2>

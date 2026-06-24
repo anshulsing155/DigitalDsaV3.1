@@ -132,7 +132,7 @@
           </div>
 
           <div id="benefits" data-section="benefits" class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2 section">
-            <h2 class="md:text-start typography-h2 text-text-main">
+            <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
               Benefits of redraw
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]">
@@ -149,7 +149,7 @@
           </div>
 
           <div id="works" data-section="works" class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2 section">
-            <h2 class="md:text-start typography-h2 text-text-main">
+            <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
               How redraw works
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]">
@@ -197,7 +197,7 @@
             {:else if index == 1}
               <div id="benefits" class="bg-white text-black px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
-                  <h2 class="md:text-start typography-h2 text-text-main">
+                  <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     Benefits of redraw
                   </h2>
                   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]">
@@ -214,7 +214,7 @@
             {:else if index == 3}
               <div id="works" class="bg-white text-black px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
-                  <h2 class="md:text-start typography-h2 text-text-main">
+                  <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     How redraw works
                   </h2>
                   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 border-b border-[var(--form-border)]">

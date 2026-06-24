@@ -111,7 +111,7 @@
       <div id="people" data-section="people">
         <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
           <div class="flex flex-col gap-[1rem] mb-[1rem]">
-            <h2 class="typography-h2 text-text-main">{peoplePromise.heading}</h2>
+            <h2 class="typography-h2 text-[var(--form-text)]">{peoplePromise.heading}</h2>
             <p class="typography-body-sm text-[var(--form-text-secondary)]">
               {peoplePromise.para}
             </p>
@@ -177,7 +177,7 @@
             <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]" px-2">
               <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
                 <div class="flex flex-col gap-[1rem] mb-[1rem]">
-                  <h2 class="typography-h2 text-text-main">{peoplePromise.heading}</h2>
+                  <h2 class="typography-h2 text-[var(--form-text)]">{peoplePromise.heading}</h2>
                   <p class="typography-body-sm text-[var(--form-text-secondary)]">
                     {peoplePromise.para}
                   </p>

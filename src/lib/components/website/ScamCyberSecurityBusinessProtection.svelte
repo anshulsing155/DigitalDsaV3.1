@@ -242,7 +242,7 @@
               >
                 <div class="space-y-[2rem]">
                   <h2
-                    class="md:text-start typography-h2 text-text-main"
+                    class="md:text-start typography-h2 text-[var(--form-text)]"
                   >
                     Protect your business from scams
                   </h2>
@@ -331,7 +331,7 @@
                 class="flex flex-col px-[0.5rem] py-[4rem] gap-[2rem]"
               >
                 <h2
-                  class="md:text-start typography-h2-md text-text-main"
+                  class="md:text-start typography-h2-md text-[var(--form-text)]"
                 >
                   More resources for your business
                 </h2>

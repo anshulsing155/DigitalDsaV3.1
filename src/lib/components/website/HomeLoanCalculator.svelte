@@ -17,7 +17,7 @@
 >
   <div class="flex flex-col gap-10">
     <h2
-      class="typography-h2 text-text-main"
+      class="typography-h2 text-[var(--form-text)]"
     >
       {homeLoanCalculator.heading}
     </h2>

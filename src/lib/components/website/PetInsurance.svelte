@@ -312,7 +312,7 @@
         <div class="grid grid-cols-3 gap-[1rem]">
           <div class="">
             <h2
-              class="typography-h2 text-text-main col-span-3 lg:col-span-1"
+              class="typography-h2 text-[var(--form-text)] col-span-3 lg:col-span-1"
             >
               Compare pet insurance
             </h2>
@@ -430,11 +430,11 @@
         <div id="investment" data-section="investment" class="py-[2rem]">
           <div class="space-y-5">
             <h2
-              class="md:text-start typography-h2 text-text-main"
+              class="md:text-start typography-h2 text-[var(--form-text)]"
             >
               More on those investment options
             </h2>
-            <h4 class="typography-h3 font-semibold text-text-main">
+            <h4 class="typography-h3 font-semibold text-[var(--form-text)]">
               Invest in a broad range of ETFs to suit your preferences
             </h4>
             <p class="font-subPara typography-body-md">
@@ -454,7 +454,7 @@
             class="flex flex-col gap-[1rem] border-b border-[var(--form-border)] py-[2rem]"
           >
             <h2
-              class="typography-h2 text-text-main"
+              class="typography-h2 text-[var(--form-text)]"
             >
               Investing learning hub
             </h2>
@@ -554,11 +554,11 @@
             >
               <div class="space-y-5">
                 <h2
-                  class="md:text-start typography-h2 text-text-main"
+                  class="md:text-start typography-h2 text-[var(--form-text)]"
                 >
                   More on those investment options
                 </h2>
-                <h4 class="typography-h3 font-semibold text-text-main">
+                <h4 class="typography-h3 font-semibold text-[var(--form-text)]">
                   Invest in a broad range of ETFs to suit your preferences
                 </h4>
                 <p class="font-subPara typography-body-md">
@@ -582,7 +582,7 @@
                 class="flex flex-col gap-[1rem] border-b border-[var(--form-border)] py-[2rem]"
               >
                 <h2
-                  class="typography-h2 text-text-main"
+                  class="typography-h2 text-[var(--form-text)]"
                 >
                   Investing learning hub
                 </h2>
@@ -622,7 +622,7 @@
           class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-2 justify-center w-full order-2 lg:order-first"
         >
           <h2
-            class="md:text-start typography-h2 text-text-main"
+            class="md:text-start typography-h2 text-[var(--form-text)]"
           >
             Get started
           </h2>
@@ -646,7 +646,7 @@
         class="grid lg:grid-cols-3 py-[2rem] border-y border-[var(--form-border)] gap-[1rem]"
       >
         <h2
-          class="typography-h2 text-text-main"
+          class="typography-h2 text-[var(--form-text)]"
         >
           FAQs
         </h2>

@@ -261,7 +261,7 @@
 
 							<div class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem]">
 								<div class="">
-									<h2 class="typography-h2 mb-[2rem] grid text-center text-text-main">
+									<h2 class="typography-h2 mb-[2rem] grid text-center text-[var(--form-text)]">
 										Comparison of Alternative Financing Options for Buying a Plot
 									</h2>
 								</div>

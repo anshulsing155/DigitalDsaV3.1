@@ -9,7 +9,7 @@
 </script>
 
 <section class="grid lg:grid-cols-7 gap-[2rem] lg:gap-4 py-[3rem]" >
-    <div class="lg:col-span-3 grid typography-h2 text-text-main">
+    <div class="lg:col-span-3 grid typography-h2 text-[var(--form-text)]">
         {support.title}
     </div>
     <div class="lg:col-span-4 grid gap-[2rem]">

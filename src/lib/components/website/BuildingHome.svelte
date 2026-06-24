@@ -302,7 +302,7 @@ window.removeEventListener("scroll", handleScroll);
           <div data-section="calculators" id="calculators" class="section">
             <div class="border-b grid grid-cols-3 gap-4">
               <h2
-                class="col-span-1 pt-[3rem] typography-h2 text-text-main"
+                class="col-span-1 pt-[3rem] typography-h2 text-[var(--form-text)]"
               >
                 Tools & calculators
               </h2>
@@ -523,7 +523,7 @@ window.removeEventListener("scroll", handleScroll);
               >
                 <div class="">
                   <h2
-                    class="pt-[3rem] typography-h2 text-text-main"
+                    class="pt-[3rem] typography-h2 text-[var(--form-text)]"
                   >
                     Tools & calculators
                   </h2>

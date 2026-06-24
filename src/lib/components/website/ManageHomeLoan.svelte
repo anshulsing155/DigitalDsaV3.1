@@ -114,14 +114,14 @@
         <div class="hidden lg:block px-[2rem] lg:px-[4rem]">
           <div id="repayment">
             <div class="py-[4rem] border-b border-[var(--form-border)]">
-              <h2 class="mb-[3rem] md:text-start typography-h2 text-text-main">
+              <h2 class="mb-[3rem] md:text-start typography-h2 text-[var(--form-text)]">
                 Repayment & redraw
               </h2>
               {#each content.repayment as steps}
                 <div class="grid grid-cols-3 justify-between gap-4">
                   {#each steps.data1 as data1}
                     <div class="flex flex-col gap-[1.5rem]">
-                      <h3 class="typography-h3 font-semibold text-text-main">
+                      <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                         {data1.heading}
                       </h3>
                       <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -152,7 +152,7 @@
                   {/each}
                   {#each steps.data2 as data2}
                     <div class="flex flex-col gap-[1.5rem]">
-                      <h3 class="typography-h3 font-semibold text-text-main">
+                      <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                         {data2.heading}
                       </h3>
                       <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -173,7 +173,7 @@
                   {/each}
                   {#each steps.data3 as data3}
                     <div class="flex flex-col gap-[1.5rem]">
-                      <h3 class="typography-h3 font-semibold text-text-main">
+                      <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                         {data3.heading}
                       </h3>
                       <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -225,13 +225,13 @@
 
           <div id="benefits">
             <div class="py-[4rem] border-b border-[var(--form-border)]">
-              <h2 class="mb-[3rem] md:text-start typography-h2 text-text-main">
+              <h2 class="mb-[3rem] md:text-start typography-h2 text-[var(--form-text)]">
                 Features & benefits
               </h2>
               <div class="grid grid-cols-4 justify-between gap-4">
                 {#each content.benefits as data}
                   <div class="flex flex-col gap-[1.5rem]">
-                    <h3 class="typography-h3 font-semibold text-text-main">
+                    <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                       {data.heading}
                     </h3>
                     <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -257,12 +257,12 @@
 
           <div id="support">
             <div class="flex flex-col gap-[3rem] border-b border-[var(--form-border)] py-[2rem] lg:gap-[3rem] lg:py-[4rem]">
-              <h2 class="md:text-start typography-h2 text-text-main">
+              <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                 Tools & support
               </h2>
               <div class="grid grid-cols-3 gap-[2rem]">
                 <div class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor">
-                  <h3 class="typography-h3 font-semibold text-text-main">
+                  <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                     {content.support.heading}
                   </h3>
                   <ul class="list-disc pl-4 flex flex-col gap-2">
@@ -281,7 +281,7 @@
                   >{content.support.btnName}</a>
                 </div>
                 <div class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor">
-                  <h3 class="typography-h3 font-semibold text-text-main">
+                  <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                     How is interest calculated on my home loan?
                   </h3>
                   <a
@@ -344,7 +344,7 @@
                 {#each content.loanSupport.data as data}
                   <div class="grid gap-4">
                     {#if data.heading}
-                      <h3 class="typography-h3 font-semibold text-text-main">
+                      <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                         {data.heading}
                       </h3>
                     {/if}
@@ -378,14 +378,14 @@
               {#if index === 0}
                 <div id="repayment" class="bg-white text-black p-4 md:px-[2rem] md:py-[1rem]">
                   <div class="py-[4rem] border-0">
-                    <h2 class="mb-[3rem] md:text-start typography-h2 text-text-main">
+                    <h2 class="mb-[3rem] md:text-start typography-h2 text-[var(--form-text)]">
                       Repayment & redraw
                     </h2>
                     {#each content.repayment as steps}
                       <div class="grid md:grid-cols-3 justify-between md:gap-4 gap-[4rem]">
                         {#each steps.data1 as data1}
                           <div class="flex flex-col gap-[1.5rem]">
-                            <h3 class="typography-h3 font-semibold text-text-main">
+                            <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                               {data1.heading}
                             </h3>
                             <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -416,7 +416,7 @@
                         {/each}
                         {#each steps.data2 as data2}
                           <div class="flex flex-col gap-[1.5rem]">
-                            <h3 class="typography-h3 font-semibold text-text-main">
+                            <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                               {data2.heading}
                             </h3>
                             <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -437,7 +437,7 @@
                         {/each}
                         {#each steps.data3 as data3}
                           <div class="flex flex-col gap-[1.5rem]">
-                            <h3 class="typography-h3 font-semibold text-text-main">
+                            <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                               {data3.heading}
                             </h3>
                             <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -490,13 +490,13 @@
               {:else if index == 3}
                 <div id="benefits" class="bg-white text-black md:px-[2rem] p-4 md:py-[1rem]">
                   <div class="py-[4rem]">
-                    <h2 class="mb-[3rem] md:text-start typography-h2 text-text-main">
+                    <h2 class="mb-[3rem] md:text-start typography-h2 text-[var(--form-text)]">
                       Features & benefits
                     </h2>
                     <div class="grid md:grid-cols-2 justify-between gap-[3rem]">
                       {#each content.benefits as data}
                         <div class="flex flex-col gap-4">
-                          <h3 class="typography-h3 font-semibold text-text-main">
+                          <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                             {data.heading}
                           </h3>
                           <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -522,12 +522,12 @@
               {:else if index == 5}
                 <div id="support" class="bg-white text-black md:px-[2rem] p-4 md:py-[1rem]">
                   <div class="flex flex-col gap-[3rem] py-[2rem] lg:gap-[3rem] lg:py-[4rem]">
-                    <h2 class="md:text-start typography-h2 text-text-main">
+                    <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                       Tools & support
                     </h2>
                     <div class="grid md:grid-cols-2 gap-[2rem]">
                       <div class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor">
-                        <h3 class="typography-h3 font-semibold text-text-main">
+                        <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                           {content.support.heading}
                         </h3>
                         <ul class="list-disc pl-4 flex flex-col gap-2">
@@ -546,7 +546,7 @@
                         >{content.support.btnName}</a>
                       </div>
                       <div class="flex flex-col gap-[2rem] p-4 justify-center border border-dividerColor">
-                        <h3 class="typography-h3 font-semibold text-text-main">
+                        <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                           How is interest calculated on my home loan?
                         </h3>
                         <a
@@ -616,7 +616,7 @@
                       {#each content.loanSupport.data as data}
                         <div class="grid gap-2">
                           {#if data.heading}
-                            <h3 class="typography-h3 font-semibold text-text-main">
+                            <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                               {data.heading}
                             </h3>
                           {/if}

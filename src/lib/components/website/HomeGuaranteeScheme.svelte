@@ -170,7 +170,7 @@
               </div>
               {#if cardDataListWithClicks.length > 0}
                 <div class="pt-[4rem]">
-                  <h3 class="md:text-start typography-h2 text-text-main">
+                  <h3 class="md:text-start typography-h2 text-[var(--form-text)]">
                     {content.IconCardHeading}
                   </h3>
                   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
@@ -184,7 +184,7 @@
 
             <div id="concessions" data-section="concessions">
               <div class="grid grid-cols-3 border-b border-[var(--form-border)] gap-[2rem]">
-                <h2 class="typography-h2 text-text-main col-span-1 pt-[8rem]">
+                <h2 class="typography-h2 text-[var(--form-text)] col-span-1 pt-[8rem]">
                   Other assistance grants & concessions
                 </h2>
                 <div class="col-span-2">
@@ -201,7 +201,7 @@
                       {#each item.thirdBox as details}
                         <div class="border-2 border-[var(--form-border)] min-h-[50svh] h-full p-[1rem] md:p-[2rem] flex flex-col justify-between">
                           <div class="flex flex-col gap-4">
-                            <h3 class="typography-h3 font-semibold text-text-main">
+                            <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                               {details.title}
                             </h3>
                             <div class="flex flex-col gap-2">
@@ -241,7 +241,7 @@
                             <img src={details.src} alt={details.alt} />
                           </div>
                           <div class="p-[1rem] md:p-[2rem] flex flex-col gap-4">
-                            <h3 class="typography-h3 font-semibold text-text-main">
+                            <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
                               {details.heading}
                             </h3>
                             <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -319,7 +319,7 @@
                 <WhyChoose facilities={content.apply} gridCol={3} />
                 {#if cardDataListWithClicks.length > 0}
                   <div class="pt-[2rem]">
-                    <h3 class="md:text-start typography-h2 text-text-main">
+                    <h3 class="md:text-start typography-h2 text-[var(--form-text)]">
                       {content.IconCardHeading}
                     </h3>
                     <div class="grid md:grid-cols-2 lg:grid-cols-4">

@@ -31,10 +31,10 @@
     <!-- <div
       class="flex flex-col py-[2rem] lg:py-[4rem] px-[1rem] lg:px-[4rem] gap-[1rem]"
     >
-      <h2 class="typography-h2 text-text-main">
+      <h2 class="typography-h2 text-[var(--form-text)]">
         {conclusion.heading}
       </h2>
-      <h3 class="typography-h3 font-semibold text-text-main">
+      <h3 class="typography-h3 font-semibold text-[var(--form-text)]">
         {conclusion.subHeading}
       </h3>
       <p class="typography-body-md text-[var(--form-text-secondary)]">

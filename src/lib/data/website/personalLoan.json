@@ -261,16 +261,16 @@
 	"loanEligibilityCriteria": {
 		"heading": "Are You Eligible to Apply for a Personal Loan?",
 		"subPara": [
-			"<span class=\"typography-h3 font-semibold text-text-main\">  1. Age Requirement</span>",
+			"<span class=\"typography-h3 font-semibold text-[var(--form-text)]\">  1. Age Requirement</span>",
 			"You must be at least <span class=\"font-semibold\">18 years old </span>  (or 21 in some cases, depending on the lender).\n        This ensures that you are legally eligible to enter into a financial agreement.\n        Some lenders may also have an upper age limit (typically 60–65 years for salaried individuals and up to 70 years for self-employed applicants).",
-			"<span class=\"typography-h3 font-semibold text-text-main\">  2. Minimum Income Requirement  </span>",
+			"<span class=\"typography-h3 font-semibold text-[var(--form-text)]\">  2. Minimum Income Requirement  </span>",
 			"Lenders require borrowers to meet a  <span class=\"font-semibold\">  minimum income threshold</span> to ensure their ability to repay the loan.",
 			"<ul class=\"list-disc pl-5\">\n           <li>Your employment type (salaried or self-employed) </li>\n          <li> The city you reside in (higher thresholds in metro cities)</li>\n          <li> The lender's internal criteria</li>\n          </ul>",
 			"For example, some banks may require a  <span class=\"font-semibold\">minimum monthly income of ₹20,000 </span> , while others may set a higher or lower requirement.",
-			"<span class=\"typography-h3 font-semibold text-text-main\"> 3. Employment and Regular Income  </span>",
+			"<span class=\"typography-h3 font-semibold text-[var(--form-text)]\"> 3. Employment and Regular Income  </span>",
 			"A stable and verifiable  <span class=\"font-semibold\"> </span> source of income is essential.",
 			"<ul class=\"list-disc pl-5\"> \n          <li> <span class=\"font-semibold\"> Salaried Employees –</span> Must have a stable job in a reputable organization with at least 6 months to 1 year of continuous employment. </li>\n          <li> <span class=\"font-semibold\">Self-Employed Individuals – </span> Should have a steady income from a business, freelance work, or profession with at least 2–3 years of stable financial records. </li>\n          <li> <span class=\"font-semibold\">Pensioners –  </span> Some lenders offer loans to pensioners with a fixed monthly pension.</li>\n          </ul>",
-			"<span class=\"typography-h3 font-semibold text-text-main\">  4. Good Credit Rating </span>",
+			"<span class=\"typography-h3 font-semibold text-[var(--form-text)]\">  4. Good Credit Rating </span>",
 			"A  <span class=\"font-semibold\">good credit score (typically 700 or above) </span>  improves loan approval chances and helps secure lower interest rates.",
 			" <ul class=\"list-disc pl-5\">\n          <li>  <span class=\"font-semibold\"> Credit history –</span>  Previous loans, credit card usage, repayment patterns </li>\n          <li>  <span class=\"font-semibold\"> Debt-to-income ratio –</span>  Your total monthly debt compared to your income</li>\n          <li>  <span class=\"font-semibold\"> Financial discipline –</span>  Timely payments of past loans and bills</li>\n           </ul>",
 			"If your credit score is low, improving it through <span class=\"font-semibold\"> timely repayments, reducing outstanding debt, and avoiding unnecessary credit applications</span>  can enhance eligibility."

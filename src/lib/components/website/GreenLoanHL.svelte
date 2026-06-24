@@ -276,7 +276,7 @@
 
         <div id="faq" data-section="faq" class="grid lg:grid-cols-5 py-[2rem] border-b">
           <div class="lg:col-span-2">
-            <h2 class="typography-h2 text-text-main">
+            <h2 class="typography-h2 text-[var(--form-text)]">
               FAQs
             </h2>
           </div>
@@ -369,7 +369,7 @@
             </div>
           {:else if index == 2}
             <div class="bg-white text-black px-[2rem] py-[1rem] flex flex-col gap-[1rem]" id="apply">
-              <h3 class="typography-h2 text-text-main">
+              <h3 class="typography-h2 text-[var(--form-text)]">
                 How to apply
               </h3>
               <div class="grid gap-5 overflow-hidden typography-body-md text-[var(--form-text-secondary)]">
@@ -392,7 +392,7 @@
           {:else if index == 3}
             <div class="bg-white text-black px-[2rem]" id="disclosure">
               <div class="lg:col-span-2">
-                <h2 class="typography-h2 text-text-main">
+                <h2 class="typography-h2 text-[var(--form-text)]">
                   FAQs
                 </h2>
               </div>

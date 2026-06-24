@@ -142,7 +142,7 @@
           <div id="started" data-section="started" class="section">
             <div class="grid gap-[2rem] border-b border-[var(--form-border)] py-[4rem]">
               <div class="grid gap-6">
-                <h2 class="typography-h2 text-text-main">
+                <h2 class="typography-h2 text-[var(--form-text)]">
                   Getting started
                 </h2>
                 <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -234,7 +234,7 @@
 
           <div id="tools" data-section="tools" class="section">
             <div class="border-b grid gap-4 md:grid-cols-3">
-              <h2 class="col-span-1 py-[3rem] typography-h2 text-text-main">
+              <h2 class="col-span-1 py-[3rem] typography-h2 text-[var(--form-text)]">
                 Tools & calculators
               </h2>
               <div class="col-span-2">
@@ -264,7 +264,7 @@
               <div id="started" class="bg-white text-black px-[2rem]">
                 <div class="grid gap-[2rem] border-b border-[var(--form-border)] py-[4rem]">
                   <div class="grid gap-6">
-                    <h2 class="typography-h2 text-text-main">
+                    <h2 class="typography-h2 text-[var(--form-text)]">
                       Getting started
                     </h2>
                     <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -356,7 +356,7 @@
             {:else if index == 4}
               <div id="tools" class="bg-white text-black px-[2rem]">
                 <div class="border-b grid gap-4 py-[3rem]">
-                  <h2 class="typography-h2 text-text-main">
+                  <h2 class="typography-h2 text-[var(--form-text)]">
                     Tools & calculators
                   </h2>
                   <div>

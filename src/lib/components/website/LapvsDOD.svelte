@@ -28,7 +28,7 @@
 			class="w-full border-b border-[var(--form-border)] px-[0.5rem] py-[4rem] lg:px-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]"
 		>
 			<div>
-				<h2 class="typography-h2-md mb-[4rem] grid text-center text-text-main">
+				<h2 class="typography-h2-md mb-[4rem] grid text-center text-[var(--form-text)]">
 					{content.comparison.heading}
 					<span class="italic underline decoration-primary decoration-4 underline-offset-4">
 						{content.comparison.italicHeading}
