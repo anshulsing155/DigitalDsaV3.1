@@ -137,7 +137,7 @@
 		<div class="lg:hidden">
 			{#each content.navBarMedium as list, index}
 				<details
-					class="dropdown bg-darkColor col-span-3 text-[var(--form-text)] {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.navBarMedium.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"

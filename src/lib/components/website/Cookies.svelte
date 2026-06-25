@@ -65,11 +65,11 @@
 	keywords={content.seo.keywords}
 />
 
-<section>
+<section class="content">
 	<PageFullTextDesign {pageData}>
 		<div class="hidden lg:block">
 			<StickyNavbar navList={subList} {activeSection} />
-			<div class="lg:px-[4rem]">
+			<div class="lg:px-16">
 				<div id="cookies" data-section="cookies">
 					<ThingsYouShould
 						thinkKnow={cookies}
@@ -115,19 +115,19 @@
 
 				<div id="deleteCookies" data-section="deleteCookies" class="py-[2rem]">
 					<Payments supportHeading={deleteCookies.heading}>
-						<div class="flex flex-col gap-[2rem]">
+						<div class="flex flex-col gap-[2rem] text-[var(--form-text-secondary)]">
 							{#each deleteCookies.subPara.slice(0, 3) as paragraph}
-								<p>{paragraph}</p>
+								<p class="typography-body-md text-[var(--form-text-secondary)]">{paragraph}</p>
 							{/each}
-							<p>{deleteCookies.subPara[3]}</p>
+							<p class="typography-body-md text-[var(--form-text-secondary)]">{deleteCookies.subPara[3]}</p>
 							{#each deleteCookies.browserInstructions as browser}
 								<div class="flex flex-col gap-4">
 									<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
 										{browser.heading}
 									</h2>
 									<div class="flex flex-col gap-4">
-										<p>{@html browser.para}</p>
-										<p>
+										<p class="typography-body-md text-[var(--form-text-secondary)]">{@html browser.para}</p>
+										<p class="typography-body-md text-[var(--form-text-secondary)]">
 											For more instructions visit <span
 												class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
 												><a href={browser.link.url}>{browser.link.text}</a></span
@@ -144,13 +144,13 @@
 		<div class="lg:hidden">
 			{#each navBarMedium as list, index}
 				<details
-					class="dropdown border-bgBtn bg-darkColor col-span-3 text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.navBarMedium.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						class="bg-ddsa-gradient-primary col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -177,7 +177,7 @@
 											<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
 												{type.title}
 											</h2>
-											<p>
+											<p class="typography-body-md text-[var(--form-text-secondary)]">
 												{type.desc}
 											</p>
 										</div>
@@ -206,17 +206,17 @@
 							<Payments supportHeading={deleteCookies.heading}>
 								<div class="flex flex-col gap-[2rem]">
 									{#each deleteCookies.subPara.slice(0, 3) as paragraph}
-										<p>{paragraph}</p>
+										<p class="typography-body-md text-[var(--form-text-secondary)]">{paragraph}</p>
 									{/each}
-									<p>{deleteCookies.subPara[3]}</p>
+									<p class="typography-body-md text-[var(--form-text-secondary)]">{deleteCookies.subPara[3]}</p>
 									{#each deleteCookies.browserInstructions as browser}
 										<div class="flex flex-col gap-2">
 											<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
 												{browser.heading}
 											</h2>
 											<div class="flex flex-col gap-4 py-[1rem]">
-												<p>{@html browser.para}</p>
-												<p>
+												<p class="typography-body-md text-[var(--form-text-secondary)]">{@html browser.para}</p>
+												<p class="typography-body-md text-[var(--form-text-secondary)]">
 													For more instructions visit <span
 														class="text-[var(--ddsa-info-text)] underline underline-offset-4 hover:no-underline"
 														><a href={browser.link.url}>{browser.link.text}</a></span

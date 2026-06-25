@@ -340,4 +340,48 @@ Tokens are the foundation of the design system. */
 	--shadow-primary: rgba(203, 153, 126, 0.2);
 	--shadow-accent: rgba(221, 190, 169, 0.2);
 	--shadow-ddsa-accent: rgba(221, 190, 169, 0.1);
+
+	/* Legacy Fonts Compatibility */
+	--font-FirstHead: 'Poppins', sans-serif;
+	--font-SecHead: 'Poppins', sans-serif;
+	--font-ThirdHead: 'Poppins', sans-serif;
+	--font-FourthHead: 'Poppins', sans-serif;
+	--font-FifthHead: 'Poppins', sans-serif;
+	--font-Paragraph: 'Poppins', sans-serif;
+	--font-SubPara: 'Poppins', sans-serif;
+
+	/* Legacy Colors Compatibility */
+	--color-btnBg: #ffcc00;
+	--color-underlineBg: #F0CA30;
+	--color-dividerColor: #E9E9E9;
+	--color-borderColor: #E3E3E3;
+	--color-linkColor: #1175BC;
+	--color-deActiveLinkColor: #ef4444;
+	--color-darkColor: #231F20;
+	--color-mainBg: #F4F4F4;
+	--color-iconColor: #4F4C4D;
+	--color-dangerColor: #ef4444;
+	--color-secYello: #FAEC20;
+	--color-grayColor: #F3F4F6;
+
+	/* Legacy Font Sizes Compatibility */
+	--font-size-subHeadingClamp: clamp(20px, 4vw, 40px);
+	--font-size-paraGraphClamp: clamp(12px, 3vw, 40px);
+	--font-size-subParaClamp: clamp(12px, 2vw, 40px);
+	--font-size-navFont: 1rem;
+	--font-size-headFont: 2.5rem;
+	--font-size-mobHeadFont: 2.2rem;
+	--font-size-subHeadFont: 2rem;
+	--font-size-minHeadFont: 1.75rem;
+	--font-size-miniHeadFont: 1.5rem;
+	--font-size-mobSubHead: 1.4rem;
+	--font-size-minSubHead: 1.2rem;
+	--font-size-miniSubHead: 1.1rem;
+	--font-size-paraFont: 1rem;
+	--font-size-subParaFont: 0.9rem;
+	--font-size-minParaFont: 0.85rem;
+	--font-size-miniParaFont: 0.75rem;
+	--font-size-leastMiniFont: 0.72rem;
+	--font-size-newLeastMiniFont: 0.62rem;
 }
+

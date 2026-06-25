@@ -11,6 +11,7 @@
 			reverse?: boolean;
 		};
 		isBorder?: boolean;
+		paddingClass?: string;
 		children?: import('svelte').Snippet;
 	};
 
@@ -24,6 +25,7 @@
 			reverse: false
 		},
 		isBorder = false,
+		paddingClass = 'lg:px-16',
 		children
 	}: Props = $props();
 </script>
@@ -31,7 +33,7 @@
 <div
 	class="relative grid items-start gap-8 space-x-20 {isBorder
 		? 'border-b border-[var(--form-border)]'
-		: ''} px-2 py-16 md:gap-12 lg:grid-cols-2 lg:px-16 lg:py-0 lg:pt-16 lg:pb-32"
+		: ''} px-2 py-16 md:gap-12 lg:grid-cols-2 {paddingClass} lg:py-0 lg:pt-16 lg:pb-32"
 >
 	<!-- Image -->
 	<div

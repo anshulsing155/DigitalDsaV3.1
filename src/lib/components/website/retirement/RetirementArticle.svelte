@@ -7,62 +7,9 @@
 	import HelpList from '../HelpList.svelte';
 	import ThingsYouShould from '../ThingsYouShould.svelte';
 	import type { RetirementArticleData } from '$lib/data/website/retirementData';
+	import secureRetirementContent from '$lib/data/website/secureRetirement.json';
 
 	let { article }: { article: RetirementArticleData } = $props();
-
-	// Common footer/support data matching other website pages
-	const helpListContents = {
-		heading: "We're here to help",
-		xlGridCol: 4,
-		borderBottom: false,
-		cards: [
-			{
-				heading: 'Know your borrowing power',
-				para: 'Book instantly to speak to a home loan specialist at a time that suits you',
-				icon: '/icons/calc.svg',
-				altName: 'icons-calc',
-				url: '/calculators/emi-calculator'
-			},
-			{
-				heading: 'Check loan offers',
-				para: 'In as little as 10 minutes and tailored exactly as per your financial profile.',
-				icon: '/icons/manageLoan2.svg',
-				altName: 'Alert Icon',
-				url: '/get-started/how-can-we-help'
-			},
-			{
-				heading: 'Contact us',
-				para: 'Fast-track your call and connect with a specialist in the DigitalDSA.',
-				icon: '/icons/contact.svg',
-				altName: 'Alert Icon',
-				url: '/contact'
-			},
-			{
-				heading: 'Message us',
-				para: 'Get instant help from our online assistants or chat to a specialist.',
-				icon: '/icons/msg.svg',
-				altName: 'Alert Icon',
-				url: '/contact'
-			}
-		]
-	};
-
-	const thingsYouShouldKnow = {
-		heading: 'Things you should know',
-		paraGraph: [
-			'Investment products are subject to market risks. Read all scheme-related documents carefully before investing.',
-			'Returns are not guaranteed and can vary based on market conditions.',
-			'Interest rates mentioned are indicative and subject to change by respective institutions.',
-			'Tax implications vary based on individual financial situations. Consult a tax advisor before investing.'
-		]
-	};
-
-	const messageUsContents = {
-		cardImage: '/images/message.jpg',
-		cardAltName: 'message-us',
-		cardHeading: 'Message us 24/7',
-		reverse: true
-	};
 </script>
 
 <Seo
@@ -178,19 +125,29 @@
 		</div>
 
 		<!-- Message Us Section -->
-		<TwoColumnWithImage contents={messageUsContents}>
+		<TwoColumnWithImage
+			contents={{
+				cardImage: secureRetirementContent.messageUsPromoContents.cardImage,
+				cardAltName: secureRetirementContent.messageUsPromoContents.cardAltName,
+				cardHeading: secureRetirementContent.messageUsPromoContents.cardHeading,
+				reverse: secureRetirementContent.messageUsPromoContents.reverse
+			}}
+		>
 			<p class="typography-body-md text-[var(--form-text-secondary)] mb-6">
-				Get instant help from the Digital DSA app or connect with a specialist who can message you back.
-				You’ll need Digital DSA app notifications turned on so you know when you’ve received a reply.
+				{secureRetirementContent.messageUsPromoContents.para}
 			</p>
 			<div class="w-auto">
-				<Button link="/contact" btnClass="btn-secondary" btnName="Message us" />
+				<Button
+					link={secureRetirementContent.messageUsPromoContents.btnLink}
+					btnClass="btn-secondary"
+					btnName={secureRetirementContent.messageUsPromoContents.btnName}
+				/>
 			</div>
 		</TwoColumnWithImage>
 
 		<div slot="secondary">
-			<HelpList contents={helpListContents} />
-			<ThingsYouShould thinkKnow={thingsYouShouldKnow} disc="list-decimal" containerClass="px-0" />
+			<HelpList contents={secureRetirementContent.commonHelpList} />
+			<ThingsYouShould thinkKnow={secureRetirementContent.commonThingsYouShould} disc="list-decimal" containerClass="px-0" />
 		</div>
 	</NewPageLayout>
 </section>

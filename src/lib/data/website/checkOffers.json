@@ -1,0 +1,271 @@
+{
+  "seo": {
+    "title": "Unlock the deals on fresh Loan or Balance Transfer with Digital DSA",
+    "image": "/images/joyful-office-girl-watching-offer-from-DigitalDSA.jpg",
+    "description": "Check offers for a fresh loan or balance transfer in minutes. Compare lenders, check offers, and get pre-approval with Digital DSA today!",
+    "keywords": "Home loan online application, Best home loan offers, Home loan balance transfer, Compare home loan lenders, Home loan pre-approval, Low-interest home loans, Increase home loan amount, Home loan top-up facility, Switch home loan lender, Overdraft facility on home loan"
+  },
+  "pageData": {
+    "coverImage": "/images/joyful-office-girl-watching-offer-from-DigitalDSA.jpg",
+    "coverAlt": "photo of a joyful girl watching unbelievable offers on loan , from DigitalDSA",
+    "classStyle": "object-cover xl:h-[120svh] 3xl:max-h-[70svh]",
+    "heading": "Unlock Exclusive Offers : <br> <span class = \"text-miniHeadFont\"> Personalized. Transparent. Hassle-Free </span>",
+    "para": "A quick and hassle-free online walkthrough to confidently discover the <strong>best lender</strong> for your <strong>new loan</strong> or <strong>balance transfer</strong>—no guesswork, just the right choice.",
+    "actionBtns": [
+      {
+        "btnName": "Check offers from all banks",
+        "btnLink": "/get-started",
+        "btnColor": "#ffcc00"
+      }
+    ]
+  },
+  "navList": {
+    "items": [
+      {
+        "name": "Types of loan",
+        "targetId": "types"
+      },
+      {
+        "name": "How it works ?",
+        "targetId": "works"
+      },
+      {
+        "name": "Your existing loan",
+        "targetId": "existing"
+      },
+      {
+        "name": "Tools & calculators",
+        "targetId": "tools"
+      }
+    ],
+    "actionBtns": [
+      {
+        "btnName": "Check offers from all banks",
+        "btnLink": "/get-started",
+        "btnColor": "#ffcc00"
+      }
+    ]
+  },
+  "loanTypes": {
+    "heading": "Types of loan",
+    "listItem": [
+      {
+        "title": "Home Loans",
+        "icon": "/icons/home.svg",
+        "altName": "home-loan-icon",
+        "url": "home-loan",
+        "link": "/home-loan",
+        "desc": "Compare top home loan options to finance your dream home, transfer an existing home loan for better interest rates, or explore top-up loans for additional funds.",
+        "btnName": "Explore now"
+      },
+      {
+        "title": "Plot Loans",
+        "icon": "/icons/plotLoans.svg",
+        "altName": "plot-loan-icon",
+        "url": "plot-loan",
+        "link": "/plot-loan",
+        "desc": "Find the best financing options for purchasing a residential or commercial plot, or explore construction loans to build your property as per your needs.",
+        "btnName": "Explore now"
+      },
+      {
+        "title": "Loan Against Property",
+        "icon": "/icons/lap.svg",
+        "altName": "lap-icon",
+        "url": "lap",
+        "link": "/lap",
+        "desc": "Leverage your residential, commercial, or industrial property to secure funds for business expansion, education, or personal financial needs.",
+        "btnName": "Explore now"
+      },
+      {
+        "title": "Personal Loans",
+        "icon": "/icons/personalLoan.svg",
+        "altName": "personal-loan-icon",
+        "url": "personal-loan",
+        "link": "/personal-loan",
+        "desc": "Explore flexible personal loan options for urgent financial needs, weddings, vacations, or any other personal expenses, without the need for collateral.",
+        "btnName": "Explore now"
+      },
+      {
+        "title": "Business Loans",
+        "icon": "/icons/business.svg",
+        "altName": "business-loan-icon",
+        "url": "business-loan",
+        "link": "/business-loan",
+        "desc": "Compare financing solutions for businesses, including working capital loans, term loans, and overdraft facilities to efficiently manage cash flow.",
+        "btnName": "Explore now"
+      },
+      {
+        "title": "Professional Loans",
+        "icon": "/icons/professionalLoan.svg",
+        "altName": "professional-loan-icon",
+        "url": "professional-loan",
+        "link": "/professional-loan",
+        "desc": "Tailored loan solutions for professionals like doctors, chartered accountants, and architects to grow their practice, purchase equipment, or manage expenses.",
+        "btnName": "Explore now"
+      }
+    ]
+  },
+  "howItWorks": {
+    "heading": "How it works ?",
+    "list": [
+      {
+        "heading": "Choose your loan type <br/> i.e. <span class=\"font-Paragraph\">(<span class=\"font-FourthHead\">H</span>ome loan, <span class=\"font-FourthHead\">P</span>lot loan, <span class=\"font-FourthHead\">P</span>ersonal loan, <span class=\"font-FourthHead\">P</span>rofessional loan, <span class=\"font-FourthHead\">B</span>usiness loan)  </span>"
+      },
+      {
+        "heading": "Add your relevant details"
+      },
+      {
+        "heading": "Compare your preferred bank with the top bank offers and get the best deal for you."
+      },
+      {
+        "heading": "We match you with the best loan options—100% free, based on your details."
+      }
+    ],
+    "listSecPara": "If you have more than 2 borrowers (other than spouse), it's best to <a href=\"/appointment\" class=\"underline underline-offset-4 hover:no-underline\">book an appointment</a> first.<br>If you're self-employed talk to us about financing your home loan and business banking needs together."
+  },
+  "buttonBanner": {
+    "heading": "Access your loan report instantly in PDF.",
+    "btnName": "Get Loan Report",
+    "btnColor": "#ffcc00"
+  },
+  "changeExistingLoan": {
+    "heading": "Change your existing loan",
+    "xlGridCol": 3,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "You can switch your existing home loan",
+        "para": "Switching your existing home loan can help you save money and get better terms! <br>Whether you're looking for lower costs or more flexible repayment options, transferring your home loan could be a smart financial move.",
+        "btnName": "Compare loan offers",
+        "btnLink": "/get-started/how-can-we-help",
+        "btnColor": "#ffcc00"
+      },
+      {
+        "heading": "Take an overdraft facility on your home loan​",
+        "para": "Withdraw funds as needed and pay interest only on the used amount.<br/>Enjoy flexibility, lower rates than personal loans, and easy access to extra funds for expenses or investments!",
+        "btnName": "Talk to us",
+        "btnLink": "/appointment"
+      },
+      {
+        "heading": "Increase your home loan (Top up)​",
+        "para": "If you’re planning renovations, want to consolidate your debts or simply need extra cash, borrowing additional funds with your existing home loan could be the solution.",
+        "linkName": "Tell me more about topping up my home loan",
+        "url": "/home-loan/top-up-only"
+      }
+    ]
+  },
+  "smartSavingsCalculators": {
+    "heading": "Smart savings calculators – Plan your future with confidence",
+    "xlGridCol": 4,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Know How Long Your Savings Will Last",
+        "para": "Determine how many years your savings can support your lifestyle.",
+        "icon": "/icons/clock.svg",
+        "altName": "clock-icon",
+        "linkName": "Check Your Savings Longevity",
+        "url": "/money-map/how-long-will-your-savings-support-you"
+      },
+      {
+        "heading": "Track Your Progress Towards Your Goal​",
+        "para": "Estimate the time required to reach your financial milestones.",
+        "icon": "/icons/phoneConnection.svg",
+        "altName": "phoneConnection-icon",
+        "linkName": "Plan Your Savings Journey",
+        "url": "/money-map/how-long-will-it-take-to-save"
+      },
+      {
+        "heading": "Set a Target for Retirement Savings​​",
+        "para": "Calculate the amount needed for a secure and comfortable retirement.",
+        "icon": "/icons/negotiate.svg",
+        "altName": "negotiate-icon",
+        "linkName": "Plan Your Retirement Fund",
+        "url": "/money-map/how-much-to-save-by-retirement"
+      },
+      {
+        "heading": "Grow Your Savings with Consistency​",
+        "para": "See how regular contributions can maximize your savings over time.",
+        "icon": "/icons/coinHouse.svg",
+        "altName": "coinHose-icon",
+        "linkName": "Calculate Your Future Savings",
+        "url": "/money-map/how-much-can-i-save-with-regular-contributions"
+      }
+    ]
+  },
+  "homeLoanCalculator": {
+    "heading": "Home loan calculator",
+    "xlGridCol": 4,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "How much can I borrow?",
+        "icon": "/icons/calc.svg",
+        "iconAltName": "icon-calc",
+        "url": "/calculators/eligibility-calculator"
+      },
+      {
+        "heading": "Home loan repayments calculator",
+        "icon": "/icons/lap.svg",
+        "iconAltName": "loan-icon",
+        "url": "/calculators/emi-calculator"
+      },
+      {
+        "heading": "Stamp duty calculator",
+        "icon": "/icons/apply.svg",
+        "iconAltName": "icons-apply",
+        "url": "/calculators/stamp-duty-calculator"
+      },
+      {
+        "heading": "Calculators & tools?",
+        "icon": "/icons/calc.svg",
+        "iconAltName": "icons-calc",
+        "url": "/home-loan/home-loan-tools-calculator"
+      }
+    ]
+  },
+  "helpSupport": {
+    "heading": "We're here to help",
+    "xlGridCol": 4,
+    "borderBottom": true,
+    "cards": [
+      {
+        "heading": "Book an </br> appointment",
+        "para": "Book instantly to speak to a home loan specialist at a time that suits you",
+        "icon": "/icons/appointment.svg",
+        "altName": "appointment Icon",
+        "url": "/appointment"
+      },
+      {
+        "heading": "Check loan offers",
+        "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+        "icon": "/icons/manageLoan2.svg",
+        "altName": "Alert Icon",
+        "url": "/get-started/how-can-we-help"
+      },
+      {
+        "heading": "Contact us",
+        "para": "Fast-track your call and connect with a specialist in the Digital DSA.",
+        "icon": "/icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      },
+      {
+        "heading": "Message us",
+        "para": "Get instant help from our online assistants  or chat to a specialist.",
+        "icon": "/icons/msg.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      }
+    ]
+  },
+  "thingsYouShouldKnow": {
+    "heading": "Things you should know",
+    "paraGraph": [
+      "<span class=\"font-FourthHead\">Independent Facilitator:</span> DigitalDSA operates as an independent loan facilitator and web aggregator, bridging the gap between loan consumers and licensed banks or NBFCs. We are not an authorized financial institution and do not offer loans directly.",
+      "<span class=\"font-FourthHead\">Loan Approval:</span> The sole discretion of approving or rejecting a loan lies with the respective bank or NBFC where the user applies. DigitalDSA does not guarantee loan approval or offer assurance from any specific bank or NBFC. All loans are subject to credit approval, and their terms, conditions, fees, and charges apply.",
+      "<span class=\"font-FourthHead\">Liability:</span> DigitalDSA is not responsible for any loss, damage, or failure at the user’s end during loan processing. The final decision of the bank or NBFC is binding on both the user and DigitalDSA.",
+      "<span class=\"font-FourthHead\">Important Information:</span> This information is provided without considering your personal objectives, financial situation, or needs. Please assess its suitability before acting. Exclusive offers are available only when you avail of a loan through DigitalDSA and meet specific conditions."
+    ]
+  }
+}

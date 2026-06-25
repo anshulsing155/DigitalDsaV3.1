@@ -170,11 +170,11 @@
               <AboveTitleWithTopIconCard contents={coreValues} />
             </div>
           {:else if index == 2}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]" px-2">
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
               <AboveTitleWithTopIconCard contents={philosophy} />
             </div>
           {:else if index == 3}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]" px-2">
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
               <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
                 <div class="flex flex-col gap-[1rem] mb-[1rem]">
                   <h2 class="typography-h2 text-[var(--form-text)]">{peoplePromise.heading}</h2>
@@ -204,11 +204,11 @@
               </div>
             </div>
           {:else if index === 4}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]" px-2">
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
               <ThingsYouShould thinkKnow={codeOfTrust} />
             </div>
           {:else if index === 5}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]" px-2">
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
               <AboveTitleWithTopIconCard contents={leadership} />
             </div>
           {/if}

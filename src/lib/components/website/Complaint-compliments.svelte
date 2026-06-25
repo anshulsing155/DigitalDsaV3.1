@@ -69,88 +69,88 @@
 	keywords={content.seo.keywords}
 />
 
-<section class="">
+<section class="content">
 	<NewPageLayout pageData={content.pageData}>
 		<div class="hidden w-full lg:block">
 			<StickyNavbar navList={content.stickyNavBar} {activeSection} />
 
-			<div class="px-4 pt-5 lg:px-16">
+			<div class="lg:px-16">
 				<div class="pb-8" id="makeComplaint" data-section="makeComplaint">
-					<div class="border-dividerColor border-b">
-						<TwoColumn
-							cardImage={content.makeComplaint.cardImage}
-							cardAltName={content.makeComplaint.cardAltName}
-							cardHeading={content.makeComplaint.cardHeading}
-							reverse
+					<TwoColumn
+						cardImage={content.makeComplaint.cardImage}
+						cardAltName={content.makeComplaint.cardAltName}
+						cardHeading={content.makeComplaint.cardHeading}
+						reverse
+						paddingClass="lg:px-0"
+						isBorder={true}
+					>
+						<ul
+							class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]"
+							slot="list"
 						>
-							<ul
-								class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]"
-								slot="list"
-							>
-								<li>
-									{content.makeComplaint.para}
-								</li>
+							<li>
+								{content.makeComplaint.para}
+							</li>
 
-								<div class="w-auto">
-									<button
-										type="button"
-										onclick={() => {
-											$feedbackYes = 2;
-											scrollToFeedback('feedForm');
-										}}
-										class="btn btn-primary typography-button w-full text-black md:w-auto"
-									>
-										{content.makeComplaint.btnText}
-									</button>
-								</div>
-							</ul>
-						</TwoColumn>
-					</div>
+							<div class="w-auto">
+								<button
+									type="button"
+									onclick={() => {
+										$feedbackYes = 2;
+										scrollToFeedback('feedForm');
+									}}
+									class="btn btn-primary typography-button w-full text-[var(--form-text)] md:w-auto"
+								>
+									{content.makeComplaint.btnText}
+								</button>
+							</div>
+						</ul>
+					</TwoColumn>
 				</div>
 
 				<div class="pb-8" id="giveComplaint" data-section="giveComplaint">
-					<div class="border-dividerColor border-b">
-						<TwoColumn
-							cardImage={content.giveComplaint.cardImage}
-							cardAltName={content.giveComplaint.cardAltName}
-							cardHeading={content.giveComplaint.cardHeading}
+					<TwoColumn
+						cardImage={content.giveComplaint.cardImage}
+						cardAltName={content.giveComplaint.cardAltName}
+						cardHeading={content.giveComplaint.cardHeading}
+						paddingClass="lg:px-0"
+						isBorder={true}
+					>
+						<ul
+							class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]"
+							slot="list"
 						>
-							<ul
-								class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]"
-								slot="list"
-							>
-								<li>
-									{content.giveComplaint.para}
-								</li>
+							<li>
+								{content.giveComplaint.para}
+							</li>
 
-								<div class="w-auto">
-									<button
-										type="button"
-										onclick={() => {
-											$feedbackYes = 5;
-											scrollToFeedback('feedForm');
-										}}
-										class="btn btn-primary typography-button w-full text-black md:w-auto"
-									>
-										{content.giveComplaint.btnText}
-									</button>
-								</div>
-							</ul>
-						</TwoColumn>
-					</div>
+							<div class="w-auto">
+								<button
+									type="button"
+									onclick={() => {
+										$feedbackYes = 5;
+										scrollToFeedback('feedForm');
+									}}
+									class="btn btn-primary typography-button w-full text-[var(--form-text)] md:w-auto"
+								>
+									{content.giveComplaint.btnText}
+								</button>
+							</div>
+						</ul>
+					</TwoColumn>
 				</div>
 			</div>
 		</div>
 		<div class="lg:hidden">
 			{#each content.mobileNavbarTitle as list, index}
 				<details
-					class="dropdown border-bgBtn bg-darkColor col-span-3 text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.navBarMedium.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						class="bg-ddsa-gradient-primary col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -162,12 +162,13 @@
 					</summary>
 
 					{#if index == 0}
-						<div class="bg-white px-4 pb-8 text-black" id="makeComplaint">
-							<div class="border-dividerColor border-b">
+						<div class="bg-[var(--landing-bg)] px-4 pb-8 text-[var(--form-text)]" id="makeComplaint">
+							<div class="border-[var(--form-border)] border-b">
 								<TwoColumn
 									cardImage={content.makeComplaint.cardImage}
 									cardAltName={content.makeComplaint.cardAltName}
 									cardHeading={content.makeComplaint.cardHeading}
+									paddingClass="px-0"
 								>
 									<ul
 										class="typography-body-md grid gap-4 text-[var(--form-text-secondary)] md:gap-[2rem]"
@@ -184,7 +185,7 @@
 													$feedbackYes = 2;
 													scrollToFeedback('feedback');
 												}}
-												class="btn btn-primary typography-button w-full text-black md:w-auto"
+												class="btn btn-primary typography-button w-full text-[var(--form-text)] md:w-auto"
 											>
 												{content.makeComplaint.btnText}
 											</button>
@@ -194,12 +195,13 @@
 							</div>
 						</div>
 					{:else}
-						<div class="bg-white px-4 pb-8 text-black" id="giveComplaint">
+						<div class="bg-[var(--landing-bg)] px-4 pb-8 text-[var(--form-text)]" id="giveComplaint">
 							<div>
 								<TwoColumn
 									cardImage={content.giveComplaint.cardImage}
 									cardAltName={content.giveComplaint.cardAltName}
 									cardHeading={content.giveComplaint.cardHeading}
+									paddingClass="px-0"
 								>
 									<ul
 										class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]"
@@ -217,7 +219,7 @@
 														$feedbackYes = 5;
 														scrollToFeedback('feedback');
 													}}
-													class="btn btn-primary typography-button w-full text-black md:w-auto"
+													class="btn btn-primary typography-button w-full text-[var(--form-text)] md:w-auto"
 												>
 													{content.giveComplaint.btnText}
 												</button>
@@ -231,17 +233,17 @@
 				</details>
 			{/each}
 		</div>
-		<div id="feedback" data-section="feedback" class="bg-white px-4 text-black">
-			<div class="flex flex-col gap-[3rem] bg-white pt-[4rem] pb-[8rem]" id="loans">
+		<div id="feedback" data-section="feedback" class="bg-[var(--landing-bg)] px-4 text-[var(--form-text)]">
+			<div class="flex flex-col gap-[3rem] bg-[var(--landing-bg)] pt-[4rem] pb-[8rem]" id="loans">
 				<div id="feedForm" class="feedForm space-y-3 text-center">
 					<FeedbackForm />
 				</div>
 			</div>
 		</div>
-		<div slot="secondary" class="">
-			<HelpList contents={content.help} />
+		{#snippet secondary()}
+			<HelpList contents={content.help} isBorder />
 
-			<ThingsYouShould thinkKnow={content.thingsYouShould} disc="list-decimal" />
-		</div>
+			<ThingsYouShould thinkKnow={content.thingsYouShould} disc="list-decimal" containerClass="px-0" />
+		{/snippet}
 	</NewPageLayout>
 </section>

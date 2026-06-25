@@ -1,6 +1,8 @@
 <script lang="ts">
+  import { CircleCheck, Circle } from "$lib/utils/iconRegistry";
+
   let {
-    groupVal = $bindable(""),
+    groupVal = $bindable(),
     groupName,
     groupValue,
     showValue = "",
@@ -27,41 +29,34 @@
     className?: string;
   } = $props();
 
-  function handleClick(event: MouseEvent) {
-    if (!groupVal || groupVal !== groupValue) {
-      onClick(event);
-      onclick(event);
-    }
-  }
-
-  function handleChange(event: Event) {
-    onChange(event);
-    onchange(event);
-  }
-
   let renderLabel = $derived(customLabel || showValue || groupValue);
 </script>
 
 <div class="flex w-full items-center">
   <label
     for={groupId}
-    class={`relative cursor-pointer font-Paragraph text-para flex border px-4 w-full py-[0.8rem] rounded-md border-iconColor items-center ${className}`}
+    class="radio-label relative cursor-pointer font-Paragraph text-para flex border px-4 w-full py-[0.8rem] rounded-md items-center transition-all duration-200 ease-in-out {groupVal === groupValue ? 'active' : ''} {className}"
   >
     <input
       type="radio"
       id={groupId}
       name={groupName}
-      class="sr-only"
       bind:group={groupVal}
       value={groupValue}
-      onclick={handleClick}
-      onchange={handleChange}
+      onclick={(e) => {
+        onClick(e);
+        onclick(e);
+        const changeEvent = new Event('change', { bubbles: true });
+        onChange(changeEvent);
+        onchange(changeEvent);
+      }}
+      class="sr-only"
     />
 
     {#if groupVal === groupValue}
       <div class="flex items-center justify-between w-full">
         <div class="flex items-center">
-          <i class="fa-solid fa-circle-check"></i>
+          <CircleCheck class="h-4 w-4 shrink-0 text-white" />
           <span class="ml-2">{@html renderLabel}</span>
         </div>
         {#if emoji}
@@ -70,17 +65,48 @@
       </div>
     {:else}
       <div class="flex items-center">
-        <i class="fa-regular fa-circle border-iconColor"></i>
-        <span class="ml-2">{@html renderLabel}</span>
+        <Circle class="h-4 w-4 shrink-0 text-[var(--form-text-muted)]" />
+        <span class="ml-2 text-[var(--form-text-secondary)]">{@html renderLabel}</span>
       </div>
     {/if}
   </label>
 </div>
 
 <style>
-  label:has(input:checked) {
-    background-color: black;
-    color: white;
-    border: 2px solid #fcb650;
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .radio-label {
+    border-color: var(--form-border, #e5e7eb);
+    background-color: var(--form-bg-card, #ffffff);
+    color: var(--form-text, #0f172a);
+  }
+
+  .radio-label:hover {
+    border-color: var(--ddsa-primary-500, #cb997e);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .radio-label.active {
+    background-color: var(--ddsa-primary-500, #cb997e);
+    color: #ffffff;
+    border-color: var(--ddsa-primary-500, #cb997e);
+    box-shadow: 0 4px 14px rgba(203, 153, 126, 0.35);
+  }
+
+  .radio-label:has(input:checked) {
+    background-color: var(--ddsa-primary-500, #cb997e);
+    color: #ffffff;
+    border-color: var(--ddsa-primary-500, #cb997e);
+    box-shadow: 0 4px 14px rgba(203, 153, 126, 0.35);
   }
 </style>

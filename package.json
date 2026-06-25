@@ -103,6 +103,8 @@
 		"json-logic-js": "^2.0.5",
 		"jsonwebtoken": "^9.0.3",
 		"jszip": "^3.10.1",
+		"jspdf": "^3.0.1",
+		"jspdf-autotable": "^5.0.2",
 		"lucide": "^1.14.0",
 		"lucide-svelte": "^0.540.0",
 		"mongodb": "^6.21.0",

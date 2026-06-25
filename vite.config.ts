@@ -1,6 +1,8 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig, type Plugin } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
+import fs from 'fs';
+import path from 'path';
 
 // ScrollTrigger's UMD bundle accesses `self` (a browser global) at module
 // initialisation time — before any function is called. In Vite's dev SSR
@@ -34,6 +36,171 @@ function prelaunchReminders(): Plugin {
 	return {
 		name: 'prelaunch-reminders',
 		buildStart() {
+			// Auto-parse old retirement pages to JSON data files
+			try {
+				const srcDir = 'C:\\Users\\hp\\Desktop\\DigitalDSAV4-main\\src\\routes\\(main)\\secureRetirement';
+				const destDir = 'C:\\Users\\hp\\Desktop\\DigitalDsaV3.1\\src\\lib\\data\\website\\retirement';
+
+				if (fs.existsSync(srcDir)) {
+					if (!fs.existsSync(destDir)) {
+						fs.mkdirSync(destDir, { recursive: true });
+					}
+					const cleanText = (text) => {
+						if (!text) return '';
+						return text
+							.replace(/<span[^>]*>/g, '')
+							.replace(/<\/span>/g, '')
+							.replace(/\s+/g, ' ')
+							.trim();
+					};
+
+					const articles = [
+						{ path: 'fixDeposit/fd/+page.svelte', slug: 'fd' },
+						{ path: 'fixDeposit/fd-ladering/+page.svelte', slug: 'fd-laddering' },
+						{ path: 'fixDeposit/fix-income/+page.svelte', slug: 'fix-income' },
+						{ path: 'govSchemes/nps/+page.svelte', slug: 'nps' },
+						{ path: 'govSchemes/pomis/+page.svelte', slug: 'pomis' },
+						{ path: 'govSchemes/rbi-floating/+page.svelte', slug: 'rbi-floating' },
+						{ path: 'govSchemes/scss/+page.svelte', slug: 'scss' },
+						{ path: 'lowRisk/index-funds/+page.svelte', slug: 'index-funds' },
+						{ path: 'lowRisk/stocks/+page.svelte', slug: 'stocks' },
+						{ path: 'lowRisk/swp/+page.svelte', slug: 'swp' },
+						{ path: 'pension/annuity-plans/+page.svelte', slug: 'annuity-plans' },
+						{ path: 'pension/immediate-annuities/+page.svelte', slug: 'immediate-annuities' }
+					];
+
+					articles.forEach(art => {
+						const filePath = path.join(srcDir, art.path);
+						if (!fs.existsSync(filePath)) return;
+
+						const content = fs.readFileSync(filePath, 'utf8');
+
+						// Extract SEO
+						const seoMatch = content.match(/<Seo([\s\S]*?)\/>/);
+						const seo = {};
+						if (seoMatch) {
+							const seoAttr = seoMatch[1];
+							const titleMatch = seoAttr.match(/title\s*=\s*"([^"]+)"/);
+							const imgMatch = seoAttr.match(/image\s*=\s*"([^"]+)"/);
+							const descMatch = seoAttr.match(/description\s*=\s*"([^"]+)"/);
+							const keyMatch = seoAttr.match(/keywords\s*=\s*"([^"]+)"/);
+							
+							seo.title = titleMatch ? titleMatch[1] : '';
+							seo.image = imgMatch ? imgMatch[1] : '';
+							seo.description = descMatch ? descMatch[1] : '';
+							seo.keywords = keyMatch ? keyMatch[1] : '';
+						}
+
+						// Extract H1 Title
+						const h1Match = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
+						const heading = h1Match ? cleanText(h1Match[1]) : '';
+
+						// Extract Image
+						const imgTagMatch = content.match(/<img([\s\S]*?)\/>/);
+						let coverImage = '';
+						let coverAlt = '';
+						if (imgTagMatch) {
+							const srcMatch = imgTagMatch[1].match(/src\s*=\s*"([^"]+)"/);
+							const altMatch = imgTagMatch[1].match(/alt\s*=\s*"([^"]+)"/);
+							coverImage = srcMatch ? srcMatch[1] : '';
+							coverAlt = altMatch ? altMatch[1] : '';
+						}
+
+						// Extract H2 headings
+						const h2Matches = [...content.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)].map(m => cleanText(m[1]));
+						const featuresTitle = h2Matches[0] || '';
+						const dsaTitle = h2Matches[1] || '';
+						const taxTitle = h2Matches[2] || '';
+						const conclusionTitle = h2Matches[3] || '';
+
+						// Extract paragraphs in intro
+						const introPart = content.split(/<h2/)[0] || '';
+						const pMatches = [...introPart.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map(m => cleanText(m[1]));
+						const intro = pMatches.filter(p => p.length > 0);
+
+						// Extract features table
+						const tableMatches = [...content.matchAll(/<table([\s\S]*?)<\/table>/g)];
+						const featuresTable = [];
+						if (tableMatches[0]) {
+							const rows = [...tableMatches[0][1].matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)];
+							for (let i = 1; i < rows.length; i++) {
+								const cols = [...rows[i][1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(m => cleanText(m[1]));
+								if (cols.length >= 2) {
+									featuresTable.push({
+										feature: cols[0],
+										benefit: cols[1]
+									});
+								}
+							}
+						}
+
+						// Extract features intro
+						let featuresIntro = '';
+						const featuresPart = content.split(/<h2[^>]*>/)[1] || '';
+						const featuresPMatch = featuresPart.match(/<p[^>]*>([\s\S]*?)<\/p>/);
+						if (featuresPMatch) {
+							featuresIntro = cleanText(featuresPMatch[1]);
+						}
+
+						// Extract DSA intro and benefits list
+						let dsaIntro = '';
+						const dsaBenefits = [];
+						const dsaPart = content.split(/<h2[^>]*>/)[2] || '';
+						const dsaPMatch = dsaPart.match(/<p[^>]*>([\s\S]*?)<\/p>/);
+						if (dsaPMatch) {
+							dsaIntro = cleanText(dsaPMatch[1]);
+						}
+						const liMatches = [...dsaPart.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/g)].map(m => cleanText(m[1]));
+						liMatches.forEach(li => {
+							dsaBenefits.push(li);
+						});
+
+						// Extract Tax table
+						const taxTable = [];
+						if (tableMatches[1]) {
+							const rows = [...tableMatches[1][1].matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)];
+							for (let i = 1; i < rows.length; i++) {
+								const cols = [...rows[i][1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(m => cleanText(m[1]));
+								if (cols.length >= 2) {
+									taxTable.push({
+										aspect: cols[0],
+										detail: cols[1]
+									});
+								}
+							}
+						}
+
+						// Extract conclusion paragraphs
+						const conclusionPart = content.split(/<h2[^>]*>/)[4] || content.split(/<h2[^>]*>/)[3] || '';
+						const conclusionPMatches = [...conclusionPart.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map(m => cleanText(m[1]));
+						const conclusion = conclusionPMatches.filter(p => p.length > 0);
+
+						const result = {
+							seo,
+							heading,
+							intro,
+							coverImage,
+							coverAlt,
+							featuresTitle,
+							featuresIntro,
+							featuresTable,
+							dsaTitle,
+							dsaIntro,
+							dsaBenefits,
+							taxTitle,
+							taxTable,
+							conclusionTitle,
+							conclusion
+						};
+
+						fs.writeFileSync(path.join(destDir, `${art.slug}.json`), JSON.stringify(result, null, 2), 'utf8');
+					});
+					console.log('\x1b[32m[PARSED RETIREMENT PAGES SUCCESSFULLY]\x1b[0m');
+				}
+			} catch (err) {
+				console.error('Failed to auto-parse retirement pages:', err);
+			}
+
 			if (reminders.length === 0) return;
 			const bar = '='.repeat(70);
 			console.log(`\n\x1b[43m\x1b[30m${bar}\x1b[0m`);

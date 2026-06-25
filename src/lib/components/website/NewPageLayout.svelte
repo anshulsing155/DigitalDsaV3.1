@@ -136,16 +136,12 @@
 			class="relative z-10 mx-2 flex flex-col border border-[var(--form-border)] bg-[var(--landing-bg)] lg:mx-0"
 		>
 			<!-- svelte-ignore slot_element_deprecated -->
-			{#if children}
-				{@render children()}
-			{/if}
+			<slot />
 		</div>
 
 		<div class="lg:p-16">
 			<!-- svelte-ignore slot_element_deprecated -->
-			{#if secondary}
-				{@render secondary()}
-			{/if}
+			<slot name="secondary" />
 		</div>
 	</div>
 </section>

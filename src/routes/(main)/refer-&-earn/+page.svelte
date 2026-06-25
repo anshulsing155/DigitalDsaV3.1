@@ -78,56 +78,52 @@
 	keywords={content.seo.keywords}
 />
 
-<section class="xl:contianer bg-mainBg mx-auto w-full">
+<section class="content">
 	<NewPageLayout pageData={content.pageData} onClick={handleModal}>
-		<div
-			class="border-b border-[var(--form-border)] px-[0.5rem] text-[var(--form-text)] lg:px-[4rem] lg:py-[2rem]"
-		>
+		<div class="lg:px-16">
 			<div
-				class="mx-auto flex flex-col items-center justify-between gap-[2rem] md:flex-row md:gap-[4rem]"
+				class="border-b border-[var(--form-border)] px-[0.5rem] text-[var(--form-text)] lg:px-0 lg:py-[2rem]"
 			>
-				<h2 class="typography-h2-md text-[var(--form-text)]">Refer to your friend & get ₹5000</h2>
+				<div
+					class="mx-auto flex flex-col items-center justify-between gap-[2rem] md:flex-row md:gap-[4rem]"
+				>
+					<h2 class="typography-h2-md text-[var(--form-text)]">Refer to your friend & get ₹5000</h2>
 
-				{#if !referralLink}
-					<button
-						onclick={(e) => {
-							e.preventDefault();
-							generateReferralLink();
-						}}
-						class="typography-button btn-primary cursor-pointer rounded-full p-4 text-[var(--form-text)]"
-					>
-						Generate Referral Link
-					</button>
-				{:else}
-					<div class="flex items-center gap-4">
-						<div class="">
-							<a href={referralLink} target="_blank" rel="noopener noreferrer">{referralLink}</a>
-						</div>
+					{#if !referralLink}
 						<button
-							type="button"
-							onclick={copyToClipboard}
-							class="flex items-center justify-center border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-3 py-2 text-[var(--form-text)] transition-colors hover:bg-[var(--landing-bg)]"
-							disabled={!referralLink}
+							onclick={(e) => {
+								e.preventDefault();
+								generateReferralLink();
+							}}
+							class="typography-button btn-primary cursor-pointer rounded-full p-4 text-[var(--form-text)]"
 						>
-							{#if copied}
-								<CopyCheck class="h-5 w-5 text-primary" />
-							{:else}
-								<Copy class="h-5 w-5 text-primary" />
-							{/if}
+							Generate Referral Link
 						</button>
-					</div>
-				{/if}
+					{:else}
+						<div class="flex items-center gap-4">
+							<div class="">
+								<a href={referralLink} target="_blank" rel="noopener noreferrer">{referralLink}</a>
+							</div>
+							<button
+								type="button"
+								onclick={copyToClipboard}
+								class="flex items-center justify-center border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-3 py-2 text-[var(--form-text)] transition-colors hover:bg-[var(--landing-bg)]"
+								disabled={!referralLink}
+							>
+								{#if copied}
+									<CopyCheck class="h-5 w-5 text-primary" />
+								{:else}
+									<Copy class="h-5 w-5 text-primary" />
+								{/if}
+							</button>
+						</div>
+					{/if}
+				</div>
 			</div>
-		</div>
 
-		<div>
-			<AboveTitleWithLeftIconCard contents={content.howItWorks} />
-		</div>
+			<AboveTitleWithLeftIconCard contents={content.howItWorks} paddingClass="lg:px-0" isBorder />
 
-		<div
-			class="border-y border-[var(--form-border)] px-[0.5rem] pt-[1rem] text-[var(--form-text)] lg:p-[4rem]"
-		>
-			<Payments supportHeading={content.keyBenefits.supportHeading}>
+			<Payments supportHeading={content.keyBenefits.supportHeading} isBorder>
 				<div class="grid gap-[2rem] md:grid-cols-2">
 					<div class="col-span-1 grid gap-4">
 						<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
@@ -151,15 +147,12 @@
 					</div>
 				</div>
 			</Payments>
-		</div>
 
-		<div
-			class="border-b border-[var(--form-border)] px-[0.5rem] pt-[1rem] text-[var(--form-text)] lg:p-[4rem]"
-		>
 			<Payments
 				supportHeading={content.advantage.supportHeading}
 				colSpan={content.advantage.colSpan}
 				colSpanText={content.advantage.colSpanText}
+				isBorder
 			>
 				<div class="grid gap-[2rem] md:grid-cols-2 lg:grid-cols-3">
 					{#each content.advantage.categories as cat}
@@ -167,7 +160,7 @@
 							<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
 								{cat.heading}
 							</h2>
-							<ul class="grid list-disc gap-4 pl-4 text-[var(--landing-text-secondary)]">
+							<ul class="grid list-disc gap-4 pl-4 text-[var(--form-text-secondary)]">
 								{#each cat.bullets as bullet}
 									<li>
 										<span class="font-semibold text-[var(--form-text)]">{bullet.title}</span
@@ -179,20 +172,20 @@
 					{/each}
 				</div>
 			</Payments>
+
+			<TwoColumnWithImage contents={content.messageUs} paddingClass="lg:px-0" isBorder>
+				<p>
+					{content.messageUs.para}
+				</p>
+				<div class="w-full lg:w-auto">
+					<Button link="/contact" btnClass="btn-secondary w-full" btnName="Message us" />
+				</div>
+			</TwoColumnWithImage>
 		</div>
 
-		<TwoColumnWithImage contents={content.messageUs}>
-			<p>
-				{content.messageUs.para}
-			</p>
-			<div class="w-full lg:w-auto">
-				<Button link="/contact" btnClass="btn-secondary w-full" btnName="Message us" />
-			</div>
-		</TwoColumnWithImage>
-
-		<div slot="secondary" class="">
-			<HelpList contents={content.help} />
-			<ThingsYouShould thinkKnow={content.thingsYouShould} disc="list-decimal" />
-		</div>
+		{#snippet secondary()}
+			<HelpList contents={content.help} isBorder />
+			<ThingsYouShould thinkKnow={content.thingsYouShould} disc="list-decimal" containerClass="px-0" />
+		{/snippet}
 	</NewPageLayout>
 </section>

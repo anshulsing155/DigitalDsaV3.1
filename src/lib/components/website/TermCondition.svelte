@@ -74,11 +74,11 @@
 	keywords={content.seo.keywords}
 />
 
-<section>
+<section class="content">
 	<PageFullTextDesign {pageData}>
 		<div class="hidden lg:block">
 			<StickyNavbar navList={subList} {activeSection} />
-			<div class="px-[2rem] lg:px-[4rem]">
+			<div class="lg:px-16">
 				<div id="explore" data-section="explore">
 					<div>
 						<ThingsYouShould thinkKnow={explore} disc="list-disc" sectionBorder={true} containerClass="px-0" />
@@ -148,13 +148,13 @@
 		<div class="block lg:hidden">
 			{#each navBarMedium as list, index}
 				<details
-					class="dropdown border-bgBtn bg-darkColor col-span-3 text-white {index <
+					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.navBarMedium.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						class="bg-ddsa-gradient-primary col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">

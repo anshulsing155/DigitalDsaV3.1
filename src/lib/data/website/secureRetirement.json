@@ -190,5 +190,161 @@
         }
       ]
     }
-  ]
+  ],
+  "govSchemesContents": {
+    "heading": "Safe Government Schemes",
+    "list": [
+      {
+        "heading": "<span class=\"font-FourthHead\">Senior Citizens’ Savings Scheme (SCSS) :</span>",
+        "desc": "<span>High-interest, quarterly payouts with government-backed security, and tax benefits under Section 80C ... <a href='/secureRetirement/govSchemes/scss' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      },
+      {
+        "heading": "<span class=\"font-FourthHead\">Post Office Monthly Income Scheme (POMIS) :</span>",
+        "desc": "<span>Reliable monthly income with zero market risk, Lock-in period of 5 years, No tax benefits, and interest is taxable ... <a href='/secureRetirement/govSchemes/pomis' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      },
+      {
+        "heading": "<span class=\"font-FourthHead\">RBI Floating Rate Savings Bonds :</span>",
+        "desc": "<span>Inflation-linked returns, with half-yearly payouts, Tenure of 7 years, Govt-backed, No investment cap, Interest is taxable and not eligible for Section 80C benefits ... <a href='/secureRetirement/govSchemes/rbi-floating' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      },
+      {
+        "heading": "<span class=\"font-FourthHead\">National Pension System (NPS) :</span>",
+        "desc": "<span>Build a strong retirement corpus with NPS, a government-backed pension scheme offering tax benefits and flexible investment options ... <a href='/secureRetirement/govSchemes/nps' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      }
+    ]
+  },
+  "fixedIncomeContents": {
+    "heading": "Fixed Deposits & Flexibility",
+    "list": [
+      {
+        "heading": "<span class=\"font-FourthHead\">Bank Fixed Deposits (FDs) :</span>",
+        "desc": "<span>Secure and predictable returns with flexible payout options tailored for retirees ... <a href='/secureRetirement/fixDeposit/fd' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      },
+      {
+        "heading": "<span class=\"font-FourthHead\">FD Laddering Strategy :</span>",
+        "desc": "<span>Maximize liquidity and returns by spreading deposits across different tenures ... <a href='/secureRetirement/fixDeposit/fd-laddering' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      },
+      {
+        "heading": "<span class=\"font-FourthHead\">Safe Fixed-Income Options :</span>",
+        "desc": "<span>Explore the best fixed-income solutions to secure your financial future with safety and stability ... <a href='/secureRetirement/fixDeposit/fix-income' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      }
+    ]
+  },
+  "marketOptionsContents": {
+    "heading": "Low-Risk Market Options",
+    "list": [
+      {
+        "heading": "<span class=\"font-FourthHead\">Systematic Withdrawal Plan (SWP) :</span>",
+        "desc": "<span>Withdraw a fixed amount regularly while your capital continues to grow with lower tax impact ... <a href='/secureRetirement/lowRisk/swp' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      },
+      {
+        "heading": "<span class=\"font-FourthHead\">Dividend Stocks & REITs :</span>",
+        "desc": "<span>Generate passive income through dividend-paying stocks and real estate investments ... <a href='/secureRetirement/lowRisk/stocks' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      },
+      {
+        "heading": "<span class=\"font-FourthHead\">Index Funds for Retirement Growth :</span>",
+        "desc": "<span>Grow your retirement savings with low-cost, passive investment in Index Funds, offering long-term market-linked returns with minimal risk ... <a href='/secureRetirement/lowRisk/index-funds' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      }
+    ]
+  },
+  "pensionAnnuitiesContents": {
+    "heading": "Pension & Annuities",
+    "list": [
+      {
+        "heading": "<span class=\"font-FourthHead\">Annuity Plans :</span>",
+        "desc": "<span>One-time investment providing guaranteed lifelong income, ensuring financial security ... <a href='/secureRetirement/pension/annuity-plans' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      },
+      {
+        "heading": "<span class=\"font-FourthHead\">Immediate & Deferred Annuities :</span>",
+        "desc": "<span>Choose between immediate or delayed payouts based on your retirement needs ... <a href='/secureRetirement/pension/immediate-annuities' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+      }
+    ]
+  },
+  "commonHelpList": {
+    "heading": "We're here to help",
+    "xlGridCol": 4,
+    "borderBottom": false,
+    "cards": [
+      {
+        "heading": "Know your borrowing power",
+        "para": "Book instantly to speak to a home loan specialist at a time that suits you",
+        "icon": "/icons/calc.svg",
+        "altName": "icons-calc",
+        "url": "/calculators/emi-calculator"
+      },
+      {
+        "heading": "Check loan offers",
+        "para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+        "icon": "/icons/manageLoan2.svg",
+        "altName": "Alert Icon",
+        "url": "/get-started/how-can-we-help"
+      },
+      {
+        "heading": "Contact us",
+        "para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+        "icon": "/icons/contact.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      },
+      {
+        "heading": "Message us",
+        "para": "Get instant help from our online assistants  or chat to a specialist.",
+        "icon": "/icons/msg.svg",
+        "altName": "Alert Icon",
+        "url": "/contact"
+      }
+    ]
+  },
+  "commonThingsYouShould": {
+    "heading": "Things you should know",
+    "paraGraph": [
+      "Investment products are subject to market risks. Read all scheme-related documents carefully before investing.",
+      "Returns are not guaranteed and can vary based on market conditions.",
+      "Interest rates mentioned are indicative and subject to change by respective institutions.",
+      "Tax implications vary based on individual financial situations. Consult a tax advisor before investing."
+    ]
+  },
+  "buttonBannerContents": {
+    "heading": "Want a secure retirement? <span class=\"underline decoration-btnBg underline-offset-4\"> Explore safe options now!</span>",
+    "btnName": "Get help",
+    "BtnBorder": "#4F4C4D",
+    "btnColor": "#ffcc00",
+    "btnLink": "/contact"
+  },
+  "calculatorPromoContents": {
+    "cardImage": "/images/home-scheme.jpg",
+    "cardAltName": "retirement-planning",
+    "cardHeading": "How much retirement income do you need?",
+    "reverse": true,
+    "para": "Get an estimate of how much income you’ll need to sustain your retirement comfortably.",
+    "anchorLink": "/money-map/how-long-will-your-savings-support-you",
+    "anchorLinkName": "Use Calculator"
+  },
+  "strategiesContents": {
+    "heading": "Smart Income Strategies for a Secure Retirement",
+    "cardData": [
+      {
+        "title": "Guaranteed Income with Government-Backed Schemes",
+        "para": "Ensure financial security with options like SCSS, POMIS, and RBI Floating Rate Bonds that offer stable returns and government-backed safety.",
+        "btnName": "Explore Options",
+        "btnLink": "#safe-schemes",
+        "btnColor": "#ffcc00"
+      },
+      {
+        "title": "Plan Your Retirement Income Strategy",
+        "para": "Book a consultation with our financial expert to structure a retirement income plan that balances safety, flexibility and return.",
+        "btnName": "Book an Appointment",
+        "btnLink": "/appointment"
+      }
+    ]
+  },
+  "messageUsPromoContents": {
+    "cardImage": "/images/message.jpg",
+    "cardAltName": "housing-figure",
+    "cardHeading": "Message us 24/7",
+    "reverse": true,
+    "para": "Get instant help from the Digital DSA app or connect with a specialist who can message you back. You’ll need Digital DSA app notifications turned on so you know when you’ve received a reply.",
+    "btnLink": "/contact",
+    "btnBorder": "#4F4C4D",
+    "btnName": "Message us"
+  }
 }

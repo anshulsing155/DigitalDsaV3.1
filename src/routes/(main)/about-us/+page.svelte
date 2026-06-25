@@ -97,16 +97,16 @@
     <div class="block lg:hidden">
       {#each content.navBarMedium as list, index}
         <details
-          class="dropdown bg-darkColor col-span-3 text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
-            class="col-span-3 list-none px-[1rem] py-[1.5rem]"
+            class="bg-ddsa-gradient-primary col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer text-white"
             onclick={(e) => { e.preventDefault(); toggleDropdown(e, index); }}
           >
             <div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
               <h2 class="">{list}</h2>
               <div class="icon-container justify-self-end typography-h3">
-                <span><i class="fa-solid fa-angle-down faq-icon text-darkColor-contrast transition-transform duration-300"></i></span>
+                <span><i class="fa-solid fa-angle-down faq-icon transition-transform duration-300"></i></span>
               </div>
             </div>
           </summary>

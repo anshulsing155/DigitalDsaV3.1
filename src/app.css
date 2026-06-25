@@ -28,3 +28,7 @@
 
 /* layouts */
 @import './styles/layout.css';
+
+/* Appointment wizard specific components */
+@import './styles/appointment.css';
+
