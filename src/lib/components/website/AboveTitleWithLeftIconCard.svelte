@@ -4,13 +4,14 @@
 	type Props = {
 		contents?: any;
 		isBorder?: boolean;
+		paddingClass?: string;
 	};
 
-	const { contents = {}, isBorder = false }: Props = $props();
+	const { contents = {}, isBorder = false,paddingClass = 'lg:px-16', }: Props = $props();
 </script>
 
 <section
-	class={`w-full px-[0.5rem] py-[4rem] lg:px-16 lg:py-0 lg:pt-16 lg:pb-32 ${isBorder ? 'border-[var(--form-border)] lg:border-b' : ''}`}
+	class={`w-full  px-[0.5rem] py-[4rem] ${paddingClass} lg:py-0 lg:pt-16 lg:pb-32 ${isBorder ? 'border-[var(--form-border)] border-b' : ''}`}
 >
 	<div class="flex w-full flex-col gap-8">
 		<h2

@@ -9,7 +9,7 @@
 </script>
 
 <section
-	class="grid items-start gap-[2rem] pt-[4rem] pb-4 lg:pb-[8rem] lg:grid-cols-3 {isBorder
+	class="grid items-start gap-[2rem] pt-[4rem] pb-4 lg:pb-[8rem] lg:grid-cols-3 px-[0.5rem] lg:px-0 {isBorder
 		? 'border-[var(--form-border)] border-b'
 		: ''}"
 >
@@ -24,7 +24,7 @@
 	</div>
 
 	<div
-		class="lg:col-span-{colSpanText} typography-body-md grid justify-self-end text-[var(--form-text-secondary)] md:gap-[2rem]"
+		class="lg:col-span-{colSpanText} typography-body-md grid lg:justify-self-end text-[var(--form-text-secondary)] md:gap-[2rem]"
 	>
 		<!-- svelte-ignore slot_element_deprecated -->
 		<slot />

@@ -80,47 +80,45 @@
 
 <section class="content">
 	<NewPageLayout pageData={content.pageData} onClick={handleModal}>
-		<div class="lg:px-16">
-			<div
-				class="border-b border-[var(--form-border)] px-[0.5rem] text-[var(--form-text)] lg:px-0 lg:py-[2rem]"
-			>
-				<div
-					class="mx-auto flex flex-col items-center justify-between gap-[2rem] md:flex-row md:gap-[4rem]"
-				>
-					<h2 class="typography-h2-md text-[var(--form-text)]">Refer to your friend & get ₹5000</h2>
+		<div class="border-b border-[var(--form-border)] bg-[var(--landing-bg)] p-[1rem] md:p-[1.5rem] lg:p-[3rem]">
+			<div class="flex flex-col gap-[2rem] md:flex-row md:items-center md:justify-between">
+				<h2 class="typography-h2-md text-[var(--form-text)]">Refer to your friend & get ₹5000</h2>
 
-					{#if !referralLink}
-						<button
-							onclick={(e) => {
-								e.preventDefault();
-								generateReferralLink();
-							}}
-							class="typography-button btn-primary cursor-pointer rounded-full p-4 text-[var(--form-text)]"
-						>
-							Generate Referral Link
-						</button>
-					{:else}
-						<div class="flex items-center gap-4">
-							<div class="">
-								<a href={referralLink} target="_blank" rel="noopener noreferrer">{referralLink}</a>
-							</div>
-							<button
-								type="button"
-								onclick={copyToClipboard}
-								class="flex items-center justify-center border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-3 py-2 text-[var(--form-text)] transition-colors hover:bg-[var(--landing-bg)]"
-								disabled={!referralLink}
-							>
-								{#if copied}
-									<CopyCheck class="h-5 w-5 text-primary" />
-								{:else}
-									<Copy class="h-5 w-5 text-primary" />
-								{/if}
-							</button>
+				{#if !referralLink}
+					<button
+						onclick={(e) => {
+							e.preventDefault();
+							generateReferralLink();
+						}}
+						class="typography-button btn-primary cursor-pointer rounded-full p-4 text-[var(--form-text)]"
+					>
+						Generate Referral Link
+					</button>
+				{:else}
+					<div class="flex items-center gap-4">
+						<div>
+							<a href={referralLink} target="_blank" rel="noopener noreferrer">
+								{referralLink}
+							</a>
 						</div>
-					{/if}
-				</div>
-			</div>
 
+						<button
+							type="button"
+							onclick={copyToClipboard}
+							class="flex items-center justify-center border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-3 py-2 text-[var(--form-text)] transition-colors hover:bg-[var(--landing-bg)]"
+							disabled={!referralLink}
+						>
+							{#if copied}
+								<CopyCheck class="h-5 w-5 text-primary" />
+							{:else}
+								<Copy class="h-5 w-5 text-primary" />
+							{/if}
+						</button>
+					</div>
+				{/if}
+			</div>
+		</div>
+		<div class="lg:px-16">
 			<AboveTitleWithLeftIconCard contents={content.howItWorks} paddingClass="lg:px-0" isBorder />
 
 			<Payments supportHeading={content.keyBenefits.supportHeading} isBorder>
@@ -173,7 +171,7 @@
 				</div>
 			</Payments>
 
-			<TwoColumnWithImage contents={content.messageUs} paddingClass="lg:px-0" isBorder>
+			<TwoColumnWithImage contents={content.messageUs} paddingClass="lg:px-0" >
 				<p>
 					{content.messageUs.para}
 				</p>
@@ -185,7 +183,11 @@
 
 		{#snippet secondary()}
 			<HelpList contents={content.help} isBorder />
-			<ThingsYouShould thinkKnow={content.thingsYouShould} disc="list-decimal" containerClass="px-0" />
+			<ThingsYouShould
+				thinkKnow={content.thingsYouShould}
+				disc="list-decimal"
+				containerClass="px-0"
+			/>
 		{/snippet}
 	</NewPageLayout>
 </section>

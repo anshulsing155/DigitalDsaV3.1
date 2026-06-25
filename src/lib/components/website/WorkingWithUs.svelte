@@ -6,43 +6,12 @@
   import { onMount } from "svelte";
   import Seo from "$lib/components/Seo.svelte";
   import content from "$lib/data/website/workingWithUs.json";
+  	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
   const { seo, pageData, stickyNavBar, navBarMedium, purpose, coreValues, philosophy, peoplePromise, codeOfTrust, leadership } = content;
 
-  const toggleDropdown = (event, index) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement;
 
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
-
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
-
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      icon.classList.remove("fa-angle-up");
-      icon.classList.add("fa-angle-down");
-    } else {
-      detailsElement.setAttribute("open", "true");
-      icon.classList.remove("fa-angle-down");
-      icon.classList.add("fa-angle-up");
-    }
-    setTimeout(() => {
-      detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  };
   
   let activeSection = $state(''); // Initially no section is active
 
@@ -100,13 +69,13 @@
         data-section="purpose"
         class="border-b border-[var(--form-border)] lg:px-[4rem]"
       >
-        <ThingsYouShould thinkKnow={purpose} />
+        <ThingsYouShould thinkKnow={purpose} containerClass="px-0" />
       </div>
       <div id="core" data-section="core">
-        <AboveTitleWithTopIconCard contents={coreValues} />
+        <AboveTitleWithTopIconCard contents={coreValues} isBorder />
       </div>
       <div id="philosophy" data-section="philosophy">
-        <AboveTitleWithTopIconCard contents={philosophy} />
+        <AboveTitleWithTopIconCard contents={philosophy} isBorder />
       </div>
       <div id="people" data-section="people">
         <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
@@ -140,42 +109,43 @@
 
       <div id="code" data-section="code">
         <div class="border-b border-[var(--form-border)] lg:px-[4rem]">
-          <ThingsYouShould thinkKnow={codeOfTrust} />
+          <ThingsYouShould thinkKnow={codeOfTrust} containerClass="px-0"  />
         </div>
       </div>
       <div id="leadership" data-section="leadership">
-        <AboveTitleWithTopIconCard contents={leadership} />
+        <AboveTitleWithTopIconCard contents={leadership} isBorder />
       </div>
     </div>
 
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
-        <details class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < navBarMedium.length - 1 ? 'border-b' : ''}" >
-          <summary
-            class="list-none px-2 py-4"
-            onclick={(e) => { e.preventDefault(); ((e) => toggleDropdown(e, index))(e); }}
-          >
-            <div class="flex justify-between items-center">
-              <h2>{list}</h2>
-              <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
-            </div>
-          </summary>
-
+        <details class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}" >
+        <summary
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
           {#if index == 0}
             <div class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--landing-text)]">
-              <ThingsYouShould thinkKnow={purpose} />
+              <ThingsYouShould thinkKnow={purpose} containerClass="px-0" />
             </div>
           {:else if index == 1}
-            <div class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
-              <AboveTitleWithTopIconCard contents={coreValues} />
+            <div class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--landing-text)] ">
+              <AboveTitleWithTopIconCard contents={coreValues} paddingClass="px-0" />
             </div>
           {:else if index == 2}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
-              <AboveTitleWithTopIconCard contents={philosophy} />
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] ">
+              <AboveTitleWithTopIconCard contents={philosophy} paddingClass="px-0" />
             </div>
           {:else if index == 3}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
-              <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[1rem] lg:px-[4rem] w-full border-b border-[var(--form-border)]">
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-[0.5rem] ">
+              <div class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem]  w-full border-b border-[var(--form-border)]">
                 <div class="flex flex-col gap-[1rem] mb-[1rem]">
                   <h2 class="typography-h2 text-[var(--form-text)]">{peoplePromise.heading}</h2>
                   <p class="typography-body-sm text-[var(--form-text-secondary)]">
@@ -204,18 +174,20 @@
               </div>
             </div>
           {:else if index === 4}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)">
               <ThingsYouShould thinkKnow={codeOfTrust} />
             </div>
           {:else if index === 5}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
-              <AboveTitleWithTopIconCard contents={leadership} />
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)]">
+              <AboveTitleWithTopIconCard contents={leadership}  isBorder/>
             </div>
           {/if}
         </details>
       {/each}
     </div>
-    <div class="px-[0.5rem] py-[2rem] lg:px-[4rem] typography-body-md lg:py-[4rem] space-y-2 lg:text-center">
+
+
+    <div class="px-[0.5rem] py-[2rem] lg:px-[4rem] typography-body-md lg:py-[4rem] space-y-2 lg:text-center text-[var(--form-text-secondary)]">
       <h3 class="">
         We’re not just offering a job—we’re inviting you to be part of a
         <span class="font-semibold">fintech revolution</span>.

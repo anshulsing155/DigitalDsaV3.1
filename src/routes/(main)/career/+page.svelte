@@ -7,43 +7,10 @@
   import HelpList from "$lib/components/website/HelpList.svelte";
   import Seo from "$lib/components/Seo.svelte";
   import content from "$lib/data/website/career.json";
+  import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
-  const toggleDropdown = (event: any, index: any) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement;
-
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
-
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
-
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      icon.classList.remove("fa-angle-up");
-      icon.classList.add("fa-angle-down");
-    } else {
-      detailsElement.setAttribute("open", "true");
-      icon.classList.remove("fa-angle-down");
-      icon.classList.add("fa-angle-up");
-
-      // Scroll the opened accordion into view
-      setTimeout(() => {
-        detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
-    }
-  };
+ 
 
   let activeSection = $state(''); // Initially no section is active
 
@@ -130,12 +97,14 @@
 
     <div class="px-[0.5rem] lg:px-16">
       <div class="hidden lg:block">
+
         <div id="businessArea" data-section="businessArea" class="pb-[2rem]">
-          <div class="border-b border-dividerColor">
+          <div class="border-b border-[var(--form-border)]">
             <TwoColumn
               cardImage={content.youAtDigitalDsa.cardImage}
               cardAltName={content.youAtDigitalDsa.cardAltName}
               cardHeading={content.youAtDigitalDsa.cardHeading}
+              paddingClass="lg:px-0"
             >
               <ul
                 class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]"
@@ -155,7 +124,7 @@
                       />
 
                       <p class="typography-body-md text-[var(--form-text-secondary)]">
-                        <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
+                        <span class="typography-body-md !font-semibold text-[var(--form-text)]"
                           >{bullet.title}
                         </span> {bullet.desc}
                       </p>
@@ -167,7 +136,7 @@
           </div>
 
           <div
-            class="py-[4rem] border-b border-dividerColor grid grid-cols-12 gap-[4rem] justify-between items-start"
+            class="py-[4rem] border-b border-[var(--form-border)] grid grid-cols-12 gap-[4rem] justify-between items-start"
           >
             <div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
               <h2
@@ -186,7 +155,7 @@
                 <div
                   class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                 >
-                  <p class="typography-h4 text-[var(--form-text)]">{role}</p>
+                  <p class="typography-body-md  !font-semibold text-[var(--form-text)]">{role}</p>
                 </div>
               {/each}
             </div>
@@ -194,11 +163,12 @@
         </div>
 
         <div id="rewards" data-section="rewards" class="pb-[2rem]">
-          <div class="border-b border-dividerColor">
+          <div class="border-b border-[var(--form-border)]">
             <TwoColumn
               cardImage={content.rewardsAndBenefits.cardImage}
               cardAltName={content.rewardsAndBenefits.cardAltName}
               cardHeading={content.rewardsAndBenefits.cardHeading}
+              paddingClass="lg:px-0"
             >
               <ul
                 class="typography-body-md text-[var(--form-text-secondary)] flex flex-col gap-4"
@@ -208,7 +178,7 @@
                 <div class="flex flex-col space-y-10">
                   {#each content.rewardsAndBenefits.bullets as bullet}
                     <p class="typography-body-md text-[var(--form-text-secondary)]">
-                      <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
+                      <span class="typography-body-md !font-semibold text-[var(--form-text)]"
                         >{bullet.title}
                       </span>{bullet.desc}
                     </p>
@@ -220,11 +190,12 @@
         </div>
 
         <div id="diversity" data-section="diversity" class="pb-[2rem]">
-          <div class="border-b border-dividerColor">
+          <div class="border-b border-[var(--form-border)]">
             <TwoColumn
               cardImage={content.diversityAndInclusion.cardImage}
               cardAltName={content.diversityAndInclusion.cardAltName}
               cardHeading={content.diversityAndInclusion.cardHeading}
+              paddingClass="lg:px-0"
               reverse={true}
             >
               <ul
@@ -235,7 +206,7 @@
                 <div class="flex flex-col space-y-10">
                   {#each content.diversityAndInclusion.bullets as bullet}
                     <p class="typography-body-md text-[var(--form-text-secondary)]">
-                      <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
+                      <span class="typography-body-md !font-semibold text-[var(--form-text)]"
                         >{bullet.title}
                       </span>{bullet.desc}
                     </p>
@@ -247,11 +218,12 @@
         </div>
 
         <div id="graduates" data-section="graduates" class="pb-[2rem]">
-          <div class="border-b border-dividerColor">
+          <div class="border-b border-[var(--form-border)]">
             <TwoColumn
               cardImage={content.graduates.cardImage}
               cardAltName={content.graduates.cardAltName}
               cardHeading={content.graduates.cardHeading}
+              paddingClass="lg:px-0"
             >
               <ul
                 class="grid gap-4 typography-body-md text-[var(--form-text-secondary)]"
@@ -261,7 +233,7 @@
                 <div class="flex flex-col space-y-10">
                   {#each content.graduates.bullets as bullet}
                     <p class="typography-body-md text-[var(--form-text-secondary)]">
-                      <span class="typography-body-lg !font-semibold text-[var(--form-text)]">{bullet.title}</span>{bullet.desc}
+                      <span class="typography-body-md !font-semibold text-[var(--form-text)]">{bullet.title}</span>{bullet.desc}
                     </p>
                   {/each}
                 </div>
@@ -273,11 +245,11 @@
         <div id="appInfo" data-section="appInfo" class="pb-[2rem]">
           <div class="">
             <Payments supportHeading={content.awardsAndRecognition.supportHeading}>
-              <div slot="para">{content.awardsAndRecognition.para}</div>
+              <div slot="para" class="text-[var(--form-text-secondary)]">{content.awardsAndRecognition.para}</div>
               <div class="col-span-2 grid space-y-10">
                 {#each content.awardsAndRecognition.bullets as bullet}
                   <p class="typography-body-md text-[var(--form-text-secondary)] italic">
-                    <span class="typography-body-lg !font-semibold text-[var(--form-text)] not-italic"
+                    <span class="typography-body-md !font-semibold text-[var(--form-text)] not-italic"
                       >{bullet.title}
                     </span>{bullet.desc}
                   </p>
@@ -286,32 +258,33 @@
             </Payments>
           </div>
         </div>
+
       </div>
     </div>
 
     <div class="lg:hidden">
       {#each content.navBarMedium as list, index}
         <details
-          class="dropdown col-span-3 bg-[var(--form-bg)] text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
-            class="col-span-3 list-none px-[1rem] py-[1.5rem]"
-            onclick={(e) => toggleDropdown(e, index)}
-          >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="typography-h3 text-[var(--form-text)]">{list}</h2>
-              <div class="icon-container justify-self-end text-[var(--form-text-secondary)] text-lg">
-                <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
-              </div>
-            </div>
-          </summary>
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
 
           {#if index == 0}
             <div
               id="businessArea"
-              class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]"
+              class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)]"
             >
-              <div class="border-b border-dividerColor">
+              <div class="border-b border-[var(--form-border)]">
                 <TwoColumn
                   cardImage={content.youAtDigitalDsa.cardImage}
                   cardAltName={content.youAtDigitalDsa.cardAltName}
@@ -346,7 +319,7 @@
                 </TwoColumn>
               </div>
               <div
-                class="pt-[4rem] border-b border-dividerColor grid lg:grid-cols-12 gap-[2rem] lg:gap-[4rem] justify-between items-start"
+                class="pt-[4rem]  grid lg:grid-cols-12 gap-[2rem] lg:gap-[4rem] justify-between items-start px-[0.5rem]"
               >
                 <div class="lg:col-span-4 flex flex-col gap-4">
                   <h2
@@ -365,7 +338,7 @@
                     <div
                       class="border border-[var(--form-border)] bg-[var(--landing-bg-card)] px-4 py-[3rem] shadow-fourthShadow flex items-start text-start cursor-pointer hover:shadow-md transition-shadow"
                     >
-                      <p class="typography-h4 text-[var(--form-text)]">
+                      <p class="typography-h4 text-[var(--form-text)] !font-semibold">
                         {role}
                       </p>
                     </div>
@@ -374,7 +347,7 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="rewards" class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]">
+            <div id="rewards" class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)]">
               <TwoColumn
                 cardImage={content.rewardsAndBenefits.cardImage}
                 cardAltName={content.rewardsAndBenefits.cardAltName}
@@ -388,7 +361,7 @@
                   <div class="flex flex-col">
                     {#each content.rewardsAndBenefits.bullets as bullet}
                       <p class="typography-body-md text-[var(--form-text-secondary)]">
-                        <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
+                        <span class="typography-body-md !font-semibold text-[var(--form-text)]"
                           >{bullet.title}
                         </span>{bullet.desc}
                       </p>
@@ -400,7 +373,7 @@
           {:else if index == 2}
             <div
               id="diversity"
-              class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]"
+              class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)]"
             >
               <TwoColumn
                 cardImage={content.diversityAndInclusion.cardImage}
@@ -416,7 +389,7 @@
                   <div class="flex flex-col">
                     {#each content.diversityAndInclusion.bullets as bullet}
                       <p class="typography-body-md text-[var(--form-text-secondary)]">
-                        <span class="typography-body-lg !font-semibold text-[var(--form-text)]"
+                        <span class="typography-body-md !font-semibold text-[var(--form-text)]"
                           >{bullet.title}
                         </span>{bullet.desc}
                       </p>
@@ -427,7 +400,7 @@
             </div>
           {:else if index == 3}
             <div
-              class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]"
+              class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--form-text)]"
               id="graduates"
             >
               <TwoColumn
@@ -443,7 +416,7 @@
                   <div class="flex flex-col">
                     {#each content.graduates.bullets as bullet}
                       <p class="typography-body-md text-[var(--form-text-secondary)]">
-                        <span class="typography-body-lg !font-semibold text-[var(--form-text)]">{bullet.title} </span>{bullet.desc}
+                        <span class="typography-body-md !font-semibold text-[var(--form-text)]">{bullet.title} </span>{bullet.desc}
                       </p>
                     {/each}
                   </div>
@@ -451,15 +424,15 @@
               </TwoColumn>
             </div>
           {:else if index == 4}
-            <div class="bg-[var(--landing-bg)] text-[var(--form-text)] px-[.5rem]" id="appInfo">
+            <div class="bg-[var(--landing-bg)] text-[var(--form-text)]" id="appInfo">
               <Payments supportHeading={content.awardsAndRecognition.supportHeading}>
-                <div slot="para">
+                <div slot="para" class=" text-[var(--form-text-secondary)] typography-body-md ">
                   {content.awardsAndRecognition.para}
                 </div>
-                <div class="grid">
+                <div class="">
                   {#each content.awardsAndRecognition.bullets as bullet}
                     <p class="typography-body-md text-[var(--form-text-secondary)] italic">
-                      <span class="typography-body-lg !font-semibold text-[var(--form-text)] not-italic"
+                      <span class="typography-body-md !font-semibold text-[var(--form-text)] not-italic"
                         >{bullet.title}
                       </span>{bullet.desc}
                     </p>
@@ -471,11 +444,15 @@
         </details>
       {/each}
     </div>
-    <div slot="secondary" >
-      <HelpList
+
+    
+    {#snippet secondary()}
+       <HelpList
         contents={content.help}
       />
-    </div>
+    {/snippet}
+     
+    
   </PageDesign>
 </section>
 

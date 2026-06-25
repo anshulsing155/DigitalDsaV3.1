@@ -22,7 +22,7 @@
     <AboveTitleWithTopIconCard contents={steps} />
     <div slot="secondary">
       <HelpList contents={help} />
-      <ThingsYouShould thinkKnow={thinkYouShouldKnow} disc="list-disc" />
+      <ThingsYouShould thinkKnow={thinkYouShouldKnow} disc="list-disc" containerClass="px-0" />
     </div>
   </NewPageLayout>
 </section>

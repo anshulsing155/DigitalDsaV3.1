@@ -6,44 +6,13 @@
   import { onMount } from "svelte";
   import Seo from "$lib/components/Seo.svelte";
   import content from "$lib/data/website/careerFAQ.json";
+  import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
+
 
   const { seo, pageData, stickyNavBar, navBarMedium, thinkYouShouldKnow, hiring, opening, process, checks, faq } = content;
 
-  const toggleDropdown = (event, index) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement;
-
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
-
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
-
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      icon.classList.remove("fa-angle-up");
-      icon.classList.add("fa-angle-down");
-    } else {
-      detailsElement.setAttribute("open", "true");
-      icon.classList.remove("fa-angle-down");
-      icon.classList.add("fa-angle-up");
-    }
-    setTimeout(() => {
-      detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  };
-  
+ 
   let activeSection = $state(""); // Initially no section is active
 
   // This function sets the first section as active on initial load
@@ -96,65 +65,68 @@
       <StickyNavbar navList={stickyNavBar} {activeSection} />
       
       <div id="hiring" data-section="hiring">
-        <AboveTitleWithoutIconCard contents={hiring} />
+        <AboveTitleWithoutIconCard contents={hiring} isBorder />
       </div>
       
       <div id="opening" data-section="opening">
-        <AboveTitleWithoutIconCard contents={opening} />
+        <AboveTitleWithoutIconCard contents={opening} isBorder />
       </div>
       
       <div id="process" data-section="process">
-        <AboveTitleWithoutIconCard contents={process} />
+        <AboveTitleWithoutIconCard contents={process} isBorder />
       </div>
       
       <div id="checks" data-section="checks">
-        <AboveTitleWithoutIconCard contents={checks} />
+        <AboveTitleWithoutIconCard contents={checks} isBorder />
       </div>
       
       <div id="faq" data-section="faq">
-        <AboveTitleWithoutIconCard contents={faq} />
+        <AboveTitleWithoutIconCard contents={faq} isBorder/>
       </div>
     </div>
 
     <div class="lg:hidden">
       {#each navBarMedium as list, index}
-        <details class="border-spanColor dropdown col-span-3 bg-darkColor text-white {index < navBarMedium.length - 1 ? 'border-b' : ''}" >
-          <summary
-            class="list-none px-2 py-4"
-            onclick={(e) => { e.preventDefault(); ((e) => toggleDropdown(e, index))(e); }}
-          >
-            <div class="flex justify-between items-center">
-              <h2>{list}</h2>
-              <span><i class="fa-solid fa-angle-down faq-icon"></i> </span>
-            </div>
-          </summary>
+        <details class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}" >
+
+          	<summary
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
 
           {#if index == 0}
             <div class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--landing-text)]">
               <AboveTitleWithoutIconCard contents={hiring} />
             </div>
           {:else if index == 1}
-            <div class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
+            <div class="pb-[2rem] bg-[var(--landing-bg)] text-[var(--landing-text)] ">
               <AboveTitleWithoutIconCard contents={opening} />
             </div>
           {:else if index == 2}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] ">
               <AboveTitleWithoutIconCard contents={process} />
             </div>
           {:else if index == 3}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] ">
               <AboveTitleWithoutIconCard contents={checks} />
             </div>
           {:else if index === 4}
-            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] px-2">
-              <AboveTitleWithoutIconCard contents={faq} />
+            <div class="bg-[var(--landing-bg)] text-[var(--landing-text)] ">
+              <AboveTitleWithoutIconCard contents={faq} isBorder />
             </div>
           {/if}
         </details>
       {/each}
     </div>
     
-    <div class="px-[0.5rem] py-[2rem] lg:px-[4rem] typography-body-md lg:py-[4rem] space-y-2 lg:text-center">
+ <div class="px-[0.5rem] py-[2rem] lg:px-[4rem] typography-body-md lg:py-[4rem] space-y-2 lg:text-center text-[var(--form-text-secondary)]">
       <h4>
         If you have more questions, reach out to us at <span class="font-semibold">careers@digitaldsa.com</span>.
       </h4>

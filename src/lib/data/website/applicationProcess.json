@@ -73,7 +73,15 @@
         "icon": "/icons/msg.svg",
         "altName": "Alert Icon",
         "url": "/contact"
-      }
+      },
+      
+					{
+						"heading": "Check loan offers",
+						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"icon": "/icons/manageLoan2.svg",
+						"altName": "Alert Icon",
+						"url": "/get-started/how-can-we-help"
+					}
     ]
   },
   "thinkYouShouldKnow": {
