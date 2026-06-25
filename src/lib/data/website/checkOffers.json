@@ -15,7 +15,7 @@
       {
         "btnName": "Check offers from all banks",
         "btnLink": "/get-started",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -42,7 +42,7 @@
       {
         "btnName": "Check offers from all banks",
         "btnLink": "/get-started",
-        "btnColor": "#ffcc00"
+       "btnClass": "btn-primary w-full"
       }
     ]
   },
@@ -126,7 +126,7 @@
   "buttonBanner": {
     "heading": "Access your loan report instantly in PDF.",
     "btnName": "Get Loan Report",
-    "btnColor": "#ffcc00"
+    "btnClass": "btn-primary w-full"
   },
   "changeExistingLoan": {
     "heading": "Change your existing loan",
@@ -138,13 +138,14 @@
         "para": "Switching your existing home loan can help you save money and get better terms! <br>Whether you're looking for lower costs or more flexible repayment options, transferring your home loan could be a smart financial move.",
         "btnName": "Compare loan offers",
         "btnLink": "/get-started/how-can-we-help",
-        "btnColor": "#ffcc00"
+        "btnClass": "btn-primary w-full"
       },
       {
         "heading": "Take an overdraft facility on your home loan​",
         "para": "Withdraw funds as needed and pay interest only on the used amount.<br/>Enjoy flexibility, lower rates than personal loans, and easy access to extra funds for expenses or investments!",
         "btnName": "Talk to us",
-        "btnLink": "/appointment"
+        "btnLink": "/appointment",
+         "btnClass": "btn-secondary w-full"
       },
       {
         "heading": "Increase your home loan (Top up)​",

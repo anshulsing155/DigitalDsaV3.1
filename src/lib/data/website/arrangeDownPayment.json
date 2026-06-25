@@ -267,15 +267,15 @@
 		"listItems": [
 			{
 				"heading": "Eligibility Criteria–",
-				"desc": "Minimum age: 21 years (varies by lender) Stable income source (salaried or self-employed)\nMinimum credit score (typically 650+)"
+				"desc": "Minimum age: 21 years (varies by lender) </br> Stable income source (salaried or self-employed) </br>Minimum credit score (typically 650+)"
 			},
 			{
 				"heading": "Affordability & Repayment Capacity–",
-				"desc": "Assess monthly income vs. loan EMI\nChoose a loan tenure that keeps EMIs manageable\nFactor in existing financial obligations"
+				"desc": "Assess monthly income vs. loan EMI </br> Choose a loan tenure that keeps EMIs manageable </br> Factor in existing financial obligations"
 			},
 			{
 				"heading": "Credibility & Documentation–",
-				"desc": "Maintain a good credit history for better interest rates\nProvide income proof, bank statements, and identity verification\nAvoid multiple loan applications, which can impact your credit score"
+				"desc": "Maintain a good credit history for better interest rates </br> Provide income proof, bank statements, and identity verification </br> Avoid multiple loan applications, which can impact your credit score"
 			}
 		],
 		"listUrl": {

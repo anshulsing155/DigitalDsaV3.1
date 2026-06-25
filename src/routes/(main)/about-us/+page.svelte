@@ -9,44 +9,10 @@
   import TwoColumnWithImage from "$lib/components/website/TwoColumnWithImage.svelte";
   import { onMount } from "svelte";
   import content from "$lib/data/website/aboutUs.json";
+  import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
-  const toggleDropdown = (event: any, index: any) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement;
-
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
-
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
-
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      icon.classList.remove("fa-angle-up");
-      icon.classList.add("fa-angle-down");
-    } else {
-      detailsElement.setAttribute("open", "true");
-      icon.classList.remove("fa-angle-down");
-      icon.classList.add("fa-angle-up");
-
-      // Scroll the opened accordion into view
-      setTimeout(() => {
-        detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
-    }
-  };
-
+ 
   let activeSection = $state(''); // Initially no section is active
 
   // This function sets the first section as active on initial load
@@ -95,26 +61,26 @@
 <section>
   <SecondPageLayout pageData={content.heroData}>
     <div class="block lg:hidden">
-      {#each content.navBarMedium as list, index}
+      {#each content.navBarMedium as list, index (index)}
         <details
-          class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < content.navBarMedium.length - 1 ? 'border-b border-[var(--form-border)]' : ''}"
         >
-          <summary
-            class="bg-ddsa-gradient-primary col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer text-white"
-            onclick={(e) => { e.preventDefault(); toggleDropdown(e, index); }}
-          >
-            <div class="typography-label mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="">{list}</h2>
-              <div class="icon-container justify-self-end typography-h3">
-                <span><i class="fa-solid fa-angle-down faq-icon transition-transform duration-300"></i></span>
-              </div>
-            </div>
-          </summary>
+      <summary
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
 
           {#if index == 0}
             <div
               id="began"
-              class="flex flex-col gap-8 border-b border-[var(--form-border)] py-12 bg-[var(--landing-bg)] text-[var(--form-text)] px-4"
+              class="flex flex-col gap-8  py-12 bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem]"
             >
               <p
                 class="mt-4 typography-h3 text-[var(--form-text)]"
@@ -128,7 +94,7 @@
               </div>
             </div>
           {:else if index == 1}
-            <div class="pt-8 bg-[var(--landing-bg)] text-[var(--form-text)] px-4" id="team">
+            <div class="pt-8 bg-[var(--landing-bg)] text-[var(--form-text)] " id="team">
               <h2 class="typography-h2 text-center text-[var(--form-text)]">
                 {content.leaders.heading}
               </h2>
@@ -140,6 +106,7 @@
                   sourceName={member.sourceName}
                   originalSource={member.originalSource}
                   reverse={member.reverse}
+                  paddingClass="px-0"
                 >
                   <ul
                     class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
@@ -160,7 +127,7 @@
           {:else if index == 2}
             <div
               id="sustainability"
-              class="pt-8 flex flex-col gap-8 bg-[var(--landing-bg)] text-[var(--form-text)] px-4"
+              class="pt-8 flex flex-col gap-8 bg-[var(--landing-bg)] text-[var(--form-text)] px-[0.5rem]"
             >
               <h3
                 class="typography-h3 text-[var(--form-text)]"
@@ -208,7 +175,7 @@
           <h2 class="typography-h2 text-center text-[var(--form-text)]">
             {content.leaders.heading}
           </h2>
-          {#each content.leaders.team as member}
+          {#each content.leaders.team as member, index (index)}
             <TwoColumn
               cardImage={member.cardImage}
               cardAltName={member.cardAltName}
@@ -216,6 +183,7 @@
               sourceName={member.sourceName}
               originalSource={member.originalSource}
               reverse={member.reverse}
+              paddingClass="lg:px-0"
             >
               <ul
                 class="grid gap-8 typography-body-md text-[var(--form-text-secondary)]"
@@ -258,8 +226,10 @@
         <Button link="/contact"   btnClass= "btn-secondary w-full" btnName="Message us" />
       </div>
     </TwoColumnWithImage>
-    <div slot="secondary">
+   
+    {#snippet secondary()}
       <HelpList contents={content.help} />
-    </div>
+      {/snippet}
+    
   </SecondPageLayout>
 </section>

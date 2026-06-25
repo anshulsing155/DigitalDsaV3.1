@@ -99,7 +99,7 @@
 					sectionBorder={true}
 				>
 					{#snippet list()}
-						<p class="font-minParaFont text-[.8rem]">
+						<p class="font-minParaFont text-[.8rem] text-[var(--form-text)]">
 							97% of our first time visitor have taken this survey.
 						</p>
 					{/snippet}
@@ -118,8 +118,8 @@
 						slot="list"
 					>
 						{#each content.assessment.bullets as bullet}
-							<p>
-								<span class="typography-body-lg !font-semibold text-[var(--form-text)]"
+							<p class='typography-body-md text-[var(--form-text)]'>
+								<span class=" !font-semibold "
 									>{bullet.title}</span
 								> <br />
 								{bullet.desc}
@@ -137,13 +137,13 @@
 		<div class="lg:hidden">
 			{#each content.navBarMedium as list, index}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.navBarMedium.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="bg-ddsa-gradient-primary col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -185,7 +185,7 @@
 							<ThingsYouShould thinkKnow={content.measured} disc="list-disc" />
 						</div>
 					{:else if index == 2}
-						<div id="assessment" class="bg-[var(--landing-bg)] px-[0.5rem] text-[var(--form-text)]">
+						<div id="assessment" class="bg-[var(--landing-bg)]  text-[var(--form-text)]">
 							<TwoColumn
 								cardImage={content.assessment.cardImage}
 								cardAltName={content.assessment.cardAltName}

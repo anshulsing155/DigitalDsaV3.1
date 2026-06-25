@@ -15,6 +15,8 @@
   import ButtonBanner from "$lib/components/website/ButtonBanner.svelte";
   import LoanView from "$lib/components/website/LoanView.svelte";
   import content from "$lib/data/website/checkOffers.json";
+  	import { toggleDropdown } from '$lib/utils/toggleDropdown';
+	import { ChevronDown } from '$lib/utils/iconRegistry';
 
   let showModal = $state(false);
   let dialogBox = $state<HTMLDialogElement | null>(null);
@@ -23,47 +25,7 @@
     showModal = !showModal;
   }
 
-  const toggleDropdown = (event: MouseEvent, index: number) => {
-    event.preventDefault();
-    const summaryElement = event.currentTarget as HTMLElement;
-    const icon = summaryElement.querySelector(".faq-icon");
-    const detailsElement = summaryElement.parentElement;
-
-    if (!detailsElement) return;
-
-    // Close all dropdowns except the clicked one
-    document.querySelectorAll(".dropdown").forEach((otherDetails, idx) => {
-      const otherIcon = otherDetails.querySelector(".faq-icon");
-
-      if (idx !== index) {
-        otherDetails.removeAttribute("open");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-angle-up");
-          otherIcon.classList.add("fa-angle-down");
-        }
-      }
-    });
-
-    // Toggle current dropdown open/close state
-    const isOpen = detailsElement.hasAttribute("open");
-    if (isOpen) {
-      detailsElement.removeAttribute("open");
-      if (icon) {
-        icon.classList.remove("fa-angle-up");
-        icon.classList.add("fa-angle-down");
-      }
-    } else {
-      detailsElement.setAttribute("open", "true");
-      if (icon) {
-        icon.classList.remove("fa-angle-down");
-        icon.classList.add("fa-angle-up");
-      }
-    }
-    setTimeout(() => {
-      detailsElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  };
-
+  
   let activeSection = $state("");
 
   const initializeActiveSection = () => {
@@ -132,53 +94,58 @@
               <Button
                 btnName="Compare Loans Now"
                 link="/get-started"
-                btnClass="btn-primary"
+                btnClass= "btn-primary w-full"
               />
             </div>
           </TwoColumnWithLeftHeading>
 
-          <ButtonBanner contents={content.buttonBanner} isBorder />
+          <ButtonBanner contents={content.buttonBanner} isBorder  />
+
         </div>
         <div id="works" data-section="works" class="section"></div>
         <div id="existing" data-section="existing" class="section">
           <AboveTitleWithoutIconCard contents={content.changeExistingLoan} paddingClass="lg:px-0" isBorder />
         </div>
+
         <div id="tools" data-section="tools" class="section">
           <AboveTitleWithTopIconCard contents={content.smartSavingsCalculators} paddingClass="lg:px-0" isBorder />
           <AboveTitleWithBlackCard contents={content.homeLoanCalculator} paddingClass="lg:px-0" />
         </div>
       </div>
     </div>
+
     <div class="lg:hidden block">
-      {#each ["Types of loan", "How it works ?", "Your existing loan", "Tools & calculators"] as list, index}
+      {#each ["Types of loan", "How it works ?", "Your existing loan", "Tools & calculators"] as list, index (index)}
         <details
-          class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < 3 ? 'border-b border-[var(--form-border)]' : ''}"
+          class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index < 3 ? 'border-b border-[var(--form-border)]' : ''}"
         >
           <summary
-            class="bg-ddsa-gradient-primary col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer text-white"
-            onclick={(e) => toggleDropdown(e, index)}
-          >
-            <div class="mx-auto flex w-full items-center justify-between gap-4">
-              <h2 class="typography-label">{list}</h2>
-              <div class="icon-container justify-self-end text-mobSubHead">
-                <span><i class="fa-solid fa-angle-down faq-icon"></i></span>
-              </div>
-            </div>
-          </summary>
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
+						onclick={(e) => toggleDropdown(e, index)}
+					>
+						<div class="mx-auto flex w-full items-center justify-between gap-4">
+							<h2 class="typography-label">{list}</h2>
+							<div class="justify-self-end">
+								<ChevronDown class="faq-icon transition-transform duration-300" />
+							</div>
+						</div>
+					</summary>
+
           {#if index == 0}
             <div id="types" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
               <LoanView contents={content.loanTypes} />
             </div>
           {:else if index == 1}
             <div id="works" class="bg-[var(--landing-bg)] text-[var(--form-text)]">
-              <TwoColumnWithLeftHeading contents={content.howItWorks}>
-                <div>
+              <TwoColumnWithLeftHeading contents={content.howItWorks} isBorder  >
+                
                   <Button
                     btnName="Compare Loans Now"
                     link="/get-started"
                     btnClass="btn-primary"
+                    
                   />
-                </div>
+               
               </TwoColumnWithLeftHeading>
 
               <ButtonBanner contents={content.buttonBanner} />

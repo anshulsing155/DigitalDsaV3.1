@@ -25,21 +25,22 @@
 
 	const { contents, paddingClass = 'lg:px-[4rem]', isBorder = true }: Props = $props();
 </script>
-
+ 
 <section
-	class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] {paddingClass} w-full {isBorder
+	class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
 		? 'border-b border-[var(--form-border)]'
 		: ''}"
 >
-	<div class="flex flex-col gap-[2rem] w-full">
+	<div class={`flex flex-col gap-[2rem] w-full ${paddingClass}`}>
+
 		<div class="flex flex-col gap-2">
 			{#if contents.heading}
-				<h2 class="font-ThirdHead text-minHeadFont text-[var(--form-text)]">
+				<h2 class="typography-h2-md text-[var(--form-text)]">
 					{@html contents.heading}
 				</h2>
 			{/if}
 			{#if contents.para}
-				<p class="font-Paragraph text-subParaFont text-[var(--form-text-secondary)]">{@html contents.para}</p>
+				<p class="typography-body-lg !font-semibold  text-[var(--form-text-secondary)]">{@html contents.para}</p>
 			{/if}
 		</div>
 
@@ -53,10 +54,10 @@
 							<img src={list.icon} alt={list.altName} class="h-[1.5rem]" />
 						</div>
 						<div class="flex flex-col gap-4 text-center">
-							<p class="font-FourthHead text-cardHeading text-[var(--form-text)]">
+							<p class="typography-body-lg !font-semibold text-[var(--form-text)]">
 								{list.title}
 							</p>
-							<p class="font-SubPara text-subParaFont text-[var(--form-text-secondary)]">
+							<p class="typography-body-md text-[var(--form-text-secondary)]">
 								{list.desc}
 							</p>
 						</div>

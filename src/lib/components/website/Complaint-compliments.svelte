@@ -124,7 +124,7 @@
 								{content.giveComplaint.para}
 							</li>
 
-							<div class="w-auto">
+							<li class="w-auto">
 								<button
 									type="button"
 									onclick={() => {
@@ -135,22 +135,22 @@
 								>
 									{content.giveComplaint.btnText}
 								</button>
-							</div>
+							</li>
 						</ul>
 					</TwoColumn>
 				</div>
 			</div>
 		</div>
 		<div class="lg:hidden">
-			{#each content.mobileNavbarTitle as list, index}
+			{#each content.mobileNavbarTitle as list, index (index)}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
-					content.navBarMedium.length - 1
+					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					content.mobileNavbarTitle.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
 				>
 					<summary
-						class="bg-ddsa-gradient-primary col-span-3 list-none px-[1rem] py-[1.5rem] cursor-pointer text-white"
+						class="bg-ddsa-gradient-primary col-span-3 cursor-pointer list-none px-[1rem] py-[1.5rem] text-white"
 						onclick={(e) => toggleDropdown(e, index)}
 					>
 						<div class="mx-auto flex w-full items-center justify-between gap-4">
@@ -162,8 +162,8 @@
 					</summary>
 
 					{#if index == 0}
-						<div class="bg-[var(--landing-bg)] px-4 pb-8 text-[var(--form-text)]" id="makeComplaint">
-							<div class="border-[var(--form-border)] border-b">
+						<div class="bg-[var(--landing-bg)]  pb-8 text-[var(--form-text)]" id="makeComplaint">
+							<div class="">
 								<TwoColumn
 									cardImage={content.makeComplaint.cardImage}
 									cardAltName={content.makeComplaint.cardAltName}
@@ -178,7 +178,7 @@
 											{content.makeComplaint.para}
 										</li>
 
-										<div class="w-auto">
+										<li class="w-auto">
 											<button
 												type="button"
 												onclick={() => {
@@ -189,19 +189,20 @@
 											>
 												{content.makeComplaint.btnText}
 											</button>
-										</div>
+										</li>
 									</ul>
 								</TwoColumn>
 							</div>
 						</div>
 					{:else}
-						<div class="bg-[var(--landing-bg)] px-4 pb-8 text-[var(--form-text)]" id="giveComplaint">
+						<div class="bg-[var(--landing-bg)]  pb-8 text-[var(--form-text)]" id="giveComplaint">
 							<div>
 								<TwoColumn
 									cardImage={content.giveComplaint.cardImage}
 									cardAltName={content.giveComplaint.cardAltName}
 									cardHeading={content.giveComplaint.cardHeading}
 									paddingClass="px-0"
+									isBorder={true}
 								>
 									<ul
 										class="typography-body-md grid gap-[2rem] text-[var(--form-text-secondary)]"
@@ -233,7 +234,7 @@
 				</details>
 			{/each}
 		</div>
-		<div id="feedback" data-section="feedback" class="bg-[var(--landing-bg)] px-4 text-[var(--form-text)]">
+		<div id="feedback" data-section="feedback" class="bg-[var(--landing-bg)] px-[0.5rem] text-[var(--form-text)]">
 			<div class="flex flex-col gap-[3rem] bg-[var(--landing-bg)] pt-[4rem] pb-[8rem]" id="loans">
 				<div id="feedForm" class="feedForm space-y-3 text-center">
 					<FeedbackForm />

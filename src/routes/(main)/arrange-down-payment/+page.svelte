@@ -94,12 +94,17 @@
 
 				<!-- money map -->
 				<div data-section="smart" id="smart" class="">
-					<AboveTitleWithTopIconCard contents={content.smartSavings} paddingClass="px-0" />
+					<AboveTitleWithTopIconCard contents={content.smartSavings} 
+					isBorder 
+					paddingClass="px-0" />
 				</div>
 
 				<!-- withdraw and pay -->
-				<div data-section="pay" id="pay" class="border-b border-[var(--form-border)]">
-					<AboveTitleWithoutIconCard contents={content.withdrawAndPay} />
+				<div data-section="pay" id="pay" class="">
+					<AboveTitleWithoutIconCard contents={content.withdrawAndPay}  
+					paddingClass="px-0"
+					isBorder
+					/>
 				</div>
 
 				<!-- invest and save -->
@@ -108,6 +113,7 @@
 						contents={content.smartInvesting}
 						listGridAboveLg="2"
 						paddingClass="px-0"
+						isBorder
 					/>
 				</div>
 				<!-- take loan -->
@@ -121,10 +127,10 @@
 						<ul class="space-y-6">
 							{#each content.loan.listItems as list}
 								<li class="space-y-2">
-									<h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+									<h3 class="typography-body-md !font-semibold text-[var(--form-text)]">
 										{list.heading}
 									</h3>
-									<p class="typography-body-md text-[var(--form-text-secondary)]">{list.desc}</p>
+									<p class="typography-body-md text-[var(--form-text-secondary)]">{@html list.desc}</p>
 								</li>
 							{/each}
 						</ul>
@@ -135,9 +141,9 @@
 		</div>
 
 		<div class="lg:hidden">
-			{#each content.navBarMedium as list, index}
+			{#each content.navBarMedium as list, index (index)}
 				<details
-					class="dropdown col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
+					class="dropdown border-bgBtn col-span-3 bg-[var(--landing-bg-card)] text-[var(--form-text)] {index <
 					content.navBarMedium.length - 1
 						? 'border-b border-[var(--form-border)]'
 						: ''}"
@@ -153,8 +159,9 @@
 							</div>
 						</div>
 					</summary>
+
 					{#if index == 0}
-						<div id="first" class="bg-[var(--landing-bg)] px-[0.5rem] text-[var(--form-text)]">
+						<div id="first" class="bg-[var(--landing-bg)]  text-[var(--form-text)]">
 							<SectionIntro
 								heading={content.yourSavings.heading}
 								para={content.yourSavings.para}
@@ -215,11 +222,11 @@
 								<ul class="space-y-6">
 									{#each content.loan.listItems as list}
 										<li class="space-y-2">
-											<h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+											<h3 class="typography-body-md !font-semibold text-[var(--form-text)]">
 												{list.heading}
 											</h3>
 											<p class="typography-body-md text-[var(--form-text-secondary)]">
-												{list.desc}
+												{@html list.desc}
 											</p>
 										</li>
 									{/each}
