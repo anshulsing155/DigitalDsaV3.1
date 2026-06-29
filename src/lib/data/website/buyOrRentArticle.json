@@ -2,9 +2,9 @@
 	"mobileNavbarTitle": ["What's right", "Compare", "Pros & cons", "Tools & calculators"],
 	"pageData": {
 		"coverImage": "/images/happy-indian-family-in-kitchen.jpg",
-		"coverAlt": "indian family enjoying in their kitchen",
-		"heading": "Should You Buy or Rent? Let’s Find Out Together!",
-		"para": " <div class=\"text-center mt-4\"><blockquote class=\"relative italic typography-body-md text-[var(--form-text-secondary)]\"><span class=\"text-3xl font-serif absolute left-0 -top-3\">“</span>Home isn’t just a place, it’s a feeling. But should you rent or buy? <br>Let’s explore the right choice for you!<span class=\"text-3xl font-serif absolute right-0 -bottom-6\">”</span></blockquote></div>",
+		"coverAlt": "Indian family planning home ownership with DigitalDSA",
+		"heading": "Helping Clients Decide Between Buying and Renting",
+		"para": "<p class=\"text-center\">Every client's financial situation is unique. As a Loan DSA, understanding whether buying or renting is the right choice helps you recommend suitable home loan solutions, assess loan readiness, and guide clients toward informed financial decisions. DigitalDSA provides the tools and lender insights needed to identify opportunities and improve home loan approvals.</p>",
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
@@ -54,20 +54,20 @@
 	},
 	"right": {
 		"contents": {
-			"heading": "What’s Right for You?",
-			"listTopPara": "Answer these 3 quick questions to find out!",
+			"heading": "Is Your Client Ready for a Home Loan?",
+			"listTopPara": "Review these key factors before recommending a home loan solution:",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">What’s your current financial situation?</span>",
-					"desc": "<ul class=\"list-decimal list-inside mb-2 mt-2\"><li>Saving for a future home</li><li>Ready to invest</li><li>Still figuring things out</li></ul>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">How prepared is the client financially?</span>",
+					"desc": "<ul class=\"list-decimal list-inside mb-2 mt-2\"><li>Has sufficient savings for the down payment and upfront costs.</li><li>Has a stable income and repayment capacity.</li><li>Needs financial planning before applying for a home loan.</li></ul>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">What’s your lifestyle preference?</span>",
-					"desc": "<ul class=\"list-decimal list-inside mb-2 mt-2\"><li>Flexibility (I want to move easily)</li><li>Stability (I love being rooted)</li><li>A mix of both</li></ul>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">What are the client's housing goals?</span>",
+					"desc": "<ul class=\"list-decimal list-inside mb-2 mt-2\"><li>Planning to purchase a home soon.</li><li>Comparing buying and renting options.</li><li>Still exploring long-term housing plans.</li></ul>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Do you prefer maintaining a home or having someone else take care of it?</span>",
-					"desc": "<ul class=\"list-decimal list-inside mb-2 mt-2\"><li>DIY homeowner vibes!</li><li>I’d rather call my landlord.</li><li>Not sure yet.</li></ul>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Is the client loan-ready?</span>",
+					"desc": "<ul class=\"list-decimal list-inside mb-2 mt-2\"><li>Documents are complete and income is verifiable.</li><li>Property selection is in progress or finalized.</li><li>Additional preparation is needed before approaching lenders.</li></ul>"
 				}
 			]
 		}
@@ -75,134 +75,134 @@
 	"compare": {
 		"exampleTableData": [
 			{
-				"heading": "Renting vs Buying<br><span class=\"underline decoration-primary decoration-4 underline-offset-4\">The Breakdown</span>"
+				"heading": "Helping Clients Decide:<br><span class=\"underline decoration-primary decoration-4 underline-offset-4\">Renting vs Buying</span>"
 			},
 			{
 				"columnName": [
-					"<div class='flex gap-2 items-center'><img class='h-5' src='/icons/features.svg' alt='gear icon'> Feature </div>",
+					"<div class='flex gap-2 items-center'><img class='h-5' src='/icons/features.svg' alt='assessment icon'> Assessment Area </div>",
 					"<div class='flex gap-2 items-center'><img class='h-5' src='/icons/plotLoans.svg' alt='renting icon'> Renting </div>",
-					"<div class='flex gap-2 items-center'> <img class='h-5' src='/icons/home.svg' alt='buying icon'> Buying </div>"
+					"<div class='flex gap-2 items-center'><img class='h-5' src='/icons/home.svg' alt='buying icon'> Buying </div>"
 				],
 				"rowData": [
 					{
-						"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='monthly cost icon'> Monthly Cost </span>": [
-							"Fixed rent, often lower than EMIs",
-							"EMIs, but equity builds over time"
+						"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/loanValue.svg' alt='financial readiness icon'> Financial Readiness </span>": [
+							"Suitable for clients still building savings or improving their financial profile.",
+							"Suitable for clients with stable income, sufficient savings, and home loan eligibility."
 						]
 					},
 					{
-						"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='flexibility icon'> Flexibility </span>": [
-							"Move anytime, no strings attached",
-							"Long-term commitment to a location"
+						"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='housing goals icon'> Housing Goals </span>": [
+							"Ideal for clients seeking flexibility or planning to relocate in the near future.",
+							"Best for clients planning long-term home ownership and asset creation."
 						]
 					},
 					{
 						"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/taxBenefits.svg' alt='upfront costs icon'> Upfront Costs </span>": [
-							"Just a security deposit",
-							"Down payment, registration, stamp duty"
+							"Lower initial expenses, typically limited to deposits and advance rent.",
+							"Requires planning for down payment, stamp duty, registration charges, and other property-related costs."
 						]
 					},
 					{
-						"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='ownership icon'> Ownership </span>": [
-							"No ownership, no asset building",
-							"You own the property, build equity"
+						"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/propertyEligibility.svg' alt='loan opportunity icon'> Home Loan Opportunity </span>": [
+							"Client may benefit from financial planning before applying for a home loan.",
+							"Client may be ready for lender evaluation, home loan comparison, and conditional pre-approval."
 						]
 					},
 					{
-						"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='maintenance icon'> Maintenance </span>": [
-							"Covered by the landlord",
-							"Out of pocket (repairs, renovations)"
+						"<span class='font-semibold flex gap-4 items-center'><img class='h-6' src='/icons/constructionTable.svg' alt='long-term value icon'> Long-Term Value </span>": [
+							"Provides flexibility but does not contribute to property ownership.",
+							"Helps clients build equity while creating a long-term financial asset."
 						]
 					}
 				]
 			}
 		],
-		"funFact": "💡 <span class=\"font-semibold mr-2\">Fun Fact :</span> Did you know the cost of renting may seem lower upfront but adds up over years without offering ownership benefits?",
+		"funFact": "💡 <span class=\"font-semibold mr-2\">DSA Insight :</span> Clients who understand the long-term costs and benefits of buying versus renting are better prepared to make informed home loan decisions and are more likely to complete the purchase journey.",
 		"buyerStory": {
-			"heading": "The Buyer’s Story",
+			"heading": "A DSA Success Story",
 			"contents": {
 				"cardImage": "/images/family-with-happy-expressions.jpg",
-				"cardAltName": "family with happy expressions",
-				"cardHeading": "The Buyer’s Story"
+				"cardAltName": "Loan DSA helping a family achieve home ownership",
+				"cardHeading": "Helping a Client Become Home Loan Ready"
 			},
-			"quote": "We were renting for 5 years, paying ₹20,000/month. Buying was a big step, but our EMI is now ₹22,500— and every payment builds equity. Plus, it’s our home! We have the freedom to renovate and make it truly ours. The sense of stability and belonging is unmatched. It’s an investment in our future, and we couldn’t be happier with our decision."
+			"quote": "One of our clients had been renting for several years and was unsure whether buying a home was financially feasible. After reviewing their income, savings, and repayment capacity, we compared multiple lender options and identified a suitable home loan solution. By understanding the total cost of home ownership and selecting the right lender, the client successfully purchased their first home with confidence. Careful planning and lender matching turned uncertainty into a successful loan approval."
 		},
 		"renterStory": {
-			"heading": "The Renter’s Story",
+			"heading": "A Future Homebuyer Story",
 			"contents": {
 				"cardImage": "/images/indian-couple-on-the-park-bench.jpg",
-				"cardAltName": "indian couple sitting on the park bench",
-				"cardHeading": "The Renter’s Story",
+				"cardAltName": "Loan DSA advising clients on preparing for future home ownership",
+				"cardHeading": "Preparing a Client for Home Ownership",
 				"reverse": true
 			},
-			"quote": "I travel a lot for work, so renting made sense. No maintenance costs, and I can move anywhere anytime. Renting gives me freedom! Plus, I don't have to worry about property taxes or home repairs. It's convenient and fits my lifestyle perfectly.",
-			"linkText": "Check Our Affordability Calculator",
+			"quote": "A client wanted to purchase a home but wasn't financially ready for a home loan. After reviewing their income, savings, and existing obligations, we recommended postponing the purchase while building a stronger financial profile. By improving their creditworthiness, increasing their down payment savings, and planning for additional property costs, the client will be in a much stronger position to secure a suitable home loan in the future.",
+			"linkText": "Check Client Affordability",
 			"linkUrl": "/calculators/affordability-calculator"
 		},
 		"costs": {
-			"heading": "What About Costs? Breaking Down the Numbers",
-			"listTopPara": "Wondering what costs are involved? Let’s simplify them:",
+			"heading": "Comparing the Financial Commitment",
+			"listTopPara": "Understanding the financial implications of renting and buying helps DSAs recommend the right solution based on each client's readiness:",
 			"list": [
 				{
 					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Renting Costs</span>",
-					"desc": "<ul class=\"list-disc list-inside mb-2 mt-2\"><li><span class=\"font-semibold mr-1\">Monthly Rent :</span> Depends on location, property size, and amenities—calculate based on your budget.</li><li><span class=\"font-semibold mr-1\">Security Deposit :</span> Typically 1-3 months' rent, varying by landlord and city.</li></ul>"
+					"desc": "<ul class=\"list-disc list-inside mb-2 mt-2\"><li><span class=\"font-semibold mr-1\">Monthly Rent :</span> A recurring expense that provides housing but does not contribute to asset ownership.</li><li><span class=\"font-semibold mr-1\">Security Deposit :</span> An upfront refundable deposit that varies by property, landlord, and location.</li><li><span class=\"font-semibold mr-1\">Limited Financial Commitment :</span> Lower upfront costs make renting suitable for clients who are still preparing for home ownership.</li></ul>"
 				},
 				{
 					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Buying Costs</span>",
-					"desc": "<ul class=\"list-disc list-inside mb-2 mt-2\"><li><span class=\"font-semibold mr-1\">Down Payment :</span> 10-20% of the property value</li><li><span class=\"font-semibold mr-1\">Registration and Stamp Duty :</span> Varies by state</li><li><span class=\"font-semibold mr-1\">Maintenance :</span> Annual upkeep and repairs</li></ul>"
+					"desc": "<ul class=\"list-disc list-inside mb-2 mt-2\"><li><span class=\"font-semibold mr-1\">Down Payment :</span> Clients should plan for the required contribution based on lender eligibility and property value.</li><li><span class=\"font-semibold mr-1\">Government Charges :</span> Stamp duty, registration charges, and other statutory fees should be included in the overall budget.</li><li><span class=\"font-semibold mr-1\">Home Loan & Ownership Costs :</span> EMI commitments, insurance, maintenance, and other property-related expenses should be evaluated before purchasing.</li></ul>"
 				}
 			],
-			"listSecPara": "💡<span class=\"font-semibold mr-2\">Pro Tip : </span>Buying has higher upfront costs, but over time, it can save you money and build wealth."
+			"listSecPara": "💡<span class=\"font-semibold mr-2\">DSA Insight :</span> Assess both the client's financial readiness and long-term goals before recommending a home loan. Buying can support long-term wealth creation, while renting may be the better option until the client is financially prepared."
 		}
 	},
 	"prosCons": {
-		"heading": "Pros & Cons:<br> Renting vs Buying",
-		"secPara": "<div class=\"\"><div class=\"grid md:grid-cols-2 gap-8\"><!-- Renting Section --><div class=\" typography-body-md text-[var(--form-text-secondary)]\"><h3 class=\"mb-4 !font-semibold typography-body-lg text-[var(--form-text)]\">🏠 Renting</h3><div class=\"space-y-2\"><p class=\"text-[var(--ddsa-success)] !font-semibold pb-2\">✅ Pros:</p><ul class=\"list-disc pl-5 space-y-1\"><li>Flexibility to move anytime.</li><li>Lower upfront costs.</li><li>No responsibility for repairs.</li></ul></div><div class=\"my-4 space-y-2\"><p class=\"text-[var(--ddsa-error)] !font-semibold my-2\">❌ Cons:</p><ul class=\"list-disc pl-5 space-y-1\"><li>No equity built—money spent doesn’t come back.</li><li>Rent can increase every year.</li></ul></div></div><!-- Buying Section --><div class=\"\"><h3 class=\"mb-4 !font-semibold typography-body-lg text-[var(--form-text)]\">🏡 Buying</h3><div class=\"space-y-2 pb-2\"><p class=\"text-[var(--ddsa-success)] !font-semibold\">✅ Pros:</p><ul class=\"list-disc pl-5 space-y-1\"><li>You own your home no landlord hassles.</li><li>Equity growth and investment potential.</li><li>Freedom to renovate or customize.</li></ul></div><div class=\"mt-4 space-y-2\"><p class=\"text-[var(--ddsa-error)] !font-semibold\">❌ Cons:</p><ul class=\"list-disc pl-5 space-y-1\"><li>High upfront costs (down payment, taxes).</li><li>Less flexibility—harder to move quickly.</li></ul></div></div></div></div>",
+		"heading": "Buying vs Renting:<br> A DSA's Perspective",
+		"secPara": "<div><div class=\"grid md:grid-cols-2 gap-8\"><div class=\"typography-body-md text-[var(--form-text-secondary)]\"><h3 class=\"mb-4 !font-semibold typography-body-lg text-[var(--form-text)]\">🏠 Renting</h3><div class=\"space-y-2\"><p class=\"text-[var(--ddsa-success)] !font-semibold pb-2\">✅ Suitable When:</p><ul class=\"list-disc pl-5 space-y-1\"><li>The client is still building savings for a down payment.</li><li>Income or employment is not yet stable enough for a home loan.</li><li>The client requires flexibility due to relocation or career plans.</li></ul></div><div class=\"my-4 space-y-2\"><p class=\"text-[var(--ddsa-error)] !font-semibold my-2\">⚠️ Considerations:</p><ul class=\"list-disc pl-5 space-y-1\"><li>Monthly rent does not contribute toward property ownership.</li><li>Rental costs may increase over time.</li></ul></div></div><div><h3 class=\"mb-4 !font-semibold typography-body-lg text-[var(--form-text)]\">🏡 Buying</h3><div class=\"space-y-2 pb-2\"><p class=\"text-[var(--ddsa-success)] !font-semibold\">✅ Suitable When:</p><ul class=\"list-disc pl-5 space-y-1\"><li>The client has stable income and repayment capacity.</li><li>Down payment and upfront property costs are financially manageable.</li><li>The client plans long-term home ownership and asset creation.</li></ul></div><div class=\"mt-4 space-y-2\"><p class=\"text-[var(--ddsa-error)] !font-semibold\">⚠️ Considerations:</p><ul class=\"list-disc pl-5 space-y-1\"><li>Requires planning for EMIs, taxes, insurance, and maintenance costs.</li><li>Clients should compare multiple lenders before finalizing a home loan.</li></ul></div></div></div></div>",
 		"unsure": {
-			"heading": "Still Unsure? <br>Let’s Make It Easy!",
-			"listTopPara": "Renting or buying, there’s no one-size-fits-all answer. <br>It depends on:",
+			"heading": "Not Sure Which Option Fits Your Client?",
+			"listTopPara": "Evaluate these key factors before recommending a home loan:",
 			"list": [
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your financial situation</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Financial readiness and repayment capacity.</span>"
 				},
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your lifestyle preferences</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Property purchase timeline and housing goals.</span>"
 				},
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your long-term goals</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Eligibility across multiple lenders and available loan options.</span>"
 				}
 			],
-			"listSecPara": "<div>💡 Want help figuring it out? Explore our tools and guides to make an informed decision! <br><p class=\"mt-8\"> <button class=\"typography-button w-full cursor-pointer rounded-full px-8 py-3 transition-all duration-300 hover:opacity-90 md:w-auto btn-primary text-black\" href=\"/appointment\">Contact Us</button></p></div>"
+			"listSecPara": "<div>💡 <span class=\"font-semibold\">Need expert support?</span> Use DigitalDSA's lender comparison tools, eligibility calculators, and expert guidance to help clients make informed borrowing decisions.<br><p class=\"mt-8\"><button class=\"typography-button w-full cursor-pointer rounded-full px-8 py-3 transition-all duration-300 hover:opacity-90 md:w-auto btn-primary text-black\" href=\"/appointment\">Book an Appointment</button></p></div>"
 		}
 	},
 	"tools": {
 		"contents": {
-			"heading": "Home loan calculator",
+			"heading": "Tools & Resources for Loan DSAs",
 			"xlGridCol": 4,
 			"borderBottom": true,
 			"cards": [
 				{
-					"heading": " How much can I borrow?",
+					"heading": "Check Client Eligibility",
 					"icon": "/icons/calc.svg",
-					"iconAltName": "icon-calc",
+					"iconAltName": "eligibility-calculator",
 					"url": "/calculators/affordability-calculator"
 				},
 				{
-					"heading": " Home loan repayments calculator",
+					"heading": "Plan Loan Repayment Scenarios",
 					"icon": "/icons/lap.svg",
-					"iconAltName": "loan-icon",
+					"iconAltName": "part-payment-planner",
 					"url": "/planners/part-payment-planner"
 				},
 				{
-					"heading": "  Stamp duty calculator",
+					"heading": "Estimate Property Charges",
 					"icon": "/icons/apply.svg",
-					"iconAltName": "icons-apply",
+					"iconAltName": "stamp-duty-calculator",
 					"url": "/calculators/stamp-duty-calculator"
 				},
 				{
-					"heading": "Calculators & tools?",
+					"heading": "Explore Loan Tools & Calculators",
 					"icon": "/icons/calc.svg",
-					"iconAltName": "icons-calc",
+					"iconAltName": "loan-tools",
 					"url": "/home-loan/home-loan-tools-calculator"
 				}
 			]
@@ -211,50 +211,50 @@
 	"messageUs": {
 		"contents": {
 			"cardImage": "/images/message.jpg",
-			"cardAltName": "housing-figure",
-			"cardHeading": "Message us 24/7",
+			"cardAltName": "DigitalDSA lending experts assisting loan DSAs",
+			"cardHeading": "Talk to Our Lending Experts",
 			"reverse": true
 		},
-		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"para": "Need support with a loan case? Our lending experts are here to help you assess client eligibility, compare lender requirements, review documentation, and identify the most suitable financing solutions. Whether you're handling a new application or a complex loan scenario, DigitalDSA provides the guidance you need to improve approval rates and deliver better outcomes for your clients.",
 		"button": {
 			"link": "/contact",
 			"btnClass": "btn-secondary",
-			"btnName": "Message us"
+			"btnName": "Contact Our Team"
 		}
 	},
 	"common_components": {
 		"helpList": {
 			"contents": {
-				"heading": "We're here to help",
+				"heading": "We're Here to Support Your Loan Business",
 				"xlGridCol": 4,
 				"borderBottom": false,
 				"cards": [
 					{
-						"heading": "Know your borrowing power",
-						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+						"heading": "Book an Appointment",
+						"para": "Schedule a consultation with our lending experts for guidance on lender selection, client eligibility, and complex loan cases.",
 						"icon": "/icons/appointment.svg",
 						"altName": "appointment Icon",
 						"url": "/appointment"
 					},
 					{
-						"heading": "Check loan offers",
-						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"heading": "Compare Lender Offers",
+						"para": "Compare loan products from multiple banks and NBFCs to identify the most suitable financing options for your clients.",
 						"icon": "/icons/manageLoan2.svg",
-						"altName": "Alert Icon",
+						"altName": "Compare lender offers",
 						"url": "/get-started/how-can-we-help"
 					},
 					{
-						"heading": "Contact us",
-						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+						"heading": "Contact Our Team",
+						"para": "Connect with DigitalDSA specialists for assistance with documentation, lender policies, and loan processing support.",
 						"icon": "/icons/contact.svg",
-						"altName": "Alert Icon",
+						"altName": "Contact DigitalDSA team",
 						"url": "/contact"
 					},
 					{
-						"heading": "Message us",
-						"para": "Get instant help from our online assistants  or chat to a specialist.",
+						"heading": "Message Us",
+						"para": "Get quick assistance with eligibility queries, active loan cases, lender recommendations, and application support.",
 						"icon": "/icons/msg.svg",
-						"altName": "Alert Icon",
+						"altName": "Message DigitalDSA support",
 						"url": "/contact"
 					}
 				]
@@ -262,12 +262,12 @@
 		},
 		"thinkYouShouldKnow": {
 			"bullets": [
-				"Renting offers flexibility and lower upfront costs, but you don't build equity.",
-				"Buying requires a significant initial investment, but it allows you to build equity over time.",
-				"Consider your financial situation, lifestyle preferences, and long-term goals when deciding between renting and buying.",
-				"Use our tools and calculators to get a clearer picture of what option suits you best.",
-				"Contact our specialists for personalized advice and support in making your decision.",
-				"Explore our guides to understand the pros and cons of each option in detail."
+				"Assess each client's financial readiness before recommending a home loan or continuing with renting.",
+				"Evaluate income stability, repayment capacity, credit profile, and down payment availability to identify suitable lending opportunities.",
+				"Help clients understand the complete cost of home ownership, including EMIs, government charges, insurance, and ongoing maintenance expenses.",
+				"Compare multiple lenders to recommend the most suitable home loan based on the client's financial profile and eligibility.",
+				"Use DigitalDSA's calculators, eligibility tools, and planning resources to prepare clients for successful loan applications.",
+				"Guide clients with transparent advice and expert support to improve approval rates and deliver better home financing solutions."
 			]
 		}
 	}
