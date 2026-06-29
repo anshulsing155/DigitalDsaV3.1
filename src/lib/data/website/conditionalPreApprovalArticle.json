@@ -3,8 +3,8 @@
 	"pageData": {
 		"coverImage": "/images/couple-looking-at-dream-home.jpg",
 		"coverAlt": "couple looking at dream home",
-		"heading": "Should You Get Home Loan Conditional Pre-Approval?",
-		"para": "Conditional pre-approval can be your secret weapon to secure your dream home before someone else does. Here's why it matters and how it can help you in your home-buying journey.",
+		"heading": "Conditional Pre-Approval:<br> A Smart Advantage for Loan DSAs",
+		"para": "Conditional pre-approval helps DSAs identify loan-ready clients before they begin their property search. By assessing eligibility early, comparing lender requirements, and preparing complete documentation, you can reduce processing delays, improve approval rates, and help clients move forward with greater confidence.",
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
@@ -53,110 +53,110 @@
 		]
 	},
 	"intro": {
-		"heading": "What is Conditional Pre-Approval?",
-		"secPara": "<p class=\"mb-4\">Conditional pre-approval is an indication from a lender that, based on an initial assessment of your finances, you’re eligible to apply for a home loan up to a specific amount. While it’s not a guarantee, it shows sellers and agents that you’re serious about buying and provides confidence that you can afford a property within a specific price range.</p><p>At Digital DSA, we help you understand the process of pre-approval and ensure your financial details are accurately presented to maximize your chances.</p>"
+		"heading": "Understanding Conditional Pre-Approval",
+		"secPara": "<p class=\"mb-4\">Conditional pre-approval is an initial assessment by a lender indicating that a customer may qualify for a home loan up to a specified amount, subject to document verification and final approval. For DSAs, it is an effective way to identify loan-ready customers, understand their borrowing capacity, and recommend suitable lenders before they begin their property search.</p><p>DigitalDSA helps you evaluate client eligibility, compare lender-specific pre-approval criteria, and prepare complete loan applications. By qualifying customers early, you can reduce processing delays, improve approval rates, and provide a smoother home loan experience.</p>"
 	},
 	"advantages": {
 		"contents": {
-			"heading": "Advantages of Conditional Pre-Approval",
-			"listTopPara": "Here are some key benefits of obtaining conditional pre-approval:",
+			"heading": "Why Conditional Pre-Approval Matters for DSAs",
+			"listTopPara": "Key benefits of using conditional pre-approval in your home loan process:",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Gives You a Clear Budget:</span>",
-					"desc": "Pre-approval helps you understand how much you can borrow, letting you focus on properties within your price range. This saves you time and energy by narrowing down your search."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Qualify Clients Early:</span>",
+					"desc": "Assess your client's borrowing capacity before property selection, helping you recommend suitable lenders and avoid unrealistic loan expectations."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Makes You a Serious Buyer:</span>",
-					"desc": "Conditional pre-approval demonstrates to sellers that you’re prepared and capable of securing finance, giving you a competitive edge in negotiations."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Improve Approval Rates:</span>",
+					"desc": "Identify eligible customers, verify financial readiness, and submit better-prepared applications to increase the likelihood of loan approval."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Saves Time When It Matters Most:</span>",
-					"desc": "If you find your dream home, being pre-approved can expedite the loan approval process. Sellers are more likely to favor buyers who are ready to move forward quickly."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Reduce Processing Time:</span>",
+					"desc": "Early eligibility assessment and complete documentation help streamline the loan process and minimize delays once a property is finalized."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Adapts to Changing Situations:</span>",
-					"desc": "If your financial circumstances or property preferences change, you can renew your pre-approval to reflect your updated position."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Match Clients with the Right Lender:</span>",
+					"desc": "Compare lender-specific pre-approval criteria to identify the most suitable bank or NBFC based on your client's financial profile."
 				}
 			]
 		}
 	},
 	"preparation": {
 		"assess": {
-			"heading": "What Should You Know Before Applying?",
-			"listTopPara": "When applying for conditional pre-approval, lenders typically assess:",
+			"heading": "What Should DSAs Evaluate Before Applying?",
+			"listTopPara": "Before submitting a client for conditional pre-approval, review the following:",
 			"list": [
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">The price range of properties you’re considering.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">The client's property budget and estimated loan requirement.</span>"
 				},
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your current savings for a down payment.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Availability of funds for the down payment and other upfront expenses.</span>"
 				},
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your income and employment stability.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Income stability, employment profile, and repayment capacity.</span>"
 				},
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Your monthly living expenses.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Existing financial obligations, monthly expenses, and lender eligibility criteria.</span>"
 				}
 			],
-			"listSecPara": "✅ Keep in mind that pre-approval is usually valid for 3-6 months. If you don’t find a property within that timeframe, you may need to reapply."
+			"listSecPara": "💡 <span class=\"font-semibold\">DSA Tip:</span> Conditional pre-approval is generally valid for <span class=\"font-semibold\">3–6 months</span>, depending on the lender. If the client does not finalize a property within this period or their financial profile changes, a fresh assessment or reapplication may be required."
 		},
 		"apply": {
-			"heading": "How to Apply for Conditional Pre-Approval with Digital DSA",
-			"listTopPara": "Unlike traditional lenders or banks, Digital DSA simplifies the process with:",
+			"heading": "How DigitalDSA Helps DSAs with Conditional Pre-Approval",
+			"listTopPara": "DigitalDSA simplifies the conditional pre-approval process by helping you evaluate clients and identify the right lending opportunities:",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Online Eligibility Checks:</span>",
-					"desc": "Our platform helps you quickly calculate how much you can borrow based on your financial details."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Client Eligibility Assessment:</span>",
+					"desc": "Evaluate your client's borrowing capacity, financial profile, and loan readiness before approaching lenders."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Expert Guidance:</span>",
-					"desc": "We provide start-to-finish support, ensuring you understand the process and submit all required documents correctly."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Lender Comparison & Expert Support:</span>",
+					"desc": "Compare lender-specific pre-approval criteria and receive guidance on selecting the most suitable bank or NBFC for your client's profile."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">No Spam Calls:</span>",
-					"desc": "We respect your privacy while offering you personalized solutions."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Documentation Assistance:</span>",
+					"desc": "Ensure all required documents are complete and accurate to reduce processing delays and improve approval chances."
 				}
 			],
-			"listSecPara": "<p class=\"font-semibold\">Here’s how to get started :</p><ul class=\"space-y-4 list-disc mt-4\"><p>✅ Use our Home Loan Eligibility Calculator to get an estimate.</p><p>✅ Provide basic financial information like your income, expenses, and down payment savings.</p><p>✅ Let our advisors guide you through the pre-approval process, ensuring everything is in place for when you find the perfect property.</p></ul>"
+			"listSecPara": "<p class=\"font-semibold\">How to get started :</p><ul class=\"space-y-4 list-disc mt-4\"><p>✅ Assess your client's income, repayment capacity, and financial profile.</p><p>✅ Compare lender eligibility criteria and identify suitable pre-approval options.</p><p>✅ Submit complete documentation and work with our lending experts to support a smooth conditional pre-approval process.</p></ul>"
 		},
 		"after": {
-			"heading": "What Happens After Pre-Approval?",
-			"listTopPara": "Once you’re conditionally pre-approved :",
+			"heading": "What Happens After Conditional Pre-Approval?",
+			"listTopPara": "Once your client receives conditional pre-approval:",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Continue Your Property Search:</span>",
-					"desc": "With a clearer budget, you can confidently explore properties within your range."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Help the Client Find a Suitable Property:</span>",
+					"desc": "Guide your client in selecting a property that aligns with the approved budget and meets the lender's eligibility requirements."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Formal Loan Approval:</span>",
-					"desc": "After you find your ideal home, the lender will verify your financial position and property details before providing formal approval."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Coordinate Final Loan Processing:</span>",
+					"desc": "Assist with property verification, document submission, and lender-specific requirements to move the application toward formal loan approval."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Make an Offer with Confidence:</span>",
-					"desc": "Knowing your finances are in place gives you the upper hand during negotiations."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Track Approval & Disbursement:</span>",
+					"desc": "Work closely with the lender to monitor application progress, resolve queries promptly, and ensure timely loan sanction and disbursement."
 				}
 			]
 		}
 	},
 	"guidance": {
 		"whyChoose": {
-			"heading": "Why Choose Digital DSA for Pre-Approval?",
-			"listTopPara": "At Digital DSA, we focus on empowering first-time buyers by offering :",
+			"heading": "Why DSAs Choose DigitalDSA for Conditional Pre-Approval",
+			"listTopPara": "DigitalDSA equips loan DSAs with the tools, insights, and support needed to identify eligible clients and improve home loan approval rates by offering:",
 			"list": [
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Transparent advice with no hidden charges.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Access to multiple lenders with transparent eligibility criteria and product comparisons.</span>"
 				},
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\"> Affordability Calculator</a> to refine your search.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Smart tools like our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\">Affordability Calculator</a> to assess client eligibility and borrowing capacity.</span>"
 				},
 				{
-					"desc": "<span class=\"text-[var(--form-text-secondary)]\">A no-pressure approach with zero processing fees and no spam calls.</span>"
+					"desc": "<span class=\"text-[var(--form-text-secondary)]\">Expert guidance on lender selection, documentation, and complex loan cases to help improve approval rates.</span>"
 				}
 			]
 		}
 	},
 	"tools": {
-		"heading": "Tools & calculators",
+		"heading": "Tools & Resources for Loan DSAs",
 		"cardData": [
 			{
 				"id": "1",
@@ -164,33 +164,33 @@
 				"links": [
 					{
 						"id": 1,
-						"secLinkName": "How much can I borrow?",
+						"secLinkName": "Estimate Client EMI",
 						"secUrl": "/calculators/emi-calculator"
 					},
 					{
 						"id": 2,
-						"secLinkName": "What would my repayments be?",
+						"secLinkName": "Check Client Eligibility",
 						"secUrl": "/calculators/eligibility-calculator"
 					},
 					{
 						"id": 3,
-						"secLinkName": "What would my upfront costs be?",
+						"secLinkName": "Compare Balance Transfer Benefits",
 						"secUrl": "/calculators/balance-transfer-calculator"
 					}
 				]
 			},
 			{
 				"id": 2,
-				"title": "Tools",
+				"title": "DSA Tools",
 				"links": [
 					{
 						"id": 1,
-						"secLinkName": "Compare our home loans",
+						"secLinkName": "Compare Lender Offers",
 						"secUrl": "/get-started/how-can-we-help"
 					},
 					{
 						"id": 2,
-						"secLinkName": "Budget planner",
+						"secLinkName": "Plan Client Repayments",
 						"secUrl": "/planners/budget-planner"
 					}
 				]
@@ -200,48 +200,49 @@
 	"messageUs": {
 		"contents": {
 			"cardImage": "/images/message.jpg",
-			"cardAltName": "housing-figure",
-			"cardHeading": "Message us 24/7",
+			"cardAltName": "DigitalDSA support team assisting loan DSAs",
+			"cardHeading": "Talk to Our Lending Experts",
 			"reverse": true
 		},
-		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"para": "Need assistance with a conditional pre-approval case? Our lending experts can help you assess client eligibility, compare lender requirements, review documentation, and identify the most suitable pre-approval options. Whether you're handling a straightforward application or a complex case, DigitalDSA is here to help you improve approval rates and close more home loan opportunities.",
 		"button": {
 			"link": "/contact",
 			"btnClass": "btn-secondary",
-			"btnName": "Message us"
+			"btnName": "Contact our team"
 		}
 	},
+
 	"common_components": {
 		"helpList": {
 			"contents": {
-				"heading": "We're here to help",
+				"heading": "We're Here to Support Your Loan Business",
 				"xlGridCol": 4,
 				"borderBottom": false,
 				"cards": [
 					{
-						"heading": "Know your borrowing power",
-						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+						"heading": "Book an Appointment",
+						"para": "Schedule a discussion with our lending specialists for guidance on lender selection, eligibility, and complex loan cases.",
 						"icon": "/icons/appointment.svg",
 						"altName": "appointment Icon",
 						"url": "/appointment"
 					},
 					{
-						"heading": "Check loan offers",
-						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"heading": "Compare Lender Offers",
+						"para": "Evaluate loan products from multiple banks and NBFCs to identify the best approval opportunities for your clients.",
 						"icon": "/icons/manageLoan2.svg",
 						"altName": "Alert Icon",
 						"url": "/get-started/how-can-we-help"
 					},
 					{
-						"heading": "Contact us",
-						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+						"heading": "Contact Our Team",
+						"para": "Connect directly with DigitalDSA experts for support on documentation, lender policies, and loan processing.",
 						"icon": "/icons/contact.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
 					},
 					{
-						"heading": "Message us",
-						"para": "Get instant help from our online assistants  or chat to a specialist.",
+						"heading": "Message Us",
+						"para": "Get quick assistance on loan cases, eligibility queries, lender recommendations, and conditional pre-approval support.",
 						"icon": "/icons/msg.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
@@ -251,12 +252,12 @@
 		},
 		"thinkYouShouldKnow": {
 			"bullets": [
-				"Conditional pre-approval helps you understand your borrowing capacity, allowing you to focus on properties within your budget.",
-				"It demonstrates to sellers that you are a serious buyer, giving you a competitive edge in negotiations.",
-				"Pre-approval can expedite the loan approval process when you find your dream home, making you a more attractive buyer.",
-				"It is usually valid for 3-6 months, so you may need to reapply if you don't find a property within that timeframe.",
-				"Digital DSA offers online eligibility checks and expert guidance to simplify the pre-approval process.",
-				"Our platform respects your privacy and provides personalized solutions without spam calls."
+				"Conditional pre-approval helps DSAs identify loan-ready clients before they begin their property search.",
+				"Assessing eligibility early enables better lender matching and improves home loan approval rates.",
+				"Submitting complete documentation during pre-approval can reduce processing delays and speed up formal loan approval.",
+				"Conditional pre-approval is generally valid for 3–6 months, after which a reassessment or reapplication may be required if the client's financial profile changes.",
+				"DigitalDSA helps DSAs compare lender requirements, evaluate client eligibility, and identify suitable pre-approval opportunities.",
+				"Our platform provides expert guidance, lender insights, and documentation support to help DSAs close more home loan cases."
 			]
 		}
 	}
