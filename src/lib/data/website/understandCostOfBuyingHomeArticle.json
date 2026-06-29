@@ -2,9 +2,9 @@
 	"mobileNavbarTitle": ["Taxes & Fees", "Inspections", "Setup Cost & Subsidy", "Guidance"],
 	"pageData": {
 		"coverImage": "/images/cost-of-buying-home-blog.jpg",
-		"coverAlt": "photo of a indian couple understanding all the factors about buying a new home from the DigitalDSA portal",
-		"heading": "Understanding the Costs of Buying a Home",
-		"para": "Buying your first home is an exciting milestone, but it’s essential to prepare for all the associated costs beyond your down payment and loan repayments. Awareness of these costs can help you plan better and avoid unexpected financial stress. Here's a guide tailored for first-time homebuyers in India.",
+		"coverAlt": "photo of a couple understanding the total cost of buying a home with DigitalDSA",
+		"heading": "Understanding Home Buying Costs:<br> A Guide for Loan DSAs",
+		"para": "Many home loan applicants focus only on the property's purchase price, overlooking additional expenses such as stamp duty, registration charges, legal fees, and other transaction costs. As a DSA, helping clients understand these expenses early improves financial preparedness, reduces funding gaps, and increases the likelihood of successful home loan approvals.",
 		"actionBtns": [
 			{
 				"btnName": "Book appointment",
@@ -54,136 +54,136 @@
 	},
 	"taxesFees": {
 		"contents": {
-			"heading": "Taxes & Government Fees",
-			"listTopPara": "When buying a home in India, you’ll need to account for various taxes and fees, including:",
+			"heading": "Property Purchase Costs Every DSA Should Explain",
+			"listTopPara": "Apart from the home loan amount, clients should be prepared for several government charges and statutory fees that can affect their overall funding requirement:",
 			"list": [
 				{
 					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Stamp Duty:</span>",
-					"desc": "<p class=\"mb-2\">Stamp duty is one of the biggest additional expenses when buying a home. This state government tax is calculated based on the property’s market value or purchase price, whichever is higher. It varies from state to state, typically ranging from 5% to 7% of the property’s value.</p><p><span class=\"font-semibold mr-2\">💡 Tip:</span> First-time homebuyers in some states may be eligible for concessions or rebates on stamp duty. Check with your state government for specific benefits.</p><p><span class=\"font-semibold mr-2\">💡 Payment Deadline:</span> It’s usually paid before property registration.</p>"
+					"desc": "<p class=\"mb-2\">Stamp duty is one of the largest upfront costs associated with purchasing a property. It is levied by the state government and is calculated on the property's market value or purchase price, whichever is higher. Rates vary across states and typically range between 5% and 7%.</p><p><span class=\"font-semibold mr-2\">💡 DSA Insight:</span> Always include stamp duty while estimating the client's total funding requirement, as it is generally not financed under the home loan.</p><p><span class=\"font-semibold mr-2\">💡 Note:</span> Some states offer concessions or rebates for eligible homebuyers. Clients should verify the latest benefits applicable in their state.</p>"
 				},
 				{
 					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Property Registration Charges:</span>",
-					"desc": "<p class=\"mb-2\">In addition to stamp duty, registration fees (around 1% of the property’s value) are payable to register the property in your name with the state’s Land Registration Department.</p>"
+					"desc": "<p class=\"mb-2\">Registration charges are payable to legally register the property in the buyer's name. These charges are generally around 1% of the property's value, depending on state regulations.</p><p><span class=\"font-semibold mr-2\">💡 DSA Insight:</span> Registration charges should be considered while assessing the client's total upfront expenses.</p>"
 				},
 				{
 					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Goods and Services Tax (GST):</span>",
-					"desc": "<p class=\"mb-2\">If you’re purchasing a new under-construction property, GST applies at a rate of:</p><ul class=\"list-disc list-inside\"><li>1% for affordable housing.</li><li>5% for non-affordable housing.</li></ul><p class=\"mt-4\">✅ Completed or ready-to-move properties are exempt from GST.</p>"
+					"desc": "<p class=\"mb-2\">GST applies only to eligible under-construction properties.</p><ul class=\"list-disc list-inside\"><li>1% for affordable housing.</li><li>5% for non-affordable housing.</li></ul><p class=\"mt-4\">✅ Ready-to-move and completed properties are generally exempt from GST.</p><p class=\"mt-2\"><span class=\"font-semibold mr-2\">💡 DSA Insight:</span> Understanding GST applicability helps you estimate the client's actual property acquisition cost and recommend suitable funding solutions.</p>"
 				}
 			]
 		}
 	},
 	"inspections": {
 		"contents": {
-			"heading": "Inspections & Valuation",
-			"listTopPara": "Before finalizing your home purchase, it’s crucial to conduct thorough inspections and valuations to ensure you’re making a sound investment. Here are the key steps to consider:",
+			"heading": "Property Verification & Valuation",
+			"listTopPara": "Property verification and valuation play a critical role in home loan approvals. As a DSA, ensuring these checks are completed early can reduce processing delays and improve lender confidence.",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Legal & Technical Verification: </span>",
-					"desc": "<p class=\"mb-2\">Before buying, ensure the property has a clear title and all necessary approvals. A lawyer or real estate consultant can help verify the documents, including sale deed, encumbrance certificate, and RERA registration.</p><p><span class=\"font-semibold mr-2\">🪙 Cost Range :</span> ₹10,000–₹25,000 depending on the complexity of the verification.</p>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Legal & Technical Verification:</span>",
+					"desc": "<p class=\"mb-2\">Verify that the property has a clear title, valid ownership records, and all necessary statutory approvals. Documents such as the sale deed, encumbrance certificate, approved building plans, and RERA registration (where applicable) should be reviewed before loan submission.</p><p><span class=\"font-semibold mr-2\">💡 DSA Insight:</span> Early legal and technical verification helps minimize rejection risks and avoids delays during lender due diligence.</p>"
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Valuation:</span>",
-					"desc": "<p class=\"mb-2\">A professional valuation ensures that the property’s market value aligns with the purchase price, which is especially important if you’re applying for a home loan.</p><p><span class=\"font-semibold mr-2\">🪙 Cost Range :</span>  ₹3,000–₹7,000.</p>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Property Valuation:</span>",
+					"desc": "<p class=\"mb-2\">Lenders conduct property valuations to determine the property's market value and calculate the eligible loan amount based on their Loan-to-Value (LTV) policy. An accurate valuation ensures the loan request aligns with lender guidelines.</p><p><span class=\"font-semibold mr-2\">💡 DSA Insight:</span> Understanding the property's estimated market value helps you set realistic loan expectations and identify the most suitable lender for your client.</p>"
 				}
 			]
 		}
 	},
 	"setupCost": {
 		"insurance": {
-			"heading": "Insurance Costs",
-			"listTopPara": "Protecting your home and finances is essential when buying a property. Here are the key insurance costs to consider:",
+			"heading": "Insurance Solutions for Home Loan Customers",
+			"listTopPara": "Insurance products can strengthen a home loan offering by protecting borrowers against unforeseen events while providing additional financial security throughout the loan tenure.",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Loan Insurance:</span>",
-					"desc": "Home loan insurance (also called loan protection insurance) is a policy that covers your outstanding home loan in case of death, disability, or job loss. If something unfortunate happens to you, the insurance company repays your home loan, so your family doesn’t have to worry about EMI payments."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Loan Protection Insurance:</span>",
+					"desc": "Home loan protection insurance helps cover the outstanding loan amount in the event of the borrower's death, permanent disability, or other covered circumstances. As a DSA, informing eligible clients about this option can help them safeguard their family's financial future while ensuring continuity of loan repayment."
 				},
 				{
 					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Home Insurance:</span>",
-					"desc": "Also know as Property Insurance. After buying your home, protecting it from risks like fire, theft, and natural disasters is essential. Home insurance policies typically cover the structure and its contents."
+					"desc": "Home insurance protects the property against risks such as fire, theft, natural disasters, and other covered damages. Advising clients to secure appropriate property insurance helps preserve the value of their asset and provides additional peace of mind after loan disbursement."
 				}
 			]
 		},
 		"legal": {
-			"heading": "Legal & Professional Fees",
-			"listTopPara": "You’ll need professional help to handle the legal and administrative aspects of your property purchase:",
+			"heading": "Legal & Professional Services",
+			"listTopPara": "Legal and professional services play an important role in ensuring a smooth property transaction and home loan approval process. Understanding these requirements helps DSAs prepare clients and minimize delays.",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Conveyancing Fees:</span>",
-					"desc": "To transfer ownership and prepare legal documents."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Property Documentation Support:</span>",
+					"desc": "Ensure all property documents, ownership records, approvals, and agreements are complete and legally compliant before submitting the loan application."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Legal Fees:</span>",
-					"desc": "For contract reviews and advice."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Legal Verification:</span>",
+					"desc": "Lenders may conduct legal due diligence to verify the property's title, ownership history, and statutory approvals. Early verification helps reduce processing delays and strengthens the loan application."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Cost Estimate:</span>",
-					"desc": "₹10,000–₹30,000 depending on the location and complexity of the transaction."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Professional Charges:</span>",
+					"desc": "Clients should also consider applicable legal, documentation, and professional service charges as part of their overall property purchase budget."
 				}
 			]
 		},
 		"moving": {
-			"heading": "Moving & Setup Costs",
-			"listTopPara": "Once you’ve finalized the purchase, you’ll need to factor in the costs of moving into your new home or preparing it for use:",
+			"heading": "Additional Costs Clients Should Plan For",
+			"listTopPara": "Beyond the home loan and property purchase costs, clients should also be aware of post-purchase expenses that can impact their overall financial planning.",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Movers or Packers Charges:</span>",
-					"desc": "₹10,000–₹30,000 depending on the distance and volume of items."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Moving & Relocation Expenses:</span>",
+					"desc": "Clients may incur costs for packing, transportation, and relocation when moving into their new property. These expenses should be considered while planning the overall budget."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Utility Connections:</span>",
-					"desc": "Initial costs for setting up electricity, water, gas, DTH, and broadband services."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Utility & Service Connections:</span>",
+					"desc": "Initial setup charges for electricity, water, gas, broadband, DTH, and other essential services may apply after possession."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Municipal Taxes & Maintenance Charges:</span>",
-					"desc": "These include property taxes, society maintenance, and possible parking fees in gated communities."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Property Maintenance & Municipal Charges:</span>",
+					"desc": "Recurring expenses such as municipal taxes, society maintenance charges, parking fees, and other community-related costs should be factored into the client's monthly budget."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Interior Setup:</span>",
-					"desc": "If your home is unfurnished, budget for furniture, appliances, and décor."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Interior & Home Setup:</span>",
+					"desc": "Depending on the property's condition, clients may need to budget for furniture, appliances, modular kitchens, wardrobes, lighting, or other interior improvements after possession."
 				}
 			]
 		},
 		"loanCosts": {
-			"heading": "Home Loan Costs",
-			"listTopPara": "When taking a home loan, there are additional costs beyond your monthly EMI:",
+			"heading": "Home Loan Charges Clients Should Know",
+			"listTopPara": "Apart from EMIs, clients should understand the lender-related charges that may apply during the home loan process:",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Loan Processing Fee:</span>",
-					"desc": "Typically 0.25% to 1% of the loan amount."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Loan Processing Charges:</span>",
+					"desc": "Most lenders charge a processing fee for evaluating and processing the loan application. The applicable amount varies by lender and loan product."
 				},
 				{
 					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Pre-EMI Interest:</span>",
-					"desc": "If your loan disbursement happens in stages (common for under-construction properties), you’ll need to pay interest on the amount disbursed until the entire loan is released."
+					"desc": "For under-construction properties, lenders may disburse the loan in stages. During this period, clients may be required to pay interest only on the amount already disbursed until full loan disbursement."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Miscellaneous Charges:</span>",
-					"desc": "These include legal fees, valuation charges, and administrative fees by the lender."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Other Lender Charges:</span>",
+					"desc": "Additional charges such as legal verification fees, technical valuation fees, documentation charges, and other administrative costs may apply depending on the lender."
 				}
 			],
-			"listSecPara": "<span class=\"typography-body-md !font-semibold text-[var(--form-text-secondary)] mr-2\">💡 Tip : </span>  Use Digital DSA’s tools like the Home Loan Affordability Calculator and EMI Planner to get a clear understanding of your loan costs and manage your finances effectively."
+			"listSecPara": "<span class=\"typography-body-md !font-semibold text-[var(--form-text-secondary)] mr-2\">💡 DSA Tip:</span> Use DigitalDSA's eligibility calculators and planning tools to estimate borrowing capacity, compare lender offerings, and help clients understand the total cost of their home loan before applying."
 		},
 		"subsidy": {
-			"heading": "Government Subsidy for First-Time Buyers",
-			"secHeading": "🏡 Pradhan Mantri Awas Yojana (PMAY)",
-			"secPara": "Under the Pradhan Mantri Awas Yojana (PMAY) scheme, eligible first-time homebuyers can avail of interest subsidies of up to ₹2.67 lakh on home loans for affordable housing. <p>✅ Ensure you check your eligibility and apply through your lender.</p>"
+			"heading": "Government Housing Schemes",
+			"secHeading": "🏡 Government Support for Eligible Homebuyers",
+			"secPara": "Eligible customers may benefit from government-supported housing schemes, subsidies, or affordable housing initiatives based on prevailing policies and lender participation. As a DSA, understanding these programs can help you identify suitable opportunities for eligible clients and recommend the most appropriate financing solution. <p>✅ Always verify the latest eligibility criteria and scheme availability with the participating lender or the relevant government authority.</p>"
 		}
 	},
 	"guidance": {
 		"help": {
-			"heading": "How Digital DSA Can Help First-Time Buyers",
-			"listTopPara": "At Digital DSA, we understand the unique needs of first-time homebuyers in India and aim to make the journey as smooth as possible.<p>Here’s how we can assist:</p>",
+			"heading": "How DigitalDSA Helps Loan DSAs",
+			"listTopPara": "DigitalDSA equips loan DSAs with the tools, insights, and expert support needed to prepare clients for home loan approval and deliver a smoother borrowing experience.<p>Here's how we can help:</p>",
 			"list": [
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Transparency :</span>",
-					"desc": "Get a clear breakdown of all costs and charges before making a commitment."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Complete Cost Transparency:</span>",
+					"desc": "Help clients understand the total cost of buying a home, including government charges, lender fees, insurance, and other property-related expenses before they apply."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Customized Calculators:</span>",
-					"desc": "Plan your home loan with our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\">Affordability Calculator</a> and see how part-payments or EMI changes can reduce your burden."
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Smart Calculators & Planning Tools:</span>",
+					"desc": "Use our <a href=\"/calculators/affordability-calculator\" class=\"underline text-[var(--ddsa-info-text)]\">Affordability Calculator</a> and other planning tools to assess borrowing capacity, compare loan scenarios, and improve client loan readiness."
 				},
 				{
-					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Expert Guidance:</span>",
-					"desc": "Our team is here to simplify legal processes and help you access government benefits like <span class=\"font-semibold\" >PMAY.</span>"
+					"heading": "<span class=\"text-[var(--form-text-secondary)]\">Expert Lending Support:</span>",
+					"desc": "Receive guidance on lender selection, documentation requirements, government housing schemes, and complex loan cases to improve approval rates and deliver better outcomes for your clients."
 				}
 			]
 		}
@@ -193,26 +193,26 @@
 		"blogLists": [
 			{
 				"icon": "/images/investInProperty-cover.jpg",
-				"altName": "a married couple is being shown saving regular amount in this photo  for the DownPayment of a planned home loan from DigitalDSA",
-				"heading": "Saving for a Down Payment",
+				"altName": "Loan DSA helping a client understand down payment planning for a home loan",
+				"heading": "Helping Clients Plan Their Down Payment",
 				"url": "/home-loan/saving-for-deposit"
 			},
 			{
 				"icon": "/images/woman-offering-food-neighbor.jpg",
-				"altName": "photo of a young indian woman visiting her elderly neighbour with smiling gesture",
-				"heading": "How to Choose the Perfect Neighborhood",
+				"altName": "Loan DSA helping clients evaluate property location before home loan approval",
+				"heading": "Helping Clients Choose the Right Property Location",
 				"url": "/home-loan/choose-perfect-neighbourhood"
 			},
 			{
 				"icon": "/images/TheSharmaFamilyStory.jpg",
-				"altName": "photo of an elderly couple planning to purchase a bigger home with selling exisiting property and adding some saving",
-				"heading": "Buying a Property Through Resale or Direct Purchase",
+				"altName": "Loan DSA explaining resale and direct purchase home loan options to clients",
+				"heading": "Financing Resale & Direct Property Purchases",
 				"url": "/home-loan/buy-property-resale"
 			}
 		]
 	},
 	"tools": {
-		"heading": "Tools & calculators",
+		"heading": "Tools & Resources for Loan DSAs",
 		"cardData": [
 			{
 				"id": "1",
@@ -220,33 +220,33 @@
 				"links": [
 					{
 						"id": 1,
-						"secLinkName": "How much can I borrow?",
+						"secLinkName": "Estimate Client EMI",
 						"secUrl": "/calculators/emi-calculator"
 					},
 					{
 						"id": 2,
-						"secLinkName": "What would my repayments be?",
+						"secLinkName": "Check Client Eligibility",
 						"secUrl": "/calculators/eligibility-calculator"
 					},
 					{
 						"id": 3,
-						"secLinkName": "What would my upfront costs be?",
+						"secLinkName": "Compare Balance Transfer Benefits",
 						"secUrl": "/calculators/balance-transfer-calculator"
 					}
 				]
 			},
 			{
 				"id": 2,
-				"title": "Tools",
+				"title": "Resources",
 				"links": [
 					{
 						"id": 1,
-						"secLinkName": "Compare our home loans",
+						"secLinkName": "Compare Lender Offers",
 						"secUrl": "/get-started/how-can-we-help"
 					},
 					{
 						"id": 2,
-						"secLinkName": "Budget planner",
+						"secLinkName": "Plan Client Loan Scenarios",
 						"secUrl": "/planners/budget-planner"
 					}
 				]
@@ -256,48 +256,48 @@
 	"messageUs": {
 		"contents": {
 			"cardImage": "/images/message.jpg",
-			"cardAltName": "housing-figure",
-			"cardHeading": "Message us 24/7",
+			"cardAltName": "DigitalDSA support team assisting loan DSAs",
+			"cardHeading": "Talk to Our Lending Experts",
 			"reverse": true
 		},
-		"para": "Feel free to message us anytime for expert assistance with your loan needs. Our team is here to provide professional advice, guide you through the loan process, and help you find the best options. No matter the time, we’ve got you covered! Message us anytime, and we’ll respond promptly.",
+		"para": "Need assistance with a loan case? Our lending experts can help you evaluate client eligibility, compare lender requirements, review documentation, and identify the most suitable financing solutions. Whether you're handling a straightforward application or a complex case, DigitalDSA is here to help you improve approval rates and close more loan opportunities.",
 		"button": {
 			"link": "/contact",
 			"btnClass": "btn-secondary",
-			"btnName": "Message us"
+			"btnName": "Contact our team"
 		}
 	},
 	"common_components": {
 		"helpList": {
 			"contents": {
-				"heading": "We're here to help",
+				"heading": "We're Here to Support Your Loan Business",
 				"xlGridCol": 4,
 				"borderBottom": false,
 				"cards": [
 					{
-						"heading": "Know your borrowing power",
-						"para": "Book instantly to speak to a home loan specialist at a time that suits you",
+						"heading": "Book an Appointment",
+						"para": "Schedule a discussion with our lending specialists for guidance on lender selection, eligibility, and complex loan cases.",
 						"icon": "/icons/appointment.svg",
 						"altName": "appointment Icon",
 						"url": "/appointment"
 					},
 					{
-						"heading": "Check loan offers",
-						"para": "In as little as 10 minutes and tailored exactly as per your financial profile.",
+						"heading": "Compare Lender Offers",
+						"para": "Evaluate loan products from multiple banks and NBFCs to identify the best approval opportunities for your clients.",
 						"icon": "/icons/manageLoan2.svg",
 						"altName": "Alert Icon",
 						"url": "/get-started/how-can-we-help"
 					},
 					{
-						"heading": "Contact us",
-						"para": "Fast-track your call and connect with a specialist in the DigitalDSA.",
+						"heading": "Contact Our Team",
+						"para": "Connect directly with DigitalDSA experts for support on documentation, lender policies, and loan processing.",
 						"icon": "/icons/contact.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
 					},
 					{
-						"heading": "Message us",
-						"para": "Get instant help from our online assistants  or chat to a specialist.",
+						"heading": "Message Us",
+						"para": "Get quick assistance on loan cases, eligibility queries, lender recommendations, and documentation support.",
 						"icon": "/icons/msg.svg",
 						"altName": "Alert Icon",
 						"url": "/contact"
@@ -307,14 +307,14 @@
 		},
 		"thinkYouShouldKnow": {
 			"bullets": [
-				"Stamp duty is a significant expense when buying a home, varying from state to state, typically ranging from 5% to 7% of the property’s value.",
-				"Registration fees, around 1% of the property’s value, are payable to register the property in your name.",
-				"GST applies to new under-construction properties at a rate of 1% for affordable housing and 5% for non-affordable housing.",
-				"Legal and technical verification of the property is crucial to ensure a clear title and necessary approvals.",
-				"Home valuation ensures the property’s market value aligns with the purchase price, important for home loan applications.",
-				"Lenders’ Mortgage Insurance (LMI) may be required if your down payment is less than 20% of the property value.",
-				"Home insurance policies typically cover the structure and its contents, protecting against risks like fire, theft, and natural disasters.",
-				"Government schemes like the Pradhan Mantri Awas Yojana (PMAY) offer interest subsidies for eligible first-time homebuyers."
+				"Help clients understand the total cost of buying a property, including government charges, lender fees, insurance, and other transaction expenses.",
+				"Assess client eligibility, repayment capacity, and financial obligations before recommending suitable lenders.",
+				"Complete property documentation, legal verification, and technical checks can significantly improve loan processing and approval timelines.",
+				"Property valuation directly influences loan eligibility and the lender's Loan-to-Value (LTV) assessment.",
+				"Explain lender charges such as processing fees, valuation fees, legal charges, and other applicable costs before loan submission.",
+				"Encourage clients to consider home loan protection and property insurance to safeguard their financial commitments and assets.",
+				"Identify eligible government housing schemes and lender-specific benefits that may support your client's home loan journey.",
+				"Using DigitalDSA's calculators, planning tools, and lender comparison platform helps improve client readiness and increase loan approval opportunities."
 			]
 		}
 	}
