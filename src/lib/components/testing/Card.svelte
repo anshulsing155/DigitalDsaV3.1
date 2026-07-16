@@ -1,14 +1,3 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-
-	interface Props {
-		class?: string;
-		children?: Snippet;
-	}
-
-	let { class: className = '', children }: Props = $props();
+	// Archived: Moved to $lib/components/_archive/testing_Card.svelte
 </script>
-
-<div class="rounded-lg border border-slate-200 bg-white p-6 shadow-md {className}">
-	{@render children?.()}
-</div>

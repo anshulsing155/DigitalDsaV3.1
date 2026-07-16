@@ -128,27 +128,4 @@ export function capitalizeWords(str: string): string {
 	return str.replace(/\b\w/g, (l) => l.toUpperCase());
 }
 
-// Generate a secure random OTP using cryptographic randomness
-export function generateSecureOTP(length: number = 6): string {
-	const digits = '0123456789';
-	let otp = '';
 
-	// Browser: use crypto.getRandomValues. CLAUDE.md Pitfall #9 — never use
-	// `typeof window` as a guard; Vite 7 SSR exposes a partial window object.
-	if (browser && typeof crypto !== 'undefined' && crypto.getRandomValues) {
-		const array = new Uint8Array(length);
-		crypto.getRandomValues(array);
-		for (let i = 0; i < length; i++) {
-			otp += digits[array[i] % digits.length];
-		}
-	} else {
-		// Server-side: use Node's crypto.randomInt (cryptographically secure)
-		// eslint-disable-next-line @typescript-eslint/no-require-imports
-		const { randomInt } = require('crypto');
-		for (let i = 0; i < length; i++) {
-			otp += digits[randomInt(digits.length)];
-		}
-	}
-
-	return otp;
-}

@@ -28,7 +28,7 @@ These construct the structured data sent to calculation APIs and stored as immut
 | `casePayloadBuilder.ts` | **Case-level payload builder.** Builds a `CasePayload` with categorical sub-objects (screening, property, seller, loan, applicants) and derived credit insights (FOIR, LTV, EMI, risk flags). Unlike `payloadBuilder`, this reads ALL raw answers without visibility filtering and computes derived intelligence. | `buildCasePayload()`                                                                                                                                                                                                                  |
 | `payloadGrouping.ts`    | **Schema-driven answer grouping.** Groups form answers by schema page ID into logical sections (property, loanRequirements, balanceTransfer, etc.). Used by `buildStructuredPayload()`.                                                                                                                           | `groupAnswersBySchema()`, `buildCleanAnswers()`                                                                                                                                                                                       |
 | `loanPayload.ts`        | **Legacy payload builder.** Older format for the external eligibility API (`bank-loan-management.vercel.app`). Builds `loanTransaction` and `allApplicantDetails` in the shape that API expects.                                                                                                                  | `buildLoanTransaction()`, `buildApplicantDetails()`                                                                                                                                                                                   |
-| `offerTransformer.ts`   | **Offer result transformer.** Pure function that converts external API `LoanOffer[]` into internal `LenderResultsData` format (traffic lights, metric ratings, decision factors, summary).                                                                                                                        | `transformOffersToResults()`                                                                                                                                                                                                          |
+
 
 > **payloadBuilder vs casePayloadBuilder:** These are NOT duplicates. `payloadBuilder` produces the API-submission payload (visibility-filtered, flat). `casePayloadBuilder` produces the case-review payload (unfiltered, categorical, with derived insights like FOIR/LTV/risk flags).
 
@@ -124,7 +124,7 @@ Focused helpers for the applicant form system (obligations table, completion che
 
 | File            | Purpose                                                                                                                                                          | Key Exports                           |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| `emailUtils.ts` | **SMTP transporter factory.** Creates a Nodemailer transporter from environment variables (`SMTP_HOST`, `SMTP_PORT`, etc.).                                      | `createTransporter()`                 |
+
 | `emailSend.ts`  | **Email sending functions.** Sends styled HTML emails: user confirmation email and admin notification email (with JSON + PDF attachments generated via pdf-lib). | `sendUserEmail()`, `sendAdminEmail()` |
 
 ---
@@ -169,4 +169,4 @@ Focused helpers for the applicant form system (obligations table, completion che
 | File                          | Purpose                                                                                                                                                         | Key Exports      |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
 | `clickOutside.ts`             | **Svelte action.** Detects clicks outside a DOM node and fires a callback. Used for dropdown/modal dismissal.                                                   | `clickOutside()` |
-| `deleteKeyValueFromObject.ts` | **Conditional key deletion.** Deletes a nested key from an object when the answer is "No". Used for cleaning up form data when a conditional section is hidden. | `deleteKey()`    |
+
