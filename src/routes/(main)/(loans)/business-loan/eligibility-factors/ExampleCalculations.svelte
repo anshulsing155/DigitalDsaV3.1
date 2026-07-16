@@ -3,7 +3,9 @@
   import { fade, slide } from "svelte/transition";
   import content from "$lib/data/website/businessLoanEligibility.json";
 
-  const { heading, description, examples, highlightFactors } = content.examplesSection;
+  const { heading, description } = content.examplesSection;
+  const examples = content.examplesSection.examples as Record<string, any>;
+  const highlightFactors = content.examplesSection.highlightFactors as Record<string, string[]>;
 
   let activeTab = $state("retail");
   let visible = $state(false);

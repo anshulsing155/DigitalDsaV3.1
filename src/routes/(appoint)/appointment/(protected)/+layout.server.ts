@@ -17,21 +17,11 @@ export const load: LayoutServerLoad = async ({
     locals,
     url
 }) => {
-    // Redirect unauthenticated users
-    if (!locals.user) {
-        throw redirect(
-            302,
-            `/login?redirect=${encodeURIComponent(
-                url.pathname + url.search
-            )}`
-        );
-    }
-
-    const mobileNumber = locals.user.mobileNumber;
+    const mobileNumber = locals.user?.mobileNumber;
 
     if (!mobileNumber) {
         return {
-            user: locals.user,
+            user: locals.user || null,
             activeAppointments: []
         };
     }

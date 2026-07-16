@@ -1,7 +1,7 @@
 <script>
 	let {
 		showModal = $bindable(),
-		dialog = undefined,
+		dialog = $bindable(undefined),
 		children = undefined
 	} = $props();
 

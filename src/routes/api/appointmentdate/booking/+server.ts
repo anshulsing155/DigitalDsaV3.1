@@ -3,11 +3,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { findUserByMobile, findUserByEmail } from '$lib/server/csfle/index.js';
 
-export const GET: RequestHandler = async ({ locals }) => {
-	if (!locals.user) {
-		return json({ success: false, error: 'Unauthorized' }, { status: 401 });
-	}
-
+export const GET: RequestHandler = async () => {
 	try {
 		const usersWithAppointments = await Applicant.find(
 			{ AppointmentData: { $exists: true, $ne: [] } },
@@ -44,10 +40,6 @@ export const GET: RequestHandler = async ({ locals }) => {
 };
 
 export const POST: RequestHandler = async ({ request, locals }) => {
-	if (!locals.user) {
-		return json({ success: false, error: 'Unauthorized' }, { status: 401 });
-	}
-
 	try {
 		const body = await request.json();
 		const {
@@ -81,7 +73,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			);
 		}
 
-		const loginMobileNo = locals.user.mobileNumber;
+		const loginMobileNo = locals.user?.mobileNumber || mobileNo;
+		const loginEmail = locals.user?.email || emailId;
 
 		// Store the appointment inside the user's document
 		const appointment = {
@@ -91,19 +84,27 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			dateSelected,
 			time,
 			typeOfAppointment,
-			loginEmail: locals.user.email || emailId,
+			loginEmail,
 			loginMobileNo: String(loginMobileNo),
 			purposeOfAppointment,
 			bookedAt: new Date()
 		};
 
 		let userDoc = await findUserByMobile(Applicant, loginMobileNo);
-		if (!userDoc && locals.user.email) {
-			userDoc = await findUserByEmail(Applicant, locals.user.email);
+		if (!userDoc && loginEmail) {
+			userDoc = await findUserByEmail(Applicant, loginEmail);
 		}
 
 		if (!userDoc) {
-			return json({ success: false, error: 'User profile not found in database.' }, { status: 404 });
+			// Create a guest applicant document
+			await Applicant.insertOne({
+				name,
+				email: loginEmail,
+				mobileNumber: loginMobileNo,
+				createdAt: new Date(),
+				AppointmentData: [appointment]
+			});
+			return json({ success: true, message: 'Appointment booked successfully.' });
 		}
 
 		const updateResult = await Applicant.updateOne(

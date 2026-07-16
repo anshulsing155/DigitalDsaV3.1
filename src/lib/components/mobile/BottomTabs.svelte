@@ -17,8 +17,8 @@
 	const items: Item[] = [
 		{ href: '/', label: 'Home', icon: 'home' },
 		{ href: '/loan-offers', label: 'Loans', icon: 'tag' },
-		{ href: ROUTES.FORM.HOW_CAN_WE_HELP, label: 'Apply', icon: 'file' },
-		{ href: '/dashboard', label: 'Profile', icon: 'user', restricted: true }
+		{ href: '/contact', label: 'Apply', icon: 'file' },
+		{ href: '/', label: 'Profile', icon: 'user', restricted: true }
 		// Optionally expose Applications & Settings mapping to dashboard for now
 		// { href: '/dashboard', label: 'Applications', icon: 'apps', restricted: true },
 		// { href: '/dashboard', label: 'Settings', icon: 'settings', restricted: true }

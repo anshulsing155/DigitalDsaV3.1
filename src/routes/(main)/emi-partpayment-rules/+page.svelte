@@ -79,6 +79,13 @@
       window.removeEventListener("scroll", handleScroll);
     };
   });
+
+  const stickyNavBarItems = [
+    { name: "About EMI", targetId: "emi" },
+    { name: "About part-payment", targetId: "partPayment" },
+    { name: "Rules table", targetId: "table" },
+    { name: "Loan tips", targetId: "tips" }
+  ];
 </script>
 
 <Seo
@@ -93,7 +100,7 @@
   <NewPageLayout pageData={content.pageData}>
     <div class="hidden lg:block">
       <StickyNavbar
-        navList={content.stickyNavBar}
+        navList={stickyNavBarItems}
         {activeSection}
       ></StickyNavbar>
 

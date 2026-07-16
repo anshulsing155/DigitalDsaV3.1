@@ -3,14 +3,10 @@
 		subList = [],
 		navLists = [],
 		pageData = {},
-		onClick = () => {}
+		onClick = () => {},
+		children,
+		secondary
 	} = $props();
-
-
-
-  //
-;
-;
 </script>
 
 <!--  -->
@@ -36,13 +32,11 @@
       </div>
     </div>
     <div class="relative flex flex-col bg-[var(--landing-bg)] border border-[var(--form-border)]">
-      <!-- svelte-ignore slot_element_deprecated -->
-      <slot />
+      {@render children?.()}
     </div>
 
     <div class="lg:p-[4rem]">
-      <!-- svelte-ignore slot_element_deprecated -->
-      <slot name="secondary" />
+      {@render secondary?.()}
     </div>
   </div>
 </section>

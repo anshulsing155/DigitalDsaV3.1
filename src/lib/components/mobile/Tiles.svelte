@@ -226,14 +226,14 @@
 								<button
 									class="rounded-xl bg-indigo-600 px-3 py-2 text-xs font-semibold text-white active:scale-[0.98]"
 									aria-label={`Apply for ${tile.name}`}
-									onclick={() => onRestrictedAction(tile.route || ROUTES.FORM.HOW_CAN_WE_HELP)}
+									onclick={() => onRestrictedAction(tile.route || '/contact')}
 								>
 									Apply
 								</button>
 								<button
 									class="rounded-xl bg-[var(--dash-bg-alt)] px-3 py-2 text-xs font-semibold text-[var(--dash-text)] active:scale-[0.98]"
 									aria-label={`Check eligibility for ${tile.name}`}
-									onclick={() => onRestrictedAction(tile.route || ROUTES.FORM.HOW_CAN_WE_HELP)}
+									onclick={() => onRestrictedAction(tile.route || '/contact')}
 								>
 									Check Eligibility
 								</button>

@@ -34,7 +34,7 @@
 				52 lenders. 15 loan types. Real-time policy matching now live for all DSAs.
 			</p>
 			<a
-				href={ROUTES.FORM.HOW_CAN_WE_HELP}
+				href="/contact"
 				class="flex-none rounded-full px-3.5 py-1 text-sm font-semibold shadow-sm transition duration-150"
 				style="background: var(--landing-accent); color: #1a1a1a;"
 			>

@@ -260,7 +260,6 @@
 			</p>
 			<Button
 				link={content.messageUsPromoContents.btnLink}
-				btnBorder={content.messageUsPromoContents.btnBorder}
 				btnName={content.messageUsPromoContents.btnName}
 			/>
 		</TwoColumnWithImage>
