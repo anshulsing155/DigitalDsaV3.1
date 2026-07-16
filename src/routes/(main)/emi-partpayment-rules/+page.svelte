@@ -6,7 +6,7 @@
   import StickyNavbar from "$lib/components/website/StickyNavbar.svelte";
   import { onMount } from "svelte";
   import PaymentTable from "$lib/components/website/PaymentTable.svelte";
-  import Seo from "$lib/components/Seo.svelte";
+  import Seo from "$lib/components/website/Seo.svelte";
   import content from "$lib/data/website/emiPartpaymentRules.json";
 
   const toggleDropdown = (event: any, index: any) => {

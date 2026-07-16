@@ -2,7 +2,7 @@
 	let { blogData, budgetBlogs } = $props();
 
 	import NewPageLayout from '$lib/components/website/NewPageLayout.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/budget101.json';
 	import HelpList from '$lib/components/website/HelpList.svelte';
 	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';

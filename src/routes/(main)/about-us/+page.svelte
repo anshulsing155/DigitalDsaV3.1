@@ -3,7 +3,7 @@
   import HelpList from "$lib/components/website/HelpList.svelte";
   import NewBlogCard from "$lib/components/website/NewBlogCard.svelte";
   import SecondPageLayout from "$lib/components/website/SecondPageLayout.svelte";
-  import Seo from "$lib/components/Seo.svelte";
+  import Seo from "$lib/components/website/Seo.svelte";
   import StickyNavbar from "$lib/components/website/StickyNavbar.svelte";
   import TwoColumn from "$lib/components/website/TwoColumn.svelte";
   import TwoColumnWithImage from "$lib/components/website/TwoColumnWithImage.svelte";

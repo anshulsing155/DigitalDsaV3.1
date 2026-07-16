@@ -9,7 +9,7 @@
 		profile: 'User Profile',
 		orders: 'My Orders',
 		'order-details': 'Order Details',
-		secureRetirement: 'Secure Retirement',
+		'secure-retirement': 'Secure Retirement',
 		fixDeposit: 'Fixed Deposit',
 		govSchemes: 'Government Schemes',
 		lowRisk: 'Low Risk',

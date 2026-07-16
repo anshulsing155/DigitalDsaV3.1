@@ -1,7 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
 	import SecondPageLayout from '$lib/components/website/SecondPageLayout.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import { blogs } from '$lib/data/allBlogs';
 	import Loader from '$lib/components/website/Loader.svelte';
 

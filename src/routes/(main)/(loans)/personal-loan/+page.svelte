@@ -7,7 +7,7 @@
 	import Button from '$lib/components/website/Button.svelte';
 	import Sublist from '$lib/components/website/Sublist.svelte';
 	import NewPageLayout from '$lib/components/website/NewPageLayout.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import ThreeColumWithLeftHeading from '$lib/components/website/ThreeColumWithLeftHeading.svelte';
 	import ButtonBanner from '$lib/components/website/ButtonBanner.svelte';
 	import PaymentTable from '$lib/components/website/PaymentTable.svelte';

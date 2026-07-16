@@ -7,7 +7,7 @@
 	import TwoColumnWithImage from '$lib/components/website/TwoColumnWithImage.svelte';
 	import { blogs } from '$lib/data/allBlogs';
 	import Loader from '$lib/components/website/Loader.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import content from '$lib/data/website/knowledge.json';
 	import {
 		Trash2,

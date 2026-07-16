@@ -4,7 +4,7 @@
 	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';
 	import Seo from './Seo.svelte';
 	import content from '$lib/data/website/unlockingPowerCollateral.json';
-	import HelpList from '../HelpList.svelte';
+	import HelpList from './HelpList.svelte';
 
 	let { pageData = content.pageData }: { pageData?: any } = $props();
 </script>

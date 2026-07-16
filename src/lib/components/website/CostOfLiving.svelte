@@ -164,7 +164,7 @@
 								<p class="flex items-end gap-2">
 									👉
 									<a
-										href="/refer-&-earn"
+										href="/refer-and-earn"
 										class="typography-body-md text-[var(--ddsa-info-text)] underline"
 									>
 										Refer Now & Start Earning</a
@@ -302,7 +302,7 @@
 										<p class="flex items-end gap-2">
 											👉
 											<a
-												href="/refer-&-earn"
+												href="/refer-and-earn"
 												class="typography-body-md text-[var(--ddsa-info-text)] underline"
 											>
 												Refer Now & Start Earning</a

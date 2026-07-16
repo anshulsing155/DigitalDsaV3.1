@@ -4,7 +4,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { elasticOut } from 'svelte/easing';
 	import Sublist from '$lib/components/website/Sublist.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import NewPageLayout from '$lib/components/website/NewPageLayout.svelte';
 	import AboveTitleWithTopIconCard from '$lib/components/website/AboveTitleWithTopIconCard.svelte';
 	import AboveTitleWithoutIconCard from '$lib/components/website/AboveTitleWithoutIconCard.svelte';

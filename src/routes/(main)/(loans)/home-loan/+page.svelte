@@ -15,7 +15,7 @@
 	import TwoColumnWithLeftHeading from '$lib/components/website/TwoColumnWithLeftHeading.svelte';
 	import FeedbackCheck from '$lib/components/website/FeedbackCheck.svelte';
 	import HelpList from '$lib/components/website/HelpList.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import DownloadGuideModal from '$lib/components/website/DownloadGuideModal.svelte';
 	import content from '$lib/data/website/homeLoan.json';
 	import TwoColumn from '$lib/components/website/TwoColumn.svelte';

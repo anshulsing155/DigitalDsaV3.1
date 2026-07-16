@@ -196,19 +196,19 @@
     "list": [
       {
         "heading": "<span class=\"font-FourthHead\">Senior Citizens’ Savings Scheme (SCSS) :</span>",
-        "desc": "<span>High-interest, quarterly payouts with government-backed security, and tax benefits under Section 80C ... <a href='/secureRetirement/govSchemes/scss' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>High-interest, quarterly payouts with government-backed security, and tax benefits under Section 80C ... <a href='/secure-retirement/govSchemes/scss' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       },
       {
         "heading": "<span class=\"font-FourthHead\">Post Office Monthly Income Scheme (POMIS) :</span>",
-        "desc": "<span>Reliable monthly income with zero market risk, Lock-in period of 5 years, No tax benefits, and interest is taxable ... <a href='/secureRetirement/govSchemes/pomis' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Reliable monthly income with zero market risk, Lock-in period of 5 years, No tax benefits, and interest is taxable ... <a href='/secure-retirement/govSchemes/pomis' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       },
       {
         "heading": "<span class=\"font-FourthHead\">RBI Floating Rate Savings Bonds :</span>",
-        "desc": "<span>Inflation-linked returns, with half-yearly payouts, Tenure of 7 years, Govt-backed, No investment cap, Interest is taxable and not eligible for Section 80C benefits ... <a href='/secureRetirement/govSchemes/rbi-floating' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Inflation-linked returns, with half-yearly payouts, Tenure of 7 years, Govt-backed, No investment cap, Interest is taxable and not eligible for Section 80C benefits ... <a href='/secure-retirement/govSchemes/rbi-floating' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       },
       {
         "heading": "<span class=\"font-FourthHead\">National Pension System (NPS) :</span>",
-        "desc": "<span>Build a strong retirement corpus with NPS, a government-backed pension scheme offering tax benefits and flexible investment options ... <a href='/secureRetirement/govSchemes/nps' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Build a strong retirement corpus with NPS, a government-backed pension scheme offering tax benefits and flexible investment options ... <a href='/secure-retirement/govSchemes/nps' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       }
     ]
   },
@@ -217,15 +217,15 @@
     "list": [
       {
         "heading": "<span class=\"font-FourthHead\">Bank Fixed Deposits (FDs) :</span>",
-        "desc": "<span>Secure and predictable returns with flexible payout options tailored for retirees ... <a href='/secureRetirement/fixDeposit/fd' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Secure and predictable returns with flexible payout options tailored for retirees ... <a href='/secure-retirement/fixDeposit/fd' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       },
       {
         "heading": "<span class=\"font-FourthHead\">FD Laddering Strategy :</span>",
-        "desc": "<span>Maximize liquidity and returns by spreading deposits across different tenures ... <a href='/secureRetirement/fixDeposit/fd-laddering' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Maximize liquidity and returns by spreading deposits across different tenures ... <a href='/secure-retirement/fixDeposit/fd-laddering' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       },
       {
         "heading": "<span class=\"font-FourthHead\">Safe Fixed-Income Options :</span>",
-        "desc": "<span>Explore the best fixed-income solutions to secure your financial future with safety and stability ... <a href='/secureRetirement/fixDeposit/fix-income' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Explore the best fixed-income solutions to secure your financial future with safety and stability ... <a href='/secure-retirement/fixDeposit/fix-income' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       }
     ]
   },
@@ -234,15 +234,15 @@
     "list": [
       {
         "heading": "<span class=\"font-FourthHead\">Systematic Withdrawal Plan (SWP) :</span>",
-        "desc": "<span>Withdraw a fixed amount regularly while your capital continues to grow with lower tax impact ... <a href='/secureRetirement/lowRisk/swp' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Withdraw a fixed amount regularly while your capital continues to grow with lower tax impact ... <a href='/secure-retirement/lowRisk/swp' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       },
       {
         "heading": "<span class=\"font-FourthHead\">Dividend Stocks & REITs :</span>",
-        "desc": "<span>Generate passive income through dividend-paying stocks and real estate investments ... <a href='/secureRetirement/lowRisk/stocks' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Generate passive income through dividend-paying stocks and real estate investments ... <a href='/secure-retirement/lowRisk/stocks' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       },
       {
         "heading": "<span class=\"font-FourthHead\">Index Funds for Retirement Growth :</span>",
-        "desc": "<span>Grow your retirement savings with low-cost, passive investment in Index Funds, offering long-term market-linked returns with minimal risk ... <a href='/secureRetirement/lowRisk/index-funds' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Grow your retirement savings with low-cost, passive investment in Index Funds, offering long-term market-linked returns with minimal risk ... <a href='/secure-retirement/lowRisk/index-funds' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       }
     ]
   },
@@ -251,11 +251,11 @@
     "list": [
       {
         "heading": "<span class=\"font-FourthHead\">Annuity Plans :</span>",
-        "desc": "<span>One-time investment providing guaranteed lifelong income, ensuring financial security ... <a href='/secureRetirement/pension/annuity-plans' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>One-time investment providing guaranteed lifelong income, ensuring financial security ... <a href='/secure-retirement/pension/annuity-plans' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       },
       {
         "heading": "<span class=\"font-FourthHead\">Immediate & Deferred Annuities :</span>",
-        "desc": "<span>Choose between immediate or delayed payouts based on your retirement needs ... <a href='/secureRetirement/pension/immediate-annuities' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
+        "desc": "<span>Choose between immediate or delayed payouts based on your retirement needs ... <a href='/secure-retirement/pension/immediate-annuities' class='underline text-sm decoration-btnBg inline underline-offset-4'>Read more</a></span>"
       }
     ]
   },

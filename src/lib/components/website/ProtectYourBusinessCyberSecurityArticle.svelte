@@ -2,7 +2,7 @@
 	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
 	import { onMount } from 'svelte';
 	import HelpList from '$lib/components/website/HelpList.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from './Seo.svelte';
 	import SecondPageLayout from '$lib/components/website/SecondPageLayout.svelte';
 	import StickyNavbar from '$lib/components/website/StickyNavbar.svelte';
 	import content from '$lib/data/website/protectYourBusiness.json';

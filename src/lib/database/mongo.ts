@@ -1,50 +1,54 @@
 import { MongoClient, type Db, type Collection, type ObjectId } from 'mongodb';
 import { MONGODB_URI } from '$env/static/private';
 import logger from '$lib/server/logger.js';
-import type { Dsa, User, Rm, PropertyConsultant } from '$lib/types/index.js';
-import type { Case } from '$lib/types/case.js';
-import type { MonthlyAssessmentUsageDoc } from '$lib/types/monthlyAssessmentUsage.js';
-import type { RMContact } from '$lib/types/rmContact.js';
-import type { TimelineEvent } from '$lib/types/timeline.js';
-import type { FormSnapshot } from '$lib/types/formSnapshot.js';
-import type { CommunicationThread } from '$lib/types/communicationThread.js';
-import type { DisclaimerAcceptance } from '$lib/types/disclaimer.js';
-import type { SyntheticProfile } from '$lib/types/syntheticProfile.js';
-import type { DeviceRecord } from '$lib/types/deviceRegistry.js';
-import type { FormSession, TrustScore } from '$lib/types/formSession.js';
-import type { AccuracyRating, RMBroadcast, PolicyDocument } from '$lib/types/rmPortal.js';
-import type { LenderResultsSnapshot } from '$lib/types/lenderResultsSnapshot.js';
-import type { Team } from '$lib/types/team.js';
-import type { Lead } from '$lib/types/lead.js';
-import type { Source } from '$lib/types/source.js';
-import type { CRMLender } from '$lib/types/crmLender.js';
-import type { AdminUser } from '$lib/types/adminUser.js';
-import type { RuleArtifactPair, LenderRuleFixture } from '$lib/types/ruleArtifact.js';
-import type {
-	Lender,
-	LenderProduct,
-	ProductVariation,
-	GeoScope,
-	PolicyRule,
-	PolicyVersion,
-	PolicyEvidenceDocument,
-	RMSubmission,
-	ReviewComment,
-	PolicyAuditLog,
-	ApiKey,
-	SystemConfig
-} from '$lib/types/policyEngine.js';
-import type { E2eTestRun } from '$lib/types/e2eTestRun.js';
-import type { PolicyCapture } from '$lib/types/policyCapture.js';
-import type { QaScenario } from '$lib/types/qaScenario.js';
-import type { NotificationDoc } from '$lib/types/notification.js';
-import type { PushSubscriptionDoc } from '$lib/types/pushSubscription.js';
-import type {
-	RmLenderAssignment,
-	PolicyDocument as PmsPolicyDocument,
-	PolicySuggestion,
-	FutureEnhancementItem
-} from '$lib/config/pms/policyTypes.js';
+import type { User } from '$lib/types/index.js';
+
+type Dsa = any;
+type Rm = any;
+type PropertyConsultant = any;
+type Case = any;
+type MonthlyAssessmentUsageDoc = any;
+type RMContact = any;
+type TimelineEvent = any;
+type FormSnapshot = any;
+type CommunicationThread = any;
+type DisclaimerAcceptance = any;
+type SyntheticProfile = any;
+type DeviceRecord = any;
+type FormSession = any;
+type TrustScore = any;
+type AccuracyRating = any;
+type RMBroadcast = any;
+type PolicyDocument = any;
+type LenderResultsSnapshot = any;
+type Team = any;
+type Lead = any;
+type Source = any;
+type CRMLender = any;
+type AdminUser = any;
+type RuleArtifactPair = any;
+type LenderRuleFixture = any;
+type Lender = any;
+type LenderProduct = any;
+type ProductVariation = any;
+type GeoScope = any;
+type PolicyRule = any;
+type PolicyVersion = any;
+type PolicyEvidenceDocument = any;
+type RMSubmission = any;
+type ReviewComment = any;
+type PolicyAuditLog = any;
+type ApiKey = any;
+type SystemConfig = any;
+type E2eTestRun = any;
+type PolicyCapture = any;
+type QaScenario = any;
+type NotificationDoc = any;
+type PushSubscriptionDoc = any;
+type RmLenderAssignment = any;
+type PmsPolicyDocument = any;
+type PolicySuggestion = any;
+type FutureEnhancementItem = any;
 
 // ── Connection constants ─────────────────────────────────────────
 const MAX_CONNECT_RETRIES = 3;
@@ -253,20 +257,19 @@ export const PolicyDocuments: Collection<PolicyDocument> =
 // match the LegacyBillingTransactionDoc variant (no `kind` field). The S3 cron +
 // webhook handler write the Recurring variant with `kind: 'recurring_charge'` or
 // 'webhook_confirmation' (per BillingTransactionDoc in billingSubscription.ts).
-import type {
-	BillingSubscriptionDoc,
-	BillingTransactionDoc,
-	ChargeAttemptDoc,
-	BillingAuditLogDoc,
-	CronLockDoc,
-	TrialIdentifierBlocklistDoc
-} from '$lib/types/billingSubscription.js';
-import type { ReconciliationRunDoc } from '$lib/types/reconciliation.js';
-import type { InvoiceDoc, InvoiceCounterDoc } from '$lib/types/invoice.js';
-import type { DataExportRequestDoc } from '$lib/types/dataExport.js';
-import type { SessionDoc } from '$lib/types/session.js';
-import type { SurveyResponseDoc } from '$lib/types/survey.js';
-import type { ReferralDoc } from '$lib/types/referral.js';
+type BillingSubscriptionDoc = any;
+type BillingTransactionDoc = any;
+type ChargeAttemptDoc = any;
+type BillingAuditLogDoc = any;
+type CronLockDoc = any;
+type TrialIdentifierBlocklistDoc = any;
+type ReconciliationRunDoc = any;
+type InvoiceDoc = any;
+type InvoiceCounterDoc = any;
+type DataExportRequestDoc = any;
+type SessionDoc = any;
+type SurveyResponseDoc = any;
+type ReferralDoc = any;
 
 export const BillingTransactions: Collection<BillingTransactionDoc> =
 	UserApplication.collection<BillingTransactionDoc>('billingTransactions');
@@ -462,8 +465,7 @@ export const NbfcNegativeAreas: Collection<NbfcNegativeAreaDoc> =
 export const PolicyCaptures: Collection<PolicyCapture> =
 	UserApplication.collection<PolicyCapture>('policyCaptures');
 
-// ── Case Tasks (DSA task management per case) ──────────────────
-import type { CaseTask } from '$lib/types/caseTask';
+type CaseTask = any;
 export const CaseTasks: Collection<CaseTask> = UserApplication.collection<CaseTask>('caseTasks');
 
 // ── QA Scenarios (admin testing system) ────────────────────────

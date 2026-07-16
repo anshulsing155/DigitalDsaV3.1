@@ -5,7 +5,7 @@
   import { onMount } from "svelte";
   import Payments from "$lib/components/website/Payments.svelte";
   import HelpList from "$lib/components/website/HelpList.svelte";
-  import Seo from "$lib/components/Seo.svelte";
+  import Seo from "$lib/components/website/Seo.svelte";
   import content from "$lib/data/website/career.json";
   import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

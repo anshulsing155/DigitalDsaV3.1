@@ -2,7 +2,7 @@
 	import Guides from '$lib/components/website/Guides.svelte';
 	import HelpList from '$lib/components/website/HelpList.svelte';
 	import PageFullTextDesign from '$lib/components/website/PageFullTextDesign.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import StickyNavbar from '$lib/components/website/StickyNavbar.svelte';
 	import Support from '$lib/components/website/Support.svelte';
 	import { onMount } from 'svelte';

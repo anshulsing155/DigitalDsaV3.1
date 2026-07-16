@@ -10,6 +10,8 @@
 		// btnClassStyle?: string;
 		onClick?: () => void;
 		btnAnimation?: boolean;
+		btnBorder?: string;
+		btnColor?: string;
 	};
 
 	const {
@@ -22,7 +24,9 @@
 		imageClass = '',
 		// btnClassStyle = 'py-3',
 		onClick = () => {},
-		btnAnimation = false
+		btnAnimation = false,
+		btnBorder = '',
+		btnColor = ''
 	}: Props = $props();
 </script>
 

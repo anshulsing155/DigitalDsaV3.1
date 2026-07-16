@@ -2,7 +2,11 @@
 	import { X } from '$lib/utils/iconRegistry';
 	import type { Snippet } from 'svelte';
 	import { registerModal, unregisterModal } from '$lib/stores/modalStack';
-	import { generateId } from '$lib/utils.js';
+	
+	function generateId() {
+		return 'modal-' + Math.random().toString(36).substring(2, 9);
+	}
+
 
 	interface Props {
 		showModal: boolean;

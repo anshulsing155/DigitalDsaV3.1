@@ -4,7 +4,7 @@
   import ThingsYouShould from "./ThingsYouShould.svelte";
   import StickyNavbar from "./StickyNavbar.svelte";
   import { onMount } from "svelte";
-  import Seo from "$lib/components/Seo.svelte";
+  import Seo from "./Seo.svelte";
   import content from "$lib/data/website/workingWithUs.json";
   	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

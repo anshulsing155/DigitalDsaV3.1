@@ -8,7 +8,7 @@
 	import HelpList from '$lib/components/website/HelpList.svelte';
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import content from '$lib/data/website/creditsAttributions.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

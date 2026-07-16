@@ -10,7 +10,7 @@
 	import NewBlogCard from '$lib/components/website/NewBlogCard.svelte';
 	import Sublist from '$lib/components/website/Sublist.svelte';
 	import ButtonBanner from '$lib/components/website/ButtonBanner.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import HelpList from '$lib/components/website/HelpList.svelte';
 	import content from '$lib/data/website/lap.json';
 	import FeedbackCheck from '$lib/components/website/FeedbackCheck.svelte';

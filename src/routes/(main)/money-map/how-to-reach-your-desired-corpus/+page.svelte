@@ -5,7 +5,7 @@
   import SelectNavigator from "$lib/components/website/SelectNavigator.svelte";
   import { moneyMapList } from "$lib/data/moneyMapList";
   import CalculatorPath from "$lib/components/website/CalculatorPath.svelte";
-  import Seo from "$lib/components/Seo.svelte";
+  import Seo from "$lib/components/website/Seo.svelte";
 
   let pathId = $state(5);
   let selectedCal = $state("How to reach your desired corpus?");

@@ -5,7 +5,7 @@
 	import HelpList from '$lib/components/website/HelpList.svelte';
 	import AboveTitleWithTopIconCard from '$lib/components/website/AboveTitleWithTopIconCard.svelte';
 	import AboveTitleWithoutIconCard from '$lib/components/website/AboveTitleWithoutIconCard.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import SecondPageLayout from '$lib/components/website/SecondPageLayout.svelte';
 	import StickyNavbar from '$lib/components/website/StickyNavbar.svelte';
 	import content from '$lib/data/website/arrangeDownPayment.json';

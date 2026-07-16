@@ -55,22 +55,6 @@
 		})
 	});
 
-	const helpWithClicks = $derived(
-		content.help.map((item: any) => {
-			if (item.link === '/get-started/how-can-we-help' || item.link === '/apply') {
-				return {
-					...item,
-					btnClick: () => {
-						applicationData.update((storeData) => {
-							storeData.LoanName = 'Loan Against Property';
-							return storeData;
-						});
-					}
-				};
-			}
-			return item;
-		})
-	);
 
 	let activeSection = $state('');
 

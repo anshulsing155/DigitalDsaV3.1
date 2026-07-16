@@ -2,7 +2,7 @@
 // OBS-2: OpenTelemetry must be initialized BEFORE any module that we want to
 // instrument is used.
 // ──────────────────────────────────────────────────────────────────────────
-import { startTelemetry } from '$lib/server/telemetry.js';
+
 
 console.error('[BOOT-1] hooks.server.ts module init starting');
 
@@ -15,7 +15,6 @@ process.on('unhandledRejection', (reason) => {
 	console.error('[BOOT-unhandledRejection]', detail);
 });
 
-void startTelemetry();
 
 console.error('[BOOT-2] hooks.server.ts module init complete');
 
@@ -33,13 +32,13 @@ import { CSRF_SECRET } from '$env/static/private';
 import { createCsrfToken, verifyCsrfToken } from '$lib/server/csrfTokens.js';
 import { sendErrorAlert } from '$lib/server/errorAlert.js';
 import { validateRequiredEnv } from '$lib/server/envValidation.js';
-import logger from '$lib/server/logger.js';
+
 
 const requestTracer = trace.getTracer('digitaldsa-v3.request');
 const csrfSecret = CSRF_SECRET || '';
 
 if (!csrfSecret && !dev) {
-	logger.error('FATAL: CSRF_SECRET environment variable is required in production');
+	console.error('FATAL: CSRF_SECRET environment variable is required in production');
 	process.exit(1);
 }
 
@@ -189,11 +188,11 @@ async function handleRequest(
 export const handleError: HandleServerError = ({ error, event, status, message }) => {
 	const err = error as Error;
 	const summary = `[SSR-ERROR] ${event.request.method} ${event.url.pathname} status=${status} msg=${message} err=${err?.name ?? 'Unknown'}: ${err?.message ?? 'no-message'}`;
-	
+
 	console.error(summary);
 	console.error('[SSR-ERROR-STACK]', err?.stack ?? '(no stack)');
-	
-	logger.error(
+
+	console.error(
 		{
 			ssrError: true,
 			path: event.url.pathname,

@@ -767,7 +767,7 @@ export const blogs = [
     categoryType: "finance support",
   },
   {
-    path: "/secureRetirement",
+    path: "/secure-retirement",
     title: "Smart Income Strategies for a Safe Retirement",
     description:
       "Discover low-risk, high-security retirement income plans like SCSS, NPS, annuities, FDs, SWPs & more. Plan wisely for peace of mind.",
@@ -779,7 +779,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/fixDeposit/fd",
+    path: "/secure-retirement/fixDeposit/fd",
     title: "Bank Fixed Deposits (FDs) – Secure & High-Return Investment",
     description:
       "Invest in Bank Fixed Deposits (FDs) for guaranteed returns, security & flexible tenure. Earn up to 7.5% interest with tax-saving benefits.",
@@ -790,7 +790,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/fixDeposit/fd-ladering",
+    path: "/secure-retirement/fixDeposit/fd-ladering",
     title: "FD Laddering Strategy: Maximize Returns & Liquidity",
     description:
       "Boost FD returns & maintain liquidity with FD Laddering. A smart strategy for risk-free investing & reinvesting. Learn how to optimize savings!",
@@ -802,7 +802,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/fixDeposit/fix-income",
+    path: "/secure-retirement/fixDeposit/fix-income",
     title: "Safe Fixed-Income Investments – Secure & Stable Returns",
     description:
       "Explore safe fixed-income investments like FDs, PPF, and RBI Bonds for secure, stable returns with low risk and tax benefits.",
@@ -813,7 +813,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/govSchemes/nps",
+    path: "/secure-retirement/govSchemes/nps",
     title: "National Pension System (NPS) – Secure Your Retirement Today",
     description:
       "Explore NPS for tax-saving & retirement planning. Low-cost, flexible, and PFRDA-regulated for secure long-term wealth creation.",
@@ -825,7 +825,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/govSchemes/pomis",
+    path: "/secure-retirement/govSchemes/pomis",
     title: "Post Office Monthly Income Scheme – Safe & Fixed Returns",
     description:
       "Invest in POMIS for 100% safe, fixed monthly income. Govt-backed, zero risk, 6.6% interest. Ideal for retirees & risk-averse investors.",
@@ -837,7 +837,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/govSchemes/rbi-floating",
+    path: "/secure-retirement/govSchemes/rbi-floating",
     title: "RBI Floating Rate Bonds – Inflation-Proof & Risk-Free Returns",
     description:
       "Invest in RBI Floating Rate Savings Bonds for inflation-proof, risk-free returns. Secure government-backed, floating interest rates & steady payouts.",
@@ -849,7 +849,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/govSchemes/scss",
+    path: "/secure-retirement/govSchemes/scss",
     title: "Senior Citizens’ Savings Scheme (SCSS) – Secure & High Returns",
     description:
       "Invest in SCSS for risk-free, high returns with government security, quarterly payouts, and tax benefits. Ideal for senior citizens.",
@@ -861,7 +861,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/lowRisk/index-funds",
+    path: "/secure-retirement/lowRisk/index-funds",
     title: "Index Funds for Retirement – Smart, Low-Cost Investing",
     description:
       "Invest in index funds for retirement growth. Low-cost, diversified, and tax-efficient passive investing for long-term wealth creation.",
@@ -873,7 +873,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/lowRisk/stocks",
+    path: "/secure-retirement/lowRisk/stocks",
     title: "Dividend Stocks & REITs – Earn Passive Income in India",
     description:
       "Invest in dividend stocks & REITs for passive income, stable returns & long-term growth. Build wealth with low-risk investments in India.",
@@ -885,7 +885,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/lowRisk/swp",
+    path: "/secure-retirement/lowRisk/swp",
     title: "Systematic Withdrawal Plan (SWP) – Smart Income Strategy",
     description:
       "Maximize wealth with SWP! Enjoy steady income, tax-efficient withdrawals & capital growth. Ideal for retirees & smart investors.",
@@ -897,7 +897,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/pension/annuity-plans",
+    path: "/secure-retirement/pension/annuity-plans",
     title: "Annuity Plans – Guaranteed Lifetime Income for Retirement",
     description:
       "Secure your retirement with annuity plans. Get guaranteed income, flexible payouts & tax benefits. Choose the best plan for lifelong security.",
@@ -909,7 +909,7 @@ export const blogs = [
     categoryType: "retirement planning",
   },
   {
-    path: "/secureRetirement/pension/immediate-annuities",
+    path: "/secure-retirement/pension/immediate-annuities",
     title: "Immediate & Deferred Annuities – Secure Your Future Income",
     description:
       "Discover Immediate & Deferred Annuities for guaranteed income & retirement security. Compare top plans & secure your future today!",

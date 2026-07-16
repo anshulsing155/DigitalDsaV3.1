@@ -12,7 +12,6 @@
  */
 
 import { browser } from '$app/environment';
-import { isSessionKicked } from '$lib/utils/sessionStatusPoller.svelte';
 
 // ── CSRF Token ──────────────────────────────────────────────────
 
@@ -208,9 +207,7 @@ export async function secureFetch(
 	// component invoked them. Silently return a synthetic 401 so callers
 	// resolve cleanly without network noise. The component-level error
 	// handlers downstream see a normal 401 and bail without logging.
-	if (browser && isSessionKicked()) {
-		return new Response(null, { status: 401, statusText: 'Session revoked' });
-	}
+
 
 	const { timeoutMs, signal: callerSignal, ...rest } = options;
 	const fetchOptions: RequestInit = { ...rest };

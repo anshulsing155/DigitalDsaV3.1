@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from './Seo.svelte';
 	import Tooltip from '$lib/components/website/Tooltip.svelte';
 	import content from '$lib/data/website/whyHaveBudget.json';
 	import SecondPageLayout from './SecondPageLayout.svelte';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
-	import StickyNavbar from '../StickyNavbar.svelte';
+	import StickyNavbar from './StickyNavbar.svelte';
 	import { onMount } from 'svelte';
 	import SectionIntro from './SectionIntro.svelte';
 	import HelpList from '$lib/components/website/HelpList.svelte';

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { browser } from '$app/environment';
-	import clientLogger from '$lib/utils/clientLogger';
+
 	import type { LayoutData } from './$types'; // Import types from +layout.ts
 
 	// Extended error type to include optional code property
@@ -73,7 +73,7 @@
 			code: error?.code || 'UNKNOWN_ERROR',
 			path: window.location.pathname
 		};
-		clientLogger.error({ errorInfo }, `Error ${determinedStatus}`);
+		console.error(`Error ${determinedStatus}`, errorInfo);
 
 		(window as any).dataLayer = (window as any).dataLayer || [];
 		(window as any).dataLayer.push({

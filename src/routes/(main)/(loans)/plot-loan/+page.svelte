@@ -14,7 +14,7 @@
 	import Anchor from '$lib/components/website/Anchor.svelte';
 	import FeedbackCheck from '$lib/components/website/FeedbackCheck.svelte';
 	import { applicationData } from '$lib/stores/stores';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from '$lib/components/website/Seo.svelte';
 	import AboveTitleWithoutIconCard from '$lib/components/website/AboveTitleWithoutIconCard.svelte';
 	import content from '$lib/data/website/plotLoan.json';
 	import TwoColumn from '$lib/components/website/TwoColumn.svelte';

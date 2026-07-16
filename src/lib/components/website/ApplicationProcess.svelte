@@ -3,7 +3,7 @@
   import AboveTitleWithTopIconCard from "./AboveTitleWithTopIconCard.svelte";
   import ThingsYouShould from "./ThingsYouShould.svelte";
   import HelpList from "./HelpList.svelte";
-  import Seo from "$lib/components/Seo.svelte";
+  import Seo from "./Seo.svelte";
   import content from "$lib/data/website/applicationProcess.json";
 
   const { seo, pageData, steps, help, thinkYouShouldKnow } = content;

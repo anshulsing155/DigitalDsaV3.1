@@ -1,7 +1,3 @@
-import type { UserRoles } from '$lib/types';
-import type { TeamMemberPermissions } from '$lib/types/team';
-import type { AdminPermissions } from '$lib/types/adminUser';
-
 declare global {
 	namespace App {
 		interface Locals {
@@ -13,14 +9,14 @@ declare global {
 				gender?: string;
 				occupation?: string;
 				role: 'admin' | 'user' | 'dsa' | 'rm' | 'property-consultant';
-				roles?: UserRoles;
+				roles?: any;
 				activeRole?: string;
 				onboardingCompleted?: boolean;
 				teamContext?: {
 					teamId: string;
 					ownerDsaId: string;
 					memberRole: string;
-					permissions: TeamMemberPermissions;
+					permissions: any;
 					isOwner: boolean;
 				};
 				/**
@@ -37,7 +33,7 @@ declare global {
 			role?: 'admin' | 'user' | 'dsa' | 'rm' | 'property-consultant' | null;
 			csrfToken?: string;
 			/** Admin permission flags (populated for admin users during auth) */
-			adminPermissions?: AdminPermissions;
+			adminPermissions?: any;
 			/** Whether the current admin is a super admin */
 			isSuperAdmin?: boolean;
 			/** CSP nonce for inline script tags (production only) */

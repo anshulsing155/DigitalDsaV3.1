@@ -5,7 +5,7 @@
     import BankComparison from "./BankComparison.svelte";
     import Calculator from "./Calculator.svelte";
     import FAQ from "./FAQ.svelte";
-    import Seo from "$lib/components/Seo.svelte";
+    import Seo from "$lib/components/website/Seo.svelte";
     import Sublist from "$lib/components/website/Sublist.svelte";
     import NewPageLayout from "$lib/components/website/NewPageLayout.svelte";
     import content from "$lib/data/website/businessLoanEligibility.json";

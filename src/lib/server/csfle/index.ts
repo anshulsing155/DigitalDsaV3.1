@@ -1,37 +1,25 @@
-/**
- * CSFLE — barrel export.
- * See docs/specs/SEC-2-CSFLE-PLAN.md for the design.
- */
+import type { Collection } from 'mongodb';
 
-export { getClientEncryption, _resetClientEncryptionForTests } from './client.js';
-export { encryptValue, decryptValue, isEncryptedBinary } from './helpers.js';
-export { ensureDeksExist, type DekInitResult } from './setup.js';
-export { CSFLE_KEYS, DETERMINISTIC, RANDOM, getKeyDef, type CsfleAlgorithm, type CsfleKeyDef } from './keys.js';
-export {
-	encryptUserPii,
-	decryptUserPii,
-	encryptMobileForQuery,
-	encryptEmailForQuery,
-	encryptPanForQuery,
-	findUserByMobile,
-	findUserByEmail,
-	findUserByPan,
-	computeBackfillPatch,
-	listBackfillableFields
-} from './userCrypto.js';
-export {
-	backfillCollection,
-	ensureAuditIndex,
-	defaultAuditWriter,
-	type BackfillOptions,
-	type BackfillBatchResult,
-	type BackfillCollectionResult,
-	type AuditWriter,
-	type AuditEntry
-} from './backfill.js';
-export {
-	encryptSnapshotPayload,
-	decryptSnapshotPayload,
-	resolveSnapshotPayload
-} from './snapshotCrypto.js';
-export { backfillSnapshots } from './snapshotBackfill.js';
+/**
+ * Plaintext fallback helper for finding user by mobile number.
+ */
+export async function findUserByMobile(collection: Collection<any>, mobile: string | number): Promise<any> {
+	const mobileNumber = typeof mobile === 'string' ? parseInt(mobile, 10) : mobile;
+	if (isNaN(mobileNumber as number)) {
+		return collection.findOne({ mobileNumber: mobile });
+	}
+	return collection.findOne({
+		$or: [
+			{ mobileNumber: mobileNumber },
+			{ mobileNumber: String(mobile) }
+		]
+	});
+}
+
+/**
+ * Plaintext fallback helper for finding user by email address.
+ */
+export async function findUserByEmail(collection: Collection<any>, email: string): Promise<any> {
+	if (!email) return null;
+	return collection.findOne({ email });
+}

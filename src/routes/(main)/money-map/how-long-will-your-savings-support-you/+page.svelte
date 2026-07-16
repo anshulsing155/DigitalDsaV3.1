@@ -5,7 +5,7 @@
   import SelectNavigator from "$lib/components/website/SelectNavigator.svelte";
   import { moneyMapList } from "$lib/data/moneyMapList";
   import CalculatorPath from "$lib/components/website/CalculatorPath.svelte";
-  import Seo from "$lib/components/Seo.svelte";
+  import Seo from "$lib/components/website/Seo.svelte";
 
   let pathId = $state(1);
   let selectedCal = $state("How Long Will Your Savings Support You?");
@@ -199,7 +199,7 @@
             our full guide.
           </p>
           <a
-            href="/secureRetirement"
+            href="/secure-retirement"
             class="text-linkColor underline font-FourthHead text-minParaFont lg:text-paraFont"
             >Read more</a
           >
