@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Seo from '../Seo.svelte';
-	import Tooltip from '../Tooltip.svelte';
-	import NewPageLayout from '../NewPageLayout.svelte';
-	import TwoColumnWithImage from '../TwoColumnWithImage.svelte';
-	import Button from '../Button.svelte';
-	import HelpList from '../HelpList.svelte';
-	import ThingsYouShould from '../ThingsYouShould.svelte';
+	import Seo from '../../layout/Seo.svelte';
+	import Tooltip from '../../ui/Tooltip.svelte';
+	import NewPageLayout from '../../layout/NewPageLayout.svelte';
+	import TwoColumnWithImage from '../../sections/TwoColumnWithImage.svelte';
+	import Button from '../../ui/Button.svelte';
+	import HelpList from '../../sections/HelpList.svelte';
+	import ThingsYouShould from '../../sections/ThingsYouShould.svelte';
 	import type { RetirementArticleData } from '$lib/data/website/retirementData';
 	import secureRetirementContent from '$lib/data/website/secureRetirement.json';
 

@@ -6,9 +6,9 @@
 
 
   import { page } from "$app/state";
-  import ApplicationProcess from "$lib/components/website/ApplicationProcess.svelte";
-  import CareerFaq from "$lib/components/website/CareerFAQ.svelte";
-  import WorkingWithUs from "$lib/components/website/WorkingWithUs.svelte";
+  import ApplicationProcess from '$lib/components/sections/ApplicationProcess.svelte';
+  import CareerFaq from '$lib/components/sections/CareerFAQ.svelte';
+  import WorkingWithUs from '$lib/components/sections/WorkingWithUs.svelte';
 
 
 

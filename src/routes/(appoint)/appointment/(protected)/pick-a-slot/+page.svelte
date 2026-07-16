@@ -1,6 +1,6 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import Loader from "$lib/components/website/Loader.svelte";
+  import Loader from '$lib/components/layout/Loader.svelte';
   import { appointmentData } from "$lib/stores/stores";
   import { onMount } from "svelte";
   import { fly } from "svelte/transition";

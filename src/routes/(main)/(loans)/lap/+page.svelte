@@ -1,19 +1,19 @@
 <script>
-	import NewPageLayout from '$lib/components/website/NewPageLayout.svelte';
-	import TwoColumn from '$lib/components/website/TwoColumn.svelte';
-	import Information from '$lib/components/website/Information.svelte';
-	import NewHome from '$lib/components/website/NewHome.svelte';
-	import Ways from '$lib/components/website/Ways.svelte';
-	import WhyChoose from '$lib/components/website/WhyChoose.svelte';
-	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
-	import Button from '$lib/components/website/Button.svelte';
-	import NewBlogCard from '$lib/components/website/NewBlogCard.svelte';
-	import Sublist from '$lib/components/website/Sublist.svelte';
-	import ButtonBanner from '$lib/components/website/ButtonBanner.svelte';
-	import Seo from '$lib/components/website/Seo.svelte';
-	import HelpList from '$lib/components/website/HelpList.svelte';
+	import NewPageLayout from '$lib/components/layout/NewPageLayout.svelte';
+	import TwoColumn from '$lib/components/sections/TwoColumn.svelte';
+	import Information from '$lib/components/sections/Information.svelte';
+	import NewHome from '$lib/components/sections/NewHome.svelte';
+	import Ways from '$lib/components/sections/Ways.svelte';
+	import WhyChoose from '$lib/components/sections/WhyChoose.svelte';
+	import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import NewBlogCard from '$lib/components/sections/NewBlogCard.svelte';
+	import Sublist from '$lib/components/layout/Sublist.svelte';
+	import ButtonBanner from '$lib/components/sections/ButtonBanner.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
 	import content from '$lib/data/website/lap.json';
-	import FeedbackCheck from '$lib/components/website/FeedbackCheck.svelte';
+	import FeedbackCheck from '$lib/components/ui/FeedbackCheck.svelte';
 </script>
 
 <Seo

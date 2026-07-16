@@ -1,13 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
-	import Button from '$lib/components/website/Button.svelte';
-	import HelpList from '$lib/components/website/HelpList.svelte';
-	import SecondPageLayout from '$lib/components/website/SecondPageLayout.svelte';
-	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
-	import TwoColumnWithImage from '$lib/components/website/TwoColumnWithImage.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
+	import SecondPageLayout from '$lib/components/layout/SecondPageLayout.svelte';
+	import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+	import TwoColumnWithImage from '$lib/components/sections/TwoColumnWithImage.svelte';
 	import { blogs } from '$lib/data/allBlogs';
-	import Loader from '$lib/components/website/Loader.svelte';
-	import Seo from '$lib/components/website/Seo.svelte';
+	import Loader from '$lib/components/layout/Loader.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 	import content from '$lib/data/website/knowledge.json';
 	import {
 		Trash2,

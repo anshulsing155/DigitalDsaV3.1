@@ -1,7 +1,7 @@
 <script>
-  import CheckCard5 from "$lib/components/website/CheckCard5.svelte";
-  import Testimonial from "$lib/components/website/Testimonial.svelte";
-  import Seo from "$lib/components/website/Seo.svelte";
+  import CheckCard5 from '$lib/components/ui/CheckCard5.svelte';
+  import Testimonial from '$lib/components/sections/Testimonial.svelte';
+  import Seo from '$lib/components/Seo.svelte';
   import content from "$lib/data/website/testimonial.json";
 </script>
 

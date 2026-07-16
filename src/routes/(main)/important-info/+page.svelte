@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Guides from '$lib/components/website/Guides.svelte';
-	import HelpList from '$lib/components/website/HelpList.svelte';
-	import PageFullTextDesign from '$lib/components/website/PageFullTextDesign.svelte';
-	import Seo from '$lib/components/website/Seo.svelte';
-	import StickyNavbar from '$lib/components/website/StickyNavbar.svelte';
-	import Support from '$lib/components/website/Support.svelte';
+	import Guides from '$lib/components/sections/Guides.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
+	import PageFullTextDesign from '$lib/components/layout/PageFullTextDesign.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import StickyNavbar from '$lib/components/layout/StickyNavbar.svelte';
+	import Support from '$lib/components/sections/Support.svelte';
 	import { onMount } from 'svelte';
 	import content from '$lib/data/website/importantInfo.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

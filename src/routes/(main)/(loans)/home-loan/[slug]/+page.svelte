@@ -1,26 +1,26 @@
 <script>
   import { page } from "$app/stores";
-  import PageNotFound from "$lib/components/website/PageNotFound.svelte";
-  import BalanceTransfer from "$lib/components/website/BalanceTransfer.svelte";
-  import HomeTopUp from "$lib/components/website/HomeTopUp.svelte";
-  import HomeLoanForBusiness from "$lib/components/website/HomeLoanForBusiness.svelte";
-  import BuyingFirstHomeHl from "$lib/components/website/BuyingFirstHomeHL.svelte";
-  import BuyingNextHomeHl from "$lib/components/website/BuyingNextHomeHL.svelte";
-  import HomeLoanToolsandCalculator from "$lib/components/website/HomeLoanToolsandCalculator.svelte";
-  import HomeLoanProcess from "$lib/components/website/HomeLoanProcess.svelte";
-  import SavingForDepositArticle from "$lib/components/website/SavingForDepositArticle.svelte";
-  import ConditionalPreApprovalArticle from "$lib/components/website/ConditionalPreApprovalArticle.svelte";
-  import UnderstandCostOfBuyingHomeArticle from "$lib/components/website/UnderstandCostOfBuyingHomeArticle.svelte";
-  import BuyOrRentArticle from "$lib/components/website/BuyOrRentArticle.svelte";
-  import BuyPropertyResaleOrDirectArticle from "$lib/components/website/BuyPropertyResaleOrDirectArticle.svelte";
-  import ChoosePerfectNeighbourhoodArticle from "$lib/components/website/ChoosePerfectNeighbourhoodArticle.svelte";
-  import CloseYourLoanEarlyArticle from "$lib/components/website/CloseYourLoanEarlyArticle.svelte";
-  import HomeRenovationArticle from "$lib/components/website/HomeRenovationArticle.svelte";
-  import InvestingInPropertyArticle from "$lib/components/website/InvestingInPropertyArticle.svelte";
-  import SellingYourPropertyArticle from "$lib/components/website/SellingYourPropertyArticle.svelte";
-  import HomeLoanSupport from "$lib/components/website/HomeLoanSupport.svelte";
-  import RenovateOrMove from "$lib/components/website/RenovateOrMove.svelte";
-  import TurningYourHomeIntoInvestment from "$lib/components/website/TurningYourHomeIntoInvestment.svelte";
+  import PageNotFound from '$lib/components/layout/PageNotFound.svelte';
+  import BalanceTransfer from '$lib/components/sections/BalanceTransfer.svelte';
+  import HomeTopUp from '$lib/components/sections/HomeTopUp.svelte';
+  import HomeLoanForBusiness from '$lib/components/sections/HomeLoanForBusiness.svelte';
+  import BuyingFirstHomeHl from '$lib/components/sections/BuyingFirstHomeHL.svelte';
+  import BuyingNextHomeHl from '$lib/components/sections/BuyingNextHomeHL.svelte';
+  import HomeLoanToolsandCalculator from '$lib/components/sections/HomeLoanToolsandCalculator.svelte';
+  import HomeLoanProcess from '$lib/components/sections/HomeLoanProcess.svelte';
+  import SavingForDepositArticle from '$lib/components/sections/SavingForDepositArticle.svelte';
+  import ConditionalPreApprovalArticle from '$lib/components/sections/ConditionalPreApprovalArticle.svelte';
+  import UnderstandCostOfBuyingHomeArticle from '$lib/components/sections/UnderstandCostOfBuyingHomeArticle.svelte';
+  import BuyOrRentArticle from '$lib/components/sections/BuyOrRentArticle.svelte';
+  import BuyPropertyResaleOrDirectArticle from '$lib/components/sections/BuyPropertyResaleOrDirectArticle.svelte';
+  import ChoosePerfectNeighbourhoodArticle from '$lib/components/sections/ChoosePerfectNeighbourhoodArticle.svelte';
+  import CloseYourLoanEarlyArticle from '$lib/components/sections/CloseYourLoanEarlyArticle.svelte';
+  import HomeRenovationArticle from '$lib/components/sections/HomeRenovationArticle.svelte';
+  import InvestingInPropertyArticle from '$lib/components/sections/InvestingInPropertyArticle.svelte';
+  import SellingYourPropertyArticle from '$lib/components/sections/SellingYourPropertyArticle.svelte';
+  import HomeLoanSupport from '$lib/components/sections/HomeLoanSupport.svelte';
+  import RenovateOrMove from '$lib/components/sections/RenovateOrMove.svelte';
+  import TurningYourHomeIntoInvestment from '$lib/components/sections/TurningYourHomeIntoInvestment.svelte';
 
   let slug = $derived($page.params.slug);
 

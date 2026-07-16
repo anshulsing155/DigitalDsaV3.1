@@ -1,18 +1,18 @@
 <script lang="ts">
-	import SecondPageLayout from '$lib/components/website/SecondPageLayout.svelte';
-	import StickyNavbar from '$lib/components/website/StickyNavbar.svelte';
-	import TwoColumn from '$lib/components/website/TwoColumn.svelte';
-	import TwoColumnWithLeftHeading from '$lib/components/website/TwoColumnWithLeftHeading.svelte';
-	import TwoColumnWithImage from '$lib/components/website/TwoColumnWithImage.svelte';
-	import Button from '$lib/components/website/Button.svelte';
-	import HelpList from '$lib/components/website/HelpList.svelte';
+	import SecondPageLayout from '$lib/components/layout/SecondPageLayout.svelte';
+	import StickyNavbar from '$lib/components/layout/StickyNavbar.svelte';
+	import TwoColumn from '$lib/components/sections/TwoColumn.svelte';
+	import TwoColumnWithLeftHeading from '$lib/components/sections/TwoColumnWithLeftHeading.svelte';
+	import TwoColumnWithImage from '$lib/components/sections/TwoColumnWithImage.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
-	import Seo from '$lib/components/website/Seo.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 	import content from '$lib/data/website/creditsAttributions.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
-	import SectionIntro from '$lib/components/website/SectionIntro.svelte';
+	import SectionIntro from '$lib/components/sections/SectionIntro.svelte';
 
 	let activeSection = $state('');
 	let activeIndex = $state<number | null>(null);

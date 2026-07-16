@@ -1,5 +1,5 @@
 <script>
-  import ComplaintCompliments from "$lib/components/website/Complaint-compliments.svelte";
+  import ComplaintCompliments from '$lib/components/sections/Complaint-compliments.svelte';
 </script>
 
 <section>

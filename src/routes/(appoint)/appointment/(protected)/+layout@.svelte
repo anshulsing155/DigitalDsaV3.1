@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Loader from '$lib/components/website/Loader.svelte';
+	import Loader from '$lib/components/layout/Loader.svelte';
 
 	let { children } = $props();
 

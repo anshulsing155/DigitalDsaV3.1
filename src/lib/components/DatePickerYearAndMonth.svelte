@@ -1,153 +1,210 @@
-﻿<script lang="ts">
-	import { Calendar } from '$lib/utils/iconRegistry';
-	import { dialogState } from '$lib/state/dialog.svelte';
-	import { untrack } from 'svelte';
+<script lang="ts">
+	import { onMount } from 'svelte';
+
+	const monthsFull = [
+		'January', 'February', 'March', 'April', 'May', 'June',
+		'July', 'August', 'September', 'October', 'November', 'December'
+	];
+
+	const monthsShort = monthsFull.map(month => month.substring(0, 3));
 
 	interface Props {
-		id?: string;
-		value?: string;
-		applicantIndex?: number | null;
-		questionId: string;
-		minYear?: number | null;
-		maxYear?: number | null;
-		introduceMonthIndia?: number | null;
-		/**
-		 * Forward-only fields (e.g. "Planned registration month") set this
-		 * to true so the picker disables months strictly earlier than today.
-		 * Defaults to false to preserve legacy past-anchored fields like
-		 * disbursement / allotment dates. See CLAUDE.md §3 Pitfall (Planned
-		 * registration month accepts past months, 2026-05-28).
-		 */
-		futureOnly?: boolean;
-		label?: string;
-		description?: string;
-		textFieldClass?: string;
-		continueButton?: boolean | any;
-		placeholder?: string;
-		onchange?: (e: CustomEvent<string>) => void;
+		startDate: string;
+		endDate: string;
+		dateValue?: string;
+		typeOfStartDate?: string;
 	}
 
 	let {
-		id = '',
-		value = $bindable(),
-		applicantIndex = null,
-		questionId,
-		minYear = null,
-		maxYear = null,
-		introduceMonthIndia = null,
-		futureOnly = false,
-		label = undefined,
-		onchange
+		startDate,
+		endDate,
+		dateValue = $bindable(''),
+		typeOfStartDate = ''
 	}: Props = $props();
 
-	// ── Apply the month/year value selected in MonthYearModal ───────────
-	// MonthYearModal writes to dialogState.selectedDate when the user
-	// picks a month.  This effect reads the rune and applies the value
-	// only to the correct DatePicker instance (identified by modalContext).
-	//
-	// IMPORTANT: the same-value guard prevents creating a new answers
-	// object in the parent when the value hasn't changed, which would
-	// cascade through every child effect and cause
-	// effect_update_depth_exceeded.
-	function applyMonthYear(newVal: string) {
-		if (newVal === value) return;
+	let isYearAreaOpen = $state(false);
+	let isDateAreaOpen = $state(false);
 
-		value = newVal;
-		if (onchange) {
-			onchange(new CustomEvent('change', { detail: newVal }));
+	let currentYear = $state(0);
+	let currentMonth = $state('');
+	let minDecadeYear = $state(0);
+	let maxDecadeYear = $state(0);
+	let yearFull = $state<number[]>([]);
+
+	let min = $state(0);
+	let minMonth = $state(0);
+	let max = $state(0);
+	let maxMonth = $state(0);
+
+	$effect(() => {
+		if (startDate && endDate) {
+			const [stYear, stMonth] = startDate.split('-').map(Number);
+			const [edYear, edMonth] = endDate.split('-').map(Number);
+			min = stYear;
+			max = edYear;
+			minMonth = stMonth - 1;
+			maxMonth = edMonth - 1;
+			currentYear = min;
+			currentMonth = monthsShort[minMonth];
+		}
+	});
+
+	function minYear() {
+		if (currentYear > min) currentYear -= 1;
+	}
+
+	function maxYear() {
+		if (currentYear < max) currentYear += 1;
+	}
+
+	function selectMonthYear(month: string) {
+		const monthIndex = monthsShort.indexOf(month);
+		dateValue = `${currentYear}-${(monthIndex + 1).toString().padStart(2, '0')}`;
+		isDateAreaOpen = false;
+	}
+
+	function toggleDateArea() {
+		isDateAreaOpen = !isDateAreaOpen;
+		isYearAreaOpen = false;
+	}
+
+	function previousDecadeYear() {
+		if (minDecadeYear > min) {
+			minDecadeYear -= 10;
+			maxDecadeYear = minDecadeYear + 9;
+			yearFull = Array.from({ length: 10 }, (_, i) => minDecadeYear + i);
 		}
 	}
 
-	// Snapshot the selection epoch on mount. Any pick that already happened
-	// before this DatePicker existed is "stale" — we must ignore it. Without
-	// this guard, a fresh DatePicker mounting after a previous pick (e.g. the
-	// second business entry's GST date field after the first entry's GST date
-	// was picked) would read the leftover selectedDate + matching modalContext
-	// and silently auto-apply the previous value with no user click.
-	let lastSeenEpoch = $state<number | null>(null);
-
-	$effect(() => {
-		// Track the epoch — this is what fires the effect on each fresh pick.
-		const epoch = dialogState.selectionEpoch;
-
-		// First run after mount: record the baseline and never apply.
-		if (lastSeenEpoch === null) {
-			lastSeenEpoch = epoch;
-			return;
+	function nextDecadeYear() {
+		if (maxDecadeYear < max) {
+			minDecadeYear += 10;
+			maxDecadeYear = minDecadeYear + 9;
+			yearFull = Array.from({ length: 10 }, (_, i) => minDecadeYear + i);
 		}
+	}
 
-		// Same epoch as last time we ran = no new pick happened. Bail.
-		if (epoch === lastSeenEpoch) return;
-		lastSeenEpoch = epoch;
+	function decadeYearRange() {
+		minDecadeYear = Math.floor(currentYear / 10) * 10;
+		maxDecadeYear = minDecadeYear + 9;
+		yearFull = Array.from({ length: 10 }, (_, i) => minDecadeYear + i);
+	}
 
-		// Read selectedDate + modalContext outside tracking so we only react
-		// to epoch ticks (which signal a fresh confirmed pick).
-		const d = untrack(() => dialogState.selectedDate);
-		if (!d) return;
-		const ctx = untrack(() => dialogState.modalContext);
+	function toggleYear() {
+		decadeYearRange();
+		isYearAreaOpen = !isYearAreaOpen;
+		isDateAreaOpen = !isDateAreaOpen;
+	}
 
-		if (ctx.applicantIndex !== applicantIndex || ctx.questionId !== questionId) {
-			return;
+	function toggleYearArea(year: number) {
+		currentYear = year;
+		isYearAreaOpen = false;
+		isDateAreaOpen = true;
+	}
+
+	let section: HTMLElement | undefined = $state();
+	function handleClickOutside(event: MouseEvent) {
+		if (section && !section.contains(event.target as Node)) {
+			isDateAreaOpen = false;
+			isYearAreaOpen = false;
 		}
+	}
 
-		applyMonthYear(d);
+	onMount(() => {
+		document.addEventListener('click', handleClickOutside);
+		return () => document.removeEventListener('click', handleClickOutside);
 	});
 
-	// ── Open the layout-level MonthYearModal ────────────────────────────
-	// Single atomic call replaces 4 sequential store writes, eliminating
-	// the previous race window and stale-year-on-reopen bugs.
-	// The layout renders MonthYearModal at the top of the DOM (avoids
-	// z-index / overflow clipping issues, no double-modal rendering).
-	function toggleDateArea() {
-		dialogState.openDatePicker(
-			applicantIndex,
-			questionId,
-			value || '',
-			minYear,
-			introduceMonthIndia,
-			maxYear,
-			futureOnly
-		);
+	const selectedMonthYear = $derived.by(() => {
+		if (!dateValue) {
+			return '--- -----';
+		} else {
+			const [stYear, stMonth] = dateValue.split('-').map(Number);
+			return `${monthsShort[stMonth - 1]}-${stYear}`;
+		}
+	});
+
+	function selectEndDate() {
+		dateValue = endDate;
+		isDateAreaOpen = false;
 	}
 </script>
 
-<section class="z-30 flex w-full flex-col gap-1 md:gap-2">
-	<div class="relative">
-		<div class="flex w-full items-center bg-[var(--form-bg-card)]">
-			<div
-				class={`absolute left-0 flex h-full w-12 items-center justify-center rounded-l-md transition-all duration-300
-				${value ? 'icon-filled' : 'icon-empty'}`}
-			>
-				<Calendar class="h-5 w-5 shrink-0 text-white dark:text-gray-900" />
+<section bind:this={section} onclick={(e) => e.stopPropagation()} class="relative w-full">
+	<div class="flex items-center">
+		<div
+			class="flex w-full items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont"
+		>
+			<div class="px-2">
+				<i class="fa-solid fa-calendar-days"></i>
 			</div>
-
 			<input
-				{id}
-				name={id}
+				id="monthYearInput"
 				type="text"
-				bind:value
+				value={selectedMonthYear}
 				onclick={toggleDateArea}
 				readonly
-				class="text-labelText {value ? 'text-[var(--form-text-label)]' : 'text-[var(--form-text-muted)]'} !m-0 w-full rounded-l-md rounded-r-xl
-					border border-2
-					border-[var(--form-border)] bg-[var(--form-bg-card)]
-					py-[0.8rem] pr-4 pl-14 placeholder-[var(--form-text-muted)] transition-colors outline-none
-					focus:border-[var(--ddsa-primary-500)] focus:ring-1
-					focus:ring-[var(--ddsa-primary-500)] "
-				placeholder="Select date"
+				class="w-full cursor-pointer p-2 outline-none"
+				placeholder="--- -----"
 			/>
 		</div>
 	</div>
-</section>
 
-<style>
-	.icon-empty {
-		background: var(--ddsa-secondary-900, #1e293b);
-	}
-	:global(.dark) .icon-empty {
-		background: var(--ddsa-secondary-200, #e2e8f0);
-	}
-	.icon-filled {
-		background: var(--ddsa-primary-500);
-	}
-</style>
+	{#if isDateAreaOpen}
+		<div class="absolute z-40 w-full flex flex-col overflow-hidden rounded bg-white shadow shadow-gray-400 font-Paragraph">
+			<!-- Year Selector -->
+			<div class="my-3 grid grid-cols-3 text-center">
+				<button onclick={minYear} type="button" class="cursor-pointer bg-transparent border-none"><i class="fa-solid fa-arrow-left"></i></button>
+				<button class="cursor-pointer font-FifthHead bg-transparent border-none" type="button" onclick={toggleYear}>{currentYear}</button>
+				<button onclick={maxYear} type="button" class="cursor-pointer bg-transparent border-none"><i class="fa-solid fa-arrow-right"></i></button>
+			</div>
+
+			<!-- Month Selector -->
+			<div class="grid grid-cols-3 border-t bg-white p-3 text-center">
+				{#each monthsShort as month, index}
+					{#if (currentYear == min && index < minMonth) || (currentYear == max && index > maxMonth)}
+						<p class="py-2 text-gray-300">{month}</p>
+					{:else}
+						<button
+							type="button"
+							class="cursor-pointer py-2 hover:bg-gray-200 bg-transparent border-none"
+							onclick={() => selectMonthYear(month)}
+						>
+							{month}
+						</button>
+					{/if}
+				{/each}
+			</div>
+
+			{#if typeOfStartDate == "endDate"}
+				<div class="flex justify-center py-2 border-t">
+					<button onclick={selectEndDate} type="button" class="hover:bg-gray-200 px-3 py-2 font-Paragraph bg-transparent border-none cursor-pointer">
+						Till end date
+					</button>
+				</div>
+			{/if}
+		</div>
+	{/if}
+
+	{#if isYearAreaOpen}
+		<!-- Decade Selector -->
+		<div class="absolute z-40 w-full flex flex-col overflow-hidden rounded bg-white shadow shadow-gray-400 font-Paragraph">
+			<div class="my-3 grid grid-cols-3 text-center font-Paragraph">
+				<button onclick={previousDecadeYear} type="button" class="cursor-pointer bg-transparent border-none"><i class="fa-solid fa-arrow-left"></i></button>
+				<button class="cursor-pointer text-sm font-FifthHead bg-transparent border-none" type="button">{minDecadeYear}-{maxDecadeYear}</button>
+				<button onclick={nextDecadeYear} type="button" class="cursor-pointer bg-transparent border-none"><i class="fa-solid fa-arrow-right"></i></button>
+			</div>
+
+			<!-- Year Selector -->
+			<div class="grid grid-cols-3 border-t bg-white p-3 text-center">
+				{#each yearFull as year}
+					{#if year <= max}
+						<button type="button" class="cursor-pointer py-2 hover:bg-gray-200 bg-transparent border-none" onclick={() => toggleYearArea(year)}>
+							{year}
+						</button>
+					{/if}
+				{/each}
+			</div>
+		</div>
+	{/if}
+</section>

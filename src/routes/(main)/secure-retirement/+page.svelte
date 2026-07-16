@@ -1,16 +1,16 @@
 <script lang="ts">
-	import NewPageLayout from "$lib/components/website/NewPageLayout.svelte";
-	import ThreeColumWithLeftHeading from "$lib/components/website/ThreeColumWithLeftHeading.svelte";
-	import TwoColumnWithLeftHeading from "$lib/components/website/TwoColumnWithLeftHeading.svelte";
-	import HelpList from "$lib/components/website/HelpList.svelte";
-	import ThingsYouShould from "$lib/components/website/ThingsYouShould.svelte";
-	import ButtonBanner from "$lib/components/website/ButtonBanner.svelte";
-	import Button from "$lib/components/website/Button.svelte";
-	import TwoColumnWithImage from "$lib/components/website/TwoColumnWithImage.svelte";
-	import Anchor from "$lib/components/website/Anchor.svelte";
-	import PaymentTable from "$lib/components/website/PaymentTable.svelte";
-	import TableModel from "$lib/components/website/TableModel.svelte";
-	import Seo from "$lib/components/website/Seo.svelte";
+	import NewPageLayout from '$lib/components/layout/NewPageLayout.svelte';
+	import ThreeColumWithLeftHeading from '$lib/components/sections/ThreeColumWithLeftHeading.svelte';
+	import TwoColumnWithLeftHeading from '$lib/components/sections/TwoColumnWithLeftHeading.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
+	import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+	import ButtonBanner from '$lib/components/sections/ButtonBanner.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import TwoColumnWithImage from '$lib/components/sections/TwoColumnWithImage.svelte';
+	import Anchor from '$lib/components/ui/Anchor.svelte';
+	import PaymentTable from '$lib/components/features/calculators/PaymentTable.svelte';
+	import TableModel from '$lib/components/features/calculators/TableModel.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 	import content from "$lib/data/website/secureRetirement.json";
 
 	// Modal states using Svelte 5 runes

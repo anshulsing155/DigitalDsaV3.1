@@ -1,23 +1,23 @@
 <script>
-	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
-	import Button from '$lib/components/website/Button.svelte';
-	import Sublist from '$lib/components/website/Sublist.svelte';
-	import TwoColumnWithLeftHeading from '$lib/components/website/TwoColumnWithLeftHeading.svelte';
-	import PaymentTable from '$lib/components/website/PaymentTable.svelte';
-	import NewPageLayout from '$lib/components/website/NewPageLayout.svelte';
-	import HelpList from '$lib/components/website/HelpList.svelte';
-	import AboveTitleWithTopIconCard from '$lib/components/website/AboveTitleWithTopIconCard.svelte';
-	import AboveTitleWithBlackCard from '$lib/components/website/AboveTitleWithBlackCard.svelte';
-	import ButtonBanner from '$lib/components/website/ButtonBanner.svelte';
-	import TwoColumnWithImage from '$lib/components/website/TwoColumnWithImage.svelte';
-	import Loader from '$lib/components/website/Loader.svelte';
-	import Anchor from '$lib/components/website/Anchor.svelte';
-	import FeedbackCheck from '$lib/components/website/FeedbackCheck.svelte';
+	import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import Sublist from '$lib/components/layout/Sublist.svelte';
+	import TwoColumnWithLeftHeading from '$lib/components/sections/TwoColumnWithLeftHeading.svelte';
+	import PaymentTable from '$lib/components/features/calculators/PaymentTable.svelte';
+	import NewPageLayout from '$lib/components/layout/NewPageLayout.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
+	import AboveTitleWithTopIconCard from '$lib/components/sections/AboveTitleWithTopIconCard.svelte';
+	import AboveTitleWithBlackCard from '$lib/components/sections/AboveTitleWithBlackCard.svelte';
+	import ButtonBanner from '$lib/components/sections/ButtonBanner.svelte';
+	import TwoColumnWithImage from '$lib/components/sections/TwoColumnWithImage.svelte';
+	import Loader from '$lib/components/layout/Loader.svelte';
+	import Anchor from '$lib/components/ui/Anchor.svelte';
+	import FeedbackCheck from '$lib/components/ui/FeedbackCheck.svelte';
 	import { applicationData } from '$lib/stores/stores';
-	import Seo from '$lib/components/website/Seo.svelte';
-	import AboveTitleWithoutIconCard from '$lib/components/website/AboveTitleWithoutIconCard.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import AboveTitleWithoutIconCard from '$lib/components/sections/AboveTitleWithoutIconCard.svelte';
 	import content from '$lib/data/website/plotLoan.json';
-	import TwoColumn from '$lib/components/website/TwoColumn.svelte';
+	import TwoColumn from '$lib/components/sections/TwoColumn.svelte';
 
 	let loaderValue = false;
 

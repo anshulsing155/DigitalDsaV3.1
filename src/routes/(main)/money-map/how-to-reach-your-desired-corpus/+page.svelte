@@ -1,11 +1,11 @@
 <script lang="ts">
-  import FindDeposit from "$lib/components/website/FindDeposit.svelte";
+  import FindDeposit from '$lib/components/sections/FindDeposit.svelte';
   import { onMount } from "svelte";
   import { browser } from "$app/environment";
-  import SelectNavigator from "$lib/components/website/SelectNavigator.svelte";
+  import SelectNavigator from '$lib/components/sections/SelectNavigator.svelte';
   import { moneyMapList } from "$lib/data/moneyMapList";
-  import CalculatorPath from "$lib/components/website/CalculatorPath.svelte";
-  import Seo from "$lib/components/website/Seo.svelte";
+  import CalculatorPath from '$lib/components/layout/CalculatorPath.svelte';
+  import Seo from '$lib/components/Seo.svelte';
 
   let pathId = $state(5);
   let selectedCal = $state("How to reach your desired corpus?");

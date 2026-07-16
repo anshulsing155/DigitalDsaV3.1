@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from "$app/state";
-  import Loader from "$lib/components/website/Loader.svelte";
+  import Loader from '$lib/components/layout/Loader.svelte';
   import { appointmentData } from "$lib/stores/stores";
   import FormLogo from "$lib/components/FormLogo.svelte";
   import { onMount } from "svelte";

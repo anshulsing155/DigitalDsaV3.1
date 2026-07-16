@@ -412,17 +412,18 @@ const cleanUpPaths = [
 	'src/lib/components/landing'
 ];
 
-for (const targetPath of cleanUpPaths) {
-	const absolutePath = path.resolve(targetPath);
-	if (fs.existsSync(absolutePath)) {
-		try {
-			fs.rmSync(absolutePath, { recursive: true, force: true });
-			console.log(`[CleanUp] Successfully deleted: ${targetPath}`);
-		} catch (err) {
-			console.error(`[CleanUp] Failed to delete ${targetPath}:`, err);
-		}
-	}
-}
+// Disabled cleanUpPaths loop to prevent deletion of migrated website files
+// for (const targetPath of cleanUpPaths) {
+// 	const absolutePath = path.resolve(targetPath);
+// 	if (fs.existsSync(absolutePath)) {
+// 		try {
+// 			fs.rmSync(absolutePath, { recursive: true, force: true });
+// 			console.log(`[CleanUp] Successfully deleted: ${targetPath}`);
+// 		} catch (err) {
+// 			console.error(`[CleanUp] Failed to delete ${targetPath}:`, err);
+// 		}
+// 	}
+// }
 
 // Delete all unused types under src/lib/types except index.ts
 const typesDir = path.resolve('src/lib/types');

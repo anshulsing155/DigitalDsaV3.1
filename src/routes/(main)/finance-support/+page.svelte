@@ -1,5 +1,5 @@
 <script>
-  import FinancialCover from "$lib/components/website/FinancialCover.svelte";
+  import FinancialCover from '$lib/components/sections/FinancialCover.svelte';
 </script>
 
 <section>

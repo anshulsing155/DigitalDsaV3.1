@@ -1,12 +1,12 @@
 <script lang="ts">
-  import Button from "$lib/components/website/Button.svelte";
-  import HelpList from "$lib/components/website/HelpList.svelte";
-  import NewBlogCard from "$lib/components/website/NewBlogCard.svelte";
-  import SecondPageLayout from "$lib/components/website/SecondPageLayout.svelte";
-  import Seo from "$lib/components/website/Seo.svelte";
-  import StickyNavbar from "$lib/components/website/StickyNavbar.svelte";
-  import TwoColumn from "$lib/components/website/TwoColumn.svelte";
-  import TwoColumnWithImage from "$lib/components/website/TwoColumnWithImage.svelte";
+  import Button from '$lib/components/ui/Button.svelte';
+  import HelpList from '$lib/components/sections/HelpList.svelte';
+  import NewBlogCard from '$lib/components/sections/NewBlogCard.svelte';
+  import SecondPageLayout from '$lib/components/layout/SecondPageLayout.svelte';
+  import Seo from '$lib/components/Seo.svelte';
+  import StickyNavbar from '$lib/components/layout/StickyNavbar.svelte';
+  import TwoColumn from '$lib/components/sections/TwoColumn.svelte';
+  import TwoColumnWithImage from '$lib/components/sections/TwoColumnWithImage.svelte';
   import { onMount } from "svelte";
   import content from "$lib/data/website/aboutUs.json";
   import { toggleDropdown } from '$lib/utils/toggleDropdown';

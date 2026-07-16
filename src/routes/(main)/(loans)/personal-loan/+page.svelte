@@ -1,19 +1,19 @@
 <script>
-	import TwoColumn from '$lib/components/website/TwoColumn.svelte';
-	import Information from '$lib/components/website/Information.svelte';
-	import WhyChoose from '$lib/components/website/WhyChoose.svelte';
-	import WeAreHereHelp from '$lib/components/website/WeAreHereHelp.svelte';
-	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
-	import Button from '$lib/components/website/Button.svelte';
-	import Sublist from '$lib/components/website/Sublist.svelte';
-	import NewPageLayout from '$lib/components/website/NewPageLayout.svelte';
-	import Seo from '$lib/components/website/Seo.svelte';
-	import ThreeColumWithLeftHeading from '$lib/components/website/ThreeColumWithLeftHeading.svelte';
-	import ButtonBanner from '$lib/components/website/ButtonBanner.svelte';
-	import PaymentTable from '$lib/components/website/PaymentTable.svelte';
+	import TwoColumn from '$lib/components/sections/TwoColumn.svelte';
+	import Information from '$lib/components/sections/Information.svelte';
+	import WhyChoose from '$lib/components/sections/WhyChoose.svelte';
+	import WeAreHereHelp from '$lib/components/sections/WeAreHereHelp.svelte';
+	import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import Sublist from '$lib/components/layout/Sublist.svelte';
+	import NewPageLayout from '$lib/components/layout/NewPageLayout.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import ThreeColumWithLeftHeading from '$lib/components/sections/ThreeColumWithLeftHeading.svelte';
+	import ButtonBanner from '$lib/components/sections/ButtonBanner.svelte';
+	import PaymentTable from '$lib/components/features/calculators/PaymentTable.svelte';
 	import content from '$lib/data/website/personalLoan.json';
-	import HelpList from '$lib/components/website/HelpList.svelte';
-	import FeedbackCheck from '$lib/components/website/FeedbackCheck.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
+	import FeedbackCheck from '$lib/components/ui/FeedbackCheck.svelte';
 </script>
 
 <Seo

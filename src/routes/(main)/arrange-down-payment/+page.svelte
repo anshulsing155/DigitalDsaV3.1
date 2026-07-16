@@ -1,15 +1,15 @@
 <script lang="ts">
-	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
+	import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
 	import { onMount } from 'svelte';
-	import Anchor from '$lib/components/website/Anchor.svelte';
-	import HelpList from '$lib/components/website/HelpList.svelte';
-	import AboveTitleWithTopIconCard from '$lib/components/website/AboveTitleWithTopIconCard.svelte';
-	import AboveTitleWithoutIconCard from '$lib/components/website/AboveTitleWithoutIconCard.svelte';
-	import Seo from '$lib/components/website/Seo.svelte';
-	import SecondPageLayout from '$lib/components/website/SecondPageLayout.svelte';
-	import StickyNavbar from '$lib/components/website/StickyNavbar.svelte';
+	import Anchor from '$lib/components/ui/Anchor.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
+	import AboveTitleWithTopIconCard from '$lib/components/sections/AboveTitleWithTopIconCard.svelte';
+	import AboveTitleWithoutIconCard from '$lib/components/sections/AboveTitleWithoutIconCard.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import SecondPageLayout from '$lib/components/layout/SecondPageLayout.svelte';
+	import StickyNavbar from '$lib/components/layout/StickyNavbar.svelte';
 	import content from '$lib/data/website/arrangeDownPayment.json';
-	import SectionIntro from '$lib/components/website/SectionIntro.svelte';
+	import SectionIntro from '$lib/components/sections/SectionIntro.svelte';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 

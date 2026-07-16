@@ -1,11 +1,11 @@
 <script lang="ts">
-  import PageDesign from "$lib/components/website/PageDesign.svelte";
-  import TwoColumn from "$lib/components/website/TwoColumn.svelte";
-  import StickyNavbar from "$lib/components/website/StickyNavbar.svelte";
+  import PageDesign from '$lib/components/layout/PageDesign.svelte';
+  import TwoColumn from '$lib/components/sections/TwoColumn.svelte';
+  import StickyNavbar from '$lib/components/layout/StickyNavbar.svelte';
   import { onMount } from "svelte";
-  import Payments from "$lib/components/website/Payments.svelte";
-  import HelpList from "$lib/components/website/HelpList.svelte";
-  import Seo from "$lib/components/website/Seo.svelte";
+  import Payments from '$lib/components/features/calculators/Payments.svelte';
+  import HelpList from '$lib/components/sections/HelpList.svelte';
+  import Seo from '$lib/components/Seo.svelte';
   import content from "$lib/data/website/career.json";
   import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

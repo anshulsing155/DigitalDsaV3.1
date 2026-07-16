@@ -5,9 +5,9 @@
 
 
     import { page } from "$app/state";
-  import ProtectYourselfFromScamCyberSecurity from "$lib/components/website/ProtectYourselfFromScamCyberSecurity.svelte";
-   import ScamTargetBusinesses from "$lib/components/website/ScamTargetBusinesses.svelte";
-  import WaysSafeguardCyberSecurity from "$lib/components/website/WaysSafeguardCyberSecurity.svelte";
+  import ProtectYourselfFromScamCyberSecurity from '$lib/components/sections/ProtectYourselfFromScamCyberSecurity.svelte';
+   import ScamTargetBusinesses from '$lib/components/sections/ScamTargetBusinesses.svelte';
+  import WaysSafeguardCyberSecurity from '$lib/components/sections/WaysSafeguardCyberSecurity.svelte';
   
 
     let slug = page.params.slug;

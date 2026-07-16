@@ -1,5 +1,5 @@
 <script>
-import TermCondition from "$lib/components/website/TermCondition.svelte";
+import TermCondition from '$lib/components/sections/TermCondition.svelte';
 </script>
 
 <section>

@@ -1,8 +1,8 @@
-import FdWithSavingGoal from "$lib/components/website/FdWithSavingGoal.svelte";
-import FindDeposit from "$lib/components/website/FindDeposit.svelte";
-import MoneyLast from "$lib/components/website/MoneyLast.svelte";
-import ReverseCalculationsOfMoneyLast from "$lib/components/website/ReverseCalculationsOfMoneyLast.svelte";
-import SaveGoalWithTenure from "$lib/components/website/SaveGoalWithTenure.svelte";
+import FdWithSavingGoal from '$lib/components/features/calculators/FdWithSavingGoal.svelte';
+import FindDeposit from '$lib/components/sections/FindDeposit.svelte';
+import MoneyLast from '$lib/components/features/calculators/MoneyLast.svelte';
+import ReverseCalculationsOfMoneyLast from '$lib/components/features/calculators/ReverseCalculationsOfMoneyLast.svelte';
+import SaveGoalWithTenure from '$lib/components/sections/SaveGoalWithTenure.svelte';
 
 export const moneyMap = [
   {

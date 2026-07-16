@@ -5,12 +5,12 @@
 
 
   import { page } from "$app/state";
-  import AdjustYourBudget from "$lib/components/website/AdjustYourBudget.svelte";
-  import BehavioralScienceBehindBudgeting from "$lib/components/website/BehavioralScienceBehindBudgeting.svelte";
-  import BudgetingTips from "$lib/components/website/BudgetingTips.svelte";
-  import CostOfLiving from "$lib/components/website/CostOfLiving.svelte";
-  import FinancialHardship from "$lib/components/website/FinancialHardship.svelte";
-  import MakeBudget from "$lib/components/website/MakeBudget.svelte";
+  import AdjustYourBudget from '$lib/components/sections/AdjustYourBudget.svelte';
+  import BehavioralScienceBehindBudgeting from '$lib/components/sections/BehavioralScienceBehindBudgeting.svelte';
+  import BudgetingTips from '$lib/components/sections/BudgetingTips.svelte';
+  import CostOfLiving from '$lib/components/sections/CostOfLiving.svelte';
+  import FinancialHardship from '$lib/components/sections/FinancialHardship.svelte';
+  import MakeBudget from '$lib/components/sections/MakeBudget.svelte';
 
 
   let slug = page.params.slug;

@@ -1,7 +1,7 @@
 <script>
-  import Footer from "$lib/components/website/Footer.svelte";
-  import ChatWrapper from "$lib/components/website/ChatWrapper.svelte";
-  import Navbar from "$lib/components/website/Navbar.svelte";
+  import Footer from '$lib/components/layout/Footer.svelte';
+  import ChatWrapper from '$lib/components/modals/ChatWrapper.svelte';
+  import Navbar from '$lib/components/layout/Navbar.svelte';
   import "../../app.css";
   import "@fortawesome/fontawesome-free/css/all.min.css";
 </script>

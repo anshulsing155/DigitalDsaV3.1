@@ -1,9 +1,9 @@
 <script>
 	import { goto } from '$app/navigation';
-	import SecondPageLayout from '$lib/components/website/SecondPageLayout.svelte';
-	import Seo from '$lib/components/website/Seo.svelte';
+	import SecondPageLayout from '$lib/components/layout/SecondPageLayout.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 	import { blogs } from '$lib/data/allBlogs';
-	import Loader from '$lib/components/website/Loader.svelte';
+	import Loader from '$lib/components/layout/Loader.svelte';
 
 	let isLoading = $state(false);
 	let handleImageLoad = $state(false);

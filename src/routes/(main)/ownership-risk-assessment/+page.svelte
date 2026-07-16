@@ -8,7 +8,7 @@
 		Lock
 	} from "lucide-svelte";
 	import { goto } from "$app/navigation";
-	import Seo from "$lib/components/website/Seo.svelte";
+	import Seo from '$lib/components/Seo.svelte';
 	import content from "$lib/data/website/ownershipRiskAssessment.json";
 
 	function navigateToAssessment() {

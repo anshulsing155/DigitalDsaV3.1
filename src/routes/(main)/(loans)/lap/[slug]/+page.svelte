@@ -1,15 +1,15 @@
 <script>
   import { page } from "$app/state";
-  import LapBt from "$lib/components/website/LapBT.svelte";
-  import LapBtWithTopUp from "$lib/components/website/LapBTWithTopUp.svelte";
-  import LapNewLoan from "$lib/components/website/LapNewLoan.svelte";
-  import TopUpPlot from "$lib/components/website/TopUpPlot.svelte";
-  import UnlockingPowerCollateralArticle from "$lib/components/website/UnlockingPowerCollateralArticle.svelte";
-  import BusinessFinancialHealth from "$lib/components/website/BusinessFinancialHealth.svelte";
-  import LapvsDOD from "$lib/components/website/LapvsDOD.svelte";
-  import DodArticle from "$lib/components/website/DodArticle.svelte";
-  import DataConsolidation from "$lib/components/website/DataConsolidation.svelte";
-  import PageNotFound from "$lib/components/website/PageNotFound.svelte";
+  import LapBt from '$lib/components/sections/LapBT.svelte';
+  import LapBtWithTopUp from '$lib/components/sections/LapBTWithTopUp.svelte';
+  import LapNewLoan from '$lib/components/sections/LapNewLoan.svelte';
+  import TopUpPlot from '$lib/components/sections/TopUpPlot.svelte';
+  import UnlockingPowerCollateralArticle from '$lib/components/sections/UnlockingPowerCollateralArticle.svelte';
+  import BusinessFinancialHealth from '$lib/components/sections/BusinessFinancialHealth.svelte';
+  import LapvsDOD from '$lib/components/sections/LapvsDOD.svelte';
+  import DodArticle from '$lib/components/sections/DodArticle.svelte';
+  import DataConsolidation from '$lib/components/sections/DataConsolidation.svelte';
+  import PageNotFound from '$lib/components/layout/PageNotFound.svelte';
 
   let slug = $derived(page.params.slug);
   const componentMap = {

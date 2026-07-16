@@ -1,6 +1,6 @@
 <script>
    
-    import HomeLoanSupport from '$lib/components/website/HomeLoanSupport.svelte'
+    import HomeLoanSupport from '$lib/components/sections/HomeLoanSupport.svelte'
  </script>
  <section>
      <HomeLoanSupport />

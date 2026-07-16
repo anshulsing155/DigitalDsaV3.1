@@ -1,15 +1,15 @@
 <script>
 	let { data = $bindable() } = $props();
 
-	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
-	import Payments from '$lib/components/website/Payments.svelte';
+	import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+	import Payments from '$lib/components/features/calculators/Payments.svelte';
 	import { page } from '$app/state';
-	import HelpList from '$lib/components/website/HelpList.svelte';
-	import Seo from '$lib/components/website/Seo.svelte';
-	import AboveTitleWithLeftIconCard from '$lib/components/website/AboveTitleWithLeftIconCard.svelte';
-	import TwoColumnWithImage from '$lib/components/website/TwoColumnWithImage.svelte';
-	import Button from '$lib/components/website/Button.svelte';
-	import NewPageLayout from '$lib/components/website/NewPageLayout.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import AboveTitleWithLeftIconCard from '$lib/components/sections/AboveTitleWithLeftIconCard.svelte';
+	import TwoColumnWithImage from '$lib/components/sections/TwoColumnWithImage.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import NewPageLayout from '$lib/components/layout/NewPageLayout.svelte';
 	import { goto } from '$app/navigation';
 	import content from '$lib/data/website/referAndEarn.json';
 	import { Copy } from '$lib/utils/iconRegistry.ts';

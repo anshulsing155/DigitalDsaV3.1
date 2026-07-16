@@ -1,12 +1,12 @@
 <script lang="ts">
-  import NewPageLayout from "$lib/components/website/NewPageLayout.svelte";
-  import WhyChoose from "$lib/components/website/WhyChoose.svelte";
-  import WeAreHereHelp from "$lib/components/website/WeAreHereHelp.svelte";
-  import ThingsYouShould from "$lib/components/website/ThingsYouShould.svelte";
-  import StickyNavbar from "$lib/components/website/StickyNavbar.svelte";
+  import NewPageLayout from '$lib/components/layout/NewPageLayout.svelte';
+  import WhyChoose from '$lib/components/sections/WhyChoose.svelte';
+  import WeAreHereHelp from '$lib/components/sections/WeAreHereHelp.svelte';
+  import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+  import StickyNavbar from '$lib/components/layout/StickyNavbar.svelte';
   import { onMount } from "svelte";
-  import PaymentTable from "$lib/components/website/PaymentTable.svelte";
-  import Seo from "$lib/components/website/Seo.svelte";
+  import PaymentTable from '$lib/components/features/calculators/PaymentTable.svelte';
+  import Seo from '$lib/components/Seo.svelte';
   import content from "$lib/data/website/emiPartpaymentRules.json";
 
   const toggleDropdown = (event: any, index: any) => {

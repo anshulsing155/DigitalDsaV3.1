@@ -1,19 +1,19 @@
 <script lang="ts">
-	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
-	import Button from '$lib/components/website/Button.svelte';
+	import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { elasticOut } from 'svelte/easing';
-	import Sublist from '$lib/components/website/Sublist.svelte';
-	import Seo from '$lib/components/website/Seo.svelte';
-	import NewPageLayout from '$lib/components/website/NewPageLayout.svelte';
-	import AboveTitleWithTopIconCard from '$lib/components/website/AboveTitleWithTopIconCard.svelte';
-	import AboveTitleWithoutIconCard from '$lib/components/website/AboveTitleWithoutIconCard.svelte';
-	import ButtonBanner from '$lib/components/website/ButtonBanner.svelte';
-	import AboveTitleWithBlackCard from '$lib/components/website/AboveTitleWithBlackCard.svelte';
-	import FeedbackCheck from '$lib/components/website/FeedbackCheck.svelte';
-	import HelpList from '$lib/components/website/HelpList.svelte';
+	import Sublist from '$lib/components/layout/Sublist.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import NewPageLayout from '$lib/components/layout/NewPageLayout.svelte';
+	import AboveTitleWithTopIconCard from '$lib/components/sections/AboveTitleWithTopIconCard.svelte';
+	import AboveTitleWithoutIconCard from '$lib/components/sections/AboveTitleWithoutIconCard.svelte';
+	import ButtonBanner from '$lib/components/sections/ButtonBanner.svelte';
+	import AboveTitleWithBlackCard from '$lib/components/sections/AboveTitleWithBlackCard.svelte';
+	import FeedbackCheck from '$lib/components/ui/FeedbackCheck.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
 	import content from '$lib/data/website/businessLoan.json';
-	import TwoColumn from '$lib/components/website/TwoColumn.svelte';
+	import TwoColumn from '$lib/components/sections/TwoColumn.svelte';
 
 	// Icon mapping for cleaner rendering
 	const iconMap: Record<string, string> = {

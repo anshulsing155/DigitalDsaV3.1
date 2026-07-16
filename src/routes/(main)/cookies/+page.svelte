@@ -1,5 +1,5 @@
 <script>
-	import Cookies from "$lib/components/website/Cookies.svelte";
+	import Cookies from '$lib/components/sections/Cookies.svelte';
 </script>
 
 <section>

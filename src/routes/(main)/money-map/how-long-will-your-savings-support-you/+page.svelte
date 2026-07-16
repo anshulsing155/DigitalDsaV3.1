@@ -1,11 +1,11 @@
 <script lang="ts">
-  import MoneyLast from "$lib/components/website/MoneyLast.svelte";
+  import MoneyLast from '$lib/components/features/calculators/MoneyLast.svelte';
   import { onDestroy, onMount } from "svelte";
   import { browser } from "$app/environment";
-  import SelectNavigator from "$lib/components/website/SelectNavigator.svelte";
+  import SelectNavigator from '$lib/components/sections/SelectNavigator.svelte';
   import { moneyMapList } from "$lib/data/moneyMapList";
-  import CalculatorPath from "$lib/components/website/CalculatorPath.svelte";
-  import Seo from "$lib/components/website/Seo.svelte";
+  import CalculatorPath from '$lib/components/layout/CalculatorPath.svelte';
+  import Seo from '$lib/components/Seo.svelte';
 
   let pathId = $state(1);
   let selectedCal = $state("How Long Will Your Savings Support You?");

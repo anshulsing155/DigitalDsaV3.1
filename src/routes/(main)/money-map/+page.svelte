@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { slide } from "svelte/transition";
-  import SelectNavigator from "$lib/components/website/SelectNavigator.svelte";
+  import SelectNavigator from '$lib/components/sections/SelectNavigator.svelte';
   import { moneyMapList } from "$lib/data/moneyMapList";
-  import Seo from "$lib/components/website/Seo.svelte";
+  import Seo from '$lib/components/Seo.svelte';
 
   let showCalculator = $state(false);
   let selectedCal = $state("");

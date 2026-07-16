@@ -1,5 +1,5 @@
 <script>
-      import ScamCyberSecurityBusinessProtection from "$lib/components/website/ScamCyberSecurityBusinessProtection.svelte";
+      import ScamCyberSecurityBusinessProtection from '$lib/components/sections/ScamCyberSecurityBusinessProtection.svelte';
 
 </script>
 

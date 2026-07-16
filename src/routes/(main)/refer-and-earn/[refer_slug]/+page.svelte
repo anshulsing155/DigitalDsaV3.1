@@ -2,11 +2,11 @@
   let { data } = $props();
 
   import { page } from "$app/state";
-  import PageDesign from "$lib/components/website/PageDesign.svelte";
-  import Payments from "$lib/components/website/Payments.svelte";
-  import Seo from "$lib/components/website/Seo.svelte";
-  import ThingsYouShould from "$lib/components/website/ThingsYouShould.svelte";
-  import WeAreHereHelp from "$lib/components/website/WeAreHereHelp.svelte";
+  import PageDesign from '$lib/components/layout/PageDesign.svelte';
+  import Payments from '$lib/components/features/calculators/Payments.svelte';
+  import Seo from '$lib/components/Seo.svelte';
+  import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+  import WeAreHereHelp from '$lib/components/sections/WeAreHereHelp.svelte';
   import content from "$lib/data/website/referAndEarnSlug.json";
 
   const { seo, help, keyBenefits, dsaAdvantage, thinkKnow } = content;

@@ -9,7 +9,18 @@
       "mobId": "mobLoans",
       "icon": "/icons/personalLoan.svg"
     },
-
+    {
+      "list": "Calculators",
+      "id": "calculators",
+      "link": "/calculators",
+      "icon": "/icons/calc.svg"
+    },
+    {
+      "list": "Loan planners",
+      "id": "planners",
+      "link": "/planners",
+      "icon": "/icons/lap.svg"
+    },
     {
       "list": "Money map",
       "star": "",

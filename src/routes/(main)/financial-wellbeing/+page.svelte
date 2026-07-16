@@ -1,11 +1,11 @@
 <script lang="ts">
-	import HelpList from '$lib/components/website/HelpList.svelte';
-	import NewPageLayout from '$lib/components/website/NewPageLayout.svelte';
-	import Seo from '$lib/components/website/Seo.svelte';
-	import StickyNavbar from '$lib/components/website/StickyNavbar.svelte';
-	import ThingsYouShould from '$lib/components/website/ThingsYouShould.svelte';
-	import TwoColumn from '$lib/components/website/TwoColumn.svelte';
-	import WhyChoose from '$lib/components/website/WhyChoose.svelte';
+	import HelpList from '$lib/components/sections/HelpList.svelte';
+	import NewPageLayout from '$lib/components/layout/NewPageLayout.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import StickyNavbar from '$lib/components/layout/StickyNavbar.svelte';
+	import ThingsYouShould from '$lib/components/sections/ThingsYouShould.svelte';
+	import TwoColumn from '$lib/components/sections/TwoColumn.svelte';
+	import WhyChoose from '$lib/components/sections/WhyChoose.svelte';
 	import { onMount } from 'svelte';
 	import content from '$lib/data/website/financialWellbeing.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
