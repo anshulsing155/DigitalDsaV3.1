@@ -4,7 +4,7 @@
   import AboveTitleWithoutIconCard from './AboveTitleWithoutIconCard.svelte';
   import StickyNavbar from '../layout/StickyNavbar.svelte';
   import { onMount } from "svelte";
-  import Seo from '../layout/Seo.svelte';
+  import Seo from '../Seo.svelte';
   import content from "$lib/data/website/careerFAQ.json";
   import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

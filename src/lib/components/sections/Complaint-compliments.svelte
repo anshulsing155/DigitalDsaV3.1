@@ -6,7 +6,7 @@
 	import { onMount } from 'svelte';
 	import { feedbackYes } from '$lib/stores/stores';
 	import HelpList from './HelpList.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import NewPageLayout from '../layout/NewPageLayout.svelte';
 	import content from '$lib/data/website/complaintCompliments.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

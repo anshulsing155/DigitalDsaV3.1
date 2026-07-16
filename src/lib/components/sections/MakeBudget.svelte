@@ -10,7 +10,7 @@
 	import AboveTitleWithoutIconCard from './AboveTitleWithoutIconCard.svelte';
 	import StickyNavbar from '../layout/StickyNavbar.svelte';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/makeBudget.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

@@ -10,7 +10,7 @@
 	import ButtonBanner from './ButtonBanner.svelte';
 	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import HelpList from './HelpList.svelte';
 	import content from '$lib/data/website/buyingNextHomeHL.json';

@@ -2,7 +2,7 @@
 	import NewPageLayout from '../layout/NewPageLayout.svelte';
 	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
 	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/unlockingPowerCollateral.json';
 	import HelpList from './HelpList.svelte';
 

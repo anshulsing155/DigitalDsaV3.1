@@ -9,7 +9,7 @@
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import Button from '../ui/Button.svelte';
 	import { onMount } from 'svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/renovateOrMove.json';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

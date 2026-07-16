@@ -11,7 +11,7 @@
 	import PremiumButton from './PremiumButton.svelte';
 	import Guides from './Guides.svelte';
 	import AccordionWithLeftHeading from './AccordionWithLeftHeading.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import HelpList from './HelpList.svelte';
 	import { banks } from '$lib/data/bankEligibilityData';
 	import content from '$lib/data/website/homeLoanForBusiness.json';

@@ -1,12 +1,13 @@
 <script lang="ts">
 	import TopIconCard from './TopIconCard.svelte';
 
-	type Props = {
+	interface Props {
 		contents?: any;
 		listGridAboveLg?: string;
 		paddingClass?: string;
 		isBorder?: boolean;
-	};
+	}
+
 	let {
 		contents = {},
 		listGridAboveLg = '3',
@@ -16,23 +17,24 @@
 </script>
 
 <section
-	class="w-full px-[0.5rem] py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+	class="py-[4rem] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] px-[0.5rem] lg:px-[4rem] w-full {isBorder
 		? 'border-b border-[var(--form-border)]'
 		: ''}"
 >
-	<div class={`flex w-full flex-col gap-[2rem] ${paddingClass}`}>
+	<div class={`flex flex-col gap-[2rem] w-full ${paddingClass}`}>
 		<div class="flex flex-col gap-2">
 			{#if contents.heading}
-				<h2 class="typography-h2-md text-[var(--form-text)]">
+				<h2 class="font-ThirdHead text-sectionHeading text-[var(--form-text)]">
 					{@html contents.heading}
 				</h2>
 			{/if}
 			{#if contents.subHeading}
-				<h3 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+				<h3 class="font-FifthHead text-subPara text-[var(--form-text)]">
 					{@html contents.subHeading}
 				</h3>
 			{/if}
 		</div>
+
 		{#if contents.cards}
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-{contents.xlGridCol} gap-4">
 				{#each contents.cards as card, index}
@@ -53,9 +55,9 @@
 			>
 				{#each contents.list as listItem, index}
 					<div
-						class="group my-[4rem] mt-4 flex flex-col items-start gap-4 pr-4 text-[var(--form-text)] lg:gap-8 {index <
+						class="flex flex-col gap-4 items-start mt-4 pr-4 lg:my-[4rem] group border-b border-[var(--form-border)] lg:border-b-0 pb-[2rem] lg:pb-0 {index <
 						contents.list.length - 1
-							? 'border-b border-[var(--form-border)] pb-[4rem] md:border-b-0 md:pb-0'
+							? ''
 							: ''}"
 					>
 						{#if listItem.icon}
@@ -67,26 +69,32 @@
 						{/if}
 						<div class="flex flex-col gap-4">
 							{#if listItem.heading}
-								<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+								<h2 class="font-FourthHead text-minSubHead text-[var(--form-text)]">
 									{@html listItem.heading}
 								</h2>
 							{/if}
 							{#if listItem.topPara}
-								<p class="typography-body-md text-[var(--form-text-secondary)]">
+								<p
+									class="font-SubPara text-minParaFont md:text-subParaFont text-[var(--form-text-secondary)]"
+								>
 									{@html listItem.topPara}
 								</p>
 							{/if}
 							{#if listItem.desc}
-								<ul class="ml-5 list-disc space-y-1">
+								<ul class="space-y-2 list-disc ml-5 marker:text-[var(--form-text)]">
 									{#each listItem.desc as desc}
-										<li class="typography-body-md text-[var(--form-text-secondary)]">
+										<li
+											class="font-SubPara text-minParaFont md:text-subParaFont text-[var(--form-text-secondary)]"
+										>
 											{@html desc}
 										</li>
 									{/each}
 								</ul>
 							{/if}
 							{#if listItem.para}
-								<p class="typography-body-md text-[var(--form-text-secondary)]">
+								<p
+									class="font-SubPara text-minParaFont md:text-subParaFont text-[var(--form-text-secondary)]"
+								>
 									{@html listItem.para}
 								</p>
 							{/if}

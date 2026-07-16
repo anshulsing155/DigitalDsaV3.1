@@ -13,7 +13,7 @@
 	import ButtonBanner from './ButtonBanner.svelte';
 	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
 	import FeedbackCheck from '../ui/FeedbackCheck.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import HelpList from './HelpList.svelte';
 	import content from '$lib/data/website/balanceTransfer.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

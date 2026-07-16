@@ -8,7 +8,7 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import HelpList from '$lib/components/sections/HelpList.svelte';
 	import ThingsYouKnow from '$lib/components/sections/ThingsYouKnow.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/conditionalPreApprovalArticle.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

@@ -10,7 +10,7 @@
 	import ButtonBanner from './ButtonBanner.svelte';
 	import HelpList from './HelpList.svelte';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/buyingFirstHomeHL.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

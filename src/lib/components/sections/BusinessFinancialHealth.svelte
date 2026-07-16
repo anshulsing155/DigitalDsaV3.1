@@ -8,7 +8,7 @@
 	import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
 	import Button from '../ui/Button.svelte';
 	import HelpList from './HelpList.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/businessFinancialHealth.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

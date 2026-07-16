@@ -9,7 +9,7 @@
 	import StickyNavbar from '../layout/StickyNavbar.svelte';
 	import { onMount } from 'svelte';
 	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/savingForDepositArticle.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

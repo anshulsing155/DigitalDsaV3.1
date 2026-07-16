@@ -7,7 +7,7 @@
   import { onMount } from "svelte";
   import PlannerPath from '$lib/components/layout/PlannerPath.svelte';
   import SelectNavigator from '$lib/components/sections/SelectNavigator.svelte';
-  import Seo from '../layout/Seo.svelte';
+  import Seo from '../Seo.svelte';
 
   let plannerNumber = $state(4);
   let selectedCal = $state("Budget Planner");

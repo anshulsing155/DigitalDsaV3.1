@@ -13,7 +13,7 @@
   import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
   import Payments from '../features/calculators/Payments.svelte';
   import AboveTitleWithoutIconCard from './AboveTitleWithoutIconCard.svelte';
-  import Seo from '../layout/Seo.svelte';
+  import Seo from '../Seo.svelte';
   import content from "$lib/data/website/protectFromScams.json";
   	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

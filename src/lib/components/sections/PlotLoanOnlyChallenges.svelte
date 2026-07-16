@@ -13,7 +13,7 @@
 	import ButtonBanner from './ButtonBanner.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import StickyNavbar from '../layout/StickyNavbar.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/plotLoanOnlyChallenges.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

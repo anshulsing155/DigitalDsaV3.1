@@ -1,12 +1,19 @@
-<script>
+<script lang="ts">
+	import CardWithoutIcon from './CardWithoutIcon.svelte';
+
+	interface Props {
+		contents?: any;
+		children?: any;
+		paddingClass?: string;
+		isBorder?: boolean;
+	}
+
 	let {
 		contents = {},
-		children = undefined,
+		children,
 		paddingClass = 'lg:px-16',
 		isBorder = false
-	} = $props();
-
-	import CardWithoutIcon from './CardWithoutIcon.svelte';
+	}: Props = $props();
 </script>
 
 <section
@@ -17,12 +24,14 @@
 	<div class={`flex w-full flex-col gap-[2rem] ${paddingClass}`}>
 		<div class="flex flex-col gap-2">
 			{#if contents.heading}
-				<h2 class="typography-h2-md text-[var(--form-text)]">
+				<h2 class="font-ThirdHead text-sectionHeading text-[var(--form-text)]">
 					{@html contents.heading}
 				</h2>
 			{/if}
 			{#if contents.para}
-				<p class="typography-body-md text-[var(--form-text-secondary)]">{@html contents.para}</p>
+				<p class="font-Paragraph text-subPara text-[var(--form-text-secondary)]">
+					{@html contents.para}
+				</p>
 			{/if}
 		</div>
 
@@ -44,32 +53,32 @@
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-{contents.xlGridCol} gap-4">
 				{#each contents.list as listItem, index}
 					<div
-						class="group my-[4rem] mt-4 flex flex-col items-start gap-2 {index <
+						class="group my-[4rem] mt-4 flex flex-col items-start gap-4 pr-4 {index <
 						contents.list.length - 1
 							? 'border-b border-[var(--form-border)] pb-[4rem] md:border-b-0 md:pb-0'
 							: ''}"
 					>
 						{#if listItem.heading}
-							<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+							<h2 class="font-FourthHead text-cardHeading text-[var(--form-text)]">
 								{@html listItem.heading}
 							</h2>
 						{/if}
 						{#if listItem.topPara}
-							<p class="typography-body-md text-[var(--form-text-secondary)]">
+							<p class="font-SubPara text-subPara text-[var(--form-text-secondary)]">
 								{@html listItem.topPara}
 							</p>
 						{/if}
 						{#if listItem.desc}
-							<ul class="ml-5 list-disc space-y-1">
+							<ul class="space-y-2 list-disc ml-5 marker:text-[var(--form-text)]">
 								{#each listItem.desc as desc}
-									<li class="typography-body-md text-[var(--form-text-secondary)]">
+									<li class="font-SubPara text-subPara text-[var(--form-text-secondary)]">
 										{@html desc}
 									</li>
 								{/each}
 							</ul>
 						{/if}
 						{#if listItem.para}
-							<p class="typography-body-md text-[var(--form-text-secondary)]">
+							<p class="font-SubPara text-subPara text-[var(--form-text-secondary)]">
 								{@html listItem.para}
 							</p>
 						{/if}
@@ -77,6 +86,8 @@
 				{/each}
 			</div>
 		{/if}
-		{@render children?.()}
+		{#if children}
+			{@render children()}
+		{/if}
 	</div>
 </section>

@@ -1,6 +1,6 @@
 <script>
 	import PageFullTextDesign from '../layout/PageFullTextDesign.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import StickyNavbar from '../layout/StickyNavbar.svelte';
 	import ThingsYouShould from './ThingsYouShould.svelte';
 	import { onMount } from 'svelte';

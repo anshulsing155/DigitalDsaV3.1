@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import HelpList from './HelpList.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import SecondPageLayout from '../layout/SecondPageLayout.svelte';
 	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
 	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';

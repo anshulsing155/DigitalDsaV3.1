@@ -13,7 +13,7 @@
 	import TwoColumnWithImage from '$lib/components/sections/TwoColumnWithImage.svelte';
 	import FeedbackCheck from '$lib/components/ui/FeedbackCheck.svelte';
 	import { applicationData } from '$lib/stores/stores';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/plotLoanSupport.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

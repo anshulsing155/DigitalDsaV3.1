@@ -11,7 +11,7 @@
 	import Button from '../ui/Button.svelte';
 	import HelpList from './HelpList.svelte';
 	import ThingsYouKnow from './ThingsYouKnow.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/policeLawyersLoan.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

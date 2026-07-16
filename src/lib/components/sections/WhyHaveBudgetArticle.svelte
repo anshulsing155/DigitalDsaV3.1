@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import Tooltip from '$lib/components/ui/Tooltip.svelte';
 	import content from '$lib/data/website/whyHaveBudget.json';
 	import SecondPageLayout from '../layout/SecondPageLayout.svelte';

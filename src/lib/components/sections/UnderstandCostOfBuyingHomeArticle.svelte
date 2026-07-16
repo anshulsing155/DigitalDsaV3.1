@@ -9,7 +9,7 @@
 	import HelpList from '$lib/components/sections/HelpList.svelte';
 	import ThingsYouKnow from '$lib/components/sections/ThingsYouKnow.svelte';
 	import ThreeColumWithLeftHeading from '$lib/components/sections/ThreeColumWithLeftHeading.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/understandCostOfBuyingHomeArticle.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

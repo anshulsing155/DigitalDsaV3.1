@@ -1,7 +1,7 @@
 <script>
   import EnquiryContactPage from './EnquiryContactPage.svelte';
   import PageFullTextDesign from '../layout/PageFullTextDesign.svelte';
-  import Seo from '../layout/Seo.svelte';
+  import Seo from '../Seo.svelte';
   import TwoColumn from './TwoColumn.svelte';
   import content from "$lib/data/website/contact.json";
 

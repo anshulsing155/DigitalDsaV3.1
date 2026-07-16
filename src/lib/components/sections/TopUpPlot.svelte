@@ -9,7 +9,7 @@
 	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
 	import NewPageLayout from '../layout/NewPageLayout.svelte';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import content from '$lib/data/website/topUpPlot.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

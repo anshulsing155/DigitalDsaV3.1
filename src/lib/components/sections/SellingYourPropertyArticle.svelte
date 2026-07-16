@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 	import HelpList from './HelpList.svelte';
 	import ThingsYouKnow from './ThingsYouKnow.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/sellingYourPropertyArticle.json';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

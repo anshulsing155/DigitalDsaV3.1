@@ -3,7 +3,7 @@
 
 	import NewPageLayout from '../layout/NewPageLayout.svelte';
 	import ThingsYouShould from './ThingsYouShould.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/budgetingTips.json';
 	import SectionIntro from '$lib/components/sections/SectionIntro.svelte';
 

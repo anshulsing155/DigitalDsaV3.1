@@ -12,7 +12,7 @@
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import FeedbackCheck from '../ui/FeedbackCheck.svelte';
 	import HelpList from './HelpList.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/homeLoanSupport.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

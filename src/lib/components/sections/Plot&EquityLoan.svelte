@@ -14,7 +14,7 @@
   import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
   import AboveTitleWithoutIconCard from './AboveTitleWithoutIconCard.svelte';
   import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
-  import Seo from '../layout/Seo.svelte';
+  import Seo from '../Seo.svelte';
   import content from "$lib/data/website/plotEquityLoan.json";
   	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

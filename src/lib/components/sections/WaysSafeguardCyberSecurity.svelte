@@ -9,7 +9,7 @@
 	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import HelpList from './HelpList.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/waysSafeguardCyberSecurity.json';
  	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

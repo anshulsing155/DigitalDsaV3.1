@@ -12,7 +12,7 @@
 	import { applicationData } from '$lib/stores/stores';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/constructionLoan.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

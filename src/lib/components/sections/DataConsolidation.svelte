@@ -6,7 +6,7 @@
 	import Button from '../ui/Button.svelte';
 	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
 	import AboveTitleWithoutIconCard from './AboveTitleWithoutIconCard.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import StickyNavbar from '../layout/StickyNavbar.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import { onMount } from 'svelte';

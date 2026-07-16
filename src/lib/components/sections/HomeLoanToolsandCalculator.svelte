@@ -10,7 +10,7 @@
 	import Button from '../ui/Button.svelte';
 	import HelpList from './HelpList.svelte';
 	import ThingsYouShould from './ThingsYouShould.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { onMount } from 'svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/homeLoanToolsandCalculator.json';

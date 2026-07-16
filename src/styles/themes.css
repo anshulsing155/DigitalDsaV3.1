@@ -170,16 +170,26 @@
 	--dash-contrast-light: #dce8f0;
 	--dash-contrast-ghost-bg: rgba(61, 107, 142, 0.08);
 	--dash-contrast-ghost-border: rgba(61, 107, 142, 0.2);
-	--dash-warning-bg: #fffbeb; /* amber-50 */
-	--dash-warning-border: #fde68a; /* amber-200 */
-	--dash-warning-text: #92400e; /* amber-800 — 6.8:1 on bg */
-	--dash-warning-text-strong: #78350f; /* amber-900 for emphasis */
-	--dash-warning-icon: #d97706; /* amber-600 */
-	--dash-danger-bg: #fef2f2; /* red-50 */
-	--dash-danger-border: #fecaca; /* red-200 */
-	--dash-danger-text: #991b1b; /* red-800 — 7.0:1 on bg */
-	--dash-danger-text-strong: #7f1d1d; /* red-900 for emphasis */
-	--dash-danger-icon: #dc2626; /* red-600 */
+	--dash-warning-bg: #fffbeb;
+	/* amber-50 */
+	--dash-warning-border: #fde68a;
+	/* amber-200 */
+	--dash-warning-text: #92400e;
+	/* amber-800 — 6.8:1 on bg */
+	--dash-warning-text-strong: #78350f;
+	/* amber-900 for emphasis */
+	--dash-warning-icon: #d97706;
+	/* amber-600 */
+	--dash-danger-bg: #fef2f2;
+	/* red-50 */
+	--dash-danger-border: #fecaca;
+	/* red-200 */
+	--dash-danger-text: #991b1b;
+	/* red-800 — 7.0:1 on bg */
+	--dash-danger-text-strong: #7f1d1d;
+	/* red-900 for emphasis */
+	--dash-danger-icon: #dc2626;
+	/* red-600 */
 
 	/* Success */
 	--color-success: var(--success-600);
@@ -370,16 +380,24 @@
 	--dash-contrast-ghost-bg: rgba(139, 184, 212, 0.1);
 	--dash-contrast-ghost-border: rgba(139, 184, 212, 0.2);
 
-	--dash-warning-bg: rgba(217, 119, 6, 0.12); /* amber tint */
+	--dash-warning-bg: rgba(217, 119, 6, 0.12);
+	/* amber tint */
 	--dash-warning-border: rgba(217, 119, 6, 0.3);
-	--dash-warning-text: #fcd34d; /* amber-300 — 9.1:1 on #151612 */
-	--dash-warning-text-strong: #fde68a; /* amber-200 for emphasis */
-	--dash-warning-icon: #fbbf24; /* amber-400 */
-	--dash-danger-bg: rgba(220, 38, 38, 0.12); /* red tint */
+	--dash-warning-text: #fcd34d;
+	/* amber-300 — 9.1:1 on #151612 */
+	--dash-warning-text-strong: #fde68a;
+	/* amber-200 for emphasis */
+	--dash-warning-icon: #fbbf24;
+	/* amber-400 */
+	--dash-danger-bg: rgba(220, 38, 38, 0.12);
+	/* red tint */
 	--dash-danger-border: rgba(220, 38, 38, 0.3);
-	--dash-danger-text: #fca5a5; /* red-300 — 7.4:1 on #151612 */
-	--dash-danger-text-strong: #fecaca; /* red-200 for emphasis */
-	--dash-danger-icon: #f87171; /* red-400 */
+	--dash-danger-text: #fca5a5;
+	/* red-300 — 7.4:1 on #151612 */
+	--dash-danger-text-strong: #fecaca;
+	/* red-200 for emphasis */
+	--dash-danger-icon: #f87171;
+	/* red-400 */
 
 	/* Success */
 	--color-success: #6ee7b7;
@@ -466,12 +484,18 @@
 	 * Principal = GRAY (fixed, not theme-dependent)
 	 * Interest/Accent = THEME COLOR (-500, follows scheme)
 	 * Balance = THEME COLOR (-700, darker tone of scheme) */
-	--chart-principal: var(--ddsa-gray-400); /* Gray — fixed, not theme-dependent */
-	--chart-interest: var(--ddsa-primary-500); /* Theme color — follows scheme */
-	--chart-balance: var(--ddsa-primary-700); /* Darker theme tone — follows scheme */
-	--chart-info: var(--ddsa-primary-300); /* Lighter theme tone — follows scheme */
-	--chart-special: var(--ddsa-accent-500); /* Accent — follows scheme */
-	--chart-warning: var(--ddsa-warning); /* Warning — semantic, fixed */
+	--chart-principal: var(--ddsa-gray-400);
+	/* Gray — fixed, not theme-dependent */
+	--chart-interest: var(--ddsa-primary-500);
+	/* Theme color — follows scheme */
+	--chart-balance: var(--ddsa-primary-700);
+	/* Darker theme tone — follows scheme */
+	--chart-info: var(--ddsa-primary-300);
+	/* Lighter theme tone — follows scheme */
+	--chart-special: var(--ddsa-accent-500);
+	/* Accent — follows scheme */
+	--chart-warning: var(--ddsa-warning);
+	/* Warning — semantic, fixed */
 
 	/* Semi-transparent fills */
 	--chart-principal-fill: color-mix(in srgb, var(--ddsa-gray-400) 20%, transparent);
@@ -481,18 +505,28 @@
 	/* --- Table header bg colors ---
 	 * Uses theme color tones: dark → medium → light
 	 * Plus black (secondary) and gray for neutral columns */
-	--table-header-principal: var(--ddsa-primary-700); /* Darker theme tone */
-	--table-header-interest: var(--ddsa-primary-500); /* Theme color */
-	--table-header-balance: var(--ddsa-primary-800); /* Darkest theme tone */
-	--table-header-special: var(--ddsa-primary-600); /* Medium-dark theme tone */
-	--table-header-neutral: var(--ddsa-secondary); /* Black / olive dark */
-	--table-header-neutral-alt: var(--ddsa-gray-600); /* Gray */
+	--table-header-principal: var(--ddsa-primary-700);
+	/* Darker theme tone */
+	--table-header-interest: var(--ddsa-primary-500);
+	/* Theme color */
+	--table-header-balance: var(--ddsa-primary-800);
+	/* Darkest theme tone */
+	--table-header-special: var(--ddsa-primary-600);
+	/* Medium-dark theme tone */
+	--table-header-neutral: var(--ddsa-secondary);
+	/* Black / olive dark */
+	--table-header-neutral-alt: var(--ddsa-gray-600);
+	/* Gray */
 
 	/* --- Table data text --- */
-	--table-text-principal: var(--ddsa-primary-700); /* Darker theme tone */
-	--table-text-interest: var(--ddsa-primary-500); /* Theme color */
-	--table-text-balance: var(--ddsa-primary-800); /* Darkest theme tone */
-	--table-text-special: var(--ddsa-primary-600); /* Medium-dark theme tone */
+	--table-text-principal: var(--ddsa-primary-700);
+	/* Darker theme tone */
+	--table-text-interest: var(--ddsa-primary-500);
+	/* Theme color */
+	--table-text-balance: var(--ddsa-primary-800);
+	/* Darkest theme tone */
+	--table-text-special: var(--ddsa-primary-600);
+	/* Medium-dark theme tone */
 
 	/* --- Slider — theme color --- */
 	--slider-track-fill: var(--ddsa-primary-500);

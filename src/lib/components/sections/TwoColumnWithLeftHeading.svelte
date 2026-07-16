@@ -1,17 +1,24 @@
-<script>
-	let {
-		contents = {},
-		children = undefined,
-		paddingClass = 'lg:px-16',
-		isBorder = false
-	} = $props();
-
+<script lang="ts">
 	import Anchor from '../ui/Anchor.svelte';
 	import Button from '../ui/Button.svelte';
+
+	interface Props {
+		contents?: any;
+		children?: any;
+		paddingClass?: string;
+		isBorder?: boolean;
+	}
+
+	let {
+		contents = {},
+		children,
+		paddingClass = 'lg:px-16',
+		isBorder = false
+	}: Props = $props();
 </script>
 
 <section
-	class="py-[4rem] px-[0.5rem]  text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
+	class="py-[4rem] px-[0.5rem] text-[var(--form-text)] lg:py-0 lg:pt-[4rem] lg:pb-[8rem] {isBorder
 		? 'border-b border-[var(--form-border)]'
 		: ''}"
 >
@@ -19,13 +26,13 @@
 		<!-- left-heading  -->
 		<div class="flex flex-col gap-4 lg:col-span-4">
 			{#if contents.heading}
-				<p class="typography-h2-md text-[var(--form-text)]">
+				<p class="font-ThirdHead text-sectionHeading text-[var(--form-text)]">
 					{@html contents.heading}
 				</p>
 			{/if}
 
 			{#if contents.para}
-				<p class="typography-body-md text-[var(--form-text-secondary)]">
+				<p class="font-Paragraph text-subPara text-[var(--form-text-secondary)]">
 					{@html contents.para}
 				</p>
 			{/if}
@@ -33,12 +40,12 @@
 
 		<div class="flex flex-col gap-[3rem] lg:col-span-8">
 			{#if contents.secHeading}
-				<h2 class="typography-body-lg !font-semibold text-[var(--form-text)]">
+				<h2 class="font-FourthHead text-cardHeading text-[var(--form-text)]">
 					{@html contents.secHeading}
 				</h2>
 			{/if}
 			{#if contents.secPara}
-				<p class="typography-body-md text-[var(--form-text-secondary)]">
+				<p class="font-SubPara text-subPara text-[var(--form-text-secondary)]">
 					{@html contents.secPara}
 				</p>
 			{/if}
@@ -59,7 +66,7 @@
 			{#if contents.links}
 				<div class="flex flex-col gap-2">
 					{#each contents.links as link}
-						<ul class="grid list-disc pl-5">
+						<ul class="grid list-disc pl-5 marker:text-[var(--form-text)]">
 							<li>
 								<Anchor link={link.secUrl} linkName={link.secLinkName} />
 							</li>
@@ -72,23 +79,23 @@
 				<div class="space-y-[2rem]">
 					{#if contents.listTopPara}
 						<div class="">
-							<p class="typography-body-md font-bold text-[var(--form-text-secondary)]">
+							<p class="text-para font-FourthHead text-[var(--form-text)]">
 								{@html contents.listTopPara}
 							</p>
 						</div>
 					{/if}
 
-					<ul class="ml-[1rem] list-disc space-y-4">
+					<ul class="space-y-6 list-disc ml-[1rem] marker:text-[var(--form-text)]">
 						{#each contents.list as listItem}
-							<li class="typography-body-md text-[var(--form-text-secondary)]">
+							<li class="text-paraFont">
 								<div class="flex flex-col gap-2">
 									{#if listItem.heading}
-										<span class="typography-body-md !font-semibold text-[var(--form-text)]">
+										<span class="font-FourthHead text-subParaFont text-[var(--form-text)]">
 											{@html listItem.heading}
 										</span>
 									{/if}
 									{#if listItem.desc}
-										<p class="typography-body-md text-[var(--form-text-secondary)]">
+										<p class="font-para text-subParaFont text-[var(--form-text-secondary)]">
 											{@html listItem.desc}
 										</p>
 									{/if}
@@ -97,7 +104,7 @@
 						{/each}
 					</ul>
 					{#if contents.listSecPara}
-						<p class="typography-body-md text-[var(--form-text-secondary)]">
+						<p class="font-para text-subParaFont text-[var(--form-text-secondary)]">
 							{@html contents.listSecPara}
 						</p>
 					{/if}
@@ -113,14 +120,15 @@
 							<Button
 								btnName={contents.listBtn.btnName}
 								link={contents.listBtn.btnLink}
-								btnClass={contents.listBtn.btnClass}
 								onClick={contents.listBtn.btnClick}
 							/>
 						</div>
 					{/if}
 				</div>
 			{/if}
-			{@render children?.()}
+			{#if children}
+				{@render children()}
+			{/if}
 		</div>
 	</div>
 </section>

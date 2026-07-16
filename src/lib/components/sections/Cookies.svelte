@@ -5,7 +5,7 @@
 	import PageFullTextDesign from '../layout/PageFullTextDesign.svelte';
 	import Payments from '../features/calculators/Payments.svelte';
 	import { onMount } from 'svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/cookies.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

@@ -2,7 +2,7 @@
   import NewPageLayout from '$lib/components/layout/NewPageLayout.svelte';
   import TwoColumn from '$lib/components/sections/TwoColumn.svelte';
   import WhyChoose from '$lib/components/sections/WhyChoose.svelte';
-  import Seo from '../layout/Seo.svelte';
+  import Seo from '../Seo.svelte';
   import HelpList from './HelpList.svelte';
   import content from "$lib/data/website/message24.json";
 

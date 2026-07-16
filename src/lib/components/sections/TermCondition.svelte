@@ -3,7 +3,7 @@
 	import StickyNavbar from '../layout/StickyNavbar.svelte';
 	import ThingsYouShould from './ThingsYouShould.svelte';
 	import { onMount } from 'svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/termsConditions.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

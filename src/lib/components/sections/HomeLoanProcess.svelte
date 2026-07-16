@@ -8,7 +8,7 @@
 	import ThreeColumWithLeftHeading from './ThreeColumWithLeftHeading.svelte';
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import HelpList from './HelpList.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { onMount } from 'svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

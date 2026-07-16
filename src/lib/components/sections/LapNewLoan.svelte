@@ -11,7 +11,7 @@
 	import FeedbackCheck from '../ui/FeedbackCheck.svelte';
 	import AccordionWithLeftHeading from './AccordionWithLeftHeading.svelte';
 	import { applicationData } from '$lib/stores/stores';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/lapNewLoan.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';

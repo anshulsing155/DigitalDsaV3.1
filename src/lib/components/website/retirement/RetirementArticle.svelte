@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Seo from '../../layout/Seo.svelte';
+	import Seo from '../../Seo.svelte';
 	import Tooltip from '../../ui/Tooltip.svelte';
 	import NewPageLayout from '../../layout/NewPageLayout.svelte';
 	import TwoColumnWithImage from '../../sections/TwoColumnWithImage.svelte';

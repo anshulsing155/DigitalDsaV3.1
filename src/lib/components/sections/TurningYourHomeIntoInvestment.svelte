@@ -10,7 +10,7 @@
 	import PaymentTable from '../features/calculators/PaymentTable.svelte';
 	import ButtonBanner from './ButtonBanner.svelte';
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { onMount, createEventDispatcher } from 'svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

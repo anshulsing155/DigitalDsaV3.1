@@ -4,7 +4,7 @@
 	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';
 	import PaymentTable from '../features/calculators/PaymentTable.svelte';
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/lapVsDod.json';
 	import HelpList from './HelpList.svelte';
 

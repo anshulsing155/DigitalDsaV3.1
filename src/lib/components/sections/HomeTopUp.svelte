@@ -10,7 +10,7 @@
 	import HelpList from './HelpList.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';
 	import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
 	import FeedbackCheck from '../ui/FeedbackCheck.svelte';

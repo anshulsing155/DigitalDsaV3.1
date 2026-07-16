@@ -4,7 +4,7 @@
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
 	import HelpList from './HelpList.svelte';
 	import Button from '../ui/Button.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/dodArticle.json';
 
 	let { pageData = content.pageData }: { pageData?: any } = $props();

@@ -13,7 +13,7 @@
 	import AboveTitleWithBlackCard from './AboveTitleWithBlackCard.svelte';
 	import AboveTitleWithTopIconCard from './AboveTitleWithTopIconCard.svelte';
 	import AboveTitleWithoutIconCard from './AboveTitleWithoutIconCard.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/plotConstructionLoan.json';
 	import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

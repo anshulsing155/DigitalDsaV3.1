@@ -12,7 +12,7 @@
 	import { onMount } from 'svelte';
 	import WhyChoose from './WhyChoose.svelte';
 
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import HelpList from './HelpList.svelte';
 	import content from '$lib/data/website/costOfLiving.json';
 	import TwoColumnWithLeftHeading from './TwoColumnWithLeftHeading.svelte';

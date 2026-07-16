@@ -1,7 +1,7 @@
 <script>
 	import HelpList from './HelpList.svelte';
 	import NewPageLayout from '../layout/NewPageLayout.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import ThingsYouKnow from './ThingsYouKnow.svelte';
 	import VerticalBlog from './VerticalBlog.svelte';
 	import content from '$lib/data/website/choosePerfectNeighbourhoodArticle.json';

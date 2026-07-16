@@ -9,7 +9,7 @@
 	import WeAreHereHelp from './WeAreHereHelp.svelte';
 	import ThingsYouShould from './ThingsYouShould.svelte';
 	import TwoColumnWithImage from './TwoColumnWithImage.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import { applicationData } from '$lib/stores/stores';
 	import content from '$lib/data/website/lapBTWithTopUp.json';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

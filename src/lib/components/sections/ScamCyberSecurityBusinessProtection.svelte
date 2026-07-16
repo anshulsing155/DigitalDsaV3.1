@@ -11,7 +11,7 @@
   import TwoColumnWithImage from './TwoColumnWithImage.svelte';
   import Anchor from '../ui/Anchor.svelte';
   import HelpList from './HelpList.svelte';
-  import Seo from '../layout/Seo.svelte';
+  import Seo from '../Seo.svelte';
   import content from "$lib/data/website/cyberSecurityScams.json";
   import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';

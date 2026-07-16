@@ -12,7 +12,7 @@
 	import HelpList from './HelpList.svelte';
 	import AboveTitleWithoutIconCard from './AboveTitleWithoutIconCard.svelte';
 	import TwoColumn from './TwoColumn.svelte';
-	import Seo from '../layout/Seo.svelte';
+	import Seo from '../Seo.svelte';
 	import content from '$lib/data/website/scamTargetBusinesses.json';
  import { toggleDropdown } from '$lib/utils/toggleDropdown';
 	import { ChevronDown } from '$lib/utils/iconRegistry';
