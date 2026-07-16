@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "type": "WebPage",
+    "title": "Property Ownership Risk Assessment – Secure Your Rights",
+    "image": "/images/home-scheme.jpg",
+    "description": "Verify your property title safety instantly based on Supreme Court of India guidelines. Identify risks and discover legal regularisation steps.",
+    "keywords": "Property ownership risk, Property title security, Supreme Court property rulings, GPA agreement safety, Registered sale deed check, Property legal advice India"
+  },
+  "badge": "India's First Landmark-Precedent Evaluator",
+  "title": "Protect Your",
+  "titleHighlight": "Property Rights",
+  "titleSuffix": "Legally",
+  "description": "Get an instant assessment and clear, actionable legal advice for your property's legal structure. Fully mapped against the landmark Suraj Lamp case (2011) and the latest November 2024 Supreme Court rulings.",
+  "buttons": {
+    "start": "Start Free Assessment",
+    "scenarios": "View Legal Scenarios",
+    "assess": "Assess My Property"
+  },
+  "trustItems": [
+    "100% Free Analysis",
+    "Supreme Court Precedent Mapped"
+  ],
+  "profiler": {
+    "title": "Interactive Risk Profiler",
+    "items": [
+      { "label": "Sale Deed Verification", "badge": "✓ Included", "badgeClass": "text-green-600 font-bold text-xs uppercase tracking-wider" },
+      { "label": "GPA & Will Legitimacy", "badge": "⚡ Mapped", "badgeClass": "text-yellow-600 font-bold text-xs uppercase tracking-wider" },
+      { "label": "Instant PDF Report", "badge": "📥 Free Download", "badgeClass": "text-blue-600 font-bold text-xs uppercase tracking-wider" }
+    ]
+  },
+  "regulations": {
+    "title": "Critical Indian Property Regulations",
+    "description": "Why checking your property documents against landmark rulings is mandatory",
+    "items": [
+      {
+        "badge": "Suraj Lamp Ruling (2011)",
+        "badgeClass": "inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-md text-xs font-semibold uppercase tracking-wider",
+        "title": "No Ownership via GPA / Wills",
+        "description": "The Supreme Court held that Power of Attorney (GPA), Agreement to Sell, or Wills do not transfer title. Properties held under these arrangements require regularisation via registered deeds."
+      },
+      {
+        "badge": "November 2024 Ruling",
+        "badgeClass": "inline-block px-3 py-1 bg-red-100 text-red-800 rounded-md text-xs font-semibold uppercase tracking-wider",
+        "title": "Registration Alone is Not Title",
+        "description": "A landmark judgment stating that mere registration of a document does not prove ownership unless the transferor had a clear legal right to sell and the buyer holds actual possession with payment proof."
+      }
+    ]
+  }
+}

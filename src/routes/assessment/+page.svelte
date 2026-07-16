@@ -29,6 +29,28 @@
 	} from "lucide-svelte";
 	import FormLogo from "$lib/components/FormLogo.svelte";
 	import Seo from "$lib/components/website/Seo.svelte";
+	import assessmentContent from "$lib/data/website/assessment.json";
+
+	const iconMap = {
+		Home,
+		Users,
+		FileText,
+		FileUser,
+		FileCheck,
+		LandPlot,
+		ScrollText,
+		FileStack,
+		UserRoundCheck,
+		UsersRound,
+		ContactRound,
+		Gem,
+		BookmarkCheck,
+		ArrowRightLeft,
+		Podcast,
+		CheckCircle,
+		Clock,
+		AlertTriangle
+	};
 
 	interface FormData {
 		hasProperty: boolean | null;
@@ -82,15 +104,15 @@
 		const newErrors: Record<string, string> = {};
 
 		if (formData.hasProperty !== null && !formData.documentType) {
-			newErrors.documentType = "Please select the type of document you have";
+			newErrors.documentType = assessmentContent.labels.documentType.error;
 		}
 
 		if (formData.hasProperty !== null && !formData.legalOwner) {
-			newErrors.legalOwner = "Please specify who is the legal owner";
+			newErrors.legalOwner = assessmentContent.labels.legalOwner.error;
 		}
 
 		if (!formData.intent) {
-			newErrors.intent = "Please select your primary intent";
+			newErrors.intent = assessmentContent.labels.intent.error;
 		}
 
 		errors = newErrors;
@@ -245,11 +267,11 @@
 </script>
 
 <Seo
-	type="WebPage"
-	title="Property Ownership Risk Assessment Form"
-	image="/images/home-scheme.jpg"
-	description="Verify your property title status against Supreme Court of India guidelines."
-	keywords="property risk assessment form, property title test, Suraj Lamp ruling check"
+	type={assessmentContent.seo.type}
+	title={assessmentContent.seo.title}
+	image={assessmentContent.seo.image}
+	description={assessmentContent.seo.description}
+	keywords={assessmentContent.seo.keywords}
 />
 
 <div class="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-gray-50 font-sans py-8">
@@ -259,7 +281,7 @@
 			class="inline-flex items-center gap-2 text-sm text-[var(--form-text-secondary)] hover:text-black mb-6 transition-colors"
 		>
 			<ArrowLeft class="w-4 h-4" />
-			Go Back
+			{assessmentContent.labels.goBack}
 		</button>
 
 		<div class="bg-white rounded-2xl shadow-xl border border-[var(--form-border)] overflow-hidden relative">
@@ -268,10 +290,10 @@
 					<FormLogo />
 				</div>
 				<h1 class="text-2xl sm:text-3xl font-bold text-gray-900">
-					Property Risk Assessment
+					{assessmentContent.pageTitle}
 				</h1>
 				<p class="text-sm text-[var(--form-text-secondary)] mt-1">
-					Analyze document validity under Indian property laws.
+					{assessmentContent.pageDescription}
 				</p>
 			</div>
 
@@ -286,25 +308,19 @@
 				<!-- Question 1: Do you own/possess property -->
 				<div id="has-property" class="space-y-4">
 					<label class="block text-base font-semibold text-gray-900">
-						Do you currently own or possess a property?
+						{assessmentContent.labels.hasProperty.question}
 					</label>
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-						<button
-							type="button"
-							onclick={() => handleInputChange("hasProperty", true)}
-							class="px-5 py-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.hasProperty === true ? 'border-green-500 bg-green-50/50 text-green-700' : 'border-gray-200 text-gray-700'}"
-						>
-							<Home class="w-5 h-5 shrink-0" />
-							<span class="font-medium">I own and also possess property</span>
-						</button>
-						<button
-							type="button"
-							onclick={() => handleInputChange("hasProperty", false)}
-							class="px-5 py-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.hasProperty === false ? 'border-yellow-500 bg-yellow-50/50 text-yellow-700' : 'border-gray-200 text-gray-700'}"
-						>
-							<Users class="w-5 h-5 shrink-0" />
-							<span class="font-medium">I own but do not possess property</span>
-						</button>
+						{#each assessmentContent.labels.hasProperty.options as option}
+							<button
+								type="button"
+								onclick={() => handleInputChange("hasProperty", option.value)}
+								class="px-5 py-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.hasProperty === option.value ? (option.value ? 'border-green-500 bg-green-50/50 text-green-700' : 'border-yellow-500 bg-yellow-50/50 text-yellow-700') : 'border-gray-200 text-gray-700'}"
+							>
+								<svelte:component this={iconMap[option.icon as keyof typeof iconMap]} class="w-5 h-5 shrink-0" />
+								<span class="font-medium">{option.label}</span>
+							</button>
+						{/each}
 					</div>
 				</div>
 
@@ -312,23 +328,16 @@
 				{#if formData.hasProperty !== null}
 					<div id="document-type" class="space-y-4 pt-4 border-t border-gray-100">
 						<label class="block text-base font-semibold text-gray-900">
-							What type of document do you have? *
+							{assessmentContent.labels.documentType.question}
 						</label>
 						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-							{#each [
-								{ value: "registered_sale_deed", label: "Registered Sale Deed", icon: FileText },
-								{ value: "gpa_agreement", label: "GPA/Agreement to Sell", icon: FileUser },
-								{ value: "builder_buyer_agreement", label: "Builder-Buyer Agreement", icon: FileCheck },
-								{ value: "inherited", label: "Inherited Property", icon: LandPlot },
-								{ value: "mutation_only", label: "Only Mutation/Patta", icon: ScrollText },
-								{ value: "other", label: "Other Documents", icon: FileStack }
-							] as { value, label, icon }}
+							{#each assessmentContent.labels.documentType.options as { value, label, icon }}
 								<button
 									type="button"
 									onclick={() => handleInputChange("documentType", value)}
 									class="px-4 py-3 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.documentType === value ? 'border-yellow-500 bg-yellow-50/50 text-yellow-800 font-medium' : 'border-gray-200 text-gray-700'}"
 								>
-									<svelte:component this={icon} class="w-5 h-5 shrink-0 text-gray-500" />
+									<svelte:component this={iconMap[icon as keyof typeof iconMap]} class="w-5 h-5 shrink-0 text-gray-500" />
 									<span>{label}</span>
 								</button>
 							{/each}
@@ -346,21 +355,16 @@
 				{#if formData.documentType}
 					<div id="legal-owner" class="space-y-4 pt-4 border-t border-gray-100">
 						<label class="block text-base font-semibold text-gray-900">
-							Who is the legal owner as per documents? *
+							{assessmentContent.labels.legalOwner.question}
 						</label>
 						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-							{#each [
-								{ value: "self", label: "Myself", icon: UserRoundCheck },
-								{ value: "parent_spouse", label: "Parent/Spouse", icon: UsersRound },
-								{ value: "seller_name", label: "Seller's Name", icon: ContactRound },
-								{ value: "other_family", label: "Other Family Member", icon: Gem }
-							] as { value, label, icon }}
+							{#each assessmentContent.labels.legalOwner.options as { value, label, icon }}
 								<button
 									type="button"
 									onclick={() => handleInputChange("legalOwner", value)}
 									class="px-4 py-3 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.legalOwner === value ? 'border-yellow-500 bg-yellow-50/50 text-yellow-800 font-medium' : 'border-gray-200 text-gray-700'}"
 								>
-									<svelte:component this={icon} class="w-5 h-5 shrink-0 text-gray-500" />
+									<svelte:component this={iconMap[icon as keyof typeof iconMap]} class="w-5 h-5 shrink-0 text-gray-500" />
 									<span>{label}</span>
 								</button>
 							{/each}
@@ -378,25 +382,19 @@
 				{#if formData.legalOwner}
 					<div id="has-possession" class="space-y-4 pt-4 border-t border-gray-100">
 						<label class="block text-base font-semibold text-gray-900">
-							Do you have physical possession of the property?
+							{assessmentContent.labels.hasPossession.question}
 						</label>
 						<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-							<button
-								type="button"
-								onclick={() => handleInputChange("hasPossession", true)}
-								class="px-5 py-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.hasPossession === true ? 'border-green-500 bg-green-50/50 text-green-700' : 'border-gray-200 text-gray-700'}"
-							>
-								<CheckCircle class="w-5 h-5 shrink-0" />
-								<span class="font-medium">Yes, I have possession</span>
-							</button>
-							<button
-								type="button"
-								onclick={() => handleInputChange("hasPossession", false)}
-								class="px-5 py-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.hasPossession === false ? 'border-red-500 bg-red-50/50 text-red-700' : 'border-gray-200 text-gray-700'}"
-							>
-								<Clock class="w-5 h-5 shrink-0" />
-								<span class="font-medium">No, awaiting possession</span>
-							</button>
+							{#each assessmentContent.labels.hasPossession.options as option}
+								<button
+									type="button"
+									onclick={() => handleInputChange("hasPossession", option.value)}
+									class="px-5 py-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.hasPossession === option.value ? (option.value ? 'border-green-500 bg-green-50/50 text-green-700' : 'border-red-500 bg-red-50/50 text-red-700') : 'border-gray-200 text-gray-700'}"
+								>
+									<svelte:component this={iconMap[option.icon as keyof typeof iconMap]} class="w-5 h-5 shrink-0" />
+									<span class="font-medium">{option.label}</span>
+								</button>
+							{/each}
 						</div>
 					</div>
 				{/if}
@@ -405,25 +403,19 @@
 				{#if formData.hasPossession !== null}
 					<div id="has-dispute" class="space-y-4 pt-4 border-t border-gray-100">
 						<label class="block text-base font-semibold text-gray-900">
-							Is there any ongoing legal dispute regarding this property?
+							{assessmentContent.labels.hasDispute.question}
 						</label>
 						<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-							<button
-								type="button"
-								onclick={() => handleInputChange("hasDispute", false)}
-								class="px-5 py-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.hasDispute === false ? 'border-green-500 bg-green-50/50 text-green-700' : 'border-gray-200 text-gray-700'}"
-							>
-								<CheckCircle class="w-5 h-5 shrink-0" />
-								<span class="font-medium">No disputes</span>
-							</button>
-							<button
-								type="button"
-								onclick={() => handleInputChange("hasDispute", true)}
-								class="px-5 py-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.hasDispute === true ? 'border-red-500 bg-red-50/50 text-red-700' : 'border-gray-200 text-gray-700'}"
-							>
-								<AlertTriangle class="w-5 h-5 shrink-0" />
-								<span class="font-medium">Yes, there are disputes</span>
-							</button>
+							{#each assessmentContent.labels.hasDispute.options as option}
+								<button
+									type="button"
+									onclick={() => handleInputChange("hasDispute", option.value)}
+									class="px-5 py-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.hasDispute === option.value ? (!option.value ? 'border-green-500 bg-green-50/50 text-green-700' : 'border-red-500 bg-red-50/50 text-red-700') : 'border-gray-200 text-gray-700'}"
+								>
+									<svelte:component this={iconMap[option.icon as keyof typeof iconMap]} class="w-5 h-5 shrink-0" />
+									<span class="font-medium">{option.label}</span>
+								</button>
+							{/each}
 						</div>
 					</div>
 				{/if}
@@ -432,22 +424,16 @@
 				{#if formData.hasDispute !== null}
 					<div id="intent" class="space-y-4 pt-4 border-t border-gray-100">
 						<label class="block text-base font-semibold text-gray-900">
-							What is your primary intent? *
+							{assessmentContent.labels.intent.question}
 						</label>
 						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-							{#each [
-								{ value: "check_status", label: "Check ownership status", icon: BookmarkCheck },
-								{ value: "regularize", label: "Regularize ownership", icon: FileCheck },
-								{ value: "sell", label: "Sell the property", icon: Home },
-								{ value: "transfer", label: "Transfer to family", icon: ArrowRightLeft },
-								{ value: "get_advice", label: "Get legal advice", icon: Podcast }
-							] as { value, label, icon }}
+							{#each assessmentContent.labels.intent.options as { value, label, icon }}
 								<button
 									type="button"
 									onclick={() => handleInputChange("intent", value)}
 									class="px-4 py-3 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3 hover:border-gray-300 {formData.intent === value ? 'border-yellow-500 bg-yellow-50/50 text-yellow-800 font-medium' : 'border-gray-200 text-gray-700'}"
 								>
-									<svelte:component this={icon} class="w-5 h-5 shrink-0 text-gray-500" />
+									<svelte:component this={iconMap[icon as keyof typeof iconMap]} class="w-5 h-5 shrink-0 text-gray-500" />
 									<span>{label}</span>
 								</button>
 							{/each}
@@ -471,10 +457,10 @@
 						>
 							{#if isLoading}
 								<div class="animate-spin rounded-full h-5 w-5 border-b-2 border-black"></div>
-								Analyzing Legal standing...
+								{assessmentContent.labels.submit.loading}
 							{:else}
 								<Scale class="w-5 h-5" />
-								Get Instant Risk Assessment
+								{assessmentContent.labels.submit.idle}
 							{/if}
 						</button>
 					</div>
@@ -488,7 +474,7 @@
 				<div class="bg-black text-white px-6 py-5 flex items-center justify-between">
 					<h2 class="text-lg font-bold flex items-center gap-2">
 						<FileText class="w-5 h-5 text-yellow-400" />
-						Risk Evaluation Result
+						{assessmentContent.labels.results.title}
 					</h2>
 					<button
 						onclick={handleGeneratePDF}
@@ -497,10 +483,10 @@
 					>
 						{#if isGeneratingPDF}
 							<div class="animate-spin rounded-full h-3.5 w-3.5 border-b-2 border-black"></div>
-							Generating...
+							{assessmentContent.labels.results.generatingPdf}
 						{:else}
 							<Download class="w-4 h-4" />
-							Download PDF Report
+							{assessmentContent.labels.results.downloadPdf}
 						{/if}
 					</button>
 				</div>
@@ -510,14 +496,11 @@
 						<div class="p-5 rounded-xl border-2 {getRiskColor(assessment.riskLevel)}">
 							<div class="flex items-center gap-2 mb-2">
 								<ShieldAlert class="w-5 h-5" />
-								<span class="text-xs uppercase tracking-wider font-semibold">Ownership Threat Profile</span>
+								<span class="text-xs uppercase tracking-wider font-semibold">{assessmentContent.labels.results.threatProfile}</span>
 							</div>
 							<p class="text-2xl font-bold">{assessment.riskLevel} RISK</p>
 							<p class="text-sm mt-1.5 opacity-90 leading-relaxed">
-								{#if assessment.riskLevel === "LOW"}Your document structure is standard and represents complete, legally compliant property ownership.{/if}
-								{#if assessment.riskLevel === "MEDIUM"}Administrative or slight documentation gaps need to be regularized.{/if}
-								{#if assessment.riskLevel === "HIGH"}Significant legal risks identified. Transfer deeds or proper registries are missing.{/if}
-								{#if assessment.riskLevel === "CRITICAL"}Extremely high exposure. Ownership lacks backing of a valid sale deed or violates Supreme Court rules.{/if}
+								{assessmentContent.labels.results.threatRiskText[assessment.riskLevel]}
 							</p>
 						</div>
 
@@ -525,7 +508,7 @@
 							<div>
 								<div class="flex items-center gap-2 mb-2 text-gray-700">
 									<Scale class="w-5 h-5" />
-									<span class="text-xs uppercase tracking-wider font-semibold">Judicial Standing</span>
+									<span class="text-xs uppercase tracking-wider font-semibold">{assessmentContent.labels.results.judicialStanding}</span>
 								</div>
 								<p class="text-gray-800 text-sm leading-relaxed">{assessment.legalStanding}</p>
 							</div>
@@ -533,7 +516,7 @@
 								<div class="mt-4 p-3.5 bg-yellow-50 border border-yellow-200 rounded-lg text-xs">
 									<h4 class="font-bold text-yellow-800 mb-1 flex items-center gap-1">
 										<CheckCircle class="w-3.5 h-3.5" />
-										Suraj Lamp Precedent
+										{assessmentContent.labels.results.surajLampPrecedent}
 									</h4>
 									<p class="text-yellow-700 leading-normal">{assessment.supremeCourtReference}</p>
 								</div>
@@ -545,19 +528,19 @@
 						<div class="p-5 rounded-xl border border-[var(--form-border)] bg-gray-50">
 							<div class="flex items-center gap-2 text-gray-700 mb-2">
 								<Clock class="w-5 h-5 {getUrgencyColor(assessment.urgency)}" />
-								<span class="text-xs uppercase tracking-wider font-semibold">Urgency of Regularisation</span>
+								<span class="text-xs uppercase tracking-wider font-semibold">{assessmentContent.labels.results.urgency}</span>
 							</div>
 							<p class="text-xl font-bold">{assessment.urgency}</p>
-							<p class="text-xs text-[var(--form-text-secondary)] mt-1">Recommended timeframe for complete title resolution.</p>
+							<p class="text-xs text-[var(--form-text-secondary)] mt-1">{assessmentContent.labels.results.urgencySub}</p>
 						</div>
 
 						<div class="p-5 rounded-xl border border-[var(--form-border)] bg-gray-50">
 							<div class="flex items-center gap-2 text-gray-700 mb-2">
 								<DollarSign class="w-5 h-5" />
-								<span class="text-xs uppercase tracking-wider font-semibold">Budgetary Estimation</span>
+								<span class="text-xs uppercase tracking-wider font-semibold">{assessmentContent.labels.results.budgetaryEstimation}</span>
 							</div>
 							<p class="text-xl font-bold">{assessment.estimatedCost}</p>
-							<p class="text-xs text-[var(--form-text-secondary)] mt-1">Indicative cost for stamp duty and legal charges.</p>
+							<p class="text-xs text-[var(--form-text-secondary)] mt-1">{assessmentContent.labels.results.budgetarySub}</p>
 						</div>
 					</div>
 
@@ -565,7 +548,7 @@
 						<div class="p-5 rounded-xl border border-red-200 bg-red-50/50">
 							<h3 class="text-base font-bold text-red-900 mb-3 flex items-center gap-2">
 								<AlertTriangle class="w-5 h-5 text-red-600" />
-								Key Risks Identified
+								{assessmentContent.labels.results.keyRisks}
 							</h3>
 							<ul class="space-y-2 text-sm text-red-800">
 								{#each assessment.keyRisks as risk}
@@ -582,7 +565,7 @@
 						<div class="p-5 rounded-xl border border-yellow-200 bg-yellow-50/40">
 							<h3 class="text-base font-bold text-yellow-900 mb-3 flex items-center gap-2">
 								<CheckCircle class="w-5 h-5 text-yellow-600" />
-								Recommended Solutions
+								{assessmentContent.labels.results.recommendedSolutions}
 							</h3>
 							<ul class="space-y-2 text-sm text-yellow-800">
 								{#each assessment.solutions as solution}
@@ -599,7 +582,7 @@
 						<div class="p-5 rounded-xl border border-green-200 bg-green-50/40">
 							<h3 class="text-base font-bold text-green-950 mb-3 flex items-center gap-2">
 								<FileText class="w-5 h-5 text-green-700" />
-								Immediate Next Steps
+								{assessmentContent.labels.results.immediateNextSteps}
 							</h3>
 							<ol class="space-y-3.5 text-sm text-green-900">
 								{#each assessment.nextSteps as step, index}

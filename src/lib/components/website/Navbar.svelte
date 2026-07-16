@@ -92,50 +92,9 @@
 	let width = spring(0, { stiffness: 0.04, damping: 0.8 });
 
 	// think to remember id and link;s first part(between the  start and end slash(/) must be same )
-	const navList = [
-		{
-			list: `Loan services`,
-			offer: '',
-			scrollingId: 'loans',
-			id: '/',
-			link: '/check-offers',
-			mobId: 'mobLoans',
-			icon: '/icons/personalLoan.svg'
-		},
-		{
-			list: 'Calculators',
-			id: 'calculators',
-			link: '/calculators',
-			icon: '/icons/calc.svg'
-		},
-		{
-			list: 'Loan planners',
+	import navbarConfig from '$lib/data/website/navbar.json';
 
-			id: 'planners',
-			link: '/planners',
-			icon: '/icons/lap.svg'
-		},
-		{
-			list: 'Money map',
-			star: '',
-			id: 'money-map',
-			link: '/money-map',
-			icon: '/icons/coins.svg'
-		},
-
-		{
-			list: 'About us',
-			id: 'about-us',
-			link: '/about-us',
-			icon: '/icons/people.svg'
-		},
-		{
-			list: 'Refer & earn',
-			id: 'refer-&-earn',
-			link: '/refer-&-earn',
-			icon: '/icons/offers.svg'
-		}
-	];
+	const navList = JSON.parse(JSON.stringify(navbarConfig.navList));
 
 	function scrollToElement(id) {
 		const element = document.getElementById(id);
@@ -144,18 +103,7 @@
 		}
 	}
 
-	let searches = [
-		{
-			id: 1,
-			title: 'Home Loan Calculator',
-			link: '/calculators/emi-calculator'
-		},
-		{ id: 2, title: 'Planner Guides', link: '/planners/part-payment-planner' },
-		{ id: 3, title: 'About Digital DSA', link: '/about-us' },
-		{ id: 4, title: 'Interest Rates', link: '' },
-		{ id: 5, title: 'FAQs and Support', link: '' },
-		{ id: 6, title: 'Blogs', link: '' }
-	];
+	let searches = navbarConfig.searches;
 
 	let navOpen = $state(false);
 	let searchOpen = $state(false);
@@ -197,23 +145,7 @@
 		}
 	}
 
-	let help = [
-		{
-			Heading: 'Help Support',
-			icon: '/icons/support.svg',
-			altTitle: 'Help Support'
-		},
-		{
-			Heading: 'Locate Us',
-			icon: '/icons/branch.svg',
-			altTitle: 'Locate Us'
-		},
-		{
-			Heading: 'Contact Us',
-			icon: '/icons/contact.svg',
-			altTitle: 'Contact Us'
-		}
-	];
+	let help = navbarConfig.help;
 
 	function toggleSearch() {
 		searchOpen = !searchOpen;

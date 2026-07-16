@@ -1,0 +1,160 @@
+{
+  "common": {
+    "occupations": ["Government", "Private", "Business", "Other"],
+    "retirementAges": {
+      "Government": 65,
+      "Private": 60,
+      "Business": 70
+    },
+    "tools": [
+      "Systematic Investment Plan(SIP)",
+      "Recurring Deposit(RD)",
+      "Fixed Deposit(FD)",
+      "Other"
+    ],
+    "riskLevels": ["Low", "Medium", "High"],
+    "interestRates": {
+      "SIP": { "Low": 8, "Medium": 10, "High": 15 },
+      "RD": 7,
+      "FD": 9,
+      "Other": 6
+    },
+    "compoundFrequencies": [
+      { "value": 12, "label": "Monthly" },
+      { "value": 4, "label": "Quarterly" },
+      { "value": 2, "label": "Half-Yearly" },
+      { "value": 1, "label": "Annually" }
+    ],
+    "frequencyOptions": ["Monthly", "Quarterly", "Half-Yearly", "Annually"],
+    "investmentFrequencyOptions": ["Monthly", "Quarterly", "Half-Yearly", "Yearly"],
+    "labels": {
+      "occupation": "Occupation",
+      "currentAge": "Current age",
+      "ageUnit": "Years",
+      "tools": "Tools",
+      "riskAppetite": "Your risk appetite",
+      "riskSubLabel": "(risk level)",
+      "annualInterestRate": "Annual Interest Rate",
+      "compoundFrequency": "Compound Interest Frequency",
+      "tenure": "Tenure",
+      "calculate": "Calculate",
+      "savingGoal": "Saving Goal",
+      "savingGoalSubLabel": "(Target Amount)",
+      "investFor": "I'll invest for",
+      "monthlyContribution": "Monthly Contribution",
+      "currentSavings": "Current savings",
+      "investmentFrequency": "Investment Frequency",
+      "initialBalance": "Initial Balance",
+      "monthlyWithdrawal": "Monthly Withdrawal",
+      "withdrawalFrequency": "Withdrawal Frequency",
+      "retirementAge": "Retirement Age",
+      "totalInvestmentAmount": "Total Investment Amount",
+      "specifyBy": "Specify by"
+    },
+    "compoundFrequencyNote": "* Most Indian banks calculate interest on a quarterly basis"
+  },
+  "findDeposit": {
+    "defaults": {
+      "goalAmount": 1000000,
+      "annualRate": 6,
+      "tenure": 10,
+      "compoundingFrequency": 12,
+      "ageValue": 25,
+      "maxAge": 62,
+      "selectedOccupation": "Government",
+      "selectedFrequency": "Monthly",
+      "toolsValue": "Systematic Investment Plan(SIP)",
+      "riskLevel": "High"
+    },
+    "validation": {
+      "goalAmountMin": { "value": 50000, "message": "Value should be greater than 50 Thousand" },
+      "goalAmountMax": { "value": 500000000, "message": "Value should be less than 500 Crore" },
+      "interestMin": { "value": 1, "message": "Value should be greater than 1 %" },
+      "interestMax": { "value": 100000, "message": "Value should be less than 100000 " },
+      "tenureMin": { "value": 1, "message": "Value should be greater than or equal to 1 year " },
+      "tenureMax": { "value": 80, "message": "Value should be less than 80 years" },
+      "ageMin": { "value": 18, "message": "value should be greater than 18 Years" },
+      "ageMax": { "value": 100, "message": "Enter valid age " }
+    },
+    "resultLabels": {
+      "monthlyDeposit": "Monthly Deposit",
+      "interestEarned": "Interest Earned",
+      "totalDeposit": "Total deposit",
+      "resultText": "monthly deposit is required to achieve your goal amount in"
+    }
+  },
+  "saveGoalWithTenure": {
+    "defaults": {
+      "initialSavings": 0,
+      "monthlyContribution": 10000,
+      "annualInterestRate": 12,
+      "savingsGoal": 1000000,
+      "riskLevel": "High",
+      "compoundFrequency": "Quarterly",
+      "investmentFrequency": "Monthly",
+      "tenure": 10,
+      "ageValue": 25,
+      "selectedOccupation": "Government",
+      "toolsValue": "Systematic Investment Plan(SIP)"
+    },
+    "validation": {
+      "tenureMin": { "value": 1, "message": "tenure should be greater than or equal to 1 year" },
+      "tenureMax": { "value": 500, "message": "Tenure should be less than or equal to 500 Years " },
+      "interestMin": { "value": 2, "message": "Annual interest rate should be greater than or equal to 2%" },
+      "interestMax": { "value": 500, "message": "Annual interest rate should be less than or equal to 500%" },
+      "contributionMin": { "value": 500, "message": "Monthly contribution should be greater than or equal to 500" },
+      "contributionMax": { "message": "Monthly contribution should be less than to savings amount " },
+      "savingsMin": { "value": 0, "message": "Current savings should be greater than or equal to 0" },
+      "savingsMax": { "message": "Current savings should be less than to savings amount " },
+      "ageMin": { "value": 18, "message": "Age should be greater than or equal to 18 years" },
+      "ageMax": { "value": 120, "message": "Enter the valid age " }
+    },
+    "resultLabels": {
+      "resultText": "can be reached in",
+      "totalDurations": "Total durations",
+      "totalDepositAmount": "Total deposit Amount",
+      "totalInterestAmount": "Total Interest Amount"
+    }
+  },
+  "moneyLast": {
+    "defaults": {
+      "initialBalance": 10000000,
+      "monthlyWithdrawal": 50000,
+      "annualInterestRate": 8,
+      "tenureMonths": 120,
+      "ageValue": 45,
+      "selectedOccupation": "Government",
+      "riskLevel": "High",
+      "toolType": "Systematic Investment Plan(SIP)"
+    },
+    "tableHeaders": ["Month", "Opening Balance", "Interest Earned", "Withdrawal", "Closing Balance"]
+  },
+  "reverseCalculationsOfMoneyLast": {
+    "defaults": {
+      "closingBalance": 100000,
+      "monthlyWithdrawal": 100000,
+      "annualInterestRate": 8,
+      "tenureMonths": 240,
+      "retirementAge": 65,
+      "ageValue": 25,
+      "selectedOccupation": "Government",
+      "riskLevel": "High",
+      "toolType": "SWP-High"
+    },
+    "tableHeaders": ["SNo.", "openingBalance (₹)", "Withdrawal (₹)"]
+  },
+  "fdWithSavingGoal": {
+    "defaults": {
+      "savingGoal": 200000,
+      "rate": 7,
+      "years": 12,
+      "frequency": "Quarterly",
+      "ageValue": 25,
+      "selectedOccupation": "Government",
+      "toolType": "Fixed Deposit(FD)",
+      "specifySelection": "Tenure",
+      "totalInvestmentAmount": 100000
+    },
+    "specifyOptions": ["Tenure", "Investment Amount"]
+  }
+}

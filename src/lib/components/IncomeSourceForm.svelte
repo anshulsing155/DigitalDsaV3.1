@@ -1,4 +1,4 @@
-﻿<script lang="ts">
+<script lang="ts">
 	/**
 	 * IncomeSourceForm — Tab 2 of Income & Credit Assessment
 	 * ═══════════════════════════════════════════════════════════════════
@@ -50,7 +50,7 @@
 	import { deviceState } from '$lib/stores/device.svelte';
 	import { shouldShow } from '$lib/config/showWhenEngine';
 	import { sanitizeHtml } from '$lib/utils/sanitizeHtml';
-	import { generateId } from '$lib/utils';
+	import { generateId } from '$lib/utils.js';
 	import {
 		getSpecificsForProfile,
 		getIncomeFieldsForProfile,

@@ -32,4 +32,4 @@ export {
 export * from './stores/stores';
 
 // Utilities
-export * from './utils';
+export * from './utils.js';

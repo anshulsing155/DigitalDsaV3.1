@@ -1,7 +1,7 @@
-﻿<script lang="ts">
+<script lang="ts">
 	import { dialogState } from '$lib/state/dialog.svelte';
 	import { X, AlertTriangle, Info, Send, Pencil } from '$lib/utils/iconRegistry';
-	import { generateId } from '$lib/utils';
+	import { generateId } from '$lib/utils.js';
 	import { afterNavigate } from '$app/navigation';
 
 	let dialog: HTMLDialogElement | undefined = $state();

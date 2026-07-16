@@ -1,0 +1,270 @@
+{
+  "seo": {
+    "type": "Website",
+    "title": "DigitalDSA Pro — Intelligence Platform for DSAs, Loan Brokers & Bank RMs",
+    "description": "DigitalDSA Pro is a B2B intelligence platform exclusively for Direct Selling Agents, loan brokers, Corporate DSAs and Bank RMs in India. Compare lender policies, process applications faster, and grow your disbursement volume.",
+    "image": "/images/joyful-office-girl-watching-offer-from-DigitalDSA.jpg",
+    "keywords": "DSA platform India, loan broker tools, Bank RM software, Corporate DSA portal, loan processing platform, lender policy comparison, DSA commission tracking, loan agent CRM, Digital DSA Pro, B2B lending intelligence"
+  },
+  "judgmentBanner": {
+    "text": "⚖️ Supreme Court's Latest Judgment on Property Ownership — Impact on Your Clients 🏛️",
+    "btnText": "Assess Risk",
+    "btnTextDesktop": "Instantly Assess Client Risk",
+    "link": "/assessment"
+  },
+  "heroImage": {
+    "desktop": "/images/checkHero.webp",
+    "mobile": "/images/mobileHero.webp",
+    "alt": "DigitalDSA Pro — Intelligence platform for DSAs and loan brokers",
+    "hoverLink": "https://www.freepik.com/free-photo/smiling-woman-using-gadgets-drinking-coffee-cafe_4332899.htm"
+  },
+  "backedBy": {
+    "count": "100",
+    "disclaimer": "Disclaimer: The bank logos displayed are for illustrative purposes only and remain the property of their respective owners."
+  },
+  "lendersSection": {
+    "title": "One Platform to Access Every Lender's Policy",
+    "subtitle": "Compare rates, match eligibility, and close deals faster across 100+ lending partners."
+  },
+  "bankingCard": [
+    {
+      "icon": "/icons/uniqueLink.svg",
+      "altName": "secured-loan-icon",
+      "heading": "Secured Loan Products",
+      "subItems": [
+        { "label": "Home Loan", "href": "/home-loan" },
+        { "label": "Plot Loan", "href": "/plot-loan" },
+        { "label": "Loan Against Property", "href": "/lap" }
+      ]
+    },
+    {
+      "icon": "/icons/unsecuredLoan.svg",
+      "altName": "unsecured-loan-icon",
+      "heading": "Unsecured Loan Products",
+      "subItems": [
+        { "label": "Personal Loan", "href": "/personal-loan" },
+        { "label": "Business Loan", "href": "/business-loan" },
+        { "label": "Professional Loan", "href": "/professional-loan" }
+      ]
+    },
+    {
+      "icon": "/icons/apply-pen.svg",
+      "heading": "Client Assessment Tools",
+      "subItems": [
+        { "label": "Financial Wellbeing Assessment", "href": "/financial-wellbeing/form" },
+        { "label": "Loan Readiness Test", "href": "/loan-readiness-test/quiz" },
+        { "label": "Property Risk Assessment", "href": "/assessment" }
+      ]
+    },
+    {
+      "icon": "/icons/calc.svg",
+      "altName": "calc-icon",
+      "heading": "Professional Calculators",
+      "subItems": [
+        { "label": "EMI Calculator", "href": "/calculators/emi-calculator" },
+        { "label": "Eligibility Calculator", "href": "/calculators/eligibility-calculator" },
+        { "label": "Affordability Calculator", "href": "/calculators/affordability-calculator" },
+        { "label": "Balance Transfer Calculator", "href": "/calculators/balance-transfer-calculator" },
+        { "label": "Stamp-duty Calculator", "href": "/calculators/stamp-duty-calculator" }
+      ]
+    },
+    {
+      "icon": "/icons/mutualFund.svg",
+      "altName": "planner-icon",
+      "heading": "Client Planners",
+      "subItems": [
+        { "label": "Part Payment Planner", "href": "/planners/part-payment-planner" },
+        { "label": "Flexible EMI Planner", "href": "/planners/flexible-emi-planner" },
+        { "label": "Part Payment & Flexible EMI Planner (Both)", "href": "/planners/both" },
+        { "label": "Budget Planner", "href": "/planners/budget-planner" }
+      ]
+    },
+    {
+      "icon": "/icons/coinStack.svg",
+      "altName": "wealth-icon",
+      "heading": "Client Wealth Maps",
+      "subItems": [
+        { "label": "Savings Duration Analysis", "href": "/money-map/how-long-will-your-savings-support-you" },
+        { "label": "Retirement Savings Target", "href": "/money-map/how-much-to-save-by-retirement" },
+        { "label": "Savings Timeline Estimator", "href": "/money-map/how-long-will-it-take-to-save" },
+        { "label": "Regular Contribution Projections", "href": "/money-map/how-much-can-i-save-with-regular-contributions" },
+        { "label": "Corpus Reach Planner", "href": "/money-map/how-to-reach-your-desired-corpus" }
+      ]
+    }
+  ],
+  "listItem": [
+    {
+      "title": "Secured Loan Products",
+      "icon": "/icons/uniqueLink.svg",
+      "altName": "secured-loan-icon",
+      "url": "home-loan",
+      "desc": "Access home loan, plot loan, and LAP lender policies side by side. Compare interest rates, processing fees, and eligibility criteria to recommend the best-fit product to your client.",
+      "subList": [
+        { "name": "Home Loan", "link": "/home-loan" },
+        { "name": "Plot Loan", "link": "/plot-loan" },
+        { "name": "Loan Against Property", "link": "/lap" }
+      ]
+    },
+    {
+      "title": "Unsecured Loan Products",
+      "icon": "/icons/unsecuredLoan.svg",
+      "altName": "unsecured-loan-icon",
+      "url": "personal-loan",
+      "desc": "Match your client's profile against personal, business, and professional loan programs from multiple lenders. Instant eligibility matching saves you hours of manual comparison.",
+      "subList": [
+        { "name": "Personal Loan", "link": "/personal-loan" },
+        { "name": "Business Loan", "link": "/business-loan" },
+        { "name": "Professional Loan", "link": "/professional-loan" }
+      ]
+    },
+    {
+      "title": "Professional Calculators",
+      "icon": "/icons/calc.svg",
+      "altName": "calc-icon",
+      "url": "calculators",
+      "desc": "Industry-grade calculators to run EMI, eligibility, affordability, balance transfer, and stamp duty scenarios on the spot — impress clients with instant, accurate numbers.",
+      "subList": [
+        { "name": "EMI Calculator", "link": "/calculators/emi-calculator" },
+        { "name": "Eligibility Calculator", "link": "/calculators/eligibility-calculator" },
+        { "name": "Affordability Calculator", "link": "/calculators/affordability-calculator" },
+        { "name": "Balance Transfer Calculator", "link": "/calculators/balance-transfer-calculator" },
+        { "name": "Stamp-duty Calculator", "link": "/calculators/stamp-duty-calculator" }
+      ]
+    },
+    {
+      "title": "Client Planners",
+      "icon": "/icons/mutualFund.svg",
+      "altName": "planner-icon",
+      "url": "planners",
+      "desc": "Advanced planning tools to model part-payment strategies, EMI step-ups, and budget forecasts. Present clear repayment roadmaps that build client trust and drive conversions.",
+      "subList": [
+        { "name": "Part Payment Planner", "link": "/planners/part-payment-planner" },
+        { "name": "Flexible EMI Planner", "link": "/planners/flexible-emi-planner" },
+        { "name": "Part Payment & Flexible EMI Planner (Both)", "link": "/planners/both" },
+        { "name": "Budget Planner", "link": "/planners/budget-planner" }
+      ]
+    },
+    {
+      "title": "Client Wealth Maps",
+      "icon": "/icons/coinStack.svg",
+      "altName": "wealth-icon",
+      "url": "money-map",
+      "desc": "Help your clients visualize their financial futures with savings, retirement, and corpus projection tools. Build deeper advisory relationships beyond single transactions.",
+      "subList": [
+        { "name": "Savings Duration Analysis", "link": "/money-map/how-long-will-your-savings-support-you" },
+        { "name": "Retirement Savings Target", "link": "/money-map/how-much-to-save-by-retirement" },
+        { "name": "Savings Timeline Estimator", "link": "/money-map/how-long-will-it-take-to-save" },
+        { "name": "Regular Contribution Projections", "link": "/money-map/how-much-can-i-save-with-regular-contributions" },
+        { "name": "Corpus Reach Planner", "link": "/money-map/how-to-reach-your-desired-corpus" }
+      ]
+    }
+  ],
+  "blogList": [
+    {
+      "coverImg": "/images/indian-family-having-dinner-in-a-beautiful-home.jpg",
+      "altName": "DSA helping clients plan their finances",
+      "sourceName": "Freepik",
+      "originalSource": "https://www.freepik.com/free-photo/boyfriend-girlfriend-eating-waffles-together-home_21076266.htm",
+      "title": "Pre-Qualify Clients Before File Login",
+      "paragraph": "Use our financial wellbeing assessments and loan-readiness tools to screen clients before bank submission. Reduce rejection rates and improve your login-to-disbursal ratio dramatically.",
+      "linkName": "Explore Client Screening Tools",
+      "link": "/financial-wellbeing"
+    },
+    {
+      "coverImg": "/images/working-woman-taking-loan-readiness-assessment-from-DigitalDSA.jpg",
+      "altName": "A loan broker assessing client eligibility on DigitalDSA Pro",
+      "sourceName": "Freepik",
+      "originalSource": "https://www.freepik.com",
+      "title": "Instant Loan Readiness Scoring for Your Clients",
+      "paragraph": "Run comprehensive loan-readiness checks in under 2 minutes. 98% of agents using our assessment tools reported improved approval rates and faster turnaround times.",
+      "linkName": "Run a Client Assessment",
+      "link": "/loan-readiness-test"
+    },
+    {
+      "coverImg": "/images/couple-participating-in-financial-wellbeing-survey-of-DigitalDSA.jpg",
+      "altName": "DSA providing financial advice to clients using DigitalDSA Pro",
+      "sourceName": "Freepik",
+      "originalSource": "https://www.freepik.com/free-photo/people-tickling-each-other_38625493.htm",
+      "title": "Build Advisory Relationships with FWB Scoring",
+      "paragraph": "Go beyond transactions. Offer your clients Financial Wellbeing (FWB) scoring to position yourself as a trusted advisor — increasing repeat business and referrals.",
+      "linkName": "Start FWB Advisory",
+      "link": "/financial-wellbeing/form"
+    }
+  ],
+  "financialDifficulty": {
+    "heading": "Need help growing your DSA business?",
+    "btnName": "Get Partner Support",
+    "btnBorder": "#4F4C4D",
+    "btnColor": "#ffcc00",
+    "btnLink": "/contact"
+  },
+  "moreFromDsa": {
+    "title": "Resources for Loan Professionals",
+    "blogs": [
+      {
+        "icon": "/images/landingPageBudget0.jpg",
+        "altName": "Guide for DSAs on financial planning for clients",
+        "heading": "How to Help Clients Create a Budget — A DSA's Guide",
+        "url": "/finance-support/how-to-make-budget",
+        "sourceName": "pexels",
+        "originalSource": "pexels.com"
+      },
+      {
+        "icon": "/images/senior-couple-looking-on-phone.jpg",
+        "altName": "Protecting your clients and business from online scams",
+        "heading": "Protect Your Clients & Business from Financial Scams",
+        "url": "/cyber-security-against-scams",
+        "sourceName": "freepik",
+        "originalSource": "freepik.com"
+      },
+      {
+        "icon": "/images/homeLoanFamilyBlog.jpg",
+        "altName": "Helping clients decide between buying and renting",
+        "heading": "Buy vs. Rent — How to Advise Your Clients",
+        "url": "/home-loan/buy-or-rent",
+        "sourceName": "freepik",
+        "originalSource": "freepik.com"
+      }
+    ]
+  },
+  "happyClients": {
+    "heading": "What DSAs & Loan Professionals Say About Us"
+  },
+  "helpList": [
+    {
+      "title": "Partner Support & FAQs",
+      "titleIcon": "icons/support.svg",
+      "titleAlt": "Partner support and FAQs icon",
+      "listItem": [
+        {
+          "name": "Data Security & Compliance for Loan Agents",
+          "link": "/cyber-security-against-scams"
+        },
+        {
+          "name": "Platform Onboarding & Training Resources",
+          "link": "/finance-support/cost-of-living"
+        },
+        {
+          "name": "Submit Feedback or Report an Issue",
+          "link": "/complaint-compliment"
+        }
+      ]
+    },
+    {
+      "title": "Partner Desk — Talk to Our Team",
+      "titleIcon": "icons/contact.svg",
+      "titleAlt": "Partner support and contact icon",
+      "url": "/contact",
+      "paragraph": "Dedicated support for DSAs, brokers, and Bank RMs. Reach out via message, chat with our assistant, or call for direct partner support."
+    }
+  ],
+  "thingsYouShouldKnow": [
+    "DigitalDSA Pro is a B2B intelligence platform built exclusively for Direct Selling Agents, loan brokers, Corporate DSAs, and Bank RMs.",
+    "This platform does not provide loans to individual consumers. For borrower-facing loan comparison and tools, visit our consumer portal.",
+    "All lender policies, interest rates, and eligibility criteria displayed are sourced from official bank publications and may change without notice.",
+    "Loan approval, disbursement, and terms remain at the sole discretion of the respective lending institution.",
+    "Agent commissions, payout structures, and incentive programs vary by lender and are governed by individual DSA agreements.",
+    "Refer to our Terms and Conditions for detailed information on platform usage, data handling, and partner obligations.",
+    "By using this platform, you acknowledge that you are a licensed loan intermediary and agree to our professional code of conduct."
+  ]
+}

@@ -1,7 +1,7 @@
-﻿<script lang="ts">
+<script lang="ts">
 	import { registerModal, unregisterModal } from '$lib/stores/modalStack';
 	import { ArrowRight, RotateCcw, Trash2 } from '$lib/utils/iconRegistry';
-	import { generateId } from '$lib/utils';
+	import { generateId } from '$lib/utils.js';
 
 	type ResumeChoice = 'resume' | 'restart' | 'clear';
 

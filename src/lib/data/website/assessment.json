@@ -1,0 +1,93 @@
+{
+  "seo": {
+    "title": "Property Ownership Risk Assessment Form",
+    "image": "/images/home-scheme.jpg",
+    "description": "Verify your property title status against Supreme Court of India guidelines.",
+    "keywords": "property risk assessment form, property title test, Suraj Lamp ruling check"
+  },
+  "pageTitle": "Property Risk Assessment",
+  "pageDescription": "Analyze document validity under Indian property laws.",
+  "labels": {
+    "goBack": "Go Back",
+    "generalError": "errors.general",
+    "hasProperty": {
+      "question": "Do you currently own or possess a property?",
+      "options": [
+        { "value": true, "label": "I own and also possess property", "icon": "Home" },
+        { "value": false, "label": "I own but do not possess property", "icon": "Users" }
+      ]
+    },
+    "documentType": {
+      "question": "What type of document do you have? *",
+      "options": [
+        { "value": "registered_sale_deed", "label": "Registered Sale Deed", "icon": "FileText" },
+        { "value": "gpa_agreement", "label": "GPA/Agreement to Sell", "icon": "FileUser" },
+        { "value": "builder_buyer_agreement", "label": "Builder-Buyer Agreement", "icon": "FileCheck" },
+        { "value": "inherited", "label": "Inherited Property", "icon": "LandPlot" },
+        { "value": "mutation_only", "label": "Only Mutation/Patta", "icon": "ScrollText" },
+        { "value": "other", "label": "Other Documents", "icon": "FileStack" }
+      ],
+      "error": "Please select the type of document you have"
+    },
+    "legalOwner": {
+      "question": "Who is the legal owner as per documents? *",
+      "options": [
+        { "value": "self", "label": "Myself", "icon": "UserRoundCheck" },
+        { "value": "parent_spouse", "label": "Parent/Spouse", "icon": "UsersRound" },
+        { "value": "seller_name", "label": "Seller's Name", "icon": "ContactRound" },
+        { "value": "other_family", "label": "Other Family Member", "icon": "Gem" }
+      ],
+      "error": "Please specify who is the legal owner"
+    },
+    "hasPossession": {
+      "question": "Do you have physical possession of the property?",
+      "options": [
+        { "value": true, "label": "Yes, I have possession", "icon": "CheckCircle" },
+        { "value": false, "label": "No, awaiting possession", "icon": "Clock" }
+      ]
+    },
+    "hasDispute": {
+      "question": "Is there any ongoing legal dispute regarding this property?",
+      "options": [
+        { "value": false, "label": "No disputes", "icon": "CheckCircle" },
+        { "value": true, "label": "Yes, there are disputes", "icon": "AlertTriangle" }
+      ]
+    },
+    "intent": {
+      "question": "What is your primary intent? *",
+      "options": [
+        { "value": "check_status", "label": "Check ownership status", "icon": "BookmarkCheck" },
+        { "value": "regularize", "label": "Regularize ownership", "icon": "FileCheck" },
+        { "value": "sell", "label": "Sell the property", "icon": "Home" },
+        { "value": "transfer", "label": "Transfer to family", "icon": "ArrowRightLeft" },
+        { "value": "get_advice", "label": "Get legal advice", "icon": "Podcast" }
+      ],
+      "error": "Please select your primary intent"
+    },
+    "submit": {
+      "loading": "Analyzing Legal standing...",
+      "idle": "Get Instant Risk Assessment"
+    },
+    "results": {
+      "title": "Risk Evaluation Result",
+      "downloadPdf": "Download PDF Report",
+      "generatingPdf": "Generating...",
+      "threatProfile": "Ownership Threat Profile",
+      "threatRiskText": {
+        "LOW": "Your document structure is standard and represents complete, legally compliant property ownership.",
+        "MEDIUM": "Administrative or slight documentation gaps need to be regularized.",
+        "HIGH": "Significant legal risks identified. Transfer deeds or proper registries are missing.",
+        "CRITICAL": "Extremely high exposure. Ownership lacks backing of a valid sale deed or violates Supreme Court rules."
+      },
+      "judicialStanding": "Judicial Standing",
+      "surajLampPrecedent": "Suraj Lamp Precedent",
+      "urgency": "Urgency of Regularisation",
+      "urgencySub": "Recommended timeframe for complete title resolution.",
+      "budgetaryEstimation": "Budgetary Estimation",
+      "budgetarySub": "Indicative cost for stamp duty and legal charges.",
+      "keyRisks": "Key Risks Identified",
+      "recommendedSolutions": "Recommended Solutions",
+      "immediateNextSteps": "Immediate Next Steps"
+    }
+  }
+}

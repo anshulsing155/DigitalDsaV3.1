@@ -1,6 +1,6 @@
 import type { Applicant, LoanEntry, ObligationType } from '$lib/types/formTypes';
 import { formatNumber } from '$lib/i18n';
-import { generateId } from '$lib/utils';
+import { generateId } from '$lib/utils.js';
 
 /** Loan types that are credit lines (revolving credit) rather than term loans */
 const CREDIT_LINE_TYPES = new Set(['CC Limit', 'OD Limit', 'Dropline OD']);

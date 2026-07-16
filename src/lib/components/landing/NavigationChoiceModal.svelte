@@ -2,7 +2,7 @@
 	import { registerModal, unregisterModal } from '$lib/stores/modalStack';
 	import { ArrowRight, Gauge } from '$lib/utils/iconRegistry';
 	import { landingNav } from '$lib/state/landingNavigation.svelte';
-	import { generateId } from '$lib/utils';
+	import { generateId } from '$lib/utils.js';
 
 	const open = $derived(landingNav.showChoiceModal);
 

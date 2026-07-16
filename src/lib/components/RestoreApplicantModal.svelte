@@ -1,4 +1,4 @@
-﻿<script lang="ts">
+<script lang="ts">
 	import { registerModal, unregisterModal } from '$lib/stores/modalStack';
 	import {
 		RotateCcw,
@@ -12,7 +12,7 @@
 		CircleOff
 	} from '$lib/utils/iconRegistry';
 	import { onMount } from 'svelte';
-	import { generateId } from '$lib/utils';
+	import { generateId } from '$lib/utils.js';
 	import { afterNavigate } from '$app/navigation';
 	// Director-slot context (Pitfalls #36/#37) — directorRestore is set when the
 	// restore was triggered from DirectorFormModal. When present:

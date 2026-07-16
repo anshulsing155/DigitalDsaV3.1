@@ -2,7 +2,7 @@
 	import { X } from '$lib/utils/iconRegistry';
 	import type { Snippet } from 'svelte';
 	import { registerModal, unregisterModal } from '$lib/stores/modalStack';
-	import { generateId } from '$lib/utils';
+	import { generateId } from '$lib/utils.js';
 
 	interface Props {
 		showModal: boolean;

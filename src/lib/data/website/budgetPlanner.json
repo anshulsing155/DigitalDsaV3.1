@@ -1,0 +1,117 @@
+{
+  "dropdownData": [
+    "Weekly",
+    "Fortnightly",
+    "Monthly",
+    "Quarterly",
+    "Annually"
+  ],
+  "homeExpenses": {
+    "home": [
+      { "name": "Home loan EMI", "value": "", "duration": "Monthly" },
+      { "name": "Home insurance", "value": "", "duration": "Monthly" },
+      { "name": "Maintenance", "value": "", "duration": "Monthly" },
+      { "name": "Rent", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ],
+    "bill": [
+      { "name": "Electricity", "value": "", "duration": "Monthly" },
+      { "name": "Water rates", "value": "", "duration": "Monthly" },
+      { "name": "Gas", "value": "", "duration": "Monthly" },
+      { "name": "Telephone", "value": "", "duration": "Monthly" },
+      { "name": "Internet access", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ],
+    "food": [
+      { "name": "Groceries", "value": "", "duration": "Monthly" },
+      { "name": "Milk", "value": "", "duration": "Monthly" },
+      { "name": "Fruit & vegetables", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ],
+    "transport": [
+      { "name": "Public transport", "value": "", "duration": "Monthly" },
+      { "name": "Car/Bike loan EMI", "value": "", "duration": "Monthly" },
+      { "name": "Petrol/Diesel", "value": "", "duration": "Monthly" },
+      { "name": "Parking", "value": "", "duration": "Monthly" },
+      { "name": "Car registration", "value": "", "duration": "Monthly" },
+      { "name": "Car insurance", "value": "", "duration": "Monthly" },
+      { "name": "Maintenance", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ],
+    "children": [
+      { "name": "School fees", "value": "", "duration": "Monthly" },
+      { "name": "Child care", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ],
+    "pet": [
+      { "name": "Pet", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ]
+  },
+  "lifestyleExpenses": {
+    "InvestmentsAndSavings": [
+      { "name": "Superannuation contributions", "value": "", "duration": "Monthly" },
+      { "name": "Regular savings plan", "value": "", "duration": "Monthly" },
+      { "name": "Investments", "value": "", "duration": "Monthly" },
+      { "name": "Personal insurance", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ],
+    "CreditAndloans": [
+      { "name": "Personal loan repayments", "value": "", "duration": "Monthly" },
+      { "name": "Credit card interest payments", "value": "", "duration": "Monthly" },
+      { "name": "HECS/HELP debt payments", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ],
+    "HealthAndfitness": [
+      { "name": "Medical bills", "value": "", "duration": "Monthly" },
+      { "name": "Pharmacy", "value": "", "duration": "Monthly" },
+      { "name": "Dentist", "value": "", "duration": "Monthly" },
+      { "name": "Health insurance", "value": "", "duration": "Monthly" },
+      { "name": "Vitamins", "value": "", "duration": "Monthly" },
+      { "name": "Club & gym fees", "value": "", "duration": "Monthly" },
+      { "name": "Sporting team/association fees", "value": "", "duration": "Monthly" },
+      { "name": "Chiropractor & Physiotherapist", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ],
+    "Incidentals": [
+      { "name": "Magazines & newspapers", "value": "", "duration": "Monthly" },
+      { "name": "Coffee", "value": "", "duration": "Monthly" },
+      { "name": "Eating out", "value": "", "duration": "Monthly" },
+      { "name": "Taxis", "value": "", "duration": "Monthly" },
+      { "name": "Dry cleaning", "value": "", "duration": "Monthly" },
+      { "name": "Haircuts", "value": "", "duration": "Monthly" },
+      { "name": "Clothing", "value": "", "duration": "Monthly" },
+      { "name": "Shoes & accessories", "value": "", "duration": "Monthly" },
+      { "name": "Hobbies", "value": "", "duration": "Monthly" },
+      { "name": "Holidays", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ],
+    "Gift": [
+      { "name": "Gifts", "value": "", "duration": "Monthly" },
+      { "name": "Donations", "value": "", "duration": "Monthly" },
+      { "name": "Other expenses", "value": "", "duration": "Monthly" }
+    ]
+  },
+  "income": {
+    "IncomeArrayFirst": [
+      { "name": "Net income", "value": "", "duration": "Monthly" },
+      { "name": "Bonuses", "value": "", "duration": "Monthly" },
+      { "name": "Rental income", "value": "", "duration": "Monthly" },
+      { "name": "Dividends", "value": "", "duration": "Monthly" },
+      { "name": "Bonds", "value": "", "duration": "Monthly" },
+      { "name": "Interest", "value": "", "duration": "Monthly" },
+      { "name": "Other taxable income", "value": "", "duration": "Monthly" },
+      { "name": "Tax free income", "value": "", "duration": "Monthly" }
+    ],
+    "IncomeArraySecond": [
+      { "name": "Net income", "value": "", "duration": "Monthly" },
+      { "name": "Bonuses", "value": "", "duration": "Monthly" },
+      { "name": "Rental income", "value": "", "duration": "Monthly" },
+      { "name": "Dividends", "value": "", "duration": "Monthly" },
+      { "name": "Bonds", "value": "", "duration": "Monthly" },
+      { "name": "Interest", "value": "", "duration": "Monthly" },
+      { "name": "Other taxable income", "value": "", "duration": "Monthly" },
+      { "name": "Tax free income", "value": "", "duration": "Monthly" }
+    ]
+  }
+}

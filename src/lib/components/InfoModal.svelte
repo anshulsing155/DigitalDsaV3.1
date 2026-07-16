@@ -3,7 +3,7 @@
 	import { X } from '$lib/utils/iconRegistry';
 	import { registerModal, unregisterModal } from '$lib/stores/modalStack';
 	import { sanitizeHtml } from '$lib/utils/sanitizeHtml';
-	import { generateId } from '$lib/utils';
+	import { generateId } from '$lib/utils.js';
 	import { tick } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 
