@@ -273,7 +273,7 @@
             </summary>
 
             {#if index == 0}
-              <div id="ready" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="ready" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 {#each content.getStart as steps}
                   <div class="">
                     <NewHome {steps} />
@@ -312,7 +312,7 @@
                 </TwoColumn>
               </div>
             {:else if index == 1}
-              <div id="find" class="py-[4rem] flex flex-col bg-white text-black px-[2rem]">
+              <div id="find" class="py-[4rem] flex flex-col bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 {#if content.forHome.length > 0}
                   <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     Looking for a home
@@ -325,7 +325,7 @@
                 {/if}
               </div>
             {:else if index == 2}
-              <div id="next" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="next" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 <TwoColumn
                   cardImage={content.guaranteeScheme.cardImage}
                   cardAltName={content.guaranteeScheme.cardAltName}
@@ -364,7 +364,7 @@
                 />
               </div>
             {:else if index == 3}
-              <div id="calculators" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="calculators" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 <div class="grid lg:grid-cols-3">
                   <h2 class="lg:col-span-1 pt-[3rem] lg:pb-[3rem] pb-0 typography-h2 text-[var(--form-text)]">
                     Tools & calculators

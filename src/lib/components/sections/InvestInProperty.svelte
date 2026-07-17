@@ -261,7 +261,7 @@
             </summary>
 
             {#if index == 0}
-              <div id="started" class="bg-white text-black px-[2rem]">
+              <div id="started" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="grid gap-[2rem] border-b border-[var(--form-border)] py-[4rem]">
                   <div class="grid gap-6">
                     <h2 class="typography-h2 text-[var(--form-text)]">
@@ -309,11 +309,11 @@
                 </div>
               </div>
             {:else if index == 1}
-              <div id="plan" class="bg-white text-black px-[2rem]">
+              <div id="plan" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <WhyChoose facilities={content.facilities} gridCol={4} />
               </div>
             {:else if index == 2}
-              <div id="guide" class="bg-white text-black px-[2rem]">
+              <div id="guide" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <TwoColumn
                   cardImage={content.propertyGuide.cardImage}
                   cardAltName={content.propertyGuide.cardAltName}
@@ -333,7 +333,7 @@
                 </TwoColumn>
               </div>
             {:else if index == 3}
-              <div id="reports" class="bg-white text-black px-[2rem]">
+              <div id="reports" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <TwoColumn
                   cardImage={content.suburbReports.cardImage}
                   cardAltName={content.suburbReports.cardAltName}
@@ -354,7 +354,7 @@
                 </TwoColumn>
               </div>
             {:else if index == 4}
-              <div id="tools" class="bg-white text-black px-[2rem]">
+              <div id="tools" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="border-b grid gap-4 py-[3rem]">
                   <h2 class="typography-h2 text-[var(--form-text)]">
                     Tools & calculators

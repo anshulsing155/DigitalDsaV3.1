@@ -472,13 +472,13 @@ notificationStore.set(null);
                     }
                   }}
                   id="message"
-                  class="border-1 peer block w-full appearance-none border border-[#0000003A] bg-white py-[0.6rem] pl-[3rem] pr-4 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md resize-none text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
+                  class="border-1 peer block w-full appearance-none border border-[var(--form-border)] bg-[var(--form-bg)] py-[0.6rem] pl-[3rem] pr-4 typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md resize-none text-[var(--form-text)] outline-none focus:border-[var(--form-border-hover)] focus:ring-0"
                   placeholder="Describe your query atleast in 20 characters and 5 words."
                   rows="6"
                 ></textarea>
                 <label
                   for="message"
-                  class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
+                  class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-[var(--form-bg)] px-2 typography-body-md text-[var(--form-text-muted)] duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
                 >
                   Describe your query
                 </label>
@@ -566,7 +566,7 @@ notificationStore.set(null);
                       {#each otp as digit, index}
                         <input
                           id={`otp-input-${index}`}
-                          class="h-12 w-12 rounded border border-[#0000003A] bg-white text-center typography-body-md text-black outline-none focus:border-[var(--form-border)]"
+                          class="h-12 w-12 rounded border border-[var(--form-border)] bg-[var(--form-bg)] text-center typography-body-md text-[var(--form-text)] outline-none focus:border-[var(--form-border-hover)]"
                           type="number"
                           maxlength="1"
                           bind:value={otp[index]}

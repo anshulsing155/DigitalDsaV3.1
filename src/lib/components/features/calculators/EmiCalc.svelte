@@ -282,7 +282,7 @@
 <section>
 	<div class="grid justify-center md:grid-cols-7 gap-6 md:gap-[2rem]">
 		<!-- ── Input Panel ─────────────────────────────────────────────────────── -->
-		<div class="relative grid gap-[1rem] bg-[#f4f4f4] py-6 px-4 shadow-md md:col-span-3">
+		<div class="relative grid gap-[1rem] bg-[var(--landing-bg-alt)] text-[var(--form-text)] py-6 px-4 shadow-md md:col-span-3">
 			<div class="flex flex-col gap-5 pb-[2rem]">
 				<!-- Loan Amount -->
 				<div class="flex flex-col gap-2">
@@ -300,7 +300,7 @@
 					{#if loanAmountError}
 						<p class="text-xs text-dangerColor">{loanAmountError}</p>
 					{:else if loanAmount > 0}
-						<p class="text-xs text-gray-500 pl-1">{toWords.convert(loanAmount)}</p>
+						<p class="text-xs text-[var(--form-text-secondary)] pl-1">{toWords.convert(loanAmount)}</p>
 					{/if}
 				</div>
 
@@ -310,7 +310,7 @@
 						Annual Interest Rate
 					</label>
 					<div
-						class="flex items-center border border-black bg-white font-Paragraph text-minParaFont md:text-paraFont"
+						class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont md:text-paraFont"
 					>
 						<input
 							id="rate"
@@ -320,14 +320,14 @@
 								interestRateError = '';
 								showSkeleton = true;
 							}}
-							class="w-full py-2 pl-3 pr-0 outline-none"
+							class="w-full py-2 pl-3 pr-0 outline-none bg-transparent text-[var(--form-text)]"
 							type="number"
 							min="1"
 							max="50"
 							step="0.05"
 							placeholder="e.g. 8.5"
 						/>
-						<span class="px-3 text-gray-500 select-none">%</span>
+						<span class="px-3 text-[var(--form-text-muted)] select-none">%</span>
 					</div>
 					{#if interestRateError}
 						<p class="text-xs text-dangerColor">{interestRateError}</p>
@@ -338,12 +338,12 @@
 				<div class="flex flex-col gap-2">
 					<label class="font-FourthHead text-minParaFont lg:text-paraFont" for="tenure">
 						Loan Tenure
-						<span class="font-Paragraph text-minParaFont text-gray-500">
+						<span class="font-Paragraph text-minParaFont text-[var(--form-text-muted)]">
 							({tenureUnit === 'Years' ? '1–40 years' : '6–480 months'})
 						</span>
 					</label>
 					<div
-						class="flex items-center border border-black bg-white font-Paragraph text-minParaFont md:text-paraFont"
+						class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont md:text-paraFont"
 					>
 						<input
 							id="tenure"
@@ -353,25 +353,25 @@
 								loanTenureError = '';
 								showSkeleton = true;
 							}}
-							class="w-full py-2 pl-3 pr-0 outline-none"
+							class="w-full py-2 pl-3 pr-0 outline-none bg-transparent text-[var(--form-text)]"
 							type="number"
 							step={tenureUnit === 'Years' ? 1 : 12}
 							min={tenureUnit === 'Years' ? 1 : 6}
 							max={tenureUnit === 'Years' ? 40 : 480}
 						/>
-						<div class="flex text-xs border-l border-black shrink-0 bg-white">
+						<div class="flex text-xs border-l border-[var(--form-border)] shrink-0 bg-[var(--form-bg)]">
 							<button
 								type="button"
 								class="px-3 py-2 transition-colors {tenureUnit === 'Months'
-									? 'bg-black text-white'
-									: 'bg-white text-black hover:bg-gray-100'}"
+									? 'bg-[var(--landing-accent)] text-[var(--landing-accent-text)]'
+									: 'bg-[var(--form-bg)] text-[var(--form-text)] hover:bg-[var(--landing-bg-alt)]'}"
 								onclick={() => handleUnitChange('Months')}>Mo</button
 							>
 							<button
 								type="button"
-								class="px-3 py-2 border-l border-black transition-colors {tenureUnit === 'Years'
-									? 'bg-black text-white'
-									: 'bg-white text-black hover:bg-gray-100'}"
+								class="px-3 py-2 border-l border-[var(--form-border)] transition-colors {tenureUnit === 'Years'
+									? 'bg-[var(--landing-accent)] text-[var(--landing-accent-text)]'
+									: 'bg-[var(--form-bg)] text-[var(--form-text)] hover:bg-[var(--landing-bg-alt)]'}"
 								onclick={() => handleUnitChange('Years')}>Yr</button
 							>
 						</div>
@@ -396,15 +396,15 @@
 							showSkeleton = true;
 						}}
 						type="month"
-						class="border border-black bg-white py-2 px-3 outline-none font-Paragraph text-minParaFont md:text-paraFont w-full"
+						class="border border-[var(--form-border)] bg-[var(--form-bg)] py-2 px-3 outline-none font-Paragraph text-minParaFont md:text-paraFont w-full text-[var(--form-text)]"
 					/>
 				</div>
 
 				<!-- ── Advanced Options ────────────────────────────────────────────── -->
-				<div class="border border-gray-300 rounded-sm">
+				<div class="border border-[var(--form-border)] rounded-sm">
 					<button
 						type="button"
-						class="flex w-full items-center justify-between px-3 py-2 font-FourthHead text-minParaFont lg:text-paraFont bg-gray-100 hover:bg-gray-200 transition-colors"
+						class="flex w-full items-center justify-between px-3 py-2 font-FourthHead text-minParaFont lg:text-paraFont bg-[var(--landing-bg-alt)] hover:bg-[var(--landing-bg-card)] text-[var(--form-text)] transition-colors"
 						onclick={() => (showAdvanced = !showAdvanced)}
 					>
 						<span>Advanced Options</span>
@@ -420,12 +420,12 @@
 							<div class="flex flex-col gap-2">
 								<label class="font-FourthHead text-minParaFont lg:text-paraFont" for="stepUp">
 									Annual EMI Increase
-									<span class="font-Paragraph text-minParaFont text-gray-500"
+									<span class="font-Paragraph text-minParaFont text-[var(--form-text-muted)]"
 										>(% / year, optional)</span
 									>
 								</label>
 								<div
-									class="flex items-center border border-black bg-white font-Paragraph text-minParaFont md:text-paraFont"
+									class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont md:text-paraFont"
 								>
 									<input
 										id="stepUp"
@@ -435,7 +435,7 @@
 											stepUpError = '';
 											showSkeleton = true;
 										}}
-										class="w-full py-2 pl-3 pr-0 outline-none"
+										class="w-full py-2 pl-3 pr-0 outline-none bg-transparent text-[var(--form-text)]"
 										type="number"
 										min="0"
 										max="50"
@@ -478,12 +478,12 @@
 								{#if prepayEnabled}
 									<div class="flex flex-col gap-3 pt-1">
 										<!-- Amount type: Fixed ₹ or % of balance -->
-										<div class="flex border border-black overflow-hidden text-xs font-Paragraph">
+										<div class="flex border border-[var(--form-border)] overflow-hidden text-xs font-Paragraph">
 											<button
 												type="button"
 												class="flex-1 py-2 transition-colors {prepayType === 'fixed'
-													? 'bg-black text-white'
-													: 'bg-white text-black hover:bg-gray-100'}"
+													? 'bg-[var(--landing-accent)] text-[var(--landing-accent-text)]'
+													: 'bg-[var(--form-bg)] text-[var(--form-text)] hover:bg-[var(--landing-bg-alt)]'}"
 												onclick={() => {
 													prepayType = 'fixed';
 													prepayError = '';
@@ -494,10 +494,10 @@
 											</button>
 											<button
 												type="button"
-												class="flex-1 py-2 border-l border-black transition-colors {prepayType ===
+												class="flex-1 py-2 border-l border-[var(--form-border)] transition-colors {prepayType ===
 												'percent'
-													? 'bg-black text-white'
-													: 'bg-white text-black hover:bg-gray-100'}"
+													? 'bg-[var(--landing-accent)] text-[var(--landing-accent-text)]'
+													: 'bg-[var(--form-bg)] text-[var(--form-text)] hover:bg-[var(--landing-bg-alt)]'}"
 												onclick={() => {
 													prepayType = 'percent';
 													prepayError = '';
@@ -520,7 +520,7 @@
 											/>
 										{:else}
 											<div
-												class="flex items-center border border-black bg-white font-Paragraph text-minParaFont"
+												class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont"
 											>
 												<input
 													bind:value={prepayValue}
@@ -529,25 +529,25 @@
 														prepayError = '';
 														showSkeleton = true;
 													}}
-													class="w-full py-2 pl-3 pr-0 outline-none"
+													class="w-full py-2 pl-3 pr-0 outline-none bg-transparent text-[var(--form-text)]"
 													type="number"
 													min="0.1"
 													max="100"
 													step="1"
 													placeholder="e.g. 20"
 												/>
-												<span class="px-3 text-gray-500 select-none">% of balance</span>
+												<span class="px-3 text-[var(--form-text-muted)] select-none">% of balance</span>
 											</div>
 										{/if}
 
 										<!-- Month picker with calendar label -->
 										<div class="flex items-center gap-3">
 											<div class="flex flex-col gap-1 flex-1">
-												<label class="text-xs text-gray-500 font-Paragraph" for="prepayMon">
+												<label class="text-xs text-[var(--form-text-muted)] font-Paragraph" for="prepayMon">
 													At month
 												</label>
 												<div
-													class="flex items-center border border-black bg-white font-Paragraph text-minParaFont"
+													class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont"
 												>
 													<input
 														id="prepayMon"
@@ -557,7 +557,7 @@
 															prepayError = '';
 															showSkeleton = true;
 														}}
-														class="w-full py-2 pl-3 pr-0 outline-none"
+														class="w-full py-2 pl-3 pr-0 outline-none bg-transparent text-[var(--form-text)]"
 														type="number"
 														min="1"
 														max={tenureMonths}
@@ -630,17 +630,17 @@
 			</div>
 		{:else if schedule.length > 0}
 			<div id="resultView" class="grid gap-2 bg-darkColor py-[2rem] md:p-[2rem] md:col-span-4">
-				<div class="flex flex-col gap-[2rem] p-[1rem] bg-mainBg w-full">
+				<div class="flex flex-col gap-[2rem] p-[1rem] bg-[var(--landing-bg-alt)] text-[var(--form-text)] w-full">
 					<!-- EMI headline -->
 					<div class="flex flex-col items-center justify-center gap-1 text-center">
-						<p class="font-Paragraph text-xs text-gray-500 uppercase tracking-widest">
+						<p class="font-Paragraph text-xs text-[var(--form-text-muted)] uppercase tracking-widest">
 							{emiStepUpPct > 0 ? 'Starting Monthly EMI' : 'Monthly EMI'}
 						</p>
 						<p class="font-Paragraph text-mobSubHead md:text-minHeadFont">
 							₹ {fmt($animatedEmi)}
 						</p>
 						{#if emiStepUpPct > 0}
-							<p class="text-xs text-gray-500 font-Paragraph">
+							<p class="text-xs text-[var(--form-text-muted)] font-Paragraph">
 								→ Year 2: ₹{fmt(emi * (1 + emiStepUpPct / 100))} · grows {emiStepUpPct}% yearly
 							</p>
 						{/if}
@@ -718,33 +718,33 @@
 			<div id="amortizationTable" class="w-full md:col-span-7">
 				<!-- Year-view switcher -->
 				<div class="flex flex-col items-center gap-1 py-4 font-Paragraph">
-					<p class="font-Paragraph text-minParaFont text-gray-500">Group schedule by</p>
-					<div class="flex border border-black overflow-hidden rounded-sm text-sm">
+					<p class="font-Paragraph text-minParaFont text-[var(--form-text-muted)]">Group schedule by</p>
+					<div class="flex border border-[var(--form-border)] overflow-hidden rounded-sm text-sm bg-[var(--form-bg)]">
 						<button
 							type="button"
 							class="px-5 py-2 transition-colors cursor-pointer {yearView === 'calendar'
-								? 'bg-darkColor text-white'
-								: 'bg-white text-black hover:bg-gray-100'}"
+								? 'bg-[var(--landing-accent)] text-[var(--landing-accent-text)]'
+								: 'bg-[var(--form-bg)] text-[var(--form-text)] hover:bg-[var(--landing-bg-alt)]'}"
 							onclick={() => switchView('calendar')}
 						>
 							Calendar Year
 						</button>
 						<button
 							type="button"
-							class="px-5 py-2 border-l border-black transition-colors cursor-pointer {yearView ===
+							class="px-5 py-2 border-l border-[var(--form-border)] transition-colors cursor-pointer {yearView ===
 							'financial'
-								? 'bg-darkColor text-white'
-								: 'bg-white text-black hover:bg-gray-100'}"
+								? 'bg-[var(--landing-accent)] text-[var(--landing-accent-text)]'
+								: 'bg-[var(--form-bg)] text-[var(--form-text)] hover:bg-[var(--landing-bg-alt)]'}"
 							onclick={() => switchView('financial')}
 						>
 							Financial Year
-							<span class="text-gray-400 text-xs ml-1">(Apr–Mar)</span>
+							<span class="text-[var(--form-text-muted)] text-xs ml-1">(Apr–Mar)</span>
 						</button>
 					</div>
 				</div>
 
 				<!-- Scrollable table -->
-				<div class="mx-auto h-[28rem] md:h-[34rem] w-full border border-black overflow-auto">
+				<div class="mx-auto h-[28rem] md:h-[34rem] w-full border border-[var(--form-border)] overflow-auto">
 					<!-- Header -->
 					<div
 						class="sticky top-0 z-10 grid bg-darkColor text-center text-white"

@@ -6,9 +6,9 @@
     selectId = "",
     selectedValue = $bindable(""),
     options = [],
-    classFont = "font-Paragraph text-paraFont pl-3 bg-white rounded py-2 border border-black",
-    optionClass = "font-Paragraph text-paraFont pl-3 bg-white text-black",
-    chevronColor = "text-gray-600",
+    classFont = "font-Paragraph text-paraFont pl-3 bg-[var(--form-bg)] text-[var(--form-text)] rounded py-2 border border-[var(--form-border)]",
+    optionClass = "font-Paragraph text-paraFont pl-3 bg-[var(--form-bg)] text-[var(--form-text)]",
+    chevronColor = "text-[var(--form-text-muted)]",
     nestedOptions = [],
     onChange = () => {},
     selectedTitle = $bindable(""),
@@ -187,7 +187,7 @@
         onkeydown={handleKeyDown}
         onblur={handleBlur}
         bind:value={selectedValue}
-        class="cursor-pointer block w-full border rounded-md {classFont} text-black outline-none focus:ring-2 ring-btnBg {disabled ? 'opacity-50 cursor-not-allowed' : ''} {errorMessage ? 'border-red-500' : ''}"
+        class="cursor-pointer block w-full border rounded-md {classFont} text-[var(--form-text)] outline-none focus:ring-2 ring-btnBg {disabled ? 'opacity-50 cursor-not-allowed' : ''} {errorMessage ? 'border-red-500' : ''}"
         bind:this={inputRef}
         placeholder={placeholder}
         aria-label={ariaLabel}
@@ -211,7 +211,7 @@
         onkeydown={handleKeyDown}
         onblur={handleBlur}
         bind:value={selectedTitle}
-        class="cursor-pointer block w-full border rounded-md {classFont} text-black outline-none focus:ring-2 ring-btnBg {disabled ? 'opacity-50 cursor-not-allowed' : ''} {errorMessage ? 'border-red-500' : ''}"
+        class="cursor-pointer block w-full border rounded-md {classFont} text-[var(--form-text)] outline-none focus:ring-2 ring-btnBg {disabled ? 'opacity-50 cursor-not-allowed' : ''} {errorMessage ? 'border-red-500' : ''}"
         bind:this={inputRef}
         placeholder={placeholder}
         aria-label={ariaLabel}
@@ -234,7 +234,7 @@
   {#if showOptions}
     <ul
       id="{selectId}-dropdown"
-      class="absolute font-Paragraph text-minParaFont lg:text-paraFont w-full shadow-lg cursor-pointer z-50 top-full mt-1 rounded max-h-[40svh] overflow-auto {optionClass} border border-gray-300 focus:outline-none"
+      class="absolute font-Paragraph text-minParaFont lg:text-paraFont w-full shadow-lg cursor-pointer z-50 top-full mt-1 rounded max-h-[40svh] overflow-auto {optionClass} border border-[var(--form-border)] focus:outline-none"
       bind:this={dropdownRef}
       tabindex="-1"
       role="listbox"
@@ -243,14 +243,14 @@
       <!-- Categorized Options -->
       {#if Array.isArray(options) && options.length > 0 && typeof options[0] === "object" && "heading" in options[0]}
         {#each options as category, catIndex}
-          <li class="bg-gray-100 text-gray-700 font-bold px-3 py-2 w-full" role="presentation">
+          <li class="bg-[var(--landing-bg-alt)] text-[var(--form-text-secondary)] font-bold px-3 py-2 w-full" role="presentation">
             {category.heading}
           </li>
           {#each category.items as option, index}
             {@const globalIndex = options.slice(0, catIndex).reduce((sum, cat) => sum + cat.items.length, 0) + index}
             <li
               id="{selectId}-option-{globalIndex}"
-              class="hover:bg-btnBg hover:text-black border-gray-200 p-3 transition-all ease-in-out duration-200 pl-6 {index < category.items.length - 1 ? 'border-b' : ''} {focusedOptionIndex === globalIndex ? 'bg-btnBg text-black' : ''}"
+              class="hover:bg-btnBg hover:text-black border-[var(--form-border)] p-3 transition-all ease-in-out duration-200 pl-6 {index < category.items.length - 1 ? 'border-b' : ''} {focusedOptionIndex === globalIndex ? 'bg-btnBg text-black' : ''}"
               onclick={() => selectOption(option, globalIndex)}
               onkeydown={handleKeyDown}
               bind:this={optionRefs[globalIndex]}
@@ -262,7 +262,7 @@
             </li>
           {/each}
           {#if catIndex < options.length - 1}
-            <li class="border-b border-gray-300" role="presentation"></li>
+            <li class="border-b border-[var(--form-border)]" role="presentation"></li>
           {/if}
         {/each}
       <!-- Nested Options -->
@@ -270,7 +270,7 @@
         {#each nestedOptions as option, index}
           <li
             id="{selectId}-option-{index}"
-            class="hover:bg-btnBg hover:text-black {index < nestedOptions.length - 1 ? 'border-b' : ''} border-gray-200 p-3 transition-all ease-in-out duration-200 {focusedOptionIndex === index ? 'bg-btnBg text-black' : ''}"
+            class="hover:bg-btnBg hover:text-black {index < nestedOptions.length - 1 ? 'border-b' : ''} border-[var(--form-border)] p-3 transition-all ease-in-out duration-200 {focusedOptionIndex === index ? 'bg-btnBg text-black' : ''}"
             onclick={() => nestedSelectOption(option, index)}
             onkeydown={handleKeyDown}
             bind:this={optionRefs[index]}
@@ -286,7 +286,7 @@
         {#each options as option, index}
           <li
             id="{selectId}-option-{index}"
-            class="hover:bg-btnBg hover:text-black {index < options.length - 1 ? 'border-b' : ''} border-gray-200 p-3 transition-all ease-in-out duration-200 {focusedOptionIndex === index ? 'bg-btnBg text-black' : ''}"
+            class="hover:bg-btnBg hover:text-black {index < options.length - 1 ? 'border-b' : ''} border-[var(--form-border)] p-3 transition-all ease-in-out duration-200 {focusedOptionIndex === index ? 'bg-btnBg text-black' : ''}"
             onclick={() => selectOption(option, index)}
             onkeydown={handleKeyDown}
             bind:this={optionRefs[index]}

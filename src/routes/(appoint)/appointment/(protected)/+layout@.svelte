@@ -17,7 +17,7 @@
 </script>
 
 <div
-	class="bg-mainBg flex min-h-screen flex-col items-center justify-center"
+	class="bg-[var(--landing-bg)] flex min-h-screen flex-col items-center justify-center"
 >
 	{#if loading}
 		<div

@@ -172,7 +172,7 @@
 	keywords="Home loan, Home loan eligibility, Best home loan rates, Home loan approval, Compare home loans, Home loan refinancing, Balance transfer loan, Affordable home loan, Housing loan guide, Home loan process, Loan for home purchase, Home loan EMI calculator, Home renovation loan, Top-up home loan, Down payment assistance"
 />
 
-<section class="bg-mainBg mx-auto w-full">
+<section class="bg-[var(--landing-bg)] mx-auto w-full">
 	<NewPageLayout pageData={pageDataWithClicks}>
 		<!-- desktop view -->
 		<div class="hidden lg:block">

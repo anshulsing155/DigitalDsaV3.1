@@ -233,11 +233,11 @@
                   </div>
                   <div class="flex flex-col sm:flex-row gap-2">
                     <div>
-                      <i class="fa-solid text-black fa-star"></i>
-                      <i class="fa-solid text-black fa-star"></i>
-                      <i class="fa-solid text-black fa-star"></i>
-                      <i class="fa-solid text-black fa-star"></i>
-                      <i class="fa-solid text-black fa-star-half-stroke"></i>
+                      <i class="fa-solid text-[var(--landing-accent)] fa-star"></i>
+                      <i class="fa-solid text-[var(--landing-accent)] fa-star"></i>
+                      <i class="fa-solid text-[var(--landing-accent)] fa-star"></i>
+                      <i class="fa-solid text-[var(--landing-accent)] fa-star"></i>
+                      <i class="fa-solid text-[var(--landing-accent)] fa-star-half-stroke"></i>
                     </div>
                     <p class="typography-body-md font-semibold text-[var(--landing-text)]">
                       4.9 <span class="typography-body-sm text-[var(--landing-text-muted)]">(18,767 agents)</span>

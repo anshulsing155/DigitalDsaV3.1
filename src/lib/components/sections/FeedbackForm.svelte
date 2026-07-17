@@ -324,13 +324,13 @@
                       name="ddsaOther"
                       bind:value={feedbackData.ddsaOtherReview}
                       id="ddsaOther"
-                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
+                      class="border-1 peer block w-full appearance-none rounded border border-[var(--form-border)] bg-[var(--form-bg)] py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-[var(--form-text)] outline-none focus:border-[var(--form-border-hover)] focus:ring-0"
                       placeholder=" "
                       rows="3"
                     ></textarea>
                     <label
                       for="ddsaOther"
-                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
+                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-[var(--form-bg)] px-2 typography-body-md text-[var(--form-text-muted)] duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
                     >
                       Other
                     </label>
@@ -376,13 +376,13 @@
                       name="ddsaOther"
                       bind:value={feedbackData.ddsaOtherReview}
                       id="ddsaOther"
-                      class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
+                      class="border-1 peer block w-full appearance-none rounded border border-[var(--form-border)] bg-[var(--form-bg)] py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-[var(--form-text)] outline-none focus:border-[var(--form-border-hover)] focus:ring-0"
                       placeholder=" "
                       rows="3"
                     ></textarea>
                     <label
                       for="ddsaOther"
-                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
+                      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-[var(--form-bg)] px-2 typography-body-md text-[var(--form-text-muted)] duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
                     >
                       Other
                     </label>
@@ -459,11 +459,11 @@
                 type="text"
                 name="userName"
                 bind:value={feedbackData.userName}
-                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-black outline-none focus:border-[var(--form-border)] focus:ring-0 bg-transparent"
+                 class="border-1 peer block w-full appearance-none rounded border border-[var(--form-border)] bg-[var(--form-bg)] py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-[var(--form-text)] outline-none focus:border-[var(--form-border-hover)] focus:ring-0 bg-transparent"
               />
               <label
                 for="userName"
-                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
+                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-[var(--form-bg)] px-2 typography-body-md text-[var(--form-text-muted)] duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
               >
                 Enter name
               </label>
@@ -488,12 +488,12 @@
                 type="text"
                 name="userEmail"
                 bind:value={feedbackData.userEmail}
-                class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
+                 class="border-1 peer block w-full appearance-none rounded border border-[var(--form-border)] bg-[var(--form-bg)] py-[0.8rem] pl-[3rem] pr-4 typography-body-md text-[var(--form-text)] outline-none focus:border-[var(--form-border-hover)] focus:ring-0"
                 placeholder=" "
               />
               <label
                 for="userEmail"
-                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
+                class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-[var(--form-bg)] px-2 typography-body-md text-[var(--form-text-muted)] duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
               >
                 Enter email
               </label>
@@ -520,13 +520,13 @@
                     name="message"
                     bind:value={feedbackData.feedbackMsg}
                     id="message"
-                    class="border-1 peer block w-full appearance-none rounded border border-[#0000003A] bg-white py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-black outline-none focus:border-[var(--form-border)] focus:ring-0"
+                    class="border-1 peer block w-full appearance-none rounded border border-[var(--form-border)] bg-[var(--form-bg)] py-[0.8rem] pl-[3rem] pr-4 typography-body-md resize-none text-[var(--form-text)] outline-none focus:border-[var(--form-border-hover)] focus:ring-0"
                     placeholder=" "
                     rows="6"
                   ></textarea>
                   <label
                     for="message"
-                    class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-white px-2 typography-body-md text-gray-500 duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
+                    class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-transparent bg-[var(--form-bg)] px-2 typography-body-md text-[var(--form-text-muted)] duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
                   >
                     Message
                   </label>
@@ -589,7 +589,7 @@
           {#if isWaiting}
             <button
               type="button"
-              class="text-black bg-primary hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
+              class="text-black bg-primary hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
               disabled
               aria-label="Submitting feedback"
             >
@@ -600,7 +600,7 @@
           {:else}
             <button
               type="submit"
-              class="text-black bg-primary hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm text-[var(--form-text-secondary)] md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
+              class="text-black bg-primary hover:opacity-80 focus:ring-2 focus:outline-none typography-body-sm md:typography-body-md rounded-lg text-sm w-full px-5 py-2.5 text-center"
               disabled={hasErrors || !recaptchaToken}
             >
               Submit

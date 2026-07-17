@@ -358,7 +358,7 @@
             </summary>
 
             {#if index == 0}
-              <div id="offers" class="bg-white text-black px-[2rem]">
+              <div id="offers" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="grid gap-4 border-b border-[var(--form-border)] py-[4rem]">
                   <h2 class="typography-h2 text-[var(--form-text)]">
                     Current offers
@@ -379,7 +379,7 @@
                 </div>
               </div>
             {:else if index == 1}
-              <div id="shop" class="bg-white text-black px-[2rem]">
+              <div id="shop" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="border-b border-dividerColor grid gap-4 py-[4rem]">
                   <div class="space-y-4">
                     <h2 class="typography-h2 text-[var(--form-text)]">
@@ -440,7 +440,7 @@
                 </div>
               </div>
             {:else if index == 2}
-              <div id="likeHome" class="bg-white text-black px-[2rem]">
+              <div id="likeHome" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="border-b border-dividerColor grid gap-4 py-[4rem]">
                   <div class="space-y-4">
                     <h2 class="typography-h2 text-[var(--form-text)]">
@@ -498,7 +498,7 @@
                 </div>
               </div>
             {:else if index == 3}
-              <div id="control" class="bg-white text-black px-[2rem]">
+              <div id="control" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="border-b border-dividerColor grid gap-4 py-[4rem]">
                   <div class="space-y-4">
                     <h2 class="typography-h2 text-[var(--form-text)]">
@@ -554,7 +554,7 @@
                 </div>
               </div>
             {:else if index == 4}
-              <div id="business" class="bg-white text-black px-[2rem]">
+              <div id="business" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <TwoColumn
                   cardImage={content.businessPartnerships.cardImage}
                   cardAltName={content.businessPartnerships.cardAltName}

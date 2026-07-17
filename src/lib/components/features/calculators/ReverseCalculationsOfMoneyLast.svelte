@@ -354,17 +354,17 @@
 
 <section class="w-full mx-auto">
   <div class="grid justify-center md:px-2 lg:px-0 grid-cols-12 gap-4 lg:gap-[2rem]">
-    <div class="relative grid gap-4 md:gap-8 bg-mainBg py-4 lg:py-6 px-3 shadow-md w-full col-span-12 md:col-span-6">
+    <div class="relative grid gap-4 md:gap-8 bg-[var(--landing-bg-alt)] py-4 lg:py-6 px-3 shadow-md w-full col-span-12 md:col-span-6">
       <div class="flex flex-col gap-2 md:gap-4">
         <div class="grid grid-cols-2 gap-2 md:gap-4">
           <div class="flex flex-col gap-2">
             <p class="font-FourthHead text-minParaFont lg:text-paraFont">Current age</p>
-            <div class="flex items-center border border-black bg-white font-SubPara text-minParaFont lg:text-paraFont">
+            <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-SubPara text-minParaFont lg:text-paraFont">
               <input
                 onwheel={(event) => event.currentTarget.blur()}
                 onfocusout={validate}
                 bind:value={ageValue}
-                class="w-full outline-none p-1"
+                class="w-full outline-none p-1 bg-transparent text-[var(--form-text)]"
                 type="number"
               />
               <p class="p-2">Years</p>
@@ -372,13 +372,13 @@
           </div>
           <div class="flex flex-col gap-2">
             <p class="font-FourthHead text-minParaFont lg:text-paraFont">Expected Retirement</p>
-            <div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont">
+            <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont">
               <input
                 onwheel={(event) => event.currentTarget.blur()}
                 onfocusout={validate}
                 bind:value={retirementAge}
                 oninput={() => { retirementAgeError = ""; }}
-                class="w-full p-2 outline-none"
+                class="w-full p-2 outline-none bg-transparent text-[var(--form-text)]"
                 type="number"
               />
               <p class="p-2">Years</p>
@@ -393,13 +393,13 @@
       <div class="grid gap-8">
         <div class="">
           <p class="font-FourthHead text-minParaFont lg:text-paraFont">How and what will you withdraw after retirement?</p>
-          <div class="flex gap-2 items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont relative">
+          <div class="flex gap-2 items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont relative">
             <div class="absolute w-[50%] left-0">
               <Select
                 selectId="frequency"
-                classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white border border-black rounded-none py-2"
-                optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                chevronColor="text-white pr-2"
+                classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                chevronColor="text-[var(--form-text-muted)] pr-2"
                 options={["Monthly", "Quarterly", "Half-Yearly", "Yearly"]}
                 bind:selectedValue={frequencyValue}
                 onChange={validate}
@@ -411,7 +411,7 @@
                 bind:value={monthlyWithdrawal}
                 oninput={validate}
                 onfocusout={validate}
-                class="w-[45%] outline-none pl-2 py-2 text-end"
+                class="w-[45%] outline-none pl-2 py-2 text-end bg-transparent text-[var(--form-text)]"
                 type="number"
               />
               <p class="pr-2 font-FourthHead">₹</p>
@@ -420,7 +420,7 @@
           {#if monthlyWithdrawalError}
             <p class="text-dangerColor text-xs text-end">{monthlyWithdrawalError}</p>
           {:else if monthlyWithdrawal > 0}
-            <p class="text-xs text-black text-end">{toWords.convert(monthlyWithdrawal)}</p>
+            <p class="text-xs text-[var(--form-text-secondary)] text-end">{toWords.convert(monthlyWithdrawal)}</p>
           {/if}
         </div>
       </div>
@@ -431,13 +431,13 @@
             Any increment in withdrawal amount? <br />
             <span class="font-Paragraph text-minParaFont lg:text-subParaFont">(To mitigate the inflation effect over time)</span>
           </p>
-          <div class="grid gap-2 items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont relative">
+          <div class="grid gap-2 items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont relative">
             <div class="absolute w-[50%] left-0">
               <Select
                 selectId="frequency"
-                classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white border border-black rounded-none py-2 w-full"
-                optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                chevronColor="text-white pr-2"
+                classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2 w-full"
+                optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                chevronColor="text-[var(--form-text-muted)] pr-2"
                 options={["Every year", "Every two years", "No increment needed"]}
                 bind:selectedValue={percentageFrequency}
                 onChange={handleFrequencyChange}
@@ -449,7 +449,7 @@
                 onfocusout={validate}
                 bind:value={percentageValue}
                 oninput={() => { handleInputChange(); validate(); }}
-                class="w-[45%] outline-none pl-2 py-2 text-end"
+                class="w-[45%] outline-none pl-2 py-2 text-end bg-transparent text-[var(--form-text)]"
                 type="number"
               />
               <p class="pr-2 font-FourthHead">%</p>
@@ -470,14 +470,14 @@
           <div class="grid gap-8">
             <div class="flex flex-col gap-2">
               <p class="font-FourthHead text-minParaFont lg:text-paraFont">Expected annual return</p>
-              <div class="flex gap-2 items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont relative">
+              <div class="flex gap-2 items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont relative">
                 <div class="flex flex-end items-center justify-end gap-2 w-full">
                   <p class="font-FourthHead p-2">%</p>
                   <input
                     onwheel={(event) => event.currentTarget.blur()}
                     bind:value={annualInterestRate}
                     oninput={() => { interestRateError = ""; }}
-                    class="w-full outline-none py-2 text-start"
+                    class="w-full outline-none py-2 text-start bg-transparent text-[var(--form-text)]"
                     type="number"
                   />
                 </div>
@@ -488,9 +488,9 @@
             <p class="font-FourthHead text-minParaFont lg:text-paraFont">Interest Compounding</p>
             <Select
               selectId="frequency"
-              classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-white text-black border border-black rounded-none py-2"
-              optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-              chevronColor="text-black pr-2"
+              classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+              optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+              chevronColor="text-[var(--form-text-muted)] pr-2"
               options={["Monthly", "Quarterly", "Half-Yearly", "Yearly"]}
               bind:selectedValue={compoundFrequency}
             />
@@ -501,13 +501,13 @@
       <div class="grid grid-cols-1 gap-8">
         <div class="flex flex-col gap-2 pb-4">
           <p class="font-FourthHead text-minParaFont lg:text-paraFont">Expected tenure your savings should support you?</p>
-          <div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont relative">
+          <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont relative">
             <div class="absolute w-[50%] left-0">
               <Select
                 selectId="frequency"
-                classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white border border-black rounded-none py-2 w-full"
-                optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                chevronColor="text-white pr-2"
+                classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2 w-full"
+                optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                chevronColor="text-[var(--form-text-muted)] pr-2"
                 options={["Months", "Years"]}
                 bind:selectedValue={expectedSavingValue}
                 onChange={handleFrequencyChange}
@@ -519,7 +519,7 @@
                 bind:value={tenure}
                 oninput={() => { exceptedError = ""; }}
                 onfocusout={validate}
-                class="w-[45%] outline-none pr-2 py-2 text-end"
+                class="w-[45%] bg-transparent text-[var(--form-text)] outline-none pr-2 py-2 text-end"
                 type="number"
               />
             </div>
@@ -540,7 +540,7 @@
           onChange={() => { validate(); }}
         />
         {#if closingBalance}
-          <p class="text-xs text-black">{toWords.convert(closingBalance)}</p>
+          <p class="text-xs text-[var(--form-text-secondary)]">{toWords.convert(closingBalance)}</p>
         {/if}
       </div>
 
@@ -556,7 +556,7 @@
 
     {#if monthlyData.length > 0}
       <div id="resultView" class="flex flex-col py-[2rem] lg:py-[4rem] gap-[2rem] lg:gap-[4rem] bg-darkColor col-span-12 md:col-span-6">
-        <div class="flex flex-col items-center justify-center gap-2 text-center text-black p-[2rem] bg-mainBg border-x border-darkColor border-dotted lg:border-none w-full mx-auto animate-fade">
+        <div class="flex flex-col items-center justify-center gap-2 text-center text-[var(--form-text)] p-[2rem] bg-[var(--landing-bg-alt)] border-x border-[var(--form-border)] border-dotted lg:border-none w-full mx-auto animate-fade">
           <p class="font-FifthHead text-miniHeadFont md:text-mobHeadFont">
             ₹ {Math.round(initialBalance).toLocaleString("en-IN")}
           </p>

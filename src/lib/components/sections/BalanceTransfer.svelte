@@ -198,7 +198,7 @@
 	keywords="Home loan balance transfer, Transfer home loan to another bank, Lower home loan interest rate, Home loan EMI savings, Best home loan transfer offers, Home loan refinance, Reduce home loan EMI, Compare home loan rates, Home loan prepayment options, Home loan top-up loan, Home loan eligibility checker, Home loan transfer calculator, Home loan balance transfer process, Lowest home loan interest rates, Best home loan lenders"
 />
 
-<section class="bg-mainBg mx-auto w-full">
+<section class="bg-[var(--landing-bg)] mx-auto w-full">
 	<PageDesign {pageData} actionBtns={content.actionBtns}>
 		<!-- desktop view -->
 		<div class="hidden lg:block">

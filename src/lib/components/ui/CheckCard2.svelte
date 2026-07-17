@@ -7,7 +7,7 @@
 ;
 </script>
 
-<div class="flex flex-col gap-4 p-4 bg-white max-w-[20rem] shadow-md h-full">
+<div class="flex flex-col gap-4 p-4 bg-[var(--landing-bg-card)] text-[var(--form-text)] max-w-[20rem] shadow-md h-full">
   <div
     class="rounded-full bg-gray-200 flex justify-center items-center mx-auto w-[5rem] h-[5rem] relative overflow-hidden"
   >

@@ -88,8 +88,8 @@
             bind:group={selectedOption}
             class="peer hidden form-radio h-4 w-4 border-gray-300 text-btnBg focus:ring-btnBg"
           />
-          <div class="h-4 w-4 border bg-white border-black rounded-full flex items-center justify-center peer-checked:bg-btnBg">
-            <div class="bg-white rounded-full"></div>
+          <div class="h-4 w-4 border bg-[var(--form-bg)] border-[var(--form-border)] rounded-full flex items-center justify-center peer-checked:bg-btnBg">
+            <div class="bg-[var(--form-bg)] rounded-full"></div>
           </div>
           <span class="">Yes</span>
         </label>
@@ -101,8 +101,8 @@
             bind:group={selectedOption}
             class="peer hidden form-radio h-4 w-4 border-gray-300 text-btnBg focus:ring-btnBg"
           />
-          <div class="h-4 w-4 border bg-white border-black rounded-full flex items-center justify-center peer-checked:bg-btnBg">
-            <div class="bg-white rounded-full"></div>
+          <div class="h-4 w-4 border bg-[var(--form-bg)] border-[var(--form-border)] rounded-full flex items-center justify-center peer-checked:bg-btnBg">
+            <div class="bg-[var(--form-bg)] rounded-full"></div>
           </div>
           <span class="">No</span>
         </label>
@@ -113,7 +113,7 @@
   <div class="px-3 py-5 grid gap-1">
     {#if $budgetData.incomeDataArray?.length > 0}
       {#each $budgetData.incomeDataArray as incomeArray, indexValue}
-        <div class="font-FourthHead text-subParaFont md:text-miniSubHead py-2 bg-white px-3">
+        <div class="font-FourthHead text-subParaFont md:text-miniSubHead py-2 bg-[var(--landing-bg-alt)] text-[var(--form-text)] px-3">
           {#if indexValue === 0}
             <p class="">{selectedOption === "yes" ? "First" : "Individual"}</p>
           {:else}
@@ -139,7 +139,7 @@
                 {/if}
               </div>
               <div class="grid grid-cols-2 font-Paragraph text-minParaFont md:text-paraFont">
-                <div class="flex items-center justify-center gap-2 bg-white border-black pl-2 font-Paragraph text-minParaFont md:text-paraFont">
+                <div class="flex items-center justify-center gap-2 bg-[var(--form-bg)] border-[var(--form-border)] text-[var(--form-text)] pl-2 font-Paragraph text-minParaFont md:text-paraFont">
                   <span>₹</span>
                   <input
                     bind:value={item.value}
@@ -148,14 +148,14 @@
                         item.value = item.value.slice(0, -1);
                       }
                     }}
-                    class="w-full bg-white p-2 outline-none"
+                    class="w-full bg-transparent text-[var(--form-text)] p-2 outline-none"
                   />
                 </div>
                 <Select
                   selectId="itemDuration"
-                  classFont="font-Paragraph text-minParaFont md:text-paraFont pl-2 bg-black text-white rounded-none py-2"
-                  optionClass="font-Paragraph text-minParaFont md:text-paraFont bg-black text-white"
-                  chevronColor="text-white"
+                  classFont="font-Paragraph text-minParaFont md:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                  optionClass="font-Paragraph text-minParaFont md:text-paraFont bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                  chevronColor="text-[var(--form-text-muted)]"
                   options={dropdownData}
                   bind:selectedValue={item.duration}
                 />

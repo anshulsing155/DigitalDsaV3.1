@@ -28,7 +28,7 @@
       onkeydown={(e) => e.key === "Escape" && onClose()}
     ></div>
 
-    <div class="relative bg-white w-[90%] max-w-md shadow-md rounded-md z-50">
+    <div class="relative bg-[var(--landing-bg-card)] text-[var(--form-text)] w-[90%] max-w-md shadow-md rounded-md z-50">
       <div
         class="relative px-[3rem] pt-[3rem] pb-4 flex flex-col justify-center items-center gap-[2rem] md:gap-[3rem] z-50"
       >
@@ -41,7 +41,7 @@
 
         <!-- Dynamic Text Section -->
         <div class="flex flex-col gap-4 text-center">
-          <h2 class="typography-h3 text-black">{@html content.title}</h2>
+          <h2 class="typography-h3 text-[var(--form-text)]">{@html content.title}</h2>
           <p class="typography-body-md text-[var(--form-text-secondary)]">
             {@html content.subTitle}
           </p>

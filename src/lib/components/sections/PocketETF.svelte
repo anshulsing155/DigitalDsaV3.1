@@ -417,12 +417,12 @@
           </summary>
 
           {#if index == 0}
-          <div id="benefitFeature" data-section="benefitFeature" class="bg-white px-[2rem] py-[2rem] text-black">
+          <div id="benefitFeature" data-section="benefitFeature" class="bg-[var(--landing-bg-card)] px-[2rem] py-[2rem] text-[var(--form-text)]">
             <WhyChoose facilities={benefitFeature} gridCol={4}/>
 
         </div>
           {:else if index == 1}
-          <div id="whatETF" data-section="whatETF" class="bg-white px-[2rem] py-[2rem] text-black">
+          <div id="whatETF" data-section="whatETF" class="bg-[var(--landing-bg-card)] px-[2rem] py-[2rem] text-[var(--form-text)]">
             <TwoColumn
             cardImage={cardImg2}
             cardAltName={cardAlt2}
@@ -458,7 +458,7 @@
           </TwoColumn>
         </div>
           {:else if index == 2}
-          <div id="investment" data-section="investment" class="bg-white px-[2rem] py-[2rem] text-black">
+          <div id="investment" data-section="investment" class="bg-[var(--landing-bg-card)] px-[2rem] py-[2rem] text-[var(--form-text)]">
             <div class="space-y-5">
                 <h2 class="md:text-start typography-h2 text-[var(--form-text)]">More on those investment options
                 </h2>
@@ -473,7 +473,7 @@
 
         </div>
           {:else if index == 3}
-          <div  id="learn" data-section="learn" class="bg-white px-[2rem] py-[2rem] text-black">
+          <div  id="learn" data-section="learn" class="bg-[var(--landing-bg-card)] px-[2rem] py-[2rem] text-[var(--form-text)]">
             <Ways ways={learnMore} />
             <div
               class="flex flex-col gap-[1rem] border-b border-[var(--form-border)] py-[2rem]"

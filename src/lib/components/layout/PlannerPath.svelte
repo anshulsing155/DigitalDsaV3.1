@@ -64,14 +64,12 @@
 
 <div
   id="stickyNav"
-  class="{isFixed
-    ? 'fixed top-0  shadow-md bg-white pb-2 z-50'
-    : ''}  hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4"
+  class="grid-cols-1 sm:grid-cols-2 md:grid-cols-4 hidden md:grid {isFixed ? 'fixed top-0 shadow-md bg-[var(--landing-bg-card)] text-[var(--form-text)] pb-2 z-50' : ''}"
 >
   {#each Calculators as calculator}
     <button
-      class={`col-span-1 grid items-center justify-center p-1 lg:p-[1rem] transition-colors
-                ${activeId === calculator.id ? "bg-black text-white" : "border border-darkColor"}`}
+      class={`col-span-1 grid items-center justify-center p-1 lg:p-[1rem] transition-colors cursor-pointer
+                ${activeId === calculator.id ? "bg-[var(--landing-accent)] text-[var(--landing-accent-text)]" : "bg-[var(--landing-bg-card)] text-[var(--form-text)] hover:bg-[var(--landing-bg-alt)]"} border border-[var(--form-border)]`}
       on:click={() => navigateTo(calculator.id, calculator.link)}
       aria-label={`Navigate to ${calculator.calc}`}
     >

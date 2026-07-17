@@ -35,8 +35,8 @@
 		options = [],
 		iconBg = `bg-primary`,
 		optionListClass = `hover:bg-primary`,
-		optionClass = `border-l border-b border-[var(--form-border)] bg-white text-black`,
-		chevronColor = "text-gray-600",
+		optionClass = `border-l border-b border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)]`,
+		chevronColor = "text-[var(--form-text-muted)]",
 		nestedOptions = [],
 		disabled = false,
 		showOptionsHeight = "absolute",
@@ -155,14 +155,14 @@
           onblur={handleBlur}
           onchange={onChange}
           bind:value={selectedValue}
-          class="border-1 peer block w-full border py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-black outline-none focus:border-[var(--form-border)] focus:ring-0 {disabled ? 'cursor-not-allowed bg-gray-100' : 'cursor-pointer border-[#0000003A] bg-white'}"
+          class="border-1 peer block w-full border py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-[var(--form-text)] outline-none focus:border-[var(--form-border-hover)] focus:ring-0 {disabled ? 'cursor-not-allowed bg-[var(--form-bg-disabled)]' : 'cursor-pointer border-[var(--form-border)] bg-[var(--form-bg)]'}"
           bind:this={inputRef}
           {disabled}
         />
 
         <label
           for={selectId}
-          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 typography-body-md {disabled ? 'bg-gray-100 text-black' : 'bg-white text-gray-500'} duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-primary"
+          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 typography-body-md {disabled ? 'bg-[var(--form-bg-disabled)] text-[var(--form-text)]' : 'bg-[var(--form-bg)] text-[var(--form-text-muted)]'} duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-primary"
         >
           {placeholder}
         </label>
@@ -191,14 +191,14 @@
           onblur={handleBlur}
           onchange={onChange}
           bind:value={selectedTitle}
-          class="border-1 peer block w-full border border-[#0000003A] py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-black focus:border-[var(--form-border)] outline-none focus:ring-0 {disabled ? 'cursor-not-allowed bg-gray-100' : 'cursor-pointer bg-white'}"
+          class="border-1 peer block w-full border border-[var(--form-border)] py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-[var(--form-text)] focus:border-[var(--form-border-hover)] outline-none focus:ring-0 {disabled ? 'cursor-not-allowed bg-[var(--form-bg-disabled)]' : 'cursor-pointer bg-[var(--form-bg)]'}"
           bind:this={inputRef}
           {disabled}
         />
 
         <label
           for={selectId}
-          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none {disabled ? 'bg-gradient-to-t from-gray-100 via-gray-100 to-white text-black' : 'bg-white text-gray-500'} px-2 typography-body-md duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-primary"
+          class="absolute left-11 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none {disabled ? 'bg-[var(--form-bg-disabled)] text-[var(--form-text)]' : 'bg-[var(--form-bg)] text-[var(--form-text-muted)]'} px-2 typography-body-md duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-primary"
         >
           {placeholder}
         </label>
@@ -221,13 +221,13 @@
 
     {#if showOptions}
       <ul
-        class="absolute -top-[17svh] border md:top-full md:border-t-0 md:border-x md:border-b {showOptionsHeight} w-full bg-white text-black shadow-md cursor-pointer z-50 rounded-b max-h-[40svh] overflow-auto typography-body-md text-para {optionClass}"
+        class="absolute -top-[17svh] border md:top-full md:border-t-0 md:border-x md:border-b {showOptionsHeight} w-full bg-[var(--form-bg)] text-[var(--form-text)] shadow-md cursor-pointer z-50 rounded-b max-h-[40svh] overflow-auto typography-body-md text-para {optionClass}"
         bind:this={dropdownRef}
       >
         {#if Array.isArray(options) && options.length}
           {#each options as option, index}
             <li
-              class="{optionListClass} py-2 px-4 {index < options.length - 1 ? 'border-b' : ''} border-gray-200 transition-all ease-in-out duration-200"
+              class="{optionListClass} py-2 px-4 {index < options.length - 1 ? 'border-b' : ''} border-[var(--form-border)] transition-all ease-in-out duration-200"
               role="option"
               tabindex="0"
               aria-selected={isSelected(option)}

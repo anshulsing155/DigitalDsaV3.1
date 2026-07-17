@@ -8,7 +8,7 @@
 </script>
 
 <div
-  class="grid grid-cols-2 gap-4 p-2 bg-white max-w-[40rem] relative shadow-md"
+  class="grid grid-cols-2 gap-4 p-2 bg-[var(--landing-bg-card)] text-[var(--form-text)] max-w-[40rem] relative shadow-md"
 >
   <div class="col-span-1 bg-gray-200 flex justify-center items-center mx-auto">
     <img src={contents.profileImg} alt="" class="object-cover" />

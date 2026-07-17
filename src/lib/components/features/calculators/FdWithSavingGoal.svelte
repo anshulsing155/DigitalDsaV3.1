@@ -143,16 +143,16 @@
 
 <section class="w-full mx-auto">
     <div class="grid justify-center px-1 md:px-2 lg:px-0 grid-cols-12 gap-4 lg:gap-[2rem]">
-        <div class="relative grid gap-4 md:gap-8 bg-mainBg py-4 lg:py-6 px-3 shadow-md w-full col-span-12 md:col-span-6">
+        <div class="relative grid gap-4 md:gap-8 bg-[var(--landing-bg-alt)] text-[var(--form-text)] py-4 lg:py-6 px-3 shadow-md w-full col-span-12 md:col-span-6">
             <div class="grid grid-cols-2 gap-4 pb-4">
                 <div>
                     <div class="flex flex-col gap-2">
                         <p class="font-FourthHead text-minParaFont lg:text-paraFont">Occupation</p>
                         <Select
                             selectId="frequency"
-                            classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-white text-black border border-black rounded-none py-2"
-                            optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                            chevronColor="text-black pr-2"
+                            classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                            optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                            chevronColor="text-[var(--form-text-muted)] pr-2"
                             options={["Government", "Private", "Business", "Other"]}
                             bind:selectedValue={selectedOccupations}
                         />
@@ -162,11 +162,11 @@
                 <div>
                     <div class="flex flex-col gap-2">
                         <p class="font-FourthHead text-minParaFont lg:text-paraFont">Current age</p>
-                        <div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont">
+                        <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont">
                             <input
                                 onwheel={(event) => event.currentTarget.blur()}
                                 bind:value={ageValue}
-                                class="w-full ml-2 pt-2 pb-1 pl-0 pr-2 outline-none"
+                                class="w-full ml-2 pt-2 pb-1 pl-0 pr-2 outline-none bg-transparent text-[var(--form-text)]"
                                 type="number"
                             />
                             <p class="p-2">Years</p>
@@ -183,9 +183,9 @@
                     <p class="font-FourthHead text-minParaFont lg:text-paraFont">Tools</p>
                     <Select
                         selectId="frequency"
-                        classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-white text-black border border-black rounded-none py-2"
-                        optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                        chevronColor="text-black pr-2"
+                        classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                        optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                        chevronColor="text-[var(--form-text-muted)] pr-2"
                         options={[
                             "Systematic Investment Plan(SIP)",
                             "Recurring Deposit(RD)",
@@ -211,7 +211,7 @@
                 {#if savingGoalError}
                     <p class="text-xs text-dangerColor">{savingGoalError}</p>
                 {:else if savingGoal > 0}
-                    <p class="text-xs text-black">{toWords.convert(savingGoal)}</p>
+                    <p class="text-xs text-[var(--form-text-secondary)]">{toWords.convert(savingGoal)}</p>
                 {/if}
             </div>
 
@@ -220,13 +220,13 @@
                     <p class="font-FourthHead text-minParaFont lg:text-paraFont">
                         Expected annual return <span class="font-Paragraph text-minParaFont lg:text-subParaFont">(Rate of Interest)</span>
                     </p>
-                    <div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont">
+                    <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont">
                         <p class="p-2 font-FourthHead">%</p>
                         <input
                             onwheel={(event) => event.currentTarget.blur()}
                             bind:value={rate}
                             oninput={() => { rateError = ""; }}
-                            class="w-full pt-2 pb-2 pl-0 pr-2 outline-none"
+                            class="w-full pt-2 pb-2 pl-0 pr-2 outline-none bg-transparent text-[var(--form-text)]"
                             type="number"
                         />
                     </div>
@@ -241,9 +241,9 @@
                     <p class="font-FourthHead text-minParaFont lg:text-paraFont">Compound Interest Frequency</p>
                     <Select
                         selectId="frequency"
-                        classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-white text-black border border-black rounded-none py-2"
-                        optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                        chevronColor="text-black pr-2"
+                        classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                        optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                        chevronColor="text-[var(--form-text-muted)] pr-2"
                         options={["Monthly", "Quarterly", "Half-Yearly", "Yearly"]}
                         bind:selectedValue={frequency}
                     />
@@ -255,9 +255,9 @@
                     <p class="font-FourthHead text-minParaFont lg:text-paraFont">Which one would you like to specify?</p>
                     <Select
                         selectId="frequency"
-                        classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-white text-black border border-black rounded-none py-2"
-                        optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                        chevronColor="text-black pr-2"
+                        classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                        optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                        chevronColor="text-[var(--form-text-muted)] pr-2"
                         options={["Tenure", "Investment Amount"]}
                         bind:selectedValue={specifySelection}
                     />
@@ -268,12 +268,12 @@
                 <div class="">
                     <div class="flex flex-col gap-2">
                         <p class="font-FourthHead text-minParaFont lg:text-paraFont">I'll invest for</p>
-                        <div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont">
+                        <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont">
                             <input
                                 onwheel={(event) => event.currentTarget.blur()}
                                 bind:value={years}
                                 oninput={() => { yearError = ""; }}
-                                class="w-full ml-2 pt-2 pb-2 pl-0 pr-2 outline-none"
+                                class="w-full ml-2 pt-2 pb-2 pl-0 pr-2 outline-none bg-transparent text-[var(--form-text)]"
                                 type="number"
                             />
                             <p class="p-2">Years</p>
@@ -287,13 +287,13 @@
                 <div class="">
                     <div class="flex flex-col gap-2">
                         <p class="font-FourthHead text-minParaFont lg:text-paraFont">Total Investment <span class="font-Paragraph text-minParaFont lg:text-subParaFont">(₹)</span></p>
-                        <div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont">
+                        <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont">
                             <p class="p-2">₹</p>
                             <input
                                 onwheel={(event) => event.currentTarget.blur()}
                                 bind:value={totalInvestmentAmount}
                                 oninput={() => { investmentError = ""; }}
-                                class="w-full pt-2 pb-2 pl-0 pr-2 outline-none"
+                                class="w-full pt-2 pb-2 pl-0 pr-2 outline-none bg-transparent text-[var(--form-text)]"
                                 type="number"
                             />
                         </div>
@@ -317,7 +317,7 @@
         <div id="resultView" class="flex flex-col py-[2rem] lg:py-[4rem] gap-[2rem] lg:gap-[4rem] bg-darkColor col-span-12 md:col-span-6">
             {#if specifySelection == "Tenure"}
                 <div class="mt-[1rem] flex flex-col items-center justify-center gap-2 text-center text-white md:mt-0">
-                    <div class="flex flex-wrap items-center justify-center gap-2 text-center text-black p-[2rem] bg-mainBg border-x border-darkColor border-dotted lg:border-none w-full mx-auto animate-fade">
+                    <div class="flex flex-wrap items-center justify-center gap-2 text-center text-[var(--form-text)] p-[2rem] bg-[var(--landing-bg-alt)] border-x border-[var(--form-border)] border-dotted lg:border-none w-full mx-auto animate-fade">
                         <p class="w-full font-FifthHead text-miniHeadFont md:text-mobHeadFont">{years} years</p>
                         <p>
                             You need to invest <span class="px-2 font-FourthHead">₹ {Math.round(requiredInvestment).toLocaleString("en-IN")}</span> to reach your goal of <br>
@@ -364,7 +364,7 @@
                 </div>
 
                 <div class="mt-[1rem] flex flex-col items-center justify-center gap-2 text-center text-white md:mt-0 animate-fade">
-                    <div class="result text-black p-[2rem] bg-mainBg border-x border-darkColor border-dotted lg:border-none w-full mx-auto">
+                    <div class="result text-[var(--form-text)] p-[2rem] bg-[var(--landing-bg-alt)] border-x border-[var(--form-border)] border-dotted lg:border-none w-full mx-auto">
                         To achieve your goal amount of <span class="text-btnBg font-FifthHead">₹ {savingGoal}</span> in <br />
                         <span class="text-btnBg font-FifthHead text-minSubHead">{convertMonths(tenureMonths)}</span>
                     </div>

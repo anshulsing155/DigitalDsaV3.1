@@ -18,7 +18,7 @@
 	};
 </script>
   
-<div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont md:text-paraFont">
+<div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont md:text-paraFont">
 	<p class="p-2">₹</p>
 	<input
 		placeholder={placeHolder}
@@ -26,7 +26,7 @@
 		oninput={(e) => { handleInputLoanAmount(e); onInput(e); }}
 		onchange={onChange}
 		onwheel={(event) => event.currentTarget.blur()}
-		class="w-full pt-2 pb-2 pl-0 pr-2 outline-none"
+		class="w-full pt-2 pb-2 pl-0 pr-2 outline-none bg-transparent text-[var(--form-text)]"
 		type="text"
 	/>
 </div>

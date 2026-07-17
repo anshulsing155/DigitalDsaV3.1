@@ -87,7 +87,7 @@
 >
   <div class="relative overflow-hidden w-full">
     <!-- Progress bar -->
-    <div class="w-full h-1 bg-gray-200">
+    <div class="w-full h-1 bg-[var(--form-border)]">
       <div class="h-full bg-btnBg transition-all duration-100 ease-linear" style="width: {progress}%" />
     </div>
     <div class="flex w-full mt-4" bind:this={track} style="transform: translateX(0);">

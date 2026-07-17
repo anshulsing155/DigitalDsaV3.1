@@ -138,33 +138,33 @@
     <div class="animate-pulse h-6 w-20 bg-gray-300 rounded"></div>
   </div>
 {:else}
-  <div id="counter-container" class="flex justify-start items-start gap-[1.5rem] md:gap-[3rem] md:w-[80%] text-left">
+  <div id="counter-container" class="flex justify-start items-start gap-[1.5rem] md:gap-[3rem] md:w-[80%] text-left text-[var(--landing-text)]">
     <div class="flex flex-col gap-1">
-      <p class="font-ThirdHead text-xl md:text-2xl font-bold text-gray-900">
-        {applications}<span><sup class="text-black font-semibold">+</sup></span>
+      <p class="font-ThirdHead text-xl md:text-2xl font-bold text-[var(--landing-text)]">
+        {applications}<span><sup class="text-[var(--landing-text)] font-semibold">+</sup></span>
       </p>
-      <p class="font-SubPara text-xs text-gray-600">Applications</p>
+      <p class="font-SubPara text-xs text-[var(--landing-text-secondary)]">Applications</p>
     </div>
 
     <div class="flex flex-col gap-1">
-      <p class="font-ThirdHead text-xl md:text-2xl font-bold text-gray-900">
-        {cities}<span><sup class="text-black font-semibold">+</sup></span>
+      <p class="font-ThirdHead text-xl md:text-2xl font-bold text-[var(--landing-text)]">
+        {cities}<span><sup class="text-[var(--landing-text)] font-semibold">+</sup></span>
       </p>
-      <p class="font-SubPara text-xs text-gray-600">Cities</p>
+      <p class="font-SubPara text-xs text-[var(--landing-text-secondary)]">Cities</p>
     </div>
 
     <div class="flex flex-col gap-1">
-      <p class="font-ThirdHead text-xl md:text-2xl font-bold text-gray-900">
-        {Math.round(loan)}Cr<span><sup class="text-black font-semibold">+</sup></span>
+      <p class="font-ThirdHead text-xl md:text-2xl font-bold text-[var(--landing-text)]">
+        {Math.round(loan)}Cr<span><sup class="text-[var(--landing-text)] font-semibold">+</sup></span>
       </p>
-      <p class="font-SubPara text-xs text-gray-600">Disbursed</p>
+      <p class="font-SubPara text-xs text-[var(--landing-text-secondary)]">Disbursed</p>
     </div>
 
     <div class="flex flex-col gap-1">
-      <p class="font-ThirdHead text-xl md:text-2xl font-bold text-gray-900">
-        {lender}<span><sup class="text-black font-semibold">+</sup></span>
+      <p class="font-ThirdHead text-xl md:text-2xl font-bold text-[var(--landing-text)]">
+        {lender}<span><sup class="text-[var(--landing-text)] font-semibold">+</sup></span>
       </p>
-      <p class="font-SubPara text-xs text-gray-600">Lender's</p>
+      <p class="font-SubPara text-xs text-[var(--landing-text-secondary)]">Lender's</p>
     </div>
   </div>
 {/if}

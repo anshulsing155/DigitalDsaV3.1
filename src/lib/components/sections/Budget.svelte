@@ -108,7 +108,7 @@
 <section class="relative">
   <div id="testNav" class="">
     <div
-      class="md:hidden bg-white flex flex-col left-0 w-full z-30 pt-5 px-2 {isFixed
+      class="md:hidden bg-[var(--landing-bg-card)] flex flex-col left-0 w-full z-30 pt-5 px-2 {isFixed
         ? 'fixed top-0 pb-4'
         : ''}"
     >
@@ -124,9 +124,9 @@
   <div class="w-full">
     <div
       id="pageDesign"
-      class="relative mx-auto flex flex-col justify-center bg-white w-full"
+      class="relative mx-auto flex flex-col justify-center bg-[var(--landing-bg)] w-full"
     >
-      <div class="hidden md:block bg-white z-30 shadow-md pt-[2rem]">
+      <div class="hidden md:block bg-[var(--landing-bg-card)] z-30 shadow-md pt-[2rem]">
         <PlannerPath bind:activeId={plannerNumber} />
       </div>
       <div

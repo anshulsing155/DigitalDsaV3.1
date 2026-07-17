@@ -39,7 +39,7 @@
       oninput={(event) => onInputHandler(event)}
       onchange={(event) => onChangeHandler(event)}
       {disabled}
-      class="border-1 peer block w-full appearance-none border border-[#0000003A] py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-black outline-none focus:border-[var(--form-border)] focus:ring-0 {disabled ? 'cursor-not-allowed bg-gray-100' : 'cursor-pointer bg-white'}"
+      class="border-1 peer block w-full appearance-none border border-[var(--form-border)] py-[0.6rem] pl-[3rem] pr-4 typography-body-md text-para text-[var(--form-text)] outline-none focus:border-[var(--form-border-hover)] focus:ring-0 {disabled ? 'cursor-not-allowed bg-[var(--form-bg-disabled)]' : 'cursor-pointer bg-[var(--form-bg)]'}"
       {...inputType === "password"
         ? { type: "password" }
         : inputType === "email"
@@ -48,7 +48,7 @@
     />
     <label
       for={name}
-      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 typography-body-md {disabled ? 'bg-gradient-to-t from-gray-100 via-gray-100 to-white text-black' : 'bg-white text-gray-500'} duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
+      class="absolute left-11 top-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none px-2 typography-body-md {disabled ? 'bg-[var(--form-bg-disabled)] text-[var(--form-text)]' : 'bg-[var(--form-bg)] text-[var(--form-text-muted)]'} duration-300 peer-placeholder-shown:top-1 peer-focus:text-primary"
     >
       {label}
     </label>

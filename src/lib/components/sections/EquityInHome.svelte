@@ -353,11 +353,11 @@ window.removeEventListener("scroll", handleScroll);
             </summary>
 
             {#if index == 0}
-              <div id="equity" class="bg-white text-black px-[2rem]">
+              <div id="equity" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <ThingsYouShould thinkKnow={equity} />
               </div>
             {:else if index == 1}
-              <div id="works" class="bg-white text-black px-[2rem]">
+              <div id="works" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <ThingsYouShould thinkKnow={works} />
                 <HomeIntrest
                   homeInterest="Book a time with a Home Lending Specialist, instantly"
@@ -367,11 +367,11 @@ window.removeEventListener("scroll", handleScroll);
                 />
               </div>
             {:else if index == 2}
-              <div id="build" class="bg-white text-black px-[2rem]">
+              <div id="build" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <ThingsYouShould thinkKnow={build} />
               </div>
             {:else if index == 3}
-              <div id="calculate" class="bg-white text-black px-[2rem]">
+              <div id="calculate" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div
               class="flex flex-col gap-[2rem] py-[2rem] border-b border-[var(--form-border)]"
             >
@@ -402,7 +402,7 @@ window.removeEventListener("scroll", handleScroll);
             </div>
               </div>
             {:else if index == 4}
-              <div id="know" class="bg-white text-black px-[2rem]">
+              <div id="know" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
               </div>
             {/if}
           </details>

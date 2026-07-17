@@ -139,12 +139,12 @@
             </svg>
           </div>
 
-          <blockquote class="font-FourthHead text-para text-gray-700 leading-relaxed">
+          <blockquote class="font-FourthHead text-para text-[var(--landing-text-secondary)] leading-relaxed">
             "{carouselItems[currentIndex].review}"
           </blockquote>
           <div class="flex flex-col justify-start">
-            <p class="font-FourthHead text-gray-900">— {carouselItems[currentIndex].name}</p>
-            <p class="text-sm text-gray-500">{carouselItems[currentIndex].job}</p>
+            <p class="font-FourthHead text-[var(--landing-text)]">— {carouselItems[currentIndex].name}</p>
+            <p class="text-sm text-[var(--landing-text-muted)]">{carouselItems[currentIndex].job}</p>
           </div>
         </div>
       </div>
@@ -155,14 +155,14 @@
   <div class="absolute bottom-4 right-4 flex gap-2">
     <button
       onclick={prev}
-      class="px-4 py-2 border rounded font-medium text-sm transition-colors {animating ? 'border-gray-300 opacity-50 cursor-not-allowed' : 'border-btnBg text-btnBg hover:bg-btnBg hover:text-white'}"
+      class="px-4 py-2 border rounded font-medium text-sm transition-colors {animating ? 'border-gray-300 opacity-50 cursor-not-allowed' : 'border-btnBg text-btnBg hover:bg-btnBg hover:text-[var(--landing-accent-text)]'}"
       aria-label="Previous"
     >
       <i class="fa-solid fa-angle-left"></i>
     </button>
     <button
       onclick={next}
-      class="px-4 py-2 border rounded font-medium text-sm transition-colors {animating ? 'border-gray-300 opacity-50 cursor-not-allowed' : 'border-btnBg text-btnBg hover:bg-btnBg hover:text-white'}"
+      class="px-4 py-2 border rounded font-medium text-sm transition-colors {animating ? 'border-gray-300 opacity-50 cursor-not-allowed' : 'border-btnBg text-btnBg hover:bg-btnBg hover:text-[var(--landing-accent-text)]'}"
       aria-label="Next"
     >
       <i class="fa-solid fa-angle-right"></i>
@@ -170,7 +170,7 @@
   </div>
 
   <!-- Progress Bar -->
-  <div class="absolute bottom-0 left-0 w-full h-1 bg-gray-200">
+  <div class="absolute bottom-0 left-0 w-full h-1 bg-[var(--landing-glass-border)]">
     <div class="h-full bg-btnBg transition-all duration-100 ease-linear" style="width: {progress}%" />
   </div>
 </div>

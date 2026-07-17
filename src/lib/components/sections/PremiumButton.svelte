@@ -20,7 +20,7 @@
 
 <!-- px-[4rem] py-4 ml-4 overflow-hidden rounded-full bg-primary border -->
 {#if premiumBtnName}
-	<a class="text-black" href={`${premiumBtnLink}`}>
+	<a class="text-[var(--landing-accent-text)]" href={`${premiumBtnLink}`}>
 		<button
 			type="button"
 			onclick={onClick}
@@ -32,7 +32,7 @@
 		>
 			{premiumBtnName}
 			<span
-				class="whitespace-no-wrap absolute top-0 right-0 origin-bottom-left translate-x-1/3 -translate-y-full rotate-45 transform bg-white text-black dark:bg-[var(--landing-bg)] dark:text-white px-5 py-1 text-center typography-caption font-semibold uppercase"
+				class="whitespace-no-wrap absolute top-0 right-0 origin-bottom-left translate-x-1/3 -translate-y-full rotate-45 transform bg-[var(--landing-bg-card)] text-[var(--form-text)] px-5 py-1 text-center typography-caption font-semibold uppercase"
 			>
 				Premium
 			</span>

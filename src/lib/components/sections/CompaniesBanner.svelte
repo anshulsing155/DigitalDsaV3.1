@@ -32,7 +32,7 @@
             title={bank.name}
             src={bank.icon}
             alt="companyImg"
-            class="h-[2rem] grayscale"
+            class="h-[2rem] grayscale dark:invert"
           />
         </div>
       {/each}

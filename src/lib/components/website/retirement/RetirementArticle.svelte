@@ -29,7 +29,7 @@
 			para: article.intro[0] || ''
 		}}
 	>
-		<div id="pageDesign" class="mx-auto bg-white py-4">
+		<div id="pageDesign" class="mx-auto bg-[var(--landing-bg-card)] text-[var(--form-text)] py-4">
 			<!-- Extra Intro Paragraphs if any -->
 			{#if article.intro.length > 1}
 				<div class="px-[0.5rem] lg:px-[4rem] pb-[3rem]">
@@ -54,8 +54,8 @@
 							</p>
 						{/if}
 						<div class="overflow-x-auto my-6 rounded-lg border border-[var(--form-border)]">
-							<table class="min-w-full border-collapse text-left bg-white font-sans text-sm">
-								<thead class="bg-gray-100 border-b border-[var(--form-border)]">
+							<table class="min-w-full border-collapse text-left bg-[var(--landing-bg-card)] font-sans text-sm">
+								<thead class="bg-[var(--landing-bg-alt)] border-b border-[var(--form-border)]">
 									<tr>
 										{#each section.headers as header}
 											<th class="px-6 py-4 font-semibold text-[var(--form-text)] text-xs uppercase tracking-wider">

@@ -28,7 +28,7 @@
     {/if}
   </div>
   <div
-    class="flex flex-col gap-[1rem] bg-white sm:grid sm:grid-cols-2 md:gap-[1rem] lg:grid-cols-{gridCol}"
+    class="flex flex-col gap-[1rem] bg-[var(--landing-bg)] sm:grid sm:grid-cols-2 md:gap-[1rem] lg:grid-cols-{gridCol}"
   >
     <!-- justify-between -->
     {#each homeLoanCalculator.data as item, index}

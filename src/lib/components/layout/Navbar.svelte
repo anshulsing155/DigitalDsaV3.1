@@ -259,11 +259,11 @@
 							<img
 								src={page.data.user.image}
 								alt="User Profile"
-								class="h-8 w-8 rounded-full border border-[var(--form-border)] bg-white object-cover"
+								class="h-8 w-8 rounded-full border border-[var(--form-border)] bg-[var(--landing-bg-card)] object-cover"
 							/>
 						{:else}
 							<div
-								class="typography-button flex h-8 w-8 items-center justify-center rounded-full bg-white uppercase"
+								class="typography-button flex h-8 w-8 items-center justify-center rounded-full bg-[var(--landing-bg-card)] text-[var(--form-text)] uppercase"
 							>
 								{page.data.user?.name ? page.data.user.name.charAt(0) : 'U'}
 							</div>
@@ -359,10 +359,10 @@
 
 	<!-- Overlay when search bar is active (pending css*) -->
 	{#if overlayOpen}
-		<div class="overlay bg-mainBg">
+		<div class="overlay bg-[var(--landing-bg)] text-[var(--form-text)]">
 			<div class="mx-auto h-screen w-11/12 md:w-10/12 lg:w-9/12">
 				<div class="flex flex-col gap-[2rem] p-[2rem]">
-					<h2 class="typography-h3 font-semibold text-black text-[var(--form-text)]">Popular searches</h2>
+					<h2 class="typography-h3 font-semibold text-[var(--form-text)]">Popular searches</h2>
 					<div class="grid md:grid-cols-2 md:gap-[3rem]">
 						<div class="col-span-1 grid">
 							{#each searches.slice(0, 3) as search}

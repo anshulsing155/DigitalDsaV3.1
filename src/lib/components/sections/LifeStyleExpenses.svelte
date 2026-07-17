@@ -72,7 +72,7 @@
     {#each $budgetData.lifeStyleDataArray as categoryGroup}
       {#each Object.entries(categoryGroup) as [categoryName, items]}
         <div class="px-3 pt-[2rem]">
-          <p class="font-FourthHead text-subParaFont md:text-miniSubHead py-2 bg-white px-3 mb-[1rem]">
+          <p class="font-FourthHead text-subParaFont md:text-miniSubHead py-2 bg-[var(--landing-bg-alt)] text-[var(--form-text)] px-3 mb-[1rem]">
             {categoryName}
           </p>
           <div class="grid lg:grid-cols-2 lg:gap-x-[3rem] xl:gap-x-[6rem] gap-y-4 items-center py-[1rem]">
@@ -82,7 +82,7 @@
                   <span>{item.name}</span>
                 </div>
                 <div class="grid grid-cols-2 gap-4 font-Paragraph text-minParaFont md:text-paraFont">
-                  <div class="flex items-center justify-center gap-2 bg-white border-black pl-2 font-Paragraph text-minParaFont md:text-paraFont">
+                  <div class="flex items-center justify-center gap-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] pl-2 font-Paragraph text-minParaFont md:text-paraFont">
                     <span>₹</span>
                     <input
                       bind:value={item.value}
@@ -91,14 +91,14 @@
                           item.value = item.value.slice(0, -1);
                         }
                       }}
-                      class="w-full bg-white p-2 outline-none"
+                      class="w-full bg-transparent text-[var(--form-text)] p-2 outline-none"
                     />
                   </div>
                   <Select
                     selectId="itemDuration"
-                    classFont="font-Paragraph text-minParaFont md:text-paraFont pl-2 bg-black text-white rounded-none py-2"
-                    optionClass="font-Paragraph text-minParaFont md:text-paraFont bg-black text-white"
-                    chevronColor="text-white"
+                    classFont="font-Paragraph text-minParaFont md:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                    optionClass="font-Paragraph text-minParaFont md:text-paraFont bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                    chevronColor="text-[var(--form-text-muted)]"
                     options={dropdownData}
                     bind:selectedValue={item.duration}
                     onChange={() => {

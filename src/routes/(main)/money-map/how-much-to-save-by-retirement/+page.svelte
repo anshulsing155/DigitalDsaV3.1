@@ -67,7 +67,7 @@
 <section class="relative mx-auto w-full px-1 lg:px-0">
   <div id="testNav">
     <div
-      class="md:hidden bg-white flex flex-col left-0 w-full z-30 pt-5 px-2 {isFixed
+      class="md:hidden bg-[var(--landing-bg)] flex flex-col left-0 w-full z-30 pt-5 px-2 {isFixed
         ? 'fixed top-0 pb-4'
         : ''}"
     >
@@ -82,7 +82,7 @@
 
   <div
     id="pageDesign"
-    class="relative flex flex-col justify-center w-full bg-white items-center md:gap-[1rem] mx-auto md:pt-[2rem]"
+    class="relative flex flex-col justify-center w-full bg-[var(--landing-bg)] items-center md:gap-[1rem] mx-auto md:pt-[2rem]"
   >
     <CalculatorPath
       calculators={moneyMapList}

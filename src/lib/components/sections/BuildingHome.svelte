@@ -377,7 +377,7 @@ window.removeEventListener("scroll", handleScroll);
             </summary>
 
             {#if index == 0}
-              <div id="started" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="started" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 {#each [
                   {
                     heading: "Getting started ",
@@ -440,7 +440,7 @@ window.removeEventListener("scroll", handleScroll);
             {:else if index == 1}
               <div
                 id="plan"
-                class="py-[2rem] lg:py-[4rem] flex flex-col bg-white text-black px-[2rem]"
+                class="py-[2rem] lg:py-[4rem] flex flex-col bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]"
               >
                 {#each [
                   {
@@ -483,7 +483,7 @@ window.removeEventListener("scroll", handleScroll);
                 {/each}
               </div>
             {:else if index == 2}
-              <div id="next" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="next" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 {#each [
                   {
                     heading: "What's next? ",
@@ -519,7 +519,7 @@ window.removeEventListener("scroll", handleScroll);
             {:else if index == 3}
               <div
                 id="calculators"
-                class="bg-white text-black px-[2rem] py-[1rem]"
+                class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]"
               >
                 <div class="">
                   <h2

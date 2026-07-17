@@ -7,9 +7,9 @@
 
 </script>
 
-<div class="flex flex-col gap-4 p-4 bg-white max-w-[40rem] relative shadow-md">
+<div class="flex flex-col gap-4 p-4 bg-[var(--landing-bg-card)] text-[var(--form-text)] max-w-[40rem] relative shadow-md">
   <div
-    class="p-2 bg-white absolute -top-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
+    class="p-2 bg-[var(--landing-bg-card)] absolute -top-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
   >
     <div
       class="rounded-full bg-gray-200 flex justify-center items-center mx-auto w-[5rem] h-[5rem]"

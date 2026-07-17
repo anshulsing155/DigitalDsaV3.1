@@ -7,8 +7,8 @@
 ;
 </script>
 
-<div class="grid grid-cols-2 bg-white max-w-[60rem] relative shadow-md">
-  <div class="bg-gray-100 p-[3rem]">
+<div class="grid grid-cols-2 bg-[var(--landing-bg-card)] text-[var(--form-text)] max-w-[60rem] relative shadow-md">
+  <div class="bg-[var(--landing-bg-alt)] p-[3rem]">
     <div
       class="flex flex-col gap-[2rem] col-span-1 justify-center items-center h-full text-center"
     >
@@ -19,7 +19,7 @@
   </div>
 
   <div
-    class="col-span-1 bg-white flex flex-col justify-center gap-4 items-center mx-auto"
+    class="col-span-1 bg-[var(--landing-bg-card)] flex flex-col justify-center gap-4 items-center mx-auto"
   >
     <div class="w-[8rem] h-[8rem] rounded-full bg-gray-200">
       <img

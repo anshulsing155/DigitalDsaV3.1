@@ -264,11 +264,11 @@
             </summary>
 
             {#if index == 0}
-              <div id="knowProperty" data-section="knowProperty" class="bg-white text-black px-[2rem]">
+              <div id="knowProperty" data-section="knowProperty" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <ThingsYouShould thinkKnow={content.knowMarket} />
               </div>
             {:else if index == 1}
-              <div id="toolsSupport" class="py-[1rem] bg-white text-black px-[2rem]">
+              <div id="toolsSupport" class="py-[1rem] bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <h2 class="typography-h2 text-[var(--form-text)]">
                   Tools & support
                 </h2>
@@ -292,11 +292,11 @@
                 </div>
               </div>
             {:else if index == 2}
-              <div id="propertySearch" class="bg-white text-black px-[2rem]">
+              <div id="propertySearch" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <Ways ways={content.propertySearch} />
               </div>
             {:else if index == 3}
-              <div id="benefit" data-section="benefits" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="benefit" data-section="benefits" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 {#if content.benefits.length > 0}
                   <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     Features & benefits

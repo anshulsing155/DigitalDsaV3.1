@@ -53,7 +53,7 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="animate-zoom bg-white p-6 shadow-md relative"
+    class="animate-zoom bg-[var(--landing-bg-card)] text-[var(--form-text)] p-6 shadow-md relative"
     onclick={(e) => e.stopPropagation()}
   >
     <button

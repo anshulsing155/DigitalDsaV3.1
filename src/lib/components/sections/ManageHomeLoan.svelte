@@ -376,7 +376,7 @@
               </summary>
 
               {#if index === 0}
-                <div id="repayment" class="bg-white text-black p-4 md:px-[2rem] md:py-[1rem]">
+                <div id="repayment" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] p-4 md:px-[2rem] md:py-[1rem]">
                   <div class="py-[4rem] border-0">
                     <h2 class="mb-[3rem] md:text-start typography-h2 text-[var(--form-text)]">
                       Repayment & redraw
@@ -454,7 +454,7 @@
                   </div>
                 </div>
               {:else if index == 1}
-                <div class="bg-white text-black p-4 md:px-[2rem] md:py-[1rem]">
+                <div class="bg-[var(--landing-bg-card)] text-[var(--form-text)] p-4 md:px-[2rem] md:py-[1rem]">
                   <div id="offset" class="py-[4rem] grid lg:grid-cols-3 justify-between gap-[3rem]">
                     <h2 class="typography-h3 font-semibold md:typography-h2-md lg:col-span-1 lg:typography-h2">
                       Everyday Offset
@@ -480,7 +480,7 @@
                   </div>
                 </div>
               {:else if index == 2}
-                <div id="tools" class="bg-white text-black p-4 md:px-[2rem] md:py-[1rem]">
+                <div id="tools" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] p-4 md:px-[2rem] md:py-[1rem]">
                   {#each content.tools as steps}
                     <div>
                       <NewHome {steps} />
@@ -488,7 +488,7 @@
                   {/each}
                 </div>
               {:else if index == 3}
-                <div id="benefits" class="bg-white text-black md:px-[2rem] p-4 md:py-[1rem]">
+                <div id="benefits" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] md:px-[2rem] p-4 md:py-[1rem]">
                   <div class="py-[4rem]">
                     <h2 class="mb-[3rem] md:text-start typography-h2 text-[var(--form-text)]">
                       Features & benefits
@@ -512,7 +512,7 @@
                   </div>
                 </div>
               {:else if index == 4}
-                <div id="equity" class="bg-white text-black md:px-[2rem] p-4 md:py-[1rem]">
+                <div id="equity" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] md:px-[2rem] p-4 md:py-[1rem]">
                   {#each content.equity as steps}
                     <div>
                       <NewHome {steps} />
@@ -520,7 +520,7 @@
                   {/each}
                 </div>
               {:else if index == 5}
-                <div id="support" class="bg-white text-black md:px-[2rem] p-4 md:py-[1rem]">
+                <div id="support" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] md:px-[2rem] p-4 md:py-[1rem]">
                   <div class="flex flex-col gap-[3rem] py-[2rem] lg:gap-[3rem] lg:py-[4rem]">
                     <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                       Tools & support

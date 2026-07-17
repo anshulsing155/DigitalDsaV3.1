@@ -65,7 +65,7 @@
 			<div class="mx-2 lg:mx-0">
 				<div
 					id="sideCard"
-					class="relative bg-white px-6 py-[3rem] lg:p-[3rem] 2xl:p-[4rem] w-full lg:w-[50%]"
+					class="relative bg-[var(--landing-bg-card)] px-6 py-[3rem] lg:p-[3rem] 2xl:p-[4rem] w-full lg:w-[50%]"
 				>
 					<div class="flex flex-col gap-4 sm:gap-[2rem]">
 						<h1 class="font-ThirdHead text-title">
@@ -187,7 +187,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="relative flex flex-col bg-white border-t z-10 mx-2 lg:mx-0">
+		<div class="relative flex flex-col bg-[var(--landing-bg)] border-t border-[var(--form-border)] z-10 mx-2 lg:mx-0">
 			{#if children}
 				{@render children()}
 			{/if}

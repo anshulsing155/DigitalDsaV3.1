@@ -83,21 +83,21 @@
 
 				<div class="relative">
 					<div class="absolute inset-0 bg-yellow-400/10 rounded-3xl transform rotate-3 scale-105"></div>
-					<div class="relative bg-white rounded-3xl shadow-xl p-8 border border-[var(--form-border)]">
+					<div class="relative bg-[var(--landing-bg-card)] text-[var(--form-text)] rounded-3xl shadow-xl p-8 border border-[var(--form-border)]">
 						<div class="space-y-6">
 							<div class="flex items-center justify-between">
-								<h3 class="text-xl font-bold text-gray-900">
+								<h3 class="text-xl font-bold text-[var(--form-text)]">
 									{content.profiler.title}
 								</h3>
-								<div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center border border-green-200">
+								<div class="w-12 h-12 bg-[var(--landing-bg-alt)] rounded-full flex items-center justify-center border border-[var(--form-border)]">
 									<Shield class="w-6 h-6 text-green-600" />
 								</div>
 							</div>
 
 							<div class="space-y-4">
 								{#each content.profiler.items as item}
-									<div class="flex items-center justify-between p-3.5 bg-gray-50 rounded-xl border border-gray-100">
-										<span class="text-gray-700 font-medium text-sm">{item.label}</span>
+									<div class="flex items-center justify-between p-3.5 bg-[var(--landing-bg-alt)] rounded-xl border border-[var(--form-border)]">
+										<span class="text-[var(--form-text-secondary)] font-medium text-sm">{item.label}</span>
 										<span class={item.badgeClass}>{item.badge}</span>
 									</div>
 								{/each}
@@ -105,7 +105,7 @@
 
 							<button
 								onclick={navigateToAssessment}
-								class="w-full bg-black text-white hover:bg-gray-800 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+								class="w-full bg-[var(--landing-accent)] text-[var(--landing-accent-text)] hover:opacity-90 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2"
 							>
 								<Lock class="w-4 h-4 text-yellow-400" />
 								{content.buttons.assess}
@@ -118,21 +118,21 @@
 	</section>
 
 	<!-- Legal Context Section -->
-	<section class="py-20 bg-gray-50">
+	<section class="py-20 bg-[var(--landing-bg-alt)]">
 		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-12">
-				<h2 class="text-3xl font-bold text-gray-900">{content.regulations.title}</h2>
-				<p class="text-gray-600 mt-3">{content.regulations.description}</p>
+				<h2 class="text-3xl font-bold text-[var(--form-text)]">{content.regulations.title}</h2>
+				<p class="text-[var(--form-text-secondary)] mt-3">{content.regulations.description}</p>
 			</div>
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 				{#each content.regulations.items as reg}
-					<div class="bg-white p-8 rounded-2xl border border-[var(--form-border)] shadow-sm space-y-4">
+					<div class="bg-[var(--landing-bg-card)] p-8 rounded-2xl border border-[var(--form-border)] shadow-sm space-y-4 text-[var(--form-text)]">
 						<div class={reg.badgeClass}>
 							{reg.badge}
 						</div>
-						<h3 class="text-xl font-bold text-gray-900">{reg.title}</h3>
-						<p class="text-gray-600 leading-relaxed">
+						<h3 class="text-xl font-bold text-[var(--form-text)]">{reg.title}</h3>
+						<p class="text-[var(--form-text-secondary)] leading-relaxed">
 							{reg.description}
 						</p>
 					</div>

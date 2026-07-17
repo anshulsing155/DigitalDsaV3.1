@@ -311,7 +311,7 @@
           </summary>
 
           {#if index == 0}
-            <div class="bg-white text-black px-[2rem]" id="glance">
+            <div class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]" id="glance">
               <div>
                 <div class="grid lg:grid-cols-5 py-[2rem] border-b">
                   <h2 class="col-span-full lg:col-span-2 typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2">
@@ -364,11 +364,11 @@
               </div>
             </div>
           {:else if index == 1}
-            <div id="eligibility" class="bg-white text-black px-[2rem]">
+            <div id="eligibility" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
               <ThingsYouShould thinkKnow={content.areYouEligible} disc="list-disc" />
             </div>
           {:else if index == 2}
-            <div class="bg-white text-black px-[2rem] py-[1rem] flex flex-col gap-[1rem]" id="apply">
+            <div class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem] flex flex-col gap-[1rem]" id="apply">
               <h3 class="typography-h2 text-[var(--form-text)]">
                 How to apply
               </h3>
@@ -390,7 +390,7 @@
               </div>
             </div>
           {:else if index == 3}
-            <div class="bg-white text-black px-[2rem]" id="disclosure">
+            <div class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]" id="disclosure">
               <div class="lg:col-span-2">
                 <h2 class="typography-h2 text-[var(--form-text)]">
                   FAQs

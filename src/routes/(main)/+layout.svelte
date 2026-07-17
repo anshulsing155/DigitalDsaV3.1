@@ -8,7 +8,7 @@
 
 <section class="relative w-full">
   <Navbar />
-  <div class="relative w-full mx-auto overflow-hidden bg-mainBg">
+  <div class="relative w-full mx-auto overflow-hidden bg-[var(--landing-bg)]">
     <slot />
   </div>
   <Footer />

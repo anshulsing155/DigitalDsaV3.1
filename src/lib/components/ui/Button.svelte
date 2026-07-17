@@ -13,7 +13,7 @@
 </script>
 
 {#if link}
-  <a class="text-black" href={`${link}`}>
+  <a class="text-[var(--landing-accent-text)]" href={`${link}`}>
     <button
       type="button"
       on:click={onClick}

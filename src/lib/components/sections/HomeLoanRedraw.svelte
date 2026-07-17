@@ -191,11 +191,11 @@
             </summary>
 
             {#if index == 0}
-              <div id="redraw" class="bg-white text-black px-[2rem]">
+              <div id="redraw" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <ThingsYouShould thinkKnow={content.redraw} />
               </div>
             {:else if index == 1}
-              <div id="benefits" class="bg-white text-black px-[2rem]">
+              <div id="benefits" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
                   <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     Benefits of redraw
@@ -208,11 +208,11 @@
                 </div>
               </div>
             {:else if index == 2}
-              <div id="access" class="bg-white text-black px-[2rem]">
+              <div id="access" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <ThingsYouShould thinkKnow={content.access} />
               </div>
             {:else if index == 3}
-              <div id="works" class="bg-white text-black px-[2rem]">
+              <div id="works" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem] flex flex-col gap-2">
                   <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     How redraw works
@@ -225,11 +225,11 @@
                 </div>
               </div>
             {:else if index == 4}
-              <div id="offset" class="bg-white text-black px-[2rem]">
+              <div id="offset" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <ThingsYouShould thinkKnow={content.offset} />
               </div>
             {:else if index == 5}
-              <div id="know" class="bg-white text-black px-[2rem]">
+              <div id="know" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <ThingsYouShould thinkKnow={content.know} disc="list-disc" />
               </div>
             {/if}

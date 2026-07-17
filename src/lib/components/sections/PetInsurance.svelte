@@ -501,7 +501,7 @@
             <div
               id="benefitFeature"
               data-section="benefitFeature"
-              class="bg-white px-[2rem] py-[2rem] text-black"
+              class="bg-[var(--landing-bg-card)] px-[2rem] py-[2rem] text-[var(--form-text)]"
             >
               <WhyChoose facilities={benefitFeature} gridCol={4} />
             </div>
@@ -509,7 +509,7 @@
             <div
               id="whatETF"
               data-section="whatETF"
-              class="bg-white px-[2rem] py-[2rem] text-black"
+              class="bg-[var(--landing-bg-card)] px-[2rem] py-[2rem] text-[var(--form-text)]"
             >
               <TwoColumn
                 cardImage={cardImg2}
@@ -550,7 +550,7 @@
             <div
               id="investment"
               data-section="investment"
-              class="bg-white px-[2rem] py-[2rem] text-black"
+              class="bg-[var(--landing-bg-card)] px-[2rem] py-[2rem] text-[var(--form-text)]"
             >
               <div class="space-y-5">
                 <h2
@@ -575,7 +575,7 @@
             <div
               id="learn"
               data-section="learn"
-              class="bg-white px-[2rem] py-[2rem] text-black"
+              class="bg-[var(--landing-bg-card)] px-[2rem] py-[2rem] text-[var(--form-text)]"
             >
               <Ways ways={learnMore} />
               <div

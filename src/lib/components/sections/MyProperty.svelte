@@ -305,7 +305,7 @@
             <div
               id="manageProperty"
               data-section="manageProperty"
-              class="bg-white text-black px-[2rem] py-[2rem]"
+              class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[2rem]"
             >
               <TwoColumn
                 cardImage="/images/laptop.jpg"
@@ -361,7 +361,7 @@
             <div
               id="feature"
               data-section="feature"
-              class="bg-white text-black px-[2rem] py-[2rem]"
+              class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[2rem]"
             >
               <WhyChoose facilities={benefits} gridCol="4" />
             </div>
@@ -369,7 +369,7 @@
             <div
               id="accessBank"
               data-section="accessBank"
-              class="bg-white text-black px-[2rem] py-[2rem]s"
+              class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[2rem]"
             >
               <ThingsYouShould thinkKnow={accessBank} disc="list-disc" />
             </div>

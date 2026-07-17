@@ -38,13 +38,13 @@
   keywords="money map, retirement calculator, savings planner, corpus builder"
 />
 
-<section class="bg-white h-screen">
+<section class="bg-[var(--landing-bg)] h-screen">
   <div>
     {#if !selectedCal}
       <div
         id="calCover"
         transition:slide={{ duration: 400 }}
-        class="md:hidden bg-white flex flex-col pt-[8rem] h-full fixed top-[3.5rem] left-0 w-full z-30"
+        class="md:hidden bg-[var(--landing-bg)] flex flex-col pt-[8rem] h-full fixed top-[3.5rem] left-0 w-full z-30"
       >
         <SelectNavigator
           innerPlaceHolder="Select your question"
@@ -58,7 +58,7 @@
   </div>
   <div>
     {#if selectedCal}
-      <div class="md:hidden bg-white flex flex-col left-0 w-full z-30 pt-1">
+      <div class="md:hidden bg-[var(--landing-bg)] flex flex-col left-0 w-full z-30 pt-1">
         <SelectNavigator
           innerPlaceHolder="Select your question"
           bind:selectedValue={selectedCal}

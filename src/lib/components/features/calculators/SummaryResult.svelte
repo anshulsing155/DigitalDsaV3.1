@@ -433,7 +433,7 @@
   <div class="grid md:grid-cols-2 items-start gap-[3rem] py-[1rem]">
     <div class="grid gap-4">
       <div class=" cursor-pointer grid">
-        <div class="bg-white p-2 border border-black">
+        <div class="bg-[var(--landing-bg-card)] text-[var(--form-text)] p-2 border border-[var(--form-border)]">
           <div
             on:click={() => {
               incomeValue = !incomeValue;
@@ -456,7 +456,7 @@
         {#if incomeValue}
           {#each $budgetData.incomeDataArray as item, index}
             <div
-              class="bg-white border border-gray-300 p-2 font-Paragraph text-minParaFont md:text-paraFont"
+              class="bg-[var(--landing-bg-card)] border border-[var(--form-border)] text-[var(--form-text)] p-2 font-Paragraph text-minParaFont md:text-paraFont"
             >
               <div class=" flex justify-between pl-2">
                 {#if $budgetData.incomeDataArray.length == 1}
@@ -487,7 +487,7 @@
         {/if}
       </div>
       <div class=" cursor-pointer grid">
-        <div class="bg-white p-2 border border-black">
+        <div class="bg-[var(--landing-bg-card)] text-[var(--form-text)] p-2 border border-[var(--form-border)]">
           <div
             on:click={() => {
               homeValue = !homeValue;
@@ -515,12 +515,12 @@
         </div>
         {#if homeValue && sumOfIndividualHome.length > 0}
           <div
-            class="font-Paragraph text-minParaFont md:text-paraFont border-b border-x border-gray-200"
+            class="font-Paragraph text-minParaFont md:text-paraFont border-b border-x border-[var(--form-border)]"
           >
             {#each sumOfIndividualHome as item, index}
               {#each Object.entries(item) as [key, value]}
                 <div
-                  class="bg-white border border-gray-300 p-2 flex justify-between pl-4"
+                  class="bg-[var(--landing-bg-card)] border border-[var(--form-border)] text-[var(--form-text)] p-2 flex justify-between pl-4"
                 >
                   <div class="flex gap-4 items-center">
                     <span
@@ -540,7 +540,7 @@
         {/if}
       </div>
       <div class=" cursor-pointer grid">
-        <div class="bg-white p-2 border border-black">
+        <div class="bg-[var(--landing-bg-card)] text-[var(--form-text)] p-2 border border-[var(--form-border)]">
           <div
             on:click={() => {
               lifeValue = !lifeValue;
@@ -568,12 +568,12 @@
         </div>
         {#if lifeValue && sumOfIndividualLifeStyle.length > 0}
           <div
-            class="font-Paragraph text-minParaFont md:text-paraFont border-b border-x border-gray-200"
+            class="font-Paragraph text-minParaFont md:text-paraFont border-b border-x border-[var(--form-border)]"
           >
             {#each sumOfIndividualLifeStyle as item, index}
               {#each Object.entries(item) as [key, value]}
                 <div
-                  class=" bg-white border border-gray-300 p-2 flex justify-between pl-4"
+                  class="bg-[var(--landing-bg-card)] border border-[var(--form-border)] text-[var(--form-text)] p-2 flex justify-between pl-4"
                 >
                   <div class="flex gap-4 items-center">
                     <span
@@ -593,7 +593,7 @@
         {/if}
       </div>
       <div class=" cursor-pointer">
-        <div class="bg-white p-2 border border-black">
+        <div class="bg-[var(--landing-bg-card)] text-[var(--form-text)] p-2 border border-[var(--form-border)]">
           <div
             class="flex justify-between items-center font-Paragraph text-minParaFont md:text-paraFont"
           >

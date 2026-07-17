@@ -24,10 +24,10 @@
         <!-- Header, arrow and items list -->
         <div class="flex-1">
           <div class="flex justify-between items-center pb-1">
-            <p class="font-primary font-semibold text-gray-800 text-[1.05rem] leading-tight">
+            <p class="font-primary font-semibold text-[var(--landing-text)] text-[1.05rem] leading-tight">
               {items.heading}
             </p>
-            <i class="fa-solid fa-angle-right text-gray-500 text-xs mr-2 transition-transform duration-250"></i>
+            <i class="fa-solid fa-angle-right text-[var(--landing-text-muted)] text-xs mr-2 transition-transform duration-250"></i>
           </div>
           
           <ul class="mt-2 space-y-1.5">

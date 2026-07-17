@@ -149,16 +149,16 @@
 
 <section class="w-full mx-auto">
     <div class="grid justify-center md:px-2 lg:px-0 grid-cols-12 gap-4 lg:gap-[2rem]">
-        <div class="relative grid gap-4 md:gap-8 bg-mainBg py-4 lg:py-6 px-3 shadow-md w-full col-span-12 md:col-span-6">
+        <div class="relative grid gap-4 md:gap-8 bg-[var(--landing-bg-alt)] py-4 lg:py-6 px-3 shadow-md w-full col-span-12 md:col-span-6">
             <div class="grid xl:grid-cols-2 grid-cols-1 gap-4 pb-4">
                 <div>
                     <div class="flex flex-col gap-2 pb-2 lg:pb-0">
                         <p class="font-FourthHead text-minParaFont lg:text-paraFont">{common.labels.occupation}</p>
                         <Select
                             selectId="frequency"
-                            classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-white text-black border border-black rounded-none py-2"
-                            optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                            chevronColor="text-black pr-2"
+                            classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                            optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                            chevronColor="text-[var(--form-text-muted)] pr-2"
                             options={common.occupations}
                             bind:selectedValue={selectedOccupations}
                             onChange={() => { findMaxAge(); }}
@@ -169,12 +169,12 @@
                 <div>
                     <div class="flex flex-col gap-2">
                         <p class="font-FourthHead text-minParaFont lg:text-paraFont">{common.labels.currentAge}</p>
-                        <div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont">
-                            <input
-                                onwheel={(event) => event.currentTarget.blur()}
-                                bind:value={ageValue}
-                                oninput={() => { findMaxAge(); ageError = ""; }}
-                                class="w-full ml-2 pt-2 pb-1 pl-0 pr-2 outline-none"
+                        <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont">
+                             <input
+                                 onwheel={(event) => event.currentTarget.blur()}
+                                 bind:value={ageValue}
+                                 oninput={() => { findMaxAge(); ageError = ""; }}
+                                 class="w-full ml-2 pt-2 pb-1 pl-0 pr-2 outline-none bg-transparent text-[var(--form-text)]"
                                 type="number"
                             />
                             <p class="p-2">{common.labels.ageUnit}</p>
@@ -201,7 +201,7 @@
                     {#if goalAmountError}
                         <p class="text-xs text-dangerColor">{goalAmountError}</p>
                     {:else if goalAmount > 0}
-                        <p class="text-xs text-black">{toWords.convert(goalAmount)}</p>
+                        <p class="text-xs text-[var(--form-text-secondary)]">{toWords.convert(goalAmount)}</p>
                     {/if}
                 </div>
 
@@ -210,9 +210,9 @@
                         <p class="font-FourthHead text-minParaFont lg:text-paraFont">{common.labels.tools}</p>
                         <Select
                             selectId="frequency"
-                            classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-white text-black border border-black rounded-none py-2"
-                            optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                            chevronColor="text-black pr-2"
+                            classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                            optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                            chevronColor="text-[var(--form-text-muted)] pr-2"
                             options={common.tools}
                             bind:selectedValue={toolsValue}
                             onChange={() => toolFunction()}
@@ -229,9 +229,9 @@
                         </p>
                         <Select
                             selectId="frequency"
-                            classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-white text-black border border-black rounded-none py-2"
-                            optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                            chevronColor="text-black pr-2"
+                            classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                            optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                            chevronColor="text-[var(--form-text-muted)] pr-2"
                             options={common.riskLevels}
                             bind:selectedValue={riskLevel}
                             onChange={() => { toolFunction(); }}
@@ -243,13 +243,13 @@
             <div class="pb-4">
                 <div class="flex flex-col gap-2">
                     <p class="font-FourthHead text-minParaFont lg:text-paraFont">{common.labels.annualInterestRate}</p>
-                    <div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont">
-                        <p class="p-2 font-FourthHead">%</p>
-                        <input
-                            onwheel={(event) => event.currentTarget.blur()}
-                            bind:value={annualRate}
-                            oninput={() => { interestError = ""; }}
-                            class="w-full pt-2 pb-2 pl-0 pr-2 outline-none"
+                    <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont">
+                         <p class="p-2 font-FourthHead">%</p>
+                         <input
+                             onwheel={(event) => event.currentTarget.blur()}
+                             bind:value={annualRate}
+                             oninput={() => { interestError = ""; }}
+                             class="w-full pt-2 pb-2 pl-0 pr-2 outline-none bg-transparent text-[var(--form-text)]"
                             type="number"
                         />
                     </div>
@@ -264,9 +264,9 @@
                     <p class="font-FourthHead text-minParaFont lg:text-paraFont">{common.labels.compoundFrequency}</p>
                     <Select
                         selectId="frequency"
-                        classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-white text-black border border-black rounded-none py-2"
-                        optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-black text-white"
-                        chevronColor="text-black pr-2"
+                        classFont="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--form-bg)] text-[var(--form-text)] border border-[var(--form-border)] rounded-none py-2"
+                        optionClass="font-Paragraph text-minParaFont lg:text-paraFont pl-2 bg-[var(--landing-bg-card)] text-[var(--form-text)]"
+                        chevronColor="text-[var(--form-text-muted)] pr-2"
                         options={common.frequencyOptions}
                         bind:selectedValue={tempSelectedValue}
                         onChange={() => {
@@ -282,12 +282,12 @@
             <div class="">
                 <div class="flex flex-col gap-2">
                     <p class="font-FourthHead text-minParaFont lg:text-paraFont">{common.labels.tenure}</p>
-                    <div class="flex items-center border border-black bg-white font-Paragraph text-minParaFont lg:text-paraFont">
-                        <input
-                            onwheel={(event) => event.currentTarget.blur()}
-                            bind:value={tenure}
-                            oninput={() => { tenureError = ""; }}
-                            class="w-full ml-2 pt-2 pb-2 pl-0 pr-2 outline-none"
+                    <div class="flex items-center border border-[var(--form-border)] bg-[var(--form-bg)] text-[var(--form-text)] font-Paragraph text-minParaFont lg:text-paraFont">
+                         <input
+                             onwheel={(event) => event.currentTarget.blur()}
+                             bind:value={tenure}
+                             oninput={() => { tenureError = ""; }}
+                             class="w-full ml-2 pt-2 pb-2 pl-0 pr-2 outline-none bg-transparent text-[var(--form-text)]"
                             type="number"
                         />
                         <p class="p-2">{common.labels.ageUnit}</p>
@@ -307,7 +307,7 @@
         </div>
 
         <div id="resultView" class="flex flex-col py-[2rem] lg:py-[4rem] gap-[2rem] lg:gap-[4rem] bg-darkColor col-span-12 md:col-span-6 animate-fade">
-            <div class="flex flex-wrap items-center justify-center gap-2 text-center text-black p-[2rem] bg-mainBg border-x border-darkColor border-dotted lg:border-none w-full mx-auto">
+            <div class="flex flex-wrap items-center justify-center gap-2 text-center text-[var(--form-text)] p-[2rem] bg-[var(--landing-bg-alt)] border-x border-[var(--form-border)] border-dotted lg:border-none w-full mx-auto">
                 <p class="w-full font-FifthHead text-miniHeadFont md:text-mobHeadFont">
                     ₹ {Math.round(monthlyDeposit).toLocaleString("en-IN")}
                 </p>

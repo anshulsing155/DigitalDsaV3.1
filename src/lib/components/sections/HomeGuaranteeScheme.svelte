@@ -296,7 +296,7 @@
             </summary>
 
             {#if index == 0}
-              <div id="guarantee" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="guarantee" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 <div class="border-b border-[var(--form-border)]">
                   <ThingsYouShould thinkKnow={content.firstHomeSooner} />
                 </div>
@@ -311,11 +311,11 @@
                 </div>
               </div>
             {:else if index == 1}
-              <div id="eligibility" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="eligibility" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 <ThingsYouShould thinkKnow={content.eligible} disc="list-disc" />
               </div>
             {:else if index == 2}
-              <div id="apply" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="apply" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 <WhyChoose facilities={content.apply} gridCol={3} />
                 {#if cardDataListWithClicks.length > 0}
                   <div class="pt-[2rem]">
@@ -331,7 +331,7 @@
                 {/if}
               </div>
             {:else if index == 3}
-              <div id="concessions" class="bg-white text-black px-[2rem] py-[1rem]">
+              <div id="concessions" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem] py-[1rem]">
                 <WhyChoose facilities={content.assistanceGrant} gridCol={2} />
                 <ThingsYouShould thinkKnow={content.weHelp} />
               </div>

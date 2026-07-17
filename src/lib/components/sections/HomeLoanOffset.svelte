@@ -299,7 +299,7 @@
             </summary>
 
             {#if index == 0}
-              <div id="redraw" class="bg-white text-black px-[2rem]">
+              <div id="redraw" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="border-b border-dividerColor py-[1rem] lg:py-[2rem]">
                   <ThingsYouShould thinkKnow={content.offset} />
                 </div>
@@ -316,7 +316,7 @@
                 />
               </div>
             {:else if index == 1}
-              <div id="switch" class="bg-white text-black px-[2rem]">
+              <div id="switch" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="grid gap-4 py-[4rem] lg:grid-cols-5">
                   <h2 class="typography-h3 font-semibold md:col-span-2 md:typography-h2-md lg:typography-h2">
                     How to switch an account to Everyday Offset
@@ -353,7 +353,7 @@
                 </div>
               </div>
             {:else if index == 2}
-              <div id="benefits" class="bg-white text-black px-[2rem]">
+              <div id="benefits" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem]">
                   <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     Looking for a home
@@ -366,7 +366,7 @@
                 </div>
               </div>
             {:else if index == 3}
-              <div id="offset" class="bg-white text-black px-[2rem]">
+              <div id="offset" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="pt-[2rem] lg:pt-[4rem]">
                   <h2 class="md:text-start typography-h2 text-[var(--form-text)]">
                     Home loans with an offset account
@@ -379,7 +379,7 @@
                 </div>
               </div>
             {:else if index == 4}
-              <div id="support" class="bg-white text-black px-[2rem]">
+              <div id="support" class="bg-[var(--landing-bg-card)] text-[var(--form-text)] px-[2rem]">
                 <div class="grid md:grid-cols-2 gap-4 py-[4rem]">
                   {#each content.contents as item, idx}
                     {#if idx == 0 || idx == 2}
